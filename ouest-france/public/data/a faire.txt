@@ -1,0 +1,9 @@
+- Modifier la base (errreur : allemand) (fait)
+- Pour chaque année, Proportion du nombre de groupes français, Américain, etc.
+- Pour les groupes français, pour chaque année, proportion de groupes pour une scene.
+- Mettre à jour et ajouter des villes
+- Carte (ajout des coordonnees pour les villes françaises) : regarder si l'origine des groupes en france evolue ou non
+Pour chaque ville, chaque année nombre de groupe.
+- Faire la veille technologique
+
+(aller dans le dossier "ouest-france", npm install puis npm start.
