@@ -13,3 +13,27 @@ header img{
   max-width: 100%;
 	height: auto;
 }
+
+svg{
+    overflow: visible;
+}
+
+.axis{
+    opacity: .5;
+}
+
+.line{
+    fill: none;
+    stroke: black;
+    stroke-width: 3;
+}
+
+.area{
+    fill: #eee;
+}
+
+.your-line{
+    stroke: #f0f;
+    stroke-width: 3;
+    stroke-dasharray: 5 5;
+}
