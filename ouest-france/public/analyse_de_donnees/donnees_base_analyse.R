@@ -47,3 +47,12 @@ write.table(artists.stages.hellfest,"data/artistsStagesHellfest.csv",sep=";",row
 #SQL
 # Load the package
 library(sqldf)
+library("PASWR")
+
+# Use the titanic data set
+
+data(artists.helfest)
+colnames(artists.helfest)
+head(artists.helfest)
+
+sqldf('select * from artists.helfest')
