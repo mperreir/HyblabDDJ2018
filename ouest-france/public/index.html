@@ -1,40 +1,79 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
-  <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-		<!-- Basic viewport setting for mobile friendly page -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
-  </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2018</h1>
-    </header>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Hyblab Hellfest</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage plugin by Alvaro Trigo. Pure javascript version of full screen slider." />
+	<meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple,pure,javascript,slider,hijacking" />
+	<meta name="Resource-type" content="Document" />
+	<link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
+	<link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
+<div id="fullpage">
+	<div class="section " id="section0">
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2018</p>
-    </footer>
+    <div class="content">
+      <header>
+        <img src="img/logo_hyblab.png" alt="logo hyblab"/>
+          <h1>Hyblab Datajournalism 2018</h1>
+      </header>
+
+      <!-- Le contenu du site -->
+      <p>Replace this content by your web app !</p>
+
+      <p>Here is some data from a json file : <span id="data"></span><p>
+
+      <!-- Notre pied de page -->
+      <footer>
+          <p>Copyright Hyblab team 2018</p>
+      </footer>
     </div>
-  </body>
+	</div>
+	<div class="section" id="section1">
+		<div class="content">
+      <header>
+        <img src="img/logo_hyblab.png" alt="logo hyblab"/>
+          <h1>Hyblab Datajournalism 2018</h1>
+      </header>
+
+      <!-- Le contenu du site -->
+      <p>Replace this content by your web app !</p>
+
+      <p>Here is some data from a json file : <span id="data"></span><p>
+
+      <!-- Notre pied de page -->
+      <footer>
+          <p>Copyright Hyblab team 2018</p>
+      </footer>
+    </div>
+	</div>
+	<div class="section" id="section2">
+		<div class="content">
+			<h1>Compatible</h1>
+			<p>IE 8+ support.</p>
+		</div>
+	</div>
+  <div class="section" id="section3">
+    <h1>coucou</h1>
+  </div>
+  <div class="section" id="section4">
+  </div>
+</div>
+
+<script type="text/javascript" src="javascript.fullPage.js"></script>
+<script type="text/javascript">
+	fullpage.initialize('#fullpage', {
+		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+		menu: '#menu',
+		css3:true
+	});
+
+</script>
+
+</body>
 </html>

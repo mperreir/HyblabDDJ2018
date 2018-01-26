@@ -6,9 +6,12 @@ var express = require('express');
 var path = require('path');
 
 var app = express();
+app.engine('pug', require('pug').__express);
+app.set('view engine', 'pug');
 
 // Minimum routing: serve static content from the html directory
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 // You can then add whatever routing code you need
 
