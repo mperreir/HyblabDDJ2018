@@ -34,7 +34,7 @@ app.use(/\/$/,function(req, res, next){
 
 
 // launch main server app
-var port = 'PORT' in process.env ? process.env.PORT : 8080;
+var port = 'PORT' in process.env ? process.env.PORT : 8082;
 var server = app.listen(port, function () {
 
   var host = server.address().address

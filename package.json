@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "express": "^4.16.2",
+    "nodemon": "^1.14.11",
     "request": "^2.83.0"
   },
   "author": "MPDS",
