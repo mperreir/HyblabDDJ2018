@@ -14,19 +14,20 @@ var data_to_json = []
 var keys = []
 
 app.get('/:epci/stats', (req, res) => {
-	
+
 	var data_epci = []
 	fs.readFile(data_capeb, 'latin1', function (error, data) {
 		if (!error) {
 			
 			data.split(/\r\n|\n/).forEach((line, id) => {
 				if(id == 0){
-					keys = line.split(",");
+					keys = line.split(";");
 				}
 				else{
 					var ok = false
 					var json = {}
-					var cells = line.split(',')
+					var cells = line.split(';')
+
 					if(cells[398] == req.params.epci){
 						cells.forEach((cell, i)=>{
 							json[keys[i]] = cell

@@ -19,7 +19,7 @@ d3.json("data/contours-epci-2017.geojson", function (err, geoJSON) {
         .attr("stroke", "black")
         .attr("d", path)
         .on("click", function (d) {
-            console.log(d.properties.siren_epci);
+			alert(d.properties.siren_epci)
             fetch("/capeb/data/" + d.properties.siren_epci + "/stats")
                 .then(function (value) {
                     return value.json();
