@@ -1,4 +1,17 @@
-/* just a sample css rule to show that everything works */
+#page1{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color:beige;
+}
+
+#page2{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color:#F0F0F0;
+}
+
 footer p
 {
   font-size: small;
@@ -16,6 +29,10 @@ header img{
 
 svg{
     overflow: visible;
+}
+
+#bigText{
+    position:absolute;
 }
 
 .axis{
