@@ -37,3 +37,57 @@ header img{
   position: absolute;
   z-index: 2;
 }
+
+@font-face {
+  font-family: "overpass";
+  font-weight: normal;
+  font-size: normal;
+  src: url("overpass-regular.otf");
+}
+@font-face {
+  font-family: "overpass";
+  font-weight: bold;
+  font-size: normal;
+  src: url("overpass-bold.otf");
+}
+@font-face {
+  font-family: "overpass";
+  font-weight: normal;
+  font-style: italic;
+  src: url("overpass-italic.otf");
+}
+@font-face {
+  font-family: "overpass";
+  font-style: italic;
+  font-weight: bold;
+  src: url("overpass-bold-italic.otf");
+}
+
+@font-face {
+  font-family: "work_sans";
+  src: url("WorkSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "work_sans";
+  font-weight: bold;
+  src: url("WorkSans-Bold.ttf");
+}
+
+body
+{
+
+}
+
+h1
+{
+  font-family: "overpass";
+  font-weight: bold;
+  color:red;
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 90%;
+  text-align: center;
+}
+
