@@ -3,7 +3,7 @@
 <head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
-    <title>Hyblab 2016</title>
+    <title>Hyblab 2018</title>
     <!-- Basic viewport setting for mobile friendly page -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Déclaration de la feuille de style du document-->
@@ -11,9 +11,11 @@
     <!-- Those polyfills are required so that old browsers support fetch mecanism -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-    <!-- Simple sample script that loads data from a dummy json file -->
-    <script src="js/example.js" defer></script>
-    <script src="../../node_modules/d3-jetpack/build/d3v4+jetpack.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js" defer></script>
+    <script src="https://d3js.org/d3-array.v1.min.js" defer></script>
+    <script src="https://d3js.org/d3-geo.v1.min.js" defer></script>
+    <script src="js/map.js" defer></script>
+
 </head>
 <body>
 <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
@@ -28,11 +30,8 @@
     </header>
 
     <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
 
-    <p>Here is some data from a json file : <span id="data"></span><p>
-    <div id = "chart"></div>    <script src='js/chart.js'></script>
-    <input id="clickMe" type="button" value="Voir le résultat" onclick="drawLastPart();">
+
 
     <!-- Notre pied de page -->
     <footer>
