@@ -26,9 +26,13 @@ header img{
   left: 0px;
 }
 
-#chart_age_container {
-  width: 150px;
-  height: 150px;
+#chart_lum_container {
+  width: 40%;
+  height: 40%;
+}
+
+#myChart {
+  background-color: white;
 }
 
 #train {
