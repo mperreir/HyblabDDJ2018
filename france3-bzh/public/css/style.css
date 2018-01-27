@@ -1,4 +1,8 @@
 /* just a sample css rule to show that everything works */
+body {
+  background-color: #241D37;
+}
+
 footer p
 {
   font-size: small;

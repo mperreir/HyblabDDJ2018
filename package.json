@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "express": "^4.16.2",
+    "popmotion": "^8.1.9",
     "request": "^2.83.0"
   },
   "author": "MPDS",

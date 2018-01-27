@@ -11,6 +11,18 @@
 		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+
+    <!-- jquery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <!-- JS annimation fullpage -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+
+    <!-- popmotion import's-->
+    <script type="text/javascript" src="js/popmotion.global.min.js"></script>
+
 		<!-- Simple sample script that loads data from a dummy json file -->
 		<script src="js/example.js" defer></script>
   </head>
@@ -21,15 +33,32 @@
     <div id="container">
 
     <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
+    <!-- <header>
 			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
       <h1>TCHOU TCHOU, c'est moi, l'Orient Express !</h1>
-    </header>
+    </header> -->
+
+    <div id="fullpage">
+        <div class="section">
+          <svg id="train" height="100" width="100">
+           <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="yellow" />
+          </svg>
+        </div>
+
+        <div class="section">
+          <img src="img/home-01.svg" alt="logo hyblab"/>
+        </div>
+
+        <div class="section">P2</div>
+        <div class="section">P3</div>
+    </div>
+
+
 
     <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
+
+		<!--<p>Here is some data from a json file : <span id="data"></span><p> -->
 
     <!-- Notre pied de page -->
     <footer>

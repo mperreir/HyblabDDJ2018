@@ -1,11 +1,12 @@
 // Use strict mode
 'use strict';
-
 // Load usefull expressjs and nodejs objects / modules
 var express = require('express');
 var path = require('path');
 
 var app = express();
+
+import { tween, css } from 'popmotion'
 
 // Minimum routing: serve static content from the html directory
 app.use(express.static(path.join(__dirname, 'public')));
