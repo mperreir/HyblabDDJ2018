@@ -30,7 +30,6 @@ d3.json("data/contours-epci-2017.geojson", function (err, geoJSON) {
                     return {};
                 })
                 .then(function(json){
-					var stats = parse.JSON(json)
 					
                 })
         })
