@@ -23,6 +23,10 @@
     <!-- popmotion import's-->
     <script type="text/javascript" src="js/popmotion.global.min.js"></script>
 
+
+    <!-- chartjs -->
+    <script type="text/javascript" src="js/Chart.js"></script>
+
 		<!-- Simple sample script that loads data from a dummy json file -->
 		<script src="js/example.js" defer></script>
   </head>
@@ -38,15 +42,20 @@
       <h1>TCHOU TCHOU, c'est moi, l'Orient Express !</h1>
     </header> -->
 
+
+    <img id="background" src="img/Background-01.svg" alt="logo hyblab" id="back"/>
     <div id="fullpage">
         <div class="section">
-          <svg id="train" height="100" width="100">
+          <!-- <svg id="train" height="100" width="100">
            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="yellow" />
-          </svg>
+          </svg> -->
+          <img id="train" src="img/train.png" alt="logo hyblab" />
         </div>
 
         <div class="section">
-          <img src="img/home-01.svg" alt="logo hyblab"/>
+            <div id="chart_age_container">
+              <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
         </div>
 
         <div class="section">P2</div>

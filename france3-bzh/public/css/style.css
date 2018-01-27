@@ -17,3 +17,23 @@ header img{
   max-width: 100%;
 	height: auto;
 }
+
+#background {
+  position: absolute;
+  width: 100%;
+  height:100%;
+  top: 0px;
+  left: 0px;
+}
+
+#chart_age_container {
+  width: 150px;
+  height: 150px;
+}
+
+#train {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 2;
+}
