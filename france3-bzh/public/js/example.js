@@ -37,22 +37,57 @@ $(document).ready(function() {
 const { easing, tween, styler } = window.popmotion;
 
 const divStyler = styler(document.querySelector('#train'));
+var myTarget=document.querySelectorAll('#train');
+
 
 tween({
-  from: 0,
-  to: { x: 300, rotate: 180 },
+  from: 200,
+  to: { x: 800, y:500},
   duration: 1000,
-  ease: easing.backOut,
-  flip: Infinity,
+  // ease: easing.backOut,
+  // flip: 1,
   // elapsed: 500,
   // loop: 5,
   // yoyo: 5
 }).start(divStyler.set);
-//
-// const { css, tween, styler } = window.popmotion;
-// const train = document.querySelector('css #train');
-// tween({
-//   from: { x: 124, y: 200 },
-//   to: 0
-//   , duration: 1000 })
-// 	.start(styler(train).set('x'));
+
+
+// chartjs
+
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
