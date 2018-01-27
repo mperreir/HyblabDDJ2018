@@ -1,4 +1,4 @@
-data = read.csv('CAPEBPaysDelaLoire_2014-2017.csv', header=TRUE, sep=";", encoding ="UTF-8")
+data = read.csv('CAPEBPaysDelaLoire_2014-2017.csv', header=TRUE, sep=";", encoding ="UTF-8",fileEncoding = "latin1")
 attach(data)
 
 
@@ -26,9 +26,16 @@ write.csv(file="Marchés_publics2017.csv",x=MP)
 
 data$Zone.intervention
 ZI = aggregate( Zone.intervention ~ intercommunalite.2017_EPCI, getAttYear(2017, c("intercommunalite.2017_EPCI", "Zone.intervention")), mean)
-ZI
-write.csv(file="Zone_intervention2017.csv",x=MP)
+ZI[,1] = as.numeric(ZI[,1])
+ZI[,2] = as.numeric(ZI[,2])
+zi = matrix(nrow = nrow(ZI), ncol=2)
+zi[,1] = as.numeric(ZI[,1])
+zi[,2] = as.numeric(ZI[,2])
+colnames(zi) = c("Epci", "Zone intervention moyenne")
+zi
+write.csv(file="Zone_intervention2017.csv",x=ZI,row.names=FALSE, quote = FALSE)
 
 AC = table(subset(data, data$X..Date == 2017,select = c("intercommunalite.2017_EPCI","Activité")))
-write.csv(file="Activité_2017.csv",x=MP)
+AC
+write.csv(file="Activité2017.csv",x=AC,quote = FALSE)
 

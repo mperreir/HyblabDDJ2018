@@ -30,7 +30,8 @@ d3.json("data/contours-epci-2017.geojson", function (err, geoJSON) {
                     return {};
                 })
                 .then(function(json){
-                    console.log(json);
+					var stats = parse.JSON(json)
+					
                 })
         })
         .append("svg:title")
