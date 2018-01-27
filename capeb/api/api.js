@@ -9,13 +9,16 @@ var path = require('path');
 var fs = require('fs');
 
 var data_capeb = path.join(__dirname,'./data/CAPEBPaysDelaLoire_2014-2017.csv')
+var stat_files = ['Activité2017.csv', 'Développement_durable2016.csv', 'Marchés_publics2017.csv', 'Zone_intervention2017.csv'].map(f => path.join(__dirname,"./data/".concat(f)))
 
+console.log(stat_files)
 var data_to_json = []
 var keys = []
 
 app.get('/:epci/stats', (req, res) => {
 
 	var data_epci = []
+	//stat_files.forEach((file))
 	fs.readFile(data_capeb, 'latin1', function (error, data) {
 		if (!error) {
 			
