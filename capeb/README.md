@@ -8,8 +8,9 @@ Equipe :
 
 Patricipants :
 
-- EDNA :
+- AGR :
 - Polytech :  
+- SciencesCom :
 
 # Installation
 
