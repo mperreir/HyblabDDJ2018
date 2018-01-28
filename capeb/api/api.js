@@ -31,18 +31,18 @@ app.get('/:epci/stats', (req, res) => {
 			else{
 				var ok = false
 				json = {}
+				json['labels'] = keys.slice(1,keys.length - 1);
+				json['values'] = [];
 				var cells = line.split(',')
 				
 				if(cells[0] == req.params.epci){
-					cells.forEach((cell, i)=>{
-						if(i > 0){
-							json[keys[i]] = cell
-						}
-					})
+					json['values'] = cells.slice(1,cells.length - 1);
+					console.log(json)
 					ok = true
 				}
 				if(ok){
 					stats_json[critere[idf]] = json
+					console.log(stats_json)
 				}
 			}
 		})
