@@ -13,7 +13,7 @@ var stat_files = ['Activité2017.csv', 'Développement_durable2016.csv', 'March�
 
 console.log(stat_files)
 var stats_json = {}
-var critere = ['Activité', 'Développement durable', 'Marchés publics', 'Zone intervention']
+var critere = ['Activite', 'Developpement_durable', 'Marches_publics', 'Zone_intervention']
 
 var keys = []
 var crt_arr = []

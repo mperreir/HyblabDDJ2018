@@ -2,7 +2,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color:beige;
+    background-color:cornflowerblue;
 }
 
 #page2{
@@ -10,6 +10,14 @@
     width: 100vw;
     height: 100vh;
     background-color:#F0F0F0;
+}
+
+#page3{
+    display:none;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color:#900000;
 }
 
 footer p
