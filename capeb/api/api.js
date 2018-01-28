@@ -47,7 +47,8 @@ app.get('/:epci/stats', (req, res) => {
 			}
 		})
 	})
-	
+	res.charset = 'utf8';
+
 	res.json(stats_json);
 })
 module.exports = app;
