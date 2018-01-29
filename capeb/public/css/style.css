@@ -62,3 +62,9 @@ svg{
     stroke-width: 3;
     stroke-dasharray: 5 5;
 }
+
+.chart{
+  width: auto;
+  display: inline-block;
+  padding: 2%;
+}
