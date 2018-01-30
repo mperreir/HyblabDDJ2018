@@ -1,0 +1,13 @@
+/* just a sample css rule to show that everything works */
+
+/* Header */
+header{
+  background-color:aqua;
+  height: 50px;
+}
+
+/* Footer */
+footer{
+  font-size: small;
+  text-align: center;
+}
