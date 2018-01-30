@@ -1,6 +1,6 @@
-data = read.csv('CAPEBPaysDelaLoire_2014-2017.csv', header=TRUE, sep=";", encoding ="UTF-8",fileEncoding = "latin1")
+data = read.csv('CAPEBPaysDelaLoire_2014-2017.csv', header=TRUE, sep=";", encoding ="UTF-8")
 attach(data)
-
+data$Code.postal
 
 getAttYear <- function(y, l_atr){
   l_atr = c(l_atr, "X..Date")

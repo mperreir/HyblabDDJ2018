@@ -31,6 +31,7 @@ $ (document).ready(function(){
                         return {};
                     })
                     .then(function(json){
+						console.log(d.properties.siren_epci)
                         var keys = Object.keys(json);
                         document.getElementById("page3").style.display = "block";
                         $('html,body').animate({
