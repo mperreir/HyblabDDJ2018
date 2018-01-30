@@ -41,3 +41,175 @@ header img{
   position: absolute;
   z-index: 2;
 }
+
+@font-face {
+  font-family: "overpass";
+  font-weight: normal;
+  font-size: normal;
+  src: url("overpass-regular.otf");
+}
+@font-face {
+  font-family: "overpass";
+  font-weight: bold;
+  font-size: normal;
+  src: url("overpass-bold.otf");
+}
+@font-face {
+  font-family: "overpass";
+  font-weight: normal;
+  font-style: italic;
+  src: url("overpass-italic.otf");
+}
+@font-face {
+  font-family: "overpass";
+  font-style: italic;
+  font-weight: bold;
+  src: url("overpass-bold-italic.otf");
+}
+
+@font-face {
+  font-family: "work_sans";
+  src: url("WorkSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "work_sans";
+  font-weight: bold;
+  src: url("WorkSans-Bold.ttf");
+}
+
+body
+{
+
+}
+
+h1
+{
+  font-family: "overpass";
+  font-weight: bold;
+  color:red;
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 90%;
+  text-align: center;
+}
+
+#container
+{
+  background-attachment:fixed;
+  background: url('/img/Background-01.svg');
+}
+
+#liste
+{
+  width: 1000px;
+  position: relative;
+  top: -10px;
+  left: 100px;
+}
+
+.personnages
+{
+  position: relative;
+}
+
+.personnage
+{
+  width: 150px;
+  float:left;
+  margin-right: 25px;
+  margin-bottom: 75px;
+  position: relative;
+}
+
+.info
+{
+  position:relative;
+  text-align: center;
+}
+
+p
+{
+ color:white;
+  font-weight: bold;
+  font-family: "work_sans";
+  font-size:12px;
+}
+
+.perso {
+  position: absolute;
+  font-family: "work_sans";
+  color: white;
+  top:-20px;
+  width: 150px;
+  font-size: 12px;
+}
+.com {
+  position: absolute;
+  font-family: "work_sans";
+  color:blue;
+  width: 150px;
+  font-size: 9px;
+}
+.poly {
+  position: absolute;
+  font-family: "work_sans";
+  color:red;
+  width: 150px;
+  font-size: 9px;
+}
+.agr {
+  position: absolute;
+  font-family: "work_sans";
+  color:orange;
+  width: 150px;
+  font-size: 9px;
+}
+.jour {
+  position: absolute;
+  font-family: "work_sans";
+  color:green;
+  width: 150px;
+  font-size: 9px;
+}
+
+.section
+{
+  position: relative;
+}
+
+.image_perso
+{
+  position: relative;
+  left: 40px;
+  top: -10px
+}
+
+h2
+{
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+}
+#informations
+{
+  position: absolute;
+  left:1000px;
+  top: 50px;
+}
+
+.infos
+{
+  margin-bottom: 40px;
+}
+
+#equipe p
+{
+  color:white;
+  font-weight: bold;
+  font-family: "work_sans";
+  font-size:12px;
+  margin-bottom: -10px;
+}
+
