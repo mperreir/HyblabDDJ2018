@@ -41,7 +41,7 @@ $ (document).ready(function(){
                         drawBarChart(json.Activite, "Repartion des Activite entre 2014 et 2017");
 						drawPieChart(json.Developpement_durable, "Dévolopement durable en 2016");
 						drawPieChart(json.Marches_publics, "Marche public");
-
+						drawLineChart(json.Contrats, "Contrats")
                     });
             })
             .on("mouseover", function(d) {

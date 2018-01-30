@@ -20,6 +20,42 @@ function flush(){
 	var cvs = document.getElementById("page3")
 	cvs.innerHTML = ""
 }
+function drawLineChart(data, title){
+	var sec = document.getElementById("page3").appendChild(document.createElement('section'))
+	sec.className = "chart"
+
+	var h3 = sec.appendChild(document.createElement('h3'))
+			h3.innerHTML = title
+
+	var cvs = sec.appendChild(document.createElement('canvas'))
+
+	var d = data.values.slice(1).map((val, i) => {return {
+														label: data.labels[i+1], 
+														backgroundColor: colors[i], 
+														borderColor: colors[i], 
+														data: val,
+													    fill: false
+														}
+												})
+	console.log(d)
+	var ctx = cvs.getContext("2d")
+	var chart = new Chart(ctx, {
+		// The type of chart we want to create
+		type: 'line',
+
+		// The data for our dataset
+		data: {
+			labels: data.values[0],
+			datasets: d
+		},
+		// Configuration options go here
+		options: { 
+				responsive:false,
+				maintainAspectRatio: false
+				}	
+	});
+
+}
 function drawBarChart(data, title){
 	var sec = document.getElementById("page3").appendChild(document.createElement('section'))
 	sec.className = "chart"
@@ -47,8 +83,11 @@ function drawBarChart(data, title){
 		},
 
 		// Configuration options go here
-options: { responsive:false,
-    maintainAspectRatio: false}	});
+		options: { 
+				responsive:false,
+				maintainAspectRatio: false
+				}	
+	});
 
 }
 function drawPieChart(data, title){

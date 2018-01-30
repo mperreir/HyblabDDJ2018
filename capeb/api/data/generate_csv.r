@@ -39,3 +39,12 @@ AC = table(subset(data, data$X..Date == 2017,select = c("intercommunalite.2017_E
 AC
 write.csv(file="Activité2017.csv",x=AC,quote = FALSE)
 
+data$intercommunalite.2017_EPCI
+
+contrats = aggregate( cbind(CDD,CDI,Apprentis,Intérimaires) ~ intercommunalite.2017_EPCI + X..Date,subset(data,select = c("intercommunalite.2017_EPCI", "X..Date","CDD", "CDI")), FUN=sum)
+write.csv(file="Contrats_2014-2017.csv",x=contrats,row.names=FALSE, quote = FALSE)
+
+data$CA.réalisé
+contrats = aggregate( CA.réalisé ~ intercommunalite.2017_EPCI + X..Date,subset(data,select = c("intercommunalite.2017_EPCI", "X..Date","CA.réalisé")), FUN=sum)
+
+
