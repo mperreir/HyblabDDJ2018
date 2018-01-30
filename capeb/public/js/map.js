@@ -13,7 +13,7 @@ path.projection(projection);
 
 $ (document).ready(function(){
 
-    d3.json("data/contours-epci-2017.geojson", function (err, geoJSON) {
+    d3.json("data/merged.geojson", function (err, geoJSON) {
         var map = svg.selectAll("path").data(geoJSON.features);
         map.enter()
             .append("path")
@@ -31,11 +31,18 @@ $ (document).ready(function(){
                         return {};
                     })
                     .then(function(json){
+                        var keys = Object.keys(json);
                         document.getElementById("page3").style.display = "block";
                         $('html,body').animate({
                                 scrollTop: $("#page3").offset().top},
                             'slow');
-                        drawPieChart(json);
+
+                        console.log(json);
+                        drawPieChart(json[keys[1]]);
+                        //drawPieChart(json[keys[2]]);
+                       drawHistogram(json[keys[0]]);
+                       drawd3();
+
                     });
             })
             .on("mouseover", function(d) {
