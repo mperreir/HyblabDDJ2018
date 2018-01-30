@@ -39,6 +39,8 @@ svg{
     overflow: visible;
 }
 
+/* ---------- MAP ------ */
+
 #bigText{
     position:absolute;
 }
@@ -47,18 +49,4 @@ svg{
     opacity: .5;
 }
 
-.line{
-    fill: none;
-    stroke: black;
-    stroke-width: 3;
-}
-
-.area{
-    fill: #eee;
-}
-
-.your-line{
-    stroke: #f0f;
-    stroke-width: 3;
-    stroke-dasharray: 5 5;
-}
+/* -------- CHARTS ---------- */
