@@ -16,7 +16,6 @@ var stat_files = ['Activité2017.csv',
 				  'Contrats_2014-2017.csv'
 				  ].map(f => path.join(__dirname,"./data/".concat(f)))
 
-console.log(stat_files)
 var stats_json = {}
 var critere = ['Activite', 
   			   'Developpement_durable', 
