@@ -50,4 +50,14 @@ fetch('data/nb_V_A_T.json')
     // this promise will be fulfilled when the json will be parsed
     .then(function (json) {
         console.log(json);
+
+
+        // Get the context of the canvas element we want to select
+        var ctx = document.getElementById("myLineChart").getContext("2d");
+
+        // Instantiate a new chart
+        var myLineChart = new Chart(ctx , {
+            type: "line",
+            data: json,
+        });
     });
