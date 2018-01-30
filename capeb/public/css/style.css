@@ -50,3 +50,9 @@ svg{
 }
 
 /* -------- CHARTS ---------- */
+
+.chart{
+  width: auto;
+  display: inline-block;
+  padding: 2%;
+}
