@@ -1,0 +1,7 @@
+/* Règles CSS en plus de celles de bootstrap*/
+
+/* Header */
+.navbar-brand>img {
+    height: 20px;
+    width: auto;
+}
