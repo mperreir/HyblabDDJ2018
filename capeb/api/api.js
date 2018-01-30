@@ -37,12 +37,10 @@ app.get('/:epci/stats', (req, res) => {
 				
 				if(cells[0] == req.params.epci){
 					json['values'] = cells.slice(1);
-					console.log(json)
 					ok = true
 				}
 				if(ok){
 					stats_json[critere[idf]] = json
-					console.log(stats_json)
 				}
 			}
 		})
