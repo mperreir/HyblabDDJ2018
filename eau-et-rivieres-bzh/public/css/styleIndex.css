@@ -4,12 +4,30 @@
 header{
 }
 
-#texte{
-	border:outset;
+body{
+	background : #ABC8E2;
 }
 
 #animation{
-	margin-left:10%;
+	text-align: center;
+}
+
+#texte{
+	border:solid;
+	border-width: 4px;
+	background: white;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 30px;
+	margin-right: 20%;
+	margin-left: 20%;
+}
+
+#btnCommencer{
+	margin-top: 30px;
+	text-align: center;
 }
 
 /* Footer */
