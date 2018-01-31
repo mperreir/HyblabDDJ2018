@@ -69,3 +69,257 @@ header img{
 	opacity: 0.4;
 }
 
+
+.col.s1
+{
+	float: left;
+	width: 5%;
+	height: 100%;
+	position : relative;
+}
+
+.col.s11
+{
+	float: right;
+	width: 95%;
+	height: 100%;
+	position : relative;
+}
+
+.carte
+{
+	height:80%; 
+	width:80%; 
+	z-index: 1;
+	position: absolute;
+	float: left;
+}
+
+.divCarte.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+.ui.animated.button
+{
+	position: absolute;
+	margin : 10px; 
+	background-color: #A9FF88;
+	color : #A9FF88;
+}
+
+.visible.content
+{
+	background-color: #A9FF88;
+	color : #A9FF88;
+	width : 100%;
+	height: 100%;
+}
+.hidden.content
+{
+	background-color: #A9FF88;
+	width : 100%;
+	height: 100%;
+}
+
+
+div#menu
+{
+	height: 100%;
+	/*line-height: 20em; /* hauteur de ligne (identique) */
+  	/*white-space: nowrap;*/
+}
+
+.pin--2006-1 
+{ 
+	position : absolute; 
+	top: 120px; 
+	left:400px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2006-2 
+{ 
+	position : absolute; 
+	top: 120px; 
+	left:300px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2007-1 
+{ 
+	position : absolute; 
+	top: 340px; 
+	left:635px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2007-2 
+{ 
+	position : absolute; 
+	top: 120px; 
+	left:400px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2007-3 
+{ 
+	position : absolute; 
+	top: 120px; 
+	left:250px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2008-1 
+{ 
+	position : absolute; 
+	top: 340px; 
+	left:635px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2008-2 
+{ 
+	position : absolute; 
+	top: 120px; 
+	left:400px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2008-3 
+{ 
+	position : absolute; 
+	top: 120px; 
+	left:250px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+
+.pin--2009-1 
+{ 
+	position : absolute; 
+	top: 120px; 
+	left:250px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2009-2 
+{ 
+	position : absolute; 
+	top: 120px; 
+	left:400px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2009-3 
+{ 
+	position : absolute; 
+	top: 40px; 
+	left:600px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2009-4
+{ 
+	position : absolute; 
+	top: 340px; 
+	left:635px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2012-1 
+{ 
+	position : absolute; 
+	top: 10px; 
+	left:360px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2012-2 
+{ 
+	position : absolute; 
+	top: 110px; 
+	left:160px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2012-3 
+{ 
+	position : absolute; 
+	top: 100px; 
+	left:270px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2012-4
+{ 
+	position : absolute; 
+	top: 85px; 
+	left:725px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2012-5
+{ 
+	position : absolute; 
+	top: 5px; 
+	left:420px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2012-6
+{ 
+	position : absolute; 
+	top: 25px; 
+	left:485px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
+
+.pin--2012-7
+{ 
+	position : absolute; 
+	top: 360px; 
+	left:290px; 
+	width: 12%; 
+	height: 12%; 
+	z-index: 2;
+}
