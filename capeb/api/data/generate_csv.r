@@ -45,9 +45,8 @@ contrats = aggregate( cbind(CDD,CDI,Apprentis,Intérimaires) ~ intercommunalite.2
 write.csv(file="Contrats_2014-2017.csv",x=contrats,row.names=FALSE, quote = FALSE)
 
 data$CA.réalisé
-contrats = aggregate( CA.réalisé ~ intercommunalite.2017_EPCI + X..Date,subset(data,select = c("intercommunalite.2017_EPCI", "X..Date","CA.réalisé")), FUN=co)
 
 AC = table(subset(data,select = c("intercommunalite.2017_EPCI","X..Date","CA.réalisé")))
 AC
 
-write.csv(file="CA_2014-2017.csv",x=contrats,row.names=FALSE, quote = FALSE)
+write.csv(file="CA_2014-2017.csv",x=AC,row.names=FALSE, quote = FALSE)
