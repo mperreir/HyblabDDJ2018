@@ -2,8 +2,14 @@
 
 /* Header */
 header{
-  background-color:aqua;
-  height: 50px;
+}
+
+#texte{
+	border:outset;
+}
+
+#animation{
+	margin-left:10%;
 }
 
 /* Footer */
