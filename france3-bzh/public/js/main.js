@@ -59,5 +59,13 @@ fetch('data/nb_V_A_T.json')
         var myLineChart = new Chart(ctx , {
             type: "line",
             data: json,
+            options : {
+               legend: {
+                   display: true,
+                   position : "bottom",
+                   fullWidth : true
+               }
+
+             }
         });
     });

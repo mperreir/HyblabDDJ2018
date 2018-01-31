@@ -128,7 +128,7 @@
         <animateTransform
              xlink:href="#train"
              attributeName="transform"
-             type="translateX"
+             type="translate"
              dur="20s"
              values="-460 618 ; -460 618 ; 1920 618 ; 1920 618 ; -460 618"
              keyTimes="0;0.2;0.3;0.75;1"
