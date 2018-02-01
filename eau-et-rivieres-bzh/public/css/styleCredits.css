@@ -1,0 +1,106 @@
+body {background-color: #94EEBB;}
+
+#Logo{
+    padding: 0px 15px 0px 15px;
+    position: fixed;
+    top: 80px;
+    left: 150px;
+    width: 300px;
+    border: 5px solid black;
+    background: white;
+}
+
+#TxtRiv{
+    padding: 25px 25px 25px 25px;
+    font-family: "Museo sans rounded";
+    position: fixed;
+    top: 67px;
+    right: 200px;
+    width: 800px;
+    border: 5px solid black;
+    background: white;
+
+}
+
+.Name{
+    padding: 5px 5px 5px 5px;
+    font-family: "Museo sans rounded";
+    position: absolute;
+    border: 3px solid black;
+    background: white;
+    width: 220px;
+    text-align: center;
+    right: -70px;
+}
+
+.Etu{
+    position: absolute;
+}
+
+#Etus{
+    position: fixed;
+    top: -50px;
+    left: 20px;
+}
+
+#Al{
+    position: absolute;
+    top: 500px;
+    left: 350px;
+}
+
+#An{
+    position: absolute;
+    top: 500px;
+    left: 600px;
+}
+
+#Ax{
+    position: absolute;
+    top: 500px;
+    left: 850px;
+}
+
+#C{
+    position: absolute;
+    top: 500px;
+    left: 1100px;
+}
+
+#F{
+    position: absolute;
+    top: 500px;
+    left: 1350px;
+}
+
+#L{
+    position: absolute;
+    top: 700px;
+    left: 350px;
+}
+
+#M{
+    position: absolute;
+    top: 700px;
+    left: 600px;
+}
+
+#Ni{
+    position: absolute;
+    top: 700px;
+    left: 850px;
+}
+
+#No{
+    position: absolute;
+    top: 700px;
+    left: 1100px;
+}
+#T{
+    position: absolute;
+    top: 700px;
+    left: 1350px;
+}
+
+
+
