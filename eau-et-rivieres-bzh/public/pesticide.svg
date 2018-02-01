@@ -6,30 +6,48 @@
 
       
 
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="500" width="500">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 300 500" preserveAspectRatio="xMinYMin meet">
     	<title>Eau et Rivières de Bretagne !</title>
    		<desc>Des pesticides se battent contre notre logo</desc>
 
-		<circle cx="250" cy="250" r="50" stroke="black" stroke-width="3" fill="red" />
-		<text x="228" y="255">LOGO</text>
-		<image href="img/pesticide.png" alt="un pesticide" height="50" width="50" x="20" y="225">
-    		<animate attributeName="x" attributeType="XML" from="20" to="155" begin="0s" dur="1s"/>
-    		<animate attributeName="x" attributeType="XML" from="155" to="20" begin="1s" dur="0.5s"/>
+        <image href="img/Pestibusters_logo.png" alt="Logo de pestibusters" height="200" width="200" x="150" y="120"/>
+
+        <!-- GAUCHE !-->
+		<image href="img/Cancer.png" alt="un pesticide" height="70" width="70" x="10" y="180">
+    		<animate attributeName="x" attributeType="XML" from="10" to="155" begin="0s" dur="1s"/>
+    		<animate attributeName="x" attributeType="XML" from="155" to="10" begin="1s" dur="0.5s"/>
     	</image>
-    	<image href="img/pesticide.png" alt="un pesticide" height="50" width="50" x="0" y="0">
-    		<animate attributeName="x" attributeType="XML" from="0" to="175" begin="0.25s" dur="1s"/>
-    		<animate attributeName="y" attributeType="XML" from="0" to="175" begin="0.25s" dur="1s"/>
-    		<animate attributeName="x" attributeType="XML" from="175" to="0" begin="1.25s" dur="0.5s"/>
-    		<animate attributeName="y" attributeType="XML" from="175" to="0" begin="1.25s" dur="0.5s"/>
+        <!-- DROITE !-->
+        <image href="img/Impact-foetus-.png" alt="un pesticide" height="70" width="70" x="420" y="180">
+            <animate attributeName="x" attributeType="XML" from="420" to="295" begin="0.5s" dur="1s"/>
+            <animate attributeName="x" attributeType="XML" from="295" to="420" begin="1.5s" dur="0.5s"/>
+        </image>
+        <!-- HAUT GAUCHE !-->
+    	<image href="img/Mortel.png" alt="un pesticide" height="70" width="70" x="10" y="10">
+    		<animate attributeName="x" attributeType="XML" from="10" to="175" begin="0.25s" dur="1s"/>
+    		<animate attributeName="y" attributeType="XML" from="10" to="140" begin="0.25s" dur="1s"/>
+    		<animate attributeName="x" attributeType="XML" from="175" to="10" begin="1.25s" dur="0.5s"/>
+    		<animate attributeName="y" attributeType="XML" from="140" to="10" begin="1.25s" dur="0.5s"/>
     	</image>
-    	<image href="img/pesticide.png" alt="un pesticide" height="50" width="50" x="455" y="450">
-    		<animate attributeName="x" attributeType="XML" from="455" to="275" begin="0s" dur="1s"/>
-    		<animate attributeName="y" attributeType="XML" from="450" to="275" begin="0s" dur="1s"/>
-    		<animate attributeName="x" attributeType="XML" from="275" to="455" begin="1s" dur="0.5s"/>
-    		<animate attributeName="y" attributeType="XML" from="275" to="450" begin="1s" dur="0.5s"/>
+        <!-- BAS DROITE !-->
+    	<image href="img/Impact-genetique.png" alt="un pesticide" height="70" width="70" x="420" y="336">
+    		<animate attributeName="x" attributeType="XML" from="420" to="275" begin="0.2s" dur="1s"/>
+    		<animate attributeName="y" attributeType="XML" from="336" to="220" begin="0.2s" dur="1s"/>
+    		<animate attributeName="x" attributeType="XML" from="275" to="420" begin="1.2s" dur="0.5s"/>
+    		<animate attributeName="y" attributeType="XML" from="220" to="336" begin="1.2s" dur="0.5s"/>
     	</image>
-    	<image href="img/pesticide.png" alt="un pesticide" height="50" width="50" x="455" y="225">
-    		<animate attributeName="x" attributeType="XML" from="455" to="295" begin="0.5s" dur="1s"/>
-    		<animate attributeName="x" attributeType="XML" from="295" to="455" begin="1.5s" dur="0.5s"/>
-    	</image>
+        <!-- BAS GAUCHE !-->
+        <image href="img/Risque-pour-les-organes.png" alt="un pesticide" height="70" width="70" x="420" y="10">
+            <animate attributeName="x" attributeType="XML" from="420" to="275" begin="0.25s" dur="1s"/>
+            <animate attributeName="y" attributeType="XML" from="10" to="140" begin="0.25s" dur="1s"/>
+            <animate attributeName="x" attributeType="XML" from="275" to="420" begin="1.25s" dur="0.5s"/>
+            <animate attributeName="y" attributeType="XML" from="140" to="10" begin="1.25s" dur="0.5s"/>
+        </image>
+        <!-- HAUT DROITE !-->
+        <image href="img/Toxic-nocif.png" alt="un pesticide" height="70" width="70" x="10" y="336">
+            <animate attributeName="x" attributeType="XML" from="10" to="175" begin="0.3s" dur="1s"/>
+            <animate attributeName="y" attributeType="XML" from="336" to="220" begin="0.3s" dur="1s"/>
+            <animate attributeName="x" attributeType="XML" from="175" to="10" begin="1.3s" dur="0.5s"/>
+            <animate attributeName="y" attributeType="XML" from="220" to="336" begin="1.3s" dur="0.5s"/>
+        </image>
     </svg>
