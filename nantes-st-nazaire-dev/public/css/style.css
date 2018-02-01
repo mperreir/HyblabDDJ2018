@@ -5,11 +5,89 @@ footer p
   text-align: center;
 }
 
-header{
-  text-align: center;
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,p {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
 }
 
-header img{
-  max-width: 100%;
-	height: auto;
+#logo-hyblab {
+	width: 30%;
+	cursor: url("../img/zoom-in-icon.png"), pointer;
 }
+.page-title {
+	font-size: 30px;
+	padding-top: 50px;
+	text-align: center;
+}
+
+/* Acceuil */
+#section0 {
+	text-align: center;
+}
+
+img#marie-marche {
+	margin-top: 10%;
+	height: 200px;
+}
+
+ul {
+	zoom: 130%;
+	color: blue;
+}
+.fp-tooltip {
+	font-size: 100px;
+}
+
+#chart {
+	width: 600px !important;
+	height: 400px !important;
+}
+
+#bar {
+	width: 600px !important;
+	height: 400px !important;
+}
+/* Pourquoi j'ai choisi Nantes */
+
+.categorie-block {
+	margin-top: 70px;
+	display: flex;
+}
+.categorie-text {
+	padding: 2px 18px;
+}
+img.marie-montre {
+	display: flex;
+}
+
+img.marie-montre {
+	width: 80%;
+	margin-left: 10%;
+}
+
+div.categorie-names {
+	text-align: center;
+}
+
+div.categorie {
+	height: 46px;
+	width: 230px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	background-color: #3A539B;
+	text-align: center;
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 13px;
+	border-radius: 10px;
+}
+
+div.categorie h2 {
+	font-size: 16px;
+}
+
+

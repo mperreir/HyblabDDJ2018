@@ -46,9 +46,6 @@ a:hover {
 .container {  }
 canvas{
 
-  width: 400px !important;
-  height: 600px !important;
-
 }
 #main-question {
 	margin-top: 65px;
@@ -64,42 +61,37 @@ canvas{
 
 .bl-main > section {
 	position: absolute;
-	width: 24%;
-	height: 26%;
+	
+	width: 30%;
+	height: 32%;
+	top: 30%;
+	left: 63%;
+	
 }
 
 .bl-main > section:first-child {
-	top: 24%;
-	left: 14%;
 	background: #F06060;
 }
 
 .bl-main > section:nth-child(2) {
-	top: 24%;
-	left: 38%;
 	background: #03A678;
 }
 
 .bl-main > section:nth-child(3) {
-	top: 24%;
-	left: 62%;
 	background: #72CCA7;
 }
 
 .bl-main > section:nth-child(4) {
-	top: 50%;
-	left: 14%;
 	background: #10A296;
 }
 .bl-main > section:nth-child(5) {
-	top: 50%;
-	left: 38%;
 	background: #CF000F;
 }
 .bl-main > section:nth-child(6) {
-	top: 50%;
-	left: 62%;
 	background: #10A296;
+}
+.bl-main > section:nth-child(7) {
+	background: #013243;
 }
 
 .bl-box {
@@ -109,11 +101,13 @@ canvas{
 	cursor: pointer;
 	opacity: 1;
 	/* Centering with flexbox */
+	/*
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    */
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -392,7 +386,7 @@ div.bl-panel-items > div.bl-hide-current-work {
 }
 
 .bl-main > section:first-child.bl-expand {
-	background: #EE4444;
+	background: grey;
 }
 .bl-main > section:nth-child(2).bl-expand {
 	background: #03A678;

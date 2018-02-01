@@ -7,10 +7,15 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "nodemon": "^1.14.11",
-    "request": "^2.83.0"
+    "fs": "0.0.1-security",
+    "request": "^2.83.0",
+    "xlsx": "^0.11.18"
   },
   "author": "MPDS",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
 }

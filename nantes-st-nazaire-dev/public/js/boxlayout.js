@@ -56,6 +56,13 @@ var Boxlayout = (function() {
 					$el.addClass( 'bl-expand-item' );	
 				}
 
+				//Mes modifs
+				$.fn.fullpage.setAllowScrolling(false);
+				$("section.active-des").css("left","0");
+				$("#fp-nav").css("display","none");
+				$("p.categorie-text").hide();
+				//Fin de mes modifs
+
 			} ).find( 'span.bl-icon-close' ).on( 'click', function() {
 				
 				// close the expanded section and scale up the others
@@ -69,6 +76,16 @@ var Boxlayout = (function() {
 				}
 
 				$el.removeClass( 'bl-expand-item' );
+
+				//Mes modifs
+				$.fn.fullpage.setAllowScrolling(true);
+				
+				$("section.active-des").velocity({
+				    left: "60%"
+				},0);
+				$("#fp-nav").css("display","block");
+				$("p.categorie-text").show();
+				//Fin de mes modifs
 				
 				return false;
 

@@ -11,20 +11,18 @@
     <meta name="keywords" content="hyblab" />
     <meta name="author" content="polytech" />
     <!-- Déclaration de la feuille de style du document-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" href="css/style.css">
-		<!-- Those polyfills are required so that old browsers support fetch mecanism 
+		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-		Simple sample script that loads data from a dummy json file -->
+		<!-- Simple sample script that loads data from a dummy json file -->
 	
     <script src="js/jquery3.2.1.js"></script>
     <!-- Two js for charts -->
     <script src="js/modernizr.custom.js"></script>
     <script src="js/chart.js"></script>
-    <script src="js/velocity.js"></script>
 
 
   </head>
@@ -39,125 +37,86 @@
     <!-- Le contenu du site -->
       <div id="fullpage">
 
-        <div class="section" id="section0">
+        <div class="section " id="section0">
           <img id="logo-hyblab" src="img/logo_hyblab.png" alt="logo hyblab"/>
           <h2 class="page-title">L'histoire de Marie Dupont</h2>
-          <img id="marie-marche" src="img/marie-marche.gif" alt="je déménage">
-
         </div>
         <div class="section" id="section1">
-          <h2 class="page-title">Quel territoire pour mes activités?</h2>
-      
+          <h2 class="page-title">Quelle ville choisir?</h2>
         </div>
 
         <div class="section moveDown" id="section2">
-          <h2 class="page-title">Pourquoi s'installer dans la métropole<br>Nantes St Nazaire?</h2>
-          <div class="row categorie-block">
-          <div class="marie-montre col-md-2 offset-md-1 text-center">
-            <img class="marie-montre" src="img/remp.png" alt="je déménage">
-          </div>
-          <div class="categorie-names col-md-4">
-            <div class="categorie cat0" id="0">
-              <h2>Cadre de vie</h2>
-            </div>
-            <div class="categorie cat1" id="1">
-              <h2>Enseignement</h2>
-            </div>
-            <div class="categorie cat2" id="2">
-              <h2>Emploi</h2>
-            </div>
-            <div class="categorie cat3" id="3">
-              <h2>Culture</h2>
-            </div>
-            <div class="categorie cat4" id="4">
-              <h2>Industrie de pointe</h2>
-            </div>
-            <div class="categorie cat5" id="5">
-              <h2>Développement numérique</h2>
-            </div>
-            <div class="categorie cat6" id="6">
-              <h2>Transports</h2>
-            </div>
-          </div>
+          <h2 class="page-title">Pourquoi j'ai choisi Nantes - St Nazaire</h2>
           <div id="bl-main" class="bl-main">
-            <section id="0" class="bl-box categorie-des cat0">
-              <div>
-                <h2>Cadre de vie</h2>
-                <p class="categorie-text">blablablabla</p>
+            <section>
+              <div class="bl-box">
+                <h2>Accessibilité</h2>
               </div>
               <div class="bl-content">
-                <p>Nantes c'est cool</p>
-                <canvas id="bar"></canvas>
+                <h2>Accessibilité</h2>
+                <p>blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla..
+                txrcyukblinmo</p>
+                <canvas id="myChart" width="200" height="200"></canvas>
+
               </div>
               <span class="bl-icon bl-icon-close"></span>
             </section>
-            <section class="bl-box categorie-des cat1">
-              <div>
-                <h2>Enseignement</h2>
-                <p class="categorie-text">blablablabla blablablablabla blabla blabla blablablabla blabla</p>
+            <section id="bl-work-section">
+              <div class="bl-box">
+                <h2>Environnement</h2>
               </div>
               <div class="bl-content">
-                <canvas id="chart"></canvas>
+                <h2>Environnement</h2>
+                <p>blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla...</p>
+                   <canvas id="myChart2" width="200" height="200"></canvas>
               </div>
               <span class="bl-icon bl-icon-close"></span>
                
             </section>
-            <section class="bl-box categorie-des cat2">
-              <div>
-                <h2>Emploi</h2>
-                <p class="categorie-text">blablablabla blablablablablablabla blablablablablablablabla</p>
+            <section>
+              <div class="bl-box">
+                <h2>Cadre de vie</h2>
               </div>
               <div class="bl-content">
+                <h2>Cadre de vie</h2>
                 <article>
                   <h3>Cadre de vie</h3>
-                  <p>blablablablablablabla blablablablabla blablablablabla blabla blabla blablablablablablablabla blablablablabla blablablablabla blablablablabla blablablabla...</p>
+                  <p>blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla...</p>
                 </article>
               </div>
               <span class="bl-icon bl-icon-close"></span>
             </section>
-            <section class="bl-box categorie-des cat3">
-              <div>
-                <h2>Culture</h2>
-                <p class="categorie-text">skrrrrrt skrrrrrt skrrrrrt skrrrrrt skrrrrrt</p>
+            <section>
+              <div class="bl-box">
+                <h2>Education</h2>
               </div>
               <div class="bl-content">
+                <h2>Education</h2>
                 <p>blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla...</p>
               </div>
               <span class="bl-icon bl-icon-close"></span>
             </section>
-            <section class="bl-box categorie-des cat4">
-              <div>
-                <h2>Industrie de pointe</h2>
-                <p class="categorie-text">ouloulouu ouloulouu ouloulouu ouloulouuouloulouu ouloulouu ouloulouu ouloulouu ouloulouuouloulouu ouloulouu ouloulouu</p>
+            <section>
+              <div class="bl-box">
+                <h2>Emploi</h2>
               </div>
               <div class="bl-content">
+                <h2>Emploi</h2>
                 <p>blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla...</p>
               </div>
               <span class="bl-icon bl-icon-close"></span>
             </section>
-            <section class="bl-box categorie-des cat5">
-              <div>
-                <h2>Développement numérique</h2>
-                <p class="categorie-text">blablablablabla blablablablablablabla blablablablablablabla blablablablabla blablablablablablabla blablablablablablabla blablablablablablabla blablabla...</p>
+            <section>
+              <div class="bl-box">
+                <h2>Innovation</h2>
               </div>
               <div class="bl-content">
-                <p>blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla...</p>
-              </div>
-              <span class="bl-icon bl-icon-close"></span>
-            </section>
-            <section class="bl-box categorie-des cat6">
-              <div>
-                <h2>Transport</h2>
-                <p class="categorie-text">mms ldo nrm</p>
-              </div>
-              <div class="bl-content">
+                <h2>Innovation</h2>
                 <p>blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla...</p>
               </div>
               <span class="bl-icon bl-icon-close"></span>
             </section>
           </div>
-          </div>
-
         </div>
         <div class="section moveDown" id="section3">
           <h2 class="page-title">Synthèse</h2>
@@ -168,7 +127,6 @@
     <script type="text/javascript" src="js/jquery.fullPage.js"></script>
     <script type="text/javascript" src="js/fullpage-starter.js"></script>
     <script src="js/boxlayout.js"></script>
-    <script src="js/myCharts.js"></script>
     <script>
       $(function() {
         Boxlayout.init();
