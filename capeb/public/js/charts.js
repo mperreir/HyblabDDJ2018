@@ -15,9 +15,10 @@ var colors = [
 			'rgb(128, 0, 0)',
 			'rgb(170, 255, 195)',
 			'rgb(128, 128, 0)'
-			]
+			];
+
 function flush(){
-	var cvs = document.getElementById("page3")
+	var cvs = document.getElementById("page3");
 	cvs.innerHTML = ""
 }
 function drawLineChart(data, title){
@@ -25,7 +26,7 @@ function drawLineChart(data, title){
 	sec.className = "chart"
 
 	var h3 = sec.appendChild(document.createElement('h3'))
-			h3.innerHTML = title
+			h3.innerHTML = title;
 
 	var cvs = sec.appendChild(document.createElement('canvas'))
 
@@ -37,9 +38,8 @@ function drawLineChart(data, title){
 													    fill: false
 														}
 												})
-	console.log(d)
 	var ctx = cvs.getContext("2d")
-	var chart = new Chart(ctx, {
+		new Chart(ctx, {
 		// The type of chart we want to create
 		type: 'line',
 
@@ -67,7 +67,7 @@ function drawBarChart(data, title){
 
 
 	var ctx = cvs.getContext("2d")
-	var chart = new Chart(ctx, {
+	new Chart(ctx, {
 		// The type of chart we want to create
 		type: 'bar',
 
@@ -100,7 +100,7 @@ function drawPieChart(data, title){
 	var cvs2 = sec.appendChild(document.createElement('canvas'))
 	var ctx2 = cvs2.getContext("2d")
 
-	var myPieChart = new Chart(ctx2,{
+	new Chart(ctx2,{
 		type: 'pie',
 		data: {
 				labels: data.labels,
@@ -117,51 +117,85 @@ function drawPieChart(data, title){
 	});
 }
 
-/*
- //RIP lucas
-function drawPieChart(data){
+function drawBubbleChart(data){
 
-    console.log(data);
-    var mydata = [10, 20, 100];
+	function scale(number){
+		var start = 10;
+		var inc = 8;
+		if (number == 0){
+			return start;
+		} else if(number <= 2){
+			return start+inc;
+		} else if(number <= 5){
+			return start+inc*2;
+		} else if(number <= 10){
+            return start+inc*3;
+        } else {
+			return start+inc*4;
+		}
+	}
 
-    var width = 960,
-        height = 500,
-        radius = Math.min(width, height) / 2;
+    var sec = document.getElementById("page3").appendChild(document.createElement('section'));
+    sec.className = "chart";
 
-    var color = d3.scaleOrdinal()
-        .range(["#98abc5", "#8a89a6", "#7b6888"]);
+    var h3 = sec.appendChild(document.createElement('h3'));
+    h3.innerHTML = "Jusqu'où peuvent-ils aller ?";
 
-    var arc = d3.arc()
-        .outerRadius(radius - 10)
-        .innerRadius(0);
+    var cvs = sec.appendChild(document.createElement('canvas'));
+    var ctx = cvs.getContext("2d");
+    ctx.canvas.width = 500;
+    ctx.canvas.height = 700;
 
-    var labelArc = d3.arc()
-        .outerRadius(radius - 40)
-        .innerRadius(radius - 40);
+    var points = {datasets: [{
+			data:[]
+		}]};
 
-    var pie = d3.pie()
-        .sort(null)
-        .value(function(d) { return d; });  
+	data.values.forEach(function(value){
+        var point = {};
+		point.x = value[2];
+		point.y = value[1];
+		point.r = scale(value[1]);
+		point.metier = value[0];
+		points.datasets[0].data.push(point);
+	});
 
-    var svg = d3.select("#page3").append("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .append("g")
-        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+	var colorMatch = {
+		Aut:colors[0],
+		Ele: colors[1],
+		maç: colors[2],
+    	men: colors[3],
+        Mét: colors[4],
+        Pei: colors[5],
+        plâ: colors[6],
+        plo: colors[7],
+        Tra: colors[8]
+};
 
-    var g = svg.selectAll(".arc")
-        .data(pie(mydata))
-        .enter().append("g")
-        .attr("class", "arc");
+    var options = {
+        legend: false,
+    	tooltips: false,
+        elements: {
+            point: {
+                backgroundColor: function(context){
+                    var value = context.dataset.data[context.dataIndex];
+                    return colorMatch[value.metier.substr(0, 3)];
+				},
 
-    g.append("path")
-        .attr("d", arc)
-        .style("fill", function(d) { return color(d.data); });
+            	r: function (context) {
+                    var value = context.dataset.data[context.dataIndex];
+                    var size = context.chart.width;
+                    var base = Math.abs(value.v) / 1000;
+                    return (size *2) * base;
+                }
+            }
+        }
+    };
 
-    g.append("text")
-        .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
-        .attr("dy", ".35em")
-        .text(function(d) { return d.data; });
+
+    new Chart(ctx, {
+        type: 'bubble',
+        data: points,
+        options: options
+    });
 
 }
-*/

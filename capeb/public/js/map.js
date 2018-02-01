@@ -12,7 +12,6 @@ var path = d3.geoPath(projection);
 path.projection(projection);
 
 $ (document).ready(function(){
-
     d3.json("data/merged.geojson", function (err, geoJSON) {
         var map = svg.selectAll("path").data(geoJSON.features);
         map.enter()
@@ -21,6 +20,12 @@ $ (document).ready(function(){
             .attr("stroke", "black")
             .attr("d", path)
             .on("click", function (d) {
+                document.getElementById("page3").style.display = "block";
+                $('html,body').animate({
+                        scrollTop: $("#page3").offset().top},
+                    'slow');
+
+                // sunburst and basic charts
                 fetch("/capeb/data/" + d.properties.siren_epci + "/stats")
                     .then(function (value) {
                         return value.json();
@@ -31,17 +36,27 @@ $ (document).ready(function(){
                         return {};
                     })
                     .then(function(json){
-						console.log(d.properties.siren_epci)
-                        var keys = Object.keys(json);
-                        document.getElementById("page3").style.display = "block";
-                        $('html,body').animate({
-                                scrollTop: $("#page3").offset().top},
-                            'slow');
+                        console.log(d.properties.siren_epci);
                         flush();
-                        drawBarChart(json.Activite, "Repartion des Activite entre 2014 et 2017");
-						drawPieChart(json.Developpement_durable, "Dévolopement durable en 2016");
-						drawPieChart(json.Marches_publics, "Marche public");
-						drawLineChart(json.Contrats, "Contrats")
+                        drawBarChart(json.Activite, "Répartion des activités entre 2014 et 2017");
+                        drawPieChart(json.Developpement_durable, "Dévoloppement durable en 2016");
+                        drawPieChart(json.Marches_publics, "Marchés publics");
+                        drawLineChart(json.Contrats, "Contrats");
+                        sunBurst();
+                    });
+
+                // bubble chart
+                fetch("/capeb/data/" + d.properties.siren_epci + "/bubble")
+                    .then(function (value) {
+                        return value.json();
+                    })
+                    .catch(function (error) {
+                        console.log("error");
+                        console.log(error);
+                        return {};
+                    })
+                    .then(function(json){
+                        drawBubbleChart(json);
                     });
             })
             .on("mouseover", function(d) {
