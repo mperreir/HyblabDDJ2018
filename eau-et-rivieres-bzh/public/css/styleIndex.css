@@ -5,7 +5,7 @@ header{
 }
 
 body{
-	background : #ABC8E2;
+	background : #4BB5C1;
 }
 
 #animation{
@@ -20,14 +20,24 @@ body{
 	padding-left: 15px;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	margin-top: 30px;
+	margin-top: 20px;
 	margin-right: 20%;
 	margin-left: 20%;
 }
 
 #btnCommencer{
-	margin-top: 30px;
+	margin-top: 20px;
 	text-align: center;
+	border:solid;
+	border-radius: 5px;
+	background: #7FC6BC;
+	width: 150px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.lien{
+	text-decoration: none;
 }
 
 /* Footer */
