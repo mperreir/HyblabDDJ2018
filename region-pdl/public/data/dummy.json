@@ -1,3 +1,4 @@
 {
-  "data": "Some data from JSON :-)"
+  "data": "Some data from JSON :-)",
+  "test": "Some other data"
 }
