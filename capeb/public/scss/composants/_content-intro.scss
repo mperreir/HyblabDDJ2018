@@ -1,0 +1,9 @@
+/* style des contenus de la partie intro */
+
+.content-intro{
+  color: $white;
+  >.textes-intro{
+    transform: translate(0, -50%);
+    margin: 47% 0;
+  }
+}

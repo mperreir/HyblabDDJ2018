@@ -1,0 +1,42 @@
+/* style des blocs de data du dashboard */
+
+.bloc-data{
+  >.donneeTexte{
+    @extend %titre-titre;
+    color: $white;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.info-epci{
+  background-color: $main-color;
+}
+
+.info-conjoncture{
+  background-color: $main-contrast;
+}
+
+.info-investissement{
+  background-color: $main-color;
+}
+
+.info-emploi{
+  background-color: $main-contrast;
+}
+
+.info-distance{
+  background-color: $main-color;
+}
+
+.info-contrat{
+  background-color: $main-contrast;
+}
+
+.info-mp{
+  background-color: $main-color;
+}
+
+.info-dd{
+  background-color: $main-contrast;
+}
