@@ -19,25 +19,12 @@ header img{
 	width:100%;
 	height: 100%;
 }
-#section0 h1{
-	color: #FFFFFF;
-}
-#section0 p{
-	color: #FFFFFF;
-	opacity: 0.4;
-}
+
 
 #section1{
 	background: url(../img/background.jpg);
 	width:100%;
 	height: 100%;
-}
-#section1 h1{
-	color: #FFFFFF;
-}
-#section1 p{
-	color: #FFFFFF;
-	opacity: 0.4;
 }
 
 #section2{
@@ -45,53 +32,37 @@ header img{
 	width:100%;
 	height: 100%;
 }
-#section2 h1{
-	color: #FFFFFF;
-}
-#section2 p{
-	color: #FFFFFF;
-	opacity: 0.4;
-}
+
 
 #section3{
 	background: url(../img/background.jpg);
 	width:100%;
 	height: 100%;
 }
-#section3 h1{
-	color: #FFFFFF;
-}
-#section3 p{
-	color: #FFFFFF;
-	opacity: 0.4;
-}
+
  
 #section4{
 	background: url(../img/background.jpg);
 	width:100%;
 	height: 100%;
 }
-#section4 h1{
-	color: #FFFFFF;
-}
-#section4 p{
-	color: #FFFFFF;
-	opacity: 0.4;
-}
+
 
 
 .col.s1
 {
 	float: left;
 	width: 70px;
-	height: 550px;
+	height: 400px;
 	position : relative;
+	margin-left: 70px;
+    margin-top: 100px;
 }
 
 .col.s11
 {
 	float: right;
-	width: 1290px;
+	width: 1210px;
 	height: 615px;
 	position : relative;
 }
@@ -128,38 +99,6 @@ header img{
 	width: 0;
 	height: 0;
 	pointer-events: none;
-}
-
-.ui.animated.button
-{
-	position: absolute;
-	width: 100%;
-	height: 5%;
-	margin : 10px; 
-	background-color: #A9FF88;
-	color : #A9FF88;
-}
-
-.visible.content
-{
-	background-color: #A9FF88;
-	color : #A9FF88;
-	width : 100%;
-	height: 100%;
-}
-.hidden.content
-{
-	background-color: #A9FF88;
-	width : 100%;
-	height: 100%;
-}
-
-
-div#menu
-{
-	height: 100%;
-	/*line-height: 20em; /* hauteur de ligne (identique) */
-  	/*white-space: nowrap;*/
 }
 
 .pin--2006-1 
@@ -532,109 +471,77 @@ div#menu
 	height :80%; 
 }
 
-.timeline
-{
+
+
+.point {
+	width: 18px;
+	height: 18px;
+	border-radius: 10000px;
+	background: #85C275;
+	border: 2px solid #A9FF88;
+	margin: 4px 0 14px 8px;
+	position: relative;
+}
+
+.point:hover {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	margin-left: 7px;
+}
+
+.point.active {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	margin-left: 7px;
+}
+
+.point:after {
 	position: absolute;
-	z-index: 1;
-	left: 2px;
-	width : 80%; 
-	height :120%; 
+	top: 15px;
+	left: 5px;
+	content: " ";
+	display: block;
+	width: 4px;
+	height: 24px;
+	background: #A9FF88;
+}
+
+.point:hover:after {
+	left: 6px;
+}
+
+.point:last-child:after {
+	display: none;
 }
 
 .pointEvolution
 {
 	position: absolute;
-	top : 2px;
+	top : -150px;
 	z-index: 2;
 	width : 80%; 
 	height :80%; 
 }
 
-.point2006
+.pointEvolution:hover
 {
 	position: absolute;
+	top : 0px;
+	left: 0px;
 	z-index: 2;
-	width : 80%; 
-	height :80%; 
+	width:100%;
+	height:100%;
 }
 
-.point2007
+p.dateMenu
 {
-	position: absolute;
-	z-index: 2;
-	width : 80%; 
-	height :80%; 
+	color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+	margin-left: 20px;
 }
 
-.point2008
-{
-	position: absolute;
-	z-index: 2;
-	width : 80%; 
-	height :80%; 
-}
-.point2009
-{
-	position: absolute;
-	z-index: 2;
-	width : 80%; 
-	height :80%; 
-}
-.point2010
-{
-	position: absolute;
-	z-index: 2;
-	width : 80%; 
-	height :80%; 
-}
-.point2011
-{
-	position: absolute;
-	z-index: 2;
-	width : 80%; 
-	height :80%; 
-}
-.point2012
-{
-	position: absolute;
-	z-index: 2;
-	width : 80%; 
-	height :80%; 
-}
-.point2013
-{
-	position: absolute;
-	z-index: 2;
-	width : 80%; 
-	height :80%; 
-}
-.point2014
-{
-	position: absolute;
-	z-index: 2;
-	width : 80%; 
-	height :80%; 
-}
-.point2015
-{
-	position: absolute;
-	z-index: 2;
-	width : 80%; 
-	height :80%; 
-}
-.point2016
-{
-	position: absolute;
-	z-index: 2;
-	width : 80%; 
-	height :80%; 
-}
-.point2017
-{
-	position: absolute;
-	z-index: 2;
-	width : 80%; 
-	height :80%; 
-}
 
 
