@@ -1,4 +1,8 @@
 "use strict";
+document.getElementsByClassName("backToMap")[0].addEventListener("click", function(){
+    var location = document.location.href;
+    document.location.href = location.slice(0, location.lastIndexOf("/"));
+});
 
 var page2 = d3.select(".map-pdl");
 var svg = page2.append("svg");
@@ -20,11 +24,7 @@ $ (document).ready(function(){
             .attr("stroke", "black")
             .attr("d", path)
             .on("click", function (d) {
-                // transition
-                var options = {target_id:"screen2", animation_command:"left"};
-                MultiScreen.switch_screens(options);
-                console.log(MultiScreen.get_current_screen());
-
+                document.location.href = document.location + "/slide2";
                 document.getElementById("nom_epci").innerText = d.properties.nom_comple;
                 // sunburst and basic charts
                 fetch("/capeb/data/" + d.properties.siren_epci + "/stats")
@@ -74,6 +74,7 @@ $ (document).ready(function(){
                     .style("fill", "white");
                 d3.select("#titre-epci").text('');
             })
+
 
     });
 
