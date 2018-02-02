@@ -24,8 +24,27 @@ $ (document).ready(function(){
             .attr("stroke", "black")
             .attr("d", path)
             .on("click", function (d) {
+                document.getElementById("page3").style.display = "block";
+                $('html,body').animate({
+                        scrollTop: $("#page3").offset().top},
+                    'slow');
+//sunBurst chart
+				fetch("/capeb/data/" + d.properties.siren_epci + "/sunburst")
+                    .then(function (value) {
+                        return value.json();
+                    })
+                    .catch(function (error) {
+                        console.log("error");
+                        console.log(error);
+                        return {};
+                    })
+                    .then(function(json){
+						$("svg#sunburst").remove();
+                        sunBurst(json);
+                    });
                 document.location.href = document.location + "/slide2";
-                document.getElementById("nom_epci").innerText = d.properties.nom_comple;
+                document.getElementById("nom_epci").innerText = d.properties.nom_comple;                
+
                 // sunburst and basic charts
                 fetch("/capeb/data/" + d.properties.siren_epci + "/stats")
                     .then(function (value) {
@@ -37,14 +56,17 @@ $ (document).ready(function(){
                         return {};
                     })
                     .then(function(json){
+						console.log(d.properties.siren_epci);
+
                         flush();
                         drawBarChart(json.Activite, "Répartion des activités entre 2014 et 2017");
                         drawPieChart(json.Developpement_durable, "Dévoloppement durable en 2016");
                         drawPieChart(json.Marches_publics, "Marchés publics");
                         drawLineChart(json.Contrats, "Contrats");
-                        sunBurst();
-                    });
+                        //sunBurst(json);
 
+                    });
+				/*
                 // bubble chart
                 fetch("/capeb/data/" + d.properties.siren_epci + "/bubble")
                     .then(function (value) {
@@ -58,7 +80,11 @@ $ (document).ready(function(){
                     .then(function(json){
                         // drawBubbleChart(json);
                     });
+				*/
+				
+				
             })
+            
             .on("mouseover", function(d) {
                 d3.select(this).transition()
                     .delay("50")
@@ -77,6 +103,7 @@ $ (document).ready(function(){
 
 
     });
+
 
 });
 
