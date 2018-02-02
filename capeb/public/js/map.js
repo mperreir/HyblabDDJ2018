@@ -24,11 +24,7 @@ $ (document).ready(function(){
             .attr("stroke", "black")
             .attr("d", path)
             .on("click", function (d) {
-                document.getElementById("page3").style.display = "block";
-                $('html,body').animate({
-                        scrollTop: $("#page3").offset().top},
-                    'slow');
-//sunBurst chart
+                //sunBurst chart
 				fetch("/capeb/data/" + d.properties.siren_epci + "/sunburst")
                     .then(function (value) {
                         return value.json();
@@ -42,8 +38,6 @@ $ (document).ready(function(){
 						$("svg#sunburst").remove();
                         sunBurst(json);
                     });
-                document.location.href = document.location + "/slide2";
-                document.getElementById("nom_epci").innerText = d.properties.nom_comple;                
 
                 // sunburst and basic charts
                 fetch("/capeb/data/" + d.properties.siren_epci + "/stats")
@@ -81,8 +75,10 @@ $ (document).ready(function(){
                         // drawBubbleChart(json);
                     });
 				*/
-				
-				
+
+                // move to dashboard
+                document.location.href = document.location + "/slide2";
+                document.getElementById("nom_epci").innerText = d.properties.nom_comple;
             })
             
             .on("mouseover", function(d) {
