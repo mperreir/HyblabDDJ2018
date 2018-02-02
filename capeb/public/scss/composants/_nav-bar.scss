@@ -1,0 +1,34 @@
+/* style de la barre de nav du dashboard */
+
+.nav-bar{
+  background-color: $black;
+  color: $white;
+  display: grid;
+  grid-template-columns: 55px 2fr 1fr;
+  grid-template-rows: 1fr;
+  text-align: center;
+  >.epci{
+    align-self: stretch;
+    line-height: 48px;
+    @extend %titre-epci_mini;
+  }
+  >.backToMap{
+    width: 48px;
+    height: 48px;
+    grid-column: 1 / 2;
+    justify-self: end;
+  }
+  >.backToMap:hover{
+    stroke-width: 4;
+    cursor: pointer;
+  }
+  >.epci{
+    grid-column: 2 / 3;
+    justify-self: stretch;
+  }
+  >.button-zoom{
+    grid-column: 3 /4;
+    justify-self: stretch;
+    height: 100%;
+  }
+}

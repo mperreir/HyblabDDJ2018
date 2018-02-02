@@ -1,0 +1,12 @@
+/* style des textes de la partie intro */
+
+.textes-intro{
+  width: 85%;
+  >.title{
+    @extend %titre-titre;
+    margin-bottom: 20px;
+  }
+  >.texte{
+    @extend %texte-labeur;
+  }
+}
