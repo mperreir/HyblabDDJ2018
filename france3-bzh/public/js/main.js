@@ -97,8 +97,92 @@ fetch('data/nb_V_A_T.json')
              }
         });
     });
+// JS Slide 3
+$( "#voiture" ).mouseover(function() {
+  if (   $("#pie_veh").attr("src") != "img/Vehicules/voiture_graphique.svg" ) {
+    $("#pie_veh").fadeOut("slow", function() {
+      $( "#camion" ).css("opacity", "0.5");
+      $( "#pieton" ).css("opacity", "0.5");
+      $( "#voiture" ).css("opacity", "1");
+      $( "#moto" ).css("opacity", "0.5");
+      $( "#img_train_slide3" ).css("opacity", "0.5");
+
+      $("#pie_veh").css("width", "25%");
+      $("#pie_veh").attr("src", "img/Vehicules/voiture_graphique.svg");
+    });
+    $("#pie_veh").fadeIn("slow");
+  }
+
+});
+
+$( "#camion" ).mouseover(function() {
+  if (   $("#pie_veh").attr("src") != "img/Vehicules/camion_graphique.svg" ) {
+    $( "#camion" ).css("opacity", "1");
+    $( "#pieton" ).css("opacity", "0.5");
+    $( "#voiture" ).css("opacity", "0.5");
+    $( "#moto" ).css("opacity", "0.5");
+    $( "#img_train_slide3" ).css("opacity", "0.5");
+
+    $("#pie_veh").fadeOut("slow", function() {
+      $("#pie_veh").css("width", "25%");
+      $("#pie_veh").attr("src", "img/Vehicules/camion_graphique.svg");
+    });
+    $("#pie_veh").fadeIn("slow");
+  }
+
+});
+
+$( "#moto" ).mouseover(function() {
+  if (   $("#pie_veh").attr("src") != "img/Vehicules/moto_graphique.svg" ) {
+    $( "#moto" ).css("opacity", "1");
+    $( "#pieton" ).css("opacity", "0.5");
+    $( "#voiture" ).css("opacity", "0.5");
+    $( "#camion" ).css("opacity", "0.5");
+    $( "#img_train_slide3" ).css("opacity", "0.5");
+
+    $("#pie_veh").fadeOut("slow", function() {
+      $("#pie_veh").css("width", "25%");
+      $("#pie_veh").attr("src", "img/Vehicules/moto_graphique.svg");
+    });
+    $("#pie_veh").fadeIn("slow");
+  }
+
+});
+
+$( "#pieton" ).mouseover(function() {
+  if (   $("#pie_veh").attr("src") != "img/Vehicules/personnage_graphique.svg" ) {
+    $( "#camion" ).css("opacity", "0.5");
+    $( "#pieton" ).css("opacity", "1");
+    $( "#voiture" ).css("opacity", "0.5");
+    $( "#moto" ).css("opacity", "0.5");
+    $( "#img_train_slide3" ).css("opacity", "0.5");
+
+    $("#pie_veh").fadeOut("slow", function() {
+      $("#pie_veh").css("width", "7%");
+      $("#pie_veh").attr("src", "img/Vehicules/personnage_graphique.svg");
+    });
+    $("#pie_veh").fadeIn("slow");
+  }
 
 
+});
+
+$( "#img_train_slide3" ).mouseover(function() {
+  if (   $("#pie_veh").attr("src") != "img/Vehicules/train_graphique.svg" ) {
+    $( "#camion" ).css("opacity", "0.5");
+    $( "#pieton" ).css("opacity", "0.5");
+    $( "#voiture" ).css("opacity", "0.5");
+    $( "#moto" ).css("opacity", "0.5");
+    $( "#img_train_slide3" ).css("opacity", "1");
+
+    $("#pie_veh").fadeOut("slow", function() {
+      $("#pie_veh").css("width", "25%");
+      $("#pie_veh").attr("src", "img/Vehicules/train_graphique.svg");
+
+    });
+    $("#pie_veh").fadeIn("slow");
+  }
+});
 
     // leaflet
 var mymap = L.map('mapid').setView([51.505, -0.09], 13);

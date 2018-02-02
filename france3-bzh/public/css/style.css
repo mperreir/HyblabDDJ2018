@@ -134,7 +134,9 @@ h3
   background-size: 100%;
 }
 
+#section_illu_camion {
 
+}
 /*
 #container
 {
@@ -267,9 +269,40 @@ h3
   width: 500px;
 }
 
+#graph_vehicule {
+  text-align: center;
+  position: relative;
+  height: 60%;
+}
+#graph_vehicule img{
+  width: 75%;
+  height: 75%;
+}
 
+#vehicule_selection {
+  text-align: center;
+}
 
+#vehicule_selection img{
+  width: 6%;
+  height: 6%;
+  margin-right: 5%;
+  margin-left: 5%;
+  opacity: 0.5;
+}
 
+#vehicule_selection img:hover{
+  opacity: 1;
+}
+
+#img_train_slide3 {
+  width: 300px !important;
+}
+
+#pieton{
+  width: 2% !important;
+  height: 2% !important;
+}
 .orange {
   color: #E37B40;
 }
