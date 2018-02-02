@@ -14,6 +14,11 @@ function controleurPlan(){
 	var annee2015 = document.getElementById("carte2015");
 	var annee2016 = document.getElementById("carte2016");
 	var annee2017 = document.getElementById("carte2017");
+	var pin = document.getElementById("pin2006-01");
+
+	pin.onclick = function(){
+		console.log("ok");
+	}
 
 	annee2006.onclick = function(){
 		document.getElementById("carte06").className = "fadeIn animated 2006 divCarte ";
@@ -337,5 +342,192 @@ function chargement(){
 	document.getElementById('jackGif').className = "jackGif--hidden";
 }
 
+function controleurPodium()
+{
+	var Podium2006 = document.getElementById("Podium2006");
+	var Podium2007 = document.getElementById("Podium2007");
+	var Podium2008 = document.getElementById("Podium2008");
+	var Podium2009 = document.getElementById("Podium2009");
+	var Podium2010 = document.getElementById("Podium2010");
+	var Podium2011 = document.getElementById("Podium2011");
+	var Podium2012 = document.getElementById("Podium2012");
+	var Podium2013 = document.getElementById("Podium2013");
+	var Podium2014 = document.getElementById("Podium2014");
+	var Podium2015 = document.getElementById("Podium2015");
+	var Podium2016 = document.getElementById("Podium2016");
+	var Podium2017 = document.getElementById("Podium2017");
+
+	Podium2006.onclick = function(){
+		console.log('ok');
+		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
+		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
+		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
+		document.getElementById('deuxiemeFrancais').className = "fadeInDown animated francais deuxieme drapeau";
+		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
+		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
+		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAllemand').className = "allemand troisieme drapeau--hidden";
+		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
+		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+	}
+	Podium2007.onclick = function(){
+		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
+		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
+		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
+		document.getElementById('deuxiemeFrancais').className = "fadeInDown animated francais deuxieme drapeau";
+		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
+		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
+		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAllemand').className = "fadeInDown animated allemand troisieme drapeau";
+		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
+		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAnglais').className = "anglais troisieme drapeau--hidden";
+	}
+	Podium2008.onclick = function(){
+		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
+		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
+		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
+		document.getElementById('deuxiemeFrancais').className = "fadeInDown animated francais deuxieme drapeau";
+		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
+		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
+		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAllemand').className = "allemand troisieme drapeau--hidden";
+		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
+		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+	}
+	Podium2009.onclick = function(){
+		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
+		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
+		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
+		document.getElementById('deuxiemeFrancais').className = "fadeInDown animated francais deuxieme drapeau";
+		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
+		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
+		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAllemand').className = "allemand troisieme drapeau--hidden";
+		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
+		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+	}
+	Podium2010.onclick = function(){
+		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
+		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
+		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
+		document.getElementById('deuxiemeFrancais').className = "fadeInDown animated francais deuxieme drapeau";
+		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
+		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
+		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAllemand').className = "allemand troisieme drapeau--hidden";
+		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
+		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAnglais').className = "anglais troisieme drapeau--hidden";
+	}
+	Podium2011.onclick = function(){
+		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
+		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
+		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
+		document.getElementById('deuxiemeFrancais').className = "fadeInDown animated francais deuxieme drapeau";
+		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
+		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
+		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAllemand').className = "allemand troisieme drapeau--hidden";
+		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
+		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAnglais').className = "anglais troisieme drapeau--hidden";
+	}
+	Podium2012.onclick = function(){
+		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
+		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
+		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
+		document.getElementById('deuxiemeFrancais').className = "fadeInDown animated francais deuxieme drapeau";
+		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
+		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
+		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAllemand').className = "allemand troisieme drapeau--hidden";
+		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
+		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+	}
+	Podium2013.onclick = function(){
+		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
+		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
+		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
+		document.getElementById('deuxiemeFrancais').className = "fadeInDown animated francais deuxieme drapeau";
+		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
+		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
+		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAllemand').className = "allemand troisieme drapeau--hidden";
+		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
+		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+	}
+	Podium2014.onclick = function(){
+		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
+		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
+		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
+		document.getElementById('deuxiemeFrancais').className = "fadeInDown animated francais deuxieme drapeau";
+		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
+		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
+		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAllemand').className = "allemand troisieme drapeau--hidden";
+		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
+		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+	}
+	Podium2015.onclick = function(){
+		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
+		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
+		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
+		document.getElementById('deuxiemeFrancais').className = "fadeInDown animated francais deuxieme drapeau";
+		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
+		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
+		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAllemand').className = "allemand troisieme drapeau--hidden";
+		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
+		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+	}
+	Podium2016.onclick = function(){
+		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
+		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
+		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
+		document.getElementById('deuxiemeFrancais').className = "fadeInDown animated francais deuxieme drapeau";
+		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
+		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
+		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAllemand').className = "fadeInDown animated allemand troisieme drapeau--hidden";
+		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
+		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAnglais').className = "anglais troisieme drapeau--hidden";
+	}
+	Podium2017.onclick = function(){
+		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
+		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
+		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
+		document.getElementById('deuxiemeFrancais').className = "fadeInDown animated francais deuxieme drapeau";
+		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
+		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
+		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAllemand').className = "allemand troisieme drapeau--hidden";
+		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
+		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
+		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+	}
+
+}
+controleurPodium();
 controleurPlan();
 setTimeout(chargement, 5000); 
