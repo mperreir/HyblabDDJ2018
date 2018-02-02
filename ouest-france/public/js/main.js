@@ -479,6 +479,7 @@ function controleurPlan(){
 
 function chargement(){
 	document.getElementById('jackGif').className = "jackGif--hidden";
+	document.getElementById('logo').className = "logo";
 }
 
 function controleurPodium()
@@ -497,7 +498,18 @@ function controleurPodium()
 	var Podium2017 = document.getElementById("Podium2017");
 
 	Podium2006.onclick = function(){
-		console.log('ok');
+		Podium2006.className = "point active";
+		Podium2007.className = "point";
+		Podium2008.className = "point";
+		Podium2009.className = "point";
+		Podium2010.className = "point";
+		Podium2011.className = "point";
+		Podium2012.className = "point";
+		Podium2013.className = "point";
+		Podium2014.className = "point";
+		Podium2015.className = "point";
+		Podium2016.className = "point";
+		Podium2017.className = "point";
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -510,8 +522,21 @@ function controleurPodium()
 		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
 		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2007.onclick = function(){
+		Podium2006.className = "point active";
+		Podium2007.className = "point";
+		Podium2008.className = "point";
+		Podium2009.className = "point";
+		Podium2010.className = "point";
+		Podium2011.className = "point";
+		Podium2012.className = "point";
+		Podium2013.className = "point";
+		Podium2014.className = "point";
+		Podium2015.className = "point";
+		Podium2016.className = "point";
+		Podium2017.className = "point";
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -524,8 +549,21 @@ function controleurPodium()
 		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
 		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAnglais').className = "anglais troisieme drapeau--hidden";
+		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2008.onclick = function(){
+		Podium2006.className = "point active";
+		Podium2007.className = "point";
+		Podium2008.className = "point";
+		Podium2009.className = "point";
+		Podium2010.className = "point";
+		Podium2011.className = "point";
+		Podium2012.className = "point";
+		Podium2013.className = "point";
+		Podium2014.className = "point";
+		Podium2015.className = "point";
+		Podium2016.className = "point";
+		Podium2017.className = "point";
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -538,8 +576,21 @@ function controleurPodium()
 		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
 		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2009.onclick = function(){
+		Podium2006.className = "point active";
+		Podium2007.className = "point";
+		Podium2008.className = "point";
+		Podium2009.className = "point";
+		Podium2010.className = "point";
+		Podium2011.className = "point";
+		Podium2012.className = "point";
+		Podium2013.className = "point";
+		Podium2014.className = "point";
+		Podium2015.className = "point";
+		Podium2016.className = "point";
+		Podium2017.className = "point";
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -552,36 +603,75 @@ function controleurPodium()
 		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
 		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2010.onclick = function(){
+		Podium2006.className = "point active";
+		Podium2007.className = "point";
+		Podium2008.className = "point";
+		Podium2009.className = "point";
+		Podium2010.className = "point";
+		Podium2011.className = "point";
+		Podium2012.className = "point";
+		Podium2013.className = "point";
+		Podium2014.className = "point";
+		Podium2015.className = "point";
+		Podium2016.className = "point";
+		Podium2017.className = "point";
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
 		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
-		document.getElementById('deuxiemeFrancais').className = "fadeInDown animated francais deuxieme drapeau";
+		document.getElementById('deuxiemeFrancais').className = "francais deuxieme drapeau--hidden";
 		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
 		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
 		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAllemand').className = "allemand troisieme drapeau--hidden";
 		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
-		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
+		document.getElementById('deuxiemeAnglais').className = "fadeInDown animated anglais deuxieme drapeau";
 		document.getElementById('troisiemeAnglais').className = "anglais troisieme drapeau--hidden";
+		document.getElementById('troisiemeSuede').className = "fadeInDown animated suede troisieme drapeau";
 	}
 	Podium2011.onclick = function(){
+		Podium2006.className = "point active";
+		Podium2007.className = "point";
+		Podium2008.className = "point";
+		Podium2009.className = "point";
+		Podium2010.className = "point";
+		Podium2011.className = "point";
+		Podium2012.className = "point";
+		Podium2013.className = "point";
+		Podium2014.className = "point";
+		Podium2015.className = "point";
+		Podium2016.className = "point";
+		Podium2017.className = "point";
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
 		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
-		document.getElementById('deuxiemeFrancais').className = "fadeInDown animated francais deuxieme drapeau";
+		document.getElementById('deuxiemeFrancais').className = "francais deuxieme drapeau--hidden";
 		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
 		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
 		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAllemand').className = "allemand troisieme drapeau--hidden";
 		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
-		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
+		document.getElementById('deuxiemeAnglais').className = "fadeInDown animated anglais deuxieme drapeau";
 		document.getElementById('troisiemeAnglais').className = "anglais troisieme drapeau--hidden";
+		document.getElementById('troisiemeSuede').className = "fadeInDown animated suede troisieme drapeau";
 	}
 	Podium2012.onclick = function(){
+		Podium2006.className = "point active";
+		Podium2007.className = "point";
+		Podium2008.className = "point";
+		Podium2009.className = "point";
+		Podium2010.className = "point";
+		Podium2011.className = "point";
+		Podium2012.className = "point";
+		Podium2013.className = "point";
+		Podium2014.className = "point";
+		Podium2015.className = "point";
+		Podium2016.className = "point";
+		Podium2017.className = "point";
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -594,8 +684,21 @@ function controleurPodium()
 		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
 		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2013.onclick = function(){
+		Podium2006.className = "point active";
+		Podium2007.className = "point";
+		Podium2008.className = "point";
+		Podium2009.className = "point";
+		Podium2010.className = "point";
+		Podium2011.className = "point";
+		Podium2012.className = "point";
+		Podium2013.className = "point";
+		Podium2014.className = "point";
+		Podium2015.className = "point";
+		Podium2016.className = "point";
+		Podium2017.className = "point";
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -608,8 +711,21 @@ function controleurPodium()
 		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
 		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2014.onclick = function(){
+		Podium2006.className = "point";
+		Podium2007.className = "point";
+		Podium2008.className = "point";
+		Podium2009.className = "point";
+		Podium2010.className = "point";
+		Podium2011.className = "point";
+		Podium2012.className = "point";
+		Podium2013.className = "point";
+		Podium2014.className = "point active";
+		Podium2015.className = "point";
+		Podium2016.className = "point";
+		Podium2017.className = "point";
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -622,8 +738,21 @@ function controleurPodium()
 		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
 		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2015.onclick = function(){
+		Podium2006.className = "point";
+		Podium2007.className = "point";
+		Podium2008.className = "point";
+		Podium2009.className = "point";
+		Podium2010.className = "point";
+		Podium2011.className = "point";
+		Podium2012.className = "point";
+		Podium2013.className = "point";
+		Podium2014.className = "point";
+		Podium2015.className = "point active";
+		Podium2016.className = "point";
+		Podium2017.className = "point";
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -636,8 +765,21 @@ function controleurPodium()
 		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
 		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2016.onclick = function(){
+		Podium2006.className = "point";
+		Podium2007.className = "point";
+		Podium2008.className = "point";
+		Podium2009.className = "point";
+		Podium2010.className = "point";
+		Podium2011.className = "point";
+		Podium2012.className = "point";
+		Podium2013.className = "point";
+		Podium2014.className = "point";
+		Podium2015.className = "point";
+		Podium2016.className = "point";
+		Podium2017.className = "point active";
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -646,12 +788,25 @@ function controleurPodium()
 		document.getElementById('troisiemeFrancais').className = "francais troisieme drapeau--hidden";
 		document.getElementById('premierAllemand').className = "allemand premier drapeau--hidden";
 		document.getElementById('deuxiemeAllemand').className = "allemand deuxieme drapeau--hidden";
-		document.getElementById('troisiemeAllemand').className = "fadeInDown animated allemand troisieme drapeau--hidden";
+		document.getElementById('troisiemeAllemand').className = "fadeInDown animated allemand troisieme drapeau";
 		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
 		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAnglais').className = "anglais troisieme drapeau--hidden";
+		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2017.onclick = function(){
+		Podium2006.className = "point";
+		Podium2007.className = "point";
+		Podium2008.className = "point";
+		Podium2009.className = "point";
+		Podium2010.className = "point";
+		Podium2011.className = "point";
+		Podium2012.className = "point";
+		Podium2013.className = "point";
+		Podium2014.className = "point";
+		Podium2015.className = "point";
+		Podium2016.className = "point";
+		Podium2017.className = "point active";
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -664,6 +819,7 @@ function controleurPodium()
 		document.getElementById('premierAnglais').className = "anglais premier drapeau--hidden";
 		document.getElementById('deuxiemeAnglais').className = "anglais deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
+		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 
 }
