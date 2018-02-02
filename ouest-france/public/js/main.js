@@ -525,8 +525,8 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2007.onclick = function(){
-		Podium2006.className = "point active";
-		Podium2007.className = "point";
+		Podium2006.className = "point";
+		Podium2007.className = "point active";
 		Podium2008.className = "point";
 		Podium2009.className = "point";
 		Podium2010.className = "point";
@@ -552,9 +552,9 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2008.onclick = function(){
-		Podium2006.className = "point active";
+		Podium2006.className = "point";
 		Podium2007.className = "point";
-		Podium2008.className = "point";
+		Podium2008.className = "point active";
 		Podium2009.className = "point";
 		Podium2010.className = "point";
 		Podium2011.className = "point";
@@ -579,10 +579,10 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2009.onclick = function(){
-		Podium2006.className = "point active";
+		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point";
-		Podium2009.className = "point";
+		Podium2009.className = "point active";
 		Podium2010.className = "point";
 		Podium2011.className = "point";
 		Podium2012.className = "point";
@@ -606,11 +606,11 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2010.onclick = function(){
-		Podium2006.className = "point active";
+		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point";
 		Podium2009.className = "point";
-		Podium2010.className = "point";
+		Podium2010.className = "point active";
 		Podium2011.className = "point";
 		Podium2012.className = "point";
 		Podium2013.className = "point";
@@ -633,12 +633,12 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "fadeInDown animated suede troisieme drapeau";
 	}
 	Podium2011.onclick = function(){
-		Podium2006.className = "point active";
+		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point";
 		Podium2009.className = "point";
 		Podium2010.className = "point";
-		Podium2011.className = "point";
+		Podium2011.className = "point active";
 		Podium2012.className = "point";
 		Podium2013.className = "point";
 		Podium2014.className = "point";
@@ -660,13 +660,13 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "fadeInDown animated suede troisieme drapeau";
 	}
 	Podium2012.onclick = function(){
-		Podium2006.className = "point active";
+		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point";
 		Podium2009.className = "point";
 		Podium2010.className = "point";
 		Podium2011.className = "point";
-		Podium2012.className = "point";
+		Podium2012.className = "point active";
 		Podium2013.className = "point";
 		Podium2014.className = "point";
 		Podium2015.className = "point";
@@ -687,14 +687,14 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2013.onclick = function(){
-		Podium2006.className = "point active";
+		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point";
 		Podium2009.className = "point";
 		Podium2010.className = "point";
 		Podium2011.className = "point";
 		Podium2012.className = "point";
-		Podium2013.className = "point";
+		Podium2013.className = "point active";
 		Podium2014.className = "point";
 		Podium2015.className = "point";
 		Podium2016.className = "point";

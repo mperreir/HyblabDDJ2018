@@ -137,7 +137,7 @@ header img{
 { 
 	position : absolute; 
 	top: 120px; 
-	left:300px; 
+	left:250px; 
 	width: 12%; 
 	height: 12%; 
 	z-index: 2;
@@ -147,7 +147,7 @@ header img{
 { 
 	position : absolute; 
 	top: 340px; 
-	left:635px; 
+	left:625px; 
 	width: 12%; 
 	height: 12%; 
 	z-index: 2;
@@ -157,7 +157,7 @@ header img{
 { 
 	position : absolute; 
 	top: 120px; 
-	left:400px; 
+	left:350px; 
 	width: 12%; 
 	height: 12%; 
 	z-index: 2;
@@ -177,7 +177,7 @@ header img{
 { 
 	position : absolute; 
 	top: 340px; 
-	left:635px; 
+	left:625px; 
 	width: 12%; 
 	height: 12%; 
 	z-index: 2;
@@ -187,7 +187,7 @@ header img{
 { 
 	position : absolute; 
 	top: 120px; 
-	left:400px; 
+	left:350px; 
 	width: 12%; 
 	height: 12%; 
 	z-index: 2;
@@ -218,7 +218,7 @@ header img{
 { 
 	position : absolute; 
 	top: 120px; 
-	left:400px; 
+	left:350px; 
 	width: 12%; 
 	height: 12%; 
 	z-index: 2;
@@ -297,7 +297,7 @@ header img{
 .pin--2012-6
 { 
 	position : absolute; 
-	top: 25px; 
+	top: 35px; 
 	left:485px; 
 	width: 12%; 
 	height: 12%; 
