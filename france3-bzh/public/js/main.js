@@ -143,7 +143,7 @@ $( "#camion" ).mouseover(function() {
     $("#pie_veh").fadeIn("slow");
   }
 
-<<<<<<< HEAD
+
 });
 
 $( "#moto" ).mouseover(function() {
@@ -197,7 +197,7 @@ $( "#img_train_slide3" ).mouseover(function() {
     $("#pie_veh").fadeIn("slow");
   }
 });
-=======
+
 fetch('data/france.geojson')
     // this promise will be fulfilled when the json fill will be
     .then(function (response){
@@ -215,7 +215,6 @@ fetch('data/france.geojson')
     // this promise will be fulfilled when the json will be parsed
     .then(function (Geojson) {
         console.log(Geojson);
->>>>>>> 9da71b431060e0a57a229ac7193d3758a9dc517d
 
 
         // Get the context of the canvas element we want to select
