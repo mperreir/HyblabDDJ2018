@@ -71,8 +71,8 @@ a {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 288px;
-  opacity: 0.15;
-  color: #3BBA9D;
+  opacity: 0.1;
+  color: #17988b;
 }
 
 /*element detaillant le visuel de la partie intro*/
@@ -233,37 +233,37 @@ a {
 
 /* line 32, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-conjoncture {
-  background-color: #FBEE3D;
+  background-color: #1d1d1b;
 }
 
 /* line 36, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-investissement {
-  background-color: #34EBC2;
+  background-color: #1d1d1b;
 }
 
 /* line 40, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-emploi {
-  background-color: #FBEE3D;
+  background-color: #17988b;
 }
 
 /* line 44, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-distance {
-  background-color: #34EBC2;
+  background-color: #1d1d1b;
 }
 
 /* line 48, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-contrat {
-  background-color: #FBEE3D;
+  background-color: #68c0ed;
 }
 
 /* line 52, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-mp {
-  background-color: #34EBC2;
+  background-color: #1d1d1b;
 }
 
 /* line 56, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-dd {
-  background-color: #FBEE3D;
+  background-color: #34EBC2;
 }
 
 /* style de la partie zoom de la nav-bar */
