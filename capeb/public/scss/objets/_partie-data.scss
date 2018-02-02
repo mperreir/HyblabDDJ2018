@@ -1,0 +1,5 @@
+/* style de la partie data */
+.partie-data{
+  @extend %full-viewport;
+  background-color: $main-contrast;
+}

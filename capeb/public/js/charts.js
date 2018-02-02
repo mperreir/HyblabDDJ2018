@@ -22,8 +22,8 @@ function flush(){
 	cvs.innerHTML = ""
 }
 function drawLineChart(data, title){
-	var sec = document.getElementById("page3").appendChild(document.createElement('section'))
-	sec.className = "chart"
+	var sec = document.getElementById("page3").appendChild(document.createElement('section'));
+	sec.className = "chart";
 
 	var h3 = sec.appendChild(document.createElement('h3'))
 			h3.innerHTML = title;
@@ -153,7 +153,7 @@ function drawBubbleChart(data){
 	data.values.forEach(function(value){
         var point = {};
 		point.x = value[2];
-		point.y = value[1];
+		point.y = 0.5;
 		point.r = scale(value[1]);
 		point.metier = value[0];
 		points.datasets[0].data.push(point);
@@ -188,6 +188,26 @@ function drawBubbleChart(data){
                     return (size *2) * base;
                 }
             }
+        },
+        scales: {
+            xAxes: [{
+                gridLines: {
+                    display:false
+                },
+				scaleLabel : {
+                	display: true,
+					labelString: "Distance en kilomètres"
+				}
+            }],
+            yAxes: [{
+            	ticks: {
+            		display:false
+				},
+                gridLines: {
+                    display:false,
+					drawBorder: false
+                }
+            }]
         }
     };
 

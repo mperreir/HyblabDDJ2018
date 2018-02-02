@@ -1,0 +1,58 @@
+/* style des blocs de data du dashboard */
+
+.block-data{
+  padding: 45px 20px 20px 30px;
+  color: $white;
+  overflow: hidden;
+  position: relative;
+  >.donneeTexte{
+    @extend %titre-titre;
+    text-align: left;
+    line-height: 1.1;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  >.description{
+    @extend %texte-labeur;
+    text-align: left;
+    width: 100%;
+  }
+  >.picto{
+    position: absolute;
+    width: 50%;
+    margin-left: 15%;
+    bottom: 20px;
+  }
+}
+
+.info-epci{
+  background-color: $main-color;
+}
+
+.info-conjoncture{
+  background-color: $black;
+}
+
+.info-investissement{
+  background-color: $black;
+}
+
+.info-emploi{
+  background-color: $main-darker;
+}
+
+.info-distance{
+  background-color: $black;
+}
+
+.info-contrat{
+  background-color: $blue-color;
+}
+
+.info-mp{
+  background-color: $black;
+}
+
+.info-dd{
+  background-color: $main-color;
+}

@@ -7,9 +7,10 @@
     <!-- Basic viewport setting for mobile friendly page -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
     <!-- Those polyfills are required so that old browsers support fetch mecanism -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
 
     <!-- JQuery -->
@@ -17,58 +18,171 @@
 
     <!-- D3 -->
     <script src="//d3js.org/d3.v3.min.js"></script>
-
+    <script src="https://d3js.org/d3.v3.min.js" defer></script>
+    <script src="https://d3js.org/d3.v4.min.js" defer></script>
     <script src="https://d3js.org/d3-array.v1.min.js" defer></script>
     <script src="https://d3js.org/d3-geo.v1.min.js" defer></script>
 
-	<!-- Chartjs -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js" defer></script>
+    <!-- Chartjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js" defer></script>
 
     <!-- Our scripts -->
     <script src="js/sunburst.js" defer></script>
     <script src="js/map.js" defer></script>
     <script src="js/charts.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                anchors :['firstPage', 'secondPage', 'thirdPage'],
+                controlArrows: false,
+                keyboardScrolling: false,
+            });
+        });
+    </script>
 
 </head>
+<head>
+    <title>Hyblab 2018 - CAPEB</title>
+    <meta charset="utf-8">
+    <link href="styles/style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Montserrat:300,400,700,800,900|Open+Sans"
+          rel="stylesheet">
+</head>
 <body>
-<!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-<!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-<!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-<div id="container">
+<div id="fullpage">
+    <div class="section">
+        <section class="partie-intro">
+            <div class="social-links">
+                <a class="link" href="#">
+                    <img class="icon" src="assets/images/icon/fb.svg" alt="lien facebook">
+                </a>
+                <a class="link" href="#">
+                    <img class="icon" src="assets/images/icon/tw.svg" alt="lien twitter">
+                </a>
+            </div>
+            <svg class="visuelcapeb" width="302px" height="351px" viewBox="0 0 302 351" version="1.1"
+                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g fill="none" fill-rule="evenodd">
+                    <g class="white" transform="translate(-336.000000, -282.000000)">
+                        <polygon
+                                points="546.425334 451.666003 546.425334 568 638 516.901772 638 282 446 392.756006"></polygon>
+                        <polygon points="436 516.893623 436 633 537 574.946812 537 458"></polygon>
+                    </g>
+                    <g class="shadow" transform="translate(-336.000000, -282.000000)">
+                        <polygon points="336 459 436 517.531791 436 633 336 576.384261"></polygon>
+                    </g>
+                </g>
+            </svg>
+            <div class="content-intro">
+                <div class="textes-intro">
+                    <h1 class="title">L’artisanat en<br>Pays de Loire.</h1>
+                    <p class="texte">Les artisans du bâtiment sont des acteurs importants du tissu économique local. En
+                        effet, ils représentent des entreprises, des créateurs d’emplois, des salariés dont l’activité
+                        se
+                        concrétisent au sein du paysage urbain au fur et à mesure des constructions. D’autre part, leurs
+                        contrats ne sont pas délocalisables puisqu’ils doivent être présents à proximité des chantiers.
+                        Il
+                        convient donc de s’intéresser à la santé de leurs entreprises, à leurs perceptions de l’avenir
+                        ainsi
+                        qu’à leurs éventuelles difficultés. Cette étude revient sur 10 ans de résultats de
+                        questionnaires
+                        administrés aux artisans du bâtiment de la Capeb.</p>
+                </div>
+            </div>
+            <p class="decoBGintro">DATAVIZ</p>
+            <a class="buttonscroll"></a>
+        </section>
+    </div>
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <section id="page1">
-    <header>
-        <img src="img/logo_hyblab.png" alt="logo hyblab"/>
-        <h1>Hyblab Datajournalism 2018</h1>
-        <h2>CAPEB</h2>
-    </header>
-    </section>
+    <div class="section">
+        <div class="slide" data-anchor="slide1">
+            <section class="partie-data">
+                <div class="map-pdl">
+                    <h4 id="titre-epci" width="50" heigth="50"></h4>
 
-    <section id="page2">
-        <h4 id="bigText" width="50" heigth="50"></h4>
-    </section>
+                </div>
+                <div class="content-data">
+                    <h2></h2>
+                </div>
+            </section>
+        </div>
+        <div class="slide" data-anchor="slide2">
+            <section class="partie-dashboard">
+                <nav class="nav-bar">
+                    <svg class="backToMap" stroke-width="2" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g stroke="none" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                            <g transform="translate(17, 14)" stroke="#FFFFFF">
+                                <polyline
+                                        transform="translate(5.583333, 10.500000) rotate(180.000000) translate(-5.583333, -10.500000) "
+                                        points="0.795391216 20.0833333 10.375 10.5 0.791666667 0.916666667"></polyline>
+                            </g>
+                        </g>
+                    </svg>
+                    <h2 id="nom_epci" class=“epci”>Nom epci</h2>
+                    <div class=“button-zoom”>
+                        <svg class=“plus”></svg>
+                        <svg class=“moins”></svg>
+                    </div>
+                    <p class=“niveau-zoom”>data du niveau de zoom</p>
+                </nav>
 
-    <section id="page3">
-		<div id="main">
-			<div id="sequence"></div>
-				<div id="chart">
-					<div id="explanation" style="visibility: hidden;">
-						<span id="percentage"></span><br/>
-							of visits begin with this sequence of pages
-					</div>
-				</div>
-		</div>
-		<div id="sidebar">
-			<input type="checkbox" id="togglelegend"> Legend<br/>
-			<div id="legend" style="visibility: hidden;"></div>
-		</div>
-    </section>
-    <footer>
-        <p>Copyright Hyblab team 2018</p>
-    </footer>
+                <section class="block-data info-epci">
+                    <h1 class=“titreIntro”></h1>
+                    <p class=“description”></p>
+                </section>
+
+                <section class="block-data info-conjoncture">
+                    <h1 class=“donnee”></h1>
+                    <p class=“echelle”></p>
+                </section>
+
+                <section class="block-data info-investissement">
+                    <h1 class=“donnée”></h1>
+                </section>
+
+                <section class="block-data info-emploi">
+                    <h1 class=“donneeTexte”></h1>
+                </section>
+
+                <section class="block-data info-distance">
+                    <h1 class=“donnee”></h1>
+                    <p class=“echelle”></p>
+                </section>
+
+                <section class="block-data info-contrat">
+                    <h1 class=“donnee”></h1>
+                    <h2 class=“donnee”></h2>
+                    <h3 class=“donnee”></h3>
+                    <h4 class=“donnee”></h4>
+                </section>
+
+                <section class="block-data info-mp">
+                    <h1 class=“donnee”></h1>
+                </section>
+
+                <section class="block-data info-dd">
+                    <h1 class=“donneeTexte”></h1>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <div class="section">
+        <section class="partie-team">
+
+        </section>
+    </div>
+
+    <div class="section">
+        <section class="partie-soutien">
+        </section>
+    </div>
 </div>
+
+
 </body>
 </html>

@@ -1,0 +1,5 @@
+/* style de la partie soutien */
+.partie-soutien{
+  @extend %full-viewport;
+  background-color: $white;
+}

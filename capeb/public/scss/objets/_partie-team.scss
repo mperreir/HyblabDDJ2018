@@ -1,0 +1,5 @@
+/* style de la partie team */
+.partie-team{
+  @extend %full-viewport;
+  background-color: $white;
+}
