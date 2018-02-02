@@ -1,0 +1,4586 @@
+[
+  {
+    "Annee": 2006,
+    "Scene": "Hard n'Heavy stage",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 38,
+    "Pourcentage": "5,26%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Main",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 35,
+    "Pourcentage": "5,71%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Hard n'Heavy stage",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 38,
+    "Pourcentage": "5,26%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Main",
+    "Pays": "Angleterre",
+    "Nombre": 6,
+    "Total": 35,
+    "Pourcentage": "17,14%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Hard n'Heavy stage",
+    "Pays": "Belgique",
+    "Nombre": 2,
+    "Total": 38,
+    "Pourcentage": "5,26%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Main",
+    "Pays": "Brésil",
+    "Nombre": 1,
+    "Total": 35,
+    "Pourcentage": "2,86%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Main",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 35,
+    "Pourcentage": "2,86%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Main",
+    "Pays": "Danemark",
+    "Nombre": 1,
+    "Total": 35,
+    "Pourcentage": "2,86%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Hard n'Heavy stage",
+    "Pays": "Etats-Unis",
+    "Nombre": 14,
+    "Total": 38,
+    "Pourcentage": "36,84%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Main",
+    "Pays": "Etats-Unis",
+    "Nombre": 11,
+    "Total": 35,
+    "Pourcentage": "31,43%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Hard n'Heavy stage",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 38,
+    "Pourcentage": "2,63%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Main",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 35,
+    "Pourcentage": "2,86%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Hard n'Heavy stage",
+    "Pays": "France",
+    "Nombre": 7,
+    "Total": 38,
+    "Pourcentage": "18,42%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Main",
+    "Pays": "France",
+    "Nombre": 5,
+    "Total": 35,
+    "Pourcentage": "14,29%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Main",
+    "Pays": "Israël",
+    "Nombre": 1,
+    "Total": 35,
+    "Pourcentage": "2,86%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Hard n'Heavy stage",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 38,
+    "Pourcentage": "2,63%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Main",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 35,
+    "Pourcentage": "2,86%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Hard n'Heavy stage",
+    "Pays": "Pays de Galles",
+    "Nombre": 2,
+    "Total": 38,
+    "Pourcentage": "5,26%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Hard n'Heavy stage",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 38,
+    "Pourcentage": "2,63%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Main",
+    "Pays": "Pays-Bas",
+    "Nombre": 2,
+    "Total": 35,
+    "Pourcentage": "5,71%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Hard n'Heavy stage",
+    "Pays": "Suède",
+    "Nombre": 3,
+    "Total": 38,
+    "Pourcentage": "7,89%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Main",
+    "Pays": "Suède",
+    "Nombre": 3,
+    "Total": 35,
+    "Pourcentage": "8,57%"
+  },
+  {
+    "Annee": 2006,
+    "Scene": "Hard n'Heavy stage",
+    "Pays": "Suisse",
+    "Nombre": 3,
+    "Total": 38,
+    "Pourcentage": "7,89%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Gibson stage",
+    "Pays": "Allemagne",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Main",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 25,
+    "Pourcentage": "8,00%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Discover stage",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 30,
+    "Pourcentage": "3,33%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Discover stage",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 30,
+    "Pourcentage": "6,67%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Gibson stage",
+    "Pays": "Angleterre",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Gibson stage",
+    "Pays": "Belgique",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Discover stage",
+    "Pays": "Belgique",
+    "Nombre": 1,
+    "Total": 30,
+    "Pourcentage": "3,33%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Discover stage",
+    "Pays": "Espagne",
+    "Nombre": 2,
+    "Total": 30,
+    "Pourcentage": "6,67%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Main",
+    "Pays": "Etats-Unis",
+    "Nombre": 11,
+    "Total": 25,
+    "Pourcentage": "44,00%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Gibson stage",
+    "Pays": "Etats-Unis",
+    "Nombre": 10,
+    "Total": 27,
+    "Pourcentage": "37,04%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Discover stage",
+    "Pays": "Etats-Unis",
+    "Nombre": 2,
+    "Total": 30,
+    "Pourcentage": "6,67%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Main",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Gibson stage",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Discover stage",
+    "Pays": "France",
+    "Nombre": 17,
+    "Total": 30,
+    "Pourcentage": "56,67%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Main",
+    "Pays": "France",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Gibson stage",
+    "Pays": "France",
+    "Nombre": 5,
+    "Total": 27,
+    "Pourcentage": "18,52%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Gibson stage",
+    "Pays": "Italie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Discover stage",
+    "Pays": "Luxembourg",
+    "Nombre": 1,
+    "Total": 30,
+    "Pourcentage": "3,33%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Discover stage",
+    "Pays": "Malte",
+    "Nombre": 1,
+    "Total": 30,
+    "Pourcentage": "3,33%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Main",
+    "Pays": "Mexique",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Discover stage",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 30,
+    "Pourcentage": "3,33%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Main",
+    "Pays": "Norvège",
+    "Nombre": 2,
+    "Total": 25,
+    "Pourcentage": "8,00%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Gibson stage",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Main",
+    "Pays": "Pays-Bas",
+    "Nombre": 3,
+    "Total": 25,
+    "Pourcentage": "12,00%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Gibson stage",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Discover stage",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 30,
+    "Pourcentage": "3,33%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Main",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Gibson stage",
+    "Pays": "Portugal",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Main",
+    "Pays": "Suède",
+    "Nombre": 3,
+    "Total": 25,
+    "Pourcentage": "12,00%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Discover stage",
+    "Pays": "Suède",
+    "Nombre": 1,
+    "Total": 30,
+    "Pourcentage": "3,33%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Gibson stage",
+    "Pays": "Suède",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2007,
+    "Scene": "Gibson stage",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Main",
+    "Pays": "Australie",
+    "Nombre": 2,
+    "Total": 24,
+    "Pourcentage": "8,33%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Australie",
+    "Nombre": 1,
+    "Total": 42,
+    "Pourcentage": "2,38%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 42,
+    "Pourcentage": "7,14%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Second stage",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 21,
+    "Pourcentage": "14,29%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Main",
+    "Pays": "Finlande",
+    "Nombre": 2,
+    "Total": 24,
+    "Pourcentage": "8,33%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Second stage",
+    "Pays": "Suède",
+    "Nombre": 3,
+    "Total": 21,
+    "Pourcentage": "14,29%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Portugal",
+    "Nombre": 1,
+    "Total": 42,
+    "Pourcentage": "2,38%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Etats-Unis",
+    "Nombre": 10,
+    "Total": 42,
+    "Pourcentage": "23,81%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Autriche",
+    "Nombre": 1,
+    "Total": 42,
+    "Pourcentage": "2,38%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "France",
+    "Nombre": 7,
+    "Total": 42,
+    "Pourcentage": "16,67%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Second stage",
+    "Pays": "Pays-Bas",
+    "Nombre": 2,
+    "Total": 21,
+    "Pourcentage": "9,52%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Main",
+    "Pays": "Brésil",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 42,
+    "Pourcentage": "2,38%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Suède",
+    "Nombre": 4,
+    "Total": 42,
+    "Pourcentage": "9,52%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Main",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Second stage",
+    "Pays": "Etats-Unis",
+    "Nombre": 9,
+    "Total": 21,
+    "Pourcentage": "42,86%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Main",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Main",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Japon",
+    "Nombre": 1,
+    "Total": 42,
+    "Pourcentage": "2,38%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Main",
+    "Pays": "France",
+    "Nombre": 4,
+    "Total": 24,
+    "Pourcentage": "16,67%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Second stage",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 21,
+    "Pourcentage": "9,52%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Finlande",
+    "Nombre": 3,
+    "Total": 42,
+    "Pourcentage": "7,14%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Espagne",
+    "Nombre": 1,
+    "Total": 42,
+    "Pourcentage": "2,38%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Main",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Main",
+    "Pays": "Etats-Unis",
+    "Nombre": 4,
+    "Total": 24,
+    "Pourcentage": "16,67%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Main",
+    "Pays": "Suède",
+    "Nombre": 3,
+    "Total": 24,
+    "Pourcentage": "12,50%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Brésil",
+    "Nombre": 1,
+    "Total": 42,
+    "Pourcentage": "2,38%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 42,
+    "Pourcentage": "2,38%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Second stage",
+    "Pays": "Norvège",
+    "Nombre": 2,
+    "Total": 21,
+    "Pourcentage": "9,52%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Main",
+    "Pays": "Angleterre",
+    "Nombre": 4,
+    "Total": 24,
+    "Pourcentage": "16,67%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 42,
+    "Pourcentage": "4,76%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Irlande",
+    "Nombre": 1,
+    "Total": 42,
+    "Pourcentage": "2,38%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Italie",
+    "Nombre": 1,
+    "Total": 42,
+    "Pourcentage": "2,38%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Grèce",
+    "Nombre": 2,
+    "Total": 42,
+    "Pourcentage": "4,76%"
+  },
+  {
+    "Annee": 2008,
+    "Scene": "Discover stage",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 42,
+    "Pourcentage": "2,38%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Rock Hard tent",
+    "Pays": "Belgique",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 01",
+    "Pays": "France",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 02",
+    "Pays": "France",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Terrorizer tent",
+    "Pays": "Etats-Unis",
+    "Nombre": 15,
+    "Total": 27,
+    "Pourcentage": "55,56%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 02",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 26,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Rock Hard tent",
+    "Pays": "Suède",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 02",
+    "Pays": "Etats-Unis",
+    "Nombre": 13,
+    "Total": 26,
+    "Pourcentage": "50,00%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Rock Hard tent",
+    "Pays": "Norvège",
+    "Nombre": 5,
+    "Total": 27,
+    "Pourcentage": "18,52%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Terrorizer tent",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 01",
+    "Pays": "Suède",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Terrorizer tent",
+    "Pays": "NA",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Terrorizer tent",
+    "Pays": "Angleterre",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 01",
+    "Pays": "Etats-Unis",
+    "Nombre": 13,
+    "Total": 27,
+    "Pourcentage": "48,15%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Rock Hard tent",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 01",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Terrorizer tent",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Rock Hard tent",
+    "Pays": "Australie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 02",
+    "Pays": "Allemagne",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 01",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 01",
+    "Pays": "Irlande",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Rock Hard tent",
+    "Pays": "France",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Rock Hard tent",
+    "Pays": "Etats-Unis",
+    "Nombre": 5,
+    "Total": 27,
+    "Pourcentage": "18,52%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Rock Hard tent",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Terrorizer tent",
+    "Pays": "France",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 01",
+    "Pays": "Australie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Rock Hard tent",
+    "Pays": "Pays-Bas",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Rock Hard tent",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Rock Hard tent",
+    "Pays": "Portugal",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 02",
+    "Pays": "Suède",
+    "Nombre": 2,
+    "Total": 26,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Terrorizer tent",
+    "Pays": "Australie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Rock Hard tent",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 01",
+    "Pays": "Brésil",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 01",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 02",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Terrorizer tent",
+    "Pays": "Italie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Rock Hard tent",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 02",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2009,
+    "Scene": "Main 02",
+    "Pays": "Danemark",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Terrorizer tent",
+    "Pays": "Etats-Unis",
+    "Nombre": 22,
+    "Total": 37,
+    "Pourcentage": "59,46%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 01",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 01",
+    "Pays": "Australie",
+    "Nombre": 2,
+    "Total": 24,
+    "Pourcentage": "8,33%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 01",
+    "Pays": "Etats-Unis",
+    "Nombre": 8,
+    "Total": 24,
+    "Pourcentage": "33,33%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 02",
+    "Pays": "Canada",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 02",
+    "Pays": "Suède",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Rock Hard tent",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 02",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 02",
+    "Pays": "Etats-Unis",
+    "Nombre": 7,
+    "Total": 26,
+    "Pourcentage": "26,92%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 02",
+    "Pays": "France",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Rock Hard tent",
+    "Pays": "Suède",
+    "Nombre": 7,
+    "Total": 25,
+    "Pourcentage": "28,00%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Terrorizer tent",
+    "Pays": "Pays-Bas",
+    "Nombre": 3,
+    "Total": 37,
+    "Pourcentage": "8,11%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 02",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 26,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Rock Hard tent",
+    "Pays": "France",
+    "Nombre": 4,
+    "Total": 25,
+    "Pourcentage": "16,00%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Rock Hard tent",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 01",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 02",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 26,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Terrorizer tent",
+    "Pays": "Angleterre",
+    "Nombre": 4,
+    "Total": 37,
+    "Pourcentage": "10,81%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 02",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 02",
+    "Pays": "Finlande",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 01",
+    "Pays": "Angleterre",
+    "Nombre": 4,
+    "Total": 24,
+    "Pourcentage": "16,67%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Rock Hard tent",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Rock Hard tent",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 25,
+    "Pourcentage": "8,00%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 01",
+    "Pays": "Suède",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Terrorizer tent",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 37,
+    "Pourcentage": "2,70%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Rock Hard tent",
+    "Pays": "Norvège",
+    "Nombre": 4,
+    "Total": 25,
+    "Pourcentage": "16,00%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 02",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 01",
+    "Pays": "Allemagne",
+    "Nombre": 3,
+    "Total": 24,
+    "Pourcentage": "12,50%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 01",
+    "Pays": "France",
+    "Nombre": 2,
+    "Total": 24,
+    "Pourcentage": "8,33%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Terrorizer tent",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 37,
+    "Pourcentage": "2,70%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Terrorizer tent",
+    "Pays": "Suisse",
+    "Nombre": 3,
+    "Total": 37,
+    "Pourcentage": "8,11%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Rock Hard tent",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 25,
+    "Pourcentage": "8,00%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Terrorizer tent",
+    "Pays": "Roumanie",
+    "Nombre": 1,
+    "Total": 37,
+    "Pourcentage": "2,70%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Rock Hard tent",
+    "Pays": "Etats-Unis",
+    "Nombre": 2,
+    "Total": 25,
+    "Pourcentage": "8,00%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Terrorizer tent",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 37,
+    "Pourcentage": "2,70%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 01",
+    "Pays": "Danemark",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Rock Hard tent",
+    "Pays": "Italie",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Main 01",
+    "Pays": "Brésil",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2010,
+    "Scene": "Terrorizer tent",
+    "Pays": "Japon",
+    "Nombre": 1,
+    "Total": 37,
+    "Pourcentage": "2,70%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Norvège",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 01",
+    "Pays": "Etats-Unis",
+    "Nombre": 8,
+    "Total": 24,
+    "Pourcentage": "33,33%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 02",
+    "Pays": "Angleterre",
+    "Nombre": 1,
+    "Total": 28,
+    "Pourcentage": "3,57%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 01",
+    "Pays": "Angleterre",
+    "Nombre": 6,
+    "Total": 24,
+    "Pourcentage": "25,00%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 01",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Russie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Terrorizer tent",
+    "Pays": "Suisse",
+    "Nombre": 4,
+    "Total": 39,
+    "Pourcentage": "10,26%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 02",
+    "Pays": "Etats-Unis",
+    "Nombre": 6,
+    "Total": 28,
+    "Pourcentage": "21,43%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 02",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 28,
+    "Pourcentage": "3,57%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Terrorizer tent",
+    "Pays": "Etats-Unis",
+    "Nombre": 20,
+    "Total": 39,
+    "Pourcentage": "51,28%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Autriche",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 01",
+    "Pays": "Brésil",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Terrorizer tent",
+    "Pays": "Japon",
+    "Nombre": 1,
+    "Total": 39,
+    "Pourcentage": "2,56%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Terrorizer tent",
+    "Pays": "Canada",
+    "Nombre": 2,
+    "Total": 39,
+    "Pourcentage": "5,13%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 02",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 28,
+    "Pourcentage": "3,57%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 01",
+    "Pays": "Suède",
+    "Nombre": 2,
+    "Total": 24,
+    "Pourcentage": "8,33%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 02",
+    "Pays": "France",
+    "Nombre": 5,
+    "Total": 28,
+    "Pourcentage": "17,86%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Suède",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Terrorizer tent",
+    "Pays": "Australie",
+    "Nombre": 1,
+    "Total": 39,
+    "Pourcentage": "2,56%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 02",
+    "Pays": "Allemagne",
+    "Nombre": 5,
+    "Total": 28,
+    "Pourcentage": "17,86%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Terrorizer tent",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 39,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Etats-Unis",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 01",
+    "Pays": "Grèce",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Terrorizer tent",
+    "Pays": "Suède",
+    "Nombre": 3,
+    "Total": 39,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Pays-Bas",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Terrorizer tent",
+    "Pays": "France",
+    "Nombre": 1,
+    "Total": 39,
+    "Pourcentage": "2,56%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Espagne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 02",
+    "Pays": "Suède",
+    "Nombre": 5,
+    "Total": 28,
+    "Pourcentage": "17,86%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Brésil",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 02",
+    "Pays": "Japon",
+    "Nombre": 1,
+    "Total": 28,
+    "Pourcentage": "3,57%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Terrorizer tent",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 39,
+    "Pourcentage": "5,13%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Terrorizer tent",
+    "Pays": "Belgique",
+    "Nombre": 1,
+    "Total": 39,
+    "Pourcentage": "2,56%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 02",
+    "Pays": "Israël",
+    "Nombre": 1,
+    "Total": 28,
+    "Pourcentage": "3,57%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Irlande",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Terrorizer tent",
+    "Pays": "Italie",
+    "Nombre": 1,
+    "Total": 39,
+    "Pourcentage": "2,56%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 01",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Grèce",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Lettonie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 01",
+    "Pays": "France",
+    "Nombre": 2,
+    "Total": 24,
+    "Pourcentage": "8,33%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "France",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 01",
+    "Pays": "Irlande du Nord",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 02",
+    "Pays": "Ecosse",
+    "Nombre": 1,
+    "Total": 28,
+    "Pourcentage": "3,57%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 01",
+    "Pays": "Irlande",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Main 02",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 28,
+    "Pourcentage": "3,57%"
+  },
+  {
+    "Annee": 2011,
+    "Scene": "Rock Hard tent",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Altar",
+    "Pays": "Belgique",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Metal Corner",
+    "Pays": "France",
+    "Nombre": 9,
+    "Total": 13,
+    "Pourcentage": "69,23%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Valley",
+    "Pays": "France",
+    "Nombre": 4,
+    "Total": 25,
+    "Pourcentage": "16,00%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Valley",
+    "Pays": "Etats-Unis",
+    "Nombre": 12,
+    "Total": 25,
+    "Pourcentage": "48,00%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Warzone",
+    "Pays": "Pays-Bas",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 02",
+    "Pays": "Etats-Unis",
+    "Nombre": 13,
+    "Total": 26,
+    "Pourcentage": "50,00%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 01",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 24,
+    "Pourcentage": "8,33%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Valley",
+    "Pays": "Belgique",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Temple",
+    "Pays": "Suède",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Temple",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 26,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Temple",
+    "Pays": "France",
+    "Nombre": 4,
+    "Total": 26,
+    "Pourcentage": "15,38%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Temple",
+    "Pays": "Norvège",
+    "Nombre": 9,
+    "Total": 26,
+    "Pourcentage": "34,62%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Warzone",
+    "Pays": "Etats-Unis",
+    "Nombre": 14,
+    "Total": 27,
+    "Pourcentage": "51,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Warzone",
+    "Pays": "France",
+    "Nombre": 5,
+    "Total": 27,
+    "Pourcentage": "18,52%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Temple",
+    "Pays": "Allemagne",
+    "Nombre": 4,
+    "Total": 26,
+    "Pourcentage": "15,38%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Altar",
+    "Pays": "Espagne",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Temple",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Altar",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Altar",
+    "Pays": "France",
+    "Nombre": 4,
+    "Total": 26,
+    "Pourcentage": "15,38%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 02",
+    "Pays": "France",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 01",
+    "Pays": "Etats-Unis",
+    "Nombre": 10,
+    "Total": 24,
+    "Pourcentage": "41,67%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Altar",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Valley",
+    "Pays": "Islande",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Altar",
+    "Pays": "Mexique",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Altar",
+    "Pays": "Etats-Unis",
+    "Nombre": 6,
+    "Total": 26,
+    "Pourcentage": "23,08%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 01",
+    "Pays": "France",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Warzone",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 02",
+    "Pays": "Belgique",
+    "Nombre": 2,
+    "Total": 26,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Altar",
+    "Pays": "Finlande",
+    "Nombre": 2,
+    "Total": 26,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Valley",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 25,
+    "Pourcentage": "8,00%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Metal Corner",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 13,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 01",
+    "Pays": "Suède",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Valley",
+    "Pays": "NA",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 01",
+    "Pays": "Danemark",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Temple",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Valley",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Warzone",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 02",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 26,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Altar",
+    "Pays": "Suède",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 02",
+    "Pays": "Irlande",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 01",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 24,
+    "Pourcentage": "12,50%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 01",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 02",
+    "Pays": "Espagne",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Altar",
+    "Pays": "Italie",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Altar",
+    "Pays": "Pays-Bas",
+    "Nombre": 2,
+    "Total": 26,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 02",
+    "Pays": "Danemark",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 01",
+    "Pays": "Canada",
+    "Nombre": 2,
+    "Total": 24,
+    "Pourcentage": "8,33%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 01",
+    "Pays": "Australie",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Temple",
+    "Pays": "Etats-Unis",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Valley",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Temple",
+    "Pays": "Finlande",
+    "Nombre": 2,
+    "Total": 26,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Metal Corner",
+    "Pays": "NA",
+    "Nombre": 2,
+    "Total": 13,
+    "Pourcentage": "15,38%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Valley",
+    "Pays": "Angleterre",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Warzone",
+    "Pays": "Suède",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 02",
+    "Pays": "Angleterre",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Temple",
+    "Pays": "Islande",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 02",
+    "Pays": "Grèce",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 02",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Metal Corner",
+    "Pays": "Etats-Unis",
+    "Nombre": 1,
+    "Total": 13,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Valley",
+    "Pays": "Italie",
+    "Nombre": 1,
+    "Total": 25,
+    "Pourcentage": "4,00%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Altar",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2012,
+    "Scene": "Main 01",
+    "Pays": "Pays-Bas",
+    "Nombre": 2,
+    "Total": 24,
+    "Pourcentage": "8,33%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 01",
+    "Pays": "Etats-Unis",
+    "Nombre": 7,
+    "Total": 24,
+    "Pourcentage": "29,17%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Valley",
+    "Pays": "France",
+    "Nombre": 4,
+    "Total": 26,
+    "Pourcentage": "15,38%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 02",
+    "Pays": "Etats-Unis",
+    "Nombre": 12,
+    "Total": 27,
+    "Pourcentage": "44,44%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Temple",
+    "Pays": "Etats-Unis",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 01",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 24,
+    "Pourcentage": "8,33%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Warzone",
+    "Pays": "Etats-Unis",
+    "Nombre": 13,
+    "Total": 27,
+    "Pourcentage": "48,15%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Altar",
+    "Pays": "Finlande",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 02",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Altar",
+    "Pays": "Suède",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Warzone",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 01",
+    "Pays": "France",
+    "Nombre": 2,
+    "Total": 24,
+    "Pourcentage": "8,33%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 01",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Temple",
+    "Pays": "Norvège",
+    "Nombre": 8,
+    "Total": 27,
+    "Pourcentage": "29,63%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 02",
+    "Pays": "Allemagne",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Temple",
+    "Pays": "Autriche",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Warzone",
+    "Pays": "Espagne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Altar",
+    "Pays": "Etats-Unis",
+    "Nombre": 7,
+    "Total": 27,
+    "Pourcentage": "25,93%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Valley",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Valley",
+    "Pays": "Etats-Unis",
+    "Nombre": 13,
+    "Total": 26,
+    "Pourcentage": "50,00%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 01",
+    "Pays": "Angleterre",
+    "Nombre": 5,
+    "Total": 24,
+    "Pourcentage": "20,83%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 02",
+    "Pays": "Pays de Galles",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Warzone",
+    "Pays": "Angleterre",
+    "Nombre": 5,
+    "Total": 27,
+    "Pourcentage": "18,52%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Altar",
+    "Pays": "Australie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Temple",
+    "Pays": "Angleterre",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Altar",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Valley",
+    "Pays": "Suède",
+    "Nombre": 5,
+    "Total": 26,
+    "Pourcentage": "19,23%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Metal Corner",
+    "Pays": "France",
+    "Nombre": 11,
+    "Total": 11,
+    "Pourcentage": "100,00%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 01",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Temple",
+    "Pays": "Suède",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Altar",
+    "Pays": "Grèce",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Warzone",
+    "Pays": "Australie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 02",
+    "Pays": "Suède",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Temple",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 01",
+    "Pays": "Suède",
+    "Nombre": 3,
+    "Total": 24,
+    "Pourcentage": "12,50%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Temple",
+    "Pays": "Finlande",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Altar",
+    "Pays": "Espagne",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Temple",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Temple",
+    "Pays": "France",
+    "Nombre": 5,
+    "Total": 27,
+    "Pourcentage": "18,52%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Temple",
+    "Pays": "Colombie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Warzone",
+    "Pays": "France",
+    "Nombre": 6,
+    "Total": 27,
+    "Pourcentage": "22,22%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Altar",
+    "Pays": "Brésil",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 01",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 02",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 02",
+    "Pays": "France",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Altar",
+    "Pays": "France",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Altar",
+    "Pays": "Portugal",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Altar",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Valley",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 02",
+    "Pays": "Australie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Temple",
+    "Pays": "Irlande",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Valley",
+    "Pays": "Chili",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 02",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Temple",
+    "Pays": "Grèce",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Altar",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Temple",
+    "Pays": "Italie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Temple",
+    "Pays": "Îles Féroé",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Valley",
+    "Pays": "Angleterre",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 02",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 01",
+    "Pays": "Danemark",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2013,
+    "Scene": "Main 01",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Temple",
+    "Pays": "Norvège",
+    "Nombre": 8,
+    "Total": 27,
+    "Pourcentage": "29,63%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 01",
+    "Pays": "Etats-Unis",
+    "Nombre": 11,
+    "Total": 24,
+    "Pourcentage": "45,83%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Warzone",
+    "Pays": "Etats-Unis",
+    "Nombre": 9,
+    "Total": 26,
+    "Pourcentage": "34,62%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 02",
+    "Pays": "Espagne",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 02",
+    "Pays": "Brésil",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 02",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Metal Corner",
+    "Pays": "France",
+    "Nombre": 11,
+    "Total": 11,
+    "Pourcentage": "100,00%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 02",
+    "Pays": "Etats-Unis",
+    "Nombre": 13,
+    "Total": 26,
+    "Pourcentage": "50,00%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Warzone",
+    "Pays": "Allemagne",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Temple",
+    "Pays": "France",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 02",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Altar",
+    "Pays": "France",
+    "Nombre": 6,
+    "Total": 27,
+    "Pourcentage": "22,22%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Temple",
+    "Pays": "Etats-Unis",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 01",
+    "Pays": "Angleterre",
+    "Nombre": 5,
+    "Total": 24,
+    "Pourcentage": "20,83%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Valley",
+    "Pays": "Etats-Unis",
+    "Nombre": 15,
+    "Total": 27,
+    "Pourcentage": "55,56%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Altar",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 01",
+    "Pays": "Suède",
+    "Nombre": 2,
+    "Total": 24,
+    "Pourcentage": "8,33%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Temple",
+    "Pays": "Suisse",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Altar",
+    "Pays": "Etats-Unis",
+    "Nombre": 8,
+    "Total": 27,
+    "Pourcentage": "29,63%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Warzone",
+    "Pays": "Pays de Galles",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Warzone",
+    "Pays": "France",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Warzone",
+    "Pays": "Japon",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Warzone",
+    "Pays": "Canada",
+    "Nombre": 2,
+    "Total": 26,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Valley",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 01",
+    "Pays": "Japon",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 02",
+    "Pays": "France",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Temple",
+    "Pays": "Australie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Temple",
+    "Pays": "Roumanie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Valley",
+    "Pays": "Allemagne",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Valley",
+    "Pays": "Suède",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 02",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Temple",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Altar",
+    "Pays": "Canada",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Altar",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Valley",
+    "Pays": "Pays de Galles",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Valley",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Temple",
+    "Pays": "Finlande",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Temple",
+    "Pays": "Singapour",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 02",
+    "Pays": "Suède",
+    "Nombre": 2,
+    "Total": 26,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 01",
+    "Pays": "France",
+    "Nombre": 3,
+    "Total": 24,
+    "Pourcentage": "12,50%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Warzone",
+    "Pays": "Norvège",
+    "Nombre": 2,
+    "Total": 26,
+    "Pourcentage": "7,69%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Warzone",
+    "Pays": "Angleterre",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Valley",
+    "Pays": "France",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Warzone",
+    "Pays": "Suède",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Warzone",
+    "Pays": "Belgique",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Temple",
+    "Pays": "Italie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Altar",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Altar",
+    "Pays": "Suède",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 02",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Altar",
+    "Pays": "Autriche",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 01",
+    "Pays": "Afrique du Sud",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Altar",
+    "Pays": "Grèce",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Temple",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Temple",
+    "Pays": "Islande",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Main 01",
+    "Pays": "Irlande",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Altar",
+    "Pays": "Nouvelle-Zélande",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Temple",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2014,
+    "Scene": "Temple",
+    "Pays": "Suède",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 01",
+    "Pays": "Etats-Unis",
+    "Nombre": 10,
+    "Total": 24,
+    "Pourcentage": "41,67%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Valley",
+    "Pays": "Etats-Unis",
+    "Nombre": 15,
+    "Total": 27,
+    "Pourcentage": "55,56%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 01",
+    "Pays": "Australie",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Temple",
+    "Pays": "Ecosse",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Altar",
+    "Pays": "Suède",
+    "Nombre": 7,
+    "Total": 27,
+    "Pourcentage": "25,93%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Temple",
+    "Pays": "France",
+    "Nombre": 5,
+    "Total": 27,
+    "Pourcentage": "18,52%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Temple",
+    "Pays": "Russie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 02",
+    "Pays": "Suède",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 01",
+    "Pays": "Angleterre",
+    "Nombre": 6,
+    "Total": 24,
+    "Pourcentage": "25,00%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Warzone",
+    "Pays": "Etats-Unis",
+    "Nombre": 14,
+    "Total": 26,
+    "Pourcentage": "53,85%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Warzone",
+    "Pays": "France",
+    "Nombre": 6,
+    "Total": 26,
+    "Pourcentage": "23,08%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Altar",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 02",
+    "Pays": "France",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Warzone",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 26,
+    "Pourcentage": "11,54%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Altar",
+    "Pays": "Etats-Unis",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Temple",
+    "Pays": "Pays-Bas",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 01",
+    "Pays": "Brésil",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Metal Corner",
+    "Pays": "France",
+    "Nombre": 10,
+    "Total": 11,
+    "Pourcentage": "90,91%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Altar",
+    "Pays": "Finlande",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Altar",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Altar",
+    "Pays": "Japon",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Temple",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Temple",
+    "Pays": "Suède",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Altar",
+    "Pays": "France",
+    "Nombre": 5,
+    "Total": 27,
+    "Pourcentage": "18,52%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Valley",
+    "Pays": "France",
+    "Nombre": 5,
+    "Total": 27,
+    "Pourcentage": "18,52%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Temple",
+    "Pays": "Allemagne",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Temple",
+    "Pays": "Finlande",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Temple",
+    "Pays": "Belgique",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Valley",
+    "Pays": "Japon",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 02",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 01",
+    "Pays": "France",
+    "Nombre": 3,
+    "Total": 24,
+    "Pourcentage": "12,50%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 02",
+    "Pays": "Etats-Unis",
+    "Nombre": 12,
+    "Total": 27,
+    "Pourcentage": "44,44%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 02",
+    "Pays": "Finlande",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 01",
+    "Pays": "Italie",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 02",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Temple",
+    "Pays": "Norvège",
+    "Nombre": 5,
+    "Total": 27,
+    "Pourcentage": "18,52%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Altar",
+    "Pays": "Belgique",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Metal Corner",
+    "Pays": "NA",
+    "Nombre": 1,
+    "Total": 11,
+    "Pourcentage": "9,09%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Altar",
+    "Pays": "Australie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Altar",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Valley",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Altar",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Temple",
+    "Pays": "Suisse",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Valley",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 01",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Temple",
+    "Pays": "Lettonie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 02",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Valley",
+    "Pays": "Suède",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Main 01",
+    "Pays": "Irlande du Nord",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Warzone",
+    "Pays": "Ecosse",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Valley",
+    "Pays": "Belgique",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Warzone",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2015,
+    "Scene": "Warzone",
+    "Pays": "Suède",
+    "Nombre": 1,
+    "Total": 26,
+    "Pourcentage": "3,85%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Temple",
+    "Pays": "Norvège",
+    "Nombre": 6,
+    "Total": 27,
+    "Pourcentage": "22,22%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Altar",
+    "Pays": "Etats-Unis",
+    "Nombre": 11,
+    "Total": 27,
+    "Pourcentage": "40,74%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Altar",
+    "Pays": "France",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Warzone",
+    "Pays": "France",
+    "Nombre": 6,
+    "Total": 27,
+    "Pourcentage": "22,22%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Warzone",
+    "Pays": "Etats-Unis",
+    "Nombre": 11,
+    "Total": 27,
+    "Pourcentage": "40,74%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 02",
+    "Pays": "Suède",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Metal Corner",
+    "Pays": "France",
+    "Nombre": 8,
+    "Total": 20,
+    "Pourcentage": "40,00%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 01",
+    "Pays": "Etats-Unis",
+    "Nombre": 11,
+    "Total": 23,
+    "Pourcentage": "47,83%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Temple",
+    "Pays": "Finlande",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 02",
+    "Pays": "Italie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Altar",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 02",
+    "Pays": "Etats-Unis",
+    "Nombre": 10,
+    "Total": 27,
+    "Pourcentage": "37,04%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 02",
+    "Pays": "Norvège",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Metal Corner",
+    "Pays": "Lithuanie",
+    "Nombre": 1,
+    "Total": 20,
+    "Pourcentage": "5,00%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 01",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 23,
+    "Pourcentage": "13,04%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 02",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 02",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 01",
+    "Pays": "Pays de Galles",
+    "Nombre": 1,
+    "Total": 23,
+    "Pourcentage": "4,35%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Warzone",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Valley",
+    "Pays": "Etats-Unis",
+    "Nombre": 16,
+    "Total": 28,
+    "Pourcentage": "57,14%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Temple",
+    "Pays": "Irlande",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Metal Corner",
+    "Pays": "NA",
+    "Nombre": 4,
+    "Total": 20,
+    "Pourcentage": "20,00%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Temple",
+    "Pays": "Allemagne",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Temple",
+    "Pays": "Suède",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Valley",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 28,
+    "Pourcentage": "3,57%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Temple",
+    "Pays": "Etats-Unis",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 01",
+    "Pays": "Pays-Bas",
+    "Nombre": 2,
+    "Total": 23,
+    "Pourcentage": "8,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Warzone",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Metal Corner",
+    "Pays": "Etats-Unis",
+    "Nombre": 2,
+    "Total": 20,
+    "Pourcentage": "10,00%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Altar",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Altar",
+    "Pays": "Suède",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Temple",
+    "Pays": "Italie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 01",
+    "Pays": "France",
+    "Nombre": 2,
+    "Total": 23,
+    "Pourcentage": "8,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Warzone",
+    "Pays": "NA",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Valley",
+    "Pays": "France",
+    "Nombre": 4,
+    "Total": 28,
+    "Pourcentage": "14,29%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Temple",
+    "Pays": "France",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Temple",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Temple",
+    "Pays": "Colombie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Altar",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Valley",
+    "Pays": "Corée du Sud",
+    "Nombre": 1,
+    "Total": 28,
+    "Pourcentage": "3,57%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Valley",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 28,
+    "Pourcentage": "7,14%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Metal Corner",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 20,
+    "Pourcentage": "5,00%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 02",
+    "Pays": "Danemark",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Warzone",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 02",
+    "Pays": "France",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 01",
+    "Pays": "Japon",
+    "Nombre": 1,
+    "Total": 23,
+    "Pourcentage": "4,35%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Temple",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Valley",
+    "Pays": "Suède",
+    "Nombre": 1,
+    "Total": 28,
+    "Pourcentage": "3,57%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Metal Corner",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 20,
+    "Pourcentage": "10,00%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Temple",
+    "Pays": "Danemark",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Altar",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 02",
+    "Pays": "Israël",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Valley",
+    "Pays": "Angleterre",
+    "Nombre": 2,
+    "Total": 28,
+    "Pourcentage": "7,14%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 01",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 23,
+    "Pourcentage": "4,35%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Warzone",
+    "Pays": "Brésil",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Metal Corner",
+    "Pays": "Ecosse",
+    "Nombre": 1,
+    "Total": 20,
+    "Pourcentage": "5,00%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Warzone",
+    "Pays": "Suède",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Altar",
+    "Pays": "Italie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Temple",
+    "Pays": "Islande",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 01",
+    "Pays": "Belgique",
+    "Nombre": 1,
+    "Total": 23,
+    "Pourcentage": "4,35%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Valley",
+    "Pays": "Ukraine",
+    "Nombre": 1,
+    "Total": 28,
+    "Pourcentage": "3,57%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 02",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 02",
+    "Pays": "Australie",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Altar",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Metal Corner",
+    "Pays": "Suède",
+    "Nombre": 1,
+    "Total": 20,
+    "Pourcentage": "5,00%"
+  },
+  {
+    "Annee": 2016,
+    "Scene": "Main 01",
+    "Pays": "Danemark",
+    "Nombre": 1,
+    "Total": 23,
+    "Pourcentage": "4,35%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 01",
+    "Pays": "Etats-Unis",
+    "Nombre": 13,
+    "Total": 24,
+    "Pourcentage": "54,17%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Warzone",
+    "Pays": "Etats-Unis",
+    "Nombre": 11,
+    "Total": 27,
+    "Pourcentage": "40,74%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 01",
+    "Pays": "Australie",
+    "Nombre": 3,
+    "Total": 24,
+    "Pourcentage": "12,50%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Temple",
+    "Pays": "France",
+    "Nombre": 7,
+    "Total": 27,
+    "Pourcentage": "25,93%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Temple",
+    "Pays": "Ecosse",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 02",
+    "Pays": "Finlande",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Altar",
+    "Pays": "Etats-Unis",
+    "Nombre": 10,
+    "Total": 27,
+    "Pourcentage": "37,04%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 01",
+    "Pays": "Suède",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Valley",
+    "Pays": "Etats-Unis",
+    "Nombre": 13,
+    "Total": 27,
+    "Pourcentage": "48,15%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 02",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Temple",
+    "Pays": "Autriche",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 01",
+    "Pays": "France",
+    "Nombre": 3,
+    "Total": 24,
+    "Pourcentage": "12,50%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Altar",
+    "Pays": "Canada",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Metal Corner",
+    "Pays": "France",
+    "Nombre": 11,
+    "Total": 11,
+    "Pourcentage": "100,00%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Valley",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Warzone",
+    "Pays": "Angleterre",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Warzone",
+    "Pays": "NA",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Valley",
+    "Pays": "Angleterre",
+    "Nombre": 5,
+    "Total": 27,
+    "Pourcentage": "18,52%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Altar",
+    "Pays": "France",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Warzone",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Altar",
+    "Pays": "Suisse",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Temple",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Temple",
+    "Pays": "Etats-Unis",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Altar",
+    "Pays": "Pologne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 02",
+    "Pays": "Etats-Unis",
+    "Nombre": 9,
+    "Total": 27,
+    "Pourcentage": "33,33%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 01",
+    "Pays": "Angleterre",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Warzone",
+    "Pays": "Australie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 01",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Temple",
+    "Pays": "Norvège",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Altar",
+    "Pays": "Belgique",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Temple",
+    "Pays": "Suède",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 02",
+    "Pays": "Suède",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Altar",
+    "Pays": "Suède",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Warzone",
+    "Pays": "France",
+    "Nombre": 6,
+    "Total": 27,
+    "Pourcentage": "22,22%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Valley",
+    "Pays": "France",
+    "Nombre": 4,
+    "Total": 27,
+    "Pourcentage": "14,81%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 02",
+    "Pays": "Angleterre",
+    "Nombre": 5,
+    "Total": 27,
+    "Pourcentage": "18,52%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Warzone",
+    "Pays": "Autriche",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 02",
+    "Pays": "Allemagne",
+    "Nombre": 2,
+    "Total": 27,
+    "Pourcentage": "7,41%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Altar",
+    "Pays": "Brésil",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Temple",
+    "Pays": "Canada",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Valley",
+    "Pays": "Suisse",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 02",
+    "Pays": "Tunisie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Warzone",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Valley",
+    "Pays": "Norvège",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 01",
+    "Pays": "Pays de Galles",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 02",
+    "Pays": "Danemark",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 02",
+    "Pays": "Ecosse",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Altar",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Temple",
+    "Pays": "Finlande",
+    "Nombre": 3,
+    "Total": 27,
+    "Pourcentage": "11,11%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 02",
+    "Pays": "Pays de Galles",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 02",
+    "Pays": "Pays-Bas",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 01",
+    "Pays": "Allemagne",
+    "Nombre": 1,
+    "Total": 24,
+    "Pourcentage": "4,17%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Valley",
+    "Pays": "Islande",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Temple",
+    "Pays": "Îles Féroé",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Valley",
+    "Pays": "Italie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Main 02",
+    "Pays": "France",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Temple",
+    "Pays": "Russie",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  },
+  {
+    "Annee": 2017,
+    "Scene": "Altar",
+    "Pays": "Espagne",
+    "Nombre": 1,
+    "Total": 27,
+    "Pourcentage": "3,70%"
+  }
+]
