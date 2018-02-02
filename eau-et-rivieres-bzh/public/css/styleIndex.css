@@ -1,11 +1,20 @@
 /* just a sample css rule to show that everything works */
 
+@font-face {
+    font-family: 'GOTHAM-BLACK';
+    src: url('GothamFontsFamily/GOTHAM-BLACK.ttf');
+}
+@font-face{
+    font-family: 'Gotham-Book';
+    src: url('GothamFontsFamily/Gotham-Book.otf');
+}
+
 /* Header */
 header{
 }
 
 body{
-	background : #4BB5C1;
+	background : #96edbd;
 }
 
 #animation{
@@ -13,6 +22,7 @@ body{
 }
 
 #texte{
+	font-family: 'Gotham-Book';
 	border:solid;
 	border-width: 4px;
 	background: white;
@@ -20,24 +30,30 @@ body{
 	padding-left: 15px;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-right: 20%;
 	margin-left: 20%;
 }
 
 #btnCommencer{
-	margin-top: 20px;
+	margin-top: 10px;
 	text-align: center;
 	border:solid;
 	border-radius: 5px;
-	background: #7FC6BC;
+	background: #58BC81;
 	width: 150px;
 	margin-right: auto;
 	margin-left: auto;
 }
 
 .lien{
+	font-family: 'GOTHAM-BLACK';
 	text-decoration: none;
+	color: black;
+}
+
+.lien:hover{
+	text-decoration: underline;
 }
 
 /* Footer */
