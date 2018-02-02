@@ -1,7 +1,7 @@
 # Descriptif du projet
 
 Média : Eau et Rivières de Bretagne 
-![alt text](./logoMedia.png)
+![alt text](public/img/logoMedia.png)
 
 Sujet : Les Pesticides
 

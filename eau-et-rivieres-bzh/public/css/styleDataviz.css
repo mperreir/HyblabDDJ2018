@@ -1,5 +1,6 @@
-/* Règles CSS en plus de celles de bootstrap*/
+/* Règles CSS en plus de celles de bootstrap ou fullpage.js*/
 
+/* ----- Général ----- */
 @font-face {
     font-family: 'GOTHAM-BLACK';
     src: url('GothamFontsFamily/GOTHAM-BLACK.ttf');
@@ -9,31 +10,26 @@
     src: url('GothamFontsFamily/Gotham-Book.otf');
 }
 
-/* Header */
+.title {
+    font-family: 'Gotham-Black';
+    font-size: 17px;
+}
+
+.normal {
+    font-family: 'Gotham-Book';
+    font-size: 12px;
+}
+
+/* ----- Header ----- */
 .navbar-brand>img {
     height: 20px;
     width: auto;
 }
 
-.map {
-    float: left;
-    width: 40%;
-    position: absolute;
-    top: 42%;
-    left: 5%;
-}
 
-.map path {
-    fill: white;
-    stroke: black;
-    stroke-width: 1 px;
-    transition: fill 0.3s;
-}
 
-.map path:hover{
-    fill: #c7c8ca;
-}
-
+/* ----- Page 1 ----- */
+/* Section 0 */
 #section0 {
     float: left;
     position: absolute;
@@ -42,15 +38,27 @@
     top: 10%;
     left: 5%;
     width: 40%;
-    height: 28%;
+    height: 31%;
     word-wrap : break-word;
     text-align: justify;
 }
 
-#pIntro {
-    padding: 10px;
+.pContent {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
+.pTop {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.pBottom {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+/* Section 1 */
 #section1 {
     float: left;
     border: solid 3px black;
@@ -62,6 +70,7 @@
     word-wrap : break-word;
 }
 
+/* Section 2 */
 #section2 {
     float: left;
     width: 40%;
@@ -82,6 +91,7 @@
     margin: auto;
 }
 
+/* Section 3 */
 #section3 {
     float: left;
     position: absolute;
@@ -124,6 +134,26 @@
     width: 10%;
     height: 5%;
     border: 1px solid black;
+}
+
+/* Carte Départements */
+.map {
+    float: left;
+    width: 40%;
+    position: absolute;
+    top: 43%;
+    left: 5%;
+}
+
+.map path {
+    fill: white;
+    stroke: black;
+    stroke-width: 1 px;
+    transition: fill 0.3s;
+}
+
+.map path:hover{
+    fill: #c7c8ca;
 }
 
 .st0 {
@@ -254,12 +284,84 @@
     font-size: 7px;
 }
 
-.title {
-    font-family: 'Gotham-Black';
-    font-size: 17px;
+
+
+/* ----- Page 2 ----- */
+/* Section 4 */
+#section4 {
+    float: left;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 25%;
+    height: 52%;
+    border: 3px solid black;
+    background-color: white;
+    word-wrap : break-word;
+    text-align: justify;
 }
 
-.normal {
-    font-family: 'Gotham-Book';
-    font-size: 12px;
+.pTitle {
+    padding: 10px;
 }
+
+/* Section 5 */
+#section5 {
+    float: left;
+    position: absolute;
+    top: 68%;
+    left: 5%;
+    width: 25%;
+    height: 25%;
+    border: 3px solid black;
+    background-color: white;
+}
+
+#pCiterne {
+    float: left;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    text-align: justify;
+}
+
+.st100 {
+    fill: #A0DAE8;
+}
+
+.st101 {
+    fill: #7CCAE2;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st102 {
+    fill: none;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st103 {
+    fill: #A0DAE8;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+#citerne {
+    width: 22%;
+    float: left;
+    position: relative;
+    top: 24%;
+    left: 6%;
+}
+
+/* Carte Campbon */
