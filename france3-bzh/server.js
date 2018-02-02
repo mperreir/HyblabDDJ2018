@@ -3,13 +3,8 @@
 // Load usefull expressjs and nodejs objects / modules
 var express = require('express');
 var path = require('path');
-var d3 = require("d3");
 var app = express();
 
-<<<<<<< HEAD
-=======
-// import { tween, css } from 'popmotion'
->>>>>>> c7518f01d07da22c55a87fde61bd29906d12d3d7
 
 // Minimum routing: serve static content from the html directory
 app.use(express.static(path.join(__dirname, 'public')));

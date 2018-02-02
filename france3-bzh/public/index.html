@@ -23,12 +23,13 @@
     <!-- popmotion import's-->
     <script type="text/javascript" src="js/popmotion.global.min.js"></script>
 
-
     <!-- chartjs -->
     <script type="text/javascript" src="js/Chart.js"></script>
 
-		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
+		<!-- Main script that loads data from json file -->
+		<script src="js/main.js" defer></script>
+
+
   </head>
   <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
@@ -47,120 +48,123 @@
 
     <div id="fullpage">
         <div class="section">
-
+          <div id="chart_lum_container">
+            <canvas id="myLineChart" width="740" height="200"></canvas>
+          </div>
         </div>
 
         <div class="section">
-          <div id="liste">
+          <div id="contain_about">
             <div class="personnages">
               <div class="personnage">
-                <img class="image_perso" src="img/team/gerard.png" style="width:75px; margin: 0 ;"/>
+                <img class="image_perso" src="img/team/gerard.png" />
                 <div class="info">
                   <p class="perso">Gerard Hardman</p>
-                  <p class="poly">Guillaume Pelluet</p>
+                  <p class="rouge">Guillaume Pelluet</p>
                 </div>
               </div>
               <div class="personnage">
-                <img class="image_perso" src="img/team/docteur.png" style="width:75px; margin: 0 ;"/>
+                <img class="image_perso" src="img/team/docteur.png" />
                 <div class="info">
                   <p class="perso">Docteur Arbuthnot</p>
-                  <p class="poly">Max David</p>
+                  <p class="rouge">Max David</p>
                 </div>
               </div>
               <div class="personnage">
-                <img class="image_perso" src="img/team/hector.png" style="width:75px; margin: 0 ;"/>
+                <img class="image_perso" src="img/team/hector.png"/>
                 <div class="info">
                   <p class="perso">Hector MacQueen</p>
-                  <p class="poly">Clément Ian</p>
+                  <p class="rouge">Clément Ian</p>
                 </div>
               </div>
               <div class="personnage">
-                <img class="image_perso" src="img/team/mary.png" style="width:75px; margin: 0 ;"/>
+                <img class="image_perso" src="img/team/mary.png" />
                 <div class="info">
                   <p class="perso">Mary Debenham</p>
-                  <p class="com">Clémentine Albert</p>
+                  <p class="bleu">Clémentine Albert</p>
                 </div>
               </div>
               <div class="personnage">
-                <img class="image_perso" src="img/team/pilar.png" style="width:75px; margin: 0 ;"/>
+                <img class="image_perso" src="img/team/pilar.png" />
                 <div class="info">
                   <p class="perso">Pilar Estravados</p>
-                  <p class="com">Mathilde Adrien</p>
+                  <p class="bleu">Mathilde Adrien</p>
                 </div>
               </div>
             </div>
             <div class="personnages">
               <div class="personnage">
-                <img class="image_perso" src="img/team/caro.png" style="width:75px; margin: 0 ;"/>
+                <img class="image_perso" src="img/team/caro.png" />
                 <div class="info">
                   <p class="perso">Caroline Hubbard</p>
-                  <p class="com">Agathe de Brunier</p>
+                  <p class="bleu">Agathe de Brunier</p>
                 </div>
               </div>
               <div class="personnage">
-                <img class="image_perso" src="img/team/comtesse.png" style="width:75px; margin: 0 ;"/>
+                <img class="image_perso" src="img/team/comtesse.png"/>
                 <div class="info">
                   <p class="perso">Comtesse Andrenyi</p>
-                  <p class="com">Maud Jannin</p>
+                  <p class="bleu">Maud Jannin</p>
                 </div>
               </div>
               <div class="personnage">
-                <img class="image_perso" src="img/team/edward.png" style="width:75px; margin: 0 ;"/>
+                <img class="image_perso" src="img/team/edward.png" />
                 <div class="info">
                   <p class="perso">Edward Masterman</p>
-                  <p class="agr">Valentin Blanchard</p>
+                  <p class="orange">Valentin Blanchard</p>
                 </div>
               </div>
               <div class="personnage">
-                <img class="image_perso" src="img/team/ratchet.png" style="width:75px; margin: 0 ;"/>
+                <img class="image_perso" src="img/team/ratchet.png" />
                 <div class="info">
                   <p class="perso">Edward Ratchett</p>
-                  <p class="agr">Yann Letort</p>
+                  <p class="orange">Yann Letort</p>
                 </div>
               </div>
               <div class="personnage">
-                <img class="image_perso" src="img/team/comte.png" style="width:75px; margin: 0 ;"/>
+                <img class="image_perso" src="img/team/comte.png"/>
                 <div class="info">
                   <p class="perso">Comte Andrenyi</p>
-                  <p class="agr">Marc-Antoine Le Donnant</p>
+                  <p class="orange">Marc-Antoine Le Donnant</p>
                 </div>
               </div>
           </div>
           <div class="personnages">
               <div class="personnage">
-                <img class="image_perso" src="img/team/hercule.png" style="width:75px; margin: 0 ;"/>
+                <img class="image_perso" src="img/team/hercule.png"/>
                 <div class="info">
                   <p class="perso">Hercule Poirot</p>
-                  <p class="jour">Thierry Peigné</p>
+                  <p class="vert">Thierry Peigné</p>
                 </div>
               </div>
           </div>
         </div>
         <div id="informations">
-          <div id="partenaires" class="infos">
-          <h2>Partenaires</h2>
-          <p>Hyblab</p>
-          <p>Ouestmedialab</p>
-          <p>France 3 Bretagne</p>
-          <p>AGR Nantes</p>
-          <p>Polytech Nantes</p>
-          <p>ScienceCom</p>
+          <div id="info_partenaires">
+            <h2>Partenaires</h2>
+            <a href="http://www.hyblab.fr/">Hyblab</a>
+            <a href="http://www.ouestmedialab.fr/">Ouestmedialab</a>
+            <a href="https://france3-regions.francetvinfo.fr/bretagne/">France 3 Bretagne</a>
+            <a href="https://www.agrnantes.fr/">AGR Nantes</a>
+            <a href="http://web.polytech.univ-nantes.fr/">Polytech Nantes</a>
+            <a href="http://sciencescom.audencia.com/">ScienceCom</a>
+
           </div>
-          <div id="sources" class="infos">
-          <h2>Sources</h2>
-          <p>sncf.fr</p>
-          <p>gouv.fr</p>
+          <div id="info_sources">
+            <h2>Sources</h2>
+              <a href="https://data.sncf.com/explore/?sort=modified">SNCF</a>
+              <a href="https://www.data.gouv.fr/">Data Gouv</a>
           </div>
           <div id="réseau" class="infos">
-          <h2>Réseau sociaux</h2>
-          <p>Twitter</p>
-          <p>Facebook</p>
+            <h2>Réseau sociaux</h2>
+            <a href="https://twitter.com/Lorient_Express">Twitter</a>
+            <a href="#">Facebook</a>
           </div>
-          <div id="equipe" class="infos">
-          <p style="color:green">Porteur de projet</p>
-          <p style="color:red">Polytech</p>
-          <p style="color:blue">ScienceCome</p>
-          <p style="color:orange">AGR</p>
+          <div id="equipe">
+            <h2 class="vert">Porteur de projet</h2>
+            <a href="http://web.polytech.univ-nantes.fr/"><p class="rouge">Polytech</p></a>
+            <a href="http://sciencescom.audencia.com/"><p class="bleu">ScienceCom</p></a>
+            <a href="https://www.agrnantes.fr/"><p class="orange">AGR Nantes</p></a>
           </div>
         </div>
         </div>

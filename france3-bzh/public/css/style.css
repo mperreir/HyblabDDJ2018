@@ -26,9 +26,14 @@ header img{
   left: 0px;
 }
 
-#chart_age_container {
-  width: 150px;
-  height: 150px;
+#chart_lum_container {
+  width: 60%;
+  height: 60%;
+
+}
+
+#myChart {
+  background-color: white;
 }
 
 #train {
@@ -83,8 +88,8 @@ h1
 {
   font-family: "overpass";
   font-weight: bold;
-  color:red;
-  position: absolute;
+  color:#F53855;
+  position: relative;
   left: 0;
   top: 10%;
   width: 90%;
@@ -97,116 +102,109 @@ h1
   background: url('/img/Background-01.svg');
 }
 
-#liste
+#contain_about
 {
-  width: 1000px;
-  position: relative;
-  top: -10px;
-  left: 100px;
+  float: left;
+  margin-left: 5%;
+  width: 70%;
+  margin-top: 7%;
 }
 
 .personnages
 {
-  position: relative;
 }
 
 .personnage
 {
-  width: 150px;
-  float:left;
-  margin-right: 25px;
-  margin-bottom: 75px;
-  position: relative;
-}
-
-.info
-{
-  position:relative;
+  display: inline-block;
+  width: 17%;
   text-align: center;
 }
 
 p
 {
- color:white;
+  color:white;
   font-weight: bold;
   font-family: "work_sans";
   font-size:12px;
 }
+a
+{
+  color:white;
+  font-family: "work_sans";
+  font-size:12px;
+}
+
+.info
+{
+  display: inline;
+  text-align: center;
+  width: 100%;
+  margin: 5px;
+}
 
 .perso {
-  position: absolute;
   font-family: "work_sans";
   color: white;
-  top:-20px;
-  width: 150px;
-  font-size: 12px;
-}
-.com {
-  position: absolute;
-  font-family: "work_sans";
-  color:blue;
-  width: 150px;
-  font-size: 9px;
-}
-.poly {
-  position: absolute;
-  font-family: "work_sans";
-  color:red;
-  width: 150px;
-  font-size: 9px;
-}
-.agr {
-  position: absolute;
-  font-family: "work_sans";
-  color:orange;
-  width: 150px;
-  font-size: 9px;
-}
-.jour {
-  position: absolute;
-  font-family: "work_sans";
-  color:green;
-  width: 150px;
-  font-size: 9px;
+  font-size: 16px;
 }
 
-.section
-{
-  position: relative;
-}
+
+
+
+
 
 .image_perso
 {
-  position: relative;
-  left: 40px;
-  top: -10px
+  text-align: center;
 }
 
 h2
 {
   font-family :overpass;
-  color: red;
+  color: #F53855;
   font-size: 14px;
   font-weight: bold;
 }
 #informations
 {
-  position: absolute;
-  left:1000px;
-  top: 50px;
+  float: right;
+  margin-right: 15%;
+  width: 10%;
+  margin-top: 3%;
 }
 
-.infos
-{
-  margin-bottom: 40px;
+#informations h2 {
+  font-size: 24px;
+  font-weight: normal;
 }
 
-#equipe p
+#informations a {
+  text-decoration: none;
+  display: block;
+  margin: 2px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+
+#equipe a p
 {
-  color:white;
   font-weight: bold;
   font-family: "overpass";
-  font-size:12px;
-  margin-bottom: -10px;
+  font-size:16px;
 }
 
+.orange {
+  color: #E37B40;
+}
+.bleu {
+  color: #4479FF;
+}
+.rouge {
+  color: #F53855;
+}
+.vert {
+  color:#46B29D;
+}
