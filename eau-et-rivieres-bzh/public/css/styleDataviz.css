@@ -1,5 +1,14 @@
 /* Règles CSS en plus de celles de bootstrap*/
 
+@font-face {
+    font-family: 'GOTHAM-BLACK';
+    src: url('GothamFontsFamily/GOTHAM-BLACK.ttf');
+}
+@font-face{
+    font-family: 'Gotham-Book';
+    src: url('GothamFontsFamily/Gotham-Book.otf');
+}
+
 /* Header */
 .navbar-brand>img {
     height: 20px;
@@ -8,11 +17,10 @@
 
 .map {
     float: left;
-    width: 80%;
+    width: 40%;
     position: absolute;
-    top: 10%;
-    left: 20%;
-    z-index: 1;
+    top: 42%;
+    left: 5%;
 }
 
 .map path {
@@ -26,66 +34,95 @@
     fill: #c7c8ca;
 }
 
-#section1 {
+#section0 {
     float: left;
-    border: solid 1px black;
-    background-color: white;
-    width: 200px;
     position: absolute;
+    border: solid 3px black;
+    background-color: white;
     top: 10%;
     left: 5%;
-    z-index: 1;
+    width: 40%;
+    height: 28%;
+    word-wrap : break-word;
+    text-align: justify;
+}
+
+#pIntro {
+    padding: 10px;
+}
+
+#section1 {
+    float: left;
+    border: solid 3px black;
+    background-color: white;
+    width: 15%;
+    position: absolute;
+    top: 10%;
+    left: 32%;
+    word-wrap : break-word;
 }
 
 #section2 {
     float: left;
-    width: 50px;
-    height: 100px;
+    width: 40%;
+    height: 7%;
     position: absolute;
-    top: 10%;
-    left: 30%;
-    z-index: 1;
+    top: 90%;
+    left: 15%;
 }
 
 .boutonRond {
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-    border-color: aqua;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-color: black;
     border-style: solid;
     background-color: white;
-}
-
-.prond {
-    padding-left: 30px;
-    padding-top: 2px;
+    margin: auto;
 }
 
 #section3 {
     float: left;
     position: absolute;
-    top: 65%;
-    left: 5%;
-    width: 800px;
-    height: 300px;
-    z-index: 2;
+    top: 10%;
+    left: 50%;
+    width: 46%;
+    height: 75%;
+    word-wrap : break-word;
+    background-color: white;
+    border: 3px solid black;
 }
 
 .article1 {
     float: left;
-    width: 400px;
-    height: 200px;
-    border: 1px solid black;
+    width: 50%;
+    height: 80%;
+}
+
+#legendeTitle {
+    padding-left: 10px;
+}
+
+#legende {
+    padding: 5px;
+    width: 100%;
+}
+
+.cellule{
+    text-align: left;
+    padding: 5px;
+    padding-left: 10px;
+    width: 33%;
 }
 
 #buttonSP {
     float: left;
     position: absolute;
-    left: 80%;
-    top: 80%;
-    width: 120px;
-    height: 40px;
+    left: 85%;
+    top: 90%;
+    width: 10%;
+    height: 5%;
     border: 1px solid black;
 }
 
@@ -210,9 +247,19 @@
 }
 
 .st16 {
-    font-family: 'Gotham-Bold';
+    font-family: 'Gotham-Black';
 }
 
 .st17 {
     font-size: 7px;
+}
+
+.title {
+    font-family: 'Gotham-Black';
+    font-size: 17px;
+}
+
+.normal {
+    font-family: 'Gotham-Book';
+    font-size: 12px;
 }
