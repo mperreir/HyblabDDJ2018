@@ -12,6 +12,19 @@ $(document).ready(function() {
 
 
 
+
+function Light(){
+    $("#section_illu1").fadeTo("slow", 0.1,function(){
+        $("#section_illu1").css({'background-image':'url(img/Illu1/daynight.svg)'});
+        $("#nuit").css({'visibility':'visible'});
+        $("#jour").css({'visibility':'visible'});
+    }).fadeTo('slow', 1);
+};
+
+
+
+
+
 // Popmotion
 // const { easing, tween, styler } = window.popmotion;
 //
@@ -98,15 +111,55 @@ fetch('data/nb_V_A_T.json')
         });
     });
 
+fetch('data/france.geojson')
+    // this promise will be fulfilled when the json fill will be
+    .then(function (response){
+        // if we could load the resource, parse it
+        if( response.ok )
+            return response.json();
+        else // if not, send some error message as JSON data
+            return {data: "JSON file not found"};
+
+    })
+    // in case of invalid JSON (parse error) send some error message as JSON data
+    .catch( function (error){
+        return {data: "Invalid JSON"};
+    })
+    // this promise will be fulfilled when the json will be parsed
+    .then(function (Geojson) {
+        console.log(Geojson);
 
 
-    // leaflet
-var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+        // Get the context of the canvas element we want to select
+        var map;
+        function initmap() {
+        // paramÃ©trage de la carte
+        map = new L.Map('map',{
+            zoomSnap: 0.25,
+            minZoom: 5,
+            maxZoom: 7,
+            zoomControl:false });
 
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
-   maxZoom: 18,
-   attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-       '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-       'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-   id: 'mapbox.streets'
-}).addTo(mymap);
+        // crÃ©ation des "tiles" avec open street map
+        // on centre sur la France
+        map.setView(new L.LatLng(46.85, 2.3518), 5);
+
+        L.geoJSON(Geojson, {style:function(feature) {
+            return {
+                'fillColor': '#5DC1CE',
+                'weight': 2,
+                'opacity': 1,
+                'color': 'white',
+                'dashArray':'3',
+                'fillOpacity': 1
+            }
+        }}).addTo(map);
+};
+
+        /* on va procÃ©der Ã  l'initialisation de la carte */
+        initmap();
+
+
+
+});
+

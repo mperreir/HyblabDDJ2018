@@ -113,6 +113,8 @@ h3
   z-index: 2;
 }
 
+/* -- Slide Home */
+
 #section_home {
   background-image: url(../img/home/background_home.svg);
   background-position: bottom;
@@ -120,18 +122,44 @@ h3
   background-size: 100%;
 }
 
+/* -- Slide jour nuit */
+
 #section_illu1 {
-  background-image: url(../img/Illu1/Prototype_Daynight_SVG.svg);
+  background-image: url(../img/Illu1/first.svg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
+#nuit
+{
+  visibility: hidden;
+  font-size: 36px;
+  font-family: "work_sans";
+  color: #4479FF;
+}
+
+#jour
+{
+  visibility: hidden;
+  font-size: 36px;
+  font-family: "work_sans";
+  color: #F53855;
+}
+
+/* -- Slide 2 */
 
 #section_illu2 {
   background-image: url(../img/4saisons/decorSaison.svg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+#map
+{
+  background-color: #241D37;
+  margin-left: 100px;
 }
 
 
