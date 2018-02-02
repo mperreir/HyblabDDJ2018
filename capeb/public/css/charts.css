@@ -1,0 +1,17 @@
+/* ---------- MAP ------ */
+
+#bigText{
+    position:absolute;
+}
+
+.axis{
+    opacity: .5;
+}
+
+/* -------- CHARTS ---------- */
+
+.chart{
+    width: auto;
+    display: inline-block;
+    padding: 2%;
+}
