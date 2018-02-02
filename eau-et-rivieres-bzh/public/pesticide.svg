@@ -10,7 +10,7 @@
     	<title>Eau et Rivières de Bretagne !</title>
    		<desc>Des pesticides se battent contre notre logo</desc>
 
-        <image href="img/PestiBusters_logo.png" alt="Logo de pestibusters" height="200" width="200" x="400" y="120"/>
+        <image href="img/PestiBusters_Logo.png" alt="Logo de pestibusters" height="200" width="200" x="400" y="120"/>
 
         <!-- GAUCHE !-->
 		<image href="img/P_1.png" alt="un pesticide" height="70" width="70" x="10" y="180" opacity="0">
