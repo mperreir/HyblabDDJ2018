@@ -117,18 +117,21 @@ h3
   background-image: url(../img/home/background_home.svg);
   background-position: bottom;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 #section_illu1 {
   background-image: url(../img/Illu1/Prototype_Daynight_SVG.svg);
   background-position: bottom;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 #section_illu2 {
   background-image: url(../img/4saisons/decorSaison.svg);
   background-position: bottom;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 
@@ -140,11 +143,15 @@ h3
 } */
 
 #container_infos_nav {
-  display: inline-block;
+  display: block;
   text-align: center;
-  vertical-align: center;
   z-index: 1;
-  margin-top: 5%;
+  vertical-align: top;
+  margin-top: -17%;
+}
+
+#container_infos_nav h3{
+  text-transform: uppercase;
 }
 
 #container_infos_nav p{
@@ -153,6 +160,30 @@ h3
   margin-left: auto;
   margin-right: auto;
 }
+
+
+#infos_nav_souris {
+  text-align: right;
+  float: left;
+  width: 50%;
+  height: 10%;
+}
+#infos_nav_souris img {
+  float: right;
+}
+
+
+
+#infos_nav_clavier {
+  text-align: left;
+  float: right;
+  width: 50%;
+  height: 10%;
+}
+#infos_nav_clavier img {
+  float: left;
+}
+
 
 #contain_about
 {
@@ -235,6 +266,9 @@ h3
   height: 500px;
   width: 500px;
 }
+
+
+
 
 .orange {
   color: #E37B40;
