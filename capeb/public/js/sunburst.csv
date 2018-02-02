@@ -1,0 +1,69 @@
+chemin,count
+plomberie-chauffage-couverture&CA.Batiments.neufs&A la baisse&CDD,30
+plomberie-chauffage-couverture&CA.Batiments.neufs&A la baisse&CDI,33.25
+plomberie-chauffage-couverture&CA.Batiments.neufs&A la baisse&Apprentis,30
+plomberie-chauffage-couverture&CA.Batiments.neufs&A la baisse&Intérimaires,NaN
+plomberie-chauffage-couverture&CA.Batiments.neufs&Stable&CDD,NaN
+plomberie-chauffage-couverture&CA.Batiments.neufs&Stable&CDI,31.3333333333333
+plomberie-chauffage-couverture&CA.Batiments.neufs&Stable&Apprentis,31
+plomberie-chauffage-couverture&CA.Batiments.neufs&Stable&Intérimaires,NaN
+plomberie-chauffage-couverture&CA.Batiments.neufs&A la hausse&CDD,NaN
+plomberie-chauffage-couverture&CA.Batiments.neufs&A la hausse&CDI,31.5
+plomberie-chauffage-couverture&CA.Batiments.neufs&A la hausse&Apprentis,27
+plomberie-chauffage-couverture&CA.Batiments.neufs&A la hausse&Intérimaires,27
+menuiserie-charpente&CA.Batiments.neufs&A la baisse&CDD,33
+menuiserie-charpente&CA.Batiments.neufs&A la baisse&CDI,38
+menuiserie-charpente&CA.Batiments.neufs&A la baisse&Apprentis,34
+menuiserie-charpente&CA.Batiments.neufs&A la baisse&Intérimaires,NaN
+menuiserie-charpente&CA.Batiments.neufs&Stable&CDD,38
+menuiserie-charpente&CA.Batiments.neufs&Stable&CDI,40.2
+menuiserie-charpente&CA.Batiments.neufs&Stable&Apprentis,38
+menuiserie-charpente&CA.Batiments.neufs&Stable&Intérimaires,NaN
+menuiserie-charpente&CA.Batiments.neufs&A la hausse&CDD,NaN
+menuiserie-charpente&CA.Batiments.neufs&A la hausse&CDI,46
+menuiserie-charpente&CA.Batiments.neufs&A la hausse&Apprentis,31
+menuiserie-charpente&CA.Batiments.neufs&A la hausse&Intérimaires,33
+maçonnerie-carrelage&CA.Batiments.neufs&A la baisse&CDD,15
+maçonnerie-carrelage&CA.Batiments.neufs&A la baisse&CDI,16
+maçonnerie-carrelage&CA.Batiments.neufs&A la baisse&Apprentis,NaN
+maçonnerie-carrelage&CA.Batiments.neufs&A la baisse&Intérimaires,NaN
+maçonnerie-carrelage&CA.Batiments.neufs&Stable&CDD,NaN
+maçonnerie-carrelage&CA.Batiments.neufs&Stable&CDI,12
+maçonnerie-carrelage&CA.Batiments.neufs&Stable&Apprentis,NaN
+maçonnerie-carrelage&CA.Batiments.neufs&Stable&Intérimaires,NaN
+Peinture&CA.Batiments.neufs&A la hausse&CDD,NaN
+Peinture&CA.Batiments.neufs&A la hausse&CDI,4
+Peinture&CA.Batiments.neufs&A la hausse&Apprentis,NaN
+Peinture&CA.Batiments.neufs&A la hausse&Intérimaires,5
+Electricité&CA.Batiments.neufs&A la baisse&CDD,NaN
+Electricité&CA.Batiments.neufs&A la baisse&CDI,33
+Electricité&CA.Batiments.neufs&A la baisse&Apprentis,30
+Electricité&CA.Batiments.neufs&A la baisse&Intérimaires,NaN
+Electricité&CA.Batiments.neufs&Stable&CDD,26
+Electricité&CA.Batiments.neufs&Stable&CDI,27
+Electricité&CA.Batiments.neufs&Stable&Apprentis,26.5
+Electricité&CA.Batiments.neufs&Stable&Intérimaires,NaN
+Electricité&CA.Batiments.neufs&A la hausse&CDD,NaN
+Electricité&CA.Batiments.neufs&A la hausse&CDI,28
+Electricité&CA.Batiments.neufs&A la hausse&Apprentis,25.5
+Electricité&CA.Batiments.neufs&A la hausse&Intérimaires,NaN
+plâtrerie-isolation&CA.Batiments.neufs&A la baisse&CDD,8
+plâtrerie-isolation&CA.Batiments.neufs&A la baisse&CDI,11
+plâtrerie-isolation&CA.Batiments.neufs&A la baisse&Apprentis,NaN
+plâtrerie-isolation&CA.Batiments.neufs&A la baisse&Intérimaires,NaN
+plâtrerie-isolation&CA.Batiments.neufs&Stable&CDD,8
+plâtrerie-isolation&CA.Batiments.neufs&Stable&CDI,NaN
+plâtrerie-isolation&CA.Batiments.neufs&Stable&Apprentis,NaN
+plâtrerie-isolation&CA.Batiments.neufs&Stable&Intérimaires,NaN
+plâtrerie-isolation&CA.Batiments.neufs&A la hausse&CDD,NaN
+plâtrerie-isolation&CA.Batiments.neufs&A la hausse&CDI,14
+plâtrerie-isolation&CA.Batiments.neufs&A la hausse&Apprentis,NaN
+plâtrerie-isolation&CA.Batiments.neufs&A la hausse&Intérimaires,NaN
+Autre&CA.Batiments.neufs&A la baisse&CDD,NaN
+Autre&CA.Batiments.neufs&A la baisse&CDI,11
+Autre&CA.Batiments.neufs&A la baisse&Apprentis,NaN
+Autre&CA.Batiments.neufs&A la baisse&Intérimaires,NaN
+Autre&CA.Batiments.neufs&Stable&CDD,11
+Autre&CA.Batiments.neufs&Stable&CDI,12
+Autre&CA.Batiments.neufs&Stable&Apprentis,NaN
+Autre&CA.Batiments.neufs&Stable&Intérimaires,NaN
