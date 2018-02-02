@@ -1,47 +1,4 @@
 /* just a sample css rule to show that everything works */
-body {
-  background-color: #241D37;
-}
-
-footer p
-{
-  font-size: small;
-  text-align: center;
-}
-
-header{
-  text-align: center;
-}
-
-header img{
-  max-width: 100%;
-	height: auto;
-}
-
-#background {
-  position: absolute;
-  width: 100%;
-  height:100%;
-  top: 0px;
-  left: 0px;
-}
-
-#chart_lum_container {
-  width: 60%;
-  height: 60%;
-
-}
-
-#myChart {
-  background-color: white;
-}
-
-#train {
-  top: 0px;
-  left: 0px;
-  position: absolute;
-  z-index: 2;
-}
 
 @font-face {
   font-family: "overpass";
@@ -79,27 +36,98 @@ header img{
   src: url("WorkSans-Bold.ttf");
 }
 
-body
-{
-
+body {
+  background-color: #241D37;
 }
+
+footer p
+{
+  font-size: small;
+  text-align: center;
+}
+
+header{
+  text-align: center;
+}
+
+header img{
+	height: auto;
+}
+
 
 h1
 {
   font-family: "overpass";
   font-weight: bold;
   color:#F53855;
-  position: relative;
-  left: 0;
-  top: 10%;
-  width: 90%;
   text-align: center;
 }
+p
+{
+  color:white;
+  font-weight: bold;
+  font-family: "work_sans";
+  font-size:12px;
+}
+a
+{
+  color:white;
+  font-family: "work_sans";
+  font-size:12px;
+}
 
+h2
+{
+  font-family :overpass;
+  color: #F53855;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+h3
+{
+  color:white;
+  font-weight: bold;
+  font-family: "work_sans";
+}
+
+#background_home {
+  width: 100%;
+  transform-origin: bottom;
+  z-index: -1;
+}
+
+#chart_lum_container {
+  width: 60%;
+  height: 60%;
+
+}
+
+#myChart {
+  background-color: white;
+}
+
+#train {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 2;
+}
+
+/*
 #container
 {
   background-attachment:fixed;
   background: url('/img/Background-01.svg');
+} */
+
+#container_infos_nav {
+  display: inline-block;
+  vertical-align: center;
+}
+
+#container_infos_nav p{
+  display: inline-block;
 }
 
 #contain_about
@@ -121,19 +149,6 @@ h1
   text-align: center;
 }
 
-p
-{
-  color:white;
-  font-weight: bold;
-  font-family: "work_sans";
-  font-size:12px;
-}
-a
-{
-  color:white;
-  font-family: "work_sans";
-  font-size:12px;
-}
 
 .info
 {
@@ -162,13 +177,7 @@ a
   opacity:0.8;
 }
 
-h2
-{
-  font-family :overpass;
-  color: #F53855;
-  font-size: 14px;
-  font-weight: bold;
-}
+
 #informations
 {
   float: right;
@@ -197,6 +206,11 @@ h2
   font-weight: bold;
   font-family: "overpass";
   font-size:16px;
+}
+
+#mapid {
+  height: 500px;
+  width: 500px;
 }
 
 .orange {
