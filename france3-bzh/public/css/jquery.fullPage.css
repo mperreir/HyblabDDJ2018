@@ -68,6 +68,7 @@ html.fp-enabled,
     transform: translate3d(0,0,0);
 }
 .fp-controlArrow.fp-prev {
+    display:none;
     left: 15px;
     width: 0;
     border-width: 38.5px 34px 38.5px 0;
@@ -77,6 +78,7 @@ html.fp-enabled,
     right: 15px;
     border-width: 38.5px 0 38.5px 34px;
     border-color: transparent transparent transparent #fff;
+    display:none;
 }
 .fp-scrollable {
     overflow: hidden;

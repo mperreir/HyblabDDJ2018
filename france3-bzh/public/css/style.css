@@ -116,13 +116,27 @@ h3
 #section_home {
   background-image: url(../img/home/background_home.svg);
   background-position: bottom;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
 }
+
+#section_illu1 {
+  background-image: url(../img/Illu1/Prototype_Daynight_SVG.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+#section_illu2 {
+  background-image: url(../img/4saisons/decorSaison.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+
 /*
 #container
 {
   background-attachment:fixed;
-  background: url('/img/Background-01.svg');
+  background: url('/img/home/Background-01.svg');
 } */
 
 #container_infos_nav {
