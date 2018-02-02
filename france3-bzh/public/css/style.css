@@ -157,6 +157,9 @@ a
 .image_perso
 {
   text-align: center;
+  filter:alpha(opacity=40);
+  -moz-opacity: 0.8;
+  opacity:0.8;
 }
 
 h2
@@ -175,7 +178,7 @@ h2
 }
 
 #informations h2 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: normal;
 }
 

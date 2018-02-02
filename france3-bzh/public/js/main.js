@@ -30,6 +30,34 @@ $(document).ready(function() {
 //   // yoyo: 5
 // }).start(divStyler.set);
 
+$(function(){
+    $(".polytechs").hover(function(){
+        $(".polytech").css({opacity: 1.0});
+    }
+    ,function(){
+        $(".polytech").css({opacity: 0.5});
+    }),
+    $(".agrs").hover(function(){
+        $(".agr").css({opacity: 1.0});
+    }
+    ,function(){
+        $(".agr").css({opacity: 0.5});
+    }),
+    $(".audencias").hover(function(){
+        $(".audencia").css({opacity: 1.0});
+    }
+    ,function(){
+        $(".audencia").css({opacity: 0.5});
+    }),
+    $(".journalistes").hover(function(){
+        $(".journaliste").css({opacity: 1.0});
+    }
+    ,function(){
+        $(".journaliste").css({opacity: 0.5});
+    });
+});
+
+
 
 // chartjs
 // Load a dummy json file using the fetch API
