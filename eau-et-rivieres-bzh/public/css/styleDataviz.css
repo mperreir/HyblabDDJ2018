@@ -7,10 +7,12 @@
 }
 
 .map {
-    width: 60%;
-    position: relative;
-    left: 40%;
-    top: 5%;
+    float: left;
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    z-index: 1;
 }
 
 .map path {
@@ -22,4 +24,195 @@
 
 .map path:hover{
     fill: #c7c8ca;
+}
+
+#section1 {
+    float: left;
+    border: solid 1px black;
+    background-color: white;
+    width: 200px;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    z-index: 1;
+}
+
+#section2 {
+    float: left;
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    z-index: 1;
+}
+
+.boutonRond {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-color: aqua;
+    border-style: solid;
+    background-color: white;
+}
+
+.prond {
+    padding-left: 30px;
+    padding-top: 2px;
+}
+
+#section3 {
+    float: left;
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    width: 800px;
+    height: 300px;
+    z-index: 2;
+}
+
+.article1 {
+    float: left;
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+#buttonSP {
+    float: left;
+    position: absolute;
+    left: 80%;
+    top: 80%;
+    width: 120px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.st0 {
+    fill: #806703;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st1 {
+    fill: #F8C000;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st2 {
+    fill: #212653;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st3 {
+    fill: #6262E8;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st4 {
+    fill: #7C3703;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st5 {
+    fill: #EF6316;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st6 {
+    fill: #671D3A;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st7 {
+    fill: #AA3565;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st8 {
+    fill: #0C5F4C;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st9 {
+    fill: #1EAE8D;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st10 {
+    fill: #721C05;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st11 {
+    fill: #D42E1E;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st12 {
+    fill: #416C77;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st13 {
+    fill: #7CCAE2;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st14 {
+    fill: none;
+}
+
+.st15 {
+    fill: #1D1D1B;
+}
+
+.st16 {
+    font-family: 'Gotham-Bold';
+}
+
+.st17 {
+    font-size: 7px;
 }

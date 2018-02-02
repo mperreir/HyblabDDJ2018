@@ -1,0 +1,402 @@
+[
+  {
+    "ANNEE": 2012,
+    "DEPARTEMENT": "Finistere",
+    "MORTEL": 8,
+    "CANCER": 3,
+    "TOXIQUE": 19,
+    "GENETIQUE": 3,
+    "FOETUS": 1,
+    "ORGANES": 6
+  },
+  {
+    "ANNEE": 2013,
+    "DEPARTEMENT": "Finistere",
+    "MORTEL": 10,
+    "CANCER": 4,
+    "TOXIQUE": 19,
+    "GENETIQUE": 5,
+    "FOETUS": 1,
+    "ORGANES": 6
+  },
+  {
+    "ANNEE": 2014,
+    "DEPARTEMENT": "Finistere",
+    "MORTEL": 10,
+    "CANCER": 3,
+    "TOXIQUE": 15,
+    "GENETIQUE": 0,
+    "FOETUS": 2,
+    "ORGANES": 16
+  },
+  {
+    "ANNEE": 2015,
+    "DEPARTEMENT": "Finistere",
+    "MORTEL": 10,
+    "CANCER": 3,
+    "TOXIQUE": 15,
+    "GENETIQUE": 0,
+    "FOETUS": 2,
+    "ORGANES": 16
+  },
+  {
+    "ANNEE": 2016,
+    "DEPARTEMENT": "Finistere",
+    "MORTEL": 10,
+    "CANCER": 7,
+    "TOXIQUE": 22,
+    "GENETIQUE": 3,
+    "FOETUS": 1,
+    "ORGANES": 10
+  },
+  {
+    "ANNEE": 2012,
+    "DEPARTEMENT": "Cotes_Armor",
+    "MORTEL": 6,
+    "CANCER": 3,
+    "TOXIQUE": 18,
+    "GENETIQUE": 3,
+    "FOETUS": 2,
+    "ORGANES": 9
+  },
+  {
+    "ANNEE": 2013,
+    "DEPARTEMENT": "Cotes_Armor",
+    "MORTEL": 8,
+    "CANCER": 2,
+    "TOXIQUE": 21,
+    "GENETIQUE": 5,
+    "FOETUS": 1,
+    "ORGANES": 7
+  },
+  {
+    "ANNEE": 2014,
+    "DEPARTEMENT": "Cotes_Armor",
+    "MORTEL": 10,
+    "CANCER": 2,
+    "TOXIQUE": 16,
+    "GENETIQUE": 0,
+    "FOETUS": 2,
+    "ORGANES": 15
+  },
+  {
+    "ANNEE": 2015,
+    "DEPARTEMENT": "Cotes_Armor",
+    "MORTEL": 10,
+    "CANCER": 2,
+    "TOXIQUE": 15,
+    "GENETIQUE": 0,
+    "FOETUS": 2,
+    "ORGANES": 15
+  },
+  {
+    "ANNEE": 2016,
+    "DEPARTEMENT": "Cotes_Armor",
+    "MORTEL": 10,
+    "CANCER": 7,
+    "TOXIQUE": 20,
+    "GENETIQUE": 3,
+    "FOETUS": 0,
+    "ORGANES": 10
+  },
+  {
+    "ANNEE": 2012,
+    "DEPARTEMENT": "Morbihan",
+    "MORTEL": 6,
+    "CANCER": 4,
+    "TOXIQUE": 19,
+    "GENETIQUE": 4,
+    "FOETUS": 2,
+    "ORGANES": 9
+  },
+  {
+    "ANNEE": 2013,
+    "DEPARTEMENT": "Morbihan",
+    "MORTEL": 8,
+    "CANCER": 4,
+    "TOXIQUE": 22,
+    "GENETIQUE": 6,
+    "FOETUS": 2,
+    "ORGANES": 9
+  },
+  {
+    "ANNEE": 2014,
+    "DEPARTEMENT": "Morbihan",
+    "MORTEL": 10,
+    "CANCER": 4,
+    "TOXIQUE": 17,
+    "GENETIQUE": 0,
+    "FOETUS": 2,
+    "ORGANES": 16
+  },
+  {
+    "ANNEE": 2015,
+    "DEPARTEMENT": "Morbihan",
+    "MORTEL": 10,
+    "CANCER": 3,
+    "TOXIQUE": 17,
+    "GENETIQUE": 0,
+    "FOETUS": 3,
+    "ORGANES": 15
+  },
+  {
+    "ANNEE": 2016,
+    "DEPARTEMENT": "Morbihan",
+    "MORTEL": 11,
+    "CANCER": 8,
+    "TOXIQUE": 24,
+    "GENETIQUE": 4,
+    "FOETUS": 0,
+    "ORGANES": 10
+  },
+  {
+    "ANNEE": 2012,
+    "DEPARTEMENT": "Ile_et_Vilaine",
+    "MORTEL": 6,
+    "CANCER": 3,
+    "TOXIQUE": 19,
+    "GENETIQUE": 4,
+    "FOETUS": 2,
+    "ORGANES": 9
+  },
+  {
+    "ANNEE": 2013,
+    "DEPARTEMENT": "Ile_et_Vilaine",
+    "MORTEL": 8,
+    "CANCER": 3,
+    "TOXIQUE": 21,
+    "GENETIQUE": 6,
+    "FOETUS": 1,
+    "ORGANES": 6
+  },
+  {
+    "ANNEE": 2014,
+    "DEPARTEMENT": "Ile_et_Vilaine",
+    "MORTEL": 10,
+    "CANCER": 3,
+    "TOXIQUE": 17,
+    "GENETIQUE": 0,
+    "FOETUS": 3,
+    "ORGANES": 15
+  },
+  {
+    "ANNEE": 2015,
+    "DEPARTEMENT": "Ile_et_Vilaine",
+    "MORTEL": 10,
+    "CANCER": 3,
+    "TOXIQUE": 17,
+    "GENETIQUE": 0,
+    "FOETUS": 3,
+    "ORGANES": 15
+  },
+  {
+    "ANNEE": 2016,
+    "DEPARTEMENT": "Ile_et_Vilaine",
+    "MORTEL": 11,
+    "CANCER": 8,
+    "TOXIQUE": 24,
+    "GENETIQUE": 4,
+    "FOETUS": 0,
+    "ORGANES": 10
+  },
+  {
+    "ANNEE": 2012,
+    "DEPARTEMENT": "Loire_Atlantique",
+    "MORTEL": 9,
+    "CANCER": 7,
+    "TOXIQUE": 15,
+    "GENETIQUE": 2,
+    "FOETUS": 2,
+    "ORGANES": 10
+  },
+  {
+    "ANNEE": 2013,
+    "DEPARTEMENT": "Loire_Atlantique",
+    "MORTEL": 9,
+    "CANCER": 7,
+    "TOXIQUE": 16,
+    "GENETIQUE": 3,
+    "FOETUS": 1,
+    "ORGANES": 10
+  },
+  {
+    "ANNEE": 2014,
+    "DEPARTEMENT": "Loire_Atlantique",
+    "MORTEL": 10,
+    "CANCER": 10,
+    "TOXIQUE": 16,
+    "GENETIQUE": 3,
+    "FOETUS": 1,
+    "ORGANES": 13
+  },
+  {
+    "ANNEE": 2015,
+    "DEPARTEMENT": "Loire_Atlantique",
+    "MORTEL": 11,
+    "CANCER": 9,
+    "TOXIQUE": 16,
+    "GENETIQUE": 3,
+    "FOETUS": 1,
+    "ORGANES": 14
+  },
+  {
+    "ANNEE": 2016,
+    "DEPARTEMENT": "Loire_Atlantique",
+    "MORTEL": 5,
+    "CANCER": 5,
+    "TOXIQUE": 19,
+    "GENETIQUE": 4,
+    "FOETUS": 1,
+    "ORGANES": 9
+  },
+  {
+    "ANNEE": 2012,
+    "DEPARTEMENT": "Mayenne",
+    "MORTEL": 12,
+    "CANCER": 5,
+    "TOXIQUE": 15,
+    "GENETIQUE": 3,
+    "FOETUS": 1,
+    "ORGANES": 11
+  },
+  {
+    "ANNEE": 2013,
+    "DEPARTEMENT": "Mayenne",
+    "MORTEL": 8,
+    "CANCER": 3,
+    "TOXIQUE": 20,
+    "GENETIQUE": 5,
+    "FOETUS": 1,
+    "ORGANES": 7
+  },
+  {
+    "ANNEE": 2014,
+    "DEPARTEMENT": "Mayenne",
+    "MORTEL": 12,
+    "CANCER": 5,
+    "TOXIQUE": 10,
+    "GENETIQUE": 0,
+    "FOETUS": 2,
+    "ORGANES": 17
+  },
+  {
+    "ANNEE": 2015,
+    "DEPARTEMENT": "Mayenne",
+    "MORTEL": 14,
+    "CANCER": 6,
+    "TOXIQUE": 11,
+    "GENETIQUE": 0,
+    "FOETUS": 2,
+    "ORGANES": 16
+  },
+  {
+    "ANNEE": 2016,
+    "DEPARTEMENT": "Mayenne",
+    "MORTEL": 13,
+    "CANCER": 8,
+    "TOXIQUE": 20,
+    "GENETIQUE": 3,
+    "FOETUS": 0,
+    "ORGANES": 10
+  },
+  {
+    "ANNEE": 2012,
+    "DEPARTEMENT": "Maine_et_Loire",
+    "MORTEL": 7,
+    "CANCER": 2,
+    "TOXIQUE": 19,
+    "GENETIQUE": 5,
+    "FOETUS": 1,
+    "ORGANES": 6
+  },
+  {
+    "ANNEE": 2013,
+    "DEPARTEMENT": "Maine_et_Loire",
+    "MORTEL": 8,
+    "CANCER": 4,
+    "TOXIQUE": 21,
+    "GENETIQUE": 6,
+    "FOETUS": 1,
+    "ORGANES": 7
+  },
+  {
+    "ANNEE": 2014,
+    "DEPARTEMENT": "Maine_et_Loire",
+    "MORTEL": 6,
+    "CANCER": 3,
+    "TOXIQUE": 9,
+    "GENETIQUE": 0,
+    "FOETUS": 2,
+    "ORGANES": 9
+  },
+  {
+    "ANNEE": 2015,
+    "DEPARTEMENT": "Maine_et_Loire",
+    "MORTEL": 8,
+    "CANCER": 4,
+    "TOXIQUE": 11,
+    "GENETIQUE": 0,
+    "FOETUS": 1,
+    "ORGANES": 8
+  },
+  {
+    "ANNEE": 2016,
+    "DEPARTEMENT": "Maine_et_Loire",
+    "MORTEL": 10,
+    "CANCER": 7,
+    "TOXIQUE": 20,
+    "GENETIQUE": 3,
+    "FOETUS": 0,
+    "ORGANES": 8
+  },
+  {
+    "ANNEE": 2012,
+    "DEPARTEMENT": "Campbon",
+    "MORTEL": 6,
+    "CANCER": 2,
+    "TOXIQUE": 18,
+    "GENETIQUE": 3,
+    "FOETUS": 1,
+    "ORGANES": 6
+  },
+  {
+    "ANNEE": 2013,
+    "DEPARTEMENT": "Campbon",
+    "MORTEL": 8,
+    "CANCER": 3,
+    "TOXIQUE": 17,
+    "GENETIQUE": 5,
+    "FOETUS": 1,
+    "ORGANES": 7
+  },
+  {
+    "ANNEE": 2014,
+    "DEPARTEMENT": "Campbon",
+    "MORTEL": 11,
+    "CANCER": 6,
+    "TOXIQUE": 18,
+    "GENETIQUE": 6,
+    "FOETUS": 2,
+    "ORGANES": 16
+  },
+  {
+    "ANNEE": 2015,
+    "DEPARTEMENT": "Campbon",
+    "MORTEL": 11,
+    "CANCER": 7,
+    "TOXIQUE": 17,
+    "GENETIQUE": 5,
+    "FOETUS": 2,
+    "ORGANES": 16
+  },
+  {
+    "ANNEE": 2016,
+    "DEPARTEMENT": "Campbon",
+    "MORTEL": 10,
+    "CANCER": 7,
+    "TOXIQUE": 20,
+    "GENETIQUE": 3,
+    "FOETUS": 0,
+    "ORGANES": 8
+  }
+]
