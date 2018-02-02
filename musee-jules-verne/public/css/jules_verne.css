@@ -1,19 +1,324 @@
+/*===== RESET CSS ====*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: Quicksand, Helvetica, sans-serif;
+}
+
+/*========== POSITIONNEMENT ===========*/
+
+#section1, #section2, #section3, #section4, #section5, #section6, #section7 {
+/*permet aux formes animées de l'arrière-plan de se positionner correctement*/
+  position: relative;
+  z-index: -1000;
+}
+
+/*=========== ARRIERE PLAN ============*/
+
 #section1 {
+  background-color: pink;
 }
 
 #section2 {
+  background-color: gold;
 }
 
 #section3 {
+  background: url("./img/background_slide3.png") center center/cover no-repeat #323fde;
 }
 
-#section4 {}
+#section4 {
+  background: url("./img/background_slide4.png") center center/cover no-repeat #ffa200;
+}
 
 #section5 {
+  background: url("./img/background_slide5.png") center center/cover no-repeat #323fde;
 }
 
 #section6 {
+  background: url("./img/background_slide6.png") center center/cover no-repeat #ffa200;
 }
 
 #section7 {
+  background: url("./img/background_slide7.png") center center/cover no-repeat #323fde;
+}
+
+/*** Formes annimées de l'arrière-plan ***/
+
+/*** A - Forme de gauche ***/
+
+span.background_left {
+  display: none;
+  animation: fade_left ease 1s;
+  z-index: -100;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-top: 100vh solid #697cf0;
+  border-left: 0 solid transparent;
+  border-right: 25vw solid transparent;
+  width: 10vw;
+}
+
+  /* Apparait lorsque la section obtient la classe "visited" */
+  div.visited span.background_left {
+    display: block;
+  }
+    /*Version jaune des slides 4 & 6*/
+    #section4 span.background_left, #section6 span.background_left{
+      border-top: 100vh solid #ffcc11;
+    }
+
+      /* définition de l'Animation FADE_LEFT*/
+      @keyframes fade_left {
+            0% {
+              opacity: 0;
+              transform:translate(-25vw) ;
+            }
+
+            100%  {
+              opacity: 1;
+              transform:translate(0)
+            }
+          }
+
+/*** B- Forme du bas ***/
+
+span.background_bottom {
+  display: none;
+  animation: fade_bottom ease 1s;
+  z-index: -100;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 33vh solid #2c9dff;
+  border-left: 75vw solid transparent;
+}
+  /* Apparait lorsque la section obtient la classe "visited" */
+  div.visited span.background_bottom {
+    display: block;
+  }
+  /*Version jaune des slides 4 & 6*/
+  #section4 span.background_bottom, #section6 span.background_bottom{
+      border-bottom: 33vh solid #ffa200;
+    }
+
+    /* définition de l'Animation FADE_BOTTOM*/
+    @keyframes fade_bottom {
+            0% {
+              opacity: 0;
+                transform:translate(0,33vh)
+            }
+
+            100%  {
+              transform:translate(0,0vw);
+              opacity: 1;
+            }
+          }
+
+
+
+/*========== Titre div.titre ======*/
+
+div.titre
+{
+  color: white;
+  height: 20vh;
+  width: 100%;
+  display: none;
+  animation: fade ease 2s;
+  animation-delay: 800ms;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  margin-bottom: 0vh;
+}
+  div.visited .titre {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+  }
+
+    /*Animation delay plus court pour les sections 1 et 2*/
+    #section1 .titre, #section2 .titre {
+      animation-delay: 0s;
+    }
+
+    .titre h1 {
+      font-size: 4vw;
+    }
+
+  /* chiffre animé */
+  #chiffre1 {
+    width: 22vmin;
+    height: 22vmin;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 2vh;
+  }
+
+  #chiffre2 {
+    width: 22vmin;
+    height: 22vmin;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 2vh;
+
+  }
+ /* .chiffre2 {
+    background-color: gold;
+    width: 10%;
+    height: 10vmin;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 2vh;
+  } */
+  #chiffre3 {
+    width: 22vmin;
+    height: 22vmin;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 2vh;
+  }
+
+  #chiffre4 {
+    width: 22vmin;
+    height: 22vmin;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 2vh;
+  }
+
+  #chiffre5 {
+    width: 22vmin;
+    height: 22vmin;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 2vh;
+  }
+/* définition du chiffre pour chaque slide*/
+#section3 .chiffre { background: url("./svg/1.svg") bottom right/contain no-repeat;}
+#section4 .chiffre { background: url("./svg/2.svg") bottom right/contain no-repeat;}
+#section5 .chiffre { background: url("./svg/3.svg") bottom right/contain no-repeat;}
+#section6 .chiffre { background: url("./svg/4.svg") bottom right/contain no-repeat;}
+#section7 .chiffre { background: url("./svg/5.svg") bottom right/contain no-repeat;}
+
+
+/*========== texte d'intro de la section 2 ======*/
+
+.intro {
+  display: none;
+  animation: fade ease 2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* Apparait lorsque la section obtient la classe "visited" */
+div.visited .intro {
+  display: flex;
+}
+
+
+/*======== Bandeau blanc contenant les graphiques => <ARTICLE> ======*/
+
+  section {
+    width: 100vw;
+    height: 70vh;
+    background-color: white;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: fade ease 2s;
+    animation-delay: 1300ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, .5);
+  }
+
+  #mapid {
+    position: relative;
+    height: 60vh;
+    width: 40vw;
+  }
+
+  .canvas_container {
+  	position: relative;
+  	height: 60vh;
+  	width: 40vw;
+    border: 2px black solid;
+  }
+
+    @keyframes fade {
+            0% {
+              opacity: 0;
+            }
+
+            100%  {
+              opacity: 1;
+            }
+          }
+
+        /* Apparait lorsque la section obtient la classe "visited" */
+        div.visited section {
+          display: flex;
+          flex-flow: row n;
+        }
+
+.graph{
+	min-width: 50vw;
+          min-height : 40vh;
+	position: relative;
+}
+
+
+
+/*======== Bouton "voir la suite" div.next ======*/
+
+.next {
+  color: white;
+  width:100%;
+  height:6vh;
+  display: none;
+  animation: fade ease 2s;
+  animation-delay: 1800ms;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+    /* Apparait lorsque la section obtient la classe "visited" */
+    div.visited .next{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /*Animation delay plus court pour les sections 1 et 2*/
+#section1 .next, #section2 .next {
+    animation-delay: 400ms;
+}
+
+#pointer {
+  z-index: 2000;
+  position: relative;
+  top: 100px; 
+  left: 150px;
+  width: 5px;
+  height: 5px;
+  background-color: red;
 }
