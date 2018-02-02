@@ -23,7 +23,7 @@ a {
 }
 
 /* line 7, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/modules/_extends.scss */
-.textes-intro > .title, .bloc-data > .donneeTexte {
+.textes-intro > .title, .block-data > .donneeTexte {
   font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-weight: bold;
@@ -37,7 +37,7 @@ a {
 }
 
 /* line 25, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/modules/_extends.scss */
-.textes-intro > .texte, .button-zoom > .niveau-zoom {
+.textes-intro > .texte, .block-data > .description, .button-zoom > .niveau-zoom {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: medium;
@@ -196,49 +196,72 @@ a {
 }
 
 /* style des blocs de data du dashboard */
-/* line 4, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.bloc-data > .donneeTexte {
+/* line 3, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+.block-data {
+  padding: 45px 20px 20px 30px;
   color: #ffffff;
-  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 8, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+.block-data > .donneeTexte {
+  text-align: left;
+  line-height: 1.1;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* line 15, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+.block-data > .description {
+  text-align: left;
   width: 100%;
 }
 
-/* line 12, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+/* line 20, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+.block-data > .picto {
+  position: absolute;
+  width: 50%;
+  margin-left: 15%;
+  bottom: 20px;
+}
+
+/* line 28, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-epci {
   background-color: #34EBC2;
 }
 
-/* line 16, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+/* line 32, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-conjoncture {
   background-color: #FBEE3D;
 }
 
-/* line 20, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+/* line 36, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-investissement {
   background-color: #34EBC2;
 }
 
-/* line 24, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+/* line 40, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-emploi {
   background-color: #FBEE3D;
 }
 
-/* line 28, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+/* line 44, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-distance {
   background-color: #34EBC2;
 }
 
-/* line 32, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+/* line 48, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-contrat {
   background-color: #FBEE3D;
 }
 
-/* line 36, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+/* line 52, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-mp {
   background-color: #34EBC2;
 }
 
-/* line 40, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+/* line 56, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .info-dd {
   background-color: #FBEE3D;
 }

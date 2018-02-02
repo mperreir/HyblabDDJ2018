@@ -1,11 +1,27 @@
 /* style des blocs de data du dashboard */
 
-.bloc-data{
+.block-data{
+  padding: 45px 20px 20px 30px;
+  color: $white;
+  overflow: hidden;
+  position: relative;
   >.donneeTexte{
     @extend %titre-titre;
-    color: $white;
-    text-align: center;
+    text-align: left;
+    line-height: 1.1;
     width: 100%;
+    margin-bottom: 20px;
+  }
+  >.description{
+    @extend %texte-labeur;
+    text-align: left;
+    width: 100%;
+  }
+  >.picto{
+    position: absolute;
+    width: 50%;
+    margin-left: 15%;
+    bottom: 20px;
   }
 }
 
