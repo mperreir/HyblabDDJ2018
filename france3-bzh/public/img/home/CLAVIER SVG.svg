@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="841.89px" height="1190.55px" viewBox="0 0 841.89 1190.55" enable-background="new 0 0 841.89 1190.55"
+	 xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="-539" y="55.55" width="1920" height="1080"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<path clip-path="url(#SVGID_2_)" fill="none" stroke="#FFFFFF" stroke-width="1.73" stroke-miterlimit="10" d="M478.932,621.803
+		h23.417c0.994,0,1.8,0.806,1.8,1.8v22.721c0,0.994-0.806,1.8-1.8,1.8h-23.417c-0.994,0-1.8-0.806-1.8-1.8v-22.721
+		C477.132,622.609,477.938,621.803,478.932,621.803z"/>
+	<path clip-path="url(#SVGID_2_)" fill="none" stroke="#FFFFFF" stroke-width="1.73" stroke-miterlimit="10" d="M511.653,621.803
+		h23.417c0.994,0,1.8,0.806,1.8,1.8v22.721c0,0.994-0.806,1.8-1.8,1.8h-23.417c-0.994,0-1.8-0.806-1.8-1.8v-22.721
+		C509.853,622.609,510.659,621.803,511.653,621.803z"/>
+	<path clip-path="url(#SVGID_2_)" fill="none" stroke="#FFFFFF" stroke-width="1.73" stroke-miterlimit="10" d="M446.21,621.803
+		h23.417c0.994,0,1.8,0.806,1.8,1.8v22.721c0,0.994-0.806,1.8-1.8,1.8H446.21c-0.994,0-1.8-0.806-1.8-1.8v-22.721
+		C444.41,622.609,445.216,621.803,446.21,621.803z"/>
+	<path clip-path="url(#SVGID_2_)" fill="none" stroke="#FFFFFF" stroke-width="1.73" stroke-miterlimit="10" d="M478.932,589.924
+		h23.417c0.994,0,1.8,0.806,1.8,1.8v22.721c0,0.994-0.806,1.8-1.8,1.8h-23.417c-0.994,0-1.8-0.806-1.8-1.8v-22.721
+		C477.132,590.73,477.938,589.924,478.932,589.924z"/>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 470.0078 669.55)" fill="#FFFFFF" font-family="'WorkSans-Light'" font-size="12">T</text>
+	</g>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 476.1758 669.55)" fill="#FFFFFF" font-family="'WorkSans-Light'" font-size="12">OUCH</text>
+	</g>
+</g>
+</svg>
