@@ -7,12 +7,13 @@
     <!-- Basic viewport setting for mobile friendly page -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
+<!--    <link rel="stylesheet" href="css/style.css">-->
     <!-- Those polyfills are required so that old browsers support fetch mecanism -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
     <!-- Simple sample script that loads data from a dummy json file -->
     <script src="js/example.js" defer></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
 <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
@@ -33,9 +34,9 @@
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js"></script>
 
-    <div id="figure" style="margin-bottom: 50px;"></div>
+    <p id="figure" style="margin-bottom: 50px;"></p>
 
-    <div>
+    <p id="selectionIntevalle" >
         <p id ="intervalleAge"> </p>
         <input title="borneInferieureAge" id="minAge" type="range" value="15" max="50" min="16" step="1" onchange="actualize(event, 'Age')">
         <input title="borneInferieureAge" id="maxAge" type="range" value="22" max="50" min="16" step="1" onchange="actualize(event, 'Age')">
@@ -47,10 +48,9 @@
         <p id ="intervalleNiveau"> </p>
         <input title="borneInferieureNiveau" id="minNiveau" type="range" value="1" max="5" min="1" step="1" onchange="actualize(event, 'Niveau')">
         <input title="borneInferieureNiveau" id="maxNiveau" type="range" value="6" max="6" min="1" step="1" onchange="actualize(event, 'Niveau')">
-    </div>
+    </p>
 
     <script>
-        //TODO : pourquoi le quotient ne change pas ?
 
         function displayValue(event, variable){
             var varMin = document.getElementById("min" + variable).value;
@@ -336,8 +336,6 @@
             }
         }
     </script>
-
-    <div id = "cc"> </div>
 
     <!-- Notre pied de page -->
     <footer>

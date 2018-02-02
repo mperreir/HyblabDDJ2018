@@ -32,3 +32,10 @@ input[type="range"]:after {
     right: 0em;
     content: attr(max);
 }
+
+div {
+    background-color: #900000;
+    border-width: medium;
+    border-color: aqua;
+
+}
