@@ -3,6 +3,7 @@
 /* ######################################################################### */
 /* --------------- Général --------------- */
 /* ######################################################################### */
+
 body{
     font-family: 'Montserrat', sans-serif;
     z-index: 1;
@@ -289,17 +290,34 @@ body{
     margin-right: 20%;
     margin-left: 20%;
     margin-top: 0px;
-    padding: 20px 20px 5px 20px;
+    padding: 20px;
     background: white;
     z-index: 2;
     display: none;
 }
 
+
 /* Bouton exit */
-#exitP1{
+#enSavoirPlusHautP1{
+    font-weight: 700;
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+#boutonExitP1{
+    height: 33px;
+    width: 33px;
+}
+
+#enSavoirPlusBasP1{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#enSavoirPlusBas p{
+    width: 45%;
 }
 
 
