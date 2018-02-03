@@ -1,185 +1,275 @@
 <!DOCTYPE html>
 <html lang="fr"> <!-- Notre page est en français -->
-  <head>
+<head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
     <title>Hyblab Métropole</title>
-		<!-- Basic viewport setting for mobile friendly page -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Basic viewport setting for mobile friendly page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hyblab Métropole</title>
     <meta name="description" content="Hyblab 2018 Métropole" />
     <meta name="keywords" content="hyblab" />
     <meta name="author" content="polytech" />
     <!-- Déclaration de la feuille de style du document-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/intro.css">
 		<!-- Those polyfills are required so that old browsers support fetch mecanism 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
 		Simple sample script that loads data from a dummy json file -->
-	
-    <script src="js/jquery3.2.1.js"></script>
-    <!-- Two js for charts -->
-    <script src="js/modernizr.custom.js"></script>
-    <script src="js/chart.js"></script>
-    <script src="js/velocity.js"></script>
+
+        <script src="js/jquery3.2.1.js"></script>
+        <!-- Two js for charts -->
+        <script src="js/modernizr.custom.js"></script>
+        <script src="js/chart.js"></script>
+        <script src="js/velocity.js"></script>
+        <script src="js/jqfloat.min.js"></script>
+        <script src="js/main.js"></script>
 
 
-  </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+    </head>
+    <body>
+        <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
+        <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
+        <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+        <div id="container">
 
-    <!-- l'entête de la page: titre, barre de recherche -->
+            <!-- l'entête de la page: titre, barre de recherche -->
 
-    <!-- Le contenu du site -->
-      <div id="fullpage">
+            <!-- Le contenu du site -->
+            <div id="loading-screen"><img id="loading" src="img/chargement.gif" alt="je déménage"></div>
+            <div id="fullpage">
+                <div class="section" id="section-pourquoi">
+                    <h2 class="pourquoi">Pourquoi s'installer dans<br> la métropole <b>Nantes St Nazaire?</b></h2>
+                    <img id="nantes-img" src="img/intro/photo-nantes.png" alt="gr">
+                    <img id="nana-nantes" src="img/intro/NANAVALISE.png" alt="nana">
+                    <img id="bulle" src="img/intro/bulle.png" alt="text">
+                    <img class="flecheBas" src="img/main/FLECHEBAS.png" alt="nextPage">
+                </div>
 
-        <div class="section" id="section0">
-          <img id="logo-hyblab" src="img/logo_hyblab.png" alt="logo hyblab"/>
-          <h2 class="page-title">L'histoire de Marie Dupont</h2>
-          <img id="marie-marche" src="img/marie-marche.gif" alt="je déménage">
+                <div class="section" id="section-carte">
+                    <div class="section-container">
+                        <p class="plus">Plusieurs opportunités se présentaient à moi<br> pour m'installer dans l'une des métropoles du paysage français.</p>
+                        <p class="chacune">Chacune disposant de ses avantages propres.<br>Il me fallait donc <span class="blue-text">trouver la meilleure combinaison</span><br> pour allier <span class="blue-text">environnement de travail stimulant</span> et <span class="blue-text">cadre de vie idéal.</span></p>
+                        <img id="bulle2" src="img/intro/bulle2.png" alt="text"><br>
+                        <img id="paris-img" src="img/intro/photo-paris.png" alt="photo">
+                        <img id="nanavalise" src="img/intro/emmanuelle.png" alt="nana">
 
+                        <div id="carte-container">
+                            <img id="carte-france" src="img/intro/FRANCE.png" alt="text">
+                            <span id="pt-lille" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville lille">Lille</span>
+                            </span>
+                            <span id="pt-rennes" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville rennes">Rennes</span>
+                            </span>
+                            <span id="pt-nantes" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville nantes">Nantes</span>
+                            </span>
+                            <span id="pt-bordeaux" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville bordeaux">Bordeaux</span>
+                            </span>
+                            <span id="pt-lyon" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville lyon">Lyon</span>
+                            </span>
+                            <span id="pt-nice" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville nice">Nice</span>
+                            </span>
+                            <span id="pt-aix" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville aix">Aix-Marseille</span>
+                            </span>
+                            <span id="pt-grenoble" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville grenoble">Grenoble</span>
+                            </span>
+                            <span id="pt-strasbourg" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville strasbourg">Strasbourg</span>
+                            </span>
+                            <span id="pt-toulouse" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville toulouse">Toulouse</span>
+                            </span>
+                            <img id="ombre-carte" src="img/intro/ombre-carte.png" alt="photo">
+                        </div>
+                        <p id="survolez-ville">Survolez les villes !</p>
+                        <p id="des-nantes" class="ville-des"><label class="city">NANTES</label>Chai pas quoi écrire ici</p>
+                        <p id="des-bordeaux" class="ville-des"><label class="city">BORDEAUX</label>Avec la nouvelle ligne de train grande vitesse et des infrastructures modernes grandissante, la capitale de la Nouvelle Aquitaine est en nette croissance.</p>
+                        <p id="des-nice" class="ville-des"><label class="city">NICE</label>Avec 300 jours de soleil par an, les activités sportives extérieures sont au coeur de la métropole Niçoise.</p>
+                        <p id="des-toulouse" class="ville-des"><label class="city">TOULOUSE</label>Entre mer et montagnes : Toulouse, capitale culturelle du Sud-ouest, dispose d’un emplacement géographique attrayant.</p>
+                        <p id="des-lille" class="ville-des"><label class="city">LILLE</label> Un territoire très dynamique placé au coeur de l’Europe.</p>
+                        <p id="des-aix" class="ville-des"><label class="city">AIX-MARSEILLE</label>Plus vaste métropole de France, l’un des grands points forts de Aix-Marseille réside dans son réseau de transports en commun, permettant de se déplacer en toute facilité.</p>
+                        <p id="des-grenoble" class="ville-des"><label class="city">GRENOBLE</label>Dotée d’un très fort tissu associatif ainsi que d’écoles de renommée, Grenoble fait partie des métropoles en expansion.</p>
+                        <p id="des-rennes" class="ville-des"><label class="city">RENNES</label>Rennes sait se démarquer avec un chômage inférieur à la moyenne nationale.</p>
+                        <p id="des-lyon" class="ville-des"><label class="city">LYON</label>Placé au coeur de la mégalopole européenne, la ville des lumières fait rêver les actifs pour son cadre de vie agréable et dynamique.</p>
+                        <p id="des-strasbourg" class="ville-des"><label class="city">STRASBOURG</label>Une ville d’échange aux loyers attractifs.</p>
+                        <p id="des-" class="ville-des"><label class="city"></label></p>
+                        <img class="flecheBas" src="img/main/FLECHEBAS.png" alt="nextPage">
+                    </div>
+                </div>
+
+                <div class="section" id="numerique">
+
+                    <div class="row conteneur">
+
+                            <div class=" mainScreen">
+                              <div id="bl-main" class="bl-main">
+                                <section id="0" class=" categorie-des cat0">
+                                  <img src="img/common/indicateur6.png" class="indicateur6">
+                                  <img src="img/common/tete.png" class="femme">
+                                <img src="img/cadreDeVie/cadredevie.png" class="mainIllustration">
+                                 <img src="img/common/commentaire.png" class="commentaire">
+                                  <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux commons en communs.</p>
+                                </section>
+
+                                <section class=" categorie-des cat1">
+
+                                  <img src="img/common/indicateur6.png" class="indicateur6">
+                                  <img src="img/common/tete.png" class="femme">
+                                <img src="img/enseignement/enseignement.png" class="mainIllustration">
+                                 <img src="img/common/commentaire.png" class="commentaire">
+                                  <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux commons en communs.</p>
+                                </section>
+
+                                <section class=" categorie-des cat2"> 
+                                <canvas id="histogrammeEmploi1"></canvas>
+                                <img src="img/common/indicateur6.png" class="indicateur6">
+                                  <img src="img/common/tete.png" class="femme">
+                                <img src="img/emploi/emploi.png" class="mainIllustration">
+                                 <img src="img/common/commentaire.png" class="commentaire">
+                                  <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
+                                </section>
+
+                                <section class=" categorie-des cat3">
+                                <canvas id="histogrammeEmploi2"></canvas>
+                                  <img src="img/common/indicateur6.png" class="indicateur6">
+                                  <img src="img/common/tete.png" class="femme">
+                                <img src="img/culture/culture.png" class="mainIllustration">
+                                 <img src="img/common/commentaire.png" class="commentaire">
+                                  <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
+                                </section>
+
+                                <section class=" categorie-des cat4">
+                                  <img src="img/common/indicateur6.png" class="indicateur6">
+                                  <img src="img/common/tete.png" class="femme">
+                                <img src="img/industrie/industrie.png" class="mainIllustration">
+                                 <img src="img/common/commentaire.png" class="commentaire">
+                                  <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
+                                </section>
+
+                                <section class=" categorie-des cat5">
+                                  <img src="img/common/indicateur6.png" class="indicateur6">
+                                  <img src="img/common/tete.png" class="femme">
+                                <img src="img/numerique/numerique.png" class="mainIllustration">
+                                 <img src="img/common/commentaire.png" class="commentaire">
+                                  <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
+                                </section>
+
+                                <section class=" categorie-des cat6">
+                                  <img src="img/common/indicateur6.png" class="indicateur6 img-responsive">
+                                  <img src="img/common/tete.png" class="femme img-responsive">
+                                <img src="img/transports/transport.png" class="mainIllustration img-responsive">
+                                 <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                  <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
+                                </section>
+                </div>
+
+                            </div>
+
+                            <div class=" menu">
+                              <img class="nsndev" src="img/menu/nsn.png">
+                              <p class="minititle">Pourquoi s’installer dans la métropole Nantes St Nazaire ?</p>
+                              <div class="categorie-names col-md-4">
+                            <div class="categorie cat0" id="0">
+                              <h2>Cadre de vie</h2>
+                            </div>
+                            <div class="categorie cat1" id="1">
+                              <h2>Enseignement</h2>
+                            </div>
+                            <div class="categorie cat2" id="2">
+                              <h2>Emploi</h2>
+                            </div>
+                            <div class="categorie cat3" id="3">
+                              <h2>Culture</h2>
+                            </div>
+                            <div class="categorie cat4" id="4">
+                              <h2>Industrie de pointe</h2>
+                            </div>
+                            <div class="categorie cat5" id="5">
+                              <h2>Développement numérique</h2>
+                            </div>
+                            <div class="categorie cat6" id="6">
+                              <h2>Transports</h2>
+                            </div>
+                          </div>
+
+                          <div class="row social">
+                            <img src="img/menu/fb.png"> <img src="img/menu/twitter.png">  <img src="img/menu/in.png"> <img src="img/menu/share.png"> 
+                          </div>
+                            </div>
+                          </div>
+                    <img class="flecheBas" src="img/main/FLECHEBAS.png" alt="nextPage">
+                </div>
+
+                <div class="section" id="section-synthèse">
+                    <h2 class="synthese-title">Nantes St Nazaire, la métropole idéale pour les entrepreneurs ... </h2>
+                    <p> Blabla laba l;djdin fjenkd,i duenidovepl db udijdjiokdo eijdidjodj duzdjijidjid dujndisjdisd dnjsidjidni djisjdisdjis </p>
+                    <img id="synth-b-block" src="img/" alt="je déménage">
+                    <img class="flecheBas" src="img/main/FLECHEBAS.png" alt="nextPage">
+                </div>
+
+                <div class="section" id="lastPage">
+                    <div class=" row students">
+                        <div  class="col-md-4 text-center group"> 
+                            <img src="img/maquette/CREDITS/Group.png">
+                            <h1>AGR</h1>
+                            <p> Laura BOIDRON</p>
+                            <p> Nicolas GERARD</p>
+                            <p> Olwen GENDROT</p>
+                        </div>
+
+                        <div class="col-md-4 text-center group">
+                            <img src="img/maquette/CREDITS/Group2.png">
+                            <h1>SCIENCES COM'</h1>
+                            <p> Louis FAYOLLE</p>
+                            <p> Solenn PAGE</p>
+                            <p> Romain MORICE</p>
+                            <p> Clara DURAND</p>
+                        </div>
+
+                        <div class="col-md-4 text-center group"> 
+                            <img class="polytechguys" src="img/maquette/CREDITS/Group3.png">
+                            <h1 >POLYTECH</h1>
+                            <p> Yacouba DIABY</p>
+                            <p> Amadou KANE</p>
+                            <p> Matthieu FAVREL</p>
+                        </div>
+                        <p class="text-center datasource">Les données de notre équipe nous ont été fournies par l’AURAN.
+                            Ces données ont été récoltées sur la période de 0000 à 0000.</p>
+                        <footer>
+                            <img src="img/maquette/CREDITS/Group4.png">
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notre pied de page -->
+            <footer>
+                <p>Copyright Hyblab team 2018</p>
+            </footer>
         </div>
-        <div class="section" id="section1">
-          <h2 class="page-title">Quel territoire pour mes activités?</h2>
-      
-        </div>
-
-        <div class="section moveDown" id="section2">
-          <h2 class="page-title">Pourquoi s'installer dans la métropole<br>Nantes St Nazaire?</h2>
-          <div class="row categorie-block">
-          <div class="marie-montre col-md-2 offset-md-1 text-center">
-            <img class="marie-montre" src="img/remp.png" alt="je déménage">
-          </div>
-          <div class="categorie-names col-md-4">
-            <div class="categorie cat0" id="0">
-              <h2>Cadre de vie</h2>
-            </div>
-            <div class="categorie cat1" id="1">
-              <h2>Enseignement</h2>
-            </div>
-            <div class="categorie cat2" id="2">
-              <h2>Emploi</h2>
-            </div>
-            <div class="categorie cat3" id="3">
-              <h2>Culture</h2>
-            </div>
-            <div class="categorie cat4" id="4">
-              <h2>Industrie de pointe</h2>
-            </div>
-            <div class="categorie cat5" id="5">
-              <h2>Développement numérique</h2>
-            </div>
-            <div class="categorie cat6" id="6">
-              <h2>Transports</h2>
-            </div>
-          </div>
-          <div id="bl-main" class="bl-main">
-            <section id="0" class="bl-box categorie-des cat0">
-              <div>
-                <h2>Cadre de vie</h2>
-                <p class="categorie-text">blablablabla</p>
-              </div>
-              <div class="bl-content">
-                <p>Nantes c'est cool</p>
-                <canvas id="bar"></canvas>
-              </div>
-              <span class="bl-icon bl-icon-close"></span>
-            </section>
-            <section class="bl-box categorie-des cat1">
-              <div>
-                <h2>Enseignement</h2>
-                <p class="categorie-text">blablablabla blablablablabla blabla blabla blablablabla blabla</p>
-              </div>
-              <div class="bl-content">
-                <canvas id="chart"></canvas>
-              </div>
-              <span class="bl-icon bl-icon-close"></span>
-               
-            </section>
-            <section class="bl-box categorie-des cat2">
-              <div>
-                <h2>Emploi</h2>
-                <p class="categorie-text">blablablabla blablablablablablabla blablablablablablablabla</p>
-              </div>
-              <div class="bl-content">
-                <article>
-                  <h3>Cadre de vie</h3>
-                  <p>blablablablablablabla blablablablabla blablablablabla blabla blabla blablablablablablablabla blablablablabla blablablablabla blablablablabla blablablabla...</p>
-                </article>
-              </div>
-              <span class="bl-icon bl-icon-close"></span>
-            </section>
-            <section class="bl-box categorie-des cat3">
-              <div>
-                <h2>Culture</h2>
-                <p class="categorie-text">skrrrrrt skrrrrrt skrrrrrt skrrrrrt skrrrrrt</p>
-              </div>
-              <div class="bl-content">
-                <p>blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla...</p>
-              </div>
-              <span class="bl-icon bl-icon-close"></span>
-            </section>
-            <section class="bl-box categorie-des cat4">
-              <div>
-                <h2>Industrie de pointe</h2>
-                <p class="categorie-text">ouloulouu ouloulouu ouloulouu ouloulouuouloulouu ouloulouu ouloulouu ouloulouu ouloulouuouloulouu ouloulouu ouloulouu</p>
-              </div>
-              <div class="bl-content">
-                <p>blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla...</p>
-              </div>
-              <span class="bl-icon bl-icon-close"></span>
-            </section>
-            <section class="bl-box categorie-des cat5">
-              <div>
-                <h2>Développement numérique</h2>
-                <p class="categorie-text">blablablablabla blablablablablablabla blablablablablablabla blablablablabla blablablablablablabla blablablablablablabla blablablablablablabla blablabla...</p>
-              </div>
-              <div class="bl-content">
-                <p>blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla...</p>
-              </div>
-              <span class="bl-icon bl-icon-close"></span>
-            </section>
-            <section class="bl-box categorie-des cat6">
-              <div>
-                <h2>Transport</h2>
-                <p class="categorie-text">mms ldo nrm</p>
-              </div>
-              <div class="bl-content">
-                <p>blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla...</p>
-              </div>
-              <span class="bl-icon bl-icon-close"></span>
-            </section>
-          </div>
-          </div>
-
-        </div>
-        <div class="section moveDown" id="section3">
-          <h2 class="page-title">Synthèse</h2>
-        </div>
-      </div>
-    </div><!-- /container -->
-
+    </body>
     <script type="text/javascript" src="js/jquery.fullPage.js"></script>
     <script type="text/javascript" src="js/fullpage-starter.js"></script>
-    <script src="js/boxlayout.js"></script>
     <script src="js/myCharts.js"></script>
-    <script>
-      $(function() {
-        Boxlayout.init();
-      });
-    </script>
-
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2018</p>
-    </footer>
-    </div>
-
-  </body>
 </html>

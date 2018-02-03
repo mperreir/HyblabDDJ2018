@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#fullpage').fullpage({
         'verticalCentered': false,
-        'sectionsColor': ['#03A678', '#34495E', '#947CB0', '#674172'],
+        'sectionsColor': ['white', 'white', 'white', 'white', 'white', 'white', 'white', 'white'],
         'navigation': true,
         'navigationPosition': 'right',
         'navigationTooltips': ['Introduction', 'Les villes concurrentes', 'Nantes-St Nazaire', 'Synthèse'],
@@ -18,8 +18,6 @@ $(document).ready(function() {
         keyboardScrolling: true,
         recordHistory: true
     });
-    $.fn.fullpage.moveSectionDown();
-    $.fn.fullpage.moveSectionDown();
 
     //Les catégories sont désactivées sauf la catégorie d'indice 0 qui est activée par défaut
     setDescriptions(0); 
@@ -63,8 +61,8 @@ $(document).ready(function() {
         }, 100);
     });
 
+$.fn.fullpage.moveSectionDown();
 });
-
 
 function setDescriptions(id) {
     $("section.categorie-des").css("opacity","0");
@@ -72,12 +70,12 @@ function setDescriptions(id) {
 
     
     $("div.cat" + id).addClass("active-des");
+    $("div.cat" + id + ' h2').css("color","#FFCC01");
     $("section.cat" + id).addClass("active-des");
     $("section.cat" + id).css("z-index","2");
     
     $("section.cat" + id).velocity({
         opacity: 1,
-        left: "-=50"
     });
     
 }
@@ -87,7 +85,6 @@ function activateDescription(id) {
     console.log("ex active" + exId)
 
     $("section.cat" + exId).velocity({
-        left: "-=50"
       }, 100, function() {
         
     });
@@ -99,21 +96,17 @@ function activateDescription(id) {
 
     //Après avoir caché la div active
     $("section.cat" + exId).removeClass("active-des");
+    $(".menu .cat" + exId + ' h2').css("color","white");
+
     $("section.cat" + exId).css("z-index","1");
     $("div.cat" + exId).removeClass("active-des");
-    
+    console.log("cach div.cat" + exId)
     //Affichage de la nouvelle div active
     $("section.cat" + id).velocity({
-        opacity: 1,
-        left: "-=50"
+        opacity: 1
     });
     $("div.cat" + id).addClass("active-des");
     $("section.cat" + id).addClass("active-des");
-    $("section.cat" + id).css("z-index","2");
-
-    //
-    
-    $("section.cat" + exId).velocity({
-        left: "+=50"
-    });
+    $("section.cat" + id).css("z-index","6");
+    $(".menu .cat" + id + ' h2').css("color","#FFCC01");
 }

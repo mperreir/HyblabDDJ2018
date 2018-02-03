@@ -61,13 +61,52 @@ function createChartData(dataArray, ) {
             data: values["data"],
             backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"]
         };
-        console.log(dataSet)
+        console.log(dataSet);
         dataSets.push(dataSet);
     }
     return dataSets;
 }
 
-function printChart(cities, dataSets, chartId) {
+function triCroissant(cities, dataSets) {
+    
+    var datas = dataSets[0];
+    for (var i = 0; i < datas.data.length-1; i++) {
+        if (datas.data[i] == "null") {
+            cities.splice(i,1);
+        }
+    }
+    for (var ind01 = 0; ind01 < datas.data.length-1; ind01++) {
+        for (var ind02 = ind01; ind02 < datas.data.length; ind02++) {
+            if (datas.data[ind01] > datas.data[ind02]) {
+                temp = datas.data[ind01];
+                temp2 = cities[ind01];
+                datas.data[ind01] = datas.data[ind02];
+                cities[ind01] = cities[ind02];
+                datas.data[ind02] = temp;
+                cities[ind02] = temp2;
+            }
+        }
+    }
+}
+
+function triDecroissant(cities, dataSets) {
+    
+    var datas = dataSets[0];
+    for (var ind01 = 0; ind01 < datas.data.length-1; ind01++) {
+        for (var ind02 = ind01; ind02 < datas.data.length; ind02++) {
+            if (datas.data[ind01] < datas.data[ind02]) {
+                temp = datas.data[ind01];
+                temp2 = cities[ind01];
+                datas.data[ind01] = datas.data[ind02];
+                cities[ind01] = cities[ind02];
+                datas.data[ind02] = temp;
+                cities[ind02] = temp2;
+            }
+        }
+    }
+}
+
+function printBarChart(cities, dataSets, chartId) {
     var ctx = document.getElementById(chartId);
     var myChart = new Chart(ctx, {
         type: 'bar',
@@ -116,20 +155,29 @@ $(document).ready(function() {
 
     // Assign handlers immediately after making the request,
     // and remember the jqxhr object for this request
-    var jqxhr = $.post( "http://localhost:8081/nantes-st-nazaire-dev/actifs")
-      .done(function(data) {
-        console.log( "success" );
-        console.log(data)
+    var jqxhr = $.post( "http://localhost:8080/nantes-st-nazaire-dev/actifs")
+        .done(function(data) {
+            console.log( "success" );
+            console.log(data)
 
-        console.log("Mean :" + getMean(data[0]));
-        var cities = getChartLabels(data[0]);
-        var dataSets = createChartData(data, 0, 1);
-        console.log(cities)
-        console.log(dataSets)
-        printChart(cities, dataSets, "chart");
+            console.log("Mean :" + getMean(data[0]));
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 0);
+            console.log(cities)
+            console.log(dataSets)
+            triCroissant(cities,dataSets);
+            printBarChart(cities, dataSets, "histogrammeEmploi1");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 2);
+            console.log(cities)
+            console.log(dataSets)
+            triDecroissant(cities,dataSets);
+            printBarChart(cities, dataSets, "histogrammeEmploi2");
 
 
-            new Chart(document.getElementById("bar"), {
+/*
+            new Chart(document.getElementById("cdv1"), {
             type: 'bar',
             data: {
               labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
@@ -149,11 +197,10 @@ $(document).ready(function() {
               }
             }
         });
-      })
-      .fail(function() {
-        console.log( "error" );
-      });
-    
-
+            */
+            })
+        .fail(function() {
+            console.log( "error" );
+        });
 
 });

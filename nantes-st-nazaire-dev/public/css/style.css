@@ -5,7 +5,7 @@ footer p
   text-align: center;
 }
 
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,p {
+body,div,li,h1,h2,h3,h4,p {
     padding: 0;
     margin: 0;
 }
@@ -13,22 +13,20 @@ a{
 	text-decoration:none;
 }
 
-#logo-hyblab {
-	width: 30%;
-	cursor: url("../img/zoom-in-icon.png"), pointer;
-}
-.page-title {
-	font-size: 30px;
-	padding-top: 50px;
+#loading-screen {
+	position: absolute;
+	height: 100%;
+	width: 100%;
 	text-align: center;
+	background-color: white;
 }
 
-/* Acceuil */
-#section0 {
-	text-align: center;
+#fullpage {
+	visibility: hidden;
 }
 
-img#marie-marche {
+/* --------------- GENERAL --------------- */
+img#loading {
 	margin-top: 10%;
 	height: 200px;
 }
@@ -37,57 +35,63 @@ ul {
 	zoom: 130%;
 	color: blue;
 }
-.fp-tooltip {
-	font-size: 100px;
-}
 
-#chart {
-	width: 600px !important;
-	height: 400px !important;
-}
-
-#bar {
-	width: 600px !important;
-	height: 400px !important;
-}
-/* Pourquoi j'ai choisi Nantes */
-
-.categorie-block {
-	margin-top: 70px;
-	display: flex;
-}
-.categorie-text {
-	padding: 2px 18px;
-}
-img.marie-montre {
-	display: flex;
-}
-
-img.marie-montre {
-	width: 80%;
-	margin-left: 10%;
-}
-
-div.categorie-names {
-	text-align: center;
-}
-
-div.categorie {
-	height: 46px;
-	width: 230px;
-	margin-bottom: 10px;
-	padding-top: 10px;
-	background-color: #3A539B;
-	text-align: center;
+.flecheBas {
 	cursor: pointer;
-	margin-left: auto;
-	margin-right: auto;
-	font-size: 13px;
-	border-radius: 10px;
+	position: absolute;
+	left: 50%;
+	bottom: 5%;
+	z-index: 3;
 }
 
-div.categorie h2 {
-	font-size: 16px;
+/* --------------- SYNTHESE --------------- */
+
+.synthese-title {
+	color: #265C8E;
+	font-size: 20px;
+	margin-left: 4%;
+	margin-bottom: 20px;
 }
 
+/* --------------- LAST PAGE --------------- */
+#lastPage{
+	background-color:white;
+	color:#838383;
+}
+
+#lastPage .group {
+	font-size: 13px;	
+	font-weight: 500;	
+	letter-spacing: 1px;	
+	line-height: 18px;
+}
+
+#lastPage .group h1{
+	font-size: 16px;	
+	font-weight: bold;
+	padding-top:14px;
+	padding-bottom: 14px;
+	color:#17A6A3;
+}
+.polytechguys{
+	padding-bottom :22px;
+}
+#lastPage .group p{
+	padding-bottom: 5px;
+
+}
+.datasource{
+	padding-left: 20%;
+	padding-right: 20%;
+	width:70%;
+}
+.students{
+	padding-top:100px;
+	padding-left:220px;
+	padding-right:220px; 
+}
+footer {
+	position: absolute;
+	bottom:0;
+}
 
