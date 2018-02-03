@@ -1,6 +1,6 @@
 /* Règles CSS en plus de celles de bootstrap ou fullpage.js*/
 
-/* ----- Général ----- */
+/* --------------- Général --------------- */
 @font-face {
     font-family: 'GOTHAM-BLACK';
     src: url('GothamFontsFamily/GOTHAM-BLACK.ttf');
@@ -37,7 +37,7 @@ body{
 
 
 
-/* ----- Page 1 ----- */
+/* --------------- Page 1 --------------- */
 #page1DisplayOn{
     filter :blur(0px);
 }
@@ -47,7 +47,7 @@ body{
     position: absolute;
     border: solid 3px black;
     background-color: white;
-    top: 10%;
+    top: 7%;
     left: 5%;
     width: 40%;
     height: 31%;
@@ -74,10 +74,10 @@ body{
 #section2 {
     float: left;
     width: 40%;
-    height: 7%;
+    height: 15%;
     position: absolute;
-    top: 90%;
-    left: 15%;
+    top: 78%;
+    left: 8%;
 }
 
 .boutonRond {
@@ -95,10 +95,10 @@ body{
 #section3 {
     float: left;
     position: absolute;
-    top: 10%;
+    top: 7%;
     left: 50%;
     width: 46%;
-    height: 75%;
+    height: 78%;
     word-wrap : break-word;
     background-color: white;
     border: 3px solid black;
@@ -141,7 +141,7 @@ body{
     float: left;
     width: 40%;
     position: absolute;
-    top: 43%;
+    top: 39%;
     left: 5%;
 }
 
@@ -306,12 +306,12 @@ body{
 
 
 
-/* ----- Page 2 ----- */
+/* --------------- Page 2 --------------- */
 /* Section 4 */
 #section4 {
     float: left;
     position: absolute;
-    top: 10%;
+    top: 7%;
     left: 5%;
     width: 25%;
     height: 52%;
@@ -388,7 +388,7 @@ body{
 #mapCampbon {
     float: left;
     position: absolute;
-    top: 10%;
+    top: 7%;
     left: 40%;
     width: 45%;
 }
@@ -479,7 +479,33 @@ body{
     stroke-miterlimit: 10;
 }
 
-/* Timeline */
+
+
+/* --------------- Page 3 --------------- */
+/* Section 6 */
+#section6 {
+    float: left;
+    position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    top: 7%;
+    left: 5%;
+    width: 31%;
+    height: 60%;
+    text-align: justify;
+}
+
+/* Section 7 */
+#section7 {
+    float: left;
+    position: absolute;
+    top: 70%;
+    left: 3.6%;
+    width: 40%;
+    height: 15%;
+}
+
+/* Pour les timelines */
 .timeline:before {
   bottom: 0;
   position: absolute;
@@ -534,9 +560,8 @@ body{
   height: 70px;
   width: 20%;
   min-width: 80px;
-  float: none !important;
-  padding-left: 0px;
-  padding-right: 20px;
+  float: left;
+  left: 10.5%;
   margin: 0 auto;
   vertical-align: bottom;
 }
@@ -544,10 +569,17 @@ body{
 .timeline-horizontal .timeline-item .timeline-badge {
   top: auto;
   bottom: 0px;
-  left: 43px;
 }
 
 .pTimeline {
     text-align: center;
     padding-top: 100%;
 }
+
+
+
+/* --------------- Page 4 --------------- */
+
+
+
+/* --------------- Page 5 --------------- */
