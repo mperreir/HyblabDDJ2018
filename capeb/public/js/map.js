@@ -148,10 +148,10 @@ function miniStats(regionStats, d) {
             var names = stats.Developpement_durable.values[0]
             var count = stats.Developpement_durable.values[1]
 
-            var stat2 = names.map(function(val, id) {return {"name": names[id], "value": parseInt(count[id])};
+            var stat = names.map(function(val, id) {return {"name": names[id], "value": parseInt(count[id])};
         });
-            stat2 = stat.sort(function(a, b) {return b.value - a.value});
-            $(".info-dd h1").text(stat2[0].name)
+            stat = stat.sort(function(a, b) {return b.value - a.value});
+            $(".info-dd h1").text(stat[0].name)
         });
 
     fetch("/capeb/data/" + d.properties.siren_epci + "/sunburst")
@@ -171,7 +171,7 @@ function miniStats(regionStats, d) {
     fetch("/capeb/data/" + d.properties.siren_epci + "/recrutements")
         .then(function (value) {
             return value.json();
-        })
+        })ole.log
         .catch(function (error) {
             console.log("error");
             console.log(error);
@@ -180,7 +180,6 @@ function miniStats(regionStats, d) {
         .then(function (json) {
             var asNumbers = json.values[0].map(Number);
             var indexOfMax = asNumbers.indexOf(Math.max(...asNumbers));
-            console.log(json.labels[indexOfMax]);
             document.getElementsByClassName("info-emploi")[0].getElementsByClassName("donnee")[0].innerHTML = json.labels[indexOfMax];
         });
 
