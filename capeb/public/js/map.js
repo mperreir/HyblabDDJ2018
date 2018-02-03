@@ -147,9 +147,8 @@ function miniStats(regionStats, d) {
             //8 : DD / quel aspect le plus représenté / bubble -> camembert
             var names = stats.Developpement_durable.values[0]
             var count = stats.Developpement_durable.values[1]
-
             var stat2 = names.map(function(val, id) {return {"name": names[id], "value": parseInt(count[id])};});
-            stat2 = stat.sort(function(a, b) {return b.value - a.value});
+            stat2 = stat2.sort(function(a, b) {return b.value - a.value});
             $(".info-dd h1").text(stat2[0].name)
         });
 
@@ -179,8 +178,7 @@ function miniStats(regionStats, d) {
         .then(function (json) {
             var asNumbers = json.values[0].map(Number);
             var indexOfMax = asNumbers.indexOf(Math.max(...asNumbers));
-            console.log(json.labels[indexOfMax]);
-            document.getElementsByClassName("info-emploi")[0].getElementsByClassName("donnee")[0].innerHTML = json.labels[indexOfMax];
+            document.getElementsByClassName("info-emploi")[0].getElementsByClassName("donneetexte")[0].innerHTML = json.labels[indexOfMax];
         });
 
     //5 : distance / moyenne / bubble chart
