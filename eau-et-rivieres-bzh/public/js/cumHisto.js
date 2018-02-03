@@ -1,12 +1,14 @@
 "use strict";
 
 var annee = "2012";
+var anneeCambon = "2012";
 var dep1 = "Finistere";
 var dep2 = "Cotes_Armor";
 var lastChanged = dep1;
 
 buildHisto("#histGauche",annee,dep1);
 buildHisto("#histDroite",annee,dep2);
+buildHisto("#bonhomme",anneeCambon,"Campbon");
 
 $('#2012').on('click', function(event) {annee="2012";upDateHisto('#histGauche');upDateHisto('#histDroite');});
 $('#2013').on('click', function(event) {annee="2013";upDateHisto('#histGauche');upDateHisto('#histDroite');});
@@ -22,6 +24,13 @@ $('#FR-44').on('click', function(event) {changeOneHisto("Loire_Atlantique")});
 $('#FR-49').on('click', function(event) {changeOneHisto("Maine_et_Loire")});
 $('#FR-53').on('click', function(event) {changeOneHisto("Mayenne")});
 $('#FR-56').on('click', function(event) {changeOneHisto("Morbihan")});
+
+$('#C2012').on('click', function(event) {anneeCambon="2012";upDateHisto('#bonhomme')});
+$('#C2013').on('click', function(event) {anneeCambon="2013";upDateHisto('#bonhomme');});
+$('#C2014').on('click', function(event) {anneeCambon="2014";upDateHisto('#bonhomme');});
+$('#C2015').on('click', function(event) {anneeCambon="2015";upDateHisto('#bonhomme');});
+$('#C2016').on('click', function(event) {anneeCambon="2016";upDateHisto('#bonhomme');});
+
 
 function changeOneHisto(newDep){
 	if(newDep != dep1 & newDep != dep2){
@@ -41,9 +50,12 @@ function upDateHisto(histo){
    if(histo == "#histGauche"){
 		 		$("#histGauche").empty();
 				buildHisto(histo,annee,dep1);
-	 }else{
+	 }else if (histo == "#histDroite"){
 		 		$("#histDroite").empty();
 		 		buildHisto(histo,annee,dep2);
+	 }else if (histo == "#bonhomme"){
+		 		$("#bonhomme").empty();
+		 		buildHisto(histo,anneeCambon,"Campbon");
 	 }
 }
 
@@ -206,7 +218,7 @@ function buildHisto(parent, ann, dep){
 			return lastLab;
 		}
 
-		if(dep == dep2){
+		if(dep != dep1){
 
 			var lastLab = "ORGANES";
 		  var legend = g.append("g")
@@ -216,7 +228,7 @@ function buildHisto(parent, ann, dep){
 		    .selectAll("g")
 		    .data(keys.slice().reverse())
 		    .enter().append("g")
-		      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+		      .attr("transform", function(d, i) { return "translate(0," + (120-i * 20) + ")"; });
 		  legend.append("rect")
 		      .attr("x", width )
 		      .attr("width", 120)
