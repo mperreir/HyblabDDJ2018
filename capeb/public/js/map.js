@@ -86,7 +86,43 @@ function miniStats(regionStats, d) {
 
     //2 : Investissement /  / chart over time compared with region
 
-    //3 : contrats / words / sunBurst chart
+	//3 & 8 pour eviter re faire un fetch
+		fetch("/capeb/data/" + d.properties.siren_epci + "/stats")
+		.then(function (value) {
+            return value.json();
+        })
+        .catch(function (error) {
+            console.log("error");
+            console.log(error);
+            return {};
+        })
+        .then(function(stats){
+			//3 : contrats / words / sunBurst chart
+
+           var contrats = stats.Contrats.values.slice(1)
+           var stat = contrats.map((val, id) => {return {"name": stats.Contrats.labels[id + 1] , "value" : parseInt(val[val.length - 1])};})
+           stat = stat.sort((a, b) => {return b.value - a.value})
+           
+           document.getElementsByClassName("info-contrat")[0].innerHTML = ""
+           var h = 1
+
+           $(".info-contrat").append("<h" + h + " class='donnee'>" + stat[0].name + "</h" + h + ">")
+           for(var i = 1; i < 4; i++){
+			   if(stat[i].value < stat[i - 1].value){
+				 h++;
+			   }
+			   $(".info-contrat").append("<h" + h + " class='donnee'>" + stat[i].name + "</h" + h + ">")
+		   }
+
+			//8 : DD / quel aspect le plus représenté / bubble -> camembert
+			var names = stats.Developpement_durable.values[0]
+			var count = stats.Developpement_durable.values[1]
+			
+			var stat = names.map((val, id) => {return {"name": names[id] , "value" : parseInt(count[id])};})
+			stat = stat.sort((a, b) => {return b.value - a.value})
+			$(".info-dd h1").text(stat[0].name)
+        });
+	
     fetch("/capeb/data/" + d.properties.siren_epci + "/sunburst")
         .then(function (value) {
             return value.json();
@@ -100,33 +136,7 @@ function miniStats(regionStats, d) {
             //$("svg#sunburst").remove();
             //sunBurst(jsonContrats);
         });
-
-    //4 : embauche / oui/non plus représenté / double chart with rotation
-    fetch("/capeb/data/" + d.properties.siren_epci + "/stats")
-		.then(function (value) {
-            return value.json();
-        })
-        .catch(function (error) {
-            console.log("error");
-            console.log(error);
-            return {};
-        })
-        .then(function(stats){
-           var contrats = stats.Contrats.values.slice(1)
-           var stat = contrats.map((val, id) => {return {"name": stats.Contrats.labels[id + 1] , "value" : parseInt(val[val.length - 1])};})
-           stat = stat.sort((a, b) => {return b.value - a.value})
-           
-           $(".info-contrat h1").text(stat[0].name)
-           var h = 1
-		   console.log(stat)
-           for(var i = 1; i < 4; i++){
-			   if(stat[i].value < stat[i - 1].value){
-				 h++;
-			   }
-			   $(".info-contrat").append("<h" + h + " class='donnee'>" + stat[i].name + "</h" + h + ">")
-		   }
-
-        });
+	//4 : embauche / oui/non plus représenté / double chart with rotation 
 
     //5 : distance / moyenne / bubble chart
     fetch("/capeb/data/" + d.properties.siren_epci + "/distance")
@@ -145,14 +155,12 @@ function miniStats(regionStats, d) {
                 mean+= parseFloat(value[2]);
             });
             mean/=json.values.length;
-            console.log(mean);
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = Math.round(mean);
             dataFrame.style.backgroundColor = colorsForRegion[matchColorDistance(mean)];
         });
 
     //7 : MP / oui/non plus représenté / camembert -> nuage de mots
 
-    //8 : DD / quel aspect le plus représenté / bubble -> camembert
 
 }
 

@@ -10,17 +10,17 @@ var fs = require('fs');
 
 var data_capeb = path.join(__dirname,'./data/CAPEBPaysDelaLoire_2014-2017.csv')
 var stat_files = ['Activité2017.csv',
-				  'Développement_durable2016.csv',
 				  'Marchés_publics2017.csv',
 				  'Zone_intervention2017.csv',
+				  'DD_2017.csv',
 				  'Contrats_2014-2017.csv'
 				  ].map(f => path.join(__dirname,"./data/stats/".concat(f)))
 
 var stats_json = {}
 var critere = ['Activite',
-  			   'Developpement_durable',
   			   'Marches_publics',
   			   'Zone_intervention',
+  			   'Developpement_durable',
   			   'Contrats',
   			  ]
 
@@ -43,7 +43,7 @@ app.get('/:epci/stats', (req, res) => {
 				var cells = line.split(',')
 
 				if(cells[0] == req.params.epci){
-					if(idf >= 4){
+					if(idf >= 3){
 						cells.slice(1).map((val, j) => {
 							json['values'][j].push(val)
 						});
