@@ -151,12 +151,6 @@ app.get('/:epci/investissement', function(req, res){
     res.json(json);
 });
 
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 95e48534314bca55584615372b46b5734331b0be
 app.get('/regionStats', function(req, res){
     var json = {};
     var csv = path.join(__dirname,'./data/stats/stats_region.csv');

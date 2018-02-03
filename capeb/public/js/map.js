@@ -113,8 +113,10 @@ function miniStats(regionStats, d) {
         })
         .then(function(json){
             var dataFrame = document.getElementsByClassName("info-investissement")[0];
-            dataFrame.getElementsByClassName("donnee")[0].innerHTML = json.values[3][1]; // only 2017 and percentage of yes 
-        }); 
+            dataFrame.getElementsByClassName("donnee")[0].innerHTML = json.values[3][1]*100; // only 2017 and percentage of yes
+            dataFrame.style.backgroundColor = colorsForRegion[matchColor(json.values[3][1], 0, 0.15, 0.03, 0.17, false)];
+            console.log(matchColor(json.values[3][1], 0, 0.15, 0.3, 0.17, false))
+        });
 
 
 	//3 & 8 pour eviter re faire un fetch
@@ -165,8 +167,6 @@ function miniStats(regionStats, d) {
             //$("svg#sunburst").remove();
             //sunBurst(jsonContrats);
         });
-	//4 : embauche / oui/non plus représenté / double chart with rotation 
-
     //4 : embauche / métier qui embauche le plus/ double chart with rotation
 
     //5 : distance / moyenne / bubble chart
@@ -195,6 +195,8 @@ function miniStats(regionStats, d) {
 
 }
 
+//order = true : low is good
+//order = false : high is good
 function matchColor(value, min, mean, firstInc, secondInc, order){
     var r;
     if(value <= min+firstInc ){
