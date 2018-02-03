@@ -1,34 +1,10 @@
 /* style des blocs de data du dashboard */
 
 .block-data{
+  padding: 45px 20px 20px 30px;
+  color: $white;
   overflow: hidden;
   position: relative;
-  perspective: 800px;
-  color: $white;
-  .card{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    transition: transform .5s;
-  }
-  .card:hover{
-    transform: rotate3d( 0.5, 0.5, 0, 180deg );
-  }
-}
-
-.figure{
-  margin: 0;
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.fontface {
-  padding: 45px 20px 20px 30px;
-  box-sizing: border-box;
   >.donneeTexte{
     @extend %titre-titre;
     text-align: left;
@@ -47,11 +23,6 @@
     margin-left: 15%;
     bottom: 20px;
   }
-}
-
-.backface{
-  background-color: blue;
-  transform: rotate3d( 0.5, 0.5, 0, 180deg );
 }
 
 .info-epci{
