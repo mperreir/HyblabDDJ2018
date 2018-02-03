@@ -96,7 +96,7 @@ function miniStats(regionStats, d) {
         })
         .then(function(json){
             var dataFrame = document.getElementsByClassName("info-conjoncture")[0];
-            dataFrame.getElementsByClassName("donnee")[0].innerHTML = parseFloat(json.values[0][0]).toFixed(2);
+            dataFrame.getElementsByClassName("donnee")[0].innerHTML = parseFloat(json.values[0][0]).toFixed(1);
             dataFrame.style.backgroundColor = colorsForRegion[matchColor(json.values[0][0], 2.87, 3.78, 0.182, 0.244, false)];
         });
 
@@ -113,7 +113,7 @@ function miniStats(regionStats, d) {
         })
         .then(function(json){
             var dataFrame = document.getElementsByClassName("info-investissement")[0];
-            dataFrame.getElementsByClassName("donnee")[0].innerHTML = json.values[3][1]*100; // only 2017 and percentage of yes
+            dataFrame.getElementsByClassName("donnee")[0].innerHTML = (json.values[3][1]*100).toFixed(1);; // only 2017 and percentage of yes
             dataFrame.style.backgroundColor = colorsForRegion[matchColor(json.values[3][1], 0, 0.15, 0.03, 0.17, false)];
             console.log(matchColor(json.values[3][1], 0, 0.15, 0.3, 0.17, false))
         });
