@@ -3,9 +3,6 @@ document.getElementsByClassName("backToMap")[0].addEventListener("click", functi
     var location = document.location.href;
     document.location.href = location.slice(0, location.lastIndexOf("/"));
 
-    $.fn.fullpage.setAllowScrolling(true, "up, down");
-    $.fn.fullpage.setKeyboardScrolling(true, "up, down");
-
 });
 
 var page2 = d3.select(".map-pdl");
@@ -28,9 +25,6 @@ $ (document).ready(function(){
             .attr("stroke", "black")
             .attr("d", path)
             .on("click", function (d) {
-                //disable scroll up and down on dataviz slide
-                $.fn.fullpage.setAllowScrolling(false, "up, down");
-                $.fn.fullpage.setKeyboardScrolling(false, "up, down");
 
                 fetch("/capeb/data/regionStats")
                     .then(function (value) {

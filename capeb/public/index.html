@@ -45,7 +45,22 @@
                 anchors :['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
                 controlArrows: false,
                 recordHistory: false,
-                navigation: true
+                navigation: true,
+
+                afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+                    //disable scroll up and down on dataviz slide
+                    if (slideIndex==1){
+                        $.fn.fullpage.setAllowScrolling(false, "up, down");
+                        $.fn.fullpage.setKeyboardScrolling(false, "up, down");
+                    }
+                },
+
+                onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {
+                    if (slideIndex == 1) {
+                        $.fn.fullpage.setAllowScrolling(true, "up, down");
+                        $.fn.fullpage.setKeyboardScrolling(true, "up, down");
+                    }
+                }
             });
 
 
