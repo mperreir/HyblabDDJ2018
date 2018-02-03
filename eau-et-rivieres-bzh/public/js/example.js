@@ -29,17 +29,20 @@ fetch('data/datas.json')
     $(function() {
         $('#boutonGauche').hide();
         $('#enSavoirPlus').hide();
+        $('#intro2').hide();
     })
 
     $('#boutonDroite').click(function() {
-        $('#intro').text("Les scientifiques me considèrent comme un problème de santé publique. Mes effets sur l’humain, apparaissent à différentes échelles de toxicité : aiguë, chronique et génétique. Je contamine par inhalation, contact et ingestion. Entre mort subite ou prématurée, baisse des défenses immunitaire, atteinte à la fertilité et malformations ou effets tératogènes, je suis un vrai danger pour l’homme. (en savoir plus toxicité des pesticides largement sous-évaluée) Je suis partout : dans vos cheveux, dans vos urines, dans votre alimentation et surtout dans ce qu’il y a plus vital : l’eau. Allons voir comment je m’y cache.");
+        $('#intro1').hide();
+        $('#intro2').show();
         $('#boutonEnSavoirPlus').show();
         $('#boutonDroite').hide();
         $('#boutonGauche').show();
     });
 
     $('#boutonGauche').click(function() {
-        $('#intro').text("Substance chimique non naturelle, j’ai été créé et développé par l’homme lors de la révolution chimique du début du XXe siècle. De mon étymologie caedere et pestis, le latin me “tue” et me considère comme un “fléau”. Les anglais quant à eux, me surnomment le “ravageur”. Pour certains je suis un produit phytosanitaire, utilisé en agriculture pour lutter contre les organismes vivants “nuisibles”, mais pour la plupart, je suis connu sous un autre nom : pesticide.");
+        $('#intro2').hide();
+        $('#intro1').show();
         $('#boutonEnSavoirPlus').hide();
         $('#boutonGauche').hide();
         $('#boutonDroite').show();
@@ -60,11 +63,113 @@ fetch('data/datas.json')
 
     $('#buttonSP').click(function() { 
         $('#page1DisplayOn').css('filter','blur(3px)');
-        $('#enSavoirPlusP1').show();
-        
+        $('#d22').show();
     });
 
-    $('#boutonExitP1').click(function() { 
+    $('#d22 .boutonExitP1').click(function() { 
         $('#page1DisplayOn').css('filter','blur(0px)');
-        $('#enSavoirPlusP1').hide();
+        $('#d22').hide();
     });
+
+    $('#d29 .boutonExitP1').click(function() { 
+        $('#page1DisplayOn').css('filter','blur(0px)');
+        $('#d29').hide();
+    });
+
+    $('#d35 .boutonExitP1').click(function() { 
+        $('#page1DisplayOn').css('filter','blur(0px)');
+        $('#d35').hide();
+    });
+
+    $('#d44 .boutonExitP1').click(function() { 
+        $('#page1DisplayOn').css('filter','blur(0px)');
+        $('#d44').hide();
+    });
+
+    $('#d53 .boutonExitP1').click(function() { 
+        $('#page1DisplayOn').css('filter','blur(0px)');
+        $('#d53').hide();
+    });
+
+    $('#d56 .boutonExitP1').click(function() { 
+        $('#page1DisplayOn').css('filter','blur(0px)');
+        $('#d56').hide();
+    });
+
+    $('#d49 .boutonExitP1').click(function() { 
+        $('#page1DisplayOn').css('filter','blur(0px)');
+        $('#d49').hide();
+    });
+
+    $('#d22 .suivant').click(function() {
+        $('#d22').hide();
+        $('#d29').show();
+    });
+
+    $('#d29 .suivant').click(function() {
+        $('#d29').hide();
+        $('#d35').show();
+    });
+
+    $('#d35 .suivant').click(function() {
+        $('#d35').hide();
+        $('#d44').show();
+    });
+
+    $('#d44 .suivant').click(function() {
+        $('#d44').hide();
+        $('#d49').show();
+    });
+
+    $('#d49 .suivant').click(function() {
+        $('#d49').hide();
+        $('#d53').show();
+    });
+
+    $('#d53 .suivant').click(function() {
+        $('#d53').hide();
+        $('#d56').show();
+    });
+
+    $('#d56 .suivant').click(function() {
+        $('#d56').hide();
+        $('#d22').show();
+    });
+
+    /*$('.suivant').click(function() {
+        if ($('.enSavoirPlusP1').att('id') == 'd22') {
+            $('#d22').hide();
+            $('#d29').show();
+            i++;
+        }
+        else if ($('.enSavoirPlusP1').att('id') == 'd29') {
+            $('#d29').hide();
+            $('#d35').show();
+            i++;
+        }
+        else if ($('.enSavoirPlusP1').att('id') == 'd35') {
+            $('#d35').hide();
+            $('#d44').show();
+            i++;
+        }
+        else if ($('.enSavoirPlusP1').att('id') == 'd44') {
+            $('#d44').hide();
+            $('#d49').show();
+            i++;
+        }
+        else if ($('.enSavoirPlusP1').att('id') == 'd49') {
+            $('#d49').hide();
+            $('#d53').show();
+            i++;
+        }
+        else if ($('.enSavoirPlusP1').att('id') == 'd53') {
+            $('#d53').hide();
+            $('#d56').show();
+            i++;
+        }
+        else {
+            $('#d56').hide();
+            $('#d22').show();
+            i = 1;
+        }
+    });*/
