@@ -101,12 +101,10 @@ header img{
 	pointer-events: none;
 }
 
-.divCarte.hidden {
+.divCarte--hidden {
 	position: absolute;
-	overflow: hidden;
-	width: 0;
-	height: 0;
-	pointer-events: none;
+	left: -9999px;
+	top: -9999px;
 }
 
 .jackGif
@@ -150,7 +148,7 @@ header img{
     left: 300px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2006-2 
@@ -160,7 +158,7 @@ header img{
     left: 200px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2007-1 
@@ -170,7 +168,7 @@ header img{
     left: 490px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2007-2 
@@ -180,7 +178,7 @@ header img{
     left: 280px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2007-3 
@@ -190,7 +188,7 @@ header img{
     left: 180px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2008-1 
@@ -200,7 +198,7 @@ header img{
     left: 490px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2008-2 
@@ -210,7 +208,7 @@ header img{
     left: 285px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2008-3 
@@ -220,7 +218,7 @@ header img{
     left: 190px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 
@@ -231,7 +229,7 @@ header img{
     left: 200px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2009-2 
@@ -241,7 +239,7 @@ header img{
     left: 290px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2009-3 
@@ -251,7 +249,7 @@ header img{
     left: 455px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2009-4
@@ -261,17 +259,17 @@ header img{
     left: 485px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2012-1 
 { 
 	position: absolute;
     top: 55px;
-    left: 335px;
+    left: 318px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2012-2 
@@ -281,7 +279,7 @@ header img{
     left: 140px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2012-3 
@@ -291,7 +289,7 @@ header img{
     left: 218px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2012-4
@@ -301,17 +299,17 @@ header img{
     left: 704px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2012-5
 { 
 	position: absolute;
     top: 50px;
-    left: 396px;
+    left: 413px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2012-6
@@ -321,7 +319,7 @@ header img{
     left: 468px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .pin--2012-7
@@ -331,12 +329,12 @@ header img{
     left: 263px;
     width: 11%;
     height: 11%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .plan-obtuse {
 	position: absolute;
-    top: 380px;
+    top: 415px;
     left: 702px;
     padding: 15px 30px;
     margin: 0;
@@ -412,14 +410,14 @@ header img{
 	pointer-events: none;
 }
 
-.jack
+.jackPlan
 {
 	position: absolute;
-    top: 70px;
-    left: 232px;
+    top: 43px;
+    left: 3px;
     z-index: 2;
-    width: 90%;
-    height: 90%;
+    width: 110%;
+    height: 110%;
 }
 
 .podium
@@ -579,9 +577,6 @@ header img{
 	width : 80%; 
 	height :80%; 
 }
-
-
-
 .point {
 	width: 18px;
 	height: 18px;
@@ -690,14 +685,92 @@ h3.TitreAccueil
 	font-weight: 700;
 }
 
-img.barre
+img.barrePodium
 {
 	position: absolute;
-	transform: rotate(90deg);
-	top: -150px;
+    transform: rotate(90deg);
+    top: -130px;
     left: 990px;
     width: 30px;
     height: 500px;
+}
+
+img.barrePlan
+{
+	position: absolute;
+    transform: rotate(90deg);
+    top: -150px;
+    left: 990px;
+    width: 30px;
+    height: 500px;
+}
+
+.jackAccueil
+{
+	position: absolute;
+    left: 854px;
+    top: 5px;
+    width: 277px;
+    height: 730px;
+    transform: scaleX(-1);
+}
+
+.JackAccueil--hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+.jackPodium
+{
+	position: absolute;
+    left: 0px;
+    top: 5px;
+    width: 277px;
+    height: 730px;
+}
+
+.fenetrePopup
+{
+	background-color: black;
+    opacity: 0.8;
+    width: 499px;
+    height: 349px;
+    top: 127px;
+    left: 100px;
+    position: absolute;
+    border: 2px solid #A9FF88;
+    z-index: 4;
+}
+
+.fenetrePopup--hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+p.croix
+{
+	color: #767676;
+    position: absolute;
+    left: 471px;
+    top: 4px;
+    font-size: 26px;
+}
+
+p.titreScene
+{
+	position: absolute;
+    top: 0px;
+    color: #A9FF88;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    left: 150px;
 }
 
 

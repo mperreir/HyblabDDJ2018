@@ -32,11 +32,11 @@ function controleurPlan(){
 		annee2015.className = "point";
 		annee2016.className = "point";
 		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte hidden";
-		document.getElementById("carte07").className = "2007 divCarte hidden";
-		document.getElementById("carte08").className = "2008 divCarte hidden";
-		document.getElementById("carte09").className = "2009 divCarte hidden ";
-		document.getElementById("carte12").className = "2012 divCarte hidden";
+		document.getElementById("carte06").className = "2006 divCarte--hidden";
+		document.getElementById("carte07").className = "2007 divCarte--hidden";
+		document.getElementById("carte08").className = "2008 divCarte--hidden";
+		document.getElementById("carte09").className = "2009 divCarte--hidden ";
+		document.getElementById("carte12").className = "2012 divCarte--hidden";
 		document.getElementById("pin2006-01").className = "pin--2006-1"
 		document.getElementById("pin2006-02").className = "pin--2006-2"
 		document.getElementById("pin2007-01").className = "pin--2007-1"
@@ -73,11 +73,11 @@ function controleurPlan(){
 		annee2015.className = "point";
 		annee2016.className = "point";
 		annee2017.className = "point";
-		document.getElementById("carte06").className = "fadeIn animated 2006 divCarte ";
-		document.getElementById("carte07").className = "2007 divCarte hidden";
-		document.getElementById("carte08").className = "2008 divCarte hidden";
-		document.getElementById("carte09").className = "2009 divCarte hidden";
-		document.getElementById("carte12").className = "2012 divCarte hidden";
+		document.getElementById("carte06").className = "2006 divCarte ";
+		document.getElementById("carte07").className = "2007 divCarte--hidden";
+		document.getElementById("carte08").className = "2008 divCarte--hidden";
+		document.getElementById("carte09").className = "2009 divCarte--hidden";
+		document.getElementById("carte12").className = "2012 divCarte--hidden";
 		document.getElementById("pin2006-01").className = "fadeInDown animated pin--2006-1"
 		document.getElementById("pin2006-02").className = "fadeInDown animated pin--2006-2"
 		document.getElementById("pin2007-01").className = "pin--2007-1"
@@ -102,8 +102,8 @@ function controleurPlan(){
 
 	annee2007.onclick = function(){
 		textePlan.textContent = "En 2007, la Hard n'Heavy est remplacée par la Gibson Stage.S'y ajoute la Discover stage, une nouvelle scène, sur laquelle 30 groupes se produisent.";
-		anneeEvolution.className = "point";
-		annee2006.className = "pointEvolution";
+		anneeEvolution.className = "pointEvolution";
+		annee2006.className = "point";
 		annee2007.className = "point active";
 		annee2008.className = "point";
 		annee2009.className = "point";
@@ -115,11 +115,11 @@ function controleurPlan(){
 		annee2015.className = "point";
 		annee2016.className = "point";
 		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte hidden";
-		document.getElementById("carte07").className = "fadeIn animated 2007 divCarte";
-		document.getElementById("carte08").className = "2008 divCarte hidden";
-		document.getElementById("carte09").className = "2009 divCarte hidden";
-		document.getElementById("carte12").className = "2012 divCarte hidden";
+		document.getElementById("carte06").className = "2006 divCarte--hidden";
+		document.getElementById("carte07").className = "2007 divCarte";
+		document.getElementById("carte08").className = "2008 divCarte--hidden";
+		document.getElementById("carte09").className = "2009 divCarte--hidden";
+		document.getElementById("carte12").className = "2012 divCarte--hidden";
 		document.getElementById("pin2006-01").className = "pin--2006-1"
 		document.getElementById("pin2006-02").className = "pin--2006-2"
 		document.getElementById("pin2007-01").className = "fadeInDown animated pin--2007-1"
@@ -155,11 +155,11 @@ function controleurPlan(){
 		annee2015.className = "point";
 		annee2016.className = "point";
 		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte hidden";
-		document.getElementById("carte07").className = "2007 divCarte hidden";
-		document.getElementById("carte08").className = "fadeIn animated 2008 divCarte";
-		document.getElementById("carte09").className = "2009 divCarte hidden";
-		document.getElementById("carte12").className = "2012 divCarte hidden";
+		document.getElementById("carte06").className = "2006 divCarte--hidden";
+		document.getElementById("carte07").className = "2007 divCarte--hidden";
+		document.getElementById("carte08").className = "2008 divCarte";
+		document.getElementById("carte09").className = "2009 divCarte--hidden";
+		document.getElementById("carte12").className = "2012 divCarte--hidden";
 		document.getElementById("pin2006-01").className = "pin--2006-1"
 		document.getElementById("pin2006-02").className = "pin--2006-2"
 		document.getElementById("pin2007-01").className = "pin--2007-1"
@@ -196,11 +196,11 @@ function controleurPlan(){
 		annee2015.className = "point";
 		annee2016.className = "point";
 		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte hidden";
-		document.getElementById("carte07").className = "2007 divCarte hidden";
-		document.getElementById("carte08").className = "2008 divCarte hidden";
-		document.getElementById("carte09").className = "fadeIn animated 2009 divCarte ";
-		document.getElementById("carte12").className = "2012 divCarte hidden";
+		document.getElementById("carte06").className = "2006 divCarte--hidden";
+		document.getElementById("carte07").className = "2007 divCarte--hidden";
+		document.getElementById("carte08").className = "2008 divCarte--hidden";
+		document.getElementById("carte09").className = "2009 divCarte ";
+		document.getElementById("carte12").className = "2012 divCarte--hidden";
 		document.getElementById("pin2006-01").className = "pin--2006-1"
 		document.getElementById("pin2006-02").className = "pin--2006-2"
 		document.getElementById("pin2007-01").className = "pin--2007-1"
@@ -236,11 +236,11 @@ function controleurPlan(){
 		annee2015.className = "point";
 		annee2016.className = "point";
 		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte hidden";
-		document.getElementById("carte07").className = "2007 divCarte hidden";
-		document.getElementById("carte08").className = "2008 divCarte hidden";
-		document.getElementById("carte09").className = "fadeIn animated 2009 divCarte ";
-		document.getElementById("carte12").className = "2012 divCarte hidden";
+		document.getElementById("carte06").className = "2006 divCarte--hidden";
+		document.getElementById("carte07").className = "2007 divCarte--hidden";
+		document.getElementById("carte08").className = "2008 divCarte--hidden";
+		document.getElementById("carte09").className = "2009 divCarte ";
+		document.getElementById("carte12").className = "2012 divCarte--hidden";
 		document.getElementById("pin2006-01").className = "pin--2006-1"
 		document.getElementById("pin2006-02").className = "pin--2006-2"
 		document.getElementById("pin2007-01").className = "pin--2007-1"
@@ -276,11 +276,11 @@ function controleurPlan(){
 		annee2015.className = "point";
 		annee2016.className = "point";
 		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte hidden";
-		document.getElementById("carte07").className = "2007 divCarte hidden";
-		document.getElementById("carte08").className = "2008 divCarte hidden";
-		document.getElementById("carte09").className = "fadeIn animated 2009 divCarte ";
-		document.getElementById("carte12").className = "2012 divCarte hidden";
+		document.getElementById("carte06").className = "2006 divCarte--hidden";
+		document.getElementById("carte07").className = "2007 divCarte--hidden";
+		document.getElementById("carte08").className = "2008 divCarte--hidden";
+		document.getElementById("carte09").className = "2009 divCarte ";
+		document.getElementById("carte12").className = "2012 divCarte--hidden";
 		document.getElementById("pin2006-01").className = "pin--2006-1"
 		document.getElementById("pin2006-02").className = "pin--2006-2"
 		document.getElementById("pin2007-01").className = "pin--2007-1"
@@ -316,11 +316,11 @@ function controleurPlan(){
 		annee2015.className = "point";
 		annee2016.className = "point";
 		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte hidden";
-		document.getElementById("carte07").className = "2007 divCarte hidden";
-		document.getElementById("carte08").className = "2008 divCarte hidden";
-		document.getElementById("carte09").className = "2009 divCarte hidden ";
-		document.getElementById("carte12").className = "fadeIn animated 2012 divCarte ";
+		document.getElementById("carte06").className = "2006 divCarte--hidden";
+		document.getElementById("carte07").className = "2007 divCarte--hidden";
+		document.getElementById("carte08").className = "2008 divCarte--hidden";
+		document.getElementById("carte09").className = "2009 divCarte--hidden ";
+		document.getElementById("carte12").className = "2012 divCarte ";
 		document.getElementById("pin2006-01").className = "pin--2006-1"
 		document.getElementById("pin2006-02").className = "pin--2006-2"
 		document.getElementById("pin2007-01").className = "pin--2007-1"
@@ -357,11 +357,11 @@ function controleurPlan(){
 		annee2015.className = "point";
 		annee2016.className = "point";
 		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte hidden";
-		document.getElementById("carte07").className = "2007 divCarte hidden";
-		document.getElementById("carte08").className = "2008 divCarte hidden";
-		document.getElementById("carte09").className = "2009 divCarte hidden ";
-		document.getElementById("carte12").className = "fadeIn animated 2012 divCarte ";
+		document.getElementById("carte06").className = "2006 divCarte--hidden";
+		document.getElementById("carte07").className = "2007 divCarte--hidden";
+		document.getElementById("carte08").className = "2008 divCarte--hidden";
+		document.getElementById("carte09").className = "2009 divCarte--hidden ";
+		document.getElementById("carte12").className = "2012 divCarte ";
 		document.getElementById("pin2006-01").className = "pin--2006-1"
 		document.getElementById("pin2006-02").className = "pin--2006-2"
 		document.getElementById("pin2007-01").className = "pin--2007-1"
@@ -397,11 +397,11 @@ function controleurPlan(){
 		annee2015.className = "point";
 		annee2016.className = "point";
 		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte hidden";
-		document.getElementById("carte07").className = "2007 divCarte hidden";
-		document.getElementById("carte08").className = "2008 divCarte hidden";
-		document.getElementById("carte09").className = "2009 divCarte hidden ";
-		document.getElementById("carte12").className = "fadeIn animated 2012 divCarte ";
+		document.getElementById("carte06").className = "2006 divCarte--hidden";
+		document.getElementById("carte07").className = "2007 divCarte--hidden";
+		document.getElementById("carte08").className = "2008 divCarte--hidden";
+		document.getElementById("carte09").className = "2009 divCarte--hidden ";
+		document.getElementById("carte12").className = "2012 divCarte ";
 		document.getElementById("pin2006-01").className = "pin--2006-1"
 		document.getElementById("pin2006-02").className = "pin--2006-2"
 		document.getElementById("pin2007-01").className = "pin--2007-1"
@@ -437,11 +437,11 @@ function controleurPlan(){
 		annee2015.className = "point active";
 		annee2016.className = "point";
 		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte hidden";
-		document.getElementById("carte07").className = "2007 divCarte hidden";
-		document.getElementById("carte08").className = "2008 divCarte hidden";
-		document.getElementById("carte09").className = "2009 divCarte hidden ";
-		document.getElementById("carte12").className = "fadeIn animated 2012 divCarte ";
+		document.getElementById("carte06").className = "2006 divCarte--hidden";
+		document.getElementById("carte07").className = "2007 divCarte--hidden";
+		document.getElementById("carte08").className = "2008 divCarte--hidden";
+		document.getElementById("carte09").className = "2009 divCarte--hidden ";
+		document.getElementById("carte12").className = "2012 divCarte ";
 		document.getElementById("pin2006-01").className = "pin--2006-1"
 		document.getElementById("pin2006-02").className = "pin--2006-2"
 		document.getElementById("pin2007-01").className = "pin--2007-1"
@@ -477,11 +477,11 @@ function controleurPlan(){
 		annee2015.className = "point";
 		annee2016.className = "point active";
 		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte hidden";
-		document.getElementById("carte07").className = "2007 divCarte hidden";
-		document.getElementById("carte08").className = "2008 divCarte hidden";
-		document.getElementById("carte09").className = "2009 divCarte hidden ";
-		document.getElementById("carte12").className = "fadeIn animated 2012 divCarte ";
+		document.getElementById("carte06").className = "2006 divCarte--hidden";
+		document.getElementById("carte07").className = "2007 divCarte--hidden";
+		document.getElementById("carte08").className = "2008 divCarte--hidden";
+		document.getElementById("carte09").className = "2009 divCarte--hidden ";
+		document.getElementById("carte12").className = "2012 divCarte ";
 		document.getElementById("pin2006-01").className = "pin--2006-1"
 		document.getElementById("pin2006-02").className = "pin--2006-2"
 		document.getElementById("pin2007-01").className = "pin--2007-1"
@@ -517,11 +517,11 @@ function controleurPlan(){
 		annee2015.className = "point";
 		annee2016.className = "point";
 		annee2017.className = "point active";
-		document.getElementById("carte06").className = "2006 divCarte hidden";
-		document.getElementById("carte07").className = "2007 divCarte hidden";
-		document.getElementById("carte08").className = "2008 divCarte hidden";
-		document.getElementById("carte09").className = "2009 divCarte hidden ";
-		document.getElementById("carte12").className = "fadeIn animated 2012 divCarte ";
+		document.getElementById("carte06").className = "2006 divCarte--hidden";
+		document.getElementById("carte07").className = "2007 divCarte--hidden";
+		document.getElementById("carte08").className = "2008 divCarte--hidden";
+		document.getElementById("carte09").className = "2009 divCarte--hidden ";
+		document.getElementById("carte12").className = "2012 divCarte ";
 		document.getElementById("pin2006-01").className = "pin--2006-1"
 		document.getElementById("pin2006-02").className = "pin--2006-2"
 		document.getElementById("pin2007-01").className = "pin--2007-1"
@@ -945,8 +945,144 @@ function controleurPodium()
 		document.getElementById('troisiemeAnglais').className = "fadeInDown animated anglais troisieme drapeau";
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
-
 }
+
+function pin(){
+	var pin200601 =document.getElementById("pin2006-01");
+	var pin200602 =document.getElementById("pin2006-02");
+	var pin200701 =document.getElementById("pin2007-01");
+	var pin200702 =document.getElementById("pin2007-02");
+	var pin200703 =document.getElementById("pin2007-03");
+	var pin200801 =document.getElementById("pin2008-01");
+	var pin200802 =document.getElementById("pin2008-02");
+	var pin200803 =document.getElementById("pin2008-03");
+	var pin200901 =document.getElementById("pin2009-01");
+	var pin200902 =document.getElementById("pin2009-02");
+	var pin200903 =document.getElementById("pin2009-03");
+	var pin200904 =document.getElementById("pin2009-04");
+	var pin201201 =document.getElementById("pin2012-01");
+	var pin201202 =document.getElementById("pin2012-02");
+	var pin201203 =document.getElementById("pin2012-03");
+	var pin201204 =document.getElementById("pin2012-04");
+	var pin201205 =document.getElementById("pin2012-05");
+	var pin201206 =document.getElementById("pin2012-06");
+	var pin201207 =document.getElementById("pin2012-07");
+	var popup = document.getElementById("fenetrePopup");
+	var croix = document.getElementById("croix");
+	var titre = document.getElementById("scène");
+
+	croix.onclick = function(){
+		popup.className = "fenetrePopup--hidden";
+	}
+
+	pin200601.onclick = function(){
+		titre.textContent = "Hard n'Heavy";
+		popup.className = "fenetrePopup";
+	}
+	pin200602.onclick = function(){
+		titre.textContent = "Main Stage";
+		popup.className = "fenetrePopup";
+	}
+	pin200701.onclick = function(){
+		titre.textContent = "Discover Stage";
+		popup.className = "fenetrePopup";
+	}
+	pin200702.onclick = function(){
+		titre.textContent = "Gibson Stage";
+		popup.className = "fenetrePopup";
+	}
+	pin200703.onclick = function(){
+		titre.textContent = "Main Stage";
+		popup.className = "fenetrePopup";
+	}
+	pin200801.onclick = function(){
+		titre.textContent = "Discover Stage";
+		popup.className = "fenetrePopup";
+	}
+	pin200802.onclick = function(){
+		titre.textContent = "Main 2 Stage";
+		popup.className = "fenetrePopup";
+	}
+	pin200803.onclick = function(){
+		titre.textContent = "Main 1 Stage";
+		popup.className = "fenetrePopup";
+	}
+ 	pin200901.onclick = function(){
+ 		titre.textContent = "Main 1 Stage";
+		popup.className = "fenetrePopup";
+	}
+ 	pin200902.onclick = function(){
+ 		titre.textContent = "Main 2 Stage";
+		popup.className = "fenetrePopup";
+	}
+	pin200903.onclick = function(){
+		titre.textContent = "Rock Hard tent";
+		popup.className = "fenetrePopup";
+	}
+	pin200904.onclick = function(){
+		titre.textContent = "Terrorizer tent";
+		popup.className = "fenetrePopup";
+	}
+	pin201201.onclick = function(){
+		titre.textContent = "Altar";
+		popup.className = "fenetrePopup";
+	}
+	pin201202.onclick = function(){
+		titre.textContent = "Main 1 Stage";
+		popup.className = "fenetrePopup";
+	}
+	pin201203.onclick = function(){
+		titre.textContent = "Main 2 Stage";
+		popup.className = "fenetrePopup";
+	}
+	pin201204.onclick = function(){
+		titre.textContent = "Métal Corner";
+		popup.className = "fenetrePopup";
+	}
+	pin201205.onclick = function(){
+		titre.textContent = "Temple";
+		popup.className = "fenetrePopup";
+	}
+	pin201206.onclick = function(){
+		titre.textContent = "Valley";
+		popup.className = "fenetrePopup";
+	}
+	pin201207.onclick = function(){
+		titre.textContent = "Warzone";
+		popup.className = "fenetrePopup";
+	}
+}
+
+/*function loadData()
+{
+	fetch('data/AnneePaysPourcentage.json')
+    // this promise will be fulfilled when the json fill will be
+    .then(function (response){
+        // if we could load the resource, parse it
+        if( response.ok )
+            return response.json();
+        else // if not, send some error message as JSON data
+            return {data: "JSON file not found"};
+
+    })
+    // in case of invalid JSON (parse error) send some error message as JSON data
+    .catch( function (error){
+        return {data: "Invalid JSON"};
+    })
+    // this promise will be fulfilled when the json will be parsed
+    .then(function (json) {
+    	console.log(json[0]);
+    	json.forEach(function(pays){
+    		if (pays.Annee === 2006)
+    		{
+    			console.log(pays.Pourcentage);
+    		} 
+    	});
+    });
+}*/
+
+//loadData();
+pin();
 controleurPodium();
 controleurPlan();
 setTimeout(chargement, 5000); 
