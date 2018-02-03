@@ -198,6 +198,93 @@ $( "#img_train_slide3" ).mouseover(function() {
   }
 });
 
+var pnDisplay = true;
+var map;
+function initmap() {
+// paramÃ©trage de la carte
+    map = new L.Map('map',{
+        zoomSnap: 1,
+        minZoom: 5,
+        maxZoom: 10,
+        zoomControl:false,
+        layers:[pn]});
+
+    // crÃ©ation des "tiles" avec open street map
+    // on centre sur la France
+    map.setView(new L.LatLng(46.85, 2.3518), 5);
+}
+
+var iconPn = L.icon({
+            iconUrl: 'img/carte/pointpn.svg',
+            iconSize: [20, 20],
+});
+var iconAcc = L.icon({
+            iconUrl: 'img/carte/pointaccident.svg',
+            iconSize: [38, 95]
+});
+
+function AfficherPn()
+{
+    if (pnDisplay == true){
+        map.removeLayer(pn);
+        pnDisplay = false;
+    }
+    else {
+        map.addLayer(pn);
+        pnDisplay = true;
+    }
+
+}
+
+
+/* creation des clusters */
+function addPn ()
+{
+    var markers = L.markerClusterGroup({
+        removeOutsideVisibleBounds:true,
+        spiderfyOnMaxZoom:false,
+        disableClusteringAtZoom: 9,
+        iconCreateFunction: function (cluster) {
+            var marker = cluster.getAllChildMarkers();
+            var n = 0;
+            for (var i = 0; i < marker.length; i++) {
+                n += 1
+            }
+            return L.divIcon({ html:n , className: 'mycluster'});
+    }});
+    fetch('data/pn.geojson')
+    // this promise will be fulfilled when the json fill will be
+    .then(function (response){
+        // if we could load the resource, parse it
+        if( response.ok )
+            return response.json();
+        else // if not, send some error message as JSON data
+            return {data: "JSON file not found"};
+
+    })
+    // in case of invalid JSON (parse error) send some error message as JSON data
+    .catch( function (error){
+        return {data: "Invalid JSON"};
+    })
+    // this promise will be fulfilled when the json will be parsed
+    .then(function (Geojson) {
+
+        for (var i in Geojson.features)
+        {
+            markers.addLayer(L.marker(Geojson.features[i].geometry.coordinates, {
+            icon : iconPn,
+            pane:"markerPane",
+            }));
+        }
+    });
+    return markers;
+}
+var pn = addPn();
+
+console.log(pn);
+
+
+
 fetch('data/france.geojson')
     // this promise will be fulfilled when the json fill will be
     .then(function (response){
@@ -214,39 +301,20 @@ fetch('data/france.geojson')
     })
     // this promise will be fulfilled when the json will be parsed
     .then(function (Geojson) {
-        console.log(Geojson);
-
-
         // Get the context of the canvas element we want to select
-        var map;
-        function initmap() {
-        // paramÃ©trage de la carte
-        map = new L.Map('map',{
-            zoomSnap: 0.25,
-            minZoom: 5,
-            maxZoom: 7,
-            zoomControl:false });
-
-        // crÃ©ation des "tiles" avec open street map
-        // on centre sur la France
-        map.setView(new L.LatLng(46.85, 2.3518), 5);
-
         L.geoJSON(Geojson, {style:function(feature) {
             return {
-                'fillColor': '#5DC1CE',
-                'weight': 2,
+                'fillColor': '#30354C',
+                'weight': 0.5,
                 'opacity': 1,
                 'color': 'white',
                 'dashArray':'3',
                 'fillOpacity': 1
             }
         }}).addTo(map);
-};
-
-        /* on va procÃ©der Ã  l'initialisation de la carte */
-        initmap();
-
-
-
 });
+initmap();
+console.log(map);
+
+
 
