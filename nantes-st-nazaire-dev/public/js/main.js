@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	setTimeout(loadingScreen, 50);
+	setTimeout(loadingScreen, 3000);
 
 	setFleche();
 
@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 function loadingScreen() {
     //Configure le flottage de la flèche du bas pour changer de page
-    $("#loading-screen").hide(function() {
+    $("#loading-screen").fadeOut(function() {
 
     	$("#fullpage").css("visibility","visible");
     });

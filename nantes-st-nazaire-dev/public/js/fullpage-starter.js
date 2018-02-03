@@ -61,7 +61,7 @@ $(document).ready(function() {
         }, 100);
     });
 
-$.fn.fullpage.moveSectionDown();
+
 });
 
 function setDescriptions(id) {
