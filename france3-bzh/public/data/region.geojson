@@ -1,0 +1,148 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [44.518541,-0.571289]
+    },
+    "properties": {
+      "Region":"Nouvelle-Aquitaine",
+      "Accidents": "8.19%"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [47.210706,-1.516113]
+    },
+    "properties": {
+      "Region":"Pays de la loire",
+      "Accidents":"4.59%"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [48.084042,-2.966309]
+    },
+    "properties": {
+      "Region":"Bretagne",
+      "Accidents":"1.86%"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [49.316618,0.395508]
+    },
+    "properties": {
+      "Region":"Normandie",
+      "Accidents":"2,61%"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [48.885037,2.438965]
+    },
+    "properties": {
+      "Region":"Ile-de-France",
+      "Accidents":"23,95%"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [49.928682,2.724609]
+    },
+    "properties": {
+      "Region":"Hauts-de-France",
+      "Accidents":"11,41%"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [47.597366,1.428223]
+    },
+    "properties": {
+      "Region":"Centre",
+      "Accidents":"4,34%"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates": [43.698162,2.087402]
+    },
+    "properties": {
+      "Region":"Occitanie",
+      "Accidents":"8,68%"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [44.109775,5.910645]
+    },
+    "properties": {
+      "Region":"Provence-Alpes-Cotes d'Azur",
+      "Accidents":"12,03%"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [45.466391,4.394531]
+    },
+    "properties": {
+      "Region":"Auvergne",
+      "Accidents":"9,80%"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [47.448987,4.306641]
+    },
+    "properties": {
+      "Region":"Bourgogne",
+      "Accidents":"2,61%"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [48.696853,5.361328]
+    },
+    "properties": {
+      "Region":"Grand-Est",
+      "Accidents":"9,68%"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [42.215805,9.008789]
+    },
+    "properties": {
+      "Region":"Corse",
+      "Accidents":"0,25%"
+    }
+  }
+  ]
+}

@@ -9,6 +9,7 @@
     <!-- Déclaration de la feuille de style du document-->
     <link rel="stylesheet" href="css/style.css">
 
+
     <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
     integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
@@ -129,7 +130,18 @@
       <!-- Carte -->
       <div class="section">
         <div id="map" style="height:400px; width: 400px"></div>
-        <button type="button" onclick="AfficherPn();">Passage à niveaux</button>
+        <div class="bouttons">
+          <h1>Filtres</h1>
+          <div class="row">
+            <span>Passage à niveaux</span>
+            <div class="material-switch blue" onclick="AfficherPn()">
+            </div>
+          </div>
+          <div class="row">
+            <span>Accidents par régions</span>
+            <div class="material-switch red" onclick="AfficherAcc()"></div>
+          </div>
+        </div>
       </div>
       <!-- About -->
         <div class="section">

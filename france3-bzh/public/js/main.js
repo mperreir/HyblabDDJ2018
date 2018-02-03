@@ -90,7 +90,6 @@ fetch('data/nb_V_A_T.json')
     })
     // this promise will be fulfilled when the json will be parsed
     .then(function (json) {
-        console.log(json);
 
 
         // Get the context of the canvas element we want to select
@@ -393,7 +392,8 @@ $( "#img_train_slide3" ).click(function() {
 
 /* CARTE */
 
-var pnDisplay = true;
+var pnDisplay = false;
+var accDisplay = false;
 var map;
 function initmap() {
 // paramÃ©trage de la carte
@@ -402,20 +402,22 @@ function initmap() {
         minZoom: 5,
         maxZoom: 10,
         zoomControl:false,
-        layers:[pn]});
+        layers:[pn,accidentRegion]});
 
     // crÃ©ation des "tiles" avec open street map
     // on centre sur la France
     map.setView(new L.LatLng(46.85, 2.3518), 5);
+    map.removeLayer(pn);
+    map.removeLayer(accidentRegion);
 }
 
 var iconPn = L.icon({
             iconUrl: 'img/carte/pointpn.svg',
-            iconSize: [20, 20],
+            iconSize: [20, 20]
 });
 var iconAcc = L.icon({
             iconUrl: 'img/carte/pointaccident.svg',
-            iconSize: [38, 95]
+            iconSize: [20, 20]
 });
 
 
@@ -433,6 +435,18 @@ function AfficherPn()
 
 }
 
+function AfficherAcc()
+{
+    if (accDisplay == true){
+        map.removeLayer(accidentRegion);
+        accDisplay = false;
+    }
+    else {
+        map.addLayer(accidentRegion);
+        accDisplay = true;
+    }
+
+}
 
 /* creation des clusters */
 function addPn ()
@@ -478,7 +492,39 @@ function addPn ()
 }
 var pn = addPn();
 
-console.log(pn);
+
+/* Region accident */
+function addRegionAccident(){
+  var markers=L.layerGroup();
+  fetch('data/region.geojson')
+  // this promise will be fulfilled when the json fill will be
+  .then(function (response){
+  // if we could load the resource, parse it
+    if( response.ok )
+        return response.json();
+    else // if not, send some error message as JSON data
+        return {data: "JSON file not found"};
+
+  })
+  // in case of invalid JSON (parse error) send some error message as JSON data
+  .catch( function (error){
+      return {data: "Invalid JSON"};
+  })
+  // this promise will be fulfilled when the json will be parsed
+  .then(function (Geojson) {
+    for (var i in Geojson.features)
+    {
+        var marker=L.marker(Geojson.features[i].geometry.coordinates,{
+          icon : iconAcc,
+          pane:"markerPane",
+        }).bindPopup(Geojson.features[i].properties.Region+' avec '+ Geojson.features[i].properties.Accidents+' d\'accidents'
+          )
+        markers.addLayer(marker);
+    }
+  });
+  return markers;
+}
+var accidentRegion = addRegionAccident();
 
 
 /* création fond de carte (France avec regions)*/
@@ -512,4 +558,28 @@ fetch('data/france.geojson')
         }}).addTo(map);
 });
 initmap();
+
+/* filtres */
+var switchClick = function(e) {
+  $(this).toggleClass('active');
+};
+
+(function($) {
+  $.fn.materialSwitch = function(options) {
+    this.each(function() {
+      $(this).click(switchClick);
+
+      $('<div class="bar" />').appendTo($(this));
+      $('<div class="thumb-container" />').append(
+        $('<div class="thumb" />').append(
+          $('<div class="ripple"/>')
+        )
+      ).appendTo($(this));
+    });
+    return this;
+  };
+
+  $('.material-switch').materialSwitch();
+
+}(jQuery));
 
