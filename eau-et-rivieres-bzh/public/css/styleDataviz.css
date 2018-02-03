@@ -659,13 +659,16 @@ body{
     height: 15%;
     left: 5%;
     top: 55%;
-    background-color: white;
+    border-collapse: separate;
+    border-spacing: 10px 20px;; /* Nombre de pixels d'espace horizontal (5px), vertical (8px) */
 }
 
 #logos td {
-    width: 15%;
+    width: 12%;
     height: auto;
     border: 3px solid black;
+    text-align: center;
+    background-color: white;
 }
 
 #logo tr {
@@ -673,7 +676,7 @@ body{
 }
 
 .logo {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
 }
 
@@ -682,15 +685,15 @@ body{
 }
 
 #logoUN {
-    width: 60%;
+    width: 80%;
 }
 
 #logoOpenSource {
-    width: 40%;
+    width: 38%;
 }
 
 #logoCC {
-    width: 40%;
+    width: 35%;
 }
 
 /* ######################################################################### */
