@@ -46,19 +46,29 @@
                 controlArrows: false,
                 recordHistory: false,
                 navigation: true,
+                showActiveTooltip: true,
 
                 afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
                     //disable scroll up and down on dataviz slide
-                    if (slideIndex==1){
+                    if (slideIndex==1) {
                         $.fn.fullpage.setAllowScrolling(false, "up, down");
                         $.fn.fullpage.setKeyboardScrolling(false, "up, down");
+                    }
+                    console.log(slideIndex);
+                    if (slideIndex==0) {
+                        $('#fp-nav')[0].style.display = 'block';
                     }
                 },
 
                 onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {
-                    if (slideIndex == 1) {
+                    //re-enable scroll up and down
+                    if (slideIndex == 1 && nextSlideIndex==0) {
                         $.fn.fullpage.setAllowScrolling(true, "up, down");
                         $.fn.fullpage.setKeyboardScrolling(true, "up, down");
+                    }
+                    //disable nav bar when moving from map to dashboard
+                    if (slideIndex == 0 && nextSlideIndex==1) {
+                        $('#fp-nav')[0].style.display = 'none';
                     }
                 }
             });
