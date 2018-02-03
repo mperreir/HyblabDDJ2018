@@ -106,15 +106,25 @@ app.get('/:epci/sunburst', function(req, res){
 	res.json(json.values);
 });
 
-app.get('/sunburst', function(req, res){
-    var bubblecsv = path.join(__dirname,'./data/stats/sunburst.csv');
-    var data = fs.readFileSync(bubblecsv, 'utf8');
+app.get('/regionStats', function(req, res){
+    var json = {};
+    var csv = path.join(__dirname,'./data/stats/stats_region.csv');
+    var data = fs.readFileSync(csv, 'utf8');
+    data.split(/\r\n|\n/).forEach(function (line, id) {
 
-	res.setHeader('Content-disposition', 'attachment; filename=testing.csv');
-	res.set('Content-Type', 'text/csv');
-	res.status(200).send(data);
+        if(id == 0){
+            keys = line.split(";");
+            json['labels'] = keys.slice(0);
+            json['values'] =  [];
+        }
+        else{
+            var cells = line.split(';');
+            json['values'].push(cells.slice(0));
+        }
+    });
+    res.json(json);
+
 });
-
 
 
 module.exports = app;
