@@ -61,8 +61,8 @@ app.get('/:epci/stats', (req, res) => {
 	res.json(stats_json);
 })
 
-app.get('/:epci/bubble', function(req, res){
-    var bubblecsv = path.join(__dirname,'./data/stats/BubbleChart.csv');
+app.get('/:epci/distance', function(req, res){
+    var bubblecsv = path.join(__dirname,'./data/stats/Distance.csv');
     var json = {};
     crt_arr = []
     var data = fs.readFileSync(bubblecsv, 'utf8');

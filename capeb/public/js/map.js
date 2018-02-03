@@ -24,57 +24,11 @@ $ (document).ready(function(){
             .attr("stroke", "black")
             .attr("d", path)
             .on("click", function (d) {
-                //sunBurst chart
-				fetch("/capeb/data/" + d.properties.siren_epci + "/sunburst")
-                    .then(function (value) {
-                        return value.json();
-                    })
-                    .catch(function (error) {
-                        console.log("error");
-                        console.log(error);
-                        return {};
-                    })
-                    .then(function(json){
-						$("svg#sunburst").remove();
-                        sunBurst(json);
-                    });
 
-                // sunburst and basic charts
-                fetch("/capeb/data/" + d.properties.siren_epci + "/stats")
-                    .then(function (value) {
-                        return value.json();
-                    })
-                    .catch(function (error) {
-                        console.log("error");
-                        console.log(error);
-                        return {};
-                    })
-                    .then(function(json){
-						console.log(d.properties.siren_epci);
 
-                        flush();
-                        drawBarChart(json.Activite, "Répartion des activités entre 2014 et 2017");
-                        drawPieChart(json.Developpement_durable, "Dévoloppement durable en 2016");
-                        drawPieChart(json.Marches_publics, "Marchés publics");
-                        drawLineChart(json.Contrats, "Contrats");
-                        //sunBurst(json);
 
-                    });
-				/*
                 // bubble chart
-                fetch("/capeb/data/" + d.properties.siren_epci + "/bubble")
-                    .then(function (value) {
-                        return value.json();
-                    })
-                    .catch(function (error) {
-                        console.log("error");
-                        console.log(error);
-                        return {};
-                    })
-                    .then(function(json){
-                        // drawBubbleChart(json);
-                    });
-				*/
+
 
                 // move to dashboard
                 document.location.href = document.location + "/slide2";
@@ -103,4 +57,43 @@ $ (document).ready(function(){
 
 });
 
+function miniStats(){
+    //1 : conjoncture / number / multibubble
 
+    //2 : Investissement /  / chart over time compared with region
+
+    //3 : contrats / words / sunBurst chart
+    fetch("/capeb/data/" + d.properties.siren_epci + "/sunburst")
+        .then(function (value) {
+            return value.json();
+        })
+        .catch(function (error) {
+            console.log("error");
+            console.log(error);
+            return {};
+        })
+        .then(function(jsonContrats){
+            //$("svg#sunburst").remove();
+            //sunBurst(jsonContrats);
+        });
+
+    //4 : embauche / oui/non plus représenté / double chart with rotation
+
+    //5 : distance / moyenne / bubble chart
+    fetch("/capeb/data/" + d.properties.siren_epci + "/distance")
+        .then(function (value) {
+            return value.json();
+        })
+        .catch(function (error) {
+            console.log("error");
+            console.log(error);
+            return {};
+        })
+        .then(function(jsonDistance){
+
+        });
+
+
+    //7 : MP / oui/non plus représenté / camembert -> nuage de mots
+
+}
