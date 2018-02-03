@@ -66,20 +66,19 @@ $ (document).ready(function(){
 
 
 function miniStats(regionStats, d) {
-    console.log(regionStats);
 
-    var colors = {
-        $scale_color10: "rgba(240,101,85,1)",
-    $scale_color20: "rgba(244,133,64,1)",
-    $scale_color30: "rgba(248,165,43,1)",
-    $scale_color40: "rgba(251,157,21,1)",
-    $scale_color50: "rgba(255,229,0,1)",
-    $scale_color60: "rgba(225,223,36,1)",
-    $scale_color70: "rgba(195,216,76,1)",
-    $scale_color80: "rgba(165,210,113,1)",
-    $scale_color90: "rgba(135,203,151,1)",
-    $scale_color100: "rgba(105,197,185,1)"
-    };
+    var colorsForRegion = [
+    "rgba(240,101,85,1)",
+    "rgba(244,133,64,1)",
+    "rgba(248,165,43,1)",
+    "rgba(251,157,21,1)",
+    "rgba(255,229,0,1)",
+    "rgba(225,223,36,1)",
+    "rgba(195,216,76,1)",
+    "rgba(165,210,113,1)",
+    "rgba(135,203,151,1)",
+    "rgba(105,197,185,1)"
+    ];
 
 
 
@@ -115,14 +114,15 @@ function miniStats(regionStats, d) {
             return {};
         })
         .then(function(json){
-            var max = 415;
-            var dataFrame = document.getElementsByClassName("info-distance");
-            var sum = 0;
+            var dataFrame = document.getElementsByClassName("info-distance")[0];
+            var mean = 0;
             json.values.forEach(function(value){
-                sum+= parseFloat(value[2]);
+                mean+= parseFloat(value[2]);
             });
-            sum/=json.values.length;
-            dataFrame[0].getElementsByClassName("donnee")[0].innerHTML = Math.round(sum);
+            mean/=json.values.length;
+            console.log(mean);
+            dataFrame.getElementsByClassName("donnee")[0].innerHTML = Math.round(mean);
+            dataFrame.style.backgroundColor = colorsForRegion[matchColorDistance(mean)];
         });
 
     //7 : MP / oui/non plus représenté / camembert -> nuage de mots
@@ -131,5 +131,28 @@ function miniStats(regionStats, d) {
 
 }
 
-function matchColor(value, mean, std){
+function matchColorDistance(value){
+    var firstInc = 7;
+    var secondInc = 7;
+    if(value <= 24+firstInc ){
+        return 9;
+    } else if(value<= 24+firstInc *2){
+        return 8;
+    } else if(value<= 24+firstInc *3){
+        return 7;
+    } else if(value<= 24+firstInc *4){
+        return 6;
+    } else if(value<= 24+firstInc *5){
+        return 5;
+    } else if(value<= 59+secondInc *6){
+        return 4;
+    } else if(value<= 59+secondInc *7){
+        return 3;
+    } else if(value<= 59+secondInc *8){
+        return 2;
+    } else if(value<= 59+secondInc *9){
+        return 1;
+    } else if(value<= 59+secondInc *10){
+        return 0;
+    }
 }
