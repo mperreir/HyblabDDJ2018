@@ -113,7 +113,7 @@ function miniStats(regionStats, d) {
         });
 
 
-	//3 & 8 pour eviter re faire un fetch
+	//3 & 8 & 7 pour eviter re faire un fetch
 		fetch("/capeb/data/" + d.properties.siren_epci + "/stats")
 		.then(function (value) {
             return value.json();
@@ -146,6 +146,10 @@ function miniStats(regionStats, d) {
 			var stat = names.map((val, id) => {return {"name": names[id] , "value" : parseInt(count[id])};})
 			stat = stat.sort((a, b) => {return b.value - a.value})
 			$(".info-dd h1").text(stat[0].name)
+			
+			
+			//7 : MP / oui/non plus représenté / camembert -> nuage de mots
+
         });
 	
     fetch("/capeb/data/" + d.properties.siren_epci + "/sunburst")
@@ -184,7 +188,6 @@ function miniStats(regionStats, d) {
             dataFrame.style.backgroundColor = colorsForRegion[matchColor(mean, 24, 59, 7, 13.2, true)];
         });
 
-    //7 : MP / oui/non plus représenté / camembert -> nuage de mots
 
 
 }
