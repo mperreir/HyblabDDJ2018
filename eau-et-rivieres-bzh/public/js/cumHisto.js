@@ -4,6 +4,7 @@ var annee = "2012";
 var dep1 = "Finistere";
 var dep2 = "Cotes_Armor";
 var lastChanged = dep1;
+
 buildHisto("#histGauche",annee,dep1);
 buildHisto("#histDroite",annee,dep2);
 
@@ -23,14 +24,16 @@ $('#FR-53').on('click', function(event) {changeOneHisto("Mayenne")});
 $('#FR-56').on('click', function(event) {changeOneHisto("Morbihan")});
 
 function changeOneHisto(newDep){
-  if(lastChanged == dep1){
-		dep2 = newDep;
-		upDateHisto("#histDroite");
-    lastChanged = dep2;
-	}else{
-		dep1 = newDep;
-		upDateHisto("#histGauche");
-		lastChanged = dep1;
+	if(newDep != dep1 & newDep != dep2){
+	  if(lastChanged == dep1){
+			dep2 = newDep;
+			upDateHisto("#histDroite");
+	    lastChanged = dep2;
+		}else{
+			dep1 = newDep;
+			upDateHisto("#histGauche");
+			lastChanged = dep1;
+		}
 	}
 }
 
@@ -47,7 +50,7 @@ function upDateHisto(histo){
 function buildHisto(parent, ann, dep){
 
 	var svg = d3.select(parent),
-	    margin = {top: 20, right: 20, bottom: 30, left: 40},
+	    margin = {top: 20, right: 80, bottom: 130, left: 80},
 	    width = +svg.attr("width") - margin.left - margin.right,
 	    height = +svg.attr("height") - margin.top - margin.bottom,
 	    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -86,10 +89,12 @@ function buildHisto(parent, ann, dep){
 	  var keys = columns.slice(2);
 	  //console.log(keys);
 
-	  data.sort(function(a, b) { return b.total - a.total; });
+	  //data.sort(function(a, b) { return b.total - a.total; });
 	  x.domain(data.map(function(d) { return d.DEPARTEMENT; }));
 	  y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
 	  z.domain(keys);
+
+		var lastCol = "ORGANES";
 
 	  g.append("g")
 	    .selectAll("g")
@@ -102,12 +107,72 @@ function buildHisto(parent, ann, dep){
 	      .attr("x", function(d) { return x(d.data.DEPARTEMENT); })
 	      .attr("y", function(d) { return y(d[1]); })
 	      .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+				.attr("fill", getColor)
 	      .attr("width", x.bandwidth());
 
-	  g.append("g")
-	      .attr("class", "axis")
-	      .attr("transform", "translate(0," + height + ")")
-	      .call(d3.axisBottom(x));
+		function getColor(d){
+
+			if(lastCol == "ORGANES"){
+				lastCol = "MORTEL";
+				return "#D42E1E";
+			}else if(lastCol == "MORTEL"){
+				lastCol="CANCER";
+				return "#F8C000";
+			}else if(lastCol == "CANCER"){
+				lastCol = "TOXIQUE";
+				return "#7CCAE2";
+			}else if(lastCol == "TOXIQUE"){
+				lastCol="GENETIQUE";
+				return "#008442";
+			}else  if(lastCol == "GENETIQUE"){
+				lastCol = "FOETUS";
+				return "#58BC81";
+			}else  if(lastCol == "FOETUS"){
+				lastCol = "ORGANES"
+				return "#AA3565";
+			}else  if(lastCol == "ORGANES"){
+				lastCol = "MORTEL";
+				return "black";
+			}else{
+				return "white";
+			}
+		}
+	  //g.append("g")
+	  //    .attr("class", "axis")
+	  //    .attr("transform", "translate(0," + String(height) + ")")
+	  //    .call(d3.axisBottom(x));
+		g.append("g")
+				.append("text")
+				.attr("x",90)
+				.attr("y",250)
+				.text(getCleanDepName)
+				.attr("font-family", "sans-serif")
+				.attr("font-size", "30px")
+				.style("text-anchor", "middle")
+
+		function getCleanDepName(){
+			switch(dep) {
+    		case "Finistere":
+        	return "Finistère";
+        break;
+    		case "Maine_et_Loire":
+        	return "Maine-et-Loire";
+        break;
+				case "Loire_Atlantique":
+					return "Loire-Atlantique";
+				break;
+				case "Ile_et_Vilaine":
+					return "Ille-et-Vilaine";
+				break;
+				case "Cotes_Armor":
+					return "Côtes-d'Armor";
+				break;
+    		default:
+					return dep;
+				break;
+			}
+		}
+
 
 	  g.append("g")
 	      .attr("class", "axis")
@@ -119,27 +184,51 @@ function buildHisto(parent, ann, dep){
 	      .attr("fill", "#000")
 	      .attr("font-weight", "bold")
 	      .attr("text-anchor", "start")
-	      .text("Population");
 
-	  var legend = g.append("g")
-	      .attr("font-family", "sans-serif")
-	      .attr("font-size", 10)
-	      .attr("text-anchor", "end")
-	    .selectAll("g")
-	    .data(keys.slice().reverse())
-	    .enter().append("g")
-	      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
-	  legend.append("rect")
-	      .attr("x", width - 19)
-	      .attr("width", 19)
-	      .attr("height", 19)
-	      .attr("fill", z);
+		function getLab(d){
 
-	  legend.append("text")
-	      .attr("x", width - 24)
-	      .attr("y", 9.5)
-	      .attr("dy", "0.32em")
-	      .text(function(d) { return d; });
+			if(lastLab == "ORGANES"){
+				lastLab = "MORTEL";
+			}else if(lastLab == "MORTEL"){
+				lastLab="CANCER";
+			}else if(lastLab == "CANCER"){
+				lastLab = "TOXIQUE";
+			}else if(lastLab == "TOXIQUE"){
+				lastLab="GENETIQUE";
+			}else  if(lastLab == "GENETIQUE"){
+				lastLab = "FOETUS";
+			}else  if(lastLab == "FOETUS"){
+				lastLab = "ORGANES"
+			}else  if(lastLab == "ORGANES"){
+				lastLab = "MORTEL";
+		  }
+			return lastLab;
+		}
+
+		if(dep == dep2){
+
+			var lastLab = "ORGANES";
+		  var legend = g.append("g")
+		      .attr("font-family", "sans-serif")
+		      .attr("font-size", 10)
+		      .attr("text-anchor", "end")
+		    .selectAll("g")
+		    .data(keys.slice().reverse())
+		    .enter().append("g")
+		      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+		  legend.append("rect")
+		      .attr("x", width )
+		      .attr("width", 120)
+		      .attr("height", 19)
+		      .attr("fill", getColor);
+		  legend.append("text")
+		      .attr("x", width +40)
+		      .attr("y", 9.5)
+		      .attr("dy", "0.32em")
+					.style("text-anchor", "middle")
+		      .text(getLab);
+
+		}
 	});
 }
