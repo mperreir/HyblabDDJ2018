@@ -280,9 +280,7 @@ body{
     font-size: 7px;
 }
 
-
-/* Bouton en savoir plus */
-#enSavoirPlusP1{
+.enSavoirPlusP1{
     font-weight: 400;
     border: solid;
     border-width: 5px;
@@ -297,9 +295,7 @@ body{
 }
 
 
-
-/* Bouton exit */
-#enSavoirPlusHautP1{
+.enSavoirPlusHautP1{
     font-weight: 700;
     display:flex;
     flex-direction: row;
