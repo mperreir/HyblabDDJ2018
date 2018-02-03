@@ -6,21 +6,21 @@
 
       
 
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 400 1000" preserveAspectRatio="xMinYMin meet">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 300 1000" preserveAspectRatio="xMinYMin meet">
     	<title>Eau et Rivières de Bretagne !</title>
    		<desc>Des pesticides se battent contre notre logo</desc>
 
-        <image href="img/PestiBusters_Logo.png" alt="Logo de pestibusters" height="200" width="200" x="400" y="120"/>
+        <image href="img/PestiBusters_Logo.png" alt="Logo de pestibusters" height="200" width="200" x="400" y="60"/>
 
         <!-- GAUCHE !-->
-		<image href="img/P_1.png" alt="un pesticide" height="70" width="70" x="10" y="180" opacity="0">
+		<image href="img/P_1.png" alt="un pesticide" height="70" width="70" x="10" y="125" opacity="0">
     		<animate attributeName="x" attributeType="XML" from="10" to="405" begin="0s" dur="1s"/>
     		<animate attributeName="x" attributeType="XML" from="405" to="10" begin="1s" dur="0.5s"/>
             <animate attributeName="opacity" attributeType="HTML" from="1" to="1" begin="0s" dur="1s"/>
             <animate attributeName="opacity" attributeType="HTML" from="1" to="0" begin="1s" dur="0.5s"/>
     	</image>
         <!-- DROITE !-->
-        <image href="img/P_2.png" alt="un pesticide" height="70" width="70" x="920" y="180" opacity="0">
+        <image href="img/P_2.png" alt="un pesticide" height="70" width="70" x="920" y="125" opacity="0">
             <animate attributeName="x" attributeType="XML" from="920" to="525" begin="0.5s" dur="1s"/>
             <animate attributeName="x" attributeType="XML" from="525" to="920" begin="1.5s" dur="0.5s"/>
             <animate attributeName="opacity" attributeType="HTML" from="1" to="1" begin="0s" dur="1.5s"/>
@@ -29,37 +29,37 @@
         <!-- HAUT GAUCHE !-->
     	<image href="img/P_3.png" alt="un pesticide" height="70" width="70" x="10" y="10" opacity="0">
     		<animate attributeName="x" attributeType="XML" from="10" to="425" begin="0.25s" dur="1s"/>
-    		<animate attributeName="y" attributeType="XML" from="10" to="140" begin="0.25s" dur="1s"/>
+    		<animate attributeName="y" attributeType="XML" from="10" to="60" begin="0.25s" dur="1s"/>
     		<animate attributeName="x" attributeType="XML" from="425" to="10" begin="1.25s" dur="0.5s"/>
-    		<animate attributeName="y" attributeType="XML" from="140" to="10" begin="1.25s" dur="0.5s"/>
+    		<animate attributeName="y" attributeType="XML" from="60" to="10" begin="1.25s" dur="0.5s"/>
             <animate attributeName="opacity" attributeType="HTML" from="1" to="1" begin="0s" dur="1.25s"/>
             <animate attributeName="opacity" attributeType="HTML" from="1" to="0" begin="1.25s" dur="0.5s"/>
     	</image>
-        <!-- BAS DROITE !-->
-    	<image href="img/P_4.png" alt="un pesticide" height="70" width="70" x="920" y="336" opacity="0">
-    		<animate attributeName="x" attributeType="XML" from="920" to="575" begin="0.2s" dur="1s"/>
-    		<animate attributeName="y" attributeType="XML" from="336" to="220" begin="0.2s" dur="1s"/>
-    		<animate attributeName="x" attributeType="XML" from="575" to="920" begin="1.2s" dur="0.5s"/>
-    		<animate attributeName="y" attributeType="XML" from="220" to="336" begin="1.2s" dur="0.5s"/>
-            <animate attributeName="opacity" attributeType="HTML" from="1" to="1" begin="0s" dur="1.2s"/>
-            <animate attributeName="opacity" attributeType="HTML" from="1" to="0" begin="1.2s" dur="0.5s"/>
-    	</image>
         <!-- HAUT DROITE !-->
         <image href="img/P_5.png" alt="un pesticide" height="70" width="70" x="920" y="10" opacity="0">
-            <animate attributeName="x" attributeType="XML" from="920" to="575" begin="0.25s" dur="1s"/>
-            <animate attributeName="y" attributeType="XML" from="10" to="140" begin="0.25s" dur="1s"/>
-            <animate attributeName="x" attributeType="XML" from="575" to="920" begin="1.25s" dur="0.5s"/>
-            <animate attributeName="y" attributeType="XML" from="140" to="10" begin="1.25s" dur="0.5s"/>
+            <animate attributeName="x" attributeType="XML" from="920" to="525" begin="0.25s" dur="1s"/>
+            <animate attributeName="y" attributeType="XML" from="10" to="60" begin="0.25s" dur="1s"/>
+            <animate attributeName="x" attributeType="XML" from="525" to="920" begin="1.25s" dur="0.5s"/>
+            <animate attributeName="y" attributeType="XML" from="60" to="10" begin="1.25s" dur="0.5s"/>
             <animate attributeName="opacity" attributeType="HTML" from="1" to="1" begin="0s" dur="1.25s"/>
             <animate attributeName="opacity" attributeType="HTML" from="1" to="0" begin="1.25s" dur="0.5s"/>
         </image>
         <!-- BAS GAUCHE !-->
-        <image href="img/P_6.png" alt="un pesticide" height="70" width="70" x="10" y="336" opacity="0">
+        <image href="img/P_6.png" alt="un pesticide" height="70" width="70" x="10" y="250" opacity="0">
             <animate attributeName="x" attributeType="XML" from="10" to="405" begin="0.3s" dur="1s"/>
-            <animate attributeName="y" attributeType="XML" from="336" to="220" begin="0.3s" dur="1s"/>
+            <animate attributeName="y" attributeType="XML" from="250" to="210" begin="0.3s" dur="1s"/>
             <animate attributeName="x" attributeType="XML" from="405" to="10" begin="1.3s" dur="0.5s"/>
-            <animate attributeName="y" attributeType="XML" from="220" to="336" begin="1.3s" dur="0.5s"/>
+            <animate attributeName="y" attributeType="XML" from="210" to="250" begin="1.3s" dur="0.5s"/>
             <animate attributeName="opacity" attributeType="HTML" from="1" to="1" begin="0s" dur="1.3s"/>
             <animate attributeName="opacity" attributeType="HTML" from="1" to="0" begin="1.3s" dur="0.5s"/>
+        </image>
+        <!-- BAS DROITE !-->
+        <image href="img/P_4.png" alt="un pesticide" height="70" width="70" x="920" y="250" opacity="0">
+            <animate attributeName="x" attributeType="XML" from="920" to="525" begin="0.2s" dur="1s"/>
+            <animate attributeName="y" attributeType="XML" from="250" to="210" begin="0.2s" dur="1s"/>
+            <animate attributeName="x" attributeType="XML" from="525" to="920" begin="1.2s" dur="0.5s"/>
+            <animate attributeName="y" attributeType="XML" from="210" to="250" begin="1.2s" dur="0.5s"/>
+            <animate attributeName="opacity" attributeType="HTML" from="1" to="1" begin="0s" dur="1.2s"/>
+            <animate attributeName="opacity" attributeType="HTML" from="1" to="0" begin="1.2s" dur="0.5s"/>
         </image>
     </svg>
