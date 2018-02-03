@@ -115,6 +115,7 @@ for(epci in epcis){
 eff
 chemin
 write.csv(file="sunburst.csv",x=sunburst,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
+
 length(car_set)
 mean(car_set[,c])
 
@@ -148,3 +149,25 @@ mp[,'CDD']
 d[,'Code.postal']
 act
 data$CDD
+
+
+
+
+#stat de la region 
+#conjoncture
+#investisement
+#zone intervention
+#Marche public 
+
+stat_region = matrix(nrow = 0, ncol = 4)
+colnames(stat_region) = c('Conjoncture.calculée.Moy', 'Investissement.Max', 'Zone.intervention.Moy', 'Marchés.publics.Max')
+
+cc = mean(data$Conjoncture.calculée, na.rm=T)
+im = names(which.max(table(data$Investissement)))
+dm = mean(data$Zone.intervention, na.rm =T)
+mp = names(which.max(table(data$Marchés.publics)))
+
+stat_region = rbind(c(cc, im, dm, mp),stat_region)
+
+write.csv(file="stats_region.csv",x=stat_region,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
+
