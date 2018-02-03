@@ -41,5 +41,13 @@
   padding: 45px 20px 20px 30px;
   box-sizing: border-box;
   transform: rotate3d(1, 0, 0, 180deg );
-  background-color: red;
+  background-color: $data-metier1;
+  >.description-data{
+    width: 100%;
+    @extend %titre-titre;
+    hyphens: manual;
+  }
+  >span{
+    @extend %texte-labeur;
+  }
 }
