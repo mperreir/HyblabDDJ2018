@@ -10,13 +10,18 @@
     src: url('GothamFontsFamily/Gotham-Book.otf');
 }
 
+body{
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1;
+}
+
 .title {
-    font-family: 'Gotham-Black';
+    font-weight: 700;
     font-size: 17px;
 }
 
 .normal {
-    font-family: 'Gotham-Book';
+    font-weight: 400;
     font-size: 12px;
 }
 
@@ -29,6 +34,9 @@
 
 
 /* ----- Page 1 ----- */
+#page1DisplayOn{
+    filter :blur(0px);
+}
 /* Section 0 */
 #section0 {
     float: left;
@@ -277,11 +285,31 @@
 }
 
 .st16 {
-    font-family: 'Gotham-Black';
+    font-weight: 700;;
 }
 
 .st17 {
     font-size: 7px;
+}
+
+#enSavoirPlusP1{
+    font-weight: 400;
+    border: solid;
+    border-width: 5px;
+    position: absolute;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 0px;
+    padding: 20px 20px 5px 20px;
+    background: white;
+    z-index: 2;
+    display: none;
+}
+
+#exitP1{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 

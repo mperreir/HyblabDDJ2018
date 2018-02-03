@@ -24,6 +24,8 @@ fetch('data/datas.json')
             .textContent = json.data;
     });
 
+    //INDEX
+
     $(function() {
         $('#boutonGauche').hide();
         $('#enSavoirPlus').hide();
@@ -44,13 +46,25 @@ fetch('data/datas.json')
     });
 
     $('#boutonEnSavoirPlus').click(function() { 
-        $('#displayOn').css('filter','blur(5px)');
+        $('#displayOn').css('filter','blur(3px)');
         $('#enSavoirPlus').show();
-        $('#enSavoirPlus').css('filter','blur(0px)');
         
     });
 
     $('#boutonExit').click(function() { 
         $('#displayOn').css('filter','blur(0px)');
         $('#enSavoirPlus').hide();
+    });
+
+    //DATAVIZ
+
+    $('#buttonSP').click(function() { 
+        $('#page1DisplayOn').css('filter','blur(3px)');
+        $('#enSavoirPlusP1').show();
+        
+    });
+
+    $('#boutonExitP1').click(function() { 
+        $('#page1DisplayOn').css('filter','blur(0px)');
+        $('#enSavoirPlusP1').hide();
     });

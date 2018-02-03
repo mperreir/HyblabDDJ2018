@@ -74,7 +74,6 @@ body{
 	background: white;
 	z-index: 2;
 	display: none;
-	filter: blur(0px);
 }
 
 #exit{
