@@ -13,8 +13,10 @@
     transform-style: preserve-3d;
     transition: transform 0.3s;
   }
-  >.card:hover{
-    transform: rotateY( 180deg );
+}
+.block-data:hover{
+  >.card{
+    transform: rotate3d(1, 0, 0, 180deg );
   }
 }
 
@@ -38,6 +40,6 @@
   backface-visibility: hidden;
   padding: 45px 20px 20px 30px;
   box-sizing: border-box;
-  transform: rotateY( 180deg );
+  transform: rotate3d(1, 0, 0, 180deg );
   background-color: red;
 }

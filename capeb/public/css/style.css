@@ -234,12 +234,12 @@ a {
   transition: transform 0.3s;
 }
 
-/* line 16, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.block-data > .card:hover {
-  transform: rotateY(180deg);
+/* line 18, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+.block-data:hover > .card {
+  transform: rotate3d(1, 0, 0, 180deg);
 }
 
-/* line 22, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+/* line 24, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .bloc-recto {
   margin: 0;
   display: block;
@@ -251,7 +251,7 @@ a {
   box-sizing: border-box;
 }
 
-/* line 32, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+/* line 34, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .bloc-verso {
   margin: 0;
   display: block;
@@ -261,7 +261,7 @@ a {
   backface-visibility: hidden;
   padding: 45px 20px 20px 30px;
   box-sizing: border-box;
-  transform: rotateY(180deg);
+  transform: rotate3d(1, 0, 0, 180deg);
   background-color: red;
 }
 
