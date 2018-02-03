@@ -102,6 +102,19 @@ function miniStats(regionStats, d) {
 
 
     //2 : Investissement /  / chart over time compared with region
+    fetch("/capeb/data/" + d.properties.siren_epci + "/investissement")
+        .then(function (value) {
+            return value.json();
+        })
+        .catch(function (error) {
+            console.log("error");
+            console.log(error);
+            return {};
+        })
+        .then(function(json){
+            var dataFrame = document.getElementsByClassName("info-investissement")[0];
+            dataFrame.getElementsByClassName("donnee")[0].innerHTML = json.values[3][1]; // only 2017 and percentage of yes 
+        }); 
 
 
 	//3 & 8 pour eviter re faire un fetch
