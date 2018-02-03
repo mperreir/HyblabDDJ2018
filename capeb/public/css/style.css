@@ -23,7 +23,7 @@ a {
 }
 
 /* line 7, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/modules/_extends.scss */
-.textes-intro > .title, .block-data > .Texte, .block-data .donneetexte {
+.textes-intro > .title, .bloc-recto > .Texte, .bloc-recto .donneetexte {
   font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-weight: bold;
@@ -37,28 +37,28 @@ a {
 }
 
 /* line 25, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/modules/_extends.scss */
-.textes-intro > .texte, .block-data > .description, .button-zoom > .niveau-zoom {
+.textes-intro > .texte, .button-zoom > .niveau-zoom, .bloc-recto > .description {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: medium;
 }
 
 /* line 31, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/modules/_extends.scss */
-.block-data > .donnee {
+.bloc-recto > .donnee {
   font-family: "Montserrat", sans-serif;
   font-size: 133px;
   font-weight: 800;
 }
 
 /* line 37, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/modules/_extends.scss */
-.block-data > .echelle {
+.bloc-recto > .echelle {
   font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-weight: medium;
 }
 
 /* line 43, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/modules/_extends.scss */
-.block-data .n1, .block-data .n2, .block-data .n3, .block-data .n4 {
+.bloc-recto .n1, .bloc-recto .n2, .bloc-recto .n3, .bloc-recto .n4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
 }
@@ -218,117 +218,51 @@ a {
 /* style des blocs de data du dashboard */
 /* line 3, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .block-data {
-  padding: 45px 20px 20px 30px;
   color: #ffffff;
-  overflow: hidden;
   position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  perspective: 800px;
 }
 
-/* line 8, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.block-data > .donnee {
-  text-align: center;
+/* line 9, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+.block-data > .card {
   width: 100%;
-}
-
-/* line 13, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.block-data .n1 {
-  text-align: right;
-  font-size: 80px;
-}
-
-/* line 18, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.block-data .n2 {
-  text-align: right;
-  font-size: 60px;
-}
-
-/* line 23, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.block-data .n3 {
-  text-align: right;
-  font-size: 40px;
-}
-
-/* line 28, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.block-data .n4 {
-  text-align: right;
-  font-size: 20px;
-}
-
-/* line 34, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.block-data > .echelle {
+  height: 100%;
   position: absolute;
-  left: -20px;
-  bottom: 20px;
-  width: 100%;
-  text-align: right;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
 }
 
-/* line 43, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.block-data > .Texte {
-  text-align: left;
-  line-height: 1.1;
-  width: 100%;
-  margin-bottom: 20px;
+/* line 16, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+.block-data > .card:hover {
+  transform: rotateY(180deg);
 }
 
-/* line 50, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.block-data > .description {
-  text-align: left;
-  width: 100%;
-}
-
-/* line 55, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.block-data > .picto {
+/* line 22, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+.bloc-recto {
+  margin: 0;
+  display: block;
   position: absolute;
-  width: 50%;
-  margin-left: 15%;
-  bottom: 20px;
-}
-
-/* line 61, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.block-data .donneetexte {
-  text-align: center;
   width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 45px 20px 20px 30px;
+  box-sizing: border-box;
 }
 
-/* line 68, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.info-epci {
-  background-color: #34EBC2;
-}
-
-/* line 72, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.info-conjoncture {
-  background-color: #34EBC2;
-}
-
-/* line 76, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.info-investissement {
-  background-color: #34EBC2;
-}
-
-/* line 80, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.info-emploi {
-  background-color: #17988b;
-}
-
-/* line 84, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.info-distance {
-  background-color: #34EBC2;
-}
-
-/* line 88, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.info-contrat {
-  background-color: #68c0ed;
-}
-
-/* line 92, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.info-mp {
-  background-color: #34EBC2;
-}
-
-/* line 96, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
-.info-dd {
-  background-color: #34EBC2;
+/* line 32, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+.bloc-verso {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 45px 20px 20px 30px;
+  box-sizing: border-box;
+  transform: rotateY(180deg);
+  background-color: red;
 }
 
 /* style de la partie zoom de la nav-bar */
@@ -355,6 +289,119 @@ a {
   text-align: left;
   height: 48px;
   line-height: 48px;
+}
+
+/* line 2, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.bloc-recto > .donnee {
+  margin-top: 20%;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 8, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.bloc-recto .n1 {
+  text-align: right;
+  font-size: 4em;
+  line-height: 1;
+}
+
+/* line 14, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.bloc-recto .n2 {
+  text-align: right;
+  font-size: 3em;
+  line-height: 1;
+}
+
+/* line 20, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.bloc-recto .n3 {
+  text-align: right;
+  font-size: 2em;
+  line-height: 1;
+}
+
+/* line 26, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.bloc-recto .n4 {
+  text-align: right;
+  font-size: 1em;
+  line-height: 1;
+}
+
+/* line 33, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.bloc-recto > .echelle {
+  position: absolute;
+  left: -20px;
+  bottom: 20px;
+  width: 100%;
+  text-align: right;
+}
+
+/* line 42, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.bloc-recto > .Texte {
+  text-align: left;
+  line-height: 1.1;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* line 49, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.bloc-recto > .description {
+  text-align: left;
+  width: 100%;
+}
+
+/* line 54, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.bloc-recto > .picto {
+  position: absolute;
+  width: 50%;
+  margin-left: 15%;
+  bottom: 20px;
+}
+
+/* line 60, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.bloc-recto .donneetexte {
+  margin-top: 30%;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 68, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.info-epci {
+  background-color: #34EBC2;
+}
+
+/* line 72, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.info-conjoncture {
+  background-color: #34EBC2;
+}
+
+/* line 76, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.info-investissement {
+  background-color: #34EBC2;
+}
+
+/* line 80, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.info-emploi {
+  background-color: #17988b;
+}
+
+/* line 84, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.info-distance {
+  background-color: #34EBC2;
+}
+
+/* line 88, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.info-contrat {
+  background-color: #68c0ed;
+}
+
+/* line 92, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.info-mp {
+  background-color: #34EBC2;
+}
+
+/* line 96, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */
+.info-dd {
+  background-color: #34EBC2;
 }
 
 /*importation objets*/
@@ -440,10 +487,9 @@ a {
   grid-row: 1;
   justify-self: stretch;
   align-self: stretch;
-  z-index: 1;
 }
 
-/* line 15, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-dashboard.scss */
+/* line 14, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-dashboard.scss */
 .partie-dashboard > .bloc-data {
   grid-auto-flow: row;
   justify-self: stretch;

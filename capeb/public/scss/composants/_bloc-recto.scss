@@ -1,0 +1,98 @@
+.bloc-recto{
+  >.donnee{
+    @extend %data-donnee;
+    margin-top: 20%;
+    text-align: center;
+    width: 100%;
+  }
+  .n1{
+    @extend %data-liste;
+    text-align: right;
+    font-size: 4em;
+    line-height: 1;
+  }
+  .n2{
+    @extend %data-liste;
+    text-align: right;
+    font-size: 3em;
+    line-height: 1;
+  }
+  .n3{
+    @extend %data-liste;
+    text-align: right;
+    font-size: 2em;
+    line-height: 1;
+  }
+  .n4{
+    @extend %data-liste;
+    text-align: right;
+    font-size: 1em;
+    line-height: 1;
+  }
+
+  >.echelle{
+    position: absolute;
+    left: -20px;
+    bottom: 20px;
+    @extend %data-echelle;
+    width: 100%;
+    text-align: right;
+
+  }
+  >.Texte{
+    @extend %titre-titre;
+    text-align: left;
+    line-height: 1.1;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  >.description{
+    @extend %texte-labeur;
+    text-align: left;
+    width: 100%;
+  }
+  >.picto{
+    position: absolute;
+    width: 50%;
+    margin-left: 15%;
+    bottom: 20px;
+  }
+  .donneetexte{
+    @extend %titre-titre;
+    margin-top: 30%;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.info-epci{
+  background-color: $main-color;
+}
+
+.info-conjoncture{
+  background-color: $main-color;
+}
+
+.info-investissement{
+  background-color: $main-color;
+}
+
+.info-emploi{
+  background-color: $main-darker;
+}
+
+.info-distance{
+  background-color: $main-color;
+}
+
+.info-contrat{
+  background-color: $blue-color;
+}
+
+.info-mp{
+  background-color: $main-color;
+}
+
+.info-dd{
+  background-color: $main-color;
+}
