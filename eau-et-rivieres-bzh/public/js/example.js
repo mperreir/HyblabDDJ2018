@@ -32,14 +32,14 @@ fetch('data/datas.json')
     })
 
     $('#boutonDroite').click(function() {
-        $('#intro').text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque lacus vel urna tincidunt, non iaculis orci fermentum. Donec fringilla risus id dapibus posuere. Maecenas gravida posuere urna eu imperdiet. Proin tempor egestas nisl, a tempus magna. Duis vel euismod augue, vel aliquet mauris. Nullam nec tortor non odio condimentum facilisis. Cras magna ex, ornare at facilisis sed, finibus a eros. Nam commodo est ex, vitae pretium nunc varius scelerisque. Suspendisse nec diam ultrices ante sollicitudin porttitor eget in nibh.");
+        $('#intro').text("Les scientifiques me considèrent comme un problème de santé publique. Mes effets sur l’humain, apparaissent à différentes échelles de toxicité : aiguë, chronique et génétique. Je contamine par inhalation, contact et ingestion. Entre mort subite ou prématurée, baisse des défenses immunitaire, atteinte à la fertilité et malformations ou effets tératogènes, je suis un vrai danger pour l’homme. (en savoir plus toxicité des pesticides largement sous-évaluée) Je suis partout : dans vos cheveux, dans vos urines, dans votre alimentation et surtout dans ce qu’il y a plus vital : l’eau. Allons voir comment je m’y cache.");
         $('#boutonEnSavoirPlus').show();
         $('#boutonDroite').hide();
         $('#boutonGauche').show();
     });
 
     $('#boutonGauche').click(function() {
-        $('#intro').text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+        $('#intro').text("Substance chimique non naturelle, j’ai été créé et développé par l’homme lors de la révolution chimique du début du XXe siècle. De mon étymologie caedere et pestis, le latin me “tue” et me considère comme un “fléau”. Les anglais quant à eux, me surnomment le “ravageur”. Pour certains je suis un produit phytosanitaire, utilisé en agriculture pour lutter contre les organismes vivants “nuisibles”, mais pour la plupart, je suis connu sous un autre nom : pesticide.");
         $('#boutonEnSavoirPlus').hide();
         $('#boutonGauche').hide();
         $('#boutonDroite').show();

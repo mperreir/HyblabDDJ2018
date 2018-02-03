@@ -7,6 +7,7 @@ header{
 body{
 	font-family: 'Montserrat', sans-serif;
 	background : #96edbd;
+	text-align: justify;
 	z-index: 1;
 }
 
@@ -46,10 +47,12 @@ body{
 	border:solid;
 	border-radius: 5px;
 	background: #58BC81;
-	width: 150px;
+	width: 20%;
 	margin: auto;
-	margin-top: 5px;
+	margin-top: 20px;
+	padding: 20px 20px 20px 20px;
 	font-weight: 700;
+	font-size: 1.2em;
 	text-decoration: none;
 	color: black;
 }
@@ -68,18 +71,35 @@ body{
 	border: solid;
 	border-width: 5px;
 	position: absolute;
-	margin-right: 20%;
-	margin-left: 20%;
-	margin-top: 300px;
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-top: 10%;
+	padding: 20px;
 	background: white;
 	z-index: 2;
 	display: none;
 }
 
-#exit{
+#enSavoirPlusHaut{
+	font-weight: 700;
 	display:flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
+}
+
+#boutonExit{
+	height: 33px;
+	width: 33px;
+}
+
+#enSavoirPlusBas{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#enSavoirPlusBas p{
+	width: 45%;
 }
 
 #displayOn{
