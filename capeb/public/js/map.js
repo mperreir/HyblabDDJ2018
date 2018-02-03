@@ -103,6 +103,31 @@ function miniStats(regionStats, d) {
         });
 
     //4 : embauche / oui/non plus représenté / double chart with rotation
+    fetch("/capeb/data/" + d.properties.siren_epci + "/stats")
+		.then(function (value) {
+            return value.json();
+        })
+        .catch(function (error) {
+            console.log("error");
+            console.log(error);
+            return {};
+        })
+        .then(function(stats){
+           var contrats = stats.Contrats.values.slice(1)
+           var stat = contrats.map((val, id) => {return {"name": stats.Contrats.labels[id + 1] , "value" : parseInt(val[val.length - 1])};})
+           stat = stat.sort((a, b) => {return b.value - a.value})
+           
+           $(".info-contrat h1").text(stat[0].name)
+           var h = 1
+		   console.log(stat)
+           for(var i = 1; i < 4; i++){
+			   if(stat[i].value < stat[i - 1].value){
+				 h++;
+			   }
+			   $(".info-contrat").append("<h" + h + " class='donnee'>" + stat[i].name + "</h" + h + ">")
+		   }
+
+        });
 
     //5 : distance / moyenne / bubble chart
     fetch("/capeb/data/" + d.properties.siren_epci + "/distance")
