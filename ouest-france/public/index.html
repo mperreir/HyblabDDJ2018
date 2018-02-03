@@ -14,14 +14,20 @@
   <script src="js/main.js" defer></script>
 </head>
 <body>
-<div id="fullpage">
+<div id="fullpage" >
   <!-- ######################Page 1 #############################################-->
 	<div class="section " id="section0">
     <div class="col s1"> 
     </div>
-    <div class="col s11"> 
+    <div class="col s11">
+      <blockquote id ="bulleAccueil" class = "accueil-obtuse--hidden">
+            <h1 class = "TitreAccueil">Où sont les français ? </h1>
+            <h2 class = "TitreAccueil"> Hey, moi c'est Jack ! </h2>
+            <h3 class = "TitreAccueil">Depuis maintenant 13 ans je pratique le « Headbang » devant les plus grandes scènes de Hellfest. C’est le deuxième festival de métal d’Europe après le Wacken en Allemagne! Lieu de rencontre entre passionnés et amateurs, Clisson acceuil plus de 150 000 festivaliers chaque année.
+            <br><br>
+            WELCOME TO HELL(fest) !</h3>
+      </blockquote> 
       <img id = "logo" class = "logo--hidden" src="img/Hellfest-logo.svg">
-      <img class = "jack" src="img/JACKYBOYIII.svg">
       <img id = "jackGif" class = "jackGif" src="img/HeadbanggingJackII.gif">
     </div>
 	</div>
@@ -29,6 +35,7 @@
       <!-- ################# Menu #############################################-->
       <div class="col s1">
          <div class = "menu">
+        <div id = "PodiumEvolution" class="pointEvolution"><p class = "dateMenu"> Evolution</p> </div>
         <div id = "Podium2006" class="point"><p class = "dateMenu"> 2006</p> </div>
         <div id = "Podium2007" class="point"><p class = "dateMenu"> 2007</p> </div>
         <div id = "Podium2008" class="point"><p class = "dateMenu"> 2008</p> </div>
@@ -45,6 +52,12 @@
       </div>
       <!-- ################# Fin Menu #################################################################################################-->
       <div class="col s11">
+        <h1 class = "titres">Les groupes : Leurs origines</h1>
+        <img class = "barre" src = "img/TimeLine-SVG/Trait-SVG.svg">
+        <blockquote class = "podium-obtuse">
+            <p id ="textePodium" class = "dateMenu"> Environ ⅓ des groupes présents pendant ces éditions viennent du pays de la country. Ils devancent de loin la France et le Royaume-Uni qui à eux deux ne parviennent même pas à égaler les Etats-Unis.</p>
+        </blockquote>
+        <div id = "podium" class ="podium--hidden">
         <img class = "podium" src="img/Data1/podium.svg">
         <img id = "premierAmericain" class = "americain premier drapeau" src="img/Data1/drapeau-etat-unis.svg">
         <img id = "deuxiemeAmericain" class = "americain deuxieme drapeau--hidden" src="img/Data1/drapeau-etat-unis.svg">
@@ -54,17 +67,19 @@
         <img id = "troisiemeFrancais" class = "francais troisieme drapeau--hidden" src="img/Data1/drapeau-france.svg">
         <img id = "premierAllemand" class = "allemand premier drapeau--hidden" src="img/Data1/drapeau-allemagne.svg">
         <img id = "deuxiemeAllemand" class = "allemand deuxieme drapeau--hidden" src="img/Data1/drapeau-allemagne.svg">
-        <img id = "troisiemeAllemand" class = "allemand troisieme drapeau" src="img/Data1/drapeau-allemagne.svg">
+        <img id = "troisiemeAllemand" class = "allemand troisieme drapeau--hidden" src="img/Data1/drapeau-allemagne.svg">
         <img id = "premierAnglais" class = "anglais premier drapeau--hidden" src="img/Data1/drapeau-royaume-unis.svg">
         <img id = "deuxiemeAnglais" class = "anglais deuxieme drapeau--hidden" src="img/Data1/drapeau-royaume-unis.svg">
-        <img id = "troisiemeAnglais" class = "anglais troisieme drapeau--hidden" src="img/Data1/drapeau-royaume-unis.svg">
+        <img id = "troisiemeAnglais" class = "anglais troisieme drapeau" src="img/Data1/drapeau-royaume-unis.svg">
         <img id = "troisiemeSuede" class = "suede troisieme drapeau--hidden" src="img/Data1/drapeau-suede.svg">
+      </div>
       </div>
 	</div>
   <!-- ######################Page 2 ##################################################################################################""-->
 	<div class="section" id="section2">
       <div class="col s1">
          <div class = "menu">
+        <div class="pointEvolution"><p class = "dateMenu"> Evolution</p> </div>
         <div class="point"><p class = "dateMenu"> 2006</p> </div>
         <div class="point"><p class = "dateMenu"> 2007</p> </div>
         <div class="point"><p class = "dateMenu"> 2008</p> </div>
@@ -89,6 +104,7 @@
       <!-- ################# Menu #########################################################################################################-->
       <div class="col s1" id = "menuCarte">
          <div class = "menu">
+        <div id = "carteEvolution" class="pointEvolution"><p class = "dateMenu"> Evolution</p> </div>
         <div id = "carte2006" class="point"><p class = "dateMenu"> 2006</p> </div>
         <div id = "carte2007" class="point"><p class = "dateMenu"> 2007</p> </div>
         <div id = "carte2008" class="point"><p class = "dateMenu"> 2008</p> </div>
@@ -105,34 +121,24 @@
       </div>
       <!-- ################# Fin Menu ################################################################################################-->
       <div class="col s11">
-          <div class ="2006 divCarte" id = "carte06">
+        <h1 class = "titres">Size doesn't matter</h1>
+        <img class = "barre" src = "img/TimeLine-SVG/Trait-SVG.svg">
+        <div class ="2006 divCarte hidden" id = "carte06">
           <img id = "pin2006-01" class = "pin--2006-1" src="img/Data3/2006/epingle-hardNheavy.svg">
           <img id = "pin2006-02" class = "pin--2006-2" src="img/Data3/2006/epingle-main.svg">
           <img class = "carte" src="img/Data3/2006/map-2006.svg">
-          <img id = "jack" class = "jack" src="img/JACKYBOYII.svg">
-          <blockquote class = "example-obtuse">
-            <p> bonjour je m'appelle Jack et balbalneklfjzeoikfljz  epflkz  elpfkpzeokfpzelkfmz elfezlfpêzlfpêrlfêrplfpêrlf </p>
-          </blockquote>
         </div>
         <div class ="2007 divCarte hidden" id = "carte07">
           <img id = "pin2007-01" class = "pin--2007-1" src="img/Data3/2007/Вpingle-discover-stage.svg">
           <img id = "pin2007-02"class = "pin--2007-2" src="img/Data3/2007/Вpingle-gibson-stage.svg">
           <img id = "pin2007-03" class = "pin--2007-3" src="img/Data3/2007/Вpingle-main.svg">
           <img class = "carte" src="img/Data3/2007/map-2007.svg" >
-          <img class = "jack" src="img/JACKYBOYII.svg">
-          <blockquote class = "example-obtuse">
-            <p> bonjour je m'appelle Jack et balbalneklfjzeoikfljz  epflkz  elpfkpzeokfpzelkfmz elfezlfpêzlfpêrlfêrplfpêrlf </p>
-          </blockquote>
         </div>
         <div class ="2008 divCarte hidden" id = "carte08">
           <img id = "pin2008-01" class = "pin--2008-1" src="img/Data3/2008/epingle-discover-stage.svg">
           <img id = "pin2008-02" class = "pin--2008-2" src="img/Data3/2008/epingle-main02.svg">
           <img id = "pin2008-03" class = "pin--2008-3" src="img/Data3/2008/epingle-main01.svg">
           <img class = "carte" src="img/Data3/2008/map-2008.svg" >
-          <img class = "jack" src="img/JACKYBOYII.svg">
-          <blockquote class = "example-obtuse">
-            <p> bonjour je m'appelle Jack et balbalneklfjzeoikfljz  epflkz  elpfkpzeokfpzelkfmz elfezlfpêzlfpêrlfêrplfpêrlf </p>
-          </blockquote>
         </div>
         <div class ="2009 divCarte hidden" id = "carte09">
           <img id = "pin2009-01" class = "pin--2009-1" src="img/Data3/2009-2011/epingle-main01.svg">
@@ -140,10 +146,6 @@
           <img id = "pin2009-03" class = "pin--2009-3" src="img/Data3/2009-2011/epingle-RockHard-Tent.svg">
           <img id = "pin2009-04" class = "pin--2009-4" src="img/Data3/2009-2011/epingle-terrorizer-tent.svg">
           <img class = "carte" src="img/Data3/2009-2011/map-2009-2011.svg" >
-          <img class = "jack" src="img/JACKYBOYII.svg">
-          <blockquote class = "example-obtuse">
-            <p> bonjour je m'appelle Jack et balbalneklfjzeoikfljz  epflkz  elpfkpzeokfpzelkfmz elfezlfpêzlfpêrlfêrplfpêrlf </p>
-          </blockquote>
         </div>
         <div class ="2012 divCarte hidden" id = "carte12">
           <img id = "pin2012-01" class = "pin--2012-1" src="img/Data3/2012-2017/epingle-altar.svg">
@@ -153,12 +155,13 @@
           <img id = "pin2012-05" class = "pin--2012-5" src="img/Data3/2012-2017/epingle-temple.svg">
           <img id = "pin2012-06" class = "pin--2012-6" src="img/Data3/2012-2017/epingle-valley.svg">
           <img id = "pin2012-07" class = "pin--2012-7" src="img/Data3/2012-2017/epingle-warzone.svg">
-          <img class = "carte" src="img/Data3/2012-2017/map-2012-2017.svg" style = "left : 20px; top : 10px">
-          <img class = "jack" src="img/JACKYBOYII.svg">
-          <blockquote class = "example-obtuse">
-            <p> bonjour je m'appelle Jack et balbalneklfjzeoikfljz  epflkz  elpfkpzeokfpzelkfmz elfezlfpêzlfpêrlfêrplfpêrlf </p>
-          </blockquote>
+          <img class = "carte2012" src="img/Data3/2012-2017/map-2012-2017.svg">
         </div>
+        <img id = "jack" class = "jack" src="img/JACKYBOYII.svg">
+        <blockquote class = "plan-obtuse">
+            <p id ="textePlan" class = "dateMenu">J’ai pu voir passer sur la Main 01 près de 306 groupes au Hellfest. Une vraie ribambelle d’artistes depuis plus de 13 ans. Cela est dû au nombre grandissant de mes amis les festivaliers. De 22 000 à 152 000 tickets vendus en 13 ans, quelle évolution, c’est incroyable! Venez vite voir cet élargissement considérable du Hellfest !
+            </p>
+        </blockquote>
       </div>
   </div>
   <!-- ######################Page 4 ###################################################################################################""-->

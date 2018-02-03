@@ -2,6 +2,8 @@
 console.log("début main");
 
 function controleurPlan(){
+	var textePlan = document.getElementById("textePlan");
+	var anneeEvolution = document.getElementById("carteEvolution");
 	var annee2006 = document.getElementById("carte2006");
 	var annee2007 = document.getElementById("carte2007");
 	var annee2008 = document.getElementById("carte2008");
@@ -15,7 +17,50 @@ function controleurPlan(){
 	var annee2016 = document.getElementById("carte2016");
 	var annee2017 = document.getElementById("carte2017");
 
+	anneeEvolution.onclick = function(){
+		textePlan.textContent = "J’ai pu voir passer sur la Main 01 près de 306 groupes au Hellfest. Une vraie ribambelle d’artistes depuis plus de 13 ans. Cela est dû au nombre grandissant de mes amis les festivaliers. De 22 000 à 152 000 tickets vendus en 13 ans, quelle évolution, c’est incroyable! Venez vite voir cet élargissement considérable du Hellfest !";
+		anneeEvolution.className = "pointEvolution active";
+		annee2006.className = "point";
+		annee2007.className = "point";
+		annee2008.className = "point";
+		annee2009.className = "point";
+		annee2010.className = "point";
+		annee2011.className = "point";
+		annee2012.className = "point";
+		annee2013.className = "point";
+		annee2014.className = "point";
+		annee2015.className = "point";
+		annee2016.className = "point";
+		annee2017.className = "point";
+		document.getElementById("carte06").className = "2006 divCarte hidden";
+		document.getElementById("carte07").className = "2007 divCarte hidden";
+		document.getElementById("carte08").className = "2008 divCarte hidden";
+		document.getElementById("carte09").className = "2009 divCarte hidden ";
+		document.getElementById("carte12").className = "2012 divCarte hidden";
+		document.getElementById("pin2006-01").className = "pin--2006-1"
+		document.getElementById("pin2006-02").className = "pin--2006-2"
+		document.getElementById("pin2007-01").className = "pin--2007-1"
+		document.getElementById("pin2007-02").className = "pin--2007-2"
+		document.getElementById("pin2007-03").className = "pin--2007-3"
+		document.getElementById("pin2008-01").className = "pin--2008-1"
+		document.getElementById("pin2008-02").className = "pin--2008-2"
+		document.getElementById("pin2008-03").className = "pin--2008-3"
+		document.getElementById("pin2009-01").className = "pin--2009-1"
+		document.getElementById("pin2009-02").className = "pin--2009-2"
+		document.getElementById("pin2009-03").className = "pin--2009-3"
+		document.getElementById("pin2009-04").className = "pin--2009-4"
+		document.getElementById("pin2012-01").className = "pin--2012-1"
+		document.getElementById("pin2012-02").className = "pin--2012-2"
+		document.getElementById("pin2012-03").className = "pin--2012-3"
+		document.getElementById("pin2012-04").className = "pin--2012-4"
+		document.getElementById("pin2012-05").className = "pin--2012-5"
+		document.getElementById("pin2012-06").className = "pin--2012-6"
+		document.getElementById("pin2012-07").className = "pin--2012-7"
+	}
+
 	annee2006.onclick = function(){
+		textePlan.textContent = "Les 72 groupes invités à la première édition du Hellfest sont équitablement répartis entre deux scènes : Main (la scène principale) et Hard n'Heavy stage.";
+		anneeEvolution.className = "pointEvolution";
 		annee2006.className = "point active";
 		annee2007.className = "point";
 		annee2008.className = "point";
@@ -56,7 +101,9 @@ function controleurPlan(){
 	}
 
 	annee2007.onclick = function(){
-		annee2006.className = "point";
+		textePlan.textContent = "En 2007, la Hard n'Heavy est remplacée par la Gibson Stage.S'y ajoute la Discover stage, une nouvelle scène, sur laquelle 30 groupes se produisent.";
+		anneeEvolution.className = "point";
+		annee2006.className = "pointEvolution";
 		annee2007.className = "point active";
 		annee2008.className = "point";
 		annee2009.className = "point";
@@ -94,6 +141,8 @@ function controleurPlan(){
 		document.getElementById("pin2012-07").className = "pin--2012-7"
 	}
 	annee2008.onclick = function(){
+		textePlan.textContent = "Le nombre de groupes augmentente considérablement par rapport à 2007, passant de 84 à 108. Les groupes sont répartis entre 3 scènes distinctes et hiérarchisées : la main, la second stage et enfin la discover stage.";
+		anneeEvolution.className = "pointEvolution";
 		annee2006.className = "point";
 		annee2007.className = "point";
 		annee2008.className = "point active";
@@ -133,6 +182,8 @@ function controleurPlan(){
 	}
 
 	annee2009.onclick = function(){
+		textePlan.textContent = "En 2009, une quatrième scène est crée. La Main 02, complétant la Main 01, favorise les groupes de métal alternatif, nu métal, métalcore et trashmétal. Les deux scènes accueillent toutes les deux 27 groupes.";
+		anneeEvolution.className = "pointEvolution";
 		annee2006.className = "point";
 		annee2007.className = "point";
 		annee2008.className = "point";
@@ -171,6 +222,8 @@ function controleurPlan(){
 		document.getElementById("pin2012-07").className = "pin--2012-7"
 	}
 	annee2010.onclick = function(){
+		textePlan.textContent = "En 2010, le festival conserve les mêmes scènes et le même nombre de groupes qu’en 2009. La Main 01 produit principalement les groupes de heavy metal tradiotionnel et de hardrock.";
+		anneeEvolution.className = "pointEvolution";
 		annee2006.className = "point";
 		annee2007.className = "point";
 		annee2008.className = "point";
@@ -209,6 +262,8 @@ function controleurPlan(){
 		document.getElementById("pin2012-07").className = "pin--2012-7"
 	}
 	annee2011.onclick = function(){
+		textePlan.textContent ="118 groupes sont présents en 2011. C’est un nombre relativement constant depuis l’édition de 2008.";
+		anneeEvolution.className = "pointEvolution";
 		annee2006.className = "point";
 		annee2007.className = "point";
 		annee2008.className = "point";
@@ -247,6 +302,8 @@ function controleurPlan(){
 		document.getElementById("pin2012-07").className = "pin--2012-7"
 	}
 	annee2012.onclick = function(){
+		textePlan.textContent ="Le Hellfest n'accueille plus 4 scènes mais bien 7 scènes pour un total de 170 artistes en cette année 2012, un véritable boom par rapport à l’année précédente. La Warzone met à l’honneur le punk hardcore, la Valley  le sludge/ stoner et le Metal Corner déniche les talents de demain . Autres changements, la Terrorizer tent laisse place au Temple (doom / pagan metal / black metal) et la Rock Hard tent devient l’Altar ( death metal / grind).";
+		anneeEvolution.className = "pointEvolution";
 		annee2006.className = "point";
 		annee2007.className = "point";
 		annee2008.className = "point";
@@ -286,14 +343,16 @@ function controleurPlan(){
 
 	}
 	annee2013.onclick = function(){
+		textePlan.textContent ="170 artistes montent sur les planches du Hellfest en 2013, une répétition de 2012 avec les mêmes scènes.";
+		anneeEvolution.className = "pointEvolution";
 		annee2006.className = "point";
 		annee2007.className = "point";
 		annee2008.className = "point";
 		annee2009.className = "point";
 		annee2010.className = "point";
 		annee2011.className = "point";
-		annee2012.className = "point active";
-		annee2013.className = "point";
+		annee2012.className = "point";
+		annee2013.className = "point active"; 
 		annee2014.className = "point";
 		annee2015.className = "point";
 		annee2016.className = "point";
@@ -324,6 +383,8 @@ function controleurPlan(){
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
 	}
 	annee2014.onclick = function(){
+		textePlan.textContent ="Le format des scènes du Hellfest de 2012 reste toujours le même pour acceuillir le même nombre d’artistes.";
+		anneeEvolution.className = "pointEvolution";
 		annee2006.className = "point";
 		annee2007.className = "point";
 		annee2008.className = "point";
@@ -362,6 +423,8 @@ function controleurPlan(){
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
 	}
 	annee2015.onclick = function(){
+		textePlan.textContent ="Très légère baisse de nombre d’artistes en 2015 puisque les 7 scènes reçoivent 166 groupes.";
+		anneeEvolution.className = "pointEvolution";
 		annee2006.className = "point";
 		annee2007.className = "point";
 		annee2008.className = "point";
@@ -400,6 +463,8 @@ function controleurPlan(){
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
 	}
 	annee2016.onclick = function(){
+		textePlan.textContent ="Le Metal Corner en partenariat avec Deezer Open Hell'Stage en 2016 accueille presque le double de ce qu’il a l’habitude d’avoir. Cette scène où les groupes de métals s’affrontent pour se produirent sur une “main stage” rencontre un véritable succès.";
+		anneeEvolution.className = "pointEvolution";
 		annee2006.className = "point";
 		annee2007.className = "point";
 		annee2008.className = "point";
@@ -438,6 +503,8 @@ function controleurPlan(){
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
 	}
 	annee2017.onclick = function(){
+		textePlan.textContent ="167 artistes font monter les décibels en 2017 pour faire vibrer les festivaliers.";
+		anneeEvolution.className = "pointEvolution";
 		annee2006.className = "point";
 		annee2007.className = "point";
 		annee2008.className = "point";
@@ -480,10 +547,12 @@ function controleurPlan(){
 function chargement(){
 	document.getElementById('jackGif').className = "jackGif--hidden";
 	document.getElementById('logo').className = "logo";
+	document.getElementById('bulleAccueil').className = "accueil-obtuse";
 }
 
 function controleurPodium()
 {
+	var PodiumEvolution = document.getElementById("PodiumEvolution");
 	var Podium2006 = document.getElementById("Podium2006");
 	var Podium2007 = document.getElementById("Podium2007");
 	var Podium2008 = document.getElementById("Podium2008");
@@ -496,8 +565,30 @@ function controleurPodium()
 	var Podium2015 = document.getElementById("Podium2015");
 	var Podium2016 = document.getElementById("Podium2016");
 	var Podium2017 = document.getElementById("Podium2017");
+	var TextePodium = document.getElementById("textePodium");
+
+	PodiumEvolution.onclick = function(){
+		PodiumEvolution.className = "pointEvolution active";
+		Podium2006.className = "point";
+		Podium2007.className = "point";
+		Podium2008.className = "point";
+		Podium2009.className = "point";
+		Podium2010.className = "point";
+		Podium2011.className = "point";
+		Podium2012.className = "point";
+		Podium2013.className = "point";
+		Podium2014.className = "point";
+		Podium2015.className = "point";
+		Podium2016.className = "point";
+		Podium2017.className = "point";
+		TextePodium.textContent = "Environ ⅓ des groupes présents pendant ces éditions viennent du pays de la country. Ils devancent de loin la France et le Royaume-Uni qui à eux deux ne parviennent même pas à égaler les Etats-Unis."
+		document.getElementById("podium").className = "podium--hidden";
+	}
 
 	Podium2006.onclick = function(){
+		document.getElementById("podium").className = "";
+		TextePodium.textContent = "Pour cette première édition du Hellfest, 35% des groupes proviennent des Etats-Unis. En deuxième position se trouvent la France et l'Angleterre, représentant respectivement 16% et 11% du total des groupes. 15% des groupes viennent de pays scandinaves, dont la moitié de la Suède.";
+		PodiumEvolution.className = "pointEvolution";
 		Podium2006.className = "point active";
 		Podium2007.className = "point";
 		Podium2008.className = "point";
@@ -525,6 +616,9 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2007.onclick = function(){
+		document.getElementById("podium").className = "";
+		TextePodium.textContent = "2007 s'accompagne d'une nette hausse de participation des groupes français, aussi nombreux que les groupes américains. La somme des deux représente plus de la moitié du total des groupes.";
+		PodiumEvolution.className = "pointEvolution";
 		Podium2006.className = "point";
 		Podium2007.className = "point active";
 		Podium2008.className = "point";
@@ -552,6 +646,9 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2008.onclick = function(){
+		document.getElementById("podium").className = "";
+		TextePodium.textContent = "En 2008, le Hellfest élargit ses horizons et accueille des groupes japonais, autrichiens et irlandais. La participation de la France diminue et équivaut presque à celle de l'Angleterre et de la Suède.";
+		PodiumEvolution.className = "pointEvolution";
 		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point active";
@@ -579,6 +676,9 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2009.onclick = function(){
+		document.getElementById("podium").className = "";
+		TextePodium.textContent = "Jamais les Etats-Unis n'ont atteint un tel taux de participation : ils représentent en 2009 plus de 40% des groupes ! En revanche, les participation des pays scandinaves recule.";
+		PodiumEvolution.className = "pointEvolution";
 		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point";
@@ -606,6 +706,9 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2010.onclick = function(){
+		document.getElementById("podium").className = "";
+		TextePodium.textContent = "Les groueps francais sont en pertes de vitesse en cette année 2010... La Roumanie fait son entrée dans le festival avec le groupe Negurâ Bunget.";
+		PodiumEvolution.className = "pointEvolution";
 		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point";
@@ -633,6 +736,9 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "fadeInDown animated suede troisieme drapeau";
 	}
 	Podium2011.onclick = function(){
+		document.getElementById("podium").className = "";
+		TextePodium.textContent = "Alors que la France est toujours moins bien représentée, de nouveaux pays font leur apparition sur la scène du métal. L'Ecosse, la Russie, l'Irlande du Nord et la Letonnie sont les petits nouveaux de 2011.";
+		PodiumEvolution.className = "pointEvolution";
 		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point";
@@ -660,6 +766,9 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "fadeInDown animated suede troisieme drapeau";
 	}
 	Podium2012.onclick = function(){
+		document.getElementById("podium").className = "";
+		TextePodium.textContent = "2012 est synonyme d'âge d'or des groupes français. Ils connaissent une fulgurante augmentation pour la représentativité du pays. Pour la première fois le groupe Solstafir devient ambassadeur de son pays : l'Islande.";
+		PodiumEvolution.className = "pointEvolution";
 		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point";
@@ -687,6 +796,9 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2013.onclick = function(){
+		document.getElementById("podium").className = "";
+		TextePodium.textContent = "La Suède et l'Angleterre sont au coude à coude sur la troisième place du podium. Quant aux iles Féroé, le Chili et la Colombie, ils s'installent pour la première fois au Hellfest.";
+		PodiumEvolution.className = "pointEvolution";
 		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point";
@@ -714,6 +826,9 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2014.onclick = function(){
+		document.getElementById("podium").className = "";
+		TextePodium.textContent = "Encore jamais représentée au Hellfest, cette année l'Afrique du sud fait son entrée dans le palmarès des groupes présent au festival.";
+		PodiumEvolution.className = "pointEvolution";
 		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point";
@@ -741,6 +856,9 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2015.onclick = function(){
+		document.getElementById("podium").className = "";
+		TextePodium.textContent = "Pour la seconde fois, l'Irlande du nord est présente au Hellfest pour des représentations toujours plus impressionnantes !";
+		PodiumEvolution.className = "pointEvolution";
 		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point";
@@ -768,6 +886,9 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2016.onclick = function(){
+		document.getElementById("podium").className = "";
+		TextePodium.textContent = "En 2016, pour la première fois depuis la création du Hellfest, un groupe ukrainien se produit sur l'une des scènes du festival, pour le plaisir de nos oreilles.";
+		PodiumEvolution.className = "pointEvolution";
 		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point";
@@ -795,6 +916,9 @@ function controleurPodium()
 		document.getElementById('troisiemeSuede').className = "suede troisieme drapeau--hidden";
 	}
 	Podium2017.onclick = function(){
+		document.getElementById("podium").className = "";
+		TextePodium.textContent = "Apparition inédite dans la programmation du festival en cette année 2017, la Tunisie invite le public à découvrir ses artistes aux multiples talents.";
+		PodiumEvolution.className = "pointEvolution";
 		Podium2006.className = "point";
 		Podium2007.className = "point";
 		Podium2008.className = "point";

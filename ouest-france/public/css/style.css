@@ -74,11 +74,31 @@ header img{
 
 .carte
 {
-	height:80%; 
-	width:80%; 
+	height:65%; 
+	width:65%; 
 	z-index: 1;
 	position: absolute;
-	float: left;
+	left:0px;
+	top: 100px;
+}
+
+.carte2012
+{
+	height: 80%;
+    width: 80%;
+    z-index: 1;
+    position: absolute;
+    left: 0px;
+    top: 55px;
+}
+
+.podium--hidden
+{
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
 }
 
 .divCarte.hidden {
@@ -125,199 +145,221 @@ header img{
 
 .pin--2006-1 
 { 
-	position : absolute; 
-	top: 120px; 
-	left:400px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 200px;
+    left: 300px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2006-2 
 { 
-	position : absolute; 
-	top: 120px; 
-	left:250px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 200px;
+    left: 200px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2007-1 
 { 
-	position : absolute; 
-	top: 340px; 
-	left:625px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 360px;
+    left: 490px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2007-2 
 { 
-	position : absolute; 
-	top: 120px; 
-	left:350px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 200px;
+    left: 280px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2007-3 
 { 
-	position : absolute; 
-	top: 120px; 
-	left:250px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 200px;
+    left: 180px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2008-1 
 { 
-	position : absolute; 
-	top: 340px; 
-	left:625px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 360px;
+    left: 490px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2008-2 
 { 
-	position : absolute; 
-	top: 120px; 
-	left:350px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 200px;
+    left: 285px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2008-3 
 { 
-	position : absolute; 
-	top: 120px; 
-	left:250px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 200px;
+    left: 190px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 
 .pin--2009-1 
 { 
-	position : absolute; 
-	top: 120px; 
-	left:250px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 210px;
+    left: 200px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2009-2 
 { 
-	position : absolute; 
-	top: 120px; 
-	left:350px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 210px;
+    left: 290px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2009-3 
 { 
-	position : absolute; 
-	top: 40px; 
-	left:600px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 120px;
+    left: 455px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2009-4
 { 
-	position : absolute; 
-	top: 340px; 
-	left:635px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 370px;
+    left: 485px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2012-1 
 { 
-	position : absolute; 
-	top: 10px; 
-	left:360px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 55px;
+    left: 335px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2012-2 
 { 
-	position : absolute; 
-	top: 110px; 
-	left:160px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 160px;
+    left: 140px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2012-3 
 { 
-	position : absolute; 
-	top: 100px; 
-	left:270px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 155px;
+    left: 218px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2012-4
 { 
-	position : absolute; 
-	top: 85px; 
-	left:725px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 140px;
+    left: 704px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2012-5
 { 
-	position : absolute; 
-	top: 5px; 
-	left:420px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 50px;
+    left: 396px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2012-6
 { 
-	position : absolute; 
-	top: 35px; 
-	left:485px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 95px;
+    left: 468px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
 .pin--2012-7
 { 
-	position : absolute; 
-	top: 360px; 
-	left:290px; 
-	width: 12%; 
-	height: 12%; 
-	z-index: 2;
+	position: absolute;
+    top: 420px;
+    left: 263px;
+    width: 11%;
+    height: 11%;
+    z-index: 2;
 }
 
-.example-obtuse {
+.plan-obtuse {
+	position: absolute;
+    top: 380px;
+    left: 702px;
+    padding: 15px 30px;
+    margin: 0;
+    color: #000;
+    background: #404040;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#404040), to(#404040));
+    background: -moz-linear-gradient(#404040, #404040);
+    background: -o-linear-gradient(#404040, #404040);
+    background: linear-gradient(#404040, #404040);
+    -webkit-border-top-left-radius: 25px 50px;
+    -webkit-border-top-right-radius: 25px 50px;
+    -webkit-border-bottom-right-radius: 25px 50px;
+    -webkit-border-bottom-left-radius: 25px 50px;
+    -moz-border-radius: 25px / 50px;
+    border-radius: 25px / 50px;
+    z-index: 2;
+    width: 400px;
+}
+
+.podium-obtuse {
   position:absolute;
-  top: 360px; 
-  left:880px; 
+  top: 50px; 
+  left:300px; 
   padding:15px 30px;
   margin:0;
   color:#000;
@@ -335,29 +377,64 @@ header img{
   -moz-border-radius:25px / 50px;
   border-radius:25px / 50px;
   z-index: 2;
+  width: 450px;
+}
+
+.accueil-obtuse {
+  position:absolute;
+  top: 250px; 
+  left:250px; 
+  padding:15px 30px;
+  margin:0;
+  color:#000;
+  background:#404040; /* default background for browsers without gradient support */
+  /* css3 */
+  background:-webkit-gradient(linear, 0 0, 0 100%, from(#404040), to(#404040));
+  background:-moz-linear-gradient(#404040, #404040);
+  background:-o-linear-gradient(#404040, #404040);
+  background:linear-gradient(#404040, #404040);
+  /* Using longhand to avoid inconsistencies between Safari 4 and Chrome 4 */
+  -webkit-border-top-left-radius:25px 50px;
+  -webkit-border-top-right-radius:25px 50px;
+  -webkit-border-bottom-right-radius:25px 50px;
+  -webkit-border-bottom-left-radius:25px 50px;
+  -moz-border-radius:25px / 50px;
+  border-radius:25px / 50px;
+  z-index: 2;
+  width: 600px;
+}
+
+.accueil-obtuse--hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
 }
 
 .jack
 {
-	z-index: 2; 
-	width : 80%; 
-	height :80%; 
-	float : right;
+	position: absolute;
+    top: 70px;
+    left: 232px;
+    z-index: 2;
+    width: 90%;
+    height: 90%;
 }
 
 .podium
 {
 	position: absolute;
-	top: 40px; 
-  	left:0px; 
+	top: 230px; 
+  	left:150px; 
 	z-index: 1;
-	width : 80%; 
-	height :80%; 
+	width : 60%; 
+	height :60%; 
 }
 
 .americain.premier.drapeau
 {
-	top: 2px; 
+	top: 163px; 
   	left:380px; 
 	position: absolute;
 	z-index: 2;
@@ -397,8 +474,8 @@ header img{
 
 .francais.deuxieme.drapeau
 {
-	top: 110px; 
-  	left:130px; 
+	top: 244px; 
+  	left: 200px; 
 	position: absolute;
 	z-index: 2;
 	width : 30%; 
@@ -437,8 +514,8 @@ header img{
 
 .allemand.troisieme.drapeau
 {
-	top: 190px; 
-  	left:600px; 
+	top: 308px; 
+  	left:570px; 
 	position: absolute;
 	z-index: 2;
 	width : 30%; 
@@ -457,8 +534,8 @@ header img{
 
 .anglais.deuxieme.drapeau
 {
-	top: 119px; 
-  	left:150px; 
+	top: 250px; 
+  	left:230px; 
 	position: absolute;
 	z-index: 2;
 	width : 30%; 
@@ -467,8 +544,8 @@ header img{
 
 .anglais.troisieme.drapeau
 {
-	top: 174px; 
-  	left:600px; 
+	top: 292px; 
+  	left:545px; 
 	position: absolute;
 	z-index: 2;
 	width : 30%; 
@@ -477,8 +554,8 @@ header img{
 
 .suede.troisieme.drapeau
 {
-	top: 188px; 
-  	left:580px; 
+	top: 306px; 
+  	left:550px; 
 	position: absolute;
 	z-index: 2;
 	width : 25%; 
@@ -515,6 +592,30 @@ header img{
 	position: relative;
 }
 
+.pointEvolution {
+	width: 18px;
+	height: 18px;
+	border-radius: 10000px;
+	background: #A9FF88;
+	border: 2px solid #A9FF88;
+	margin: 4px 0 14px 8px;
+	position: relative;
+}
+
+.pointEvolution:hover {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	margin-left: 7px;
+}
+
+.pointEvolution.active {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	margin-left: 7px;
+}
+
 .point:hover {
 	width: 25px;
 	height: 25px;
@@ -548,31 +649,55 @@ header img{
 	display: none;
 }
 
-.pointEvolution
-{
-	position: absolute;
-	top : -150px;
-	z-index: 2;
-	width : 80%; 
-	height :80%; 
-}
-
-.pointEvolution:hover
-{
-	position: absolute;
-	top : 0px;
-	left: 0px;
-	z-index: 2;
-	width:100%;
-	height:100%;
-}
-
 p.dateMenu
 {
 	color: white;
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-weight: 700;
 	margin-left: 25px;
+}
+
+h1.titres
+{
+	position: absolute;
+	color: #A9FF88;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+	top: 50px;
+	left: 800px;
+	width: 400px;
+	height: 50px;
+}
+
+h1.TitreAccueil
+{
+	color: #A9FF88;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+}
+
+h2.TitreAccueil
+{
+	color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+}
+
+h3.TitreAccueil
+{
+	color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+}
+
+img.barre
+{
+	position: absolute;
+	transform: rotate(90deg);
+	top: -150px;
+    left: 990px;
+    width: 30px;
+    height: 500px;
 }
 
 
