@@ -150,6 +150,13 @@ function miniStats(regionStats, d) {
             var stat2 = names.map(function(val, id) {return {"name": names[id], "value": parseInt(count[id])};});
             stat2 = stat2.sort(function(a, b) {return b.value - a.value});
             $(".info-dd h1").text(stat2[0].name)
+            
+            //7 : MP / oui/non plus représenté / camembert -> nuage de mots
+			var dataFrame = document.getElementsByClassName("info-mp")[0];
+            var mean = parseFloat(stats.Marches_publics.values[0]);
+			console.log(mean * 100)
+            dataFrame.getElementsByClassName("donnee")[0].innerHTML = Math.round(mean * 100);
+            dataFrame.style.backgroundColor = colorsForRegion[matchColor(mean, 0, 0.227, 0.227/5, (0.5 - 0.227)/5, true)];
         });
 
     fetch("/capeb/data/" + d.properties.siren_epci + "/sunburst")
