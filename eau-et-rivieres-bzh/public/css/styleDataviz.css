@@ -1,6 +1,9 @@
 /* Règles CSS en plus de celles de bootstrap ou fullpage.js*/
 
+/* ######################################################################### */
 /* --------------- Général --------------- */
+/* ######################################################################### */
+
 body{
     font-family: 'Montserrat', sans-serif;
     z-index: 1;
@@ -28,10 +31,13 @@ body{
 
 
 
+/* ######################################################################### */
 /* --------------- Page 1 --------------- */
+/* ######################################################################### */
 #page1DisplayOn{
     filter :blur(0px);
 }
+
 /* Section 1 */
 #section1 {
     float: left;
@@ -275,6 +281,7 @@ body{
     font-size: 7px;
 }
 
+/* Bouton en savoir plus */
 #enSavoirPlusP1{
     font-weight: 400;
     border: solid;
@@ -290,6 +297,7 @@ body{
 }
 
 
+/* Bouton exit */
 #enSavoirPlusHautP1{
     font-weight: 700;
     display:flex;
@@ -314,7 +322,9 @@ body{
 
 
 
+/* ######################################################################### */
 /* --------------- Page 2 --------------- */
+/* ######################################################################### */
 /* Section 4 */
 #section4 {
     float: left;
@@ -489,7 +499,9 @@ body{
 
 
 
+/* ######################################################################### */
 /* --------------- Page 3 --------------- */
+/* ######################################################################### */
 /* Section 6 */
 #section6 {
     float: left;
@@ -520,7 +532,6 @@ body{
   content: " ";
   width: 3px;
   background-color: black;
-  left: 50%;
 }
 
 .timeline .timeline-item {
@@ -528,13 +539,13 @@ body{
 }
 
 .timeline .timeline-item .timeline-badge {
-  width: 54px;
-  height: 54px;
-  line-height: 52px;
-  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  line-height: 50px;
+  font-size: 18px;
   text-align: center;
   position: absolute;
-  border: 3px solid #96edbd;
+  border: 3px solid black;
   border-radius: 50%;
 }
 
@@ -556,10 +567,10 @@ body{
 .timeline-horizontal:before {
   height: 3px;
   top: auto;
-  bottom: 26px;
+  bottom: 19px;
   left: 5%;
   right: 0;
-  width: 105%;
+  width: 101%;
   margin-bottom: 20px;
 }
 
@@ -584,10 +595,104 @@ body{
     padding-top: 100%;
 }
 
+/* Section 8 */
+#section8 {
+    float: left;
+    position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    top: 28%;
+    left: 75%;
+    width: 18%;
+    height: 46%;
+    text-align: justify;
+}
 
+.pSection8 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 
+/* ######################################################################### */
 /* --------------- Page 4 --------------- */
+/* ######################################################################### */
+/* Logo Eau et Rivieres */
+#logoMedia {
+    float: left;
+    position: absolute;
+    width: 20%;
+    height: auto;
+    border: 3px solid black;
+    top: 10%;
+    left: 54%;
+}
 
+/* Section 9 */
+#section9 {
+    float: left;
+    position: absolute;
+    border: 3px solid black;
+    background-color: white;
+    width: 35%;
+    top: 10%;
+    left: 8%;
+    text-align: justify;
+}
 
+/* Section 10 */
+#section10 {
+    float: left;
+    position: absolute;
+    border: 3px solid black;
+    background-color: white;
+    width: 35%;
+    top: 26%;
+    left: 54%;
+    text-align: justify;
+}
 
+/* Le tableau de logos */
+#logos {
+    float: left;
+    position: absolute;
+    width: 90%;
+    height: 15%;
+    left: 5%;
+    top: 55%;
+    background-color: white;
+}
+
+#logos td {
+    width: 15%;
+    height: auto;
+    border: 3px solid black;
+}
+
+#logo tr {
+    height: 50%;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+#logoNantes {
+    width: 70%;
+}
+
+#logoUN {
+    width: 60%;
+}
+
+#logoOpenSource {
+    width: 40%;
+}
+
+#logoCC {
+    width: 40%;
+}
+
+/* ######################################################################### */
 /* --------------- Page 5 --------------- */
+/* ######################################################################### */
