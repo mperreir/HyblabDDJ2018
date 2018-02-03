@@ -124,7 +124,6 @@ body{
     top: 90%;
     width: 10%;
     height: 5%;
-    border: 1px solid black;
 }
 
 /* Carte Départements */
@@ -275,7 +274,7 @@ body{
     font-size: 7px;
 }
 
-#enSavoirPlusP1{
+.enSavoirPlusP1{
     font-weight: 400;
     border: solid;
     border-width: 5px;
@@ -290,25 +289,25 @@ body{
 }
 
 
-#enSavoirPlusHautP1{
+.enSavoirPlusHautP1{
     font-weight: 700;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#boutonExitP1{
+.boutonExitP1{
     height: 33px;
     width: 33px;
 }
 
-#enSavoirPlusBasP1{
+.enSavoirPlusBasP1{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#enSavoirPlusBas p{
+.enSavoirPlusBas p{
     width: 45%;
 }
 

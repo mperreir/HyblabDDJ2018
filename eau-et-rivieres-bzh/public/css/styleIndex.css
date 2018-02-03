@@ -33,7 +33,7 @@ body{
 	display:flex;
 	flex-direction: row;
 	justify-content: center;
-	margin-bottom: 3px;
+	margin-bottom: 7px;
 }
 
 #boutonGauche, #boutonEnSavoirPlus{
