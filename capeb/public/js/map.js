@@ -65,11 +65,7 @@ $ (document).ready(function(){
                     .style("fill", "white");
                 d3.select("#titre-epci").text('');
             })
-
-
     });
-
-
 });
 
 
@@ -101,14 +97,14 @@ function miniStats(regionStats, d) {
         .then(function(json){
             var dataFrame = document.getElementsByClassName("info-conjoncture")[0];
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = parseFloat(json.values[0][0]).toFixed(2);
-            dataFrame.style.backgroundColor = colorsForRegion[matchColor(json.values[0][0], 2.87, 3.78, 0.182, 0.244)];
+            dataFrame.style.backgroundColor = colorsForRegion[matchColor(json.values[0][0], 2.87, 3.78, 0.182, 0.244, false)];
         });
 
 
     //2 : Investissement /  / chart over time compared with region
 
     //3 : contrats / words / sunBurst chart
-    fetch("/capeb/data/" + d.properties.siren_epci + "/sunburst")
+    fetch("/capeb/data/" + d.properties.siren_epci + "/stats")
         .then(function (value) {
             return value.json();
         })
@@ -117,36 +113,23 @@ function miniStats(regionStats, d) {
             console.log(error);
             return {};
         })
-        .then(function(jsonContrats){
-            //$("svg#sunburst").remove();
-            //sunBurst(jsonContrats);
-        });
-
-    //4 : embauche / oui/non plus représenté / double chart with rotation
-    fetch("/capeb/data/" + d.properties.siren_epci + "/stats")
-		.then(function (value) {
-            return value.json();
-        })
-        .catch(function (error) {
-            console.log("error");
-            console.log(error);
-            return {};
-        })
         .then(function(stats){
-           var contrats = stats.Contrats.values.slice(1)
-           var stat = contrats.map((val, id) => {return {"name": stats.Contrats.labels[id + 1] , "value" : parseInt(val[val.length - 1])};})
-           stat = stat.sort((a, b) => {return b.value - a.value})
-           
-           $(".info-contrat h1").text(stat[0].name)
-           var h = 1
-           for(var i = 1; i < 4; i++){
-			   if(stat[i].value < stat[i - 1].value){
-				 h++;
-			   }
-			   $(".info-contrat").append("<h" + h + " class='donnee'>" + stat[i].name + "</h" + h + ">")
-		   }
+            var contrats = stats.Contrats.values.slice(1)
+            var stat = contrats.map((val, id) => {return {"name": stats.Contrats.labels[id + 1] , "value" : parseInt(val[val.length - 1])};})
+            stat = stat.sort((a, b) => {return b.value - a.value})
+
+            $(".info-contrat h1").text(stat[0].name)
+            var h = 1
+            for(var i = 1; i < 4; i++){
+                if(stat[i].value < stat[i - 1].value){
+                    h++;
+                }
+                $(".info-contrat").append("<h" + h + " class='donnee'>" + stat[i].name + "</h" + h + ">")
+            }
 
         });
+
+    //4 : embauche / métier qui embauche le plus/ double chart with rotation
 
     //5 : distance / moyenne / bubble chart
     fetch("/capeb/data/" + d.properties.siren_epci + "/distance")
@@ -166,7 +149,7 @@ function miniStats(regionStats, d) {
             });
             mean/=json.values.length;
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = Math.round(mean);
-            dataFrame.style.backgroundColor = colorsForRegion[matchColor(mean, 24, 59, 7, 13.2)];
+            dataFrame.style.backgroundColor = colorsForRegion[matchColor(mean, 24, 59, 7, 13.2, true)];
         });
 
     //7 : MP / oui/non plus représenté / camembert -> nuage de mots
@@ -175,27 +158,29 @@ function miniStats(regionStats, d) {
 
 }
 
-function matchColor(value, min, mean, firstInc, secondInc){
+function matchColor(value, min, mean, firstInc, secondInc, order){
+    var r;
     if(value <= min+firstInc ){
-        return 9;
+        r = (order ? 9 : 0);
     } else if(value<= min+firstInc *2){
-        return 8;
+        r = (order ? 8 : 1);
     } else if(value<= min+firstInc *3){
-        return 7;
+        r =  (order ? 7 : 2);
     } else if(value<= min+firstInc *4){
-        return 6;
+        r =  (order ? 6 : 3);
     } else if(value<= min+firstInc *5){
-        return 5;
+        r =  (order ? 5 : 4);
     } else if(value<= mean+secondInc){
-        return 4;
+        r =  (order ? 4 : 5);
     } else if(value<= mean+secondInc *2){
-        return 3;
+        r =  (order ? 3 : 6);
     } else if(value<= mean+secondInc *3){
-        return 2;
+        r =  (order ? 2 : 7);
     } else if(value<= mean+secondInc *4){
-        return 1;
+        r =  (order ? 1 : 8);
     } else if(value<= mean+secondInc *5){
-        return 0;
+        r =  (order ? 1 : 9);
     }
+    return r;
 }
 
