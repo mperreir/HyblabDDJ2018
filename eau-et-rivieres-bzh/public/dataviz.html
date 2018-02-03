@@ -13,8 +13,18 @@
   <link rel="stylesheet" type="text/css" href="fullPage.js-master/jquery.fullPage.css" />
   <link rel="stylesheet" href="css/styleDataviz.css">
 
+<<<<<<< HEAD
+  <!-- d3 -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+
+
+  <!-- Script Histogramme -->
+  <script src="js/cumHisto.js" defer></script>
+
+=======
    <!-- Importation font family -->
    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+>>>>>>> cb47f647d55f0ef85745784d78a99050d9b794db
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -26,8 +36,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
 
-  <!-- Simple sample script that loads data from a dummy json file -->
-  <script src="js/example.js" defer></script>
 
   <!-- Librairies nécessaires pour utiliser fullpage (site one page) -->
   <script src="fullPage.js-master/vendors/jquery.easings.min.js"></script>
@@ -111,26 +119,36 @@
             Cette data visualisation invite à comparer la présence des pesticides dans les nappes souterraines en Bretagne. Il existe
             différents réservoirs d’eau naturels : les nappes souterraines phréatiques ou aquifères. Les réserves d’eau souterraine en
             Bretagne sont principalement des nappes aquifères. A la différence des nappes phréatiques, l’eau stockée dans un aquifère
-            provient d’une infiltration par les roches. On ne peut que l’extraire par forage. 
+<<<<<<< HEAD
+            provient d’une infiltration par les roches. On ne peut que l’extraire par forage.
+            <br>
+            La toxicité des pesticides est répertoriée selon le système international d’étiquetage des matières
+            (ex : H300, mortel en cas d’ingestion). L’analyse présentée se base selon cet étiquetage.
+=======
+            provient d’une infiltration par les roches. On ne peut que l’extraire par forage.
           </p>
           <p class="pContent pBottom normal">
              La toxicité des pesticides est répertoriée selon le système international d’étiquetage des matières (ex : H300, mortel en
             cas d’ingestion). L’analyse présentée se base selon cet étiquetage.
+>>>>>>> cb47f647d55f0ef85745784d78a99050d9b794db
           </p>
         </section>
         <section id="section2">
-          <button class="boutonRond normal" value="2012"> 2012 </button>
-          <button class="boutonRond normal" value="2013"> 2013 </button>
-          <button class="boutonRond normal" value="2014"> 2014 </button>
-          <button class="boutonRond normal" value="2015"> 2015 </button>
-          <button class="boutonRond normal" value="2016"> 2016 </button>
+          <button class="boutonRond normal" value="2012" id="2012"> 2012 </button>
+          <button class="boutonRond normal" value="2013" id="2013"> 2013 </button>
+          <button class="boutonRond normal" value="2014" id="2014"> 2014 </button>
+          <button class="boutonRond normal" value="2015" id="2015"> 2015 </button>
+          <button class="boutonRond normal" value="2016" id="2016"> 2016 </button>
+
         </section>
         <section id="section3">
-          <article id="zone1" class="article1 normal">
-        
+          <article id="zone1" class="article1">
+          	<!--<script id="#hist1"> </script> -->
+              <svg id="histGauche" width="350" height="350"></svg>
           </article>
-          <article id="zone2" class="article1 normal">
-        
+          <article id="zone2" class="article1">
+          	<!--<script id="#hist1"> </script> -->
+		          <svg id="histDroite" width="350" height="350"></svg>
           </article>
           <p class="title" id="legendeTitle">  Principaux dangers des pesticides </p>
           <table id="legende">
@@ -239,7 +257,7 @@
             Vieille de plus de cinquante millions d’années, la nappe phréatique de Campbon est composée d’eaux de surfaces qui se sont
             infiltrées et conservées dans le sol. Contrairement aux rivières et lacs souterrains, cette nappe s’épure toute seule, filtrée
             naturellement par une couche de sable et une roche, appelée Pyrite, qui détruit les nitrates présents dans l’eau. Ce processus
-            naturel en fait d’elle une eau d'extrême qualité. 
+            naturel en fait d’elle une eau d'extrême qualité.
           </p>
           <p class="pContent pBottom normal">
           La nappe de Campbon approvisionne les robinets des habitants de la région nazairienne, exploitée par la Communauté d’Agglomération
@@ -477,7 +495,7 @@
       <div class="section" data-anchor="page4"> Crédits 1 </div>
       <div class="section" data-anchor="page5"> Crédits 2 </div>
     </div>
-    
+
     <!-- Le contenu du site -->
     <!--<p>Replace this content by your web app !</p>
     <p>Here is some data from a json file : <span id="data"></span><p>-->
