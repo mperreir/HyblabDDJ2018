@@ -5,13 +5,21 @@ document.getElementsByClassName("backToMap")[0].addEventListener("click", functi
 
 });
 
+var viewportWidth = $(window).width();
+var viewportHeight = $(window).height()/2;
+var width = viewportWidth * .97;
+var height = width/1.85;
+
+console.log(width);
+console.log(height);
+
 var page2 = d3.select(".map-pdl");
-var svg = page2.append("svg");
-svg.attr("width", 1000).attr("height", 1000);
+var svg = page2.append("svg")
+    .attr("width", width).attr("height", height);
 var projection = d3.geoConicConformal()
     .center([2.454071, 46.279229])
-    .scale(15000)
-    .translate([1250, 750]);
+    .scale(width*10)
+    .translate([width, height*0.8]);
 var path = d3.geoPath(projection);
 
 path.projection(projection);
@@ -61,6 +69,27 @@ $ (document).ready(function(){
             })
     });
 });
+
+d3.select(window).on('resize', resize);
+
+function resize() {
+
+    width = parseInt(d3.select('.map-pdl').style('width'));
+    width = $(window).width() * .97;
+    height = width/1.85;
+
+    projection
+        .scale([width*10])
+        .translate([width,height*0.8]);
+
+
+    d3.select("map-pdl").attr("width",width).attr("height",height);
+    d3.select("svg").attr("width",width).attr("height",height);
+
+    d3.selectAll("path").attr('d', path);
+
+
+}
 
 
 function miniStats(regionStats, d) {
@@ -154,9 +183,8 @@ function miniStats(regionStats, d) {
             //7 : MP / oui/non plus représenté / camembert -> nuage de mots
 			var dataFrame = document.getElementsByClassName("info-mp")[0];
             var mean = parseFloat(stats.Marches_publics.values[0]);
-			console.log(mean * 100)
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = Math.round(mean * 100);
-            dataFrame.style.backgroundColor = colorsForRegion[matchColor(mean, 0, 0.227, 0.227/5, (0.5 - 0.227)/5, true)];
+            dataFrame.style.backgroundColor = colorsForRegion[matchColor(mean, 0, 0.227, 0.227/5, (0.5 - 0.227)/5, false)];
         });
 
     fetch("/capeb/data/" + d.properties.siren_epci + "/sunburst")
