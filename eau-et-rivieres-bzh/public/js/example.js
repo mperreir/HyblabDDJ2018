@@ -23,3 +23,48 @@ fetch('data/datas.json')
         document.querySelector('#data')
             .textContent = json.data;
     });
+
+    //INDEX
+
+    $(function() {
+        $('#boutonGauche').hide();
+        $('#enSavoirPlus').hide();
+    })
+
+    $('#boutonDroite').click(function() {
+        $('#intro').text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque lacus vel urna tincidunt, non iaculis orci fermentum. Donec fringilla risus id dapibus posuere. Maecenas gravida posuere urna eu imperdiet. Proin tempor egestas nisl, a tempus magna. Duis vel euismod augue, vel aliquet mauris. Nullam nec tortor non odio condimentum facilisis. Cras magna ex, ornare at facilisis sed, finibus a eros. Nam commodo est ex, vitae pretium nunc varius scelerisque. Suspendisse nec diam ultrices ante sollicitudin porttitor eget in nibh.");
+        $('#boutonEnSavoirPlus').show();
+        $('#boutonDroite').hide();
+        $('#boutonGauche').show();
+    });
+
+    $('#boutonGauche').click(function() {
+        $('#intro').text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+        $('#boutonEnSavoirPlus').hide();
+        $('#boutonGauche').hide();
+        $('#boutonDroite').show();
+    });
+
+    $('#boutonEnSavoirPlus').click(function() { 
+        $('#displayOn').css('filter','blur(3px)');
+        $('#enSavoirPlus').show();
+        
+    });
+
+    $('#boutonExit').click(function() { 
+        $('#displayOn').css('filter','blur(0px)');
+        $('#enSavoirPlus').hide();
+    });
+
+    //DATAVIZ
+
+    $('#buttonSP').click(function() { 
+        $('#page1DisplayOn').css('filter','blur(3px)');
+        $('#enSavoirPlusP1').show();
+        
+    });
+
+    $('#boutonExitP1').click(function() { 
+        $('#page1DisplayOn').css('filter','blur(0px)');
+        $('#enSavoirPlusP1').hide();
+    });
