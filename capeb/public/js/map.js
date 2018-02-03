@@ -130,13 +130,13 @@ function miniStats(regionStats, d) {
            
            document.getElementsByClassName("info-contrat")[0].innerHTML = ""
            var h = 1
-           $(".info-contrat").append("<h1 class='donnee n" + h + "'>" + stat[0].name + "</h>")
+           $(".info-contrat").append("<h1 class='donneetexte n" + h + "'>" + stat[0].name + "</h>")
 
            for(var i = 1; i < 4; i++){
 			   if(stat[i].value < stat[i - 1].value){
 				 h++;
 			   }
-				$(".info-contrat").append("<h1 class='donnee n" + h + "'>" + stat[i].name + "</h>")
+				$(".info-contrat").append("<h1 class='donneetexte n" + h + "'>" + stat[i].name + "</h>")
 		   }
 
 			//8 : DD / quel aspect le plus représenté / bubble -> camembert
