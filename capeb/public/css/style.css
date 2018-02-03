@@ -233,25 +233,25 @@ a {
 /* line 13, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .block-data .n1 {
   text-align: right;
-  font-size: 80px;
+  font-size: 300%;
 }
 
 /* line 18, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .block-data .n2 {
   text-align: right;
-  font-size: 60px;
+  font-size: 200%;
 }
 
 /* line 23, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .block-data .n3 {
   text-align: right;
-  font-size: 40px;
+  font-size: 150%;
 }
 
 /* line 28, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .block-data .n4 {
   text-align: right;
-  font-size: 20px;
+  font-size: 100%;
 }
 
 /* line 34, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
