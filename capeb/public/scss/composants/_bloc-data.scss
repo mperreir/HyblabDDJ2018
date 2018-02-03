@@ -5,7 +5,35 @@
   color: $white;
   overflow: hidden;
   position: relative;
-  >.donneeTexte{
+  >.donnee{
+    @extend %data-donnee;
+    text-align: center;
+    width: 100%;
+  }
+  .n1{
+    @extend %data-liste;
+    font-size: 100px;
+  }
+  .n2{
+    @extend %data-liste;
+    font-size: 75px;
+  }
+  .n3{
+    @extend %data-liste;
+    font-size: 50px;
+  }
+  .n4{
+    @extend %data-liste;
+    font-size: 25px;
+  }
+
+  >.echelle{
+    @extend %data-echelle;
+    width: 100%;
+    text-align: right;
+
+  }
+  >.Texte{
     @extend %titre-titre;
     text-align: left;
     line-height: 1.1;
