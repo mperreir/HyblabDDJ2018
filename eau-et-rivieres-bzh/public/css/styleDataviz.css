@@ -25,6 +25,10 @@ body{
     font-size: 12px;
 }
 
+.section {
+    background-color: #96edbd;
+}
+
 /* ----- Header ----- */
 .navbar-brand>img {
     height: 20px;
@@ -37,8 +41,8 @@ body{
 #page1DisplayOn{
     filter :blur(0px);
 }
-/* Section 0 */
-#section0 {
+/* Section 1 */
+#section1 {
     float: left;
     position: absolute;
     border: solid 3px black;
@@ -64,18 +68,6 @@ body{
 .pBottom {
     padding-top: 5px;
     padding-bottom: 10px;
-}
-
-/* Section 1 */
-#section1 {
-    float: left;
-    border: solid 3px black;
-    background-color: white;
-    width: 15%;
-    position: absolute;
-    top: 10%;
-    left: 32%;
-    word-wrap : break-word;
 }
 
 /* Section 2 */
@@ -145,7 +137,7 @@ body{
 }
 
 /* Carte Départements */
-.map {
+#mapBretagne {
     float: left;
     width: 40%;
     position: absolute;
@@ -153,14 +145,14 @@ body{
     left: 5%;
 }
 
-.map path {
+#mapBretagne path {
     fill: white;
     stroke: black;
     stroke-width: 1 px;
     transition: fill 0.3s;
 }
 
-.map path:hover{
+#mapBretagne path:hover{
     fill: #c7c8ca;
 }
 
@@ -393,3 +385,96 @@ body{
 }
 
 /* Carte Campbon */
+#mapCampbon {
+    float: left;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    width: 45%;
+}
+
+.st200 {
+    fill: #7CCAE2;
+}
+
+.st201 {
+    font-family: 'MyriadPro-Regular';
+}
+
+.st202 {
+    font-size: 16.4237px;
+}
+
+.st203 {
+    fill: none;
+    stroke: #1D1D1B;
+    stroke-width: 3.5332;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st204 {
+    fill: #FFFFFF;
+}
+
+.st205 {
+    fill: #0C5F4C;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+.st206 {
+    fill: #1EAE8D;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+.st207 {
+    fill: none;
+}
+
+.st208 {
+    fill: #1D1D1B;
+}
+
+.st209 {
+    font-family: 'Gotham-Black';
+}
+
+.st210 {
+    font-size: 17px;
+}
+
+.st211 {
+    fill: #A0DAE8;
+}
+
+.st212 {
+    fill: #7CCAE2;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st213 {
+    fill: none;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st214 {
+    fill: #A0DAE8;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
