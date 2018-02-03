@@ -151,6 +151,28 @@ app.get('/:epci/investissement', function(req, res){
     res.json(json);
 });
 
+app.get('/:epci/recrutements', function(req, res){
+    var csv = path.join(__dirname,'./data/stats/NombreDeRecrutementsEnvisage_2017.csv');
+    var json = {};
+    crt_arr = [];
+    var data = fs.readFileSync(csv, 'utf8');
+    data.split(/\r\n|\n/).forEach(function (line, id) {
+        if(id == 0){
+            keys = line.split(",");
+            json['labels'] = keys.slice(1);
+            json['values'] =  [];
+        }
+        else{
+            var cells = line.split(',');
+            if(cells[0] == req.params.epci){
+                json['values'].push(cells.slice(1));
+            }
+        }
+    });
+
+    res.json(json);
+});
+
 app.get('/regionStats', function(req, res){
     var json = {};
     var csv = path.join(__dirname,'./data/stats/stats_region.csv');
