@@ -171,7 +171,7 @@ function miniStats(regionStats, d) {
     fetch("/capeb/data/" + d.properties.siren_epci + "/recrutements")
         .then(function (value) {
             return value.json();
-        })ole.log
+        })
         .catch(function (error) {
             console.log("error");
             console.log(error);
