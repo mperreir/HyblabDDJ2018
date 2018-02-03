@@ -110,22 +110,77 @@ fetch('data/nb_V_A_T.json')
              }
         });
     });
-// JS Slide 3
+// JS Slide 3 --------------------------------------------------
+var acc_grav_vehicule;
+fetch('data/acc_grav_vehicule.json')
+    // this promise will be fulfilled when the json fill will be
+    .then(function (response){
+        // if we could load the resource, parse it
+        if( response.ok )
+            return response.json();
+        else // if not, send some error message as JSON data
+            return {data: "JSON file not found"};
+
+    })
+    // in case of invalid JSON (parse error) send some error message as JSON data
+    .catch( function (error){
+        return {data: "Invalid JSON"};
+    })
+    // this promise will be fulfilled when the json will be parsed
+    .then(function (json) {
+
+        acc_grav_vehicule = json;
+    });
 $( "#voiture" ).mouseover(function() {
   if (   $("#pie_veh").attr("src") != "img/Vehicules/voiture_graphique.svg" ) {
-    $("#pie_veh").fadeOut("slow", function() {
       $( "#camion" ).css("opacity", "0.5");
       $( "#pieton" ).css("opacity", "0.5");
       $( "#voiture" ).css("opacity", "1");
       $( "#moto" ).css("opacity", "0.5");
       $( "#img_train_slide3" ).css("opacity", "0.5");
-
-      $("#pie_veh").css("width", "25%");
-      $("#pie_veh").attr("src", "img/Vehicules/voiture_graphique.svg");
-    });
-    $("#pie_veh").fadeIn("slow");
   }
 
+});
+
+$( "#voiture" ).click(function() {
+  if (   $("#pie_veh").attr("src") != "img/Vehicules/voiture_graphique.svg" ) {
+    $( "#voiture" ).css("opacity", "1");
+    $("#pie_veh").fadeOut("slow", function() {
+      $("#pie_veh").css("margin-top", "7%");
+      $("#pie_veh").css("height", "40%");
+      $("#pie_veh").attr("src", "img/Vehicules/voiture_graphique.svg");
+
+    });
+    $("#pie_veh").fadeIn("slow");
+    $("#grave").fadeOut("slow", function() {
+      $("#grave p").text("dont "+ acc_grav_vehicule.voiture.indemme + "% d'indemmes.")
+    });
+    $("#grave").fadeIn("slow");
+
+    $("#leger").fadeOut("slow");
+    $("#leger").fadeOut("slow", function() {
+      $("#leger p").text("dont "+ acc_grav_vehicule.voiture.leger + "% de blessé légées.")
+    });
+    $("#leger").fadeIn("slow");
+
+    $("#hospitalise").fadeOut("slow");
+    $("#hospitalise").fadeOut("slow", function() {
+      $("#hospitalise p").text("dont "+ acc_grav_vehicule.voiture.hospitalise + "% d'hospitalisées.")
+    });
+    $("#hospitalise").fadeIn("slow");
+
+    $("#mort").fadeOut("slow");
+    $("#mort").fadeOut("slow", function() {
+      $("#mort p").text("dont "+ acc_grav_vehicule.voiture.mort + "% de mort.")
+    });
+    $("#mort").fadeIn("slow");
+
+    $("#infos_accidents").fadeOut("slow");
+    $("#infos_accidents").fadeOut("slow", function() {
+      $("#infos_accidents").text("Sur "+ acc_grav_vehicule.nb_acc+" accidents, " +acc_grav_vehicule.voiture.nb_acc + " sont causées par des voitures.")
+    });
+    $("#infos_accidents").fadeIn("slow");
+  }
 });
 
 $( "#camion" ).mouseover(function() {
@@ -135,15 +190,47 @@ $( "#camion" ).mouseover(function() {
     $( "#voiture" ).css("opacity", "0.5");
     $( "#moto" ).css("opacity", "0.5");
     $( "#img_train_slide3" ).css("opacity", "0.5");
+  }
+});
 
+$( "#camion" ).click(function() {
+  if (   $("#pie_veh").attr("src") != "img/Vehicules/camion_graphique.svg" ) {
+    $( "#camion" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
-      $("#pie_veh").css("width", "25%");
+      $("#pie_veh").css("margin-top", "5%");
+      $("#pie_veh").css("height", "45%");
       $("#pie_veh").attr("src", "img/Vehicules/camion_graphique.svg");
     });
     $("#pie_veh").fadeIn("slow");
+    $("#grave").fadeOut("slow", function() {
+      $("#grave p").text("dont "+ acc_grav_vehicule.camion.indemme + "% d'indemmes.")
+    });
+    $("#grave").fadeIn("slow");
+
+    $("#leger").fadeOut("slow");
+    $("#leger").fadeOut("slow", function() {
+      $("#leger p").text("dont "+ acc_grav_vehicule.camion.leger + "% de blessé légées.")
+    });
+    $("#leger").fadeIn("slow");
+
+    $("#hospitalise").fadeOut("slow");
+    $("#hospitalise").fadeOut("slow", function() {
+      $("#hospitalise p").text("dont "+ acc_grav_vehicule.camion.hospitalise + "% d'hospitalisées.")
+    });
+    $("#hospitalise").fadeIn("slow");
+
+    $("#mort").fadeOut("slow");
+    $("#mort").fadeOut("slow", function() {
+      $("#mort p").text("dont "+ acc_grav_vehicule.camion.mort + "% de mort.")
+    });
+    $("#mort").fadeIn("slow");
+
+    $("#infos_accidents").fadeOut("slow");
+    $("#infos_accidents").fadeOut("slow", function() {
+      $("#infos_accidents").text("Sur "+ acc_grav_vehicule.nb_acc+" accidents, " +acc_grav_vehicule.camion.nb_acc + " sont causées par des camions.")
+    });
+    $("#infos_accidents").fadeIn("slow");
   }
-
-
 });
 
 $( "#moto" ).mouseover(function() {
@@ -154,13 +241,48 @@ $( "#moto" ).mouseover(function() {
     $( "#camion" ).css("opacity", "0.5");
     $( "#img_train_slide3" ).css("opacity", "0.5");
 
+  }
+
+});
+
+$( "#moto" ).click(function() {
+  if (   $("#pie_veh").attr("src") != "img/Vehicules/moto_graphique.svg" ) {
+    $( "#moto" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
-      $("#pie_veh").css("width", "25%");
+      $("#pie_veh").css("margin-top", "5%");
+      $("#pie_veh").css("height", "50%");
       $("#pie_veh").attr("src", "img/Vehicules/moto_graphique.svg");
     });
     $("#pie_veh").fadeIn("slow");
-  }
+    $("#grave").fadeOut("slow", function() {
+      $("#grave p").text("dont "+ acc_grav_vehicule.moto.indemme + "% d'indemmes.")
+    });
+    $("#grave").fadeIn("slow");
 
+    $("#leger").fadeOut("slow");
+    $("#leger").fadeOut("slow", function() {
+      $("#leger p").text("dont "+ acc_grav_vehicule.moto.leger + "% de blessé légées.")
+    });
+    $("#leger").fadeIn("slow");
+
+    $("#hospitalise").fadeOut("slow");
+    $("#hospitalise").fadeOut("slow", function() {
+      $("#hospitalise p").text("dont "+ acc_grav_vehicule.moto.hospitalise + "% d'hospitalisées.")
+    });
+    $("#hospitalise").fadeIn("slow");
+
+    $("#mort").fadeOut("slow");
+    $("#mort").fadeOut("slow", function() {
+      $("#mort p").text("dont "+ acc_grav_vehicule.moto.mort + "% de mort.")
+    });
+    $("#mort").fadeIn("slow");
+
+    $("#infos_accidents").fadeOut("slow");
+    $("#infos_accidents").fadeOut("slow", function() {
+      $("#infos_accidents").text("Sur "+ acc_grav_vehicule.nb_acc+" accidents, " +acc_grav_vehicule.moto.nb_acc + " sont causées par des moto.")
+    });
+    $("#infos_accidents").fadeIn("slow");
+  }
 });
 
 $( "#pieton" ).mouseover(function() {
@@ -170,15 +292,47 @@ $( "#pieton" ).mouseover(function() {
     $( "#voiture" ).css("opacity", "0.5");
     $( "#moto" ).css("opacity", "0.5");
     $( "#img_train_slide3" ).css("opacity", "0.5");
+  }
+});
 
+$( "#pieton" ).click(function() {
+  if (   $("#pie_veh").attr("src") != "img/Vehicules/personnage_graphique.svg" ) {
+    $( "#pieton" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
-      $("#pie_veh").css("width", "7%");
+      $("#pie_veh").css("margin-top", "2%");
+      $("#pie_veh").css("height", "65%");
       $("#pie_veh").attr("src", "img/Vehicules/personnage_graphique.svg");
     });
     $("#pie_veh").fadeIn("slow");
+    $("#grave").fadeOut("slow", function() {
+      $("#grave p").text("dont "+ acc_grav_vehicule.pieton.indemme + "% d'indemmes.")
+    });
+    $("#grave").fadeIn("slow");
+
+    $("#leger").fadeOut("slow");
+    $("#leger").fadeOut("slow", function() {
+      $("#leger p").text("dont "+ acc_grav_vehicule.pieton.leger + "% de blessé légées.")
+    });
+    $("#leger").fadeIn("slow");
+
+    $("#hospitalise").fadeOut("slow");
+    $("#hospitalise").fadeOut("slow", function() {
+      $("#hospitalise p").text("dont "+ acc_grav_vehicule.pieton.hospitalise + "% d'hospitalisées.")
+    });
+    $("#hospitalise").fadeIn("slow");
+
+    $("#mort").fadeOut("slow");
+    $("#mort").fadeOut("slow", function() {
+      $("#mort p").text("dont "+ acc_grav_vehicule.pieton.mort + "% de mort.")
+    });
+    $("#mort").fadeIn("slow");
+
+    $("#infos_accidents").fadeOut("slow");
+    $("#infos_accidents").fadeOut("slow", function() {
+      $("#infos_accidents").text("Sur "+ acc_grav_vehicule.nb_acc+" accidents, " +acc_grav_vehicule.pieton.nb_acc + " sont causées par des piétons.")
+    });
+    $("#infos_accidents").fadeIn("slow");
   }
-
-
 });
 
 $( "#img_train_slide3" ).mouseover(function() {
@@ -189,14 +343,55 @@ $( "#img_train_slide3" ).mouseover(function() {
     $( "#moto" ).css("opacity", "0.5");
     $( "#img_train_slide3" ).css("opacity", "1");
 
-    $("#pie_veh").fadeOut("slow", function() {
-      $("#pie_veh").css("width", "25%");
-      $("#pie_veh").attr("src", "img/Vehicules/train_graphique.svg");
 
-    });
-    $("#pie_veh").fadeIn("slow");
   }
 });
+$( "#img_train_slide3" ).click(function() {
+  if (   $("#pie_veh").attr("src") != "img/Vehicules/train_graphique.svg" ) {
+    $( "#img_train_slide3" ).css("opacity", "1");
+    $("#pie_veh").fadeOut("slow", function() {
+      $("#pie_veh").css("height", "30%");
+      $("#pie_veh").css("margin-top", "7%");
+      $("#pie_veh").attr("src", "img/Vehicules/train_graphique.svg");
+    });
+    $("#pie_veh").fadeIn("slow");
+    $("#grave").fadeOut("slow", function() {
+      $("#grave p").text("dont "+ acc_grav_vehicule.train.indemme + "% d'indemmes.")
+    });
+    $("#grave").fadeIn("slow");
+
+    $("#leger").fadeOut("slow");
+    $("#leger").fadeOut("slow", function() {
+      $("#leger p").text("dont "+ acc_grav_vehicule.train.leger + "% de blessé légées.")
+    });
+    $("#leger").fadeIn("slow");
+
+    $("#hospitalise").fadeOut("slow");
+    $("#hospitalise").fadeOut("slow", function() {
+      $("#hospitalise p").text("dont "+ acc_grav_vehicule.train.hospitalise + "% d'hospitalisées.")
+    });
+    $("#hospitalise").fadeIn("slow");
+
+    $("#mort").fadeOut("slow");
+    $("#mort").fadeOut("slow", function() {
+      $("#mort p").text("dont "+ acc_grav_vehicule.train.mort + "% de mort.")
+    });
+    $("#mort").fadeIn("slow");
+
+    $("#infos_accidents").fadeOut("slow");
+    $("#infos_accidents").fadeOut("slow", function() {
+      $("#infos_accidents").text("Sur "+ acc_grav_vehicule.nb_acc+" accidents, " +acc_grav_vehicule.train.nb_acc + " sont causées par des trains.")
+    });
+    $("#infos_accidents").fadeIn("slow");
+  }
+});
+// $("#leger").hide();
+// $("#mort").hide();
+// $("#hospitalise").hide();
+// $("#grave").hide();
+
+
+/* CARTE */
 
 var pnDisplay = true;
 var map;
@@ -223,6 +418,8 @@ var iconAcc = L.icon({
             iconSize: [38, 95]
 });
 
+
+/*afficher les pn ou non*/
 function AfficherPn()
 {
     if (pnDisplay == true){
@@ -284,6 +481,7 @@ var pn = addPn();
 console.log(pn);
 
 
+/* création fond de carte (France avec regions)*/
 
 fetch('data/france.geojson')
     // this promise will be fulfilled when the json fill will be
@@ -314,7 +512,4 @@ fetch('data/france.geojson')
         }}).addTo(map);
 });
 initmap();
-console.log(map);
-
-
 

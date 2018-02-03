@@ -1,0 +1,38 @@
+{
+  "nb_acc" : 1611,
+  "camion" : {
+    "nb_acc" : "12,8%",
+    "leger" : "19,9",
+    "indemme" : "53,1",
+    "hospitalise" : "20,8",
+    "mort" : "6,8%"
+  },
+  "moto" : {
+    "nb_acc" : "12%",
+    "leger" : "26,4",
+    "indemme" : "9,8",
+    "hospitalise" : "13",
+    "mort" : "10"
+  },
+  "voiture" : {
+    "nb_acc" : "54,4%",
+    "leger" : "24,5",
+    "indemme" : "35,8",
+    "hospitalise" : "27,6",
+    "mort" : "12,1"
+  },
+  "pieton" : {
+    "nb_acc" : "3%",
+    "leger" : "24,5",
+    "indemme" : "4,1",
+    "hospitalise" : "38,8",
+    "mort" : "32,7"
+  },
+  "train" : {
+    "nb_acc" : "16,9%",
+    "leger" : "6,2",
+    "indemme" : "86,8",
+    "hospitalise" : "2,9",
+    "mort" : "4"
+  }
+}
