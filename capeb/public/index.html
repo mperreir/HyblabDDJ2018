@@ -35,17 +35,26 @@
     <script src="js/map.js" defer></script>
     <script src="js/charts.js" defer></script>
     <script src="js/main.js" defer></script>
-    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.js" defer></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
             $('#fullpage').fullpage({
-                anchors :['firstPage', 'secondPage', 'thirdPage'],
+                anchors :['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
                 controlArrows: false,
-                keyboardScrolling: false,
+                resetSliders: true,
+                recordHistory: false,
+                navigation: true
             });
+
+
+            // can't move to dataviz slide without clicking on map
+            $.fn.fullpage.setKeyboardScrolling(false, 'right, left');
         });
+
     </script>
+
+
 
 </head>
 <body>
@@ -132,8 +141,6 @@
                   <p class="niveau-zoom">Data du niveau de zoom</p>
                 </div>
               </nav>
-
-
                 <section class="block-data info-epci">
                   <h1 class="donneeTexte">intro_<br>duction</h1>
                     <p class="description">Entrez dans l’univers des entreprises artisanales du bâtiment de votre territoire.</p>
@@ -142,7 +149,7 @@
 
                 <section class="block-data info-conjoncture">
                     <h1 class="donnee"></h1>
-                    <p class="echelle"></p>
+                    <p class="echelle">/10</p>
                 </section>
 
                 <section class="block-data info-investissement">
