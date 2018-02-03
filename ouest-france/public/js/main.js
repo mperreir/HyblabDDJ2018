@@ -548,6 +548,7 @@ function chargement(){
 	document.getElementById('jackGif').className = "jackGif--hidden";
 	document.getElementById('logo').className = "logo";
 	document.getElementById('bulleAccueil').className = "accueil-obtuse";
+	document.getElementById('jackAccueil').className = "jackAccueil";
 }
 
 function controleurPodium()

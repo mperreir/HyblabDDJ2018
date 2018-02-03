@@ -715,7 +715,7 @@ img.barrePlan
     transform: scaleX(-1);
 }
 
-.JackAccueil--hidden {
+.jackAccueil--hidden {
 	position: absolute;
 	overflow: hidden;
 	width: 0;
