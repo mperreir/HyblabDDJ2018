@@ -62,10 +62,10 @@ app.get('/:epci/stats', (req, res) => {
 })
 
 app.get('/:epci/distance', function(req, res){
-    var bubblecsv = path.join(__dirname,'./data/stats/Distance.csv');
+    var csv = path.join(__dirname,'./data/stats/Distance.csv');
     var json = {};
     crt_arr = []
-    var data = fs.readFileSync(bubblecsv, 'utf8');
+    var data = fs.readFileSync(csv, 'utf8');
     data.split(/\r\n|\n/).forEach(function (line, id) {
         if(id == 0){
             keys = line.split(";");
@@ -84,10 +84,10 @@ app.get('/:epci/distance', function(req, res){
 });
 
 app.get('/:epci/sunburst', function(req, res){
-    var bubblecsv = path.join(__dirname,'./data/stats/sunburst.csv');
+    var csv = path.join(__dirname,'./data/stats/sunburst.csv');
     var json = {};
     crt_arr = []
-    var data = fs.readFileSync(bubblecsv, 'utf8');
+    var data = fs.readFileSync(csv, 'utf8');
     data.split(/\r\n|\n/).forEach(function (line, id) {
         if(id == 0){
             keys = line.split(",");
@@ -108,10 +108,10 @@ app.get('/:epci/sunburst', function(req, res){
 
 
 app.get('/:epci/conjoncture', function(req, res){
-    var bubblecsv = path.join(__dirname,'./data/stats/ConjonctureEPCI.csv');
+    var csv = path.join(__dirname,'./data/stats/ConjonctureEPCI.csv');
     var json = {};
     crt_arr = []
-    var data = fs.readFileSync(bubblecsv, 'utf8');
+    var data = fs.readFileSync(csv, 'utf8');
     data.split(/\r\n|\n/).forEach(function (line, id) {
         if(id == 0){
             keys = line.split(";");
@@ -129,6 +129,30 @@ app.get('/:epci/conjoncture', function(req, res){
     res.charset = 'utf8';
     res.json(json);
 });
+
+
+app.get('/:epci/investissement', function(req, res){
+    var csv = path.join(__dirname,'./data/stats/Investissement2014-2017EPCI.csv');
+    var json = {};
+    crt_arr = [];
+    var data = fs.readFileSync(csv, 'utf8');
+    data.split(/\r\n|\n/).forEach(function (line, id) {
+        if(id == 0){
+            keys = line.split(",");
+            json['labels'] = keys.slice(1);
+            json['values'] =  [];
+        }
+        else{
+            var cells = line.split(',');
+            if(cells[0] == req.params.epci){
+                json['values'].push(cells.slice(1));
+            }
+        }
+    });
+
+    res.json(json);
+});
+
 
 app.get('/regionStats', function(req, res){
     var json = {};
