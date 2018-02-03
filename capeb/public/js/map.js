@@ -2,6 +2,10 @@
 document.getElementsByClassName("backToMap")[0].addEventListener("click", function(){
     var location = document.location.href;
     document.location.href = location.slice(0, location.lastIndexOf("/"));
+
+    $.fn.fullpage.setAllowScrolling(true, "up, down");
+    $.fn.fullpage.setKeyboardScrolling(true, "up, down");
+
 });
 
 var page2 = d3.select(".map-pdl");
@@ -24,6 +28,10 @@ $ (document).ready(function(){
             .attr("stroke", "black")
             .attr("d", path)
             .on("click", function (d) {
+                //disable scroll up and down on dataviz slide
+                $.fn.fullpage.setAllowScrolling(false, "up, down");
+                $.fn.fullpage.setKeyboardScrolling(false, "up, down");
+
                 fetch("/capeb/data/regionStats")
                     .then(function (value) {
                         return value.json();
@@ -80,9 +88,22 @@ function miniStats(regionStats, d) {
     "rgba(105,197,185,1)"
     ];
 
-
-
     //1 : conjoncture / number / multibubble
+    fetch("/capeb/data/" + d.properties.siren_epci + "/conjoncture")
+        .then(function (value) {
+            return value.json();
+        })
+        .catch(function (error) {
+            console.log("error");
+            console.log(error);
+            return {};
+        })
+        .then(function(json){
+            var dataFrame = document.getElementsByClassName("info-conjoncture")[0];
+            dataFrame.getElementsByClassName("donnee")[0].innerHTML = parseFloat(json.values[0][0]).toFixed(2);
+            dataFrame.style.backgroundColor = colorsForRegion[matchColor(json.values[0][0], 2.87, 3.78, 0.182, 0.244)];
+        });
+
 
     //2 : Investissement /  / chart over time compared with region
 
@@ -105,8 +126,8 @@ function miniStats(regionStats, d) {
            
            document.getElementsByClassName("info-contrat")[0].innerHTML = ""
            var h = 1
-
            $(".info-contrat").append("<h" + h + " class='donnee'>" + stat[0].name + "</h" + h + ">")
+
            for(var i = 1; i < 4; i++){
 			   if(stat[i].value < stat[i - 1].value){
 				 h++;
@@ -156,7 +177,7 @@ function miniStats(regionStats, d) {
             });
             mean/=json.values.length;
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = Math.round(mean);
-            dataFrame.style.backgroundColor = colorsForRegion[matchColorDistance(mean)];
+            dataFrame.style.backgroundColor = colorsForRegion[matchColor(mean, 24, 59, 7, 13.2)];
         });
 
     //7 : MP / oui/non plus représenté / camembert -> nuage de mots
@@ -164,28 +185,26 @@ function miniStats(regionStats, d) {
 
 }
 
-function matchColorDistance(value){
-    var firstInc = 7;
-    var secondInc = 7;
-    if(value <= 24+firstInc ){
+function matchColor(value, min, mean, firstInc, secondInc){
+    if(value <= min+firstInc ){
         return 9;
-    } else if(value<= 24+firstInc *2){
+    } else if(value<= min+firstInc *2){
         return 8;
-    } else if(value<= 24+firstInc *3){
+    } else if(value<= min+firstInc *3){
         return 7;
-    } else if(value<= 24+firstInc *4){
+    } else if(value<= min+firstInc *4){
         return 6;
-    } else if(value<= 24+firstInc *5){
+    } else if(value<= min+firstInc *5){
         return 5;
-    } else if(value<= 59+secondInc *6){
+    } else if(value<= mean+secondInc){
         return 4;
-    } else if(value<= 59+secondInc *7){
+    } else if(value<= mean+secondInc *2){
         return 3;
-    } else if(value<= 59+secondInc *8){
+    } else if(value<= mean+secondInc *3){
         return 2;
-    } else if(value<= 59+secondInc *9){
+    } else if(value<= mean+secondInc *4){
         return 1;
-    } else if(value<= 59+secondInc *10){
+    } else if(value<= mean+secondInc *5){
         return 0;
     }
 }
