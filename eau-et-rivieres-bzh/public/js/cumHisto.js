@@ -143,8 +143,8 @@ function buildHisto(parent, ann, dep){
 	  //    .call(d3.axisBottom(x));
 		g.append("g")
 				.append("text")
-				.attr("x",160)
-				.attr("y",400)
+				.attr("x",90)
+				.attr("y",250)
 				.text(getCleanDepName)
 				.attr("font-family", "sans-serif")
 				.attr("font-size", "30px")
@@ -184,7 +184,7 @@ function buildHisto(parent, ann, dep){
 	      .attr("fill", "#000")
 	      .attr("font-weight", "bold")
 	      .attr("text-anchor", "start")
-		
+
 
 		function getLab(d){
 
