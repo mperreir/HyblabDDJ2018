@@ -16,6 +16,13 @@ function controleurPlan(){
 	var annee2015 = document.getElementById("carte2015");
 	var annee2016 = document.getElementById("carte2016");
 	var annee2017 = document.getElementById("carte2017");
+	var scene1 = document.getElementById("scene1");
+	var scene2 = document.getElementById("scene2");
+	var scene3 = document.getElementById("scene3");
+	var scene4 = document.getElementById("scene4");
+	var scene5 = document.getElementById("scene5");
+	var scene6 = document.getElementById("scene6");
+	var scene7 = document.getElementById("scene7");
 
 	anneeEvolution.onclick = function(){
 		textePlan.textContent = "J’ai pu voir passer sur la Main 01 près de 306 groupes au Hellfest. Une vraie ribambelle d’artistes depuis plus de 13 ans. Cela est dû au nombre grandissant de mes amis les festivaliers. De 22 000 à 152 000 tickets vendus en 13 ans, quelle évolution, c’est incroyable! Venez vite voir cet élargissement considérable du Hellfest !";
@@ -97,7 +104,45 @@ function controleurPlan(){
 		document.getElementById("pin2012-05").className = "pin--2012-5"
 		document.getElementById("pin2012-06").className = "pin--2012-6"
 		document.getElementById("pin2012-07").className = "pin--2012-7"
+		$('li').remove();
+		fetch('data/AnneeSceneTypeGroupe.json')
+    	.then(function (response){
+    	    // if we could load the resource, parse it
+    		if( response.ok )
+    	        return response.json();
+    	    else // if not, send some error message as JSON data
+    	        return {data: "JSON file not found"};
 
+		})
+		// in case of invalid JSON (parse error) send some error message as JSON data
+		.catch( function (error){
+		    return {data: "Invalid JSON"};
+		})
+		// this promise will be fulfilled when the json will be parsed
+		.then(function (json) {
+		    var listeGroupe1 = new Array();
+		    var listeGroupe2 = new Array();
+    		json.forEach(function(groupe){
+    			if (groupe.Annee === 2006 && groupe.Scene === "Hard n'Heavy stage" )
+    			{
+    				listeGroupe1.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2006 && groupe.Scene === "Main" )
+    			{
+    				listeGroupe2.push(groupe.Groupe);
+    			} 
+    		});
+    		listeGroupe1.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene1.appendChild(choix);
+			});
+			listeGroupe2.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene2.appendChild(choix);
+			});
+    	});
 	}
 
 	annee2007.onclick = function(){
@@ -139,6 +184,56 @@ function controleurPlan(){
 		document.getElementById("pin2012-05").className = "pin--2012-5"
 		document.getElementById("pin2012-06").className = "pin--2012-6"
 		document.getElementById("pin2012-07").className = "pin--2012-7"
+		$('li').remove();
+		fetch('data/AnneeSceneTypeGroupe.json')
+    	// this promise will be fulfilled when the json fill will be
+    	.then(function (response){
+    	    // if we could load the resource, parse it
+    		if( response.ok )
+    	        return response.json();
+    	    else // if not, send some error message as JSON data
+    	        return {data: "JSON file not found"};
+
+		})
+		// in case of invalid JSON (parse error) send some error message as JSON data
+		.catch( function (error){
+		    return {data: "Invalid JSON"};
+		})
+		// this promise will be fulfilled when the json will be parsed
+		.then(function (json) {
+		    var listeGroupe1 = new Array();
+		    var listeGroupe2 = new Array();
+		    var listeGroupe3 = new Array();
+    		json.forEach(function(groupe){
+    			if (groupe.Annee === 2007 && groupe.Scene === "Discover stage" )
+    			{
+    				listeGroupe1.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2007 && groupe.Scene === "Gibson stage" )
+    			{
+    				listeGroupe2.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2007 && groupe.Scene === "Main" )
+    			{
+    				listeGroupe3.push(groupe.Groupe);
+    			} 
+    		});
+    		listeGroupe1.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene1.appendChild(choix);
+			});
+			listeGroupe2.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene2.appendChild(choix);
+			});
+			listeGroupe3.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene3.appendChild(choix);
+			});
+    	});
 	}
 	annee2008.onclick = function(){
 		textePlan.textContent = "Le nombre de groupes augmentente considérablement par rapport à 2007, passant de 84 à 108. Les groupes sont répartis entre 3 scènes distinctes et hiérarchisées : la main, la second stage et enfin la discover stage.";
@@ -179,6 +274,56 @@ function controleurPlan(){
 		document.getElementById("pin2012-05").className = "pin--2012-5"
 		document.getElementById("pin2012-06").className = "pin--2012-6"
 		document.getElementById("pin2012-07").className = "pin--2012-7"
+		$('li').remove();
+		fetch('data/AnneeSceneTypeGroupe.json')
+    	// this promise will be fulfilled when the json fill will be
+    	.then(function (response){
+    	    // if we could load the resource, parse it
+    		if( response.ok )
+    	        return response.json();
+    	    else // if not, send some error message as JSON data
+    	        return {data: "JSON file not found"};
+
+		})
+		// in case of invalid JSON (parse error) send some error message as JSON data
+		.catch( function (error){
+		    return {data: "Invalid JSON"};
+		})
+		// this promise will be fulfilled when the json will be parsed
+		.then(function (json) {
+		    var listeGroupe1 = new Array();
+		    var listeGroupe2 = new Array();
+		    var listeGroupe3 = new Array();
+    		json.forEach(function(groupe){
+    			if (groupe.Annee === 2008 && groupe.Scene === "Discover stage" )
+    			{
+    				listeGroupe1.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2008 && groupe.Scene === "Main" )
+    			{
+    				listeGroupe2.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2008 && groupe.Scene === "Main" )
+    			{
+    				listeGroupe3.push(groupe.Groupe);
+    			} 
+    		});
+    		listeGroupe1.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene1.appendChild(choix);
+			});
+			listeGroupe2.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene2.appendChild(choix);
+			});
+			listeGroupe3.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene3.appendChild(choix);
+			});
+    	});
 	}
 
 	annee2009.onclick = function(){
@@ -220,6 +365,67 @@ function controleurPlan(){
 		document.getElementById("pin2012-05").className = "pin--2012-5"
 		document.getElementById("pin2012-06").className = "pin--2012-6"
 		document.getElementById("pin2012-07").className = "pin--2012-7"
+		$('li').remove();
+		fetch('data/AnneeSceneTypeGroupe.json')
+    	// this promise will be fulfilled when the json fill will be
+    	.then(function (response){
+    	    // if we could load the resource, parse it
+    		if( response.ok )
+    	        return response.json();
+    	    else // if not, send some error message as JSON data
+    	        return {data: "JSON file not found"};
+
+		})
+		// in case of invalid JSON (parse error) send some error message as JSON data
+		.catch( function (error){
+		    return {data: "Invalid JSON"};
+		})
+		// this promise will be fulfilled when the json will be parsed
+		.then(function (json) {
+		    var listeGroupe1 = new Array();
+		    var listeGroupe2 = new Array();
+		    var listeGroupe3 = new Array();
+		    var listeGroupe4 = new Array();
+    		json.forEach(function(groupe){
+    			if (groupe.Annee === 2009 && groupe.Scene === "Main 01" )
+    			{
+    				listeGroupe1.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2009 && groupe.Scene === "Main 02" )
+    			{
+    				listeGroupe2.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2009 && groupe.Scene === "Rock Hard tent" )
+    			{
+    				listeGroupe3.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2009 && groupe.Scene === "Terrorizer tent" )
+    			{
+    				listeGroupe4.push(groupe.Groupe);
+    			} 
+    		});
+    		listeGroupe1.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene1.appendChild(choix);
+			});
+			listeGroupe2.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene2.appendChild(choix);
+			});
+			listeGroupe3.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene3.appendChild(choix);
+			});
+			listeGroupe4.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene4.appendChild(choix);
+			});
+    	});
+
 	}
 	annee2010.onclick = function(){
 		textePlan.textContent = "En 2010, le festival conserve les mêmes scènes et le même nombre de groupes qu’en 2009. La Main 01 produit principalement les groupes de heavy metal tradiotionnel et de hardrock.";
@@ -260,6 +466,66 @@ function controleurPlan(){
 		document.getElementById("pin2012-05").className = "pin--2012-5"
 		document.getElementById("pin2012-06").className = "pin--2012-6"
 		document.getElementById("pin2012-07").className = "pin--2012-7"
+		$('li').remove();
+		fetch('data/AnneeSceneTypeGroupe.json')
+    	// this promise will be fulfilled when the json fill will be
+    	.then(function (response){
+    	    // if we could load the resource, parse it
+    		if( response.ok )
+    	        return response.json();
+    	    else // if not, send some error message as JSON data
+    	        return {data: "JSON file not found"};
+
+		})
+		// in case of invalid JSON (parse error) send some error message as JSON data
+		.catch( function (error){
+		    return {data: "Invalid JSON"};
+		})
+		// this promise will be fulfilled when the json will be parsed
+		.then(function (json) {
+		    var listeGroupe1 = new Array();
+		    var listeGroupe2 = new Array();
+		    var listeGroupe3 = new Array();
+		    var listeGroupe4 = new Array();
+    		json.forEach(function(groupe){
+    			if (groupe.Annee === 2010 && groupe.Scene === "Main 01" )
+    			{
+    				listeGroupe1.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2010 && groupe.Scene === "Main 02" )
+    			{
+    				listeGroupe2.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2010 && groupe.Scene === "Rock Hard tent" )
+    			{
+    				listeGroupe3.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2010 && groupe.Scene === "Terrorizer tent" )
+    			{
+    				listeGroupe4.push(groupe.Groupe);
+    			} 
+    		});
+    		listeGroupe1.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene1.appendChild(choix);
+			});
+			listeGroupe2.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene2.appendChild(choix);
+			});
+			listeGroupe3.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene3.appendChild(choix);
+			});
+			listeGroupe4.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene4.appendChild(choix);
+			});
+    	});
 	}
 	annee2011.onclick = function(){
 		textePlan.textContent ="118 groupes sont présents en 2011. C’est un nombre relativement constant depuis l’édition de 2008.";
@@ -300,6 +566,66 @@ function controleurPlan(){
 		document.getElementById("pin2012-05").className = "pin--2012-5"
 		document.getElementById("pin2012-06").className = "pin--2012-6"
 		document.getElementById("pin2012-07").className = "pin--2012-7"
+		$('li').remove();
+		fetch('data/AnneeSceneTypeGroupe.json')
+    	// this promise will be fulfilled when the json fill will be
+    	.then(function (response){
+    	    // if we could load the resource, parse it
+    		if( response.ok )
+    	        return response.json();
+    	    else // if not, send some error message as JSON data
+    	        return {data: "JSON file not found"};
+
+		})
+		// in case of invalid JSON (parse error) send some error message as JSON data
+		.catch( function (error){
+		    return {data: "Invalid JSON"};
+		})
+		// this promise will be fulfilled when the json will be parsed
+		.then(function (json) {
+		    var listeGroupe1 = new Array();
+		    var listeGroupe2 = new Array();
+		    var listeGroupe3 = new Array();
+		    var listeGroupe4 = new Array();
+    		json.forEach(function(groupe){
+    			if (groupe.Annee === 2011 && groupe.Scene === "Main 01" )
+    			{
+    				listeGroupe1.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2011 && groupe.Scene === "Main 02" )
+    			{
+    				listeGroupe2.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2011 && groupe.Scene === "Rock Hard tent" )
+    			{
+    				listeGroupe3.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2011 && groupe.Scene === "Terrorizer tent" )
+    			{
+    				listeGroupe4.push(groupe.Groupe);
+    			} 
+    		});
+    		listeGroupe1.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene1.appendChild(choix);
+			});
+			listeGroupe2.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene2.appendChild(choix);
+			});
+			listeGroupe3.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene3.appendChild(choix);
+			});
+			listeGroupe4.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene4.appendChild(choix);
+			});
+    	});
 	}
 	annee2012.onclick = function(){
 		textePlan.textContent ="Le Hellfest n'accueille plus 4 scènes mais bien 7 scènes pour un total de 170 artistes en cette année 2012, un véritable boom par rapport à l’année précédente. La Warzone met à l’honneur le punk hardcore, la Valley  le sludge/ stoner et le Metal Corner déniche les talents de demain . Autres changements, la Terrorizer tent laisse place au Temple (doom / pagan metal / black metal) et la Rock Hard tent devient l’Altar ( death metal / grind).";
@@ -340,7 +666,96 @@ function controleurPlan(){
 		document.getElementById("pin2012-05").className = "fadeInDown animated pin--2012-5"
 		document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
+		$('li').remove();
+		fetch('data/AnneeSceneTypeGroupe.json')
+    	// this promise will be fulfilled when the json fill will be
+    	.then(function (response){
+    	    // if we could load the resource, parse it
+    		if( response.ok )
+    	        return response.json();
+    	    else // if not, send some error message as JSON data
+    	        return {data: "JSON file not found"};
 
+		})
+		// in case of invalid JSON (parse error) send some error message as JSON data
+		.catch( function (error){
+		    return {data: "Invalid JSON"};
+		})
+		// this promise will be fulfilled when the json will be parsed
+		.then(function (json) {
+		    var listeGroupe1 = new Array();
+		    var listeGroupe2 = new Array();
+		    var listeGroupe3 = new Array();
+		    var listeGroupe4 = new Array();
+		    var listeGroupe5 = new Array();
+		    var listeGroupe6 = new Array();
+		    var listeGroupe7 = new Array();
+    		json.forEach(function(groupe){
+    			if (groupe.Annee === 2012 && groupe.Scene === "Altar" )
+    			{
+    				listeGroupe1.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2012 && groupe.Scene === "Main 01" )
+    			{
+    				listeGroupe2.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2012 && groupe.Scene === "Main 02" )
+    			{
+    				listeGroupe3.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2012 && groupe.Scene === "Metal Corner" )
+    			{
+    				listeGroupe4.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2012 && groupe.Scene === "Temple" )
+    			{
+    				listeGroupe5.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2012 && groupe.Scene === "Valley" )
+    			{
+    				listeGroupe6.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2012 && groupe.Scene === "Warzone" )
+    			{
+    				listeGroupe7.push(groupe.Groupe);
+    			} 
+    		});
+    		listeGroupe1.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene1.appendChild(choix);
+			});
+			listeGroupe2.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene2.appendChild(choix);
+			});
+			listeGroupe3.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene3.appendChild(choix);
+			});
+			listeGroupe4.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene4.appendChild(choix);
+			});
+			listeGroupe5.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene5.appendChild(choix);
+			});
+			listeGroupe6.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene6.appendChild(choix);
+			});
+			listeGroupe7.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene7.appendChild(choix);
+			});
+    	});
 	}
 	annee2013.onclick = function(){
 		textePlan.textContent ="170 artistes montent sur les planches du Hellfest en 2013, une répétition de 2012 avec les mêmes scènes.";
@@ -381,6 +796,96 @@ function controleurPlan(){
 		document.getElementById("pin2012-05").className = "fadeInDown animated pin--2012-5"
 		document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
+		$('li').remove();
+		fetch('data/AnneeSceneTypeGroupe.json')
+    	// this promise will be fulfilled when the json fill will be
+    	.then(function (response){
+    	    // if we could load the resource, parse it
+    		if( response.ok )
+    	        return response.json();
+    	    else // if not, send some error message as JSON data
+    	        return {data: "JSON file not found"};
+
+		})
+		// in case of invalid JSON (parse error) send some error message as JSON data
+		.catch( function (error){
+		    return {data: "Invalid JSON"};
+		})
+		// this promise will be fulfilled when the json will be parsed
+		.then(function (json) {
+		    var listeGroupe1 = new Array();
+		    var listeGroupe2 = new Array();
+		    var listeGroupe3 = new Array();
+		    var listeGroupe4 = new Array();
+		    var listeGroupe5 = new Array();
+		    var listeGroupe6 = new Array();
+		    var listeGroupe7 = new Array();
+    		json.forEach(function(groupe){
+    			if (groupe.Annee === 2013 && groupe.Scene === "Altar" )
+    			{
+    				listeGroupe1.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2013 && groupe.Scene === "Main 01" )
+    			{
+    				listeGroupe2.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2013 && groupe.Scene === "Main 02" )
+    			{
+    				listeGroupe3.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2013 && groupe.Scene === "Metal Corner" )
+    			{
+    				listeGroupe4.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2013 && groupe.Scene === "Temple" )
+    			{
+    				listeGroupe5.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2013 && groupe.Scene === "Valley" )
+    			{
+    				listeGroupe6.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2013 && groupe.Scene === "Warzone" )
+    			{
+    				listeGroupe7.push(groupe.Groupe);
+    			} 
+    		});
+    		listeGroupe1.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene1.appendChild(choix);
+			});
+			listeGroupe2.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene2.appendChild(choix);
+			});
+			listeGroupe3.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene3.appendChild(choix);
+			});
+			listeGroupe4.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene4.appendChild(choix);
+			});
+			listeGroupe5.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene5.appendChild(choix);
+			});
+			listeGroupe6.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene6.appendChild(choix);
+			});
+			listeGroupe7.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene7.appendChild(choix);
+			});
+    	});
 	}
 	annee2014.onclick = function(){
 		textePlan.textContent ="Le format des scènes du Hellfest de 2012 reste toujours le même pour acceuillir le même nombre d’artistes.";
@@ -421,6 +926,96 @@ function controleurPlan(){
 		document.getElementById("pin2012-05").className = "fadeInDown animated pin--2012-5"
 		document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
+		$('li').remove();
+		fetch('data/AnneeSceneTypeGroupe.json')
+    	// this promise will be fulfilled when the json fill will be
+    	.then(function (response){
+    	    // if we could load the resource, parse it
+    		if( response.ok )
+    	        return response.json();
+    	    else // if not, send some error message as JSON data
+    	        return {data: "JSON file not found"};
+
+		})
+		// in case of invalid JSON (parse error) send some error message as JSON data
+		.catch( function (error){
+		    return {data: "Invalid JSON"};
+		})
+		// this promise will be fulfilled when the json will be parsed
+		.then(function (json) {
+		    var listeGroupe1 = new Array();
+		    var listeGroupe2 = new Array();
+		    var listeGroupe3 = new Array();
+		    var listeGroupe4 = new Array();
+		    var listeGroupe5 = new Array();
+		    var listeGroupe6 = new Array();
+		    var listeGroupe7 = new Array();
+    		json.forEach(function(groupe){
+    			if (groupe.Annee === 2014 && groupe.Scene === "Altar" )
+    			{
+    				listeGroupe1.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2014 && groupe.Scene === "Main 01" )
+    			{
+    				listeGroupe2.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2014 && groupe.Scene === "Main 02" )
+    			{
+    				listeGroupe3.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2014 && groupe.Scene === "Metal Corner" )
+    			{
+    				listeGroupe4.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2014 && groupe.Scene === "Temple" )
+    			{
+    				listeGroupe5.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2014 && groupe.Scene === "Valley" )
+    			{
+    				listeGroupe6.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2014 && groupe.Scene === "Warzone" )
+    			{
+    				listeGroupe7.push(groupe.Groupe);
+    			} 
+    		});
+    		listeGroupe1.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene1.appendChild(choix);
+			});
+			listeGroupe2.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene2.appendChild(choix);
+			});
+			listeGroupe3.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene3.appendChild(choix);
+			});
+			listeGroupe4.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene4.appendChild(choix);
+			});
+			listeGroupe5.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene5.appendChild(choix);
+			});
+			listeGroupe6.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene6.appendChild(choix);
+			});
+			listeGroupe7.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene7.appendChild(choix);
+			});
+    	});
 	}
 	annee2015.onclick = function(){
 		textePlan.textContent ="Très légère baisse de nombre d’artistes en 2015 puisque les 7 scènes reçoivent 166 groupes.";
@@ -461,6 +1056,96 @@ function controleurPlan(){
 		document.getElementById("pin2012-05").className = "fadeInDown animated pin--2012-5"
 		document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
+		$('li').remove();
+		fetch('data/AnneeSceneTypeGroupe.json')
+    	// this promise will be fulfilled when the json fill will be
+    	.then(function (response){
+    	    // if we could load the resource, parse it
+    		if( response.ok )
+    	        return response.json();
+    	    else // if not, send some error message as JSON data
+    	        return {data: "JSON file not found"};
+
+		})
+		// in case of invalid JSON (parse error) send some error message as JSON data
+		.catch( function (error){
+		    return {data: "Invalid JSON"};
+		})
+		// this promise will be fulfilled when the json will be parsed
+		.then(function (json) {
+		    var listeGroupe1 = new Array();
+		    var listeGroupe2 = new Array();
+		    var listeGroupe3 = new Array();
+		    var listeGroupe4 = new Array();
+		    var listeGroupe5 = new Array();
+		    var listeGroupe6 = new Array();
+		    var listeGroupe7 = new Array();
+    		json.forEach(function(groupe){
+    			if (groupe.Annee === 2015 && groupe.Scene === "Altar" )
+    			{
+    				listeGroupe1.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2015 && groupe.Scene === "Main 01" )
+    			{
+    				listeGroupe2.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2015 && groupe.Scene === "Main 02" )
+    			{
+    				listeGroupe3.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2015 && groupe.Scene === "Metal Corner" )
+    			{
+    				listeGroupe4.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2015 && groupe.Scene === "Temple" )
+    			{
+    				listeGroupe5.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2015 && groupe.Scene === "Valley" )
+    			{
+    				listeGroupe6.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2015 && groupe.Scene === "Warzone" )
+    			{
+    				listeGroupe7.push(groupe.Groupe);
+    			} 
+    		});
+    		listeGroupe1.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene1.appendChild(choix);
+			});
+			listeGroupe2.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene2.appendChild(choix);
+			});
+			listeGroupe3.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene3.appendChild(choix);
+			});
+			listeGroupe4.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene4.appendChild(choix);
+			});
+			listeGroupe5.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene5.appendChild(choix);
+			});
+			listeGroupe6.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene6.appendChild(choix);
+			});
+			listeGroupe7.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene7.appendChild(choix);
+			});
+    	});
 	}
 	annee2016.onclick = function(){
 		textePlan.textContent ="Le Metal Corner en partenariat avec Deezer Open Hell'Stage en 2016 accueille presque le double de ce qu’il a l’habitude d’avoir. Cette scène où les groupes de métals s’affrontent pour se produirent sur une “main stage” rencontre un véritable succès.";
@@ -501,6 +1186,96 @@ function controleurPlan(){
 		document.getElementById("pin2012-05").className = "fadeInDown animated pin--2012-5"
 		document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
+		$('li').remove();
+		fetch('data/AnneeSceneTypeGroupe.json')
+    	// this promise will be fulfilled when the json fill will be
+    	.then(function (response){
+    	    // if we could load the resource, parse it
+    		if( response.ok )
+    	        return response.json();
+    	    else // if not, send some error message as JSON data
+    	        return {data: "JSON file not found"};
+
+		})
+		// in case of invalid JSON (parse error) send some error message as JSON data
+		.catch( function (error){
+		    return {data: "Invalid JSON"};
+		})
+		// this promise will be fulfilled when the json will be parsed
+		.then(function (json) {
+		    var listeGroupe1 = new Array();
+		    var listeGroupe2 = new Array();
+		    var listeGroupe3 = new Array();
+		    var listeGroupe4 = new Array();
+		    var listeGroupe5 = new Array();
+		    var listeGroupe6 = new Array();
+		    var listeGroupe7 = new Array();
+    		json.forEach(function(groupe){
+    			if (groupe.Annee === 2016 && groupe.Scene === "Altar" )
+    			{
+    				listeGroupe1.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2016 && groupe.Scene === "Main 01" )
+    			{
+    				listeGroupe2.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2016 && groupe.Scene === "Main 02" )
+    			{
+    				listeGroupe3.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2016 && groupe.Scene === "Metal Corner" )
+    			{
+    				listeGroupe4.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2016 && groupe.Scene === "Temple" )
+    			{
+    				listeGroupe5.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2016 && groupe.Scene === "Valley" )
+    			{
+    				listeGroupe6.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2016 && groupe.Scene === "Warzone" )
+    			{
+    				listeGroupe7.push(groupe.Groupe);
+    			} 
+    		});
+    		listeGroupe1.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene1.appendChild(choix);
+			});
+			listeGroupe2.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene2.appendChild(choix);
+			});
+			listeGroupe3.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene3.appendChild(choix);
+			});
+			listeGroupe4.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene4.appendChild(choix);
+			});
+			listeGroupe5.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene5.appendChild(choix);
+			});
+			listeGroupe6.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene6.appendChild(choix);
+			});
+			listeGroupe7.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene7.appendChild(choix);
+			});
+    	});
 	}
 	annee2017.onclick = function(){
 		textePlan.textContent ="167 artistes font monter les décibels en 2017 pour faire vibrer les festivaliers.";
@@ -541,6 +1316,96 @@ function controleurPlan(){
 		document.getElementById("pin2012-05").className = "fadeInDown animated pin--2012-5"
 		document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
+		$('li').remove();
+		fetch('data/AnneeSceneTypeGroupe.json')
+    	// this promise will be fulfilled when the json fill will be
+    	.then(function (response){
+    	    // if we could load the resource, parse it
+    		if( response.ok )
+    	        return response.json();
+    	    else // if not, send some error message as JSON data
+    	        return {data: "JSON file not found"};
+
+		})
+		// in case of invalid JSON (parse error) send some error message as JSON data
+		.catch( function (error){
+		    return {data: "Invalid JSON"};
+		})
+		// this promise will be fulfilled when the json will be parsed
+		.then(function (json) {
+		    var listeGroupe1 = new Array();
+		    var listeGroupe2 = new Array();
+		    var listeGroupe3 = new Array();
+		    var listeGroupe4 = new Array();
+		    var listeGroupe5 = new Array();
+		    var listeGroupe6 = new Array();
+		    var listeGroupe7 = new Array();
+    		json.forEach(function(groupe){
+    			if (groupe.Annee === 2017 && groupe.Scene === "Altar" )
+    			{
+    				listeGroupe1.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2017 && groupe.Scene === "Main 01" )
+    			{
+    				listeGroupe2.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2017 && groupe.Scene === "Main 02" )
+    			{
+    				listeGroupe3.push(groupe.Groupe);
+    			} 
+    			if (groupe.Annee === 2017 && groupe.Scene === "Metal Corner" )
+    			{
+    				listeGroupe4.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2017 && groupe.Scene === "Temple" )
+    			{
+    				listeGroupe5.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2017 && groupe.Scene === "Valley" )
+    			{
+    				listeGroupe6.push(groupe.Groupe);
+    			}
+    			if (groupe.Annee === 2017 && groupe.Scene === "Warzone" )
+    			{
+    				listeGroupe7.push(groupe.Groupe);
+    			} 
+    		});
+    		listeGroupe1.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene1.appendChild(choix);
+			});
+			listeGroupe2.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene2.appendChild(choix);
+			});
+			listeGroupe3.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene3.appendChild(choix);
+			});
+			listeGroupe4.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene4.appendChild(choix);
+			});
+			listeGroupe5.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene5.appendChild(choix);
+			});
+			listeGroupe6.forEach(function(groupe){
+				var choix = document.createElement('li');
+				choix.textContent = groupe;
+				scene6.appendChild(choix);
+			});
+			listeGroupe7.forEach(function(groupe){
+			var choix = document.createElement('li');
+			choix.textContent = groupe;
+			scene7.appendChild(choix);
+			});
+    	});
 	}
 }
 
@@ -708,7 +1573,7 @@ function controleurPodium()
 	}
 	Podium2010.onclick = function(){
 		document.getElementById("podium").className = "";
-		TextePodium.textContent = "Les groueps francais sont en pertes de vitesse en cette année 2010... La Roumanie fait son entrée dans le festival avec le groupe Negurâ Bunget.";
+		TextePodium.textContent = "Les groupe français sont en perte de vitesse en cette année 2010... La Roumanie fait son entrée dans le festival avec le groupe Negurâ Bunget.";
 		PodiumEvolution.className = "pointEvolution";
 		Podium2006.className = "point";
 		Podium2007.className = "point";
@@ -979,84 +1844,219 @@ function pin(){
 	pin200601.onclick = function(){
 		titre.textContent = "Hard n'Heavy";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene";
+		document.getElementById("scene2").className = "listeScene--hidden";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin200602.onclick = function(){
 		titre.textContent = "Main Stage";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene--hidden";
+		document.getElementById("scene2").className = "listeScene";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin200701.onclick = function(){
 		titre.textContent = "Discover Stage";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene";
+		document.getElementById("scene2").className = "listeScene--hidden";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
+
 	}
 	pin200702.onclick = function(){
 		titre.textContent = "Gibson Stage";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene--hidden";
+		document.getElementById("scene2").className = "listeScene";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin200703.onclick = function(){
 		titre.textContent = "Main Stage";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene--hidden";
+		document.getElementById("scene2").className = "listeScene--hidden";
+		document.getElementById("scene3").className = "listeScene";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin200801.onclick = function(){
 		titre.textContent = "Discover Stage";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene";
+		document.getElementById("scene2").className = "listeScene--hidden";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin200802.onclick = function(){
 		titre.textContent = "Main 2 Stage";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene--hidden";
+		document.getElementById("scene2").className = "listeScene";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin200803.onclick = function(){
 		titre.textContent = "Main 1 Stage";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene--hidden";
+		document.getElementById("scene2").className = "listeScene--hidden";
+		document.getElementById("scene3").className = "listeScene";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
  	pin200901.onclick = function(){
  		titre.textContent = "Main 1 Stage";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene";
+		document.getElementById("scene2").className = "listeScene--hidden";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
  	pin200902.onclick = function(){
  		titre.textContent = "Main 2 Stage";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene--hidden";
+		document.getElementById("scene2").className = "listeScene";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin200903.onclick = function(){
 		titre.textContent = "Rock Hard tent";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene--hidden";
+		document.getElementById("scene2").className = "listeScene--hidden";
+		document.getElementById("scene3").className = "listeScene";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin200904.onclick = function(){
 		titre.textContent = "Terrorizer tent";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene--hidden";
+		document.getElementById("scene2").className = "listeScene--hidden";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin201201.onclick = function(){
 		titre.textContent = "Altar";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene";
+		document.getElementById("scene2").className = "listeScene--hidden";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin201202.onclick = function(){
 		titre.textContent = "Main 1 Stage";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene--hidden";
+		document.getElementById("scene2").className = "listeScene";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin201203.onclick = function(){
 		titre.textContent = "Main 2 Stage";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene--hidden";
+		document.getElementById("scene2").className = "listeScene--hidden";
+		document.getElementById("scene3").className = "listeScene";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin201204.onclick = function(){
 		titre.textContent = "Métal Corner";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene--hidden";
+		document.getElementById("scene2").className = "listeScene--hidden";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin201205.onclick = function(){
 		titre.textContent = "Temple";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene--hidden";
+		document.getElementById("scene2").className = "listeScene--hidden";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin201206.onclick = function(){
 		titre.textContent = "Valley";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene--hidden";
+		document.getElementById("scene2").className = "listeScene--hidden";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene";
+		document.getElementById("scene7").className = "listeScene--hidden";
 	}
 	pin201207.onclick = function(){
 		titre.textContent = "Warzone";
 		popup.className = "fenetrePopup";
+		document.getElementById("scene1").className = "listeScene--hidden";
+		document.getElementById("scene2").className = "listeScene--hidden";
+		document.getElementById("scene3").className = "listeScene--hidden";
+		document.getElementById("scene4").className = "listeScene--hidden";
+		document.getElementById("scene5").className = "listeScene--hidden";
+		document.getElementById("scene6").className = "listeScene--hidden";
+		document.getElementById("scene7").className = "listeScene";
 	}
 }
 
-/*function loadData()
+/*function loadData(annee, scene)
 {
-	fetch('data/AnneePaysPourcentage.json')
+	var tab;
+	fetch('data/AnneeSceneTypeGroupe.json')
     // this promise will be fulfilled when the json fill will be
     .then(function (response){
         // if we could load the resource, parse it
@@ -1072,17 +2072,18 @@ function pin(){
     })
     // this promise will be fulfilled when the json will be parsed
     .then(function (json) {
-    	console.log(json[0]);
-    	json.forEach(function(pays){
-    		if (pays.Annee === 2006)
+    	var listeGroupe = new Array();
+    	json.forEach(function(groupe){
+    		if (groupe.Annee === annee && groupe.Scene === scene )
     		{
-    			console.log(pays.Pourcentage);
+    			listeGroupe.push(groupe.Groupe);
     		} 
     	});
+    	return (listeGroupe);
     });
 }*/
 
-//loadData();
+//loadData(2006, "Hard n'Heavy stage");
 pin();
 controleurPodium();
 controleurPlan();

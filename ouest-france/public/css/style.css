@@ -151,6 +151,16 @@ header img{
     z-index: 3;
 }
 
+/*.pin--2006-1:hover
+{ 
+	position: absolute;
+    top: 150px;
+    left: 300px;
+    width: 15%;
+    height: 15%;
+    z-index: 3;
+}*/
+
 .pin--2006-2 
 { 
 	position: absolute;
@@ -737,7 +747,7 @@ img.barrePlan
 	background-color: black;
     opacity: 0.8;
     width: 499px;
-    height: 349px;
+    height: 396px;
     top: 127px;
     left: 100px;
     position: absolute;
@@ -771,6 +781,21 @@ p.titreScene
     font-weight: 700;
     font-size: 45px;
     left: 150px;
+}
+
+ul.listeScene
+{
+	position: absolute;
+    top: 50px;
+    color: white;
+}
+
+ul.listeScene--hidden
+{
+	position: absolute;
+	top: 80px;
+	color: white;
+	opacity: 0;
 }
 
 
