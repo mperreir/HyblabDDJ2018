@@ -15,7 +15,8 @@ var stat_files = ['Activité2017.csv',
 				  'NombreDeRecrutementsEnvisage_2017.csv',
 				  'DD_2017.csv',
 				  'Contrats_2014-2017.csv',
-				  'recrutement2014_2017.csv'
+				  'recrutement2014_2017.csv',
+				  'recrutement_Activité2014_2017.csv'
 				  ].map(f => path.join(__dirname,"./data/stats/".concat(f)))
 
 var stats_json = {}
@@ -25,7 +26,8 @@ var critere = ['Activite',
 			   'Nombre_Recrutements_Envisage_2017',
   			   'Developpement_durable',
   			   'Contrats',
-  			   'Recrutement_Evo'
+  			   'Recrutement_Evo',
+  			   'Recrutement_Evo_Act'
   			  ]
 
 var keys = []
