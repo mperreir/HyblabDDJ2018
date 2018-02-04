@@ -135,16 +135,17 @@ function drawBubbleChart(data){
 		}
 	}
 
-    var sec = document.getElementById("page3").appendChild(document.createElement('section'));
-    sec.className = "chart";
+    var sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
 
     var h3 = sec.appendChild(document.createElement('h3'));
     h3.innerHTML = "Jusqu'où peuvent-ils aller ?";
 
-    var cvs = sec.appendChild(document.createElement('canvas'));
+    var canvas = document.createElement('canvas');
+    canvas.className = '';
+    var cvs = sec.appendChild(canvas);
     var ctx = cvs.getContext("2d");
-    ctx.canvas.width = 500;
-    ctx.canvas.height = 700;
+
+
 
     var points = {datasets: [{
 			data:[]

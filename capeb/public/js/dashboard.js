@@ -145,6 +145,12 @@ function miniStats(regionStats, d) {
             mean/=json.values.length;
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = Math.round(mean);
             dataFrame.style.backgroundColor = colorsForRegion[matchColor(mean, 24, 59, 7, 13.2, true)];
+
+            $('#card-distance .open').each(function(){
+                $(this).on('click', function() {
+                    drawBubbleChart(json);
+                });
+            });
         });
 }
 
