@@ -29,7 +29,7 @@ var colors2 = {
   "CDI": "#fabebe",
   "Apprentis": "#800000",
   "Intérimaires": "#de783b",
-  "end": "#bbbbb"
+  "Pas de réponse": "#bbbbb",
 };
 
 
@@ -84,8 +84,7 @@ function createVisualization(json) {
       .filter(function(d) {
       return (d.dx > 0.005); // 0.005 radians = 0.29 degrees
       });
-
-  var path = vis.data([json]).selectAll("path")
+  var path = vis.data([json]).selectAll("#dataviz path")
       .data(nodes)
       .enter().append("svg:path")
       .attr("display", function(d) { return d.depth ? null : "none"; })
@@ -123,7 +122,7 @@ function mouseover(d) {
   updateBreadcrumbs(sequenceArray, percentageString);
 
   // Fade all the segments.
-  d3.selectAll("path")
+  d3.selectAll("#dataviz path")
       .style("opacity", 0.3);
 
   // Then highlight only those that are an ancestor of the current segment.
@@ -142,10 +141,10 @@ function mouseleave(d) {
       .style("visibility", "hidden");
 
   // Deactivate all segments during transition.
-  d3.selectAll("path").on("mouseover", null);
+  d3.selectAll("#dataviz path").on("mouseover", null);
 
   // Transition each segment to full opacity and then reactivate it.
-  d3.selectAll("path")
+  d3.selectAll("#dataviz path")
       .transition()
       .duration(1000)
       .style("opacity", 1)
@@ -248,13 +247,15 @@ function drawLegend() {
 
   var legend = d3.select("#legend").append("svg:svg")
       .attr("width", li.w)
-      .attr("height", d3.keys(colors2).length * (li.h + li.s));
+      .attr("height", (d3.keys(colors2).length) * (li.h + li.s));
 
   var g = legend.selectAll("g")
       .data(d3.entries(colors2))
       .enter().append("svg:g")
       .attr("transform", function(d, i) {
-              return "translate(0," + i * (li.h + li.s) + ")";
+			  if(d.key != "end"){
+				return "translate(0," + i * (li.h + li.s) + ")";
+				}
            });
 
   g.append("svg:rect")
