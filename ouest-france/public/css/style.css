@@ -798,5 +798,11 @@ ul.listeScene--hidden
 	opacity: 0;
 }
 
+object.mapFrance
+{
+	width:600px;
+	height:600px;
+	position: absolute;
+	left: 150px;
 
-
+}
