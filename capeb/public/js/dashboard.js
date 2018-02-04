@@ -89,11 +89,12 @@ function miniStats(regionStats, d) {
                 h.className += "donneeliste " + ni;
                 h.innerHTML = stat[i].name;
             }
-            if (document.getElementById("containerForModal")!==null) {
-                document.getElementById("containerForModal").remove();
-            }
-            createModal();
-            createSunburst(d);
+
+            $('#card-contrat .open').each(function(){
+                $(this).on('click', function() {
+                    createSunburst(d);
+                });
+            });
 
             //8 : DD / quel aspect le plus représenté / bubble -> camembert
             var names = stats.Developpement_durable.values[0]
@@ -144,6 +145,12 @@ function miniStats(regionStats, d) {
             mean/=json.values.length;
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = Math.round(mean);
             dataFrame.style.backgroundColor = colorsForRegion[matchColor(mean, 24, 59, 7, 13.2, true)];
+
+            $('#card-distance .open').each(function(){
+                $(this).on('click', function() {
+                    drawBubbleChart(json);
+                });
+            });
         });
 }
 
@@ -176,9 +183,10 @@ function matchColor(value, min, mean, firstInc, secondInc, order){
 }
 
 function createModal(){
-    if(document.getElementById("containerForModal")!==null){
-        document.getElementById("containerForModal").remove();
+    if($("#containerForModal")!==null){
+        $("#containerForModal").remove();
     }
+
     var div = document.createElement('div');
     div.id = "containerForModal";
     div.innerHTML = document.getElementById('blockOfStuff').innerHTML;
@@ -187,7 +195,7 @@ function createModal(){
     var $modal = $('.modal-frame');
     var $overlay = $('.modal-overlay');
 
-    /* Need this to clear out the keyframe classes so they dont clash with each other between ener/leave. Cheers. */
+    /* Need this to clear out the keyframe classes so they dont clash with each other between enter/leave. */
     $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function (e) {
         if ($modal.hasClass('state-leave')) {
             $modal.removeClass('state-leave');
@@ -200,9 +208,12 @@ function createModal(){
         $("#dataviz").html("");
     });
 
-    $('.open').on('click', function () {
-        $overlay.addClass('state-show');
-        $modal.removeClass('state-leave').addClass('state-appear');
-    });
+
+    $('.open').each(function(){
+        $(this).on('click', function () {
+                $overlay.addClass('state-show');
+                $modal.removeClass('state-leave').addClass('state-appear');
+            });
+        });
 }
 

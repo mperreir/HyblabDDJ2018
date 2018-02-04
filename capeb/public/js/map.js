@@ -41,6 +41,7 @@ $ (document).ready(function(){
                         return {};
                     })
                     .then(function(json){
+                        createModal();
                         miniStats(json, d);
                     });
 
@@ -70,7 +71,6 @@ $ (document).ready(function(){
 d3.select(window).on('resize', resize);
 
 function resize() {
-
     width = parseInt(d3.select('.map-pdl').style('width'));
     width = $(window).width() * .97;
     height = width/1.85;
@@ -78,7 +78,6 @@ function resize() {
     projection
         .scale([width*10])
         .translate([width,height*0.8]);
-
 
     d3.select("map-pdl").attr("width",width).attr("height",height);
     d3.select("svg").attr("width",width).attr("height",height);
