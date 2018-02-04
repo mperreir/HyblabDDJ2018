@@ -144,7 +144,7 @@ h3
   color :#F53855;
   font-family: 'overpass';
   text-align: justify;
-  width: 750px;
+  width:70%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -152,6 +152,13 @@ h3
 .more img
 {
   width : 5%;
+  float: left;
+}
+
+.more p
+{
+  width : 5%;
+  float: right;
 }
 
 #more21
@@ -188,12 +195,21 @@ h3
     margin-right: 50px;
 }
 
+.slide{
+  position: relative;
+}
+
 /* -- Slide questions 1 */
 
 .title_question
 {
-  position:relative;
-  top: -140px;
+  display: block;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  width: 75%;
+  transform: translateX(20%)
 }
 
 .section
@@ -209,6 +225,8 @@ h3
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
+
 
 .nothome
 {
@@ -274,6 +292,17 @@ h3
     border-radius: 30px;
 }
 
+#logo
+{
+  width: 40%;
+}
+
+#logotext
+{
+  display: block !important;
+  text-align:justify !important;
+}
+
 
 /*
 #container
@@ -291,10 +320,10 @@ h3
   display: block;
   text-align: center;
   z-index: 1;
-  vertical-align: top;
-  margin-top: 0%;
-  position: relative;
-  top: -25%;
+  position: absolute;
+  top: 0;
+  width: 75%;
+  transform: translateX(15%)
 }
 
 #container_infos_nav h3{
