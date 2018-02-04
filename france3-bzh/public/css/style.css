@@ -293,6 +293,8 @@ h3
   z-index: 1;
   vertical-align: top;
   margin-top: 0%;
+  position: relative;
+  top: -25%;
 }
 
 #container_infos_nav h3{
@@ -467,8 +469,11 @@ h3
 }
 #vehicule_selection {
   text-align: center;
+  margin-top: 5%;
 }
-
+#section_illu_camion h1{
+  margin-top: -5%;
+}
 #left_infos_grav {
   float: left;
   margin-left: 20%;
@@ -551,6 +556,7 @@ h3
   width: 100%;
   left: -110%;
   margin-top: 10%;
+  height: 20%;
   /* margin-left: -10000%; */
   /* top:1200%; */
 }
@@ -567,11 +573,12 @@ h3
 
 #slide2_container_text {
   position: relative;
-  top:5%;
+  top: 10%;
 }
 
 #donnees_slide2 p{
   text-align: center;
+  top: -5%;
 }
 .data_slide2 {
   float: left;
