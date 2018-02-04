@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Notre page est en français -->
+<head>
+    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+    <meta charset="utf-8">
+    <title>AppenTeam</title>
+    <!-- Basic viewport setting for mobile friendly page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <!-- Déclaration de la feuille de style du document-->
+    <link rel="stylesheet" href="css/style_GFE.css">
+    <!--<link rel="stylesheet" href="../css/排版.css">-->
+
+    <!-- Icomoon Icon Fonts-->
+    <!--<link rel="stylesheet" href="../css/icomoon.css">-->
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="js/sunburstGFE.js"></script>
+
+
+    <!-- Those polyfills are required so that old browsers support fetch mecanism -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>-->
+
+    <!-- Simple sample script that loads data from a dummy json file -->
+    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+
+</head>
+<script type="text/javascript">
+    window.onload = function() {
+        var oBox = document.getElementById('box');
+        var oBtn = document.getElementById('btn');
+
+        function addEveent(ele, type, fn) {
+            if (ele.addEventListener) {
+                ele.addEventListener(type, fn, false)
+            } else if (ele.attachEvent) {
+                ele.attachEvent("on" + type, fn)
+            } else {
+                ele['on' + type] = fn;
+            }
+        }
+        addEveent(oBtn, 'click', fnMove);
+
+        function fnMove() {
+            var oLeft = parseInt(oBox.offset);
+            if (oLeft === -300) {
+                animate(10);
+            } else {
+                animate1(-10);
+            }
+        }
+
+        function animate(speed) {
+            var t = setInterval(function() {
+                var oLeft = parseInt(oBox.offsetLeft);
+                if ((oLeft = -300 && oLeft < 0)) {
+                    oBox.style["margin-left"] = oBox.offsetLeft + speed + 'px';
+                } else {
+                    clearInterval(t)
+                }
+            }, 10)
+        }
+
+        function animate1(speed) {
+            var t = setInterval(function() {
+                var oLeft = parseInt(oBox.offsetLeft);
+                if (oLeft <= 0 && oLeft > -300) {
+                    oBox.style["margin-left"] = oBox.offsetLeft + speed + 'px';
+                } else {
+                    clearInterval(t)
+                }
+            }, 10)
+        }
+    }
+</script>
+<body>
+<!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
+<!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
+<!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+
+<div id="texte">
+    <nav class="top_nav" role="navigation">
+        <div class="text-left" style="width: 400px;margin-left: -10px">
+            <ul>
+                <l1><img id="logo-pdl" src="img/logo-pdl.png"/></l1>
+                <li><a href="#">Home</a></li>
+                <!--<li><a href="#">Étude</a></li>-->
+                <!--<li><a href="#">Bourse</a></li>-->
+                <!--<li><a href="#">Trouver CFA</a></li>-->
+                <li><a href="#">Crédit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <p id="textAccroche" class="accroche"> Votre voie: </p>
+    <p id="textExp">de nombreuses opportunitiés</p>
+
+    <p id="textExplication" class="explication"> L'apprentissage regroupe un large panel de formations,allant
+        du CAP au BAC+5, et ce dans tous les secteurs d'activités.
+    <br>Près de 22 domaines de formation sont representés.</p>
+
+    <p id="texTemoignage" class="temoignage"> « Je suis dans ma 4e année d'apprentissage. Aujourd'hui
+        épanoui dans ma vie professionnelle, j'affirme que l'apprentissage est une voie dans laquelle on
+        peut réussir.» <br>
+        Aubin Paquier, Brevet Professionnel Art de la Cuisine
+    </p>
+
+</div>
+<div id="container">
+    <div class="box">
+        <!--<a href="" name="tools"></a>-->
+        <!--<div class="sub-category">-->
+            <div id="btn" class="btn-default">
+                <!--<span id='btnChoose'><i class="iconfont icon-tool"></i></span>-->
+               <i class="iconfont icon-tool"></i>CHOISIS UN GFE
+            </div>
+
+        <!--</div>-->
+        <!--<span id='btnChoose'>CHOISIS UN GFE</span>-->
+        <!--<a href="" name="tools"></a>-->
+        <!--<div class="sub-category">-->
+        <!--<div><i class="iconfont icon-tool"></i>实用工具</div>-->
+        <!--</div>-->
+        <!--<div>-->
+        <a href="javascript:void(0)" ng-click="clickGetImage1()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Agriculture</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage2()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Pêche - Mer - Aquaculture</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage6()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Mécanique - Automatismes</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage10()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Textile - Habillement - Cuir</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage11()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Travail du bois</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage15()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Commerce et distribution</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage3()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Bâtiment gros œuvre - Génie civil - Extraction</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage4()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Bâtiment : équipements et finitions</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage5()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Structures métalliques - Travail des métaux - Fonderie</div>
+            </div>
+        </a>
+
+        <a href="javascript:void(0)" ng-click="clickGetImage7()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Electricité - Electrotechnique - Electronique</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage9()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Production alimentaire - Cuisine</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage12()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Techniques graphiques - Impression</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage13()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Transports - Conduite - Manutention - Magasinage</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage14()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Tertiaire de bureau - Tertiaire spécialisé</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage16()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Paramédical - Travail social - Soins personnels</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage18()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Nettoyage - Assainissement - Environnement - Sécurité</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage19()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Techniques de la communication - Média</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage20()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Arts appliqués - Arts du spectacle</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage22()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Formations d’aide à l’insertion sociale et professionnelle</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage8()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Travail des matériaux - Industries de process - Laboratoire</div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" ng-click="clickGetImage17()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Hôtellerie - Restauration - Tourisme - Sports - Animation socioculturelle - Loisirs</div>
+            </div>
+        </a>
+
+        <a href="javascript:void(0)" ng-click="clickGetImage21()" target="_blank">
+            <div class="item">
+                <div class="no-logo">Formations générales - Généralistes - Développement personnel</div>
+            </div>
+        </a>
+        <!--</div>-->
+    </div>
+
+    <!--   <header>
+           <img src="img/logo_hyblab.png" alt="logo hyblab"/>
+           <h1>Hyblab Datajournalism 2018</h1>
+    </header> -->
+
+    <!-- Le contenu du site -->
+
+    <!-- Notre pied de page -->
+    <!--   <footer>
+
+       </footer>-->
+
+    <!-- libraries -->
+
+</div>
+</body>
+</html>
