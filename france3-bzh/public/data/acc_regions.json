@@ -1,0 +1,17 @@
+{
+    "labels": ["moins de 18 ans","18-30 ans", "30-45 ans", "45-60 ans", "60-75", "75 ans et plus"],
+    "datasets": [
+      {
+        "label": "Deux roues",
+        "fill": false,
+        "borderColor": "#2DDCE0",
+        "backgroundColor": "#2DDCE0",
+        "pointHighlightFill": "#fff",
+        "hoverBorderColor" : "#EC666D",        
+        "hoverBackgroundColor" : "#EC666D",
+        "pointHighlightStroke": "rgba(220,220,220,1)",
+        "data": [30, 66, 36, 19, 4, 2]
+      }
+    ]
+
+  }

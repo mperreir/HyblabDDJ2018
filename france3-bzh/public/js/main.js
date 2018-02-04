@@ -485,8 +485,63 @@ $('#div_indication_slide_evt').click(function(){
   }, 500);
 })
 
+/* graphe accidents par régions */
+// Load a dummy json file using the fetch API
+fetch('data/acc_regions.json')
+    // this promise will be fulfilled when the json fill will be
+    .then(function (response){
+        // if we could load the resource, parse it
+        if( response.ok )
+            return response.json();
+        else // if not, send some error message as JSON data
+            return {data: "JSON file not found"};
+
+    })
+    // in case of invalid JSON (parse error) send some error message as JSON data
+    .catch( function (error){
+        return {data: "Invalid JSON"};
+    })
+    // this promise will be fulfilled when the json will be parsed
+    .then(function (json) {
 
 
+        // Get the context of the canvas element we want to select
+        var ctx = document.getElementById("chart_region_acc").getContext("2d");
+
+        // Instantiate a new chart
+        var myLineChart = new Chart(ctx , {
+            type: "bar",
+            data: json,
+            options : {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          fontSize: 40
+                      }
+                  }],
+                  xAxes: [{
+                      ticks: {
+                          fontSize: 40
+                      }
+                  }]
+              },
+              title: {
+                    display: true,
+                    text: 'Nombre d\'accidents en fonctions des régions',
+                    'font-size' : "40"
+                },
+               legend: {
+                   display: true,
+                   position : "bottom",
+                   fullWidth : true,
+                   labels : {
+                     'font-size': 40
+                   }
+               }
+
+             }
+        });
+    });
 /* CARTE */
 
 var pnDisplay = false;
@@ -683,4 +738,3 @@ var switchClick = function(e) {
   $('.material-switch').materialSwitch();
 
 }(jQuery));
-

@@ -559,6 +559,26 @@ h3
   font-weight: bold;
 }
 
+
+/* slide avec l'ambulance */
+#chart_region_acc {
+  float: right;
+  width: 40% !important;
+  height: 60% !important;
+  margin-right: 7%;
+}
+#slide_ambu_text p{
+  font-size: 16px;
+}
+
+#img_ambu {
+  width: 50%;
+}
+#slide_ambu_text {
+  float: left;
+  margin-left: 7%;
+  width: 35%;
+}
 .orange {
   color: #E37B40;
 }
