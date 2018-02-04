@@ -92,6 +92,7 @@ function miniStats(regionStats, d) {
             $('#card-contrat .open').each(function(){
                 $(this).on('click', function() {
                     createSunburst(d);
+                    closeOnEscape();
                 });
             });
 
@@ -116,6 +117,7 @@ function miniStats(regionStats, d) {
 			$('#card-emploi .open').each(function(){
                 $(this).on('click', function() {
                     drawChart3dEmploi(stats);
+                    closeOnEscape();
                 });
             });
 			
@@ -143,6 +145,7 @@ function miniStats(regionStats, d) {
             $('#card-distance .open').each(function(){
                 $(this).on('click', function() {
                     drawBubbleChart(json);
+                    closeOnEscape();
                 });
             });
         });
@@ -211,3 +214,10 @@ function createModal(){
         });
 }
 
+function closeOnEscape() {
+    $(document).one('keyup', function (e) {
+        if (e.keyCode == 27) { // escape key maps to keycode 27
+            $('.close').click();
+        }
+    });
+}

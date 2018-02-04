@@ -15,7 +15,8 @@ var stat_files = ['Activité2017.csv',
 				  'NombreDeRecrutementsEnvisage_2017.csv',
 				  'DD_2017.csv',
 				  'Contrats_2014-2017.csv',
-				  'recrutement2014_2017.csv'
+				  'recrutement2014_2017.csv',
+				  'recrutement_Activité2014_2017.csv'
 				  ].map(f => path.join(__dirname,"./data/stats/".concat(f)))
 
 var stats_json = {}
@@ -25,19 +26,20 @@ var critere = ['Activite',
 			   'Nombre_Recrutements_Envisage_2017',
   			   'Developpement_durable',
   			   'Contrats',
-  			   'Recrutement_Evo'
+  			   'Recrutement_Evo',
+  			   'Recrutement_Evo_Act'
   			  ]
 
 var keys = []
 var crt_arr = []
 
-app.get('/:epci/stats', (req, res) => {
+app.get('/:epci/stats', function(req, res) {
 
-	stat_files.forEach((file, idf) =>{
+	stat_files.forEach(function(file, idf){
 		var json = {}
 		crt_arr = []
 		var data = fs.readFileSync(file, 'utf8');
-		data.split(/\r\n|\n/).forEach((line, id) => {
+		data.split(/\r\n|\n/).forEach(function(line, id) {
 			if(id == 0){
 				keys = line.split(",");
 				json['labels'] = keys.slice(1);
@@ -48,7 +50,7 @@ app.get('/:epci/stats', (req, res) => {
 
 				if(cells[0] == req.params.epci){
 					if(idf >= 4){
-						cells.slice(1).map((val, j) => {
+						cells.slice(1).map(function(val, j) {
 							json['values'][j].push(val)
 						});
 					}
