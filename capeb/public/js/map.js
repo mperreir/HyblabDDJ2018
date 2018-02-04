@@ -45,6 +45,8 @@ $ (document).ready(function(){
         map.enter()
             .append("path")
             .attr("fill", "white")
+            .attr("stroke-width", "0.1px")
+            .attr("stroke", "rgba( 29, 29, 27, 0.5 )")
             .attr("d", path)
             .on("click", function (d) {
 
