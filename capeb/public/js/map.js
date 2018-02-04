@@ -29,7 +29,6 @@ $ (document).ready(function(){
         map.enter()
             .append("path")
             .attr("fill", "white")
-            .attr("stroke", "black")
             .attr("d", path)
             .on("click", function (d) {
 
@@ -63,7 +62,7 @@ $ (document).ready(function(){
             .on("mouseout", function() {
                 d3.select(this).transition()
                     .delay("50")
-                    .duration("200")
+                    .duration("1000")
                     .style("fill", "white");
                 d3.select("#titre-epci").text('');
             })
