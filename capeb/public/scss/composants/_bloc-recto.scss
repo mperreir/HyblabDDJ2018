@@ -24,35 +24,38 @@
     position: absolute;
     bottom: 20px;
     >.donneeliste{
-      @extend %titre-titre;
+      float: right;
       text-align: right;
+      margin-right: 20px;
+      height: auto;
       width: 100%;
-      .n1{
-        @extend %data-liste;
-        text-align: right;
-        font-size: 4em;
-        line-height: 1;
-      }
-      .n2{
-        @extend %data-liste;
-        text-align: right;
-        font-size: 3em;
-        line-height: 1;
-      }
-      .n3{
-        @extend %data-liste;
-        text-align: right;
-        font-size: 2em;
-        line-height: 1;
-      }
-      .n4{
-        @extend %data-liste;
-        text-align: right;
-        font-size: 1em;
-        line-height: 1;
-      }
     }
   }
+}
+
+.n1{
+  @extend %data-liste;
+  text-align: right;
+  font-size: 3.5em;
+  line-height: 1;
+}
+.n2{
+  @extend %data-liste;
+  text-align: right;
+  font-size: 2.5em;
+  line-height: 1;
+}
+.n3{
+  @extend %data-liste;
+  text-align: right;
+  font-size: 1.5em;
+  line-height: 1;
+}
+.n4{
+  @extend %data-liste;
+  text-align: right;
+  font-size: 0.5em;
+  line-height: 1;
 }
 
 .info-epci{
