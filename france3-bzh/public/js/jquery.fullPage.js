@@ -151,7 +151,7 @@
             controlArrowColor: '#fff',
             verticalCentered: true,
             sectionsColor : [],
-            paddingTop:0,
+            paddingTop: 0,
             paddingBottom: 0,
             fixedElements: null,
             responsive: 0, //backwards compabitility with responsiveWiddth
