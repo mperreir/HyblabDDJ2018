@@ -517,13 +517,12 @@ fetch('data/acc_regions.json')
     .then(function (json) {
 
 
-<<<<<<< HEAD
         // Get the context of the canvas element we want to select
         var ctx = document.getElementById("chart_region_acc").getContext("2d");
 
         // Instantiate a new chart
         var myLineChart = new Chart(ctx , {
-            type: "bar",
+            type: "horizontalBar",
             data: json,
             options : {
               scales: {
@@ -538,17 +537,21 @@ fetch('data/acc_regions.json')
                       }
                   }]
               },
+              tooltips: {
+                titleFontSize: 40,
+                bodyFontSize: 40
+              },
               title: {
                     display: true,
                     text: 'Nombre d\'accidents en fonctions des régions',
-                    'font-size' : "40"
+                    fontSize : 40
                 },
                legend: {
                    display: true,
                    position : "bottom",
                    fullWidth : true,
                    labels : {
-                     'font-size': 40
+                     fontSize: 40
                    }
                }
 
@@ -556,9 +559,6 @@ fetch('data/acc_regions.json')
         });
     });
 /* CARTE */
-=======
-/* --------------------------------- CARTE ----------------------------- */
->>>>>>> e6f8e0de7b52b38896311f20e1accdf49c63a7f7
 
 var pnDisplay = false;
 var accDisplay = false;
