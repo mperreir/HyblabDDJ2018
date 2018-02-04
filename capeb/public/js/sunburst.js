@@ -2,8 +2,8 @@
 
 
 // Dimensions of sunburst.
-var width = 750;
-var height = 600;
+var width = 500;
+var height = 500;
 var radius = Math.min(width, height) / 2;
 
 // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
@@ -32,12 +32,15 @@ var colors2 = {
   "end": "#bbbbb"
 };
 
+
 // Total size of all segments; we set this later, after loading the data.
 var totalSize = 0; 
 var vis
 var partition
 var arc
 var sunBurst = (js) => {
+	
+	document.getElementById("dataviz").innerHTML = "<div id='main'><div id='sequence'></div><div id='chart'><div id='explanation' style='visibility: hidden;'><span id='percentage'></span><br/></div></div></div><div id='sidebar'><input type='checkbox' id='togglelegend'> Legend<br/><div id='legend' style='visibility: hidden;'></div></div>"
 
 	vis = d3.select("#chart").append("svg:svg")
 		.attr("width", width)
@@ -205,7 +208,7 @@ function updateBreadcrumbs(nodeArray, percentageString) {
 
   entering.append("svg:polygon")
       .attr("points", breadcrumbPoints)
-      .style("fill", function(d) { console.log(colors2[d.name]);return colors2[d.name]; });
+      .style("fill", function(d) { return colors2[d.name]; });
 
   entering.append("svg:text")
       .attr("x", (b.w + b.t) / 2)
@@ -240,7 +243,7 @@ function drawLegend() {
 
   // Dimensions of legend item: width, height, spacing, radius of rounded rect.
   var li = {
-    w: 75, h: 30, s: 3, r: 3
+    w: 230, h: 30, s: 3, r: 3
   };
 
   var legend = d3.select("#legend").append("svg:svg")
