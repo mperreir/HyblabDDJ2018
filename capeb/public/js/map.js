@@ -7,10 +7,10 @@ $ (document).ready(function(){
 });
 
 
-var viewportWidth = $(window).width();
-var viewportHeight = $(window).height()/2;
-var width = viewportWidth * .97;
-var height = width/1.85;
+var viewportWidth = $(".map-pdl").width();
+var viewportHeight = $(".map-pdl").height();
+var width = viewportWidth;
+var height = viewportHeight;
 
 var page2 = d3.select(".map-pdl");
 var svg = page2.append("svg")
@@ -74,8 +74,8 @@ d3.select(window).on('resize', resize);
 
 function resize() {
     width = parseInt(d3.select('.map-pdl').style('width'));
-    width = $(window).width() * .97;
-    height = width/1.85;
+    width = width;
+    height = height;
 
     projection
         .scale([width*10])
