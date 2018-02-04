@@ -160,18 +160,22 @@ function miniStats(regionStats, d) {
             stat = stat.sort(function(a, b) {return b.value - a.value});
 
             var liste = document.getElementsByClassName("info-contrat")[0].getElementsByClassName("liste")[0];
+            liste.className
             liste.innerHTML = "";
             var h = document.createElement("h1");
             liste.appendChild(h);
-            h.className += "donneeliste";
+            h.className += "donneeliste n1";
             h.innerHTML = stat[0].name;
+            var ni = "n1";
+            var count = 0;
             for (var i = 1; i < 4; i++) {
                 if (stat[i].value < stat[i - 1].value) {
-                    h++;
+                    count++;
+                    ni = "n" + count;
                 }
                 h = document.createElement("h1");
                 liste.appendChild(h);
-                h.className += "donneeliste";
+                h.className += "donneeliste " + ni;
                 h.innerHTML = stat[i].name;
             }
 
@@ -215,7 +219,7 @@ function miniStats(regionStats, d) {
         .then(function (json) {
             var asNumbers = json.values[0].map(Number);
             var indexOfMax = asNumbers.indexOf(Math.max(...asNumbers));
-            document.getElementsByClassName("info-emploi")[0].getElementsByClassName("donneeliste")[0].innerHTML = json.labels[indexOfMax];
+            document.getElementsByClassName("info-emploi")[0].getElementsByClassName("donneetexte")[0].innerHTML = json.labels[indexOfMax];
         });
 
     //5 : distance / moyenne / bubble chart
