@@ -126,10 +126,9 @@ body{
 #buttonSP {
     float: left;
     position: absolute;
-    left: 85%;
+    left: 80%;
     top: 90%;
-    width: 10%;
-    height: 5%;
+
 }
 
 /* Carte Départements */
@@ -285,6 +284,7 @@ body{
     border: solid;
     border-width: 5px;
     position: absolute;
+    top: 100px;
     margin-right: 20%;
     margin-left: 20%;
     margin-top: 0px;
@@ -295,26 +295,28 @@ body{
 }
 
 
-.enSavoirPlusHautP1{
+#enSavoirPlusHautP1{
     font-weight: 700;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.boutonExitP1{
-    height: 33px;
-    width: 33px;
+#boutonExitP1{
+    margin-top: 17px;
+    height: 36px;
+    width: 36px;
 }
 
-.enSavoirPlusBasP1{
+#enSavoirPlusBasP1{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.enSavoirPlusBas p{
-    width: 45%;
+#enSavoirPlusBasP1 article{
+    text-align: justify;
+    margin: 20px;
 }
 
 

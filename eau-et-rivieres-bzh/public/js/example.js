@@ -61,115 +61,59 @@ fetch('data/datas.json')
 
     //DATAVIZ
 
+    $(function() {
+        $('#finistere').hide();
+        $('#illeetvilaine').hide();
+        $('#loireatlantique').hide();
+        $('#maineetloire').hide();
+        $('#mayenne').hide();
+        $('#morbihan').hide();
+    });
+
     $('#buttonSP').click(function() { 
         $('#page1DisplayOn').css('filter','blur(3px)');
-        $('#d22').show();
+        $('.enSavoirPlusP1').show();
     });
 
-    $('#d22 .boutonExitP1').click(function() { 
+    $('#boutonExitP1').click(function() { 
         $('#page1DisplayOn').css('filter','blur(0px)');
-        $('#d22').hide();
+        $('.enSavoirPlusP1').hide();
     });
 
-    $('#d29 .boutonExitP1').click(function() { 
-        $('#page1DisplayOn').css('filter','blur(0px)');
-        $('#d29').hide();
-    });
-
-    $('#d35 .boutonExitP1').click(function() { 
-        $('#page1DisplayOn').css('filter','blur(0px)');
-        $('#d35').hide();
-    });
-
-    $('#d44 .boutonExitP1').click(function() { 
-        $('#page1DisplayOn').css('filter','blur(0px)');
-        $('#d44').hide();
-    });
-
-    $('#d53 .boutonExitP1').click(function() { 
-        $('#page1DisplayOn').css('filter','blur(0px)');
-        $('#d53').hide();
-    });
-
-    $('#d56 .boutonExitP1').click(function() { 
-        $('#page1DisplayOn').css('filter','blur(0px)');
-        $('#d56').hide();
-    });
-
-    $('#d49 .boutonExitP1').click(function() { 
-        $('#page1DisplayOn').css('filter','blur(0px)');
-        $('#d49').hide();
-    });
-
-    $('#d22 .suivant').click(function() {
-        $('#d22').hide();
-        $('#d29').show();
-    });
-
-    $('#d29 .suivant').click(function() {
-        $('#d29').hide();
-        $('#d35').show();
-    });
-
-    $('#d35 .suivant').click(function() {
-        $('#d35').hide();
-        $('#d44').show();
-    });
-
-    $('#d44 .suivant').click(function() {
-        $('#d44').hide();
-        $('#d49').show();
-    });
-
-    $('#d49 .suivant').click(function() {
-        $('#d49').hide();
-        $('#d53').show();
-    });
-
-    $('#d53 .suivant').click(function() {
-        $('#d53').hide();
-        $('#d56').show();
-    });
-
-    $('#d56 .suivant').click(function() {
-        $('#d56').hide();
-        $('#d22').show();
-    });
-
-    /*$('.suivant').click(function() {
-        if ($('.enSavoirPlusP1').att('id') == 'd22') {
-            $('#d22').hide();
-            $('#d29').show();
-            i++;
+    $('#suivant').click(function() {
+        if ($('#cotesdarmor').css('display') != 'none') {
+            $('#cotesdarmor').hide();
+            $('#finistere').show();
+            $('#dpt').attr('src','img/finistere.png');
         }
-        else if ($('.enSavoirPlusP1').att('id') == 'd29') {
-            $('#d29').hide();
-            $('#d35').show();
-            i++;
+        else if ($('#finistere').css('display') != 'none') {
+            $('#finistere').hide();
+            $('#illeetvilaine').show();
+            $('#dpt').attr('src','img/illeetvilaine.png');
         }
-        else if ($('.enSavoirPlusP1').att('id') == 'd35') {
-            $('#d35').hide();
-            $('#d44').show();
-            i++;
+        else if ($('#illeetvilaine').css('display') != 'none') {
+            $('#illeetvilaine').hide();
+            $('#loireatlantique').show();
+            $('#dpt').attr('src','img/loireatlantique.png');
         }
-        else if ($('.enSavoirPlusP1').att('id') == 'd44') {
-            $('#d44').hide();
-            $('#d49').show();
-            i++;
+        else if ($('#loireatlantique').css('display') != 'none') {
+            $('#loireatlantique').hide();
+            $('#maineetloire').show();
+            $('#dpt').attr('src','img/maineetloire.png');
         }
-        else if ($('.enSavoirPlusP1').att('id') == 'd49') {
-            $('#d49').hide();
-            $('#d53').show();
-            i++;
+        else if ($('#maineetloire').css('display') != 'none') {
+            $('#maineetloire').hide();
+            $('#mayenne').show();
+            $('#dpt').attr('src','img/mayenne.png');
         }
-        else if ($('.enSavoirPlusP1').att('id') == 'd53') {
-            $('#d53').hide();
-            $('#d56').show();
-            i++;
+        else if ($('#mayenne').css('display') != 'none') {
+            $('#mayenne').hide();
+            $('#morbihan').show();
+            $('#dpt').attr('src','img/morbihan.png');
         }
         else {
-            $('#d56').hide();
-            $('#d22').show();
-            i = 1;
+            $('#morbihan').hide();
+            $('#cotesdarmor').show();
+            $('#dpt').attr('src','img/cotesdarmor.png');
         }
-    });*/
+    });
