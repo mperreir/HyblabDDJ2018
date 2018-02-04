@@ -6,7 +6,6 @@ function getMean(array) {
     for(var i=0; i<keys.length; i++) {
         if(!textFields.includes(keys[i])) {
             value = parseFloat(array[keys[i]]);
-
             sum += value;
             nbElements += 1;
         }
@@ -151,70 +150,14 @@ function printChart(chartData, chartId) {
 }
 */
 
-function synthese() {
+function synthese(dataSets) {
     var marksCanvas = document.getElementById("synthese-chart");
-
-/*
-    var marksData = {
-      labels: ["English", "Maths", "Physics", "Chemistry", "Biology", "History"],
-      datasets: [{
-        label: "Student A",
-        backgroundColor: "rgba(200,0,0,0.2)",
-        data: [65, 75, 70, 80, 60, 80]
-      }, {
-        label: "Student B",
-        backgroundColor: "rgba(0,0,200,0.2)",
-        data: [54, 65, 60, 70, 70, 75]
-      }]
-    };
-
-    var radarChart = new Chart(marksCanvas, {
-        type: 'radar',
-        data: marksData,
-        options : {
-            responsive: true,
-            maintainAspectRatio: false
-        }
-    });
-
-    var ctx = document.getElementById("synthese-chart");
-    */
-    var randomScalingFactor = function() {
-        return Math.round(Math.random() * 100);
-    };
-
     var color = Chart.helpers.color;
     var config = {
         type: 'radar',
         data: {
-            labels: [['Cadre', 'de vie'], ['Enseignement', 'Emploi'], 'Culture', ['Industrie', 'de pointe'], ['Développement', 'numérique'], 'Transport'],
-            datasets: [{
-                label: 'My First dataset',
-                borderColor: "red",
-                pointBackgroundColor: "red",
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor()
-                ]
-            }, {
-                label: 'My Second dataset',
-                borderColor: "green",
-                pointBackgroundColor: "green",
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor()
-                ]
-            }]
+            labels: ['Emploi', 'Transport', 'Culture', 'Enseignement', ['Industrie', 'de pointe'], ['Développement', 'numérique'], ['Cadre', 'de vie']],
+            datasets: dataSets
         },
         options: {
             legend: {
@@ -222,7 +165,7 @@ function synthese() {
             },
             title: {
                 display: true,
-                text: 'Comparaison des villes selon nos critères'
+                text: 'Comparaison des rangs des villes selon nos critères'
             },
             scale: {
                 ticks: {
@@ -235,59 +178,75 @@ function synthese() {
     new Chart(document.getElementById('synthese-chart'), config);
 }
 
+function getSynthData(cities, dataJson) {
+    var dataSets = [];
+    var colors = ["#265C8E","red", "blue", "yellow", "green", "#BF55EC", "#22A7F0", "#F9690E", "#D2527F", "black", "black"]
+    var averages = [3, 8, 13, 19, 25, 30, 34];
+    var cpt = 0;
+    cities.forEach(function(city) {
+        console.log(city);
+        var values = [];
+        averages.forEach(function(line) {
+            values.push(dataJson[line][city]);
+        });
+        var hiddenVal = (cpt > 3);
+        dataSets.push({label: city, borderColor: colors[cpt], pointBackgroundColor: colors[cpt], data : values, hidden: hiddenVal});
+
+        cpt++;
+    });
+    console.log(dataSets)
+    return(dataSets);
+}
+
 $(document).ready(function() {
+
+        $.post( "http://localhost:8081/nantes-st-nazaire-dev/rangs")
+            .done(function(data) {
+                console.log("Données de synthèse reçues");
+                var cities = ["Nantes-St-Nazaire", "Lyon", "Bordeaux", "Toulouse", "Rennes", "Lille", "Nice", "Strasbourg", "Grenoble","Aix-Marseille"];
+                var synthDataSets = getSynthData(cities, data);
+                synthese(synthDataSets);
+                })
+            .fail(function() {
+                console.log( "Erreur requete synthese" );
+            });
 
     // Assign handlers immediately after making the request,
     // and remember the jqxhr object for this request
-    var jqxhr = $.post( "http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs")
+    //http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs
+    var jqxhr = $.post( "http://localhost:8081/nantes-st-nazaire-dev/actifs")
         .done(function(data) {
             console.log( "success" );
             console.log(data)
 
             console.log("Mean :" + getMean(data[0]));
             var cities = getChartLabels(data[0]);
-            var dataSets = createChartData(data, 0);
+            var dataSets = createChartData(data, 21);
+            triDecroissant(cities,dataSets);
             console.log(cities)
             console.log(dataSets)
-            triCroissant(cities,dataSets);
-            printBarChart(cities, dataSets, "histogrammeEmploi1");
+            printBarChart(cities, dataSets, "transport1");
 
             var cities = getChartLabels(data[0]);
-            var dataSets = createChartData(data, 2);
+            var dataSets = createChartData(data, 22);
+            triDecroissant(cities,dataSets);
             console.log(cities)
             console.log(dataSets)
+            printBarChart(cities, dataSets, "transport2");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 23);
             triDecroissant(cities,dataSets);
-            printBarChart(cities, dataSets, "histogrammeEmploi2");
+            console.log(cities)
+            console.log(dataSets)
+            printBarChart(cities, dataSets, "transport3");
 
-
-/*
-            new Chart(document.getElementById("cdv1"), {
-            type: 'bar',
-            data: {
-              labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-              datasets: [
-                {
-                  label: "Population (millions)",
-                  backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-                  data: [2478,5267,734,784,433]
-                }
-              ]
-            },
-            options: {
-              legend: { display: false },
-              title: {
-                display: true,
-                text: 'Predicted world population (millions) in 2050'
-              }
-            }
-        });
-            */
             })
         .fail(function() {
             console.log( "error" );
         });
 
-        synthese();
+        
 
 
 });

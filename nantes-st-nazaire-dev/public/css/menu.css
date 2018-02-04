@@ -10,17 +10,32 @@ div.categorie {
 	font-size: 13px;
 	border-radius: 10px;
 }
+.chevron {
+	position: relative;
+	top: 20px;
+	right: 7px;
+}
 
 div.categorie h2 {
-	font-size: 20px;
+	font-size: 15px;
 	padding-bottom: 2px;
 	border-bottom: 2px solid white;
+	margin-left: 20px;
+	width:95%;
 }
+
+div.categorie .chevron {
+	width: 9%;
+}
+
+
 
 .conteneur{
 	height:100%;
 	background-color:white;
+
 }
+
 
 .section .mainScreen{
 	position: absolute;
@@ -36,12 +51,15 @@ div.categorie h2 {
 	height:100%;
 	width: 25%;
 	padding: 0px 30px;
+	padding-left: 0px;
 	background-color:white;
 	background-image: url(../img/maquette/ANGLES/menu.png);
 	background-repeat:no-repeat;
 	background-size: 100% 100%;
 	color:#FFFFFF;
 	font-size: 18px;
+	
+
 }
 
 .section .menu .social{
@@ -49,21 +67,29 @@ div.categorie h2 {
 	padding-left: 30%;
 }
 .section .menu img{
+
 	padding-right:5px;
 }
 
+
+
 .nsndev{
 	float:right;
+	width:47%;
 	padding-top:20px;
 	padding-right: 10px;
 }
 .minititle{
 	padding-top:120px;
 	padding-bottom: 30px;
-	font-size: 18px;	
+	padding-left: 7%;
+	font-size: 17px;	
 	letter-spacing: 1px;	
 	line-height: 22px;
 }
+
+
+
 
 .bl-main {
 	overflow: hidden;
@@ -76,6 +102,8 @@ div.categorie h2 {
 	height: 100%;
 }
 
+
+
 .categorie-des {
 	position: absolute;
 	height: 100%;
@@ -83,46 +111,48 @@ div.categorie h2 {
 
 .bl-main .mainIllustration{/*.bl-main  .cat6 .mainIllustration*/
 	position: absolute;
-	top:4%;
-	padding-left: 30%;
-	width:90%;
+	top:10%;
+	/*padding-left: 30%;*/
+	right:0;
+	width:44%;
 	z-index:1;
 }
-
 .bl-main  .femme{
 	position: absolute;
 	width:12%;
-	top:65%;
+	top:60%;
 	right:0;
 	z-index: 2;
 }
 
 .bl-main .commentaire{
 	position: absolute;
-	top:74%;
+	top:69%;
 	right:11%;
 	z-index: 2;
 }
 .indicateur6{
 	position: absolute;
 	top:7%;
-	margin-left:15%;	
+	left:3%;	
 	width:8%;
+	top:2%;
 }
 
 .textBull{
-	font-family: "Regular";
 	color:#838383;
 	width:35%;
 	font-size:15px;
 	position: absolute;
-	top:76%;
+	top:71%;
 	right:15%;	
 	z-index: 2;
 }
 
+
 /* Emploi */
-#histogrammeEmploi1 {
-	width: 600px !important;
-	height: 400px !important;
+.cat-chart-block {
+	
+	width: 50%;
+
 }

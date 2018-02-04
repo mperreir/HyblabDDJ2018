@@ -7,7 +7,7 @@ $(document).ready(function() {
         'navigationTooltips': ['Introduction', 'Les villes concurrentes', 'Nantes-St Nazaire', 'Synthèse'],
         menu: false,
         anchors:[],
-        navigationColor: '#blue',
+        navigationColor: 'blue',
         scrollBar: false,
         //scrolling
         'css3': true,
@@ -18,6 +18,10 @@ $(document).ready(function() {
         keyboardScrolling: true,
         recordHistory: true
     });
+
+    //Chevrons des titres du menu
+    $(".chevron").css("visibility","hidden");
+    $(".menu .cat0 .chevron").css("visibility","visible");
 
     //Les catégories sont désactivées sauf la catégorie d'indice 0 qui est activée par défaut
     setDescriptions(0); 
@@ -111,4 +115,6 @@ function activateDescription(id) {
     $("section.cat" + id).addClass("active-des");
     $("section.cat" + id).css("z-index","6");
     $(".menu .cat" + id + ' h2').css("color","#FFCC01");
+    $(".chevron").css("visibility","hidden");
+    $(".menu .cat" + id + ' .chevron').css("visibility","visible");
 }

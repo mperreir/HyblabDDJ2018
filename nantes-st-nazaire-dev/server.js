@@ -17,7 +17,6 @@ app.post('/actifs', function(req, res) {
 	var sheet_name_list = workbook.SheetNames;
 	/*
 
-	
 	var actifs = xlsx.utils.sheet_to_html(workbook.Sheets[sheet_name_list[0]]);
 	var actifscsv = xlsx.utils.sheet_to_csv(workbook.Sheets[sheet_name_list[0]]);
 
@@ -31,6 +30,15 @@ app.post('/actifs', function(req, res) {
         var actifs = xlsx.utils.sheet_to_html(workbook.Sheets[sheet_name_list[0]]);
         res.send(actifs_json);
         res.end();
+
+});
+
+app.post('/rangs', function(req, res) {
+	var workbook = xlsx.readFile('./nantes-st-nazaire-dev/rangs-finaux.xlsx');
+	var sheet_name_list = workbook.SheetNames;
+    var rangs_json = xlsx.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
+    res.send(rangs_json);
+    res.end();
 
 });
 
