@@ -17,9 +17,82 @@ var colors = [
 			'rgb(128, 128, 0)'
 			];
 
+var drawChart3dEmploi = (data) => {
+	console.log(data.Recrutement_Evo)
+	var sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
+
+	var h3 = sec.appendChild(document.createElement('h3'));
+    h3.innerHTML = "Jusqu'où peuvent-ils aller ?";
+    var cvs = sec.appendChild(document.createElement('canvas'))
+
+	var ctx = cvs.getContext("2d")
+	var region = {
+					"labels": ["annee","Moy_recrutement_envi"],
+					"values":[["2014","2015","2016","2017"],["1.11538461538462","1.13223140495868","1.11678832116788","1.35028248587571"]]
+				 }
+	data = [data.Recrutement_Evo, region]
+	var labels = ["Epci", "Région"]
+	var d = data.map((val, i) => {return {
+											label: labels[i], 
+											backgroundColor: colors[i], 
+											borderColor: colors[i], 
+											data: val.values[1].map(Number),
+											fill: true
+										  }
+								 })
+	console.log(d)
+	new Chart(ctx, {
+		// The type of chart we want to create
+		type: 'line',
+
+		// The data for our dataset
+		data: {
+			labels: data[0].values[0],
+			datasets: d
+		},
+		// Configuration options go here
+		options: { 
+				responsive:false,
+				maintainAspectRatio: false,
+				tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+				scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Moyenne Nb récrutement envisagé'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+							suggestedMin: 0,    // minimum will be 0, unless there is a lower value.
+							// OR //
+							beginAtZero: true   // minimum value will be 0.
+						},
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Année'
+                        }
+                    }]
+                }
+		}	
+	});
+};
+
+
 function flush(){
 	var cvs = document.getElementById("page3");
 	cvs.innerHTML = ""
+	
+
 }
 function drawLineChart(data, title){
 	var sec = document.getElementById("page3").appendChild(document.createElement('section'));
@@ -52,7 +125,7 @@ function drawLineChart(data, title){
 		options: { 
 				responsive:false,
 				maintainAspectRatio: false
-				}	
+		}	
 	});
 
 }
@@ -119,7 +192,19 @@ function drawPieChart(data, title){
 
 function drawBubbleChart(data){
 
-	function scale(number){
+    var colorMatch = {
+        Aut:colors[0],
+        Ele: colors[1],
+        maç: colors[2],
+        men: colors[3],
+        Mét: colors[4],
+        Pei: colors[5],
+        plâ: colors[6],
+        plo: colors[7],
+        Tra: colors[8]
+    };
+
+    function scale(number){
 		var start = 10;
 		var inc = 8;
 		if (number == 0){
@@ -134,45 +219,52 @@ function drawBubbleChart(data){
 			return start+inc*4;
 		}
 	}
+    var sec = document.getElementById("dataviz-section");
+	if(sec !== null) {
+        sec.remove();
+    }
+    sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
+    sec.setAttribute("id", "dataviz-section");
 
-    var sec = document.getElementById("page3").appendChild(document.createElement('section'));
-    sec.className = "chart";
-
-    var h3 = sec.appendChild(document.createElement('h3'));
+    var h3 = document.getElementById("title-dataviz");
+	if(h3!==null){
+        h3.remove();
+	}
+    h3 = sec.appendChild(document.createElement('h3'));
+    h3.setAttribute("id", "title-dataviz");
     h3.innerHTML = "Jusqu'où peuvent-ils aller ?";
 
-    var cvs = sec.appendChild(document.createElement('canvas'));
-    var ctx = cvs.getContext("2d");
-    ctx.canvas.width = 500;
-    ctx.canvas.height = 700;
+    var canvas = document.getElementById("canvas-dataviz");
+	if(canvas !== null){
+    	canvas.remove();
+	}
+    canvas = document.createElement('canvas');
+    canvas.setAttribute("id", "canvas-dataviz");
 
-    var points = {datasets: [{
-			data:[]
-		}]};
+    var cvs = sec.appendChild(canvas);
+    var ctx = cvs.getContext("2d");
+
+
+
+    var points = {datasets: []};
 
 	data.values.forEach(function(value){
+		var dataset = {};
+		var data = [];
         var point = {};
 		point.x = value[2];
 		point.y = 0.5;
 		point.r = scale(value[1]);
 		point.metier = value[0];
-		points.datasets[0].data.push(point);
+
+		data.push(point);
+		dataset.data = data;
+		dataset.label = value[0];
+		dataset.backgroundColor = colorMatch[value[0].substr(0, 3)];
+        points.datasets.push(dataset);
 	});
 
-	var colorMatch = {
-		Aut:colors[0],
-		Ele: colors[1],
-		maç: colors[2],
-    	men: colors[3],
-        Mét: colors[4],
-        Pei: colors[5],
-        plâ: colors[6],
-        plo: colors[7],
-        Tra: colors[8]
-};
-
     var options = {
-        legend: false,
     	tooltips: false,
         elements: {
             point: {
@@ -208,11 +300,17 @@ function drawBubbleChart(data){
 					drawBorder: false
                 }
             }]
-        }
+        },
+		legend: {
+    		display: true,
+			labels: {
+
+			}
+		}
     };
 
 
-    new Chart(ctx, {
+    var chart = new Chart(ctx, {
         type: 'bubble',
         data: points,
         options: options
