@@ -6,7 +6,7 @@
 
 //---------------------
 // Initialise le fullpage
-var q = [0,0,0,0]
+var q = [0,0,0,0,0]
 $(document).ready(function() {
     $('#fullpage').fullpage();
 });
@@ -47,19 +47,30 @@ function reponse(bouton)
 {
   var x = bouton.parentNode.id;
   var j = 0;
+  var rep;
   switch(x) {
     case "q1":
         j = 0
+        rep = reponses.q1.r1
+        var text = document.getElementById('r1');
         break;
     case "q2":
         j = 1
+        rep = reponses.q2.r2
+        var text = document.getElementById('r2');
         break;
     case "q3":
         j = 2
+        rep = reponses.q3.r3
+        var text = document.getElementById('r3');
         break;
     case "q4":
         j = 3
+        rep = reponses.q4.r4
+        var text = document.getElementById('r4');
         break;
+    case "q5":
+        j = 4
 
 }
   if(q[j] == 0){
@@ -78,7 +89,8 @@ function reponse(bouton)
       }
 
     }
-    q[j] = 0;
+    text.innerText = rep;
+    text.style.display = "block";
   }
 }
 
@@ -449,10 +461,30 @@ $( "#img_train_slide3" ).click(function() {
     $("#infos_accidents").fadeIn("slow");
   }
 });
-// $("#leger").hide();
-// $("#mort").hide();
-// $("#hospitalise").hide();
-// $("#grave").hide();
+
+$('section_evenements').hover(function() {
+    $("#train_slide2").css('opacity', '1');
+})
+$('section_evenements').focusout(function() {
+    $("#train_slide2").css('opacity', '0');
+})
+
+
+$('#div_indication_slide_evt').click(function(){
+  $("#indication_slide_evt").animate({opacity: 0}, 800);
+  $("#train_slide2").animate(
+    {'margin-left': "0px;",
+    'display':"block"
+  });
+  $("#donnees_slide2").animate({
+    opacity: 1,
+    'top': '10%'
+  }, 500);
+  $("#train_slide2").animate({
+    'left': '-15%'
+  }, 500);
+})
+
 
 
 /* CARTE */

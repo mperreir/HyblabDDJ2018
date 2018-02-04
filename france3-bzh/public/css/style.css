@@ -39,6 +39,7 @@
 body {
   background-color: #241D37;
   background-image: url(../img/home/background_home.svg);
+  background-repeat: no-repeat;
 }
 
 footer p
@@ -120,6 +121,7 @@ h3
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
+  padding-top: -100px;
 }
 
 /* -- Slide questions*/
@@ -127,10 +129,16 @@ h3
 .r
 {
   display: none;
+  color :#F53855;
+  font-family: 'overpass';
+  text-align: justify;
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .q .v {
-    background-color: #241D37;
+    background-color: Transparent;
     border : 2px solid #5DC1CE;
     color: #5DC1CE;
     padding: 15px 32px;
@@ -139,12 +147,12 @@ h3
     display: inline-block;
     font-size: 16px;
     font-family: 'overpass';
-    width: 150px;
+    width: 250px;
     margin-right: 50px;
 }
 
 .q .f {
-    background-color: #241D37;
+    background-color:Transparent;
     border : 2px solid #5DC1CE;
     color: #5DC1CE;
     padding: 15px 32px;
@@ -153,12 +161,22 @@ h3
     display: inline-block;
     font-size: 16px;
     font-family: 'overpass';
-    width: 150px;
+    width: 250px;
     margin-right: 50px;
 }
 
 /* -- Slide questions 1 */
 
+.title_question
+{
+  position:relative;
+  top: -140px;
+}
+
+.section
+{
+  padding-top: 0px;
+}
 
 /* -- Slide jour nuit */
 
@@ -181,6 +199,7 @@ h3
   font-size: 36px;
   font-family: "work_sans";
   color: #4479FF;
+  float: left;
 }
 
 #jour
@@ -189,6 +208,7 @@ h3
   font-size: 36px;
   font-family: "work_sans";
   color: #F53855;
+  float: right
 }
 
 /* -- Slide 2 */
@@ -229,12 +249,17 @@ h3
   background: url('/img/home/Background-01.svg');
 } */
 
+.q
+{
+  margin-bottom: 50px;
+}
+
 #container_infos_nav {
   display: block;
   text-align: center;
   z-index: 1;
   vertical-align: top;
-  margin-top: -17%;
+  margin-top: 0%;
 }
 
 #container_infos_nav h3{
@@ -462,14 +487,11 @@ h3
 
 
 /* -- Slide 2 evenements*/
-
 #section_evenements {
-  background-image: url(../img/slide2/background_slide2.png);
+  /* background-image: url(../img/slide2/background_slide2.svg); */
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 800px;
-  position: relative;
 }
 #text_content_slide2 {
   width: 35%;
@@ -492,22 +514,27 @@ h3
   position: relative;
 }
 #train_slide2 {
-  position: relative;
+  position: absolute;
   width: 100%;
+  left: -110%;
+  margin-top: 10%;
   /* margin-left: -10000%; */
-  top:1200%;
+  /* top:1200%; */
 }
 #donnees_slide2 {
   text-align: center;
   width: 100%;
-  height: 1%;
+  height: 100%;
   display: inline-block;
-  margin-left: 5%;
+  position: relative;
+  top: 55%;
+  opacity: 0;
+   overflow: hidden;
 }
 
 #slide2_container_text {
   position: relative;
-  top:-15%;
+  top:5%;
 }
 
 #donnees_slide2 p{
@@ -515,7 +542,13 @@ h3
 }
 .data_slide2 {
   float: left;
-  margin-left: 5%
+  margin-left: 5%;
+  font-weight: normal !important;
+}
+
+.data_slide2 span{
+  font-size: 56px;
+  font-weight: bold;
 }
 
 .orange {
@@ -773,6 +806,3 @@ svg[hidden]:not(:root) {
   float: right;
   margin-right: 5%;
 }
-
-
-

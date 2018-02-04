@@ -65,43 +65,104 @@
       <!-- SECTION 1-->
 
       <div class="section">
-          <div class="slide" id="section_home">
-            <span id="container_infos_nav">
-              <h1>Arrêt d'urgence </br> Pleins feux sur les accidents aux passages à niveau</h1>
-              <p>
-              Les accidents aux passages à niveau sont malheureusement souvent d'actualité. L'année 2017 a été marquée par un terrible accident en décembre au passage à niveau de Millas, où 5 adolescents ont péri suite à la collision entre un train et un car scolaire.
-              </p>
-                <div >
-                  <h3>Démarrer <br/>l'expérience</h3>
-                  <div id="infos_nav_souris">
-                    <img  src="img/home/SOURIS.png" alt="Scroll avec la molette !" />
-                  </div>
-                  <div id="infos_nav_clavier">
-                    <img  src="img/home/TOUCHES.png" alt="Descend avec le clavier !" />
-                  </div>
+        <div class="slide" id="section_home">
+          <span id="container_infos_nav">
+            <h1>Arrêt d'urgence </br>Pleins feux sur les accidents aux passages à niveau</h1>
+            <p>
+            Les accidents aux passages à niveau sont malheureusement souvent d'actualité. L'année 2017 a été marquée par un terrible accident en décembre au passage à niveau de Millas, où 5 adolescents ont péri suite à la collision entre un train et un car scolaire.
+            </p>
+              <div >
+                <h3>Démarrer <br/>l'expérience</h3>
+                <div id="infos_nav_souris">
+                  <img  src="img/home/SOURIS.png" alt="Scroll avec la molette !" />
+                </div>
+                <div id="infos_nav_clavier">
+                  <img  src="img/home/TOUCHES.png" alt="Descend avec le clavier !" />
+                </div>
+            </div>
+          </span>
+        </div>
+        <div class="slide nothome" id="section_evenements">
+            <div id="slide2_container_text">
+              <h1>Rappel des événements</h1>
+                <p id="text_content_slide2">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div id="div_indication_slide_evt">
+                  <p id="indication_slide_evt">Cliquez pour voir les données</p>
+                </div>
+
+            </div>
+          <div class="data_slide2"><h3>Morts sur les passages à niveau<br/><span>31</span></h3></div>
+          <div class="data_slide2"><h3>Collisions en 2016<br/><span>11</span></h3></div>
+          <div class="data_slide2"><h3>Passages à niveaux en France en 2016<br/><span>15 000</span></h3></div>
+          <img id="train_slide2" src="img/slide2/Train.svg" alt="Train" />
+        </div>
+        <div class="slide" id="section_home">
+          <span class="title_question" id="container_infos_nav">
+            <h1>Pensez-vous que le nombre de passages à niveau en France depuis ces 20 dernières années a :</h1>
+              <div id="q1" class="q">
+                <button type="button"  class="v button" onclick="reponse(this);">Baissé</button>
+                <button type="button"  class="f button" onclick="reponse(this);">Augmenté</button>
+                <button type="button"  class="f button" onclick="reponse(this);">Stabilisé</button>
               </div>
-            </span>
-          </div>
-          <div class="slide" id="section_home">
-            <span id="container_infos_nav">
-              <h1>Pensez-vous que le nombre de passages à niveau en France depuis ces 20 dernières années a :</h1>
-                <div id="q1" class="q">
-                  <button type="button"  class="v button" onclick="reponse(this);">Baissé</button>
-                  <button type="button"  class="f button" onclick="reponse(this);">Augmenté</button>
-                  <button type="button"  class="f button" onclick="reponse(this);">Stabilisé</button>
-                </div>
-                <div class="r" id="r1">
-                  <p> aezaeaeaeazeaze </p>
-                </div>
-            </span>
-          </div>
+
+              <div class="r" id="r1">
+                <p> aezaeaeaeazeaze </p>
+              </div>
+          </span>
+        <div class="slide" id="section_home">
+          <span class="title_question" id="container_infos_nav">
+            <h1>Quelle distance parcourt un train lancé à 100km/h pour s'arrêter ?</h1>
+              <div id="q2" class="q">
+                <button type="button"  class="f button" onclick="reponse(this);">100m</button>
+                <button type="button"  class="v button" onclick="reponse(this);">1000m</button>
+                <button type="button"  class="f button" onclick="reponse(this);">1500m</button>
+              </div>
+
+              <div class="r" id="r2">
+                <p> aezaeaeaeazeaze </p>
+              </div>
+          </span>
+        </div>
+        <div class="slide" id="section_home">
+          <span class="title_question" id="container_infos_nav">
+            <h1>Combien de véhicules traversent chaque jour un passage à niveau ?</h1>
+              <div id="q3" class="q">
+                <button type="button"  class="f button" onclick="reponse(this);">500 000</button>
+                <button type="button"  class="f button" onclick="reponse(this);">7 000 000</button>
+                <button type="button"  class="v button" onclick="reponse(this);">16 000 000</button>
+              </div>
+
+              <div class="r" id="r3">
+                <p> aezaeaeaeazeaze </p>
+              </div>
+          </span>
+        </div>
+        <div class="slide" id="section_home">
+          <span class="title_question" id="container_infos_nav">
+            <h1>Selon vous, les principaux responsables des accidents aux passages à niveau sont :</h1>
+              <div id="q4" class="q">
+                <button type="button"  class="f button" onclick="reponse(this);">Les automobilistes</button>
+                <button type="button"  class="f button" onclick="reponse(this);">Les trains</button>
+                <button type="button"  class="v button" onclick="reponse(this);">Les passages à niveau</button>
+              </div>
+
+              <div class="r" id="r4">
+                <p> aezaeaeaeazeaze </p>
+              </div>
+          </span>
+        </div>
           <!-- Slide jour / nuit -->
           <div class="slide nothome" id="section_illu1">
-            <span id="container_infos_nav">
-              <h1>Pensez-vous que les accidents </br> se font le plus souvent de nuit ou de jour ?</h1>
+            <span class="title_question" id="container_infos_nav">
+              <h1>Pensez-vous que les accidents se font le plus souvent de nuit ou de jour ?</h1>
+
+              <div id="q5" class="q">
+                <button type="button" class="f button" onclick="Light();reponse(this)">Nuit</button>
+                <button type="button" class="v button" onclick="Light();reponse(this)">Jour</button>
+              </div>
               <p id="nuit">29%</p>
-              <button type="button" onclick="Light();">Nuit</button>
-              <button type="button" onclick="Light();">Jour</button>
               <p id="jour">71%</p>
             </span>
           </div>
