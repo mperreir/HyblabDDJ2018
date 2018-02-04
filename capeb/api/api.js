@@ -33,13 +33,13 @@ var critere = ['Activite',
 var keys = []
 var crt_arr = []
 
-app.get('/:epci/stats', (req, res) => {
+app.get('/:epci/stats', function(req, res) {
 
-	stat_files.forEach((file, idf) =>{
+	stat_files.forEach(function(file, idf){
 		var json = {}
 		crt_arr = []
 		var data = fs.readFileSync(file, 'utf8');
-		data.split(/\r\n|\n/).forEach((line, id) => {
+		data.split(/\r\n|\n/).forEach(function(line, id) {
 			if(id == 0){
 				keys = line.split(",");
 				json['labels'] = keys.slice(1);
@@ -50,7 +50,7 @@ app.get('/:epci/stats', (req, res) => {
 
 				if(cells[0] == req.params.epci){
 					if(idf >= 4){
-						cells.slice(1).map((val, j) => {
+						cells.slice(1).map(function(val, j) {
 							json['values'][j].push(val)
 						});
 					}
