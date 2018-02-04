@@ -118,6 +118,7 @@ function drawPieChart(data, title){
 }
 
 function drawBubbleChart(data){
+
     var colorMatch = {
         Aut:colors[0],
         Ele: colors[1],
@@ -146,23 +147,26 @@ function drawBubbleChart(data){
 		}
 	}
     var sec = document.getElementById("dataviz-section");
-	if(sec == null) {
-        sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
-        sec.setAttribute("id", "dataviz-section");
+	if(sec !== null) {
+        sec.remove();
     }
+    sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
+    sec.setAttribute("id", "dataviz-section");
 
     var h3 = document.getElementById("title-dataviz");
-	if(h3==null){
-        h3 = sec.appendChild(document.createElement('h3'));
-        h3.setAttribute("id", "title-dataviz");
-        h3.innerHTML = "Jusqu'où peuvent-ils aller ?";
+	if(h3!==null){
+        h3.remove();
 	}
+    h3 = sec.appendChild(document.createElement('h3'));
+    h3.setAttribute("id", "title-dataviz");
+    h3.innerHTML = "Jusqu'où peuvent-ils aller ?";
 
     var canvas = document.getElementById("canvas-dataviz");
-    if(canvas == null){
-    	canvas = document.createElement('canvas');
-        canvas.setAttribute("id", "canvas-dataviz");
+	if(canvas !== null){
+    	canvas.remove();
 	}
+    canvas = document.createElement('canvas');
+    canvas.setAttribute("id", "canvas-dataviz");
 
     var cvs = sec.appendChild(canvas);
     var ctx = cvs.getContext("2d");
@@ -233,7 +237,7 @@ function drawBubbleChart(data){
     };
 
 
-    new Chart(ctx, {
+    var chart = new Chart(ctx, {
         type: 'bubble',
         data: points,
         options: options
