@@ -806,3 +806,34 @@ object.mapFrance
 	left: 150px;
 
 }
+
+.camembertScene
+{
+	position: absolute;
+    left: 262px;
+    top: 206px;
+}
+
+.camembertScene--hidden
+{
+	position: absolute;
+    left: 262px;
+    top: 206px;
+    opacity: 0;
+}
+
+.camembertPodium
+{
+	position: absolute;
+    left: 903px;
+    top: 395px;
+}
+
+.legendePodium
+{
+	position: absolute;
+    top: 132px;
+    left: 894px;
+    color: white;
+    font-size: 20px;
+}

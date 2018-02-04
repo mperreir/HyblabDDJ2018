@@ -11,7 +11,6 @@
   <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet"> 
-  <script src="js/main.js" defer></script>
 </head>
 <body>
 <div id="fullpage" >
@@ -74,6 +73,12 @@
         <img id = "deuxiemeAnglais" class = "anglais deuxieme drapeau--hidden" src="img/Data1/drapeau-royaume-unis.svg">
         <img id = "troisiemeAnglais" class = "anglais troisieme drapeau" src="img/Data1/drapeau-royaume-unis.svg">
         <img id = "troisiemeSuede" class = "suede troisieme drapeau--hidden" src="img/Data1/drapeau-suede.svg">
+        <ul class = "legendePodium">
+          <li> France <span class="color-sample"></span></li>
+          <li> France <span class="color-sample"></li>
+          <li> <span class="color-sample"> France </li>
+        </ul>
+        <div id="piePodium" class = "camembertPodium"></div>
       </div>
       </div>
 	</div>
@@ -169,7 +174,7 @@
         <div id = "fenetrePopup" class = "fenetrePopup--hidden">
           <a href = "#"><p id = "croix" class ="croix">X</p></a>
           <p id = "scène" class = "titreScene"></p>
-          <ul id = "scene1" class = "listeScene">
+          <ul id = "scene1" class = "listeScene--hidden">
           </ul>
           <ul id = "scene2" class = "listeScene--hidden">
           </ul>
@@ -183,6 +188,13 @@
           </ul>
           <ul id = "scene7" class = "listeScene--hidden">
           </ul>
+           <div id="pieScene1" class = "camembertScene--hidden"></div>
+           <div id="pieScene2" class = "camembertScene--hidden"></div>
+           <div id="pieScene3" class = "camembertScene--hidden"></div>
+           <div id="pieScene4" class = "camembertScene--hidden"></div>
+           <div id="pieScene5" class = "camembertScene--hidden"></div>
+           <div id="pieScene6" class = "camembertScene--hidden"></div>
+           <div id="pieScene7" class = "camembertScene--hidden"></div> 
         </div>
       </div>
   </div>
@@ -209,5 +221,8 @@
 		css3:true
 	});
 </script>
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="js/jquery.rotapie.js"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

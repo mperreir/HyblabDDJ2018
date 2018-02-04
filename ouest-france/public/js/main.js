@@ -112,6 +112,8 @@ function controleurPlan(){
 				choix.textContent = groupe;
 				scene2.appendChild(choix);
 			});
+			camembertScene(2006, "Hard n'Heavy stage", "#pieScene1");
+			camembertScene(2006, "Main", "#pieScene2");
 	}
 
 	annee2007.onclick = function(){
@@ -177,6 +179,9 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene3.appendChild(choix);
 			});
+			camembertScene(2007, "Discover stage", "#pieScene1");
+			camembertScene(2007, "Gibson stage", "#pieScene2");
+			camembertScene(2007, "Main", "#pieScene3");
 	}
 	annee2008.onclick = function(){
 		textePlan.textContent = "Le nombre de groupes augmentente considérablement par rapport à 2007, passant de 84 à 108. Les groupes sont répartis entre 3 scènes distinctes et hiérarchisées : la main, la second stage et enfin la discover stage.";
@@ -217,7 +222,7 @@ function controleurPlan(){
     			{
     				listeGroupe1.push(groupe.Groupe);
     			}
-    			if (groupe.Annee === 2008 && groupe.Scene === "Main" )
+    			if (groupe.Annee === 2008 && groupe.Scene === "Second stage" )
     			{
     				listeGroupe2.push(groupe.Groupe);
     			} 
@@ -241,6 +246,9 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene3.appendChild(choix);
 			});
+			camembertScene(2008, "Discover stage", "#pieScene1");
+			camembertScene(2008, "Second stage", "#pieScene2");
+			camembertScene(2008, "Main", "#pieScene3");
 	}
 
 	annee2009.onclick = function(){
@@ -316,6 +324,10 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene4.appendChild(choix);
 			});
+			camembertScene(2009, "Main 01", "#pieScene1");
+			camembertScene(2009, "Main 02", "#pieScene2");
+			camembertScene(2009, "Rock Hard tent", "#pieScene3");
+			camembertScene(2009, "Terrorizer tent", "#pieScene4");
 
 	}
 	annee2010.onclick = function(){
@@ -391,6 +403,10 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene4.appendChild(choix);
 			});
+			camembertScene(2010, "Main 01", "#pieScene1");
+			camembertScene(2010, "Main 02", "#pieScene2");
+			camembertScene(2010, "Rock Hard tent", "#pieScene3");
+			camembertScene(2010, "Terrorizer tent", "#pieScene4");
 	}
 	annee2011.onclick = function(){
 		textePlan.textContent ="118 groupes sont présents en 2011. C’est un nombre relativement constant depuis l’édition de 2008.";
@@ -465,6 +481,10 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene4.appendChild(choix);
 			});
+			camembertScene(2011, "Main 01", "#pieScene1");
+			camembertScene(2011, "Main 02", "#pieScene2");
+			camembertScene(2011, "Rock Hard tent", "#pieScene3");
+			camembertScene(2011, "Terrorizer tent", "#pieScene4");
 	}
 	annee2012.onclick = function(){
 		textePlan.textContent ="Le Hellfest n'accueille plus 4 scènes mais bien 7 scènes pour un total de 170 artistes en cette année 2012, un véritable boom par rapport à l’année précédente. La Warzone met à l’honneur le punk hardcore, la Valley  le sludge/ stoner et le Metal Corner déniche les talents de demain . Autres changements, la Terrorizer tent laisse place au Temple (doom / pagan metal / black metal) et la Rock Hard tent devient l’Altar ( death metal / grind).";
@@ -569,6 +589,13 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene7.appendChild(choix);
 			});
+			camembertScene(2012, "Altar", "#pieScene1");
+			camembertScene(2012, "Main 01", "#pieScene2");
+			camembertScene(2012, "Main 02", "#pieScene3");
+			camembertScene(2012, "Metal Corner", "#pieScene4");
+			camembertScene(2012, "Temple", "#pieScene5");
+			camembertScene(2012, "Valley", "#pieScene6");
+			camembertScene(2012, "Warzone", "#pieScene7");
 	}
 	annee2013.onclick = function(){
 		textePlan.textContent ="170 artistes montent sur les planches du Hellfest en 2013, une répétition de 2012 avec les mêmes scènes.";
@@ -673,6 +700,13 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene7.appendChild(choix);
 			});
+			camembertScene(2013, "Altar", "#pieScene1");
+			camembertScene(2013, "Main 01", "#pieScene2");
+			camembertScene(2013, "Main 02", "#pieScene3");
+			camembertScene(2013, "Metal Corner", "#pieScene4");
+			camembertScene(2013, "Temple", "#pieScene5");
+			camembertScene(2013, "Valley", "#pieScene6");
+			camembertScene(2013, "Warzone", "#pieScene7");
 	}
 	annee2014.onclick = function(){
 		textePlan.textContent ="Le format des scènes du Hellfest de 2012 reste toujours le même pour acceuillir le même nombre d’artistes.";
@@ -777,6 +811,13 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene7.appendChild(choix);
 			});
+			camembertScene(2014, "Altar", "#pieScene1");
+			camembertScene(2014, "Main 01", "#pieScene2");
+			camembertScene(2014, "Main 02", "#pieScene3");
+			camembertScene(2014, "Metal Corner", "#pieScene4");
+			camembertScene(2014, "Temple", "#pieScene5");
+			camembertScene(2014, "Valley", "#pieScene6");
+			camembertScene(2014, "Warzone", "#pieScene7");
 	}
 	annee2015.onclick = function(){
 		textePlan.textContent ="Très légère baisse de nombre d’artistes en 2015 puisque les 7 scènes reçoivent 166 groupes.";
@@ -881,6 +922,13 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene7.appendChild(choix);
 			});
+			camembertScene(2015, "Altar", "#pieScene1");
+			camembertScene(2015, "Main 01", "#pieScene2");
+			camembertScene(2015, "Main 02", "#pieScene3");
+			camembertScene(2015, "Metal Corner", "#pieScene4");
+			camembertScene(2015, "Temple", "#pieScene5");
+			camembertScene(2015, "Valley", "#pieScene6");
+			camembertScene(2015, "Warzone", "#pieScene7");
 	}
 	annee2016.onclick = function(){
 		textePlan.textContent ="Le Metal Corner en partenariat avec Deezer Open Hell'Stage en 2016 accueille presque le double de ce qu’il a l’habitude d’avoir. Cette scène où les groupes de métals s’affrontent pour se produirent sur une “main stage” rencontre un véritable succès.";
@@ -985,6 +1033,13 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene7.appendChild(choix);
 			});
+			camembertScene(2016, "Altar", "#pieScene1");
+			camembertScene(2016, "Main 01", "#pieScene2");
+			camembertScene(2016, "Main 02", "#pieScene3");
+			camembertScene(2016, "Metal Corner", "#pieScene4");
+			camembertScene(2016, "Temple", "#pieScene5");
+			camembertScene(2016, "Valley", "#pieScene6");
+			camembertScene(2016, "Warzone", "#pieScene7");
 	}
 	annee2017.onclick = function(){
 		textePlan.textContent ="167 artistes font monter les décibels en 2017 pour faire vibrer les festivaliers.";
@@ -1089,7 +1144,15 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene7.appendChild(choix);
 			});
+			camembertScene(2017, "Altar", "#pieScene1");
+			camembertScene(2017, "Main 01", "#pieScene2");
+			camembertScene(2017, "Main 02", "#pieScene3");
+			camembertScene(2017, "Metal Corner", "#pieScene4");
+			camembertScene(2017, "Temple", "#pieScene5");
+			camembertScene(2017, "Valley", "#pieScene6");
+			camembertScene(2017, "Warzone", "#pieScene7");
 	}
+
 }
 
 
@@ -1126,7 +1189,7 @@ function controleurPodium()
 		TextePodium.textContent = "Pour cette première édition du Hellfest, 35% des groupes proviennent des Etats-Unis. En deuxième position se trouvent la France et l'Angleterre, représentant respectivement 16% et 11% du total des groupes. 15% des groupes viennent de pays scandinaves, dont la moitié de la Suède.";
 
         setYearActive(tabPodiums, 1);
-
+		camembertPodium(2006);
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1146,7 +1209,7 @@ function controleurPodium()
 		TextePodium.textContent = "2007 s'accompagne d'une nette hausse de participation des groupes français, aussi nombreux que les groupes américains. La somme des deux représente plus de la moitié du total des groupes.";
 
 		setYearActive(tabPodiums, 2);
-
+		camembertPodium(2007);
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1166,7 +1229,7 @@ function controleurPodium()
 		TextePodium.textContent = "En 2008, le Hellfest élargit ses horizons et accueille des groupes japonais, autrichiens et irlandais. La participation de la France diminue et équivaut presque à celle de l'Angleterre et de la Suède.";
 
         setYearActive(tabPodiums, 3);
-
+        camembertPodium(2008);
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1186,6 +1249,7 @@ function controleurPodium()
 		TextePodium.textContent = "Jamais les Etats-Unis n'ont atteint un tel taux de participation : ils représentent en 2009 plus de 40% des groupes ! En revanche, les participation des pays scandinaves recule.";
 
         setYearActive(tabPodiums, 4);
+        camembertPodium(2009);
 
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1206,6 +1270,7 @@ function controleurPodium()
 		TextePodium.textContent = "Les groupe français sont en perte de vitesse en cette année 2010... La Roumanie fait son entrée dans le festival avec le groupe Negurâ Bunget.";
 
         setYearActive(tabPodiums, 5);
+        camembertPodium(2010);
 
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1226,6 +1291,7 @@ function controleurPodium()
 		TextePodium.textContent = "Alors que la France est toujours moins bien représentée, de nouveaux pays font leur apparition sur la scène du métal. L'Ecosse, la Russie, l'Irlande du Nord et la Letonnie sont les petits nouveaux de 2011.";
 
         setYearActive(tabPodiums, 6);
+        camembertPodium(2011);
 
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1246,6 +1312,7 @@ function controleurPodium()
 		TextePodium.textContent = "2012 est synonyme d'âge d'or des groupes français. Ils connaissent une fulgurante augmentation pour la représentativité du pays. Pour la première fois le groupe Solstafir devient ambassadeur de son pays : l'Islande.";
 
         setYearActive(tabPodiums, 7);
+        camembertPodium(2012);
 
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1266,6 +1333,7 @@ function controleurPodium()
 		TextePodium.textContent = "La Suède et l'Angleterre sont au coude à coude sur la troisième place du podium. Quant aux iles Féroé, le Chili et la Colombie, ils s'installent pour la première fois au Hellfest.";
 
         setYearActive(tabPodiums, 8);
+        camembertPodium(2013);
 
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1286,6 +1354,7 @@ function controleurPodium()
 		TextePodium.textContent = "Encore jamais représentée au Hellfest, cette année l'Afrique du sud fait son entrée dans le palmarès des groupes présent au festival.";
 
         setYearActive(tabPodiums, 9);
+        camembertPodium(2014);
 
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1306,6 +1375,7 @@ function controleurPodium()
 		TextePodium.textContent = "Pour la seconde fois, l'Irlande du nord est présente au Hellfest pour des représentations toujours plus impressionnantes !";
 
         setYearActive(tabPodiums, 10);
+        camembertPodium(2015);
 
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1326,6 +1396,7 @@ function controleurPodium()
 		TextePodium.textContent = "En 2016, pour la première fois depuis la création du Hellfest, un groupe ukrainien se produit sur l'une des scènes du festival, pour le plaisir de nos oreilles.";
 
         setYearActive(tabPodiums, 11);
+        camembertPodium(2016);
 
         document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1346,6 +1417,7 @@ function controleurPodium()
 		TextePodium.textContent = "Apparition inédite dans la programmation du festival en cette année 2017, la Tunisie invite le public à découvrir ses artistes aux multiples talents.";
 
         setYearActive(tabPodiums, 12);
+        camembertPodium(2017);
 
         document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1385,15 +1457,25 @@ function pin(){
 	var pin201206 =document.getElementById("pin2012-06");
 	var pin201207 =document.getElementById("pin2012-07");
 
-    var s1 = document.getElementById("scene1").className = "listeScene--hidden";
-    var s2 = document.getElementById("scene2").className = "listeScene--hidden";
-    var s3 = document.getElementById("scene3").className = "listeScene--hidden";
-    var s4 = document.getElementById("scene4").className = "listeScene--hidden";
-    var s5 = document.getElementById("scene5").className = "listeScene--hidden";
-    var s6 = document.getElementById("scene6").className = "listeScene--hidden";
-    var s7 = document.getElementById("scene7").className = "listeScene--hidden";
+    var s1 = document.getElementById("scene1");
+    var s2 = document.getElementById("scene2");
+    var s3 = document.getElementById("scene3");
+    var s4 = document.getElementById("scene4");
+    var s5 = document.getElementById("scene5");
+    var s6 = document.getElementById("scene6");
+    var s7 = document.getElementById("scene7");
+
+	var p1 = document.getElementById("pieScene1");
+    var p2 = document.getElementById("pieScene2");
+    var p3 = document.getElementById("pieScene3");
+    var p4 = document.getElementById("pieScene4");
+    var p5 = document.getElementById("pieScene5");
+    var p6 = document.getElementById("pieScene6");
+    var p7 = document.getElementById("pieScene7");
 
     var scenes = [s1, s2, s3, s4, s5, s6, s7];
+
+    var pies = [p1, p2, p3, p4, p5, p6, p7];
 
 	var popup = document.getElementById("fenetrePopup");
 	var croix = document.getElementById("croix");
@@ -1407,97 +1489,117 @@ function pin(){
 		titre.textContent = "Hard n'Heavy";
 		popup.className = "fenetrePopup";
 		setElementsHidden(scenes, "listeScene", 0);
+		setElementsHidden(pies, "camembertScene",0);
 	}
 	pin200602.onclick = function(){
 		titre.textContent = "Main Stage";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 1);
+        setElementsHidden(pies, "camembertScene",1);
 	}
 	pin200701.onclick = function(){
 		titre.textContent = "Discover Stage";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 0);
-
-	}
+        setElementsHidden(pies, "camembertScene",0);
+  	}
 	pin200702.onclick = function(){
 		titre.textContent = "Gibson Stage";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 1);
+        setElementsHidden(pies, "camembertScene",1);
+     
 	}
 	pin200703.onclick = function(){
 		titre.textContent = "Main Stage";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 2);
+        setElementsHidden(pies, "camembertScene",2);
+
 	}
 	pin200801.onclick = function(){
 		titre.textContent = "Discover Stage";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 0);
+        setElementsHidden(pies, "camembertScene",0);
 	}
 	pin200802.onclick = function(){
 		titre.textContent = "Main 2 Stage";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 1);
+        setElementsHidden(pies, "camembertScene",1);
 	}
 	pin200803.onclick = function(){
 		titre.textContent = "Main 1 Stage";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 2);
+        setElementsHidden(pies, "camembertScene",2);
 	}
  	pin200901.onclick = function(){
  		titre.textContent = "Main 1 Stage";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 0);
+        setElementsHidden(pies, "camembertScene",0);
 	}
  	pin200902.onclick = function(){
  		titre.textContent = "Main 2 Stage";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 1);
+        setElementsHidden(pies, "camembertScene",1);
 	}
 	pin200903.onclick = function(){
 		titre.textContent = "Rock Hard tent";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 2);
+        setElementsHidden(pies, "camembertScene",2);
 	}
 	pin200904.onclick = function(){
 		titre.textContent = "Terrorizer tent";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 3);
+        setElementsHidden(pies, "camembertScene",3);
 	}
 	pin201201.onclick = function(){
 		titre.textContent = "Altar";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 0);
+        setElementsHidden(pies, "camembertScene",0);
 	}
 	pin201202.onclick = function(){
 		titre.textContent = "Main 1 Stage";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 1);
+        setElementsHidden(pies, "camembertScene",1);
 	}
 	pin201203.onclick = function(){
 		titre.textContent = "Main 2 Stage";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 2);
+        setElementsHidden(pies, "camembertScene",2);
 	}
 	pin201204.onclick = function(){
 		titre.textContent = "Métal Corner";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 3);
+        setElementsHidden(pies, "camembertScene",3);
 	}
 	pin201205.onclick = function(){
 		titre.textContent = "Temple";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 4);
+        setElementsHidden(pies, "camembertScene",4);
 	}
 	pin201206.onclick = function(){
 		titre.textContent = "Valley";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 5);
+        setElementsHidden(pies, "camembertScene",5);
 	}
 	pin201207.onclick = function(){
 		titre.textContent = "Warzone";
 		popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 6);
+        setElementsHidden(pies, "camembertScene",6);
 	}
 }
 
@@ -1742,6 +1844,93 @@ function setElementsHidden(tabElements, className, index) {
 
     tabElements[index].className = className;
 }
+
+function camembert(data, id){
+var couleur = ['#d6f2b3', '#bbdb83', '#8eaf46', '#a9ff88', '#85c275', '#57664d', '#66cc33', '#479116', '#3f5b33'];
+var cam = [];
+var pour = 0;
+var j = 0;
+for (var i = 0; i < data.length; i++)
+{
+	if (data[i] >=5)
+	{
+		cam.push({ color : couleur[j], percentage : data[i]});
+		j++;
+	}
+	else
+	{
+		pour += data[i];
+	}
+}
+cam.push({ color : couleur[j], percentage : pour});
+console.log(cam);
+$(function(){
+            $(id).rotapie({
+                slices: cam,
+                sliceIndex: 0, // Start index selected slice.
+                deltaAngle: 0.2, // The rotation angle in radians between frames, smaller number equals slower animation.
+                minRadius: 60, // Radius of unselected slices, can be set to percentage of container width i.e. '50%'
+                maxRadius: 70, // Radius of selected slice, can be set to percentage of container width i.e. '45%'
+                minInnerRadius: 35, // Smallest radius inner circle when animated, set to 0 to disable inner circle, can be set to percentage of container width i.e. '35%'
+                maxInnerRadius: 45, // Normal radius inner circle, set to 0 to disable inner circle, can be set to percentage of container width i.e. '30%'
+                innerColor: '#fff', // Background color inner circle. 
+                minFontSize: 30, // Smallest fontsize percentage when animated, set to 0 to disable percentage display, can be set to percentage of container width i.e. '20%'
+                maxFontSize: 40, // Normal fontsize percentage, set to 0 to disable percentage display, can be set to percentage of container width i.e. '10%'
+                fontYOffset: 0, // Vertically offset the percentage display with this value, can be set to percentage of container width i.e. '-10%'
+                fontFamily: 'Times New Roman', // FontFamily percentage display.
+                fontWeight: 'bold', // FontWeight percentage display.
+                decimalPoint: '.', // Can be set to comma or other symbol.
+                clickable: true // If set to true a user can select a different slice by clicking on it. 
+            });
+});
+}
+
+function camembertPodium(annee)
+{
+	var json = loadData("data/AnneePaysPourcentage.json");
+	var pourcentage = [];
+	var pays = [];
+	json.forEach(function(nation){
+	if (nation.Annee === annee)
+    	{
+    		pourcentage.push(nation.Pourcentage);
+    		pays.push(nation.Pays)
+    	}
+	});
+	camembert(pourcentage, "#piePodium");
+}
+
+function camembertScene(annee, scene, id)
+{
+	var json = loadData("data/AnneeScenePaysNombreTotalPourcentage.json");
+	var pourcentage = [];
+	var pays = [];
+	json.forEach(function(nation){
+	if (nation.Annee === annee && nation.Scene === scene )
+    	{
+    		pourcentage.push(nation.Pourcentage);
+    		pays.push(nation.Pays)
+    	}
+	});
+	console.log(pourcentage);
+	camembert(pourcentage, id);
+}
+
+
+//camembertPodium(2006);
+/*var json = loadData("data/AnneePaysPourcentage.json");
+var data = [];
+json.forEach(function(groupe){
+	if (groupe.Annee === 2006)
+    	{
+    		data.push(groupe.Pourcentage);
+    	}
+});
+console.log(data);
+var d = data.map(x => parseFloat(x));
+console.log(d);
+camembert(data, "#piePodium");
+camembert(data, "#pieScene");*/
 
 /**********************************************************************************************************************/
 //loadData();
