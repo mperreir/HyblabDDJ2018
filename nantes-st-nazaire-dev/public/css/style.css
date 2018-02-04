@@ -5,6 +5,11 @@ footer p
   text-align: center;
 }
 
+@font-face {
+	font-family: "Regular";
+	src: url('../fonts/Gunnar-Regular.ttf');
+}
+
 body,div,li,h1,h2,h3,h4,p {
     padding: 0;
     margin: 0;
@@ -40,17 +45,35 @@ ul {
 	cursor: pointer;
 	position: absolute;
 	left: 50%;
-	bottom: 5%;
+	bottom: 1px;
 	z-index: 3;
 }
 
 /* --------------- SYNTHESE --------------- */
+#section-synthese {
+	padding: 60px 68px;
+}
 
 .synthese-title {
 	color: #265C8E;
-	font-size: 20px;
-	margin-left: 4%;
+	font-size: 24px;
 	margin-bottom: 20px;
+}
+
+#section-synthese p {
+	width: 60%;
+}
+
+#img-synthese {
+	margin-top: 180px;
+	margin-left: 30px;
+	display: inline-block;
+}
+
+#synth-chart-block {
+	width:800px;
+	position: relative;
+	bottom: 400px;
 }
 
 /* --------------- LAST PAGE --------------- */

@@ -24,7 +24,7 @@
         <script src="js/jquery3.2.1.js"></script>
         <!-- Two js for charts -->
         <script src="js/modernizr.custom.js"></script>
-        <script src="js/chart.js"></script>
+        <script src="js/Chart.bundle.js"></script>
         <script src="js/velocity.js"></script>
         <script src="js/jqfloat.min.js"></script>
         <script src="js/main.js"></script>
@@ -47,13 +47,17 @@
                     <img id="nantes-img" src="img/intro/photo-nantes.png" alt="gr">
                     <img id="nana-nantes" src="img/intro/NANAVALISE.png" alt="nana">
                     <img id="bulle" src="img/intro/bulle.png" alt="text">
+                    <div id="presentation-block">
+                    <p id="presentation1">Je m’appelle <span class="blue-text">Emmanuelle</span>, j’ai 38 ans et il y a un an, j’ai choisi <span class="blue-text">d’installer une filiale de mon entreprise dans la métropole de Nantes/Saint-Nazaire.</span></p>
+                    <p id="presentation2"><span class="blue-text">Je vivais à Paris</span>, vous cernez l’ambiance : <span class="blue-text">métro, boulot, dodo</span>.<br>Quotidien stimulant mais difficile pour envisager une vie de famille.</p>
+                    </div>
                     <img class="flecheBas" src="img/main/FLECHEBAS.png" alt="nextPage">
                 </div>
 
                 <div class="section" id="section-carte">
                     <div class="section-container">
-                        <p class="plus">Plusieurs opportunités se présentaient à moi<br> pour m'installer dans l'une des métropoles du paysage français.</p>
-                        <p class="chacune">Chacune disposant de ses avantages propres.<br>Il me fallait donc <span class="blue-text">trouver la meilleure combinaison</span><br> pour allier <span class="blue-text">environnement de travail stimulant</span> et <span class="blue-text">cadre de vie idéal.</span></p>
+                        <p id="plus">Plusieurs opportunités se présentaient à moi<br> pour m'installer dans l'une des métropoles du paysage français.</p>
+                        <p id="chacune">Chacune disposant de ses avantages propres.<br>Il me fallait donc <span class="blue-text">trouver la meilleure combinaison</span><br> pour allier <span class="blue-text">environnement de travail stimulant</span> et <span class="blue-text">cadre de vie idéal.</span></p>
                         <img id="bulle2" src="img/intro/bulle2.png" alt="text"><br>
                         <img id="paris-img" src="img/intro/photo-paris.png" alt="photo">
                         <img id="nanavalise" src="img/intro/emmanuelle.png" alt="nana">
@@ -221,10 +225,13 @@
                     <img class="flecheBas" src="img/main/FLECHEBAS.png" alt="nextPage">
                 </div>
 
-                <div class="section" id="section-synthèse">
+                <div class="section" id="section-synthese">
                     <h2 class="synthese-title">Nantes St Nazaire, la métropole idéale pour les entrepreneurs ... </h2>
-                    <p> Blabla laba l;djdin fjenkd,i duenidovepl db udijdjiokdo eijdidjodj duzdjijidjid dujndisjdisd dnjsidjidni djisjdisdjis </p>
-                    <img id="synth-b-block" src="img/" alt="je déménage">
+                    <p>Nantes Saint-Nazaire Métropole est une métropole dynamique sous différents aspects et remplie de nombreux critères que ce soit pour développer son activité ou plus simplement s'y installer.</p>
+                    <img id="img-synthese" src="img/intro/emmanuelle.png" alt="img-synthese">
+                    <div id="synth-chart-block">
+                        <canvas id="synthese-chart"></canvas>
+                    </div>  
                     <img class="flecheBas" src="img/main/FLECHEBAS.png" alt="nextPage">
                 </div>
 

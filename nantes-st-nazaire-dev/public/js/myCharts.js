@@ -151,11 +151,95 @@ function printChart(chartData, chartId) {
 }
 */
 
+function synthese() {
+    var marksCanvas = document.getElementById("synthese-chart");
+
+/*
+    var marksData = {
+      labels: ["English", "Maths", "Physics", "Chemistry", "Biology", "History"],
+      datasets: [{
+        label: "Student A",
+        backgroundColor: "rgba(200,0,0,0.2)",
+        data: [65, 75, 70, 80, 60, 80]
+      }, {
+        label: "Student B",
+        backgroundColor: "rgba(0,0,200,0.2)",
+        data: [54, 65, 60, 70, 70, 75]
+      }]
+    };
+
+    var radarChart = new Chart(marksCanvas, {
+        type: 'radar',
+        data: marksData,
+        options : {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+
+    var ctx = document.getElementById("synthese-chart");
+    */
+    var randomScalingFactor = function() {
+        return Math.round(Math.random() * 100);
+    };
+
+    var color = Chart.helpers.color;
+    var config = {
+        type: 'radar',
+        data: {
+            labels: [['Cadre', 'de vie'], ['Enseignement', 'Emploi'], 'Culture', ['Industrie', 'de pointe'], ['Développement', 'numérique'], 'Transport'],
+            datasets: [{
+                label: 'My First dataset',
+                borderColor: "red",
+                pointBackgroundColor: "red",
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ]
+            }, {
+                label: 'My Second dataset',
+                borderColor: "green",
+                pointBackgroundColor: "green",
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ]
+            }]
+        },
+        options: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Comparaison des villes selon nos critères'
+            },
+            scale: {
+                ticks: {
+                    beginAtZero: true
+                }
+            }
+        }
+    };
+
+    new Chart(document.getElementById('synthese-chart'), config);
+}
+
 $(document).ready(function() {
 
     // Assign handlers immediately after making the request,
     // and remember the jqxhr object for this request
-    var jqxhr = $.post( "http://localhost:8080/nantes-st-nazaire-dev/actifs")
+    var jqxhr = $.post( "http://localhost:8081/nantes-st-nazaire-dev/actifs")
         .done(function(data) {
             console.log( "success" );
             console.log(data)
@@ -203,4 +287,8 @@ $(document).ready(function() {
             console.log( "error" );
         });
 
+        synthese();
+
+
 });
+

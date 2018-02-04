@@ -24,16 +24,30 @@
 }
 
 #bulle {
+	position: absolute;
 	width: 4%;
-	margin-left: 40%;
+	top: 24%;
+	left: 67%;
 }
 
+#presentation-block {
+	position: absolute;
+	width: 24%;
+	top: 15%;
+	left: 70%;
+	color: black;
+	font-size: 16px;
+}
+
+#presentation1, #presentation2 {
+	margin-bottom: 20px;
+}
 /* --------------- INTRO 2 --------------- */
 #section-carte {
 	padding: 40px 40px;
 }
 
-.plus, .chacune {
+#plus, #chacune {
 	color: black;
 	text-align: right;
 	width: 54%;
