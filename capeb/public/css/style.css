@@ -29,6 +29,13 @@ a {
   font-weight: bold;
 }
 
+/* line 13, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/modules/_extends.scss */
+.partie-data > .content-data .texte-data > .title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 48px;
+  font-weight: medium;
+}
+
 /* line 19, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/modules/_extends.scss */
 .nav-bar > .epci {
   font-family: "Barlow Condensed", sans-serif;
@@ -498,6 +505,24 @@ a {
 /* line 2, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-data.scss */
 .partie-data {
   background-color: #FBEE3D;
+  display: grid;
+  grid-template-columns: 22.5vh 1fr 1fr;
+  grid-template-rows: 22.5% 67.5% 10%;
+}
+
+/* line 8, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-data.scss */
+.partie-data > .map-pdl {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: red;
+}
+
+/* line 13, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-data.scss */
+.partie-data > .content-data {
+  color: #1d1d1b;
+  grid-column: 3;
+  grid-row: 2;
+  background-color: blue;
 }
 
 /* style de la partie team */

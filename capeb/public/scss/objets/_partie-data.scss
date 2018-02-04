@@ -2,4 +2,23 @@
 .partie-data{
   @extend %full-viewport;
   background-color: $main-contrast;
+  display: grid;
+  grid-template-columns: 22.5vh 1fr 1fr;
+  grid-template-rows: 22.5% 67.5% 10% ;
+  >.map-pdl{
+    grid-column: 2;
+    grid-row: 2;
+    background-color: red;
+  }
+  >.content-data{
+    color: $black;
+    grid-column: 3;
+    grid-row: 2;
+    background-color: blue;
+    .texte-data{
+      >.title{
+        @extend %titre-epci;
+      }
+    }
+  }
 }
