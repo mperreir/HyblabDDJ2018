@@ -140,6 +140,8 @@ app.get('/:epci/investissement', function(req, res){
     var json = {};
     crt_arr = [];
     var data = fs.readFileSync(csv, 'utf8');
+    var moyenne2014=0, moyenne2015=0, moyenne2016=0, moyenne2017=0;
+    var nb4 =0, nb5=0, nb6=0, nb7=0;
     data.split(/\r\n|\n/).forEach(function (line, id) {
         if(id == 0){
             keys = line.split(",");
@@ -151,8 +153,31 @@ app.get('/:epci/investissement', function(req, res){
             if(cells[0] == req.params.epci){
                 json['values'].push(cells.slice(1));
             }
+
+            //also do stats for region, because it's easy here
+
+            if(cells[1] == 2014){
+                moyenne2014+=parseFloat(cells[2]);
+                nb4++;
+            } else if(cells[1] == 2015){
+                moyenne2015+=parseFloat(cells[2]);
+                nb5++;
+            } else if(cells[1] == 2016){
+                moyenne2016+=parseFloat(cells[2]);
+                nb6++;
+            } else if(cells[1] == 2017){
+                moyenne2017+=parseFloat(cells[2]);
+                nb7++;
+            }
         }
     });
+
+    moyenne2014/=nb4;
+    moyenne2015/=nb5;
+    moyenne2016/=nb6;
+    moyenne2017/=nb7;
+
+    json.region = [['2014', moyenne2014, 1-moyenne2014], ['2015', moyenne2015, 1-moyenne2015], ['2016', moyenne2016, 1-moyenne2016], ['2017', moyenne2017, 1-moyenne2017]];
 
     res.json(json);
 });

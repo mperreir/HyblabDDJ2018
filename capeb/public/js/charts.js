@@ -34,8 +34,6 @@ var drawChart3dEmploi = function(data){
     h3.setAttribute("id", "title-dataviz");
     h3.innerHTML = "Qui veut gagner des salariés ?";
 
-
-
     var canvas = document.getElementById("canvas-dataviz");
     if(canvas !== null){
         canvas.remove();
@@ -78,7 +76,7 @@ var drawChart3dEmploi = function(data){
 				maintainAspectRatio: false,
 				tooltips: {
                     mode: 'index',
-                    intersect: false,
+                    intersect: false
                 },
                 hover: {
                     mode: 'nearest',
@@ -100,8 +98,6 @@ var drawChart3dEmploi = function(data){
                     yAxes: [{
                         display: true,
                         ticks: {
-							suggestedMin: 0,    // minimum will be 0, unless there is a lower value.
-							// OR //
 							beginAtZero: true   // minimum value will be 0.
 						},
                         scaleLabel: {
@@ -132,44 +128,82 @@ var drawChart3dEmploi = function(data){
 };
 
 
-function flush(){
-	var cvs = document.getElementById("page3");
-	cvs.innerHTML = ""
-	
-
-}
 function drawLineChart(data, title){
-	var sec = document.getElementById("page3").appendChild(document.createElement('section'));
-	sec.className = "chart";
+    var sec = document.getElementById("dataviz-section");
+    if(sec !== null) {
+        sec.remove();
+    }
+    sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
+    sec.setAttribute("id", "dataviz-section");
 
-	var h3 = sec.appendChild(document.createElement('h3'))
-			h3.innerHTML = title;
+    var h3 = document.getElementById("title-dataviz");
+    if(h3!==null){
+        h3.remove();
+    }
+    var h3 = sec.appendChild(document.createElement('h3'));
+    h3.setAttribute("id", "title-dataviz");
+    h3.innerHTML = title;
 
-	var cvs = sec.appendChild(document.createElement('canvas'))
 
-	var d = data.values.slice(1).map((val, i) => {return {
-														label: data.labels[i+1], 
-														backgroundColor: colors[i], 
-														borderColor: colors[i], 
-														data: val,
-													    fill: false
-														}
-												})
-	var ctx = cvs.getContext("2d")
-		new Chart(ctx, {
+    var canvas = document.getElementById("canvas-dataviz");
+    if(canvas !== null){
+        canvas.remove();
+    }
+    canvas = document.createElement('canvas');
+    canvas.setAttribute("id", "canvas-dataviz");
+
+    var cvs = sec.appendChild(canvas);
+
+	var d =  {
+		datasets: [],
+		labels: []
+	};
+    var dataset = {data: [], label: "EPCI", backgroundColor: colors[0]};
+
+    var datasetRegion = {data: [], label: "Région", backgroundColor: colors[1]};
+    data.region.forEach(function(value){
+        datasetRegion.data.push(parseFloat(value[1]));
+	});
+
+    data.values.forEach(function(value){
+        d.labels.push(value[0]);
+		dataset.data.push(parseFloat(value[1]));
+    });
+
+    d.datasets.push(dataset);
+	d.datasets.push(datasetRegion);
+
+    var ctx = cvs.getContext("2d");
+	new Chart(ctx, {
 		// The type of chart we want to create
 		type: 'line',
-
 		// The data for our dataset
-		data: {
-			labels: data.values[0],
-			datasets: d
-		},
+		data: d,
 		// Configuration options go here
-		options: { 
+		options: {
 				responsive:false,
-				maintainAspectRatio: false
-		}	
+				maintainAspectRatio: false,
+            tooltips: {
+                mode: 'index',
+                intersect: false
+            }
+        },
+        scales: {
+            xAxes: [{
+            	display:true,
+                scaleLabel: {
+                    display: true,
+                    labelString: "Année"
+                }
+            }],
+            yAxes: [{
+            	display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: "Pourcentage "
+                }
+            }]
+        }
 	});
 
 }
@@ -196,10 +230,23 @@ function drawBarChart(data, title){
 		},
 
 		// Configuration options go here
-		options: { 
-				responsive:false,
-				maintainAspectRatio: false
-				}	
+		options: {
+            responsive: false,
+            maintainAspectRatio: false
+        },
+		xAxes: [{
+            scaleLabel : {
+                display: true,
+                labelString: "Années"
+            }
+        }],
+        yAxes: [{
+            scaleLabel: {
+                display: true,
+                labelString: "Pourcentage "
+            }
+        }]
+
 	});
 
 }
@@ -283,7 +330,6 @@ function drawBubbleChart(data){
 
     var cvs = sec.appendChild(canvas);
     var ctx = cvs.getContext("2d");
-
 
 
     var points = {datasets: []};

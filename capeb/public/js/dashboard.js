@@ -45,6 +45,13 @@ function miniStats(regionStats, d) {
             // only 2017 and percentage of yes
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = (json.values[3][1] * 100).toFixed(1);
             dataFrame.style.backgroundColor = colorsForRegion[matchColor(json.values[3][1], 0, 0.15, 0.03, 0.17, false)];
+
+            $('#card-investissement .open').each(function(){
+                $(this).on('click', function() {
+                    drawLineChart(json, "Investir ou ne pas investir ?");
+                    closeOnEscape();
+                });
+            });
         });
 
 
