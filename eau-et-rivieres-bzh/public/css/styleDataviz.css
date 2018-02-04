@@ -11,12 +11,12 @@ body{
 
 .title {
     font-weight: 700;
-    font-size: 17px;
+    font-size: 1.2vw;
 }
 
 .normal {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 0.9vw;
 }
 
 .section {
@@ -46,8 +46,7 @@ body{
     background-color: white;
     top: 7%;
     left: 5%;
-    width: 40%;
-    height: 31%;
+    width: 40vw;
     word-wrap : break-word;
     text-align: justify;
 }
@@ -70,22 +69,10 @@ body{
 /* Section 2 */
 #section2 {
     float: left;
-    width: 40%;
-    height: 15%;
+    width: 40vw;
     position: absolute;
     top: 78%;
     left: 8%;
-}
-
-.boutonRond {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-right: 15px;
-    border-color: black;
-    border-style: solid;
-    background-color: white;
-    margin: auto;
 }
 
 /* Section 3 */
@@ -94,7 +81,7 @@ body{
     position: absolute;
     top: 7%;
     left: 50%;
-    width: 46%;
+    width: 46vw;
     height: 78%;
     word-wrap : break-word;
     background-color: white;
@@ -107,7 +94,7 @@ body{
     position: absolute;
     top: 1%;
     left: 45%;
-    width: 45%;
+    width: 20.7vw;
 }
 
 #histGauche{
@@ -115,7 +102,7 @@ body{
     position: absolute;
     top: 1%;
     left: 0%;
-    width: 45%;
+    width: 20.7vw;
 }
 
 .article1 {
@@ -153,7 +140,7 @@ body{
     float: left;
     width: 40%;
     position: absolute;
-    top: 39%;
+    top: 40%;
     left: 5%;
 }
 
@@ -347,8 +334,7 @@ body{
     position: absolute;
     top: 7%;
     left: 5%;
-    width: 25%;
-    height: 52%;
+    width: 25vw;
     border: 3px solid black;
     background-color: white;
     word-wrap : break-word;
@@ -365,8 +351,8 @@ body{
     position: absolute;
     top: 68%;
     left: 5%;
-    width: 25%;
-    height: 25%;
+    width: 25vw;
+    height: 11.5vw;
     border: 3px solid black;
     background-color: white;
 }
@@ -376,6 +362,7 @@ body{
     position: absolute;
     left: 30%;
     top: 10%;
+    width: 17.5vw;
     text-align: justify;
 }
 
@@ -526,8 +513,7 @@ body{
     border: 3px solid black;
     top: 7%;
     left: 5%;
-    width: 31%;
-    height: 60%;
+    width: 31vw;
     text-align: justify;
 }
 
@@ -537,8 +523,7 @@ body{
     position: absolute;
     top: 70%;
     left: 3.6%;
-    width: 40%;
-    height: 15%;
+    width: 40vw;
 }
 
 /* Pour les timelines */
@@ -571,8 +556,9 @@ body{
   background-color: #c7c8ca;
 }
 
-.timeline-badge.primary:focus {
-    background-color: black;
+.timeline .timeline-item .timeline-badge.primary:focus {
+    background-color: #414042;
+    outline:0;
 }
 
 .timeline-horizontal {
@@ -635,7 +621,7 @@ body{
     position: absolute;
     top: 10%;
     left: 40%;
-    width: 30%;
+    width: 30vw;
 }
 
 
@@ -660,7 +646,7 @@ body{
 #logoMedia {
     float: left;
     position: absolute;
-    width: 20%;
+    width: 20vw;
     height: auto;
     border: 3px solid black;
     top: 20%;
@@ -673,8 +659,8 @@ body{
     position: absolute;
     border: 3px solid black;
     background-color: white;
-    width: 35%;
-    top: 20%;
+    width: 35vw;
+    top: 18%;
     left: 8%;
     text-align: justify;
 }
@@ -685,7 +671,7 @@ body{
     position: absolute;
     border: 3px solid black;
     background-color: white;
-    width: 35%;
+    width: 35vw;
     top: 35%;
     left: 54%;
     text-align: justify;
@@ -748,7 +734,7 @@ body{
     position: absolute;
     top: 15%;
     left: 35%;
-    width: 30%;
+    width: 30vw;
     padding: 10px;
     text-align: center;
     background-color: white;
@@ -760,7 +746,7 @@ body{
     float: left;
     position: absolute;
     top: 40%;
-    width: 90%;
+    width: 90vw;
     left: 5%;
     text-align: center;
     border-collapse: separate;
