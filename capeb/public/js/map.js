@@ -48,7 +48,7 @@ $ (document).ready(function(){
                 document.location.href = document.location + "/slide2";
                 document.getElementById("nom_epci").innerText = d.properties.nom_comple;
             })
-            
+
             .on("mouseover", function(d) {
                 d3.select(this).transition()
                     .delay("50")
@@ -179,34 +179,11 @@ function miniStats(regionStats, d) {
                 h.className += "donneeliste " + ni;
                 h.innerHTML = stat[i].name;
             }
-            console.log(document.getElementById("containerForModal"));
-
-            if (document.getElementById("containerForModal")==null){
-                var div = document.createElement('div');
-                div.id = "containerForModal";
-                div.innerHTML = document.getElementById('blockOfStuff').innerHTML;
-                document.getElementsByClassName('partie-dashboard')[0].appendChild(div);
-
-                var $modal = $('.modal-frame');
-                var $overlay = $('.modal-overlay');
-
-                /* Need this to clear out the keyframe classes so they dont clash with each other between ener/leave. Cheers. */
-                $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e){
-                    if($modal.hasClass('state-leave')) {
-                        $modal.removeClass('state-leave');
-                    }
-                });
-
-                $('.close').on('click', function(){
-                    $overlay.removeClass('state-show');
-                    $modal.removeClass('state-appear').addClass('state-leave');
-                });
-
-                $('.open').on('click', function(){
-                    $overlay.addClass('state-show');
-                    $modal.removeClass('state-leave').addClass('state-appear');
-                });
+            if (document.getElementById("containerForModal")!==null) {
+                document.getElementById("containerForModal").remove();
             }
+            createModal();
+            createSunburst(d);
 
             //8 : DD / quel aspect le plus représenté / bubble -> camembert
             var names = stats.Developpement_durable.values[0]
@@ -214,7 +191,7 @@ function miniStats(regionStats, d) {
             var stat2 = names.map(function(val, id) {return {"name": names[id], "value": parseInt(count[id])};});
             stat2 = stat2.sort(function(a, b) {return b.value - a.value});
             $(".info-dd h1").text(stat2[0].name)
-            
+
             //7 : MP / oui/non plus représenté / camembert -> nuage de mots
 			var dataFrame = document.getElementsByClassName("info-mp")[0];
             var mean = parseFloat(stats.Marches_publics.values[0]);
@@ -222,19 +199,6 @@ function miniStats(regionStats, d) {
             dataFrame.style.backgroundColor = colorsForRegion[matchColor(mean, 0, 0.227, 0.227/5, (0.5 - 0.227)/5, false)];
         });
 
-    fetch("/capeb/data/" + d.properties.siren_epci + "/sunburst")
-        .then(function (value) {
-            return value.json();
-        })
-        .catch(function (error) {
-            console.log("error");
-            console.log(error);
-            return {};
-        })
-        .then(function (jsonContrats) {
-            //$("svg#sunburst").remove();
-            //sunBurst(jsonContrats);
-        });
     //4 : embauche / métier qui embauche le plus/ double chart with rotation
     fetch("/capeb/data/" + d.properties.siren_epci + "/recrutements")
         .then(function (value) {
@@ -304,3 +268,46 @@ function matchColor(value, min, mean, firstInc, secondInc, order){
     return r;
 }
 
+function createModal(){
+    var div = document.createElement('div');
+    div.id = "containerForModal";
+    div.innerHTML = document.getElementById('blockOfStuff').innerHTML;
+    document.getElementsByClassName('partie-dashboard')[0].appendChild(div);
+
+    var $modal = $('.modal-frame');
+    var $overlay = $('.modal-overlay');
+
+    /* Need this to clear out the keyframe classes so they dont clash with each other between ener/leave. Cheers. */
+    $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e){
+        if($modal.hasClass('state-leave')) {
+            $modal.removeClass('state-leave');
+        }
+    });
+
+    $('.close').on('click', function(){
+        $overlay.removeClass('state-show');
+        $modal.removeClass('state-appear').addClass('state-leave');
+    });
+
+    $('.open').on('click', function(){
+        $overlay.addClass('state-show');
+        $modal.removeClass('state-leave').addClass('state-appear');
+    });
+}
+
+function createSunburst(d){
+    fetch("/capeb/data/" + d.properties.siren_epci + "/sunburst")
+        .then(function (value) {
+            return value.json();
+        })
+        .catch(function (error) {
+            console.log("error");
+            console.log(error);
+            return {};
+        })
+        .then(function(json){
+            sunBurst(json);
+            createVisualization(json);
+        });
+
+}
