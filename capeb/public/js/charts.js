@@ -21,7 +21,7 @@ var wordCloud = (FreinsMP) => {
     var frequency_list = FreinsMP.values[0].map((name, id) => {
         return {
             "text": name,
-            "size": FreinsMP.values[1][id] * 10
+            "size": FreinsMP.values[1][id]
         };
     })
 
