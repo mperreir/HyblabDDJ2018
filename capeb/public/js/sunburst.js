@@ -29,7 +29,7 @@ var colors2 = {
   "CDI": "#fabebe",
   "Apprentis": "#800000",
   "Intérimaires": "#de783b",
-  "Pas de réponse": "#bbbbb",
+  "Pas de réponse": "#bbbbb"
 };
 
 
@@ -38,9 +38,8 @@ var totalSize = 0;
 var vis
 var partition
 var arc
-var sunBurst = (js) => {
-	
-	document.getElementById("dataviz").innerHTML = "<div id='main'><div id='sequence'></div><div id='chart'><div id='explanation' style='visibility: hidden;'><span id='percentage'></span><br/></div></div></div><div id='sidebar'><input type='checkbox' id='togglelegend'> Legend<br/><div id='legend' style='visibility: hidden;'></div></div>"
+var sunBurst = function(js){
+	$("#dataviz").html("<div id='main'><div id='sequence'></div><div id='chart'><div id='explanation' style='visibility: hidden;'><span id='percentage'></span><br/></div></div></div><div id='sidebar'><input type='checkbox' id='togglelegend'> Legend<br/><div id='legend' style='visibility: hidden;'></div></div>");
 
 	vis = d3.select("#chart").append("svg:svg")
 		.attr("width", width)
