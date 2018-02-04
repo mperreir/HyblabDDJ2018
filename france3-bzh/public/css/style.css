@@ -38,6 +38,7 @@
 
 body {
   background-color: #241D37;
+  background-image: url(../img/home/background_home.svg);
 }
 
 footer p
@@ -116,11 +117,48 @@ h3
 /* -- Slide Home */
 
 #section_home {
-  background-image: url(../img/home/background_home.svg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
+/* -- Slide questions*/
+
+.r
+{
+  display: none;
+}
+
+.q .v {
+    background-color: #241D37;
+    border : 2px solid #5DC1CE;
+    color: #5DC1CE;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'overpass';
+    width: 150px;
+    margin-right: 50px;
+}
+
+.q .f {
+    background-color: #241D37;
+    border : 2px solid #5DC1CE;
+    color: #5DC1CE;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'overpass';
+    width: 150px;
+    margin-right: 50px;
+}
+
+/* -- Slide questions 1 */
+
 
 /* -- Slide jour nuit */
 
@@ -131,6 +169,10 @@ h3
   background-size: 100%;
 }
 
+.nothome
+{
+  background-color: #241D37;
+}
 
 
 #nuit
@@ -153,6 +195,7 @@ h3
 
 #section_illu2 {
   background-image: url(../img/4saisons/decorSaison.svg);
+  background-color: #241D37;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -162,7 +205,7 @@ h3
 #map
 {
   background-color: #241D37;
-  margin-left: 50px;
+  margin-left: 15%;
   float: left;
 }
 
@@ -314,10 +357,10 @@ h3
 #graph_vehicule {
   text-align: center;
   position: relative;
-  height: 60%;
+  height: 40%;
 }
 #graph_vehicule img{
-  height: 75%;
+  height: 40%;
 }
 
 #graph_vehicule div{
@@ -379,9 +422,11 @@ h3
   margin-right: 20%;
   width: 10%;
 }
-#section_illu_camion {
 
+#titre_accident
+{
 }
+
 #vehicule_selection img{
   width: 6%;
   height: 6%;
@@ -697,10 +742,11 @@ svg[hidden]:not(:root) {
 }
 
 .bouttons {
-  margin-left:60%;
-  position: relative;
+  float:right;
+  margin-right: 5%;
+  height: 75%;
   background-color: #30354C;
-  width: 300px;
+  width: 30%;
   -moz-box-shadow: 0px 1px 2px #000;
   -webkit-box-shadow: 0px 1px 2px #000;
   box-shadow: 0px 1px 2px #000;
@@ -719,12 +765,13 @@ svg[hidden]:not(:root) {
 .row span {
   color: white;
   float: left;
-  font-size: 12px;
+  font-size: 16px;
   font-family: 'work_sans';
-  margin-left: 2%;
+  margin-left: 5%;
 }
 .row .material-switch {
   float: right;
+  margin-right: 5%;
 }
 
 

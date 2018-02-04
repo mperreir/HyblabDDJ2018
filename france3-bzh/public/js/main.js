@@ -6,10 +6,30 @@
 
 //---------------------
 // Initialise le fullpage
+var q = [0,0,0,0]
 $(document).ready(function() {
     $('#fullpage').fullpage();
 });
+var reponses;
+fetch('data/reponses.json')
+    // this promise will be fulfilled when the json fill will be
+    .then(function (response){
+        // if we could load the resource, parse it
+        if( response.ok )
+            return response.json();
+        else // if not, send some error message as JSON data
+            return {data: "JSON file not found"};
 
+    })
+    // in case of invalid JSON (parse error) send some error message as JSON data
+    .catch( function (error){
+        return {data: "Invalid JSON"};
+    })
+    // this promise will be fulfilled when the json will be parsed
+    .then(function (json) {
+
+        reponses = json;
+});
 
 
 
@@ -20,6 +40,51 @@ function Light(){
         $("#jour").css({'visibility':'visible'});
     }).fadeTo('slow', 1);
 };
+
+
+
+function reponse(bouton)
+{
+  var x = bouton.parentNode.id;
+  var j = 0;
+  switch(x) {
+    case "q1":
+        j = 0
+        break;
+    case "q2":
+        j = 1
+        break;
+    case "q3":
+        j = 2
+        break;
+    case "q4":
+        j = 3
+        break;
+
+}
+  if(q[j] == 0){
+    var parent = bouton.parentNode.childNodes;
+    for (var i=1; i< 6; i = i+2)
+    {
+      if(parent[i].attributes[1].nodeValue =="v button")
+      {
+        parent[i].style.border="2px solid #4CAF50"
+        parent[i].style.color="#4CAF50"
+      }
+      else
+      {
+        parent[i].style.border="2px solid #F53855"
+        parent[i].style.color="#F53855"
+      }
+
+    }
+    q[j] = 0;
+  }
+}
+
+
+
+
 
 
 
@@ -146,7 +211,7 @@ $( "#voiture" ).click(function() {
     $( "#voiture" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
       $("#pie_veh").css("margin-top", "7%");
-      $("#pie_veh").css("height", "25%");
+      $("#pie_veh").css("height", "40%");
       $("#pie_veh").attr("src", "img/Vehicules/voiture_graphique.svg");
 
     });
@@ -197,7 +262,7 @@ $( "#camion" ).click(function() {
     $( "#camion" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
       $("#pie_veh").css("margin-top", "5%");
-      $("#pie_veh").css("height", "35%");
+      $("#pie_veh").css("height", "45%");
       $("#pie_veh").attr("src", "img/Vehicules/camion_graphique.svg");
     });
     $("#pie_veh").fadeIn("slow");
@@ -249,7 +314,7 @@ $( "#moto" ).click(function() {
     $( "#moto" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
       $("#pie_veh").css("margin-top", "5%");
-      $("#pie_veh").css("height", "40%");
+      $("#pie_veh").css("height", "50%");
       $("#pie_veh").attr("src", "img/Vehicules/moto_graphique.svg");
     });
     $("#pie_veh").fadeIn("slow");
@@ -349,7 +414,7 @@ $( "#img_train_slide3" ).click(function() {
   if (   $("#pie_veh").attr("src") != "img/Vehicules/train_graphique.svg" ) {
     $( "#img_train_slide3" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
-      $("#pie_veh").css("height", "20%");
+      $("#pie_veh").css("height", "30%");
       $("#pie_veh").css("margin-top", "7%");
       $("#pie_veh").attr("src", "img/Vehicules/train_graphique.svg");
     });
@@ -388,13 +453,7 @@ $( "#img_train_slide3" ).click(function() {
 // $("#mort").hide();
 // $("#hospitalise").hide();
 // $("#grave").hide();
-$('#div_indication_slide_evt').click(function(){
-  $("#indication_slide_evt").animate({opacity: 0}, 800);
-  $("#train_slide2").animate(
-    {'margin-left': "300px",
-    'display':"block"
-  });
-})
+
 
 /* CARTE */
 
@@ -404,6 +463,7 @@ var map;
 function initmap() {
 // paramÃ©trage de la carte
     map = new L.Map('map',{
+        attributionControl: false,
         zoomSnap: 1,
         minZoom: 5,
         maxZoom: 10,
@@ -565,6 +625,9 @@ fetch('data/france.geojson')
 });
 initmap();
 
+$("#map").css("height", "70%");
+$("#map").css("width", "40%");
+
 /* filtres */
 var switchClick = function(e) {
   $(this).toggleClass('active');
@@ -588,3 +651,4 @@ var switchClick = function(e) {
   $('.material-switch').materialSwitch();
 
 }(jQuery));
+

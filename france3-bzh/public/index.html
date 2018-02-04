@@ -67,9 +67,9 @@
       <div class="section">
           <div class="slide" id="section_home">
             <span id="container_infos_nav">
-              <h1>Lorem ipsum dolor sit amet, consectetur adipis</h1>
+              <h1>Arrêt d'urgence </br> Pleins feux sur les accidents aux passages à niveau</h1>
               <p>
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Les accidents aux passages à niveau sont malheureusement souvent d'actualité. L'année 2017 a été marquée par un terrible accident en décembre au passage à niveau de Millas, où 5 adolescents ont péri suite à la collision entre un train et un car scolaire.
               </p>
                 <div >
                   <h3>Démarrer <br/>l'expérience</h3>
@@ -82,43 +82,21 @@
               </div>
             </span>
           </div>
-          <!-- slide 2 TRAIN-->
-          <div class="slide" id="section_evenements">
-            <div id="slide2_container_text">
-              <h1>Rappel des événements</h1>
-                <p id="text_content_slide2">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <div id="div_indication_slide_evt">
-                  <p id="indication_slide_evt">Cliquez pour voir les données</p>
+          <div class="slide" id="section_home">
+            <span id="container_infos_nav">
+              <h1>Pensez-vous que le nombre de passages à niveau en France depuis ces 20 dernières années a :</h1>
+                <div id="q1" class="q">
+                  <button type="button"  class="v button" onclick="reponse(this);">Baissé</button>
+                  <button type="button"  class="f button" onclick="reponse(this);">Augmenté</button>
+                  <button type="button"  class="f button" onclick="reponse(this);">Stabilisé</button>
                 </div>
-
-            </div>
-
-            <div id="donnees_slide2">
-              <!-- <ul>
-                <li>Morts sur les passages à niveau</li>
-                <li>Collisions en 2016</li>
-                <li>Passages à niveaux en France en 2016</li>
-              </ul>
-              <ul>
-                <li>16</li>
-                <li>500</li>
-                <li>15 000</li>
-              </ul> -->
-              <div class="data_slide2"><h3>Morts sur les passages à niveau<br/>31</h3></div>
-              <div class="data_slide2"><h3>Collisions en 2016<br/>11</h3></div>
-              <div class="data_slide2"><h3>Passages à niveaux en France en 2016<br/>15 000</h3></div>
-                  <!-- <h3>Morts sur les passages à niveaux</h3>
-                  <h3>Collisions en 2016</h3>
-                  <h3>Passages à niveaux en France en 2016</h3> -->
-              <img id="train_slide2" src="img/slide2/Train.svg" alt="Train" />
-            </div>
-
+                <div class="r" id="r1">
+                  <p> aezaeaeaeazeaze </p>
+                </div>
+            </span>
           </div>
-
           <!-- Slide jour / nuit -->
-          <div class="slide" id="section_illu1">
+          <div class="slide nothome" id="section_illu1">
             <span id="container_infos_nav">
               <h1>Pensez-vous que les accidents </br> se font le plus souvent de nuit ou de jour ?</h1>
               <p id="nuit">29%</p>
@@ -129,13 +107,13 @@
           </div>
 
           <!-- slide 3 -->
-          <div class="slide" id="section_illu2">
+          <div class="slide nothome" id="section_illu2">
 
           </div>
 
 
           <!-- slide 4 CAMION-->
-          <div class="slide" id="section_illu_camion">
+          <div class="slide nothome" id="section_illu_camion">
             <h1>Quelle type de véhicule provoque le plus d'accidents ?</h1>
             <h2 id="infos_accidents"></h2>
               <div id="graph_vehicule">
@@ -163,8 +141,8 @@
           </div>
       </div>
       <!-- Carte -->
-      <div class="section">
-        <div id="map" style="height:400px; width: 400px"></div>
+      <div class="section nothome">
+        <div id="map" style="height:500px; width: 500px"></div>
         <div class="bouttons">
           <h1>Filtres</h1>
           <div class="row">
@@ -179,13 +157,13 @@
         </div>
       </div>
       <!-- About -->
-        <div class="section">
+        <div class="section nothome">
           <div id="chart_lum_container">
             <canvas id="myLineChart" width="740" height="200"></canvas>
           </div>
         </div>
 
-        <div class="section">
+        <div class="section nothome">
           <div id="contain_about">
             <div class="personnages">
               <div class="personnage polytech">

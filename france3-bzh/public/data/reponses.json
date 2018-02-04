@@ -1,0 +1,18 @@
+{
+  "q1" : {
+    "r1" : "Le nombre de passages classés comme dangereux a diminué d'un peu plus de 62% en 20 ans. Depuis 1997, la SNCF a mis en place le plan national de sécurisation. L'objectif : supprimer ou améliorer progressivement les passages à niveau les plus dangereux dits prioritaires. De plus, pour renforcer la sécurité, il n'y a aucun passage à niveau sur les lignes à grande vitesse (+160 km/h).",
+    "more": ""
+  },
+  "q2" : {
+    "r2" :"Un train lancé à 100 km/h met un kilomètre pour s'arrêter, contre 100 mètres pour une voiture.",
+    "more": ""
+  },
+  "q3" : {
+    "r3" : "Les passages à niveau en France sont traversés chaque jour par 16 millions de véhicules.",
+    "more": ""
+  },
+  "q4" : {
+    "r4" : "Les risques d'accidents peuvent avoir une dimension technique ou résulter du comportement humain. Cependant, selon la SNCF, 98% des accidents en lien avec un passage à niveau sont dus à un comportement inadapté de l'automobiliste.",
+    "more": "La raison de ces accidents est liée à des erreurs de jugement comme le non-respect du code de la route. Ainsi, 20% des automobilistes français déclarent avoir déjà franchi un passage à niveau en ignorant la signalisation. Pour contrôler le comportement des usagers de la route, des radars de vitesse ont été mis en place sur 22 passages en France, et des radars de franchissement sur 42 passages à niveau."
+  }
+}
