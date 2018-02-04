@@ -101,6 +101,23 @@ body{
     border: 3px solid black;
 }
 
+/* Bonhomme */
+#histDroite {
+    float: left;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 30%;
+}
+
+#histGauche{
+    float: left;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    width: 30%;
+}
+
 .article1 {
     float: left;
     width: 50%;

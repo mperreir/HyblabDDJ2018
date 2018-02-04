@@ -149,6 +149,14 @@ function buildHisto(parent, ann, dep){
 				return "white";
 			}
 		}
+		
+		g.append("image")
+    	.attr("xlink:href","img/Citerne.svg")
+    	.attr("width", 420)
+    	.attr("height", 280)
+			.attr("x",-120)
+			.attr("y",-60);
+
 	  //g.append("g")
 	  //    .attr("class", "axis")
 	  //    .attr("transform", "translate(0," + String(height) + ")")
