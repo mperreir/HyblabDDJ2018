@@ -10,9 +10,6 @@ var viewportHeight = $(window).height()/2;
 var width = viewportWidth * .97;
 var height = width/1.85;
 
-console.log(width);
-console.log(height);
-
 var page2 = d3.select(".map-pdl");
 var svg = page2.append("svg")
     .attr("width", width).attr("height", height);
