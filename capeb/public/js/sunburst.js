@@ -65,6 +65,23 @@ var sunBurst = (js) => {
 	var json = buildHierarchy(js);
 	createVisualization(json);
 }
+
+function createSunburst(d){
+    fetch("/capeb/data/" + d.properties.siren_epci + "/sunburst")
+        .then(function (value) {
+            return value.json();
+        })
+        .catch(function (error) {
+            console.log("error");
+            console.log(error);
+            return {};
+        })
+        .then(function(json){
+            sunBurst(json);
+        });
+
+}
+
 // Main function to draw and set up the visualization, once we have the data.
 function createVisualization(json) {
 
