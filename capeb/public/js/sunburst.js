@@ -34,7 +34,7 @@ var colors2 = {
 
 
 // Total size of all segments; we set this later, after loading the data.
-var totalSize = 0; 
+var totalSize = 0;
 var vis
 var partition
 var arc
@@ -116,7 +116,7 @@ function createVisualization(json) {
   // Get total size of the tree = value of root node from partition.
   //totalSize = path.node().__data__.value;
   totalSize = path.node().__data__.value;
-  
+
  };
 
 // Fade all but the current sequence, and show it in the breadcrumb trail.
@@ -300,7 +300,7 @@ function toggleLegend() {
 
 // Take a 2-column CSV and transform it into a hierarchical structure suitable
 // for a partition layout. The first column is a sequence of step names, from
-// root to leaf, separated by hyphens. The second column is a count of how 
+// root to leaf, separated by hyphens. The second column is a count of how
 // often that sequence occurred.
 function buildHierarchy(csv) {
   var root = {"name": "root", "children": []};

@@ -78,6 +78,7 @@ d3.select(window).on('resize', resize);
 function resize() {
     var width = parseInt(d3.select('.map-pdl').style('width'));
     var height = parseInt(d3.select('.map-pdl').style('heigth'));
+
     projection
         .scale([width*10])
         .translate([width/2,height/2]);
@@ -86,4 +87,3 @@ function resize() {
     d3.select("svg").attr("width",width).attr("height",height);
     d3.selectAll("path").attr('d', path);
 }
-
