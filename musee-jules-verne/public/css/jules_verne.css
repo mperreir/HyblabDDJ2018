@@ -25,27 +25,27 @@ body {
 }
 
 #section2 {
-  background-color: gold;
+  background-color: white;
 }
 
 #section3 {
-  background: url("./img/background_slide3.png") center center/cover no-repeat #323fde;
+  background: url("../img/background_slide3.png") center center/cover no-repeat #323fde;
 }
 
 #section4 {
-  background: url("./img/background_slide4.png") center center/cover no-repeat #ffa200;
+  background: url("../img/background_slide4.png") center center/cover no-repeat #ffa200;
 }
 
 #section5 {
-  background: url("./img/background_slide5.png") center center/cover no-repeat #323fde;
+  background: url("../img/background_slide5.png") center center/cover no-repeat #323fde;
 }
 
 #section6 {
-  background: url("./img/background_slide6.png") center center/cover no-repeat #ffa200;
+  background: url("../img/background_slide6.png") center center/cover no-repeat #ffa200;
 }
 
 #section7 {
-  background: url("./img/background_slide7.png") center center/cover no-repeat #323fde;
+  background: url("../img/background_slide7.png") center center/cover no-repeat #323fde;
 }
 
 /*** Formes annimées de l'arrière-plan ***/
@@ -151,7 +151,9 @@ div.titre
     }
 
     .titre h1 {
-      font-size: 4vw;
+      font-size: 5vw;
+      line-height: 17vh;
+      margin-left: -7vw;
     }
 
   /* chiffre animé */
@@ -163,6 +165,7 @@ div.titre
     align-items: flex-end;
     justify-content: flex-end;
     margin-right: 2vh;
+	  opacity: 0.5;
   }
 
   #chiffre2 {
@@ -173,6 +176,7 @@ div.titre
     align-items: flex-end;
     justify-content: flex-end;
     margin-right: 2vh;
+	  opacity: 0.5;
 
   }
  /* .chiffre2 {
@@ -193,6 +197,8 @@ div.titre
     align-items: flex-end;
     justify-content: flex-end;
     margin-right: 2vh;
+	  	  opacity: 0.5;
+
   }
 
   #chiffre4 {
@@ -203,6 +209,8 @@ div.titre
     align-items: flex-end;
     justify-content: flex-end;
     margin-right: 2vh;
+	  	  opacity: 0.5;
+
   }
 
   #chiffre5 {
@@ -213,22 +221,22 @@ div.titre
     align-items: flex-end;
     justify-content: flex-end;
     margin-right: 2vh;
+	  	  opacity: 0.5;
+
   }
-/* définition du chiffre pour chaque slide*/
-#section3 .chiffre { background: url("./svg/1.svg") bottom right/contain no-repeat;}
-#section4 .chiffre { background: url("./svg/2.svg") bottom right/contain no-repeat;}
-#section5 .chiffre { background: url("./svg/3.svg") bottom right/contain no-repeat;}
-#section6 .chiffre { background: url("./svg/4.svg") bottom right/contain no-repeat;}
-#section7 .chiffre { background: url("./svg/5.svg") bottom right/contain no-repeat;}
+
 
 
 /*========== texte d'intro de la section 2 ======*/
 
 .intro {
-  display: none;
+  display: inline-block;
   animation: fade ease 2s;
   opacity: 0;
+  position: relative;
   animation-fill-mode: forwards;
+  width: 100%;
+  margin-top: 1vh;
 }
 
 /* Apparait lorsque la section obtient la classe "visited" */
@@ -246,11 +254,15 @@ div.visited .intro {
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
-    animation: fade ease 2s;
     animation-delay: 1300ms;
     opacity: 0;
-    animation-fill-mode: forwards;
     box-shadow: 0 0 1vw rgba(0, 0, 0, .5);
+  }
+
+  .visited section {
+    animation: fade ease-out 2s;
+    animation-delay: 00ms;
+	opacity: 100;
   }
 
   #mapid {
@@ -313,12 +325,72 @@ div.visited .intro {
     animation-delay: 400ms;
 }
 
+#section2 .next{
+  margin-top: 10vh;
+  color: #ffcc11;
+}
+
+
+#jules_verne{
+  background-color: white;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top : 0;
+  left: 50%;
+  margin-top: 0px;
+}
+
+div.titresection2
+{
+  color: #ffcc11;
+  height: 40vh;
+  width: 40%;
+  display: none;
+  animation: fade ease 2s;
+  animation-delay: 800ms;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  margin-bottom: 0vh;
+  margin-left: 15vh;
+  padding-top: 40vh;
+}
+
+ div.visited .titresection2 {
+    display: block;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+  }
+
+    .titresection2 h1 {
+    color: #404040;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 400;
+      font-size: 6vw;
+    display: block;
+      line-height: 12vh;
+    margin-left: -4vh;
+    }
+
+.intro p{
+	color: #787878;
+  font-size: 1.3vw;
+  line-height: 3.5vh;
+}
+
 #pointer {
   z-index: 2000;
   position: relative;
-  top: 100px; 
+  top: 100px;
   left: 150px;
   width: 5px;
   height: 5px;
   background-color: red;
+}
+article #slide7_graphique1 {
+height: 70vh;
+}
+
+#highcharts-svq16ba-0{
+  height: 300px;
 }
