@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
     <script src="js/map.js" defer></script>
     <script src="js/jquery.min.js"></script>
@@ -13,10 +14,40 @@
     <script src="js/jquery-jvectormap-world-mill.js"></script>
 </head>
 <body>
-    <div id="map" style="width: 500px; height: 500px"></div>
+
+    <div id="texte">
+        <img id="logo-pdl" src="img/logo-pdl.png"/>
+
+  <!--      <h2 id="home"> HOME </h2>
+        <h2 id="credits"> CREDITS </h2> -->
+        <a id="home" href="index.html">HOME</a>
+        <a id="credits" href="credits.html">CREDITS</a>
+
+        <p id="textAccroche" class="accroche"> Qui recrute des apprentis en Pays de la Loire ?</p>
+
+        <p id="textExplication" class="explication"> Les offres d’apprentissage de la Région sont nombreuses et variées. Parmi les 508 836* entreprises enregistrées en Pays de la Loire, 1 028 ont déposé une offre sur le site,
+            vérifiez par vous même !<br>
+            * source = base SIREN de l’Etat </p>
+
+        <p id="texTemoignage" class="temoignage"> « C’est l’apprentissage qui m’a choisi. J’entendais les deux sons de cloches :
+            formation initiale et formation en apprentissage, et une entreprise m’a proposé un
+            apprentissage. »
+            Angelo Amo-Besnard, BTS en apprentissage Fluides, Energie, Domotique
+        </p>
+
+    </div>
+
+    <div id="container">
+        <div id="map"></div>
 
 
-<!--
+
+    </div>
+
+</body>
+</html>
+
+<!-- à mettre dans le body
 
   <style>
         #byte_content {
@@ -40,7 +71,3 @@
     </script>
 
     -->
-
-
-</body>
-</html>

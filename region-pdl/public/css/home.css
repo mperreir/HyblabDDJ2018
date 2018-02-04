@@ -1,5 +1,15 @@
+html, body {
+    height:100%;
+}
+
 
 /* header */
+
+header {
+    position: absolute;
+    z-index: 2;
+}
+
 a:link, a:visited {
     color: #212121;
     text-decoration: none;
@@ -18,7 +28,7 @@ a:hover {
     left: 300px;
 
     height: 19px;
-    width: 280.39px;
+ /*   width: 280.39px;*/
     font-family: Lato;
     font-size: 16px;
     font-weight: 300;
@@ -35,7 +45,7 @@ a:hover {
     left: 400px;
 
     height: 19px;
-    width: 280.39px;
+  /*  width: 280.39px;*/
     font-family: Lato;
     font-size: 16px;
     font-weight: 300;
@@ -80,12 +90,16 @@ a:hover {
 }
 
 #textes {
+    padding-top: 150px;
     margin-left: 11%;
     width: 400px;
 }
 
-button {
-    border-radius: 20px;
+
+a.stylebouton {
+    border-radius: 25px;
+    height: 50px;
+    width: 300px;
 
     background-color: #4199BE;
     border: none;
@@ -100,4 +114,10 @@ button {
 
     display: block;
     margin : auto;
+}
+
+#fond{
+    position: absolute;
+    z-index: -1;
+
 }

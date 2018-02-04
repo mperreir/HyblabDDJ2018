@@ -2400,21 +2400,19 @@ document.querySelector('.readBytesButtons').addEventListener('click', function(e
 }, false);*/
 
 $(function(){
-    var map,
-        markers = listeOK,
-        cityAreaData = 300;
+    var map;
 
     map = new jvm.Map({
         container: $('#map'),
         map: 'fr_pdl_2016_merc',
-        zoomOnScroll: true,
-        regionsSelectable: true,
-   //     backgroundColor: '#ffffff',
-        markersSelectable: true,
-        markers: markers,
+        zoomOnScroll: false,
+  /*      regionsSelectable: true,*/
+        backgroundColor: '#FAFAFA',
+     /*   markersSelectable: true,*/
+        markers: listeOK,
         markerStyle: {
             initial: {
-                fill: '#4DAC26'
+                fill: '#009BC2'
             },
             selected: {
                 fill: '#CA0020'
@@ -2422,7 +2420,8 @@ $(function(){
         },
         regionStyle: {
             initial: {
-                fill: '#5770e1'
+
+                fill: '#AECF2A'
             },
             selected: {
                 fill: '#F4A582'
@@ -2431,18 +2430,17 @@ $(function(){
         series: {
             markers: [{
                 attribute: 'r',
-                scale: [5, 15],
-                values: cityAreaData
+                values: 300
             }]
         },
-        onRegionSelected: function(){
+  /*      onRegionSelected: function(){
             if (window.localStorage) {
                 window.localStorage.setItem(
                     'jvectormap-selected-regions',
                     JSON.stringify(map.getSelectedRegions())
                 );
             }
-        },
+        },*/
         onMarkerSelected: function(){
             if (window.localStorage) {
                 window.localStorage.setItem(
@@ -2453,8 +2451,7 @@ $(function(){
         }
     });
 
-    map.setSelectedRegions( JSON.parse( window.localStorage.getItem('jvectormap-selected-regions') || '[]' ) );
+/*    map.setSelectedRegions( JSON.parse( window.localStorage.getItem('jvectormap-selected-regions') || '[]' ) );*/
     map.setSelectedMarkers( JSON.parse( window.localStorage.getItem('jvectormap-selected-markers') || '[]' ) );
-
 
 });
