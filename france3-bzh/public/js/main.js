@@ -590,10 +590,15 @@ var iconAcc = L.icon({
             iconSize: [20, 20]
 });
 
-var iconRegion = L.icon({
+var iconRegion1 = L.icon({
             iconUrl: 'img/carte/R.svg',
             iconSize: [20, 20]
 });
+var iconRegion2 = L.icon({
+            iconUrl: 'img/carte/Region.svg',
+            iconSize: [20, 20]
+});
+
 
 
 /*afficher les pn ou non*/
@@ -740,7 +745,7 @@ function addRegionAccident(){
     for (var i in Geojson.features)
     {
         var marker=L.marker(Geojson.features[i].geometry.coordinates,{
-          icon : iconRegion,
+          icon : iconRegion2,
           pane:"markerPane",
         }).bindPopup(Geojson.features[i].properties.Region+' avec '+ Geojson.features[i].properties.Accidents+' d\'accidents'
           )
@@ -773,7 +778,7 @@ function addRationRegionAccident(){
     for (var i in Geojson.features)
     {
         var marker=L.marker(Geojson.features[i].geometry.coordinates,{
-          icon : iconRegion,
+          icon : iconRegion1,
           pane:"markerPane",
         }).bindPopup(Geojson.features[i].properties.Region+' avec '+ Geojson.features[i].properties.Accidents+' de risque d\'accident en traversant un PN')
         markers.addLayer(marker);
