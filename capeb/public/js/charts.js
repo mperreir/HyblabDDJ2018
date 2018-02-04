@@ -123,8 +123,6 @@ var drawChart3dEmploi = function(data) {
         },
         // Configuration options go here
         options: {
-            responsive: false,
-            maintainAspectRatio: false,
             tooltips: {
                 mode: 'index',
                 intersect: false,
@@ -143,7 +141,7 @@ var drawChart3dEmploi = function(data) {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Moyenne Nb récrutement envisagé'
+                        labelString: 'Année'
                     }
                 }],
                 yAxes: [{
@@ -155,7 +153,7 @@ var drawChart3dEmploi = function(data) {
                     },
                     scaleLabel: {
                         display: true,
-                        labelString: 'Année'
+                        labelString: 'Moyenne Nb récrutement envisagé'
                     }
                 }]
             }
@@ -178,7 +176,7 @@ var drawChart3dEmploi = function(data) {
             };
             $(".plus").html("");
 
-            drawBarChart(p, "Rapartition du nombre de recrutement envisagé par activité")
+            drawBarChart(p, "Moyenne Nb récrutement envisagé")
         }
     };
 };
@@ -230,37 +228,41 @@ function drawLineChart(data, title){
 	d.datasets.push(datasetRegion);
 
     var ctx = cvs.getContext("2d");
-	new Chart(ctx, {
+	var c = new Chart(ctx, {
 		// The type of chart we want to create
 		type: 'line',
 		// The data for our dataset
 		data: d,
 		// Configuration options go here
 		options: {
-				responsive:false,
-				maintainAspectRatio: false,
-            tooltips: {
+			tooltips: {
                 mode: 'index',
-                intersect: false
+                intersect: false,
+            },
+			scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Année'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    ticks: {
+                        suggestedMin: 0, // minimum will be 0, unless there is a lower value.
+                        // OR //
+                        beginAtZero: true // minimum value will be 0.
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Pourcentage de Oui'
+                    }
+                }]
             }
-        },
-        scales: {
-            xAxes: [{
-            	display:true,
-                scaleLabel: {
-                    display: true,
-                    labelString: "Année"
-                }
-            }],
-            yAxes: [{
-            	display: true,
-                scaleLabel: {
-                    display: true,
-                    labelString: "Pourcentage "
-                }
-            }]
-        }
+		}
 	});
+		console.log(c.options)
 }
 
 function drawBarChart(data, title) {
@@ -278,7 +280,7 @@ function drawBarChart(data, title) {
         data: {
             labels: data.labels,
             datasets: [{
-                label: "Activte",
+                label: title,
                 backgroundColor: colors,
                 borderColor: colors,
                 data: data.values,
@@ -287,8 +289,6 @@ function drawBarChart(data, title) {
 
         // Configuration options go here
         options: {
-            responsive: false,
-            maintainAspectRatio: false
         }
     });
 
