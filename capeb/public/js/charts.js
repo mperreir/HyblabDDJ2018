@@ -191,8 +191,19 @@ function drawPieChart(data, title){
 }
 
 function drawBubbleChart(data){
+    var colorMatch = {
+        Aut:colors[0],
+        Ele: colors[1],
+        maç: colors[2],
+        men: colors[3],
+        Mét: colors[4],
+        Pei: colors[5],
+        plâ: colors[6],
+        plo: colors[7],
+        Tra: colors[8]
+    };
 
-	function scale(number){
+    function scale(number){
 		var start = 10;
 		var inc = 8;
 		if (number == 0){
@@ -207,46 +218,49 @@ function drawBubbleChart(data){
 			return start+inc*4;
 		}
 	}
+    var sec = document.getElementById("dataviz-section");
+	if(sec == null) {
+        sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
+        sec.setAttribute("id", "dataviz-section");
+    }
 
-    var sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
+    var h3 = document.getElementById("title-dataviz");
+	if(h3==null){
+        h3 = sec.appendChild(document.createElement('h3'));
+        h3.setAttribute("id", "title-dataviz");
+        h3.innerHTML = "Jusqu'où peuvent-ils aller ?";
+	}
 
-    var h3 = sec.appendChild(document.createElement('h3'));
-    h3.innerHTML = "Jusqu'où peuvent-ils aller ?";
+    var canvas = document.getElementById("canvas-dataviz");
+    if(canvas == null){
+    	canvas = document.createElement('canvas');
+        canvas.setAttribute("id", "canvas-dataviz");
+	}
 
-    var canvas = document.createElement('canvas');
-    canvas.className = '';
     var cvs = sec.appendChild(canvas);
     var ctx = cvs.getContext("2d");
 
 
 
-    var points = {datasets: [{
-			data:[]
-		}]};
+    var points = {datasets: []};
 
 	data.values.forEach(function(value){
+		var dataset = {};
+		var data = [];
         var point = {};
 		point.x = value[2];
 		point.y = 0.5;
 		point.r = scale(value[1]);
 		point.metier = value[0];
-		points.datasets[0].data.push(point);
+
+		data.push(point);
+		dataset.data = data;
+		dataset.label = value[0];
+		dataset.backgroundColor = colorMatch[value[0].substr(0, 3)];
+        points.datasets.push(dataset);
 	});
 
-	var colorMatch = {
-		Aut:colors[0],
-		Ele: colors[1],
-		maç: colors[2],
-    	men: colors[3],
-        Mét: colors[4],
-        Pei: colors[5],
-        plâ: colors[6],
-        plo: colors[7],
-        Tra: colors[8]
-};
-
     var options = {
-        legend: false,
     	tooltips: false,
         elements: {
             point: {
@@ -282,7 +296,13 @@ function drawBubbleChart(data){
 					drawBorder: false
                 }
             }]
-        }
+        },
+		legend: {
+    		display: true,
+			labels: {
+
+			}
+		}
     };
 
 
