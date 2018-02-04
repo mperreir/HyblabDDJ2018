@@ -625,8 +625,9 @@ h3
 #chart_region_acc {
   float: right;
   width: 40% !important;
-  height: 60% !important;
+  height: auto !important;
   margin-right: 7%;
+  margin-top: 5%;
 }
 #slide_ambu_text p{
   font-size: 16px;
@@ -637,7 +638,7 @@ h3
 }
 #slide_ambu_text {
   float: left;
-  margin-left: 7%;
+  margin-left: 10%;
   width: 35%;
 }
 .orange {

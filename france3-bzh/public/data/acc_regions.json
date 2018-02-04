@@ -1,16 +1,16 @@
 {
-    "labels": ["moins de 18 ans","18-30 ans", "30-45 ans", "45-60 ans", "60-75", "75 ans et plus"],
+    "labels": [ "Grand-Est", "Corse","Bourgogne", "Auvergne", "Provence-Alpes-Cotes d'Azur", "Occitanie", "Centre", "Hauts-de-France", "Ile-de-France", "Normandie", "Bretagne", "Pays de la loire","Nouvelle-Aquitaine"],
     "datasets": [
       {
-        "label": "Deux roues",
+        "label": "Nombre d'accidents",
         "fill": false,
         "borderColor": "#2DDCE0",
         "backgroundColor": "#2DDCE0",
         "pointHighlightFill": "#fff",
-        "hoverBorderColor" : "#EC666D",        
+        "hoverBorderColor" : "#EC666D",
         "hoverBackgroundColor" : "#EC666D",
         "pointHighlightStroke": "rgba(220,220,220,1)",
-        "data": [30, 66, 36, 19, 4, 2]
+        "data": [ 78, 0,21, 79, 97, 70, 35, 92, 193, 21, 15, 37, 66]
       }
     ]
 
