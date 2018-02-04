@@ -269,6 +269,9 @@ function matchColor(value, min, mean, firstInc, secondInc, order){
 }
 
 function createModal(){
+    if(document.getElementById("containerForModal")!==null){
+        document.getElementById("containerForModal").remove();
+    }
     var div = document.createElement('div');
     div.id = "containerForModal";
     div.innerHTML = document.getElementById('blockOfStuff').innerHTML;
@@ -278,18 +281,18 @@ function createModal(){
     var $overlay = $('.modal-overlay');
 
     /* Need this to clear out the keyframe classes so they dont clash with each other between ener/leave. Cheers. */
-    $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e){
-        if($modal.hasClass('state-leave')) {
+    $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function (e) {
+        if ($modal.hasClass('state-leave')) {
             $modal.removeClass('state-leave');
         }
     });
 
-    $('.close').on('click', function(){
+    $('.close').on('click', function () {
         $overlay.removeClass('state-show');
         $modal.removeClass('state-appear').addClass('state-leave');
     });
 
-    $('.open').on('click', function(){
+    $('.open').on('click', function () {
         $overlay.addClass('state-show');
         $modal.removeClass('state-leave').addClass('state-appear');
     });
