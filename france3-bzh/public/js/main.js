@@ -384,10 +384,6 @@ $( "#img_train_slide3" ).click(function() {
     $("#infos_accidents").fadeIn("slow");
   }
 });
-// $("#leger").hide();
-// $("#mort").hide();
-// $("#hospitalise").hide();
-// $("#grave").hide();
 
 $('section_evenements').hover(function() {
     $("#train_slide2").css('opacity', '1');
