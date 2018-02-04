@@ -641,6 +641,19 @@ body{
 /* ######################################################################### */
 /* --------------- Page 4 --------------- */
 /* ######################################################################### */
+/* Petit paragraphe */
+#pCredits1 {
+    float: left;
+    position: absolute;
+    top: 7%;
+    left: 35%;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border: 3px solid black;
+}
+
 /* Logo Eau et Rivieres */
 #logoMedia {
     float: left;
@@ -648,7 +661,7 @@ body{
     width: 20%;
     height: auto;
     border: 3px solid black;
-    top: 10%;
+    top: 20%;
     left: 54%;
 }
 
@@ -659,7 +672,7 @@ body{
     border: 3px solid black;
     background-color: white;
     width: 35%;
-    top: 10%;
+    top: 20%;
     left: 8%;
     text-align: justify;
 }
@@ -671,7 +684,7 @@ body{
     border: 3px solid black;
     background-color: white;
     width: 35%;
-    top: 26%;
+    top: 35%;
     left: 54%;
     text-align: justify;
 }
@@ -680,12 +693,11 @@ body{
 #logos {
     float: left;
     position: absolute;
-    width: 90%;
-    height: 15%;
-    left: 5%;
-    top: 55%;
+    width: 75%;
+    left: 12%;
+    top: 60%;
     border-collapse: separate;
-    border-spacing: 10px 20px;; /* Nombre de pixels d'espace horizontal (5px), vertical (8px) */
+    border-spacing: 10px 20px; /* Nombre de pixels d'espace horizontal (5px), vertical (8px) */
 }
 
 #logos td {
@@ -696,13 +708,17 @@ body{
     background-color: white;
 }
 
-#logo tr {
-    height: 50%;
-}
-
 .logo {
     max-width: 90%;
     height: auto;
+}
+
+#logoPolytech {
+    width: 80%
+}
+
+#logoAudencia {
+    width: 80%;
 }
 
 #logoNantes {
@@ -710,11 +726,11 @@ body{
 }
 
 #logoUN {
-    width: 80%;
+    width: 62%;
 }
 
 #logoOpenSource {
-    width: 38%;
+    width: 35%;
 }
 
 #logoCC {
@@ -724,3 +740,33 @@ body{
 /* ######################################################################### */
 /* --------------- Page 5 --------------- */
 /* ######################################################################### */
+/* Petit paragraphe */
+#pCredits2 {
+    float: left;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border: 3px solid black;
+}
+
+/* Tableau de logos */
+#logosNous {
+    float: left;
+    position: absolute;
+    top: 40%;
+    width: 90%;
+    left: 5%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 10px 30px;; /* Nombre de pixels d'espace horizontal (5px), vertical (8px) */
+}
+
+.name {
+    margin-top: 3px;
+    background-color: white;
+    border: 3px solid black;
+}
