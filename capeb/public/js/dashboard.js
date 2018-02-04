@@ -1,14 +1,5 @@
 
 function miniStats(regionStats, d) {
-
-    createModal();
-
-    document.getElementsByClassName("backToMap")[0].addEventListener("click", function () {
-        var location = document.location.href;
-        document.location.href = location.slice(0, location.lastIndexOf("/"));
-        $('#containerForModal').empty();
-    });
-
     var colorsForRegion = [
         "rgba(240,101,85,1)",
         "rgba(244,133,64,1)",

@@ -1,9 +1,11 @@
 "use strict";
-document.getElementsByClassName("backToMap")[0].addEventListener("click", function(){
-    var location = document.location.href;
-    document.location.href = location.slice(0, location.lastIndexOf("/"));
-
+$ (document).ready(function(){
+    document.getElementsByClassName("backToMap")[0].addEventListener("click", function () {
+        var location = document.location.href;
+        document.location.href = location.slice(0, location.lastIndexOf("/"));
+    });
 });
+
 
 var viewportWidth = $(window).width();
 var viewportHeight = $(window).height()/2;
