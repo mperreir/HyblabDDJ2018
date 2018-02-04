@@ -9,7 +9,8 @@
     },
     "properties": {
       "Region":"Nouvelle-Aquitaine",
-      "Accidents": "8.19%"
+      "Accidents": "2.72%",
+      "NBPN":"2424"
     }
   },
   {
@@ -20,7 +21,8 @@
     },
     "properties": {
       "Region":"Pays de la loire",
-      "Accidents":"4.59%"
+      "Accidents":"3.26%",
+      "NBPN":"1135"
     }
   },
   {
@@ -31,7 +33,8 @@
     },
     "properties": {
       "Region":"Bretagne",
-      "Accidents":"1.86%"
+      "Accidents":"2.28%",
+      "NBPN":"657"
     }
   },
   {
@@ -42,7 +45,8 @@
     },
     "properties": {
       "Region":"Normandie",
-      "Accidents":"2.61%"
+      "Accidents":"1.64%",
+      "NBPN":"1280"
     }
   },
   {
@@ -53,7 +57,8 @@
     },
     "properties": {
       "Region":"Ile-de-France",
-      "Accidents":"23.95%"
+      "Accidents":"36.07%",
+      "NBPN":"535"
     }
   },
   {
@@ -64,7 +69,8 @@
     },
     "properties": {
       "Region":"Hauts-de-France",
-      "Accidents":"11.41%"
+      "Accidents":"4.96%",
+      "NBPN":"1855"
     }
   },
   {
@@ -75,7 +81,8 @@
     },
     "properties": {
       "Region":"Centre",
-      "Accidents":"4.34%"
+      "Accidents":"2.18%",
+      "NBPN":"1602"
     }
   },
   {
@@ -86,7 +93,8 @@
     },
     "properties": {
       "Region":"Occitanie",
-      "Accidents":"8.68%"
+      "Accidents":"3.95%",
+      "NBPN":"1770"
     }
   },
   {
@@ -97,7 +105,8 @@
     },
     "properties": {
       "Region":"Provence-Alpes-Cotes d'Azur",
-      "Accidents":"12.03%"
+      "Accidents":"27.95%",
+      "NBPN":"347"
     }
   },
   {
@@ -108,7 +117,8 @@
     },
     "properties": {
       "Region":"Auvergne",
-      "Accidents":"9.80%"
+      "Accidents":"3.78%",
+      "NBPN":"2091"
     }
   },
   {
@@ -119,7 +129,8 @@
     },
     "properties": {
       "Region":"Bourgogne",
-      "Accidents":"2.61%"
+      "Accidents":"1.47%",
+      "NBPN":"1428"
     }
   },
   {
@@ -130,7 +141,8 @@
     },
     "properties": {
       "Region":"Grand-Est",
-      "Accidents":"9.68%"
+      "Accidents":"3.22%",
+      "NBPN":"2423"
     }
   },
   {
@@ -141,7 +153,8 @@
     },
     "properties": {
       "Region":"Corse",
-      "Accidents":"0%"
+      "Accidents":"0%",
+      "NBPN":"0"
     }
   }
   ]

@@ -63,7 +63,7 @@
     <div id="fullpage">
       <!-- SECTION 1-->
 
-      <div class="section">
+      <div id="firstsection" class="section">
         <div class="slide" id="section_home">
           <span id="container_infos_nav">
             <h1>Arrêt d'urgence </br>Pleins feux sur les accidents aux passages à niveau</h1>
@@ -151,6 +151,10 @@
               <div class="r" id="r4">
                 <p> aezaeaeaeazeaze </p>
               </div>
+              <div class="more" id="more2">
+                <img src="img/question/tips.svg"/>
+                <p id="more21"> zaeazeaze </p>
+              </div>
           </span>
         </div>
           <!-- Slide jour / nuit -->
@@ -206,17 +210,33 @@
         <div id="map" style="height:500px; width: 500px"></div>
         <div class="bouttons">
           <h1>Filtres</h1>
+          <h2>Informations générales</h2>
           <div class="row">
             <span>Passage à niveaux</span>
-            <div class="material-switch blue" onclick="AfficherPn()">
+            <div class="material-switch blue" onclick="AfficherPn(this)">
             </div>
           </div>
           <div class="row">
+            <span>Accidents</span>
+            <div class="material-switch yellow" onclick="AfficherCoordAcc(this)"></div>
+          </div>
+          <h2>Informations régions</h2>
+          <div class="row">
             <span>Accidents par régions</span>
-            <div class="material-switch red" onclick="AfficherAcc()"></div>
+            <div class="material-switch red lie" onclick="AfficherAcc(this)"></div>
+          </div>
+
+          <div class="row">
+            <span>Ratio accidents par Région</span>
+            <div class="material-switch green lie" onclick="AfficherRatioRegion(this)"></div>
+          </div>
+          <div id="ampoule">
+            <img id="carte_astuce"src="img/question/tips.svg"/>
+            <span>Cliquer sur un symbole de la carte pour avoir plus d'informations</span>
           </div>
         </div>
       </div>
+
       <!-- About -->
       <div class="section nothome">
           <div id="chart_lum_container">
