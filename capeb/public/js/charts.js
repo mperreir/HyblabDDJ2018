@@ -17,9 +17,82 @@ var colors = [
 			'rgb(128, 128, 0)'
 			];
 
+var drawChart3dEmploi = (data) => {
+	console.log(data.Recrutement_Evo)
+	var sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
+
+	var h3 = sec.appendChild(document.createElement('h3'));
+    h3.innerHTML = "Jusqu'où peuvent-ils aller ?";
+    var cvs = sec.appendChild(document.createElement('canvas'))
+
+	var ctx = cvs.getContext("2d")
+	var region = {
+					"labels": ["annee","Moy_recrutement_envi"],
+					"values":[["2014","2015","2016","2017"],["1.11538461538462","1.13223140495868","1.11678832116788","1.35028248587571"]]
+				 }
+	data = [data.Recrutement_Evo, region]
+	var labels = ["Epci", "Région"]
+	var d = data.map((val, i) => {return {
+											label: labels[i], 
+											backgroundColor: colors[i], 
+											borderColor: colors[i], 
+											data: val.values[1].map(Number),
+											fill: true
+										  }
+								 })
+	console.log(d)
+	new Chart(ctx, {
+		// The type of chart we want to create
+		type: 'line',
+
+		// The data for our dataset
+		data: {
+			labels: data[0].values[0],
+			datasets: d
+		},
+		// Configuration options go here
+		options: { 
+				responsive:false,
+				maintainAspectRatio: false,
+				tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+				scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Moyenne Nb récrutement envisagé'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+							suggestedMin: 0,    // minimum will be 0, unless there is a lower value.
+							// OR //
+							beginAtZero: true   // minimum value will be 0.
+						},
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Année'
+                        }
+                    }]
+                }
+		}	
+	});
+};
+
+
 function flush(){
 	var cvs = document.getElementById("page3");
 	cvs.innerHTML = ""
+	
+
 }
 function drawLineChart(data, title){
 	var sec = document.getElementById("page3").appendChild(document.createElement('section'));
@@ -52,7 +125,7 @@ function drawLineChart(data, title){
 		options: { 
 				responsive:false,
 				maintainAspectRatio: false
-				}	
+		}	
 	});
 
 }
