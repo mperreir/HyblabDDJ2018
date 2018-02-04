@@ -635,16 +635,16 @@ CuVP/wBeL/0n/wCAv/LT9L//2Q==" transform="matrix(0.5573 0 0 0.5573 -278 -50.3468)
 	<circle fill="#161616" cx="364.3" cy="389.2" r="3.3"/>
 </g>
 <g id="Meaux">
-
-</g>
-<g id="Metz">
-
+	<circle fill="#161616" cx="262.3" cy="122.5" r="3.3"/>
 </g>
 <g id="Montaigu">
-
+	<circle fill="#161616" cx="116" cy="206.9" r="3.3"/>
 </g>
 <g id="Montpellier">
-
+	<circle fill="#161616" cx="307.1" cy="376" r="3.3"/>
+</g>
+<g id="Metz">
+	<circle fill="#161616" cx="346.3" cy="90.5" r="3.3"/>
 </g>
 <g id="Morlaix">
 	<circle fill="#161616" cx="43.1" cy="126.1" r="3.3"/>
