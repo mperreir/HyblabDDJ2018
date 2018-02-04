@@ -267,15 +267,14 @@ div.visited .intro {
 
   #mapid {
     position: relative;
-    height: 60vh;
-    width: 40vw;
+    height: 70vh;
+    width: 100vw;
   }
 
   .canvas_container {
   	position: relative;
-  	height: 60vh;
-  	width: 40vw;
-    border: 2px black solid;
+  	height: 70vh;
+  	width: 60vw;
   }
 
     @keyframes fade {
@@ -380,9 +379,9 @@ div.titresection2
 
 #pointer {
   z-index: 2000;
-  position: relative;
+  position: absolute;
   top: 100px;
-  left: 150px;
+  left: 150px; 
   width: 5px;
   height: 5px;
   background-color: red;

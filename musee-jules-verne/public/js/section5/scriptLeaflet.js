@@ -1,11 +1,4 @@
 
-/*
-TODO :
-delimitaations en alpha 0
-
-limites dans le handler
-*/
-
 //  Layer Regions
 function getColorRegions(d) {
   return d == 1 ? '#4096FF' : '#87C6FF';
@@ -24,7 +17,31 @@ function styleRegions(feature) {
 RegionsLayer = L.geoJson(regions, {style :styleRegions});
 
 //  Layer Villes
-VillesLayer = L.geoJson(points);
+function getSizeVille(d) {
+  return Math.sqrt(d)*5;//(d/20)*15
+}
+
+
+function getColorVille(d) {
+  return  d <10 ? '#ABDEFF' :
+          10 <= d < 20 ? '#75BAFF' :
+          20 <= d < 100 ? '#4096FF' :
+          '#0972FF';
+}
+
+function VilleOptions(feature) {
+    return {
+    radius: getSizeVille(feature.properties.OCCURRENCES),
+    fillColor: "#87C6FF",//getColorVille(feature.properties.OCCURRENCES),
+    color: "#87C6FF",
+    weight: 1,
+    opacity: 0.3,
+    fillOpacity: 0.5
+    }};
+
+VillesLayer = L.geoJson(points, {pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, VilleOptions(feature)).bindPopup("<b>"+feature.properties.COMMUNE+"</b><br>On y a parlé "+feature.properties.OCCURRENCES+" fois de Jules Verne.")
+      }});
 
 //Source : ghybs - https://stackoverflow.com/questions/46724370/leaflet-zoom-to-a-point-with-mouse-wheel
 L.Map.ScrollWheelZoom.include({
