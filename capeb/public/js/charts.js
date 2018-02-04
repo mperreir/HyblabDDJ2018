@@ -58,7 +58,12 @@ var drawChart3dEmploi = (data) => {
                 },
                 hover: {
                     mode: 'nearest',
-                    intersect: true
+                    intersect: true,
+                    onHover: function(e) {
+						var point = this.getElementAtEvent(e);
+						if (point.length) e.target.style.cursor = 'pointer';
+						else e.target.style.cursor = 'default';
+					 }
                 },
 				scales: {
                     xAxes: [{
@@ -95,7 +100,7 @@ var drawChart3dEmploi = (data) => {
 		
 		var i = data.Recrutement_Evo_Act.values[0].indexOf(label)
 		var p = {"labels" : data.Recrutement_Evo_Act.labels.slice(1), "values": data.Recrutement_Evo_Act.values[1 + i]}
-				$(".plus").html("")
+		$(".plus").html("")
 
 
 		drawBarChart(p, "Rapartition du nombre de recrutement envisagé par activité")
