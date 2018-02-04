@@ -38,26 +38,23 @@
 .n1{
   @extend %data-liste;
   text-align: right;
-  font-size: 4.5em;
-  line-height: 1;
+  font-size: 400%;
+  line-height: 0.9;
 }
 .n2{
   @extend %data-liste;
   text-align: right;
-  font-size: 3em;
-  line-height: 1;
+  font-size: 200%;
 }
 .n3{
   @extend %data-liste;
   text-align: right;
-  font-size: 1.5em;
-  line-height: 1;
+  font-size: 100%;
 }
 .n4{
   @extend %data-liste;
   text-align: right;
-  font-size: 0.2em;
-  line-height: 1;
+  font-size: 25%;
 }
 
 .info-epci{
