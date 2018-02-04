@@ -1,4 +1,5 @@
 
+/* header */
 a:link, a:visited {
     color: #212121;
     text-decoration: none;
@@ -7,6 +8,8 @@ a:link, a:visited {
 a:hover {
     color: #757575;
     text-decoration: none;
+
+    width: 80px;
 }
 
 #home {
@@ -41,6 +44,7 @@ a:hover {
     text-align: center;
 
     width: 80px;
+
 }
 
 #logo-pdl {
@@ -52,23 +56,22 @@ a:hover {
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.16);
 }
 
-h1 {
-    height: 20.94%;
-    width: 100%;
+/* texte de la page*/
+
+#titre {
+    height: 178px;
+    width: 400px;
     color: rgba(0,0,0,0.8);
     font-family: Lato;
-    font-size: 45px;
+    font-size: 33px;
     font-weight: bold;
     letter-spacing: 2px;
-    line-height: 54px;
-    text-align: center;
+    line-height: 37px;
 }
 
-#conclusion {
-    margin-left: 350px;
-
+#introduction {
     height: 178px;
-    width: 674px;
+    width: 400px;
     color: rgba(0,0,0,0.8);
     font-family: Lato;
     font-size: 16px;
@@ -76,31 +79,25 @@ h1 {
     line-height: 25px;
 }
 
-.logo {
-    width: 250px;
+#textes {
+    margin-left: 11%;
+    width: 400px;
 }
 
-.ecole {
-    float:left;
-    height: 300px;
+button {
+    border-radius: 20px;
 
-    margin: 20px;
-    padding: 10px;
+    background-color: #4199BE;
+    border: none;
 
-    box-shadow: 0 0 4px 0 rgba(0,0,0,0.16);
-}
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    line-height: 36px;
+    text-align: center;
 
-.nom {
-    margin-left: 50px;
-
-    color: #000000;
-    font-family: "Lucida Grande";
-    font-size: 16px;
-    line-height: 18px;
-}
-
-#ecoles {
-  /*  margin-left: 280px;*/
-    margin-left: 15%;
-    margin-right: 15%;
+    display: block;
+    margin : auto;
 }
