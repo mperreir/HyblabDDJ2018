@@ -149,13 +149,22 @@ function buildHisto(parent, ann, dep){
 				return "white";
 			}
 		}
-		
-		g.append("image")
-    	.attr("xlink:href","img/Citerne.svg")
-    	.attr("width", 420)
-    	.attr("height", 280)
-			.attr("x",-120)
-			.attr("y",-60);
+		if(dep == "Campbon"){
+			g.append("image")
+				.attr("xlink:href","img/Corps.svg")
+				.attr("width", 420)
+				.attr("height", 400)
+				.attr("x",-120)
+				.attr("y",-20);
+		}else{
+			g.append("image")
+				.attr("xlink:href","img/Citerne.svg")
+				.attr("width", 420)
+				.attr("height", 280)
+				.attr("x",-120)
+				.attr("y",-60);
+		}
+
 
 	  //g.append("g")
 	  //    .attr("class", "axis")
