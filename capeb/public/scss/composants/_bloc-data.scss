@@ -50,4 +50,21 @@
   >span{
     @extend %texte-labeur;
   }
+  >.goToData{
+    height: 48px;
+    width: 80%;
+    border: solid 2px $white;
+    border-radius: 24px;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translate( -50%, 0);
+    text-align: center;
+    line-height: 48px;
+    @extend %texte-labeur;
+    color: $white;
+  }
+  >.goToData:hover{
+    background-color: $scale-color10;
+  }
 }
