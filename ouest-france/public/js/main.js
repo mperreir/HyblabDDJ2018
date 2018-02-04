@@ -105,21 +105,7 @@ function controleurPlan(){
 		document.getElementById("pin2012-06").className = "pin--2012-6"
 		document.getElementById("pin2012-07").className = "pin--2012-7"
 		$('li').remove();
-		fetch('data/AnneeSceneTypeGroupe.json')
-    	.then(function (response){
-    	    // if we could load the resource, parse it
-    		if( response.ok )
-    	        return response.json();
-    	    else // if not, send some error message as JSON data
-    	        return {data: "JSON file not found"};
-
-		})
-		// in case of invalid JSON (parse error) send some error message as JSON data
-		.catch( function (error){
-		    return {data: "Invalid JSON"};
-		})
-		// this promise will be fulfilled when the json will be parsed
-		.then(function (json) {
+		var json = loadData("data/AnneeSceneTypeGroupe.json");
 		    var listeGroupe1 = new Array();
 		    var listeGroupe2 = new Array();
     		json.forEach(function(groupe){
@@ -142,7 +128,6 @@ function controleurPlan(){
 				choix.textContent = groupe;
 				scene2.appendChild(choix);
 			});
-    	});
 	}
 
 	annee2007.onclick = function(){
@@ -185,22 +170,7 @@ function controleurPlan(){
 		document.getElementById("pin2012-06").className = "pin--2012-6"
 		document.getElementById("pin2012-07").className = "pin--2012-7"
 		$('li').remove();
-		fetch('data/AnneeSceneTypeGroupe.json')
-    	// this promise will be fulfilled when the json fill will be
-    	.then(function (response){
-    	    // if we could load the resource, parse it
-    		if( response.ok )
-    	        return response.json();
-    	    else // if not, send some error message as JSON data
-    	        return {data: "JSON file not found"};
-
-		})
-		// in case of invalid JSON (parse error) send some error message as JSON data
-		.catch( function (error){
-		    return {data: "Invalid JSON"};
-		})
-		// this promise will be fulfilled when the json will be parsed
-		.then(function (json) {
+		var json = loadData("data/AnneeSceneTypeGroupe.json");
 		    var listeGroupe1 = new Array();
 		    var listeGroupe2 = new Array();
 		    var listeGroupe3 = new Array();
@@ -233,7 +203,6 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene3.appendChild(choix);
 			});
-    	});
 	}
 	annee2008.onclick = function(){
 		textePlan.textContent = "Le nombre de groupes augmentente considérablement par rapport à 2007, passant de 84 à 108. Les groupes sont répartis entre 3 scènes distinctes et hiérarchisées : la main, la second stage et enfin la discover stage.";
@@ -275,22 +244,7 @@ function controleurPlan(){
 		document.getElementById("pin2012-06").className = "pin--2012-6"
 		document.getElementById("pin2012-07").className = "pin--2012-7"
 		$('li').remove();
-		fetch('data/AnneeSceneTypeGroupe.json')
-    	// this promise will be fulfilled when the json fill will be
-    	.then(function (response){
-    	    // if we could load the resource, parse it
-    		if( response.ok )
-    	        return response.json();
-    	    else // if not, send some error message as JSON data
-    	        return {data: "JSON file not found"};
-
-		})
-		// in case of invalid JSON (parse error) send some error message as JSON data
-		.catch( function (error){
-		    return {data: "Invalid JSON"};
-		})
-		// this promise will be fulfilled when the json will be parsed
-		.then(function (json) {
+		var json = loadData("data/AnneeSceneTypeGroupe.json");
 		    var listeGroupe1 = new Array();
 		    var listeGroupe2 = new Array();
 		    var listeGroupe3 = new Array();
@@ -323,7 +277,6 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene3.appendChild(choix);
 			});
-    	});
 	}
 
 	annee2009.onclick = function(){
@@ -366,22 +319,7 @@ function controleurPlan(){
 		document.getElementById("pin2012-06").className = "pin--2012-6"
 		document.getElementById("pin2012-07").className = "pin--2012-7"
 		$('li').remove();
-		fetch('data/AnneeSceneTypeGroupe.json')
-    	// this promise will be fulfilled when the json fill will be
-    	.then(function (response){
-    	    // if we could load the resource, parse it
-    		if( response.ok )
-    	        return response.json();
-    	    else // if not, send some error message as JSON data
-    	        return {data: "JSON file not found"};
-
-		})
-		// in case of invalid JSON (parse error) send some error message as JSON data
-		.catch( function (error){
-		    return {data: "Invalid JSON"};
-		})
-		// this promise will be fulfilled when the json will be parsed
-		.then(function (json) {
+		var json = loadData("data/AnneeSceneTypeGroupe.json");
 		    var listeGroupe1 = new Array();
 		    var listeGroupe2 = new Array();
 		    var listeGroupe3 = new Array();
@@ -424,7 +362,6 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene4.appendChild(choix);
 			});
-    	});
 
 	}
 	annee2010.onclick = function(){
@@ -467,22 +404,7 @@ function controleurPlan(){
 		document.getElementById("pin2012-06").className = "pin--2012-6"
 		document.getElementById("pin2012-07").className = "pin--2012-7"
 		$('li').remove();
-		fetch('data/AnneeSceneTypeGroupe.json')
-    	// this promise will be fulfilled when the json fill will be
-    	.then(function (response){
-    	    // if we could load the resource, parse it
-    		if( response.ok )
-    	        return response.json();
-    	    else // if not, send some error message as JSON data
-    	        return {data: "JSON file not found"};
-
-		})
-		// in case of invalid JSON (parse error) send some error message as JSON data
-		.catch( function (error){
-		    return {data: "Invalid JSON"};
-		})
-		// this promise will be fulfilled when the json will be parsed
-		.then(function (json) {
+		var json = loadData("data/AnneeSceneTypeGroupe.json");
 		    var listeGroupe1 = new Array();
 		    var listeGroupe2 = new Array();
 		    var listeGroupe3 = new Array();
@@ -525,7 +447,6 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene4.appendChild(choix);
 			});
-    	});
 	}
 	annee2011.onclick = function(){
 		textePlan.textContent ="118 groupes sont présents en 2011. C’est un nombre relativement constant depuis l’édition de 2008.";
@@ -567,22 +488,7 @@ function controleurPlan(){
 		document.getElementById("pin2012-06").className = "pin--2012-6"
 		document.getElementById("pin2012-07").className = "pin--2012-7"
 		$('li').remove();
-		fetch('data/AnneeSceneTypeGroupe.json')
-    	// this promise will be fulfilled when the json fill will be
-    	.then(function (response){
-    	    // if we could load the resource, parse it
-    		if( response.ok )
-    	        return response.json();
-    	    else // if not, send some error message as JSON data
-    	        return {data: "JSON file not found"};
-
-		})
-		// in case of invalid JSON (parse error) send some error message as JSON data
-		.catch( function (error){
-		    return {data: "Invalid JSON"};
-		})
-		// this promise will be fulfilled when the json will be parsed
-		.then(function (json) {
+		var json = loadData("data/AnneeSceneTypeGroupe.json");
 		    var listeGroupe1 = new Array();
 		    var listeGroupe2 = new Array();
 		    var listeGroupe3 = new Array();
@@ -625,7 +531,6 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene4.appendChild(choix);
 			});
-    	});
 	}
 	annee2012.onclick = function(){
 		textePlan.textContent ="Le Hellfest n'accueille plus 4 scènes mais bien 7 scènes pour un total de 170 artistes en cette année 2012, un véritable boom par rapport à l’année précédente. La Warzone met à l’honneur le punk hardcore, la Valley  le sludge/ stoner et le Metal Corner déniche les talents de demain . Autres changements, la Terrorizer tent laisse place au Temple (doom / pagan metal / black metal) et la Rock Hard tent devient l’Altar ( death metal / grind).";
@@ -667,22 +572,7 @@ function controleurPlan(){
 		document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
 		$('li').remove();
-		fetch('data/AnneeSceneTypeGroupe.json')
-    	// this promise will be fulfilled when the json fill will be
-    	.then(function (response){
-    	    // if we could load the resource, parse it
-    		if( response.ok )
-    	        return response.json();
-    	    else // if not, send some error message as JSON data
-    	        return {data: "JSON file not found"};
-
-		})
-		// in case of invalid JSON (parse error) send some error message as JSON data
-		.catch( function (error){
-		    return {data: "Invalid JSON"};
-		})
-		// this promise will be fulfilled when the json will be parsed
-		.then(function (json) {
+		var json = loadData("data/AnneeSceneTypeGroupe.json");
 		    var listeGroupe1 = new Array();
 		    var listeGroupe2 = new Array();
 		    var listeGroupe3 = new Array();
@@ -755,7 +645,6 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene7.appendChild(choix);
 			});
-    	});
 	}
 	annee2013.onclick = function(){
 		textePlan.textContent ="170 artistes montent sur les planches du Hellfest en 2013, une répétition de 2012 avec les mêmes scènes.";
@@ -797,22 +686,7 @@ function controleurPlan(){
 		document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
 		$('li').remove();
-		fetch('data/AnneeSceneTypeGroupe.json')
-    	// this promise will be fulfilled when the json fill will be
-    	.then(function (response){
-    	    // if we could load the resource, parse it
-    		if( response.ok )
-    	        return response.json();
-    	    else // if not, send some error message as JSON data
-    	        return {data: "JSON file not found"};
-
-		})
-		// in case of invalid JSON (parse error) send some error message as JSON data
-		.catch( function (error){
-		    return {data: "Invalid JSON"};
-		})
-		// this promise will be fulfilled when the json will be parsed
-		.then(function (json) {
+		var json = loadData("data/AnneeSceneTypeGroupe.json");
 		    var listeGroupe1 = new Array();
 		    var listeGroupe2 = new Array();
 		    var listeGroupe3 = new Array();
@@ -885,7 +759,6 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene7.appendChild(choix);
 			});
-    	});
 	}
 	annee2014.onclick = function(){
 		textePlan.textContent ="Le format des scènes du Hellfest de 2012 reste toujours le même pour acceuillir le même nombre d’artistes.";
@@ -927,22 +800,7 @@ function controleurPlan(){
 		document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
 		$('li').remove();
-		fetch('data/AnneeSceneTypeGroupe.json')
-    	// this promise will be fulfilled when the json fill will be
-    	.then(function (response){
-    	    // if we could load the resource, parse it
-    		if( response.ok )
-    	        return response.json();
-    	    else // if not, send some error message as JSON data
-    	        return {data: "JSON file not found"};
-
-		})
-		// in case of invalid JSON (parse error) send some error message as JSON data
-		.catch( function (error){
-		    return {data: "Invalid JSON"};
-		})
-		// this promise will be fulfilled when the json will be parsed
-		.then(function (json) {
+		var json = loadData("data/AnneeSceneTypeGroupe.json");
 		    var listeGroupe1 = new Array();
 		    var listeGroupe2 = new Array();
 		    var listeGroupe3 = new Array();
@@ -1015,7 +873,6 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene7.appendChild(choix);
 			});
-    	});
 	}
 	annee2015.onclick = function(){
 		textePlan.textContent ="Très légère baisse de nombre d’artistes en 2015 puisque les 7 scènes reçoivent 166 groupes.";
@@ -1057,22 +914,7 @@ function controleurPlan(){
 		document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
 		$('li').remove();
-		fetch('data/AnneeSceneTypeGroupe.json')
-    	// this promise will be fulfilled when the json fill will be
-    	.then(function (response){
-    	    // if we could load the resource, parse it
-    		if( response.ok )
-    	        return response.json();
-    	    else // if not, send some error message as JSON data
-    	        return {data: "JSON file not found"};
-
-		})
-		// in case of invalid JSON (parse error) send some error message as JSON data
-		.catch( function (error){
-		    return {data: "Invalid JSON"};
-		})
-		// this promise will be fulfilled when the json will be parsed
-		.then(function (json) {
+		var json = loadData("data/AnneeSceneTypeGroupe.json");
 		    var listeGroupe1 = new Array();
 		    var listeGroupe2 = new Array();
 		    var listeGroupe3 = new Array();
@@ -1145,7 +987,6 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene7.appendChild(choix);
 			});
-    	});
 	}
 	annee2016.onclick = function(){
 		textePlan.textContent ="Le Metal Corner en partenariat avec Deezer Open Hell'Stage en 2016 accueille presque le double de ce qu’il a l’habitude d’avoir. Cette scène où les groupes de métals s’affrontent pour se produirent sur une “main stage” rencontre un véritable succès.";
@@ -1187,22 +1028,7 @@ function controleurPlan(){
 		document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
 		$('li').remove();
-		fetch('data/AnneeSceneTypeGroupe.json')
-    	// this promise will be fulfilled when the json fill will be
-    	.then(function (response){
-    	    // if we could load the resource, parse it
-    		if( response.ok )
-    	        return response.json();
-    	    else // if not, send some error message as JSON data
-    	        return {data: "JSON file not found"};
-
-		})
-		// in case of invalid JSON (parse error) send some error message as JSON data
-		.catch( function (error){
-		    return {data: "Invalid JSON"};
-		})
-		// this promise will be fulfilled when the json will be parsed
-		.then(function (json) {
+		var json = loadData("data/AnneeSceneTypeGroupe.json");
 		    var listeGroupe1 = new Array();
 		    var listeGroupe2 = new Array();
 		    var listeGroupe3 = new Array();
@@ -1275,7 +1101,6 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene7.appendChild(choix);
 			});
-    	});
 	}
 	annee2017.onclick = function(){
 		textePlan.textContent ="167 artistes font monter les décibels en 2017 pour faire vibrer les festivaliers.";
@@ -1317,22 +1142,7 @@ function controleurPlan(){
 		document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
 		document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
 		$('li').remove();
-		fetch('data/AnneeSceneTypeGroupe.json')
-    	// this promise will be fulfilled when the json fill will be
-    	.then(function (response){
-    	    // if we could load the resource, parse it
-    		if( response.ok )
-    	        return response.json();
-    	    else // if not, send some error message as JSON data
-    	        return {data: "JSON file not found"};
-
-		})
-		// in case of invalid JSON (parse error) send some error message as JSON data
-		.catch( function (error){
-		    return {data: "Invalid JSON"};
-		})
-		// this promise will be fulfilled when the json will be parsed
-		.then(function (json) {
+		var json = loadData("data/AnneeSceneTypeGroupe.json");
 		    var listeGroupe1 = new Array();
 		    var listeGroupe2 = new Array();
 		    var listeGroupe3 = new Array();
@@ -1405,7 +1215,6 @@ function controleurPlan(){
 			choix.textContent = groupe;
 			scene7.appendChild(choix);
 			});
-    	});
 	}
 }
 
@@ -2053,37 +1862,22 @@ function pin(){
 	}
 }
 
-/*function loadData(annee, scene)
+function loadData(JsonPath)
 {
-	var tab;
-	fetch('data/AnneeSceneTypeGroupe.json')
-    // this promise will be fulfilled when the json fill will be
-    .then(function (response){
-        // if we could load the resource, parse it
-        if( response.ok )
-            return response.json();
-        else // if not, send some error message as JSON data
-            return {data: "JSON file not found"};
+	var json = null;
+	$.ajax({
+		'async': false,
+		'global':false,
+		'url':JsonPath,
+		'dataType':"json",
+		'success':function(data)
+		{
+			json = data;
+		}
+	});
+	return json;
+}
 
-    })
-    // in case of invalid JSON (parse error) send some error message as JSON data
-    .catch( function (error){
-        return {data: "Invalid JSON"};
-    })
-    // this promise will be fulfilled when the json will be parsed
-    .then(function (json) {
-    	var listeGroupe = new Array();
-    	json.forEach(function(groupe){
-    		if (groupe.Annee === annee && groupe.Scene === scene )
-    		{
-    			listeGroupe.push(groupe.Groupe);
-    		} 
-    	});
-    	return (listeGroupe);
-    });
-}*/
-
-//loadData(2006, "Hard n'Heavy stage");
 pin();
 controleurPodium();
 controleurPlan();
