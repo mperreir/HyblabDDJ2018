@@ -73,7 +73,9 @@ $.fn.fullpage.moveSectionDown();
 function setDescriptions(id) {
     $("section.categorie-des").css("opacity","0");
     $("section.categorie-des").css("z-index","0");
-
+    $("section.categorie-des").velocity({
+        left: "+=80"
+    });
     
     $("div.cat" + id).addClass("active-des");
     $("div.cat" + id + ' h2').css("color","#FFCC01");
@@ -82,6 +84,7 @@ function setDescriptions(id) {
     
     $("section.cat" + id).velocity({
         opacity: 1,
+        left: "-=100"
     });
     
 }
@@ -91,12 +94,13 @@ function activateDescription(id) {
     console.log("ex active" + exId)
 
     $("section.cat" + exId).velocity({
-      }, 100, function() {
+        left: "-=100"
+      }, 350, function() {
         
     });
     $("section.cat" + exId).velocity({
         opacity: 0
-      }, 100, function() {
+      }, 350, function() {
         
     });
 
@@ -109,7 +113,8 @@ function activateDescription(id) {
     console.log("cach div.cat" + exId)
     //Affichage de la nouvelle div active
     $("section.cat" + id).velocity({
-        opacity: 1
+        opacity: 1,
+        left: "-=100"
     });
     $("div.cat" + id).addClass("active-des");
     $("section.cat" + id).addClass("active-des");
@@ -117,4 +122,8 @@ function activateDescription(id) {
     $(".menu .cat" + id + ' h2').css("color","#FFCC01");
     $(".chevron").css("visibility","hidden");
     $(".menu .cat" + id + ' .chevron').css("visibility","visible");
+
+    $("section.cat" + exId).velocity({
+        left: "+=200"
+    });
 }

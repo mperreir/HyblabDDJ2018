@@ -162,6 +162,11 @@ function synthese(dataSets) {
         options: {
             legend: {
                 position: 'top',
+                showTooltips: false,
+                scaleOverride: true,
+                scaleSteps: 4,
+                scaleStepWidth: 5,
+                scaleStartValue: 0
             },
             title: {
                 display: true,
@@ -171,8 +176,11 @@ function synthese(dataSets) {
                 ticks: {
                     beginAtZero: true
                 }
+                
             }
+                
         }
+        
     };
 
     new Chart(document.getElementById('synthese-chart'), config);
@@ -187,20 +195,21 @@ function getSynthData(cities, dataJson) {
         console.log(city);
         var values = [];
         averages.forEach(function(line) {
-            values.push(dataJson[line][city]);
+            values.push(11 - dataJson[line][city]);
         });
         var hiddenVal = (cpt > 3);
         dataSets.push({label: city, borderColor: colors[cpt], pointBackgroundColor: colors[cpt], data : values, hidden: hiddenVal});
 
         cpt++;
+
     });
     console.log(dataSets)
     return(dataSets);
 }
 
 $(document).ready(function() {
-
-        $.post( "http://localhost:8081/nantes-st-nazaire-dev/rangs")
+        //http://localhost:8081/nantes-st-nazaire-dev/rangs
+        $.post( "http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/rangs")
             .done(function(data) {
                 console.log("Données de synthèse reçues");
                 var cities = ["Nantes-St-Nazaire", "Lyon", "Bordeaux", "Toulouse", "Rennes", "Lille", "Nice", "Strasbourg", "Grenoble","Aix-Marseille"];
@@ -211,10 +220,11 @@ $(document).ready(function() {
                 console.log( "Erreur requete synthese" );
             });
 
+
     // Assign handlers immediately after making the request,
     // and remember the jqxhr object for this request
     //http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs
-    var jqxhr = $.post( "http://localhost:8081/nantes-st-nazaire-dev/actifs")
+    var jqxhr = $.post( "http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs")
         .done(function(data) {
             console.log( "success" );
             console.log(data)

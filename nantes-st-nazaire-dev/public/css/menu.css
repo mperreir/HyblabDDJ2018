@@ -9,6 +9,7 @@ div.categorie {
 	margin-right: auto;
 	font-size: 13px;
 	border-radius: 10px;
+	z-index: 3;
 }
 .chevron {
 	position: relative;
