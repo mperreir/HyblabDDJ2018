@@ -29,6 +29,7 @@
       margin-right: 20px;
       height: auto;
       width: 100%;
+      hyphens: auto;
     }
   }
 }
@@ -37,13 +38,13 @@
 .n1{
   @extend %data-liste;
   text-align: right;
-  font-size: 3.5em;
+  font-size: 4.5em;
   line-height: 1;
 }
 .n2{
   @extend %data-liste;
   text-align: right;
-  font-size: 2.5em;
+  font-size: 3em;
   line-height: 1;
 }
 .n3{
@@ -55,7 +56,7 @@
 .n4{
   @extend %data-liste;
   text-align: right;
-  font-size: 0.5em;
+  font-size: 0.2em;
   line-height: 1;
 }
 
