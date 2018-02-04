@@ -310,7 +310,6 @@ function createSunburst(d){
         })
         .then(function(json){
             sunBurst(json);
-            createVisualization(json);
         });
 
 }
