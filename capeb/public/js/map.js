@@ -150,6 +150,7 @@ function miniStats(regionStats, d) {
             return {};
         })
         .then(function (stats) {
+            //3 : contrats / mots avec size / sunburst
             var contrats = stats.Contrats.values.slice(1);
             var stat = contrats.map(function(val, id) {
                 return {
@@ -177,6 +178,34 @@ function miniStats(regionStats, d) {
                 liste.appendChild(h);
                 h.className += "donneeliste " + ni;
                 h.innerHTML = stat[i].name;
+            }
+            console.log(document.getElementById("containerForModal"));
+
+            if (document.getElementById("containerForModal")==null){
+                var div = document.createElement('div');
+                div.id = "containerForModal";
+                div.innerHTML = document.getElementById('blockOfStuff').innerHTML;
+                document.getElementsByClassName('partie-dashboard')[0].appendChild(div);
+
+                var $modal = $('.modal-frame');
+                var $overlay = $('.modal-overlay');
+
+                /* Need this to clear out the keyframe classes so they dont clash with each other between ener/leave. Cheers. */
+                $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e){
+                    if($modal.hasClass('state-leave')) {
+                        $modal.removeClass('state-leave');
+                    }
+                });
+
+                $('.close').on('click', function(){
+                    $overlay.removeClass('state-show');
+                    $modal.removeClass('state-appear').addClass('state-leave');
+                });
+
+                $('.open').on('click', function(){
+                    $overlay.addClass('state-show');
+                    $modal.removeClass('state-leave').addClass('state-appear');
+                });
             }
 
             //8 : DD / quel aspect le plus représenté / bubble -> camembert

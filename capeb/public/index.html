@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
     <link rel="stylesheet" href="css/charts.css">
     <link rel="stylesheet" href="css/sunburst.css">
+    <link rel="stylesheet" href="css/goDataTransition.css">
     <!-- Google FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Montserrat:300,400,700,800,900|Open+Sans"
           rel="stylesheet">
@@ -32,41 +33,43 @@
     <!-- Chartjs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js" defer></script>
 
+    <!-- fullPage -->
+    <script type="text/javascript" src="js/jquery.fullPage.js" defer></script>
+
     <!-- Our scripts -->
     <script src="js/sunburst.js" defer></script>
     <script src="js/map.js" defer></script>
     <script src="js/charts.js" defer></script>
     <script src="js/main.js" defer></script>
-    <script type="text/javascript" src="js/jquery.fullPage.js" defer></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
             $('#fullpage').fullpage({
-                anchors :['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
                 controlArrows: false,
                 recordHistory: false,
                 navigation: true,
                 showActiveTooltip: true,
 
-                afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+                afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
                     //disable scroll up and down on dataviz slide
-                    if (slideIndex==1) {
+                    if (slideIndex == 1) {
                         $.fn.fullpage.setAllowScrolling(false, "up, down");
                         $.fn.fullpage.setKeyboardScrolling(false, "up, down");
                     }
-                    if (slideIndex==0) {
+                    if (slideIndex == 0) {
                         $('#fp-nav')[0].style.display = 'block';
                     }
                 },
 
-                onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {
+                onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
                     //re-enable scroll up and down
-                    if (slideIndex == 1 && nextSlideIndex==0) {
+                    if (slideIndex == 1 && nextSlideIndex == 0) {
                         $.fn.fullpage.setAllowScrolling(true, "up, down");
                         $.fn.fullpage.setKeyboardScrolling(true, "up, down");
                     }
                     //disable nav bar when moving from map to dashboard
-                    if (slideIndex == 0 && nextSlideIndex==1) {
+                    if (slideIndex == 0 && nextSlideIndex == 1) {
                         $('#fp-nav')[0].style.display = 'none';
                     }
                 }
@@ -84,14 +87,30 @@
 </head>
 <body>
 <div id="fullpage">
+
+    <script id="blockOfStuff" type="text/html">
+        <div class="modal-frame">
+            <div class="modal">
+                <div class="modal-inset">
+                    <div class="button close"><i class="fa fa-close"></i></div>
+
+                    <div class="modal-body">
+                        <h3>Here, an awesome data visualization!</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-overlay"></div>
+
+    </script>
     <div class="section">
         <section class="partie-intro">
             <div class="social-links">
                 <a class="link" href="#">
-                  <img class="icon" src="img/icon/fb.svg" alt="lien facebook">
+                    <img class="icon" src="img/icon/fb.svg" alt="lien facebook">
                 </a>
                 <a class="link" href="#">
-                  <img class="icon" src="img/icon/tw.svg" alt="lien twitter">
+                    <img class="icon" src="img/icon/tw.svg" alt="lien twitter">
                 </a>
             </div>
             <svg class="visuelcapeb" width="302px" height="351px" viewBox="0 0 302 351" version="1.1"
@@ -136,8 +155,12 @@
                 <div class="content-data">
                     <div class="textes-data">
                         <h1 id="titre-epci" class="title"></h1>
-                        <p class="texte">Sélectionnez votre secteur et plongez au coeur de l’artisanat du bâtiment de votre territoire.<br>
-                            Le maçon, l’électricien ou encore le plâtrier du coin veulent investir et embaucher. Ils ont envie de travailler pour leurs voisins et s’engagent pour l’avenir. Ces travailleurs discrets ont besoin de vous pour faciliter leur quotidien et continuer d’améliorer celui de la communauté.
+                        <p class="texte">Sélectionnez votre secteur et plongez au coeur de l’artisanat du bâtiment de
+                            votre territoire.<br>
+                            Le maçon, l’électricien ou encore le plâtrier du coin veulent investir et embaucher. Ils ont
+                            envie de travailler pour leurs voisins et s’engagent pour l’avenir. Ces travailleurs
+                            discrets ont besoin de vous pour faciliter leur quotidien et continuer d’améliorer celui de
+                            la communauté.
                         </p>
                     </div>
                     <h2></h2>
@@ -146,126 +169,129 @@
         </div>
         <div class="slide" data-anchor="slide2">
             <section class="partie-dashboard">
-              <nav class="nav-bar">
-                <svg class="backToMap" stroke-width="2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <g stroke="none" fill="none" fill-rule="evenodd" stroke-linecap="square">
-                    <g transform="translate(17, 14)" stroke="#FFFFFF">
-                      <polyline transform="translate(5.583333, 10.500000) rotate(180.000000) translate(-5.583333, -10.500000) " points="0.795391216 20.0833333 10.375 10.5 0.791666667 0.916666667"></polyline>
-                    </g>
-                  </g>
-                </svg>
-                <h2 id="nom_epci" class="epci">Nom epci</h2>
-                <div class="button-zoom">
-                  <svg class="button moins" stroke-width="2">
-                    <g stroke="#FFFFFF" transform="translate(16.000000, 16.000000)">
-                      <path d="M16,8 L0,8"></path>
-                    </g>
-                  </svg>
-                  <svg class="button plus" stroke-width="2">
-                    <g stroke="#FFFFFF" transform="translate(16.000000, 16.000000)">
-                      <path d="M8,0 L8,16"></path>
-                      <path d="M16,8 L0,8"></path>
-                    </g>
-                  </svg>
-                  <p class="niveau-zoom">Data du niveau de zoom</p>
-                </div>
-              </nav>
+                <nav class="nav-bar">
+                    <svg class="backToMap" stroke-width="2" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g stroke="none" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                            <g transform="translate(17, 14)" stroke="#FFFFFF">
+                                <polyline
+                                        transform="translate(5.583333, 10.500000) rotate(180.000000) translate(-5.583333, -10.500000) "
+                                        points="0.795391216 20.0833333 10.375 10.5 0.791666667 0.916666667"></polyline>
+                            </g>
+                        </g>
+                    </svg>
+                    <h2 id="nom_epci" class="epci">Nom epci</h2>
+                    <div class="button-zoom">
+                        <svg class="button moins" stroke-width="2">
+                            <g stroke="#FFFFFF" transform="translate(16.000000, 16.000000)">
+                                <path d="M16,8 L0,8"></path>
+                            </g>
+                        </svg>
+                        <svg class="button plus" stroke-width="2">
+                            <g stroke="#FFFFFF" transform="translate(16.000000, 16.000000)">
+                                <path d="M8,0 L8,16"></path>
+                                <path d="M16,8 L0,8"></path>
+                            </g>
+                        </svg>
+                        <p class="niveau-zoom">Data du niveau de zoom</p>
+                    </div>
+                </nav>
                 <section class="block-data info-epci">
-                  <h1 class="Texte">intro_<br>duction</h1>
-                    <p class="description">Entrez dans l’univers<br>des entreprises artisanales du bâtiment de votre territoire.</p>
+                    <h1 class="Texte">intro_<br>duction</h1>
+                    <p class="description">Entrez dans l’univers<br>des entreprises artisanales du bâtiment de votre
+                        territoire.</p>
                     <img class="picto" src="img/image/hands.svg" alt="">
                 </section>
 
                 <section class="block-data">
-                  <div class="card">
-                    <div class="bloc-recto info-conjoncture">
-                      <h1 class="donnee"></h1>
-                      <p class="echelle">/10</p>
+                    <div class="card">
+                        <div class="bloc-recto info-conjoncture">
+                            <h1 class="donnee"></h1>
+                            <p class="echelle">/10</p>
+                        </div>
+                        <div class="bloc-verso">
+                            <p class="description-data texte-conjoncture">Comment ça va chez vous ?</p>
+                            <a class="goToData" href="#">plus de détails</a>
+                        </div>
                     </div>
-                    <div class="bloc-verso">
-                      <p class="description-data texte-conjoncture">Comment ça va chez vous ?</p>
-                      <a class="goToData" href="#">plus de détails</a>
-                    </div>
-                  </div>
                 </section>
 
                 <section class="block-data">
-                  <div class="card">
-                    <div class="bloc-recto info-investissement">
-                      <h1 class="donnee"></h1>
-                      <p class="echelle">%</p>
+                    <div class="card">
+                        <div class="bloc-recto info-investissement">
+                            <h1 class="donnee"></h1>
+                            <p class="echelle">%</p>
+                        </div>
+                        <div class="bloc-verso">
+                            <p class="description-data texte-investissement"> Investir ou ne pas investir ?</p>
+                            <a class="goToData" href="#">plus de détails</a>
+                        </div>
                     </div>
-                    <div class="bloc-verso">
-                      <p class="description-data texte-investissement"> Investir ou ne pas investir ?</p>
-                      <a class="goToData" href="#">plus de détails</a>
-                    </div>
-                  </div>
                 </section>
 
                 <section class="block-data">
-                  <div class="card">
-                    <div class="bloc-recto info-emploi">
-                        <h1 class="donneetexte"></h1>
+                    <div class="card">
+                        <div class="bloc-recto info-emploi">
+                            <h1 class="donneetexte"></h1>
+                        </div>
+                        <div class="bloc-verso">
+                            <p class="description-data texte-emploi">Qui veut gagner des salariés ?</p>
+                            <a class="goToData" href="#">plus de détails</a>
+                        </div>
                     </div>
-                    <div class="bloc-verso">
-                      <p class="description-data texte-emploi">Qui veut gagner des salariés ?</p>
-                      <a class="goToData" href="#">plus de détails</a>
-                    </div>
-                  </div>
                 </section>
 
                 <section class="block-data">
-                  <div class="card">
-                    <div class="bloc-recto info-distance">
-                      <h1 class="donnee"></h1>
-                      <p class="echelle">km</p>
+                    <div class="card">
+                        <div class="bloc-recto info-distance">
+                            <h1 class="donnee"></h1>
+                            <p class="echelle">km</p>
+                        </div>
+                        <div class="bloc-verso">
+                            <p class="description-data texte-distance">Zone d’inter&shy;vention :</p>
+                            <span>Jusqu’où sont-ils capables d’aller ?</span>
+                            <a class="goToData" href="#">plus de détails</a>
+                        </div>
                     </div>
-                    <div class="bloc-verso">
-                      <p class="description-data texte-distance">Zone d’inter&shy;vention :</p>
-                      <span>Jusqu’où sont-ils capables d’aller ?</span>
-                      <a class="goToData" href="#">plus de détails</a>
-                    </div>
-                  </div>
                 </section>
 
                 <section class="block-data">
-                  <div class="card">
-                    <div class="bloc-recto info-contrat">
-                      <div class="liste">
-
-                      </div>
+                    <div id="card-contrat" class="card">
+                        <div class="bloc-recto info-contrat">
+                            <div class="liste">
+                            </div>
+                        </div>
+                        <div class="bloc-verso">
+                            <p class="description-data texte-contrat">Bonne santé rime-t-elle avec durée ?</p>
+                            <a class="open goToData">plus de détails</a>
+                        </div>
                     </div>
-                    <div class="bloc-verso">
-                      <p class="description-data texte-contrat">Bonne santé rime-t-elle avec durée ?</p>
-                      <a class="goToData" href="#">plus de détails</a>
-                    </div>
-                  </div>
                 </section>
 
                 <section class="block-data">
-                  <div class="card">
-                    <div class="bloc-recto info-mp">
-                      <h1 class="donnee"></h1>
-                      <p class="echelle">%</p>
+                    <div class="card">
+                        <div class="bloc-recto info-mp">
+                            <h1 class="donnee"></h1>
+                            <p class="echelle">%</p>
+                        </div>
+                        <div class="bloc-verso">
+                            <p class="description-data texte-mp">Le marché public, une pratique en place ?</p>
+                            <a class="goToData" href="#">plus de détails</a>
+                        </div>
                     </div>
-                    <div class="bloc-verso">
-                      <p class="description-data texte-mp">Le marché public, une pratique en place ?</p>
-                      <a class="goToData" href="#">plus de détails</a>
-                    </div>
-                  </div>
                 </section>
 
                 <section class="block-data">
-                  <div class="card">
-                    <div class="bloc-recto info-dd">
-                      <h1 class="donneetexte"></h1>
+                    <div class="card">
+                        <div class="bloc-recto info-dd">
+                            <h1 class="donneetexte"></h1>
+                        </div>
+                        <div class="bloc-verso">
+                            <p class="description-data texte-dd">Dévelop&shy;pement durable</p>
+                            <span>RSE : sur quoi les artisans jouent-ils collectifs ?</span>
+                            <a class="goToData" href="#">plus de détails</a>
+                        </div>
                     </div>
-                    <div class="bloc-verso">
-                      <p class="description-data texte-dd">Dévelop&shy;pement durable</p>
-                      <span>RSE : sur quoi les artisans jouent-ils collectifs ?</span>
-                      <a class="goToData" href="#">plus de détails</a>
-                    </div>
-                  </div>
                 </section>
             </section>
         </div>
