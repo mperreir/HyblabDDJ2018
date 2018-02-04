@@ -48,6 +48,7 @@ function reponse(bouton)
   var x = bouton.parentNode.id;
   var j = 0;
   var rep;
+  var more;
   switch(x) {
     case "q1":
         j = 0
@@ -68,6 +69,9 @@ function reponse(bouton)
         j = 3
         rep = reponses.q4.r4
         var text = document.getElementById('r4');
+        more = reponses.q4.more
+        var divmore = document.getElementById('more2');
+        var textmore = document.getElementById('more21');
         break;
     case "q5":
         j = 4
@@ -91,6 +95,14 @@ function reponse(bouton)
     }
     text.innerText = rep;
     text.style.display = "block";
+    text.style.marginBottom = "40px";
+    if (more)
+    {
+      textmore.innerText = more;
+      divmore.style.display = "block";
+    }
+
+    q[j] == 1
   }
 }
 
@@ -505,6 +517,7 @@ fetch('data/acc_regions.json')
     .then(function (json) {
 
 
+<<<<<<< HEAD
         // Get the context of the canvas element we want to select
         var ctx = document.getElementById("chart_region_acc").getContext("2d");
 
@@ -543,9 +556,13 @@ fetch('data/acc_regions.json')
         });
     });
 /* CARTE */
+=======
+/* --------------------------------- CARTE ----------------------------- */
+>>>>>>> e6f8e0de7b52b38896311f20e1accdf49c63a7f7
 
 var pnDisplay = false;
 var accDisplay = false;
+var coordacc = false;
 var map;
 function initmap() {
 // paramÃ©trage de la carte
@@ -555,13 +572,15 @@ function initmap() {
         minZoom: 5,
         maxZoom: 10,
         zoomControl:false,
-        layers:[pn,accidentRegion]});
+        layers:[pn,accidentRegion,coordAcc,accidentratioRegion]});
 
     // crÃ©ation des "tiles" avec open street map
     // on centre sur la France
     map.setView(new L.LatLng(46.85, 2.3518), 5);
     map.removeLayer(pn);
     map.removeLayer(accidentRegion);
+    map.removeLayer(coordAcc);
+    map.removeLayer(accidentratioRegion);
 }
 
 var iconPn = L.icon({
@@ -573,32 +592,87 @@ var iconAcc = L.icon({
             iconSize: [20, 20]
 });
 
+var iconRegion = L.icon({
+            iconUrl: 'img/carte/R.svg',
+            iconSize: [20, 20]
+});
+
 
 /*afficher les pn ou non*/
-function AfficherPn()
+function AfficherPn(e)
 {
     if (pnDisplay == true){
         map.removeLayer(pn);
         pnDisplay = false;
+        $(e).removeClass('active');
     }
     else {
         map.addLayer(pn);
         pnDisplay = true;
+        $(e).addClass('active');
     }
 
 }
 
-function AfficherAcc()
+function AfficherCoordAcc(e)
 {
-    if (accDisplay == true){
-        map.removeLayer(accidentRegion);
-        accDisplay = false;
+    if (coordacc == true){
+        map.removeLayer(coordAcc);
+        coordacc = false;
+        $(e).removeClass('active');
     }
     else {
-        map.addLayer(accidentRegion);
-        accDisplay = true;
+        map.addLayer(coordAcc);
+        coordacc = true;
+        $(e).addClass('active');
     }
 
+}
+
+function AfficherAcc(e)
+{
+    var truc = document.getElementsByClassName('lie')
+    if (accDisplay == true && map.hasLayer(accidentratioRegion) == false){
+        map.removeLayer(accidentRegion);
+        accDisplay = false;
+        $(e).removeClass('active');
+    }
+    else if (accDisplay == false && map.hasLayer(accidentratioRegion) == false){
+        map.addLayer(accidentRegion);
+        accDisplay = true;
+        $(e).addClass('active');
+    }
+    else if (accDisplay == true && map.hasLayer(accidentratioRegion) == true){
+        map.removeLayer(accidentratioRegion);
+        map.addLayer(accidentRegion);
+        accDisplay = true;
+        $(e).addClass('active');
+        truc[1].classList.remove('active');
+    }
+
+}
+
+function AfficherRatioRegion(e)
+{
+    var truc = document.getElementsByClassName('lie')
+    console.log(truc);
+    if (accDisplay == true && map.hasLayer(accidentRegion) == false){
+        map.removeLayer(accidentratioRegion);
+        accDisplay = false;
+        $(e).removeClass('active');
+    }
+    else if (accDisplay == false && map.hasLayer(accidentRegion) == false){
+        map.addLayer(accidentratioRegion);
+        accDisplay = true;
+        $(e).addClass('active');
+    }
+    else if (accDisplay == true && map.hasLayer(accidentRegion) == true){
+        map.removeLayer(accidentRegion);
+        map.addLayer(accidentratioRegion);
+        accDisplay = true;
+        $(e).addClass('active');
+        truc[0].classList.remove('active');
+    }
 }
 
 /* creation des clusters */
@@ -614,7 +688,7 @@ function addPn ()
             for (var i = 0; i < marker.length; i++) {
                 n += 1
             }
-            return L.divIcon({ html:n , className: 'mycluster'});
+            return L.divIcon({ html:n , className: 'myclusterpn'});
     }});
     fetch('data/pn.geojson')
     // this promise will be fulfilled when the json fill will be
@@ -668,7 +742,7 @@ function addRegionAccident(){
     for (var i in Geojson.features)
     {
         var marker=L.marker(Geojson.features[i].geometry.coordinates,{
-          icon : iconAcc,
+          icon : iconRegion,
           pane:"markerPane",
         }).bindPopup(Geojson.features[i].properties.Region+' avec '+ Geojson.features[i].properties.Accidents+' d\'accidents'
           )
@@ -677,8 +751,83 @@ function addRegionAccident(){
   });
   return markers;
 }
+
 var accidentRegion = addRegionAccident();
 
+function addRationRegionAccident(){
+  var markers=L.layerGroup();
+  fetch('data/ratioregion.geojson')
+  // this promise will be fulfilled when the json fill will be
+  .then(function (response){
+  // if we could load the resource, parse it
+    if( response.ok )
+        return response.json();
+    else // if not, send some error message as JSON data
+        return {data: "JSON file not found"};
+
+  })
+  // in case of invalid JSON (parse error) send some error message as JSON data
+  .catch( function (error){
+      return {data: "Invalid JSON"};
+  })
+  // this promise will be fulfilled when the json will be parsed
+  .then(function (Geojson) {
+    for (var i in Geojson.features)
+    {
+        var marker=L.marker(Geojson.features[i].geometry.coordinates,{
+          icon : iconRegion,
+          pane:"markerPane",
+        }).bindPopup(Geojson.features[i].properties.Region+' avec '+ Geojson.features[i].properties.Accidents+' de risque d\'accident en traversant un PN')
+        markers.addLayer(marker);
+    }
+  });
+  return markers;
+}
+
+var accidentratioRegion = addRationRegionAccident();
+
+function addCoordAcc(){
+  var markers = L.markerClusterGroup({
+        removeOutsideVisibleBounds:true,
+        spiderfyOnMaxZoom:false,
+        disableClusteringAtZoom: 7,
+        iconCreateFunction: function (cluster) {
+            var marker = cluster.getAllChildMarkers();
+            var n = 0;
+            for (var i = 0; i < marker.length; i++) {
+                n += 1
+            }
+            return L.divIcon({ html:n , className: 'myclusteracc'});
+    }});
+    fetch('data/coordacc.geojson')
+    // this promise will be fulfilled when the json fill will be
+    .then(function (response){
+        // if we could load the resource, parse it
+        if( response.ok )
+            return response.json();
+        else // if not, send some error message as JSON data
+            return {data: "JSON file not found"};
+
+    })
+    // in case of invalid JSON (parse error) send some error message as JSON data
+    .catch( function (error){
+        return {data: "Invalid JSON"};
+    })
+    // this promise will be fulfilled when the json will be parsed
+    .then(function (Geojson) {
+
+        for (var i in Geojson.features)
+        {
+            markers.addLayer(L.marker(Geojson.features[i].geometry.coordinates, {
+            icon : iconAcc,
+            pane:"markerPane",
+            }));
+        }
+    });
+    return markers;
+}
+
+var coordAcc = addCoordAcc();
 
 /* création fond de carte (France avec regions)*/
 
@@ -716,6 +865,12 @@ $("#map").css("height", "70%");
 $("#map").css("width", "40%");
 
 /* filtres */
+/*var pnDisplay = false;
+var accDisplay = false;
+var coordacc = false;*/
+
+
+
 var switchClick = function(e) {
   $(this).toggleClass('active');
 };
@@ -723,8 +878,6 @@ var switchClick = function(e) {
 (function($) {
   $.fn.materialSwitch = function(options) {
     this.each(function() {
-      $(this).click(switchClick);
-
       $('<div class="bar" />').appendTo($(this));
       $('<div class="thumb-container" />').append(
         $('<div class="thumb" />').append(
