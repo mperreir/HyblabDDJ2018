@@ -558,8 +558,6 @@ body{
   width: 40px;
   height: 40px;
   line-height: 50px;
-  font-size: 18px;
-  text-align: center;
   position: absolute;
   border: 3px solid black;
   border-radius: 50%;
@@ -571,6 +569,10 @@ body{
 
 .timeline .timeline-item .timeline-badge.primary:hover {
   background-color: #c7c8ca;
+}
+
+.timeline-badge.primary:focus {
+    background-color: black;
 }
 
 .timeline-horizontal {
@@ -585,7 +587,6 @@ body{
   top: auto;
   bottom: 19px;
   left: 5%;
-  right: 0;
   width: 101%;
   margin-bottom: 20px;
 }
@@ -598,7 +599,6 @@ body{
   float: left;
   left: 10.5%;
   margin: 0 auto;
-  vertical-align: bottom;
 }
 
 .timeline-horizontal .timeline-item .timeline-badge {
@@ -607,8 +607,8 @@ body{
 }
 
 .pTimeline {
-    text-align: center;
     padding-top: 100%;
+    margin-left: -2px;
 }
 
 /* Section 8 */
