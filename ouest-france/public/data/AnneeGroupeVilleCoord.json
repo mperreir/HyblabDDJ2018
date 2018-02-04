@@ -110,7 +110,7 @@
   {
     "Annee":2012,
     "Groupe":"Alcest",
-    "Ville":"Bagnols-Sur-C?ze",
+    "Ville":"Bagnols-sur-Ceze",
     "Superficie":31.37,
     "LongDegre":4.61667,
     "LatDegre":44.1667,
@@ -122,7 +122,7 @@
   {
     "Annee":2017,
     "Groupe":"Alcest",
-    "Ville":"Bagnols-Sur-C?ze",
+    "Ville":"Bagnols-sur-Ceze",
     "Superficie":31.37,
     "LongDegre":4.61667,
     "LatDegre":44.1667,
@@ -242,7 +242,7 @@
   {
     "Annee":2017,
     "Groupe":"Carcariass",
-    "Ville":"Besan?on",
+    "Ville":"Besancon",
     "Superficie":65.05,
     "LongDegre":6.03333,
     "LatDegre":47.25,
@@ -254,7 +254,7 @@
   {
     "Annee":2006,
     "Groupe":"Trepalium",
-    "Ville":"Boism?",
+    "Ville":"Boisme",
     "Superficie":37.8,
     "LongDegre":-0.433333,
     "LatDegre":46.7833,
@@ -266,7 +266,7 @@
   {
     "Annee":2009,
     "Groupe":"Trepalium",
-    "Ville":"Boism?",
+    "Ville":"Boisme",
     "Superficie":37.8,
     "LongDegre":-0.433333,
     "LatDegre":46.7833,
@@ -278,7 +278,7 @@
   {
     "Annee":2012,
     "Groupe":"Trepalium",
-    "Ville":"Boism?",
+    "Ville":"Boisme",
     "Superficie":37.8,
     "LongDegre":-0.433333,
     "LatDegre":46.7833,
@@ -530,7 +530,7 @@
   {
     "Annee":2017,
     "Groupe":"Vortex of End",
-    "Ville":"Charleville-M?zi?res",
+    "Ville":"Charleville-Mezieres",
     "Superficie":31.44,
     "LongDegre":4.71667,
     "LatDegre":49.7667,
@@ -542,7 +542,7 @@
   {
     "Annee":2015,
     "Groupe":"Argile",
-    "Ville":"Ch?teau-Thierry",
+    "Ville":"Chateau-Thierry",
     "Superficie":16.55,
     "LongDegre":3.4,
     "LatDegre":49.05,
@@ -578,7 +578,7 @@
   {
     "Annee":2009,
     "Groupe":"ADX",
-    "Ville":"Compi?gne",
+    "Ville":"Compiegne",
     "Superficie":53.1,
     "LongDegre":2.83333,
     "LatDegre":49.4167,
@@ -806,7 +806,7 @@
   {
     "Annee":2014,
     "Groupe":"Colossus",
-    "Ville":"Li?vin",
+    "Ville":"Lievin",
     "Superficie":12.83,
     "LongDegre":2.76667,
     "LatDegre":50.4167,
@@ -962,7 +962,7 @@
   {
     "Annee":2007,
     "Groupe":"Furia",
-    "Ville":"M?con",
+    "Ville":"Macon",
     "Superficie":27.04,
     "LongDegre":4.83333,
     "LatDegre":46.3,
@@ -1165,7 +1165,7 @@
   },
   {
     "Annee":2017,
-    "Groupe":"D?luge",
+    "Groupe":"Deluge",
     "Ville":"Metz",
     "Superficie":41.94,
     "LongDegre":6.16667,
@@ -1237,7 +1237,7 @@
   },
   {
     "Annee":2015,
-    "Groupe":"M?tiilation",
+    "Groupe":"Meutiilation",
     "Ville":"Montpellier",
     "Superficie":56.88,
     "LongDegre":3.88333,
@@ -1273,7 +1273,7 @@
   },
   {
     "Annee":2014,
-    "Groupe":"Anthar?s",
+    "Groupe":"Anthares",
     "Ville":"Morlaix",
     "Superficie":24.82,
     "LongDegre":-3.83333,
@@ -1706,7 +1706,7 @@
   {
     "Annee":2013,
     "Groupe":"Wild Dawn",
-    "Ville":"Orl?ans",
+    "Ville":"Orleans",
     "Superficie":27.48,
     "LongDegre":1.9,
     "LatDegre":47.9167,
@@ -1718,7 +1718,7 @@
   {
     "Annee":2014,
     "Groupe":"Burning Heads",
-    "Ville":"Orl?ans",
+    "Ville":"Orleans",
     "Superficie":27.48,
     "LongDegre":1.9,
     "LatDegre":47.9167,
@@ -1730,7 +1730,7 @@
   {
     "Annee":2017,
     "Groupe":"Komintern Sect",
-    "Ville":"Orl?ans",
+    "Ville":"Orleans",
     "Superficie":27.48,
     "LongDegre":1.9,
     "LatDegre":47.9167,
@@ -1777,7 +1777,7 @@
   },
   {
     "Annee":2006,
-    "Groupe":"Sna-fu *aka* Grand D?sordre Orchestre",
+    "Groupe":"Sna-fu *aka* Grand Desordre Orchestre",
     "Ville":"Paris",
     "Superficie":105.4,
     "LongDegre":2.34445,
@@ -1909,7 +1909,7 @@
   },
   {
     "Annee":2010,
-    "Groupe":"Blasph?me",
+    "Groupe":"Blaspheme",
     "Ville":"Paris",
     "Superficie":105.4,
     "LongDegre":2.34445,
@@ -2485,7 +2485,7 @@
   },
   {
     "Annee":2016,
-    "Groupe":"Les Sales Majest?s",
+    "Groupe":"Les Sales Majestes",
     "Ville":"Paris",
     "Superficie":105.4,
     "LongDegre":2.34445,
@@ -2641,7 +2641,7 @@
   },
   {
     "Annee":2017,
-    "Groupe":"G?rard Baste",
+    "Groupe":"Gerard Baste",
     "Ville":"Paris",
     "Superficie":105.4,
     "LongDegre":2.34445,
@@ -2773,7 +2773,7 @@
   },
   {
     "Annee":2013,
-    "Groupe":"Le Bal des Enrag?s",
+    "Groupe":"Le Bal des Enrages",
     "Ville":"Rennes",
     "Superficie":50.39,
     "LongDegre":-1.68333,
@@ -2821,7 +2821,7 @@
   },
   {
     "Annee":2016,
-    "Groupe":"Le Bal des Enrag?s",
+    "Groupe":"Le Bal des Enrages",
     "Ville":"Rennes",
     "Superficie":50.39,
     "LongDegre":-1.68333,
@@ -2882,7 +2882,7 @@
   {
     "Annee":2008,
     "Groupe":"Benighted",
-    "Ville":"Saint-?tienne",
+    "Ville":"Saint-Etienne",
     "Superficie":79.97,
     "LongDegre":4.4,
     "LatDegre":45.4333,
@@ -2894,7 +2894,7 @@
   {
     "Annee":2012,
     "Groupe":"Benighted",
-    "Ville":"Saint-?tienne",
+    "Ville":"Saint-Etienne",
     "Superficie":79.97,
     "LongDegre":4.4,
     "LatDegre":45.4333,
@@ -2906,7 +2906,7 @@
   {
     "Annee":2014,
     "Groupe":"Benighted",
-    "Ville":"Saint-?tienne",
+    "Ville":"Saint-Etienne",
     "Superficie":79.97,
     "LongDegre":4.4,
     "LatDegre":45.4333,
@@ -3037,7 +3037,7 @@
   },
   {
     "Annee":2010,
-    "Groupe":"Condko?",
+    "Groupe":"Condkoi",
     "Ville":"Toulouse",
     "Superficie":118.3,
     "LongDegre":1.43333,
@@ -3158,7 +3158,7 @@
   {
     "Annee":2013,
     "Groupe":"Justin(e)",
-    "Ville":"Treilli?res",
+    "Ville":"Treillieres",
     "Superficie":29.05,
     "LongDegre":-1.63333,
     "LatDegre":47.3333,

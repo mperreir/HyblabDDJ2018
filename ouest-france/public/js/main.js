@@ -1,5 +1,4 @@
 'use strict'
-console.log("début main");
 
 function controleurPlan(){
 	var textePlan = document.getElementById("textePlan");
@@ -16,6 +15,9 @@ function controleurPlan(){
 	var annee2015 = document.getElementById("carte2015");
 	var annee2016 = document.getElementById("carte2016");
 	var annee2017 = document.getElementById("carte2017");
+
+	var tabAnnees = [anneeEvolution, annee2006, annee2007, annee2008, annee2009, annee2010, annee2011, annee2012, annee2013, annee2014, annee2015, annee2016, annee2017];
+
 	var scene1 = document.getElementById("scene1");
 	var scene2 = document.getElementById("scene2");
 	var scene3 = document.getElementById("scene3");
@@ -24,21 +26,13 @@ function controleurPlan(){
 	var scene6 = document.getElementById("scene6");
 	var scene7 = document.getElementById("scene7");
 
+	var tabScenes = [scene1, scene2, scene3, scene4, scene5, scene6, scene7];
+
 	anneeEvolution.onclick = function(){
 		textePlan.textContent = "J’ai pu voir passer sur la Main 01 près de 306 groupes au Hellfest. Une vraie ribambelle d’artistes depuis plus de 13 ans. Cela est dû au nombre grandissant de mes amis les festivaliers. De 22 000 à 152 000 tickets vendus en 13 ans, quelle évolution, c’est incroyable! Venez vite voir cet élargissement considérable du Hellfest !";
-		anneeEvolution.className = "pointEvolution active";
-		annee2006.className = "point";
-		annee2007.className = "point";
-		annee2008.className = "point";
-		annee2009.className = "point";
-		annee2010.className = "point";
-		annee2011.className = "point";
-		annee2012.className = "point";
-		annee2013.className = "point";
-		annee2014.className = "point";
-		annee2015.className = "point";
-		annee2016.className = "point";
-		annee2017.className = "point";
+
+		setYearActive(tabAnnees, 0);
+
 		document.getElementById("carte06").className = "2006 divCarte--hidden";
 		document.getElementById("carte07").className = "2007 divCarte--hidden";
 		document.getElementById("carte08").className = "2008 divCarte--hidden";
@@ -67,19 +61,9 @@ function controleurPlan(){
 
 	annee2006.onclick = function(){
 		textePlan.textContent = "Les 72 groupes invités à la première édition du Hellfest sont équitablement répartis entre deux scènes : Main (la scène principale) et Hard n'Heavy stage.";
-		anneeEvolution.className = "pointEvolution";
-		annee2006.className = "point active";
-		annee2007.className = "point";
-		annee2008.className = "point";
-		annee2009.className = "point";
-		annee2010.className = "point";
-		annee2011.className = "point";
-		annee2012.className = "point";
-		annee2013.className = "point";
-		annee2014.className = "point";
-		annee2015.className = "point";
-		annee2016.className = "point";
-		annee2017.className = "point";
+
+        setYearActive(tabAnnees, 1);
+
 		document.getElementById("carte06").className = "2006 divCarte ";
 		document.getElementById("carte07").className = "2007 divCarte--hidden";
 		document.getElementById("carte08").className = "2008 divCarte--hidden";
@@ -132,20 +116,10 @@ function controleurPlan(){
 
 	annee2007.onclick = function(){
 		textePlan.textContent = "En 2007, la Hard n'Heavy est remplacée par la Gibson Stage.S'y ajoute la Discover stage, une nouvelle scène, sur laquelle 30 groupes se produisent.";
-		anneeEvolution.className = "pointEvolution";
-		annee2006.className = "point";
-		annee2007.className = "point active";
-		annee2008.className = "point";
-		annee2009.className = "point";
-		annee2010.className = "point";
-		annee2011.className = "point";
-		annee2012.className = "point";
-		annee2013.className = "point";
-		annee2014.className = "point";
-		annee2015.className = "point";
-		annee2016.className = "point";
-		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte--hidden";
+
+        setYearActive(tabAnnees, 2);
+
+        document.getElementById("carte06").className = "2006 divCarte--hidden";
 		document.getElementById("carte07").className = "2007 divCarte";
 		document.getElementById("carte08").className = "2008 divCarte--hidden";
 		document.getElementById("carte09").className = "2009 divCarte--hidden";
@@ -206,20 +180,10 @@ function controleurPlan(){
 	}
 	annee2008.onclick = function(){
 		textePlan.textContent = "Le nombre de groupes augmentente considérablement par rapport à 2007, passant de 84 à 108. Les groupes sont répartis entre 3 scènes distinctes et hiérarchisées : la main, la second stage et enfin la discover stage.";
-		anneeEvolution.className = "pointEvolution";
-		annee2006.className = "point";
-		annee2007.className = "point";
-		annee2008.className = "point active";
-		annee2009.className = "point";
-		annee2010.className = "point";
-		annee2011.className = "point";
-		annee2012.className = "point";
-		annee2013.className = "point";
-		annee2014.className = "point";
-		annee2015.className = "point";
-		annee2016.className = "point";
-		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte--hidden";
+
+        setYearActive(tabAnnees, 3);
+
+        document.getElementById("carte06").className = "2006 divCarte--hidden";
 		document.getElementById("carte07").className = "2007 divCarte--hidden";
 		document.getElementById("carte08").className = "2008 divCarte";
 		document.getElementById("carte09").className = "2009 divCarte--hidden";
@@ -281,20 +245,10 @@ function controleurPlan(){
 
 	annee2009.onclick = function(){
 		textePlan.textContent = "En 2009, une quatrième scène est crée. La Main 02, complétant la Main 01, favorise les groupes de métal alternatif, nu métal, métalcore et trashmétal. Les deux scènes accueillent toutes les deux 27 groupes.";
-		anneeEvolution.className = "pointEvolution";
-		annee2006.className = "point";
-		annee2007.className = "point";
-		annee2008.className = "point";
-		annee2009.className = "point active";
-		annee2010.className = "point";
-		annee2011.className = "point";
-		annee2012.className = "point";
-		annee2013.className = "point";
-		annee2014.className = "point";
-		annee2015.className = "point";
-		annee2016.className = "point";
-		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte--hidden";
+
+        setYearActive(tabAnnees, 4);
+
+        document.getElementById("carte06").className = "2006 divCarte--hidden";
 		document.getElementById("carte07").className = "2007 divCarte--hidden";
 		document.getElementById("carte08").className = "2008 divCarte--hidden";
 		document.getElementById("carte09").className = "2009 divCarte ";
@@ -366,20 +320,10 @@ function controleurPlan(){
 	}
 	annee2010.onclick = function(){
 		textePlan.textContent = "En 2010, le festival conserve les mêmes scènes et le même nombre de groupes qu’en 2009. La Main 01 produit principalement les groupes de heavy metal tradiotionnel et de hardrock.";
-		anneeEvolution.className = "pointEvolution";
-		annee2006.className = "point";
-		annee2007.className = "point";
-		annee2008.className = "point";
-		annee2009.className = "point";
-		annee2010.className = "point active";
-		annee2011.className = "point";
-		annee2012.className = "point";
-		annee2013.className = "point";
-		annee2014.className = "point";
-		annee2015.className = "point";
-		annee2016.className = "point";
-		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte--hidden";
+
+        setYearActive(tabAnnees, 5);
+
+        document.getElementById("carte06").className = "2006 divCarte--hidden";
 		document.getElementById("carte07").className = "2007 divCarte--hidden";
 		document.getElementById("carte08").className = "2008 divCarte--hidden";
 		document.getElementById("carte09").className = "2009 divCarte ";
@@ -450,20 +394,10 @@ function controleurPlan(){
 	}
 	annee2011.onclick = function(){
 		textePlan.textContent ="118 groupes sont présents en 2011. C’est un nombre relativement constant depuis l’édition de 2008.";
-		anneeEvolution.className = "pointEvolution";
-		annee2006.className = "point";
-		annee2007.className = "point";
-		annee2008.className = "point";
-		annee2009.className = "point";
-		annee2010.className = "point";
-		annee2011.className = "point active";
-		annee2012.className = "point";
-		annee2013.className = "point";
-		annee2014.className = "point";
-		annee2015.className = "point";
-		annee2016.className = "point";
-		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte--hidden";
+
+        setYearActive(tabAnnees, 6);
+
+        document.getElementById("carte06").className = "2006 divCarte--hidden";
 		document.getElementById("carte07").className = "2007 divCarte--hidden";
 		document.getElementById("carte08").className = "2008 divCarte--hidden";
 		document.getElementById("carte09").className = "2009 divCarte ";
@@ -534,20 +468,10 @@ function controleurPlan(){
 	}
 	annee2012.onclick = function(){
 		textePlan.textContent ="Le Hellfest n'accueille plus 4 scènes mais bien 7 scènes pour un total de 170 artistes en cette année 2012, un véritable boom par rapport à l’année précédente. La Warzone met à l’honneur le punk hardcore, la Valley  le sludge/ stoner et le Metal Corner déniche les talents de demain . Autres changements, la Terrorizer tent laisse place au Temple (doom / pagan metal / black metal) et la Rock Hard tent devient l’Altar ( death metal / grind).";
-		anneeEvolution.className = "pointEvolution";
-		annee2006.className = "point";
-		annee2007.className = "point";
-		annee2008.className = "point";
-		annee2009.className = "point";
-		annee2010.className = "point";
-		annee2011.className = "point";
-		annee2012.className = "point active";
-		annee2013.className = "point";
-		annee2014.className = "point";
-		annee2015.className = "point";
-		annee2016.className = "point";
-		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte--hidden";
+
+        setYearActive(tabAnnees, 7);
+
+        document.getElementById("carte06").className = "2006 divCarte--hidden";
 		document.getElementById("carte07").className = "2007 divCarte--hidden";
 		document.getElementById("carte08").className = "2008 divCarte--hidden";
 		document.getElementById("carte09").className = "2009 divCarte--hidden ";
@@ -648,20 +572,10 @@ function controleurPlan(){
 	}
 	annee2013.onclick = function(){
 		textePlan.textContent ="170 artistes montent sur les planches du Hellfest en 2013, une répétition de 2012 avec les mêmes scènes.";
-		anneeEvolution.className = "pointEvolution";
-		annee2006.className = "point";
-		annee2007.className = "point";
-		annee2008.className = "point";
-		annee2009.className = "point";
-		annee2010.className = "point";
-		annee2011.className = "point";
-		annee2012.className = "point";
-		annee2013.className = "point active"; 
-		annee2014.className = "point";
-		annee2015.className = "point";
-		annee2016.className = "point";
-		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte--hidden";
+
+        setYearActive(tabAnnees, 8);
+
+        document.getElementById("carte06").className = "2006 divCarte--hidden";
 		document.getElementById("carte07").className = "2007 divCarte--hidden";
 		document.getElementById("carte08").className = "2008 divCarte--hidden";
 		document.getElementById("carte09").className = "2009 divCarte--hidden ";
@@ -762,20 +676,10 @@ function controleurPlan(){
 	}
 	annee2014.onclick = function(){
 		textePlan.textContent ="Le format des scènes du Hellfest de 2012 reste toujours le même pour acceuillir le même nombre d’artistes.";
-		anneeEvolution.className = "pointEvolution";
-		annee2006.className = "point";
-		annee2007.className = "point";
-		annee2008.className = "point";
-		annee2009.className = "point";
-		annee2010.className = "point";
-		annee2011.className = "point";
-		annee2012.className = "point";
-		annee2013.className = "point";
-		annee2014.className = "point active";
-		annee2015.className = "point";
-		annee2016.className = "point";
-		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte--hidden";
+
+        setYearActive(tabAnnees, 9);
+
+        document.getElementById("carte06").className = "2006 divCarte--hidden";
 		document.getElementById("carte07").className = "2007 divCarte--hidden";
 		document.getElementById("carte08").className = "2008 divCarte--hidden";
 		document.getElementById("carte09").className = "2009 divCarte--hidden ";
@@ -876,20 +780,10 @@ function controleurPlan(){
 	}
 	annee2015.onclick = function(){
 		textePlan.textContent ="Très légère baisse de nombre d’artistes en 2015 puisque les 7 scènes reçoivent 166 groupes.";
-		anneeEvolution.className = "pointEvolution";
-		annee2006.className = "point";
-		annee2007.className = "point";
-		annee2008.className = "point";
-		annee2009.className = "point";
-		annee2010.className = "point";
-		annee2011.className = "point";
-		annee2012.className = "point";
-		annee2013.className = "point";
-		annee2014.className = "point";
-		annee2015.className = "point active";
-		annee2016.className = "point";
-		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte--hidden";
+
+        setYearActive(tabAnnees, 10);
+
+        document.getElementById("carte06").className = "2006 divCarte--hidden";
 		document.getElementById("carte07").className = "2007 divCarte--hidden";
 		document.getElementById("carte08").className = "2008 divCarte--hidden";
 		document.getElementById("carte09").className = "2009 divCarte--hidden ";
@@ -990,20 +884,10 @@ function controleurPlan(){
 	}
 	annee2016.onclick = function(){
 		textePlan.textContent ="Le Metal Corner en partenariat avec Deezer Open Hell'Stage en 2016 accueille presque le double de ce qu’il a l’habitude d’avoir. Cette scène où les groupes de métals s’affrontent pour se produirent sur une “main stage” rencontre un véritable succès.";
-		anneeEvolution.className = "pointEvolution";
-		annee2006.className = "point";
-		annee2007.className = "point";
-		annee2008.className = "point";
-		annee2009.className = "point";
-		annee2010.className = "point";
-		annee2011.className = "point";
-		annee2012.className = "point";
-		annee2013.className = "point";
-		annee2014.className = "point";
-		annee2015.className = "point";
-		annee2016.className = "point active";
-		annee2017.className = "point";
-		document.getElementById("carte06").className = "2006 divCarte--hidden";
+
+        setYearActive(tabAnnees, 11);
+
+        document.getElementById("carte06").className = "2006 divCarte--hidden";
 		document.getElementById("carte07").className = "2007 divCarte--hidden";
 		document.getElementById("carte08").className = "2008 divCarte--hidden";
 		document.getElementById("carte09").className = "2009 divCarte--hidden ";
@@ -1104,20 +988,10 @@ function controleurPlan(){
 	}
 	annee2017.onclick = function(){
 		textePlan.textContent ="167 artistes font monter les décibels en 2017 pour faire vibrer les festivaliers.";
-		anneeEvolution.className = "pointEvolution";
-		annee2006.className = "point";
-		annee2007.className = "point";
-		annee2008.className = "point";
-		annee2009.className = "point";
-		annee2010.className = "point";
-		annee2011.className = "point";
-		annee2012.className = "point";
-		annee2013.className = "point";
-		annee2014.className = "point";
-		annee2015.className = "point";
-		annee2016.className = "point";
-		annee2017.className = "point active";
-		document.getElementById("carte06").className = "2006 divCarte--hidden";
+
+        setYearActive(tabAnnees, 12);
+
+        document.getElementById("carte06").className = "2006 divCarte--hidden";
 		document.getElementById("carte07").className = "2007 divCarte--hidden";
 		document.getElementById("carte08").className = "2008 divCarte--hidden";
 		document.getElementById("carte09").className = "2009 divCarte--hidden ";
@@ -1218,12 +1092,6 @@ function controleurPlan(){
 	}
 }
 
-function chargement(){
-	document.getElementById('jackGif').className = "jackGif--hidden";
-	document.getElementById('logo').className = "logo";
-	document.getElementById('bulleAccueil').className = "accueil-obtuse";
-	document.getElementById('jackAccueil').className = "jackAccueil";
-}
 
 function controleurPodium()
 {
@@ -1240,22 +1108,15 @@ function controleurPodium()
 	var Podium2015 = document.getElementById("Podium2015");
 	var Podium2016 = document.getElementById("Podium2016");
 	var Podium2017 = document.getElementById("Podium2017");
+
+	var tabPodiums = [PodiumEvolution, Podium2006, Podium2007, Podium2008, Podium2009, Podium2010, Podium2011, Podium2012, Podium2013, Podium2014, Podium2015, Podium2016, Podium2017];
+
 	var TextePodium = document.getElementById("textePodium");
 
 	PodiumEvolution.onclick = function(){
-		PodiumEvolution.className = "pointEvolution active";
-		Podium2006.className = "point";
-		Podium2007.className = "point";
-		Podium2008.className = "point";
-		Podium2009.className = "point";
-		Podium2010.className = "point";
-		Podium2011.className = "point";
-		Podium2012.className = "point";
-		Podium2013.className = "point";
-		Podium2014.className = "point";
-		Podium2015.className = "point";
-		Podium2016.className = "point";
-		Podium2017.className = "point";
+
+		setYearActive(tabPodiums, 0);
+
 		TextePodium.textContent = "Environ ⅓ des groupes présents pendant ces éditions viennent du pays de la country. Ils devancent de loin la France et le Royaume-Uni qui à eux deux ne parviennent même pas à égaler les Etats-Unis."
 		document.getElementById("podium").className = "podium--hidden";
 	}
@@ -1263,19 +1124,9 @@ function controleurPodium()
 	Podium2006.onclick = function(){
 		document.getElementById("podium").className = "";
 		TextePodium.textContent = "Pour cette première édition du Hellfest, 35% des groupes proviennent des Etats-Unis. En deuxième position se trouvent la France et l'Angleterre, représentant respectivement 16% et 11% du total des groupes. 15% des groupes viennent de pays scandinaves, dont la moitié de la Suède.";
-		PodiumEvolution.className = "pointEvolution";
-		Podium2006.className = "point active";
-		Podium2007.className = "point";
-		Podium2008.className = "point";
-		Podium2009.className = "point";
-		Podium2010.className = "point";
-		Podium2011.className = "point";
-		Podium2012.className = "point";
-		Podium2013.className = "point";
-		Podium2014.className = "point";
-		Podium2015.className = "point";
-		Podium2016.className = "point";
-		Podium2017.className = "point";
+
+        setYearActive(tabPodiums, 1);
+
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1293,19 +1144,9 @@ function controleurPodium()
 	Podium2007.onclick = function(){
 		document.getElementById("podium").className = "";
 		TextePodium.textContent = "2007 s'accompagne d'une nette hausse de participation des groupes français, aussi nombreux que les groupes américains. La somme des deux représente plus de la moitié du total des groupes.";
-		PodiumEvolution.className = "pointEvolution";
-		Podium2006.className = "point";
-		Podium2007.className = "point active";
-		Podium2008.className = "point";
-		Podium2009.className = "point";
-		Podium2010.className = "point";
-		Podium2011.className = "point";
-		Podium2012.className = "point";
-		Podium2013.className = "point";
-		Podium2014.className = "point";
-		Podium2015.className = "point";
-		Podium2016.className = "point";
-		Podium2017.className = "point";
+
+		setYearActive(tabPodiums, 2);
+
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1323,19 +1164,9 @@ function controleurPodium()
 	Podium2008.onclick = function(){
 		document.getElementById("podium").className = "";
 		TextePodium.textContent = "En 2008, le Hellfest élargit ses horizons et accueille des groupes japonais, autrichiens et irlandais. La participation de la France diminue et équivaut presque à celle de l'Angleterre et de la Suède.";
-		PodiumEvolution.className = "pointEvolution";
-		Podium2006.className = "point";
-		Podium2007.className = "point";
-		Podium2008.className = "point active";
-		Podium2009.className = "point";
-		Podium2010.className = "point";
-		Podium2011.className = "point";
-		Podium2012.className = "point";
-		Podium2013.className = "point";
-		Podium2014.className = "point";
-		Podium2015.className = "point";
-		Podium2016.className = "point";
-		Podium2017.className = "point";
+
+        setYearActive(tabPodiums, 3);
+
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1353,19 +1184,9 @@ function controleurPodium()
 	Podium2009.onclick = function(){
 		document.getElementById("podium").className = "";
 		TextePodium.textContent = "Jamais les Etats-Unis n'ont atteint un tel taux de participation : ils représentent en 2009 plus de 40% des groupes ! En revanche, les participation des pays scandinaves recule.";
-		PodiumEvolution.className = "pointEvolution";
-		Podium2006.className = "point";
-		Podium2007.className = "point";
-		Podium2008.className = "point";
-		Podium2009.className = "point active";
-		Podium2010.className = "point";
-		Podium2011.className = "point";
-		Podium2012.className = "point";
-		Podium2013.className = "point";
-		Podium2014.className = "point";
-		Podium2015.className = "point";
-		Podium2016.className = "point";
-		Podium2017.className = "point";
+
+        setYearActive(tabPodiums, 4);
+
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1383,19 +1204,9 @@ function controleurPodium()
 	Podium2010.onclick = function(){
 		document.getElementById("podium").className = "";
 		TextePodium.textContent = "Les groupe français sont en perte de vitesse en cette année 2010... La Roumanie fait son entrée dans le festival avec le groupe Negurâ Bunget.";
-		PodiumEvolution.className = "pointEvolution";
-		Podium2006.className = "point";
-		Podium2007.className = "point";
-		Podium2008.className = "point";
-		Podium2009.className = "point";
-		Podium2010.className = "point active";
-		Podium2011.className = "point";
-		Podium2012.className = "point";
-		Podium2013.className = "point";
-		Podium2014.className = "point";
-		Podium2015.className = "point";
-		Podium2016.className = "point";
-		Podium2017.className = "point";
+
+        setYearActive(tabPodiums, 5);
+
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1413,19 +1224,9 @@ function controleurPodium()
 	Podium2011.onclick = function(){
 		document.getElementById("podium").className = "";
 		TextePodium.textContent = "Alors que la France est toujours moins bien représentée, de nouveaux pays font leur apparition sur la scène du métal. L'Ecosse, la Russie, l'Irlande du Nord et la Letonnie sont les petits nouveaux de 2011.";
-		PodiumEvolution.className = "pointEvolution";
-		Podium2006.className = "point";
-		Podium2007.className = "point";
-		Podium2008.className = "point";
-		Podium2009.className = "point";
-		Podium2010.className = "point";
-		Podium2011.className = "point active";
-		Podium2012.className = "point";
-		Podium2013.className = "point";
-		Podium2014.className = "point";
-		Podium2015.className = "point";
-		Podium2016.className = "point";
-		Podium2017.className = "point";
+
+        setYearActive(tabPodiums, 6);
+
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1443,19 +1244,9 @@ function controleurPodium()
 	Podium2012.onclick = function(){
 		document.getElementById("podium").className = "";
 		TextePodium.textContent = "2012 est synonyme d'âge d'or des groupes français. Ils connaissent une fulgurante augmentation pour la représentativité du pays. Pour la première fois le groupe Solstafir devient ambassadeur de son pays : l'Islande.";
-		PodiumEvolution.className = "pointEvolution";
-		Podium2006.className = "point";
-		Podium2007.className = "point";
-		Podium2008.className = "point";
-		Podium2009.className = "point";
-		Podium2010.className = "point";
-		Podium2011.className = "point";
-		Podium2012.className = "point active";
-		Podium2013.className = "point";
-		Podium2014.className = "point";
-		Podium2015.className = "point";
-		Podium2016.className = "point";
-		Podium2017.className = "point";
+
+        setYearActive(tabPodiums, 7);
+
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1473,19 +1264,9 @@ function controleurPodium()
 	Podium2013.onclick = function(){
 		document.getElementById("podium").className = "";
 		TextePodium.textContent = "La Suède et l'Angleterre sont au coude à coude sur la troisième place du podium. Quant aux iles Féroé, le Chili et la Colombie, ils s'installent pour la première fois au Hellfest.";
-		PodiumEvolution.className = "pointEvolution";
-		Podium2006.className = "point";
-		Podium2007.className = "point";
-		Podium2008.className = "point";
-		Podium2009.className = "point";
-		Podium2010.className = "point";
-		Podium2011.className = "point";
-		Podium2012.className = "point";
-		Podium2013.className = "point active";
-		Podium2014.className = "point";
-		Podium2015.className = "point";
-		Podium2016.className = "point";
-		Podium2017.className = "point";
+
+        setYearActive(tabPodiums, 8);
+
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1503,19 +1284,9 @@ function controleurPodium()
 	Podium2014.onclick = function(){
 		document.getElementById("podium").className = "";
 		TextePodium.textContent = "Encore jamais représentée au Hellfest, cette année l'Afrique du sud fait son entrée dans le palmarès des groupes présent au festival.";
-		PodiumEvolution.className = "pointEvolution";
-		Podium2006.className = "point";
-		Podium2007.className = "point";
-		Podium2008.className = "point";
-		Podium2009.className = "point";
-		Podium2010.className = "point";
-		Podium2011.className = "point";
-		Podium2012.className = "point";
-		Podium2013.className = "point";
-		Podium2014.className = "point active";
-		Podium2015.className = "point";
-		Podium2016.className = "point";
-		Podium2017.className = "point";
+
+        setYearActive(tabPodiums, 9);
+
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1533,19 +1304,9 @@ function controleurPodium()
 	Podium2015.onclick = function(){
 		document.getElementById("podium").className = "";
 		TextePodium.textContent = "Pour la seconde fois, l'Irlande du nord est présente au Hellfest pour des représentations toujours plus impressionnantes !";
-		PodiumEvolution.className = "pointEvolution";
-		Podium2006.className = "point";
-		Podium2007.className = "point";
-		Podium2008.className = "point";
-		Podium2009.className = "point";
-		Podium2010.className = "point";
-		Podium2011.className = "point";
-		Podium2012.className = "point";
-		Podium2013.className = "point";
-		Podium2014.className = "point";
-		Podium2015.className = "point active";
-		Podium2016.className = "point";
-		Podium2017.className = "point";
+
+        setYearActive(tabPodiums, 10);
+
 		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1563,20 +1324,10 @@ function controleurPodium()
 	Podium2016.onclick = function(){
 		document.getElementById("podium").className = "";
 		TextePodium.textContent = "En 2016, pour la première fois depuis la création du Hellfest, un groupe ukrainien se produit sur l'une des scènes du festival, pour le plaisir de nos oreilles.";
-		PodiumEvolution.className = "pointEvolution";
-		Podium2006.className = "point";
-		Podium2007.className = "point";
-		Podium2008.className = "point";
-		Podium2009.className = "point";
-		Podium2010.className = "point";
-		Podium2011.className = "point";
-		Podium2012.className = "point";
-		Podium2013.className = "point";
-		Podium2014.className = "point";
-		Podium2015.className = "point";
-		Podium2016.className = "point";
-		Podium2017.className = "point active";
-		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
+
+        setYearActive(tabPodiums, 11);
+
+        document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
 		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
@@ -1593,20 +1344,10 @@ function controleurPodium()
 	Podium2017.onclick = function(){
 		document.getElementById("podium").className = "";
 		TextePodium.textContent = "Apparition inédite dans la programmation du festival en cette année 2017, la Tunisie invite le public à découvrir ses artistes aux multiples talents.";
-		PodiumEvolution.className = "pointEvolution";
-		Podium2006.className = "point";
-		Podium2007.className = "point";
-		Podium2008.className = "point";
-		Podium2009.className = "point";
-		Podium2010.className = "point";
-		Podium2011.className = "point";
-		Podium2012.className = "point";
-		Podium2013.className = "point";
-		Podium2014.className = "point";
-		Podium2015.className = "point";
-		Podium2016.className = "point";
-		Podium2017.className = "point active";
-		document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
+
+        setYearActive(tabPodiums, 12);
+
+        document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
 		document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
 		document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
 		document.getElementById('premierFrancais').className = "francais premier drapeau--hidden";
@@ -1623,6 +1364,7 @@ function controleurPodium()
 }
 
 function pin(){
+
 	var pin200601 =document.getElementById("pin2006-01");
 	var pin200602 =document.getElementById("pin2006-02");
 	var pin200701 =document.getElementById("pin2007-01");
@@ -1642,6 +1384,17 @@ function pin(){
 	var pin201205 =document.getElementById("pin2012-05");
 	var pin201206 =document.getElementById("pin2012-06");
 	var pin201207 =document.getElementById("pin2012-07");
+
+    var s1 = document.getElementById("scene1").className = "listeScene--hidden";
+    var s2 = document.getElementById("scene2").className = "listeScene--hidden";
+    var s3 = document.getElementById("scene3").className = "listeScene--hidden";
+    var s4 = document.getElementById("scene4").className = "listeScene--hidden";
+    var s5 = document.getElementById("scene5").className = "listeScene--hidden";
+    var s6 = document.getElementById("scene6").className = "listeScene--hidden";
+    var s7 = document.getElementById("scene7").className = "listeScene--hidden";
+
+    var scenes = [s1, s2, s3, s4, s5, s6, s7];
+
 	var popup = document.getElementById("fenetrePopup");
 	var croix = document.getElementById("croix");
 	var titre = document.getElementById("scène");
@@ -1653,246 +1406,99 @@ function pin(){
 	pin200601.onclick = function(){
 		titre.textContent = "Hard n'Heavy";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene";
-		document.getElementById("scene2").className = "listeScene--hidden";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+		setElementsHidden(scenes, "listeScene", 0);
 	}
 	pin200602.onclick = function(){
 		titre.textContent = "Main Stage";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene--hidden";
-		document.getElementById("scene2").className = "listeScene";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 1);
 	}
 	pin200701.onclick = function(){
 		titre.textContent = "Discover Stage";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene";
-		document.getElementById("scene2").className = "listeScene--hidden";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 0);
 
 	}
 	pin200702.onclick = function(){
 		titre.textContent = "Gibson Stage";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene--hidden";
-		document.getElementById("scene2").className = "listeScene";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 1);
 	}
 	pin200703.onclick = function(){
 		titre.textContent = "Main Stage";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene--hidden";
-		document.getElementById("scene2").className = "listeScene--hidden";
-		document.getElementById("scene3").className = "listeScene";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 2);
 	}
 	pin200801.onclick = function(){
 		titre.textContent = "Discover Stage";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene";
-		document.getElementById("scene2").className = "listeScene--hidden";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 0);
 	}
 	pin200802.onclick = function(){
 		titre.textContent = "Main 2 Stage";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene--hidden";
-		document.getElementById("scene2").className = "listeScene";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 1);
 	}
 	pin200803.onclick = function(){
 		titre.textContent = "Main 1 Stage";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene--hidden";
-		document.getElementById("scene2").className = "listeScene--hidden";
-		document.getElementById("scene3").className = "listeScene";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 2);
 	}
  	pin200901.onclick = function(){
  		titre.textContent = "Main 1 Stage";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene";
-		document.getElementById("scene2").className = "listeScene--hidden";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 0);
 	}
  	pin200902.onclick = function(){
  		titre.textContent = "Main 2 Stage";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene--hidden";
-		document.getElementById("scene2").className = "listeScene";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 1);
 	}
 	pin200903.onclick = function(){
 		titre.textContent = "Rock Hard tent";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene--hidden";
-		document.getElementById("scene2").className = "listeScene--hidden";
-		document.getElementById("scene3").className = "listeScene";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 2);
 	}
 	pin200904.onclick = function(){
 		titre.textContent = "Terrorizer tent";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene--hidden";
-		document.getElementById("scene2").className = "listeScene--hidden";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 3);
 	}
 	pin201201.onclick = function(){
 		titre.textContent = "Altar";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene";
-		document.getElementById("scene2").className = "listeScene--hidden";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 0);
 	}
 	pin201202.onclick = function(){
 		titre.textContent = "Main 1 Stage";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene--hidden";
-		document.getElementById("scene2").className = "listeScene";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 1);
 	}
 	pin201203.onclick = function(){
 		titre.textContent = "Main 2 Stage";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene--hidden";
-		document.getElementById("scene2").className = "listeScene--hidden";
-		document.getElementById("scene3").className = "listeScene";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 2);
 	}
 	pin201204.onclick = function(){
 		titre.textContent = "Métal Corner";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene--hidden";
-		document.getElementById("scene2").className = "listeScene--hidden";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 3);
 	}
 	pin201205.onclick = function(){
 		titre.textContent = "Temple";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene--hidden";
-		document.getElementById("scene2").className = "listeScene--hidden";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 4);
 	}
 	pin201206.onclick = function(){
 		titre.textContent = "Valley";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene--hidden";
-		document.getElementById("scene2").className = "listeScene--hidden";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene";
-		document.getElementById("scene7").className = "listeScene--hidden";
+        setElementsHidden(scenes, "listeScene", 5);
 	}
 	pin201207.onclick = function(){
 		titre.textContent = "Warzone";
 		popup.className = "fenetrePopup";
-		document.getElementById("scene1").className = "listeScene--hidden";
-		document.getElementById("scene2").className = "listeScene--hidden";
-		document.getElementById("scene3").className = "listeScene--hidden";
-		document.getElementById("scene4").className = "listeScene--hidden";
-		document.getElementById("scene5").className = "listeScene--hidden";
-		document.getElementById("scene6").className = "listeScene--hidden";
-		document.getElementById("scene7").className = "listeScene";
+        setElementsHidden(scenes, "listeScene", 6);
 	}
-}
-
-
-function loadData(JsonPath)
-{
-	var json = null;
-	$.ajax({
-		'async': false,
-		'global':false,
-		'url':JsonPath,
-		'dataType':"json",
-		'success':function(data)
-		{
-			json = data;
-		}
-	});
-	return json;
-}
-
-function montrerVille(villes, dataFrance, annee) {
-
-    for (var i = 0; i < dataFrance.length; i++) {
-        console.log(dataFrance[i].annee);
-        if (dataFrance[i].annee == annee) {
-            console.log(dataFrance[i].annee);
-            console.log(dataFrance[i].ville);
-            console.log(villes.getElementById(dataFrance[i].ville));
-            //villes.getElementById(dataFrance[i].ville).style.display = "inline";
-        }
-        else {
-            //villes.getElementById(dataFrance[i].ville).style.display = "none";
-        }
-    }
 }
 
 
@@ -1900,9 +1506,9 @@ function controleurFrance() {
 
     var svg = document.getElementById("mapFrance");
     var villes = svg.contentDocument;
-    console.log(villes.getElementById("Marseille"));
     var dataFrance = loadData('data/AnneeGroupeVilleCoord.json');
-    var franceEvolution = document.getElementById("franceEvolution");
+
+    var franceTotal = document.getElementById("franceTotal");
     var france2006 = document.getElementById("france2006");
     var france2007 = document.getElementById("france2007");
     var france2008 = document.getElementById("france2008");
@@ -1916,52 +1522,87 @@ function controleurFrance() {
     var france2016 = document.getElementById("france2016");
     var france2017 = document.getElementById("france2017");
 
+    var buttons = [franceTotal, france2006, france2007, france2008, france2009, france2010, france2011, france2012, france2013, france2014, france2014, france2016, france2017];
+
+    setYearActive(buttons, 0);
+
     france2006.onclick = function(){
-        montrerVille(villes, dataFrance, "2006");
+    	setYearActive(buttons, 1);
+    	reinitVilles(villes, dataFrance);
+        montrerVilles(villes, dataFrance, "2006");
     }
 
     france2007.onclick = function(){
-
+        setYearActive(buttons, 2);
+        reinitVilles(villes, dataFrance);
+        montrerVilles(villes, dataFrance, "2007");
     }
 
     france2008.onclick = function(){
 
+        setYearActive(buttons, 3);
+        reinitVilles(villes, dataFrance);
+        montrerVilles(villes, dataFrance, "2008");
     }
 
     france2009.onclick = function(){
 
+        setYearActive(buttons, 4);
+        reinitVilles(villes, dataFrance);
+        montrerVilles(villes, dataFrance, "2009");
     }
 
     france2010.onclick = function(){
-
+        setYearActive(buttons, 5);
+        reinitVilles(villes, dataFrance);
+        montrerVilles(villes, dataFrance, "2010");
     }
 
     france2011.onclick = function(){
-
+        setYearActive(buttons, 6);
+        reinitVilles(villes, dataFrance);
+        montrerVilles(villes, dataFrance, "2011");
     }
 
     france2012.onclick = function(){
-
+        setYearActive(buttons, 7);
+        reinitVilles(villes, dataFrance);
+        montrerVilles(villes, dataFrance, "2012");
     }
 
     france2013.onclick = function(){
-
+        setYearActive(buttons, 8);
+        reinitVilles(villes, dataFrance);
+        montrerVilles(villes, dataFrance, "2013");
     }
 
     france2014.onclick = function(){
-
+        setYearActive(buttons, 9);
+        reinitVilles(villes, dataFrance);
+        montrerVilles(villes, dataFrance, "2014");
     }
 
     france2015.onclick = function(){
-
+        setYearActive(buttons, 10);
+        reinitVilles(villes, dataFrance);
+        montrerVilles(villes, dataFrance, "2015");
     }
 
     france2016.onclick = function(){
-
+        setYearActive(buttons, 11);
+        reinitVilles(villes, dataFrance);
+        montrerVilles(villes, dataFrance, "2016");
     }
 
     france2017.onclick = function(){
+        setYearActive(buttons, 12);
+        reinitVilles(villes, dataFrance);
+        montrerVilles(villes, dataFrance, "2017");
+    }
 
+    franceTotal.onclick = function(){
+        setYearActive(buttons, 0);
+        totalVilles(villes, dataFrance);
     }
 
 	/*
@@ -2034,6 +1675,75 @@ function controleurFrance() {
 	 var valenciennes =villes.getElementById("Valenciennes"); */
 }
 
+/**************************************************************************************************/
+
+
+
+function chargement(){
+    document.getElementById('jackGif').className = "jackGif--hidden";
+    document.getElementById('logo').className = "logo";
+    document.getElementById('bulleAccueil').className = "accueil-obtuse";
+    document.getElementById('jackAccueil').className = "jackAccueil";
+}
+
+
+function loadData(JsonPath)
+{
+    var json = null;
+    $.ajax({
+        'async': false,
+        'global':false,
+        'url':JsonPath,
+        'dataType':"json",
+        'success':function(data)
+        {
+            json = data;
+        }
+    });
+    return json;
+}
+
+function totalVilles(villes, dataFrance) {
+    for (var i = 0; i < dataFrance.length; i++) {
+        villes.getElementById(dataFrance[i].Ville).style.display = "inline";
+    }
+}
+
+function reinitVilles(villes, dataFrance) {
+    for (var i = 0; i < dataFrance.length; i++) {
+        villes.getElementById(dataFrance[i].Ville).style.display = "none";
+    }
+}
+
+function montrerVilles(villes, dataFrance, annee) {
+    for (var i = 0; i < dataFrance.length; i++) {
+        if (dataFrance[i].Annee == annee) {
+            villes.getElementById(dataFrance[i].Ville).style.display = "inline";
+        }
+    }
+}
+
+function setYearActive(tabButtons, index){
+
+    tabButtons[0].className = "pointEvolution";
+
+    for (var i = 1; i < tabButtons.length; i++) {
+        tabButtons[i].className = "point";
+    }
+
+    tabButtons[index].className = tabButtons[index].className + " active";
+}
+
+function setElementsHidden(tabElements, className, index) {
+
+    for (var i = 0; i < tabElements.length; i++) {
+        tabElements[i].className = className + "--hidden";
+    }
+
+    tabElements[index].className = className;
+}
+
+/**********************************************************************************************************************/
 //loadData();
 pin();
 controleurPodium();

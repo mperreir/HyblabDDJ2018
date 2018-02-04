@@ -5,7 +5,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 38,
-    "Pourcentage": "5,26%"
+    "Pourcentage": 5.263
   },
   {
     "Annee": 2006,
@@ -13,7 +13,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 35,
-    "Pourcentage": "5,71%"
+    "Pourcentage": 5.714
   },
   {
     "Annee": 2006,
@@ -21,7 +21,7 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 38,
-    "Pourcentage": "5,26%"
+    "Pourcentage": 5.263
   },
   {
     "Annee": 2006,
@@ -29,7 +29,7 @@
     "Pays": "Angleterre",
     "Nombre": 6,
     "Total": 35,
-    "Pourcentage": "17,14%"
+    "Pourcentage": 17.143
   },
   {
     "Annee": 2006,
@@ -37,15 +37,15 @@
     "Pays": "Belgique",
     "Nombre": 2,
     "Total": 38,
-    "Pourcentage": "5,26%"
+    "Pourcentage": 5.263
   },
   {
     "Annee": 2006,
     "Scene": "Main",
-    "Pays": "Brésil",
+    "Pays": "Bresil",
     "Nombre": 1,
     "Total": 35,
-    "Pourcentage": "2,86%"
+    "Pourcentage": 2.857
   },
   {
     "Annee": 2006,
@@ -53,7 +53,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 35,
-    "Pourcentage": "2,86%"
+    "Pourcentage": 2.857
   },
   {
     "Annee": 2006,
@@ -61,7 +61,7 @@
     "Pays": "Danemark",
     "Nombre": 1,
     "Total": 35,
-    "Pourcentage": "2,86%"
+    "Pourcentage": 2.857
   },
   {
     "Annee": 2006,
@@ -69,7 +69,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 14,
     "Total": 38,
-    "Pourcentage": "36,84%"
+    "Pourcentage": 36.842
   },
   {
     "Annee": 2006,
@@ -77,7 +77,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 11,
     "Total": 35,
-    "Pourcentage": "31,43%"
+    "Pourcentage": 31.429
   },
   {
     "Annee": 2006,
@@ -85,7 +85,7 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 38,
-    "Pourcentage": "2,63%"
+    "Pourcentage": 2.632
   },
   {
     "Annee": 2006,
@@ -93,7 +93,7 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 35,
-    "Pourcentage": "2,86%"
+    "Pourcentage": 2.857
   },
   {
     "Annee": 2006,
@@ -101,7 +101,7 @@
     "Pays": "France",
     "Nombre": 7,
     "Total": 38,
-    "Pourcentage": "18,42%"
+    "Pourcentage": 18.421
   },
   {
     "Annee": 2006,
@@ -109,31 +109,31 @@
     "Pays": "France",
     "Nombre": 5,
     "Total": 35,
-    "Pourcentage": "14,29%"
+    "Pourcentage": 14.286
   },
   {
     "Annee": 2006,
     "Scene": "Main",
-    "Pays": "Israël",
+    "Pays": "Israel",
     "Nombre": 1,
     "Total": 35,
-    "Pourcentage": "2,86%"
+    "Pourcentage": 2.857
   },
   {
     "Annee": 2006,
     "Scene": "Hard n'Heavy stage",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 38,
-    "Pourcentage": "2,63%"
+    "Pourcentage": 2.632
   },
   {
     "Annee": 2006,
     "Scene": "Main",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 35,
-    "Pourcentage": "2,86%"
+    "Pourcentage": 2.857
   },
   {
     "Annee": 2006,
@@ -141,7 +141,7 @@
     "Pays": "Pays de Galles",
     "Nombre": 2,
     "Total": 38,
-    "Pourcentage": "5,26%"
+    "Pourcentage": 5.263
   },
   {
     "Annee": 2006,
@@ -149,7 +149,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 38,
-    "Pourcentage": "2,63%"
+    "Pourcentage": 2.632
   },
   {
     "Annee": 2006,
@@ -157,23 +157,23 @@
     "Pays": "Pays-Bas",
     "Nombre": 2,
     "Total": 35,
-    "Pourcentage": "5,71%"
+    "Pourcentage": 5.714
   },
   {
     "Annee": 2006,
     "Scene": "Hard n'Heavy stage",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 3,
     "Total": 38,
-    "Pourcentage": "7,89%"
+    "Pourcentage": 7.895
   },
   {
     "Annee": 2006,
     "Scene": "Main",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 3,
     "Total": 35,
-    "Pourcentage": "8,57%"
+    "Pourcentage": 8.571
   },
   {
     "Annee": 2006,
@@ -181,7 +181,7 @@
     "Pays": "Suisse",
     "Nombre": 3,
     "Total": 38,
-    "Pourcentage": "7,89%"
+    "Pourcentage": 7.895
   },
   {
     "Annee": 2007,
@@ -189,7 +189,7 @@
     "Pays": "Allemagne",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2007,
@@ -197,7 +197,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 25,
-    "Pourcentage": "8,00%"
+    "Pourcentage": 8
   },
   {
     "Annee": 2007,
@@ -205,7 +205,7 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 30,
-    "Pourcentage": "3,33%"
+    "Pourcentage": 3.333
   },
   {
     "Annee": 2007,
@@ -213,7 +213,7 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 30,
-    "Pourcentage": "6,67%"
+    "Pourcentage": 6.667
   },
   {
     "Annee": 2007,
@@ -221,7 +221,7 @@
     "Pays": "Angleterre",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2007,
@@ -229,7 +229,7 @@
     "Pays": "Belgique",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2007,
@@ -237,7 +237,7 @@
     "Pays": "Belgique",
     "Nombre": 1,
     "Total": 30,
-    "Pourcentage": "3,33%"
+    "Pourcentage": 3.333
   },
   {
     "Annee": 2007,
@@ -245,7 +245,7 @@
     "Pays": "Espagne",
     "Nombre": 2,
     "Total": 30,
-    "Pourcentage": "6,67%"
+    "Pourcentage": 6.667
   },
   {
     "Annee": 2007,
@@ -253,7 +253,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 11,
     "Total": 25,
-    "Pourcentage": "44,00%"
+    "Pourcentage": 44
   },
   {
     "Annee": 2007,
@@ -261,7 +261,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 10,
     "Total": 27,
-    "Pourcentage": "37,04%"
+    "Pourcentage": 37.037
   },
   {
     "Annee": 2007,
@@ -269,7 +269,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 2,
     "Total": 30,
-    "Pourcentage": "6,67%"
+    "Pourcentage": 6.667
   },
   {
     "Annee": 2007,
@@ -277,7 +277,7 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2007,
@@ -285,7 +285,7 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2007,
@@ -293,7 +293,7 @@
     "Pays": "France",
     "Nombre": 17,
     "Total": 30,
-    "Pourcentage": "56,67%"
+    "Pourcentage": 56.667
   },
   {
     "Annee": 2007,
@@ -301,7 +301,7 @@
     "Pays": "France",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2007,
@@ -309,7 +309,7 @@
     "Pays": "France",
     "Nombre": 5,
     "Total": 27,
-    "Pourcentage": "18,52%"
+    "Pourcentage": 18.519
   },
   {
     "Annee": 2007,
@@ -317,7 +317,7 @@
     "Pays": "Italie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2007,
@@ -325,7 +325,7 @@
     "Pays": "Luxembourg",
     "Nombre": 1,
     "Total": 30,
-    "Pourcentage": "3,33%"
+    "Pourcentage": 3.333
   },
   {
     "Annee": 2007,
@@ -333,7 +333,7 @@
     "Pays": "Malte",
     "Nombre": 1,
     "Total": 30,
-    "Pourcentage": "3,33%"
+    "Pourcentage": 3.333
   },
   {
     "Annee": 2007,
@@ -341,31 +341,31 @@
     "Pays": "Mexique",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2007,
     "Scene": "Discover stage",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 30,
-    "Pourcentage": "3,33%"
+    "Pourcentage": 3.333
   },
   {
     "Annee": 2007,
     "Scene": "Main",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 2,
     "Total": 25,
-    "Pourcentage": "8,00%"
+    "Pourcentage": 8
   },
   {
     "Annee": 2007,
     "Scene": "Gibson stage",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2007,
@@ -373,7 +373,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 3,
     "Total": 25,
-    "Pourcentage": "12,00%"
+    "Pourcentage": 12
   },
   {
     "Annee": 2007,
@@ -381,7 +381,7 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2007,
@@ -389,7 +389,7 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 30,
-    "Pourcentage": "3,33%"
+    "Pourcentage": 3.333
   },
   {
     "Annee": 2007,
@@ -397,7 +397,7 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2007,
@@ -405,31 +405,31 @@
     "Pays": "Portugal",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2007,
     "Scene": "Main",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 3,
     "Total": 25,
-    "Pourcentage": "12,00%"
+    "Pourcentage": 12
   },
   {
     "Annee": 2007,
     "Scene": "Discover stage",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 1,
     "Total": 30,
-    "Pourcentage": "3,33%"
+    "Pourcentage": 3.333
   },
   {
     "Annee": 2007,
     "Scene": "Gibson stage",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2007,
@@ -437,7 +437,7 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2008,
@@ -445,7 +445,7 @@
     "Pays": "Australie",
     "Nombre": 2,
     "Total": 24,
-    "Pourcentage": "8,33%"
+    "Pourcentage": 8.333
   },
   {
     "Annee": 2008,
@@ -453,7 +453,7 @@
     "Pays": "Australie",
     "Nombre": 1,
     "Total": 42,
-    "Pourcentage": "2,38%"
+    "Pourcentage": 2.381
   },
   {
     "Annee": 2008,
@@ -461,7 +461,7 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 42,
-    "Pourcentage": "7,14%"
+    "Pourcentage": 7.143
   },
   {
     "Annee": 2008,
@@ -469,7 +469,7 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 21,
-    "Pourcentage": "14,29%"
+    "Pourcentage": 14.286
   },
   {
     "Annee": 2008,
@@ -477,15 +477,15 @@
     "Pays": "Finlande",
     "Nombre": 2,
     "Total": 24,
-    "Pourcentage": "8,33%"
+    "Pourcentage": 8.333
   },
   {
     "Annee": 2008,
     "Scene": "Second stage",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 3,
     "Total": 21,
-    "Pourcentage": "14,29%"
+    "Pourcentage": 14.286
   },
   {
     "Annee": 2008,
@@ -493,7 +493,7 @@
     "Pays": "Portugal",
     "Nombre": 1,
     "Total": 42,
-    "Pourcentage": "2,38%"
+    "Pourcentage": 2.381
   },
   {
     "Annee": 2008,
@@ -501,7 +501,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 10,
     "Total": 42,
-    "Pourcentage": "23,81%"
+    "Pourcentage": 23.81
   },
   {
     "Annee": 2008,
@@ -509,7 +509,7 @@
     "Pays": "Autriche",
     "Nombre": 1,
     "Total": 42,
-    "Pourcentage": "2,38%"
+    "Pourcentage": 2.381
   },
   {
     "Annee": 2008,
@@ -517,7 +517,7 @@
     "Pays": "France",
     "Nombre": 7,
     "Total": 42,
-    "Pourcentage": "16,67%"
+    "Pourcentage": 16.667
   },
   {
     "Annee": 2008,
@@ -525,15 +525,15 @@
     "Pays": "Pays-Bas",
     "Nombre": 2,
     "Total": 21,
-    "Pourcentage": "9,52%"
+    "Pourcentage": 9.524
   },
   {
     "Annee": 2008,
     "Scene": "Main",
-    "Pays": "Brésil",
+    "Pays": "Bresil",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2008,
@@ -541,15 +541,15 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 42,
-    "Pourcentage": "2,38%"
+    "Pourcentage": 2.381
   },
   {
     "Annee": 2008,
     "Scene": "Discover stage",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 4,
     "Total": 42,
-    "Pourcentage": "9,52%"
+    "Pourcentage": 9.524
   },
   {
     "Annee": 2008,
@@ -557,7 +557,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2008,
@@ -565,15 +565,15 @@
     "Pays": "Etats-Unis",
     "Nombre": 9,
     "Total": 21,
-    "Pourcentage": "42,86%"
+    "Pourcentage": 42.857
   },
   {
     "Annee": 2008,
     "Scene": "Main",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2008,
@@ -581,7 +581,7 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2008,
@@ -589,7 +589,7 @@
     "Pays": "Japon",
     "Nombre": 1,
     "Total": 42,
-    "Pourcentage": "2,38%"
+    "Pourcentage": 2.381
   },
   {
     "Annee": 2008,
@@ -597,7 +597,7 @@
     "Pays": "France",
     "Nombre": 4,
     "Total": 24,
-    "Pourcentage": "16,67%"
+    "Pourcentage": 16.667
   },
   {
     "Annee": 2008,
@@ -605,7 +605,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 21,
-    "Pourcentage": "9,52%"
+    "Pourcentage": 9.524
   },
   {
     "Annee": 2008,
@@ -613,7 +613,7 @@
     "Pays": "Finlande",
     "Nombre": 3,
     "Total": 42,
-    "Pourcentage": "7,14%"
+    "Pourcentage": 7.143
   },
   {
     "Annee": 2008,
@@ -621,7 +621,7 @@
     "Pays": "Espagne",
     "Nombre": 1,
     "Total": 42,
-    "Pourcentage": "2,38%"
+    "Pourcentage": 2.381
   },
   {
     "Annee": 2008,
@@ -629,7 +629,7 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2008,
@@ -637,23 +637,23 @@
     "Pays": "Etats-Unis",
     "Nombre": 4,
     "Total": 24,
-    "Pourcentage": "16,67%"
+    "Pourcentage": 16.667
   },
   {
     "Annee": 2008,
     "Scene": "Main",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 3,
     "Total": 24,
-    "Pourcentage": "12,50%"
+    "Pourcentage": 12.5
   },
   {
     "Annee": 2008,
     "Scene": "Discover stage",
-    "Pays": "Brésil",
+    "Pays": "Bresil",
     "Nombre": 1,
     "Total": 42,
-    "Pourcentage": "2,38%"
+    "Pourcentage": 2.381
   },
   {
     "Annee": 2008,
@@ -661,15 +661,15 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 42,
-    "Pourcentage": "2,38%"
+    "Pourcentage": 2.381
   },
   {
     "Annee": 2008,
     "Scene": "Second stage",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 2,
     "Total": 21,
-    "Pourcentage": "9,52%"
+    "Pourcentage": 9.524
   },
   {
     "Annee": 2008,
@@ -677,7 +677,7 @@
     "Pays": "Angleterre",
     "Nombre": 4,
     "Total": 24,
-    "Pourcentage": "16,67%"
+    "Pourcentage": 16.667
   },
   {
     "Annee": 2008,
@@ -685,7 +685,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 42,
-    "Pourcentage": "4,76%"
+    "Pourcentage": 4.762
   },
   {
     "Annee": 2008,
@@ -693,7 +693,7 @@
     "Pays": "Irlande",
     "Nombre": 1,
     "Total": 42,
-    "Pourcentage": "2,38%"
+    "Pourcentage": 2.381
   },
   {
     "Annee": 2008,
@@ -701,23 +701,23 @@
     "Pays": "Italie",
     "Nombre": 1,
     "Total": 42,
-    "Pourcentage": "2,38%"
+    "Pourcentage": 2.381
   },
   {
     "Annee": 2008,
     "Scene": "Discover stage",
-    "Pays": "Grèce",
+    "Pays": "Grece",
     "Nombre": 2,
     "Total": 42,
-    "Pourcentage": "4,76%"
+    "Pourcentage": 4.762
   },
   {
     "Annee": 2008,
     "Scene": "Discover stage",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 42,
-    "Pourcentage": "2,38%"
+    "Pourcentage": 2.381
   },
   {
     "Annee": 2009,
@@ -725,7 +725,7 @@
     "Pays": "Belgique",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
@@ -733,7 +733,7 @@
     "Pays": "France",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2009,
@@ -741,7 +741,7 @@
     "Pays": "France",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2009,
@@ -749,7 +749,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 15,
     "Total": 27,
-    "Pourcentage": "55,56%"
+    "Pourcentage": 55.556
   },
   {
     "Annee": 2009,
@@ -757,15 +757,15 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 26,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2009,
     "Scene": "Rock Hard tent",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2009,
@@ -773,15 +773,15 @@
     "Pays": "Etats-Unis",
     "Nombre": 13,
     "Total": 26,
-    "Pourcentage": "50,00%"
+    "Pourcentage": 50
   },
   {
     "Annee": 2009,
     "Scene": "Rock Hard tent",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 5,
     "Total": 27,
-    "Pourcentage": "18,52%"
+    "Pourcentage": 18.519
   },
   {
     "Annee": 2009,
@@ -789,15 +789,15 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
     "Scene": "Main 01",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2009,
@@ -805,7 +805,7 @@
     "Pays": "NA",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
@@ -813,7 +813,7 @@
     "Pays": "Angleterre",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2009,
@@ -821,7 +821,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 13,
     "Total": 27,
-    "Pourcentage": "48,15%"
+    "Pourcentage": 48.148
   },
   {
     "Annee": 2009,
@@ -829,7 +829,7 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2009,
@@ -837,7 +837,7 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2009,
@@ -845,7 +845,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
@@ -853,7 +853,7 @@
     "Pays": "Australie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
@@ -861,7 +861,7 @@
     "Pays": "Allemagne",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2009,
@@ -869,7 +869,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
@@ -877,7 +877,7 @@
     "Pays": "Irlande",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
@@ -885,7 +885,7 @@
     "Pays": "France",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2009,
@@ -893,7 +893,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 5,
     "Total": 27,
-    "Pourcentage": "18,52%"
+    "Pourcentage": 18.519
   },
   {
     "Annee": 2009,
@@ -901,7 +901,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
@@ -909,7 +909,7 @@
     "Pays": "France",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2009,
@@ -917,7 +917,7 @@
     "Pays": "Australie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
@@ -925,7 +925,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2009,
@@ -933,7 +933,7 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
@@ -941,15 +941,15 @@
     "Pays": "Portugal",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
     "Scene": "Main 02",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 2,
     "Total": 26,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2009,
@@ -957,7 +957,7 @@
     "Pays": "Australie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
@@ -965,15 +965,15 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
     "Scene": "Main 01",
-    "Pays": "Brésil",
+    "Pays": "Bresil",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
@@ -981,7 +981,7 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
@@ -989,7 +989,7 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2009,
@@ -997,7 +997,7 @@
     "Pays": "Italie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
@@ -1005,7 +1005,7 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2009,
@@ -1013,7 +1013,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2009,
@@ -1021,7 +1021,7 @@
     "Pays": "Danemark",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2010,
@@ -1029,7 +1029,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 22,
     "Total": 37,
-    "Pourcentage": "59,46%"
+    "Pourcentage": 59.459
   },
   {
     "Annee": 2010,
@@ -1037,7 +1037,7 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2010,
@@ -1045,7 +1045,7 @@
     "Pays": "Australie",
     "Nombre": 2,
     "Total": 24,
-    "Pourcentage": "8,33%"
+    "Pourcentage": 8.333
   },
   {
     "Annee": 2010,
@@ -1053,7 +1053,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 8,
     "Total": 24,
-    "Pourcentage": "33,33%"
+    "Pourcentage": 33.333
   },
   {
     "Annee": 2010,
@@ -1061,15 +1061,15 @@
     "Pays": "Canada",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2010,
     "Scene": "Main 02",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2010,
@@ -1077,7 +1077,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2010,
@@ -1085,7 +1085,7 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2010,
@@ -1093,7 +1093,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 7,
     "Total": 26,
-    "Pourcentage": "26,92%"
+    "Pourcentage": 26.923
   },
   {
     "Annee": 2010,
@@ -1101,15 +1101,15 @@
     "Pays": "France",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2010,
     "Scene": "Rock Hard tent",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 7,
     "Total": 25,
-    "Pourcentage": "28,00%"
+    "Pourcentage": 28
   },
   {
     "Annee": 2010,
@@ -1117,7 +1117,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 3,
     "Total": 37,
-    "Pourcentage": "8,11%"
+    "Pourcentage": 8.108
   },
   {
     "Annee": 2010,
@@ -1125,7 +1125,7 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 26,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2010,
@@ -1133,7 +1133,7 @@
     "Pays": "France",
     "Nombre": 4,
     "Total": 25,
-    "Pourcentage": "16,00%"
+    "Pourcentage": 16
   },
   {
     "Annee": 2010,
@@ -1141,7 +1141,7 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2010,
@@ -1149,7 +1149,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2010,
@@ -1157,7 +1157,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 26,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2010,
@@ -1165,7 +1165,7 @@
     "Pays": "Angleterre",
     "Nombre": 4,
     "Total": 37,
-    "Pourcentage": "10,81%"
+    "Pourcentage": 10.811
   },
   {
     "Annee": 2010,
@@ -1173,7 +1173,7 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2010,
@@ -1181,7 +1181,7 @@
     "Pays": "Finlande",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2010,
@@ -1189,7 +1189,7 @@
     "Pays": "Angleterre",
     "Nombre": 4,
     "Total": 24,
-    "Pourcentage": "16,67%"
+    "Pourcentage": 16.667
   },
   {
     "Annee": 2010,
@@ -1197,7 +1197,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2010,
@@ -1205,15 +1205,15 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 25,
-    "Pourcentage": "8,00%"
+    "Pourcentage": 8
   },
   {
     "Annee": 2010,
     "Scene": "Main 01",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2010,
@@ -1221,23 +1221,23 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 37,
-    "Pourcentage": "2,70%"
+    "Pourcentage": 2.703
   },
   {
     "Annee": 2010,
     "Scene": "Rock Hard tent",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 4,
     "Total": 25,
-    "Pourcentage": "16,00%"
+    "Pourcentage": 16
   },
   {
     "Annee": 2010,
     "Scene": "Main 02",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2010,
@@ -1245,7 +1245,7 @@
     "Pays": "Allemagne",
     "Nombre": 3,
     "Total": 24,
-    "Pourcentage": "12,50%"
+    "Pourcentage": 12.5
   },
   {
     "Annee": 2010,
@@ -1253,7 +1253,7 @@
     "Pays": "France",
     "Nombre": 2,
     "Total": 24,
-    "Pourcentage": "8,33%"
+    "Pourcentage": 8.333
   },
   {
     "Annee": 2010,
@@ -1261,7 +1261,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 37,
-    "Pourcentage": "2,70%"
+    "Pourcentage": 2.703
   },
   {
     "Annee": 2010,
@@ -1269,7 +1269,7 @@
     "Pays": "Suisse",
     "Nombre": 3,
     "Total": 37,
-    "Pourcentage": "8,11%"
+    "Pourcentage": 8.108
   },
   {
     "Annee": 2010,
@@ -1277,7 +1277,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 25,
-    "Pourcentage": "8,00%"
+    "Pourcentage": 8
   },
   {
     "Annee": 2010,
@@ -1285,7 +1285,7 @@
     "Pays": "Roumanie",
     "Nombre": 1,
     "Total": 37,
-    "Pourcentage": "2,70%"
+    "Pourcentage": 2.703
   },
   {
     "Annee": 2010,
@@ -1293,7 +1293,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 2,
     "Total": 25,
-    "Pourcentage": "8,00%"
+    "Pourcentage": 8
   },
   {
     "Annee": 2010,
@@ -1301,7 +1301,7 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 37,
-    "Pourcentage": "2,70%"
+    "Pourcentage": 2.703
   },
   {
     "Annee": 2010,
@@ -1309,7 +1309,7 @@
     "Pays": "Danemark",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2010,
@@ -1317,15 +1317,15 @@
     "Pays": "Italie",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2010,
     "Scene": "Main 01",
-    "Pays": "Brésil",
+    "Pays": "Bresil",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2010,
@@ -1333,15 +1333,15 @@
     "Pays": "Japon",
     "Nombre": 1,
     "Total": 37,
-    "Pourcentage": "2,70%"
+    "Pourcentage": 2.703
   },
   {
     "Annee": 2011,
     "Scene": "Rock Hard tent",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2011,
@@ -1349,7 +1349,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 8,
     "Total": 24,
-    "Pourcentage": "33,33%"
+    "Pourcentage": 33.333
   },
   {
     "Annee": 2011,
@@ -1357,7 +1357,7 @@
     "Pays": "Angleterre",
     "Nombre": 1,
     "Total": 28,
-    "Pourcentage": "3,57%"
+    "Pourcentage": 3.571
   },
   {
     "Annee": 2011,
@@ -1365,7 +1365,7 @@
     "Pays": "Angleterre",
     "Nombre": 6,
     "Total": 24,
-    "Pourcentage": "25,00%"
+    "Pourcentage": 25
   },
   {
     "Annee": 2011,
@@ -1373,7 +1373,7 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2011,
@@ -1381,7 +1381,7 @@
     "Pays": "Russie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2011,
@@ -1389,7 +1389,7 @@
     "Pays": "Suisse",
     "Nombre": 4,
     "Total": 39,
-    "Pourcentage": "10,26%"
+    "Pourcentage": 10.256
   },
   {
     "Annee": 2011,
@@ -1397,15 +1397,15 @@
     "Pays": "Etats-Unis",
     "Nombre": 6,
     "Total": 28,
-    "Pourcentage": "21,43%"
+    "Pourcentage": 21.429
   },
   {
     "Annee": 2011,
     "Scene": "Main 02",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 28,
-    "Pourcentage": "3,57%"
+    "Pourcentage": 3.571
   },
   {
     "Annee": 2011,
@@ -1413,7 +1413,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 20,
     "Total": 39,
-    "Pourcentage": "51,28%"
+    "Pourcentage": 51.282
   },
   {
     "Annee": 2011,
@@ -1421,7 +1421,7 @@
     "Pays": "Autriche",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2011,
@@ -1429,15 +1429,15 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2011,
     "Scene": "Main 01",
-    "Pays": "Brésil",
+    "Pays": "Bresil",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2011,
@@ -1445,7 +1445,7 @@
     "Pays": "Japon",
     "Nombre": 1,
     "Total": 39,
-    "Pourcentage": "2,56%"
+    "Pourcentage": 2.564
   },
   {
     "Annee": 2011,
@@ -1453,7 +1453,7 @@
     "Pays": "Canada",
     "Nombre": 2,
     "Total": 39,
-    "Pourcentage": "5,13%"
+    "Pourcentage": 5.128
   },
   {
     "Annee": 2011,
@@ -1461,15 +1461,15 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 28,
-    "Pourcentage": "3,57%"
+    "Pourcentage": 3.571
   },
   {
     "Annee": 2011,
     "Scene": "Main 01",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 2,
     "Total": 24,
-    "Pourcentage": "8,33%"
+    "Pourcentage": 8.333
   },
   {
     "Annee": 2011,
@@ -1477,15 +1477,15 @@
     "Pays": "France",
     "Nombre": 5,
     "Total": 28,
-    "Pourcentage": "17,86%"
+    "Pourcentage": 17.857
   },
   {
     "Annee": 2011,
     "Scene": "Rock Hard tent",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2011,
@@ -1493,7 +1493,7 @@
     "Pays": "Australie",
     "Nombre": 1,
     "Total": 39,
-    "Pourcentage": "2,56%"
+    "Pourcentage": 2.564
   },
   {
     "Annee": 2011,
@@ -1501,7 +1501,7 @@
     "Pays": "Allemagne",
     "Nombre": 5,
     "Total": 28,
-    "Pourcentage": "17,86%"
+    "Pourcentage": 17.857
   },
   {
     "Annee": 2011,
@@ -1509,7 +1509,7 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 39,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2011,
@@ -1517,23 +1517,23 @@
     "Pays": "Etats-Unis",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2011,
     "Scene": "Main 01",
-    "Pays": "Grèce",
+    "Pays": "Grece",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2011,
     "Scene": "Terrorizer tent",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 3,
     "Total": 39,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2011,
@@ -1541,7 +1541,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2011,
@@ -1549,7 +1549,7 @@
     "Pays": "France",
     "Nombre": 1,
     "Total": 39,
-    "Pourcentage": "2,56%"
+    "Pourcentage": 2.564
   },
   {
     "Annee": 2011,
@@ -1557,15 +1557,15 @@
     "Pays": "Espagne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2011,
     "Scene": "Main 02",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 5,
     "Total": 28,
-    "Pourcentage": "17,86%"
+    "Pourcentage": 17.857
   },
   {
     "Annee": 2011,
@@ -1573,15 +1573,15 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2011,
     "Scene": "Rock Hard tent",
-    "Pays": "Brésil",
+    "Pays": "Bresil",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2011,
@@ -1589,7 +1589,7 @@
     "Pays": "Japon",
     "Nombre": 1,
     "Total": 28,
-    "Pourcentage": "3,57%"
+    "Pourcentage": 3.571
   },
   {
     "Annee": 2011,
@@ -1597,7 +1597,7 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2011,
@@ -1605,7 +1605,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 39,
-    "Pourcentage": "5,13%"
+    "Pourcentage": 5.128
   },
   {
     "Annee": 2011,
@@ -1613,15 +1613,15 @@
     "Pays": "Belgique",
     "Nombre": 1,
     "Total": 39,
-    "Pourcentage": "2,56%"
+    "Pourcentage": 2.564
   },
   {
     "Annee": 2011,
     "Scene": "Main 02",
-    "Pays": "Israël",
+    "Pays": "Israel",
     "Nombre": 1,
     "Total": 28,
-    "Pourcentage": "3,57%"
+    "Pourcentage": 3.571
   },
   {
     "Annee": 2011,
@@ -1629,7 +1629,7 @@
     "Pays": "Irlande",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2011,
@@ -1637,7 +1637,7 @@
     "Pays": "Italie",
     "Nombre": 1,
     "Total": 39,
-    "Pourcentage": "2,56%"
+    "Pourcentage": 2.564
   },
   {
     "Annee": 2011,
@@ -1645,15 +1645,15 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2011,
     "Scene": "Rock Hard tent",
-    "Pays": "Grèce",
+    "Pays": "Grece",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2011,
@@ -1661,7 +1661,7 @@
     "Pays": "Lettonie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2011,
@@ -1669,7 +1669,7 @@
     "Pays": "France",
     "Nombre": 2,
     "Total": 24,
-    "Pourcentage": "8,33%"
+    "Pourcentage": 8.333
   },
   {
     "Annee": 2011,
@@ -1677,7 +1677,7 @@
     "Pays": "France",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2011,
@@ -1685,7 +1685,7 @@
     "Pays": "Irlande du Nord",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2011,
@@ -1693,7 +1693,7 @@
     "Pays": "Ecosse",
     "Nombre": 1,
     "Total": 28,
-    "Pourcentage": "3,57%"
+    "Pourcentage": 3.571
   },
   {
     "Annee": 2011,
@@ -1701,7 +1701,7 @@
     "Pays": "Irlande",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2011,
@@ -1709,7 +1709,7 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2011,
@@ -1717,7 +1717,7 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 28,
-    "Pourcentage": "3,57%"
+    "Pourcentage": 3.571
   },
   {
     "Annee": 2011,
@@ -1725,7 +1725,7 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2012,
@@ -1733,7 +1733,7 @@
     "Pays": "Belgique",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -1741,7 +1741,7 @@
     "Pays": "France",
     "Nombre": 9,
     "Total": 13,
-    "Pourcentage": "69,23%"
+    "Pourcentage": 69.231
   },
   {
     "Annee": 2012,
@@ -1749,7 +1749,7 @@
     "Pays": "France",
     "Nombre": 4,
     "Total": 25,
-    "Pourcentage": "16,00%"
+    "Pourcentage": 16
   },
   {
     "Annee": 2012,
@@ -1757,7 +1757,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 12,
     "Total": 25,
-    "Pourcentage": "48,00%"
+    "Pourcentage": 48
   },
   {
     "Annee": 2012,
@@ -1765,7 +1765,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2012,
@@ -1773,7 +1773,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 13,
     "Total": 26,
-    "Pourcentage": "50,00%"
+    "Pourcentage": 50
   },
   {
     "Annee": 2012,
@@ -1781,7 +1781,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 24,
-    "Pourcentage": "8,33%"
+    "Pourcentage": 8.333
   },
   {
     "Annee": 2012,
@@ -1789,15 +1789,15 @@
     "Pays": "Belgique",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2012,
     "Scene": "Temple",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -1805,7 +1805,7 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 26,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2012,
@@ -1813,15 +1813,15 @@
     "Pays": "France",
     "Nombre": 4,
     "Total": 26,
-    "Pourcentage": "15,38%"
+    "Pourcentage": 15.385
   },
   {
     "Annee": 2012,
     "Scene": "Temple",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 9,
     "Total": 26,
-    "Pourcentage": "34,62%"
+    "Pourcentage": 34.615
   },
   {
     "Annee": 2012,
@@ -1829,7 +1829,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 14,
     "Total": 27,
-    "Pourcentage": "51,85%"
+    "Pourcentage": 51.852
   },
   {
     "Annee": 2012,
@@ -1837,7 +1837,7 @@
     "Pays": "France",
     "Nombre": 5,
     "Total": 27,
-    "Pourcentage": "18,52%"
+    "Pourcentage": 18.519
   },
   {
     "Annee": 2012,
@@ -1845,7 +1845,7 @@
     "Pays": "Allemagne",
     "Nombre": 4,
     "Total": 26,
-    "Pourcentage": "15,38%"
+    "Pourcentage": 15.385
   },
   {
     "Annee": 2012,
@@ -1853,7 +1853,7 @@
     "Pays": "Espagne",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -1861,7 +1861,7 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -1869,7 +1869,7 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2012,
@@ -1877,7 +1877,7 @@
     "Pays": "France",
     "Nombre": 4,
     "Total": 26,
-    "Pourcentage": "15,38%"
+    "Pourcentage": 15.385
   },
   {
     "Annee": 2012,
@@ -1885,7 +1885,7 @@
     "Pays": "France",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2012,
@@ -1893,15 +1893,15 @@
     "Pays": "Etats-Unis",
     "Nombre": 10,
     "Total": 24,
-    "Pourcentage": "41,67%"
+    "Pourcentage": 41.667
   },
   {
     "Annee": 2012,
     "Scene": "Altar",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -1909,7 +1909,7 @@
     "Pays": "Islande",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2012,
@@ -1917,7 +1917,7 @@
     "Pays": "Mexique",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -1925,7 +1925,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 6,
     "Total": 26,
-    "Pourcentage": "23,08%"
+    "Pourcentage": 23.077
   },
   {
     "Annee": 2012,
@@ -1933,7 +1933,7 @@
     "Pays": "France",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2012,
@@ -1941,7 +1941,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2012,
@@ -1949,7 +1949,7 @@
     "Pays": "Belgique",
     "Nombre": 2,
     "Total": 26,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2012,
@@ -1957,7 +1957,7 @@
     "Pays": "Finlande",
     "Nombre": 2,
     "Total": 26,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2012,
@@ -1965,7 +1965,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 25,
-    "Pourcentage": "8,00%"
+    "Pourcentage": 8
   },
   {
     "Annee": 2012,
@@ -1973,15 +1973,15 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 13,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2012,
     "Scene": "Main 01",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2012,
@@ -1989,7 +1989,7 @@
     "Pays": "NA",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2012,
@@ -1997,7 +1997,7 @@
     "Pays": "Danemark",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2012,
@@ -2005,7 +2005,7 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -2013,7 +2013,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2012,
@@ -2021,7 +2021,7 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2012,
@@ -2029,15 +2029,15 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 26,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2012,
     "Scene": "Altar",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2012,
@@ -2045,7 +2045,7 @@
     "Pays": "Irlande",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -2053,7 +2053,7 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 24,
-    "Pourcentage": "12,50%"
+    "Pourcentage": 12.5
   },
   {
     "Annee": 2012,
@@ -2061,7 +2061,7 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2012,
@@ -2069,7 +2069,7 @@
     "Pays": "Espagne",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -2077,7 +2077,7 @@
     "Pays": "Italie",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -2085,7 +2085,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 2,
     "Total": 26,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2012,
@@ -2093,7 +2093,7 @@
     "Pays": "Danemark",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -2101,7 +2101,7 @@
     "Pays": "Canada",
     "Nombre": 2,
     "Total": 24,
-    "Pourcentage": "8,33%"
+    "Pourcentage": 8.333
   },
   {
     "Annee": 2012,
@@ -2109,7 +2109,7 @@
     "Pays": "Australie",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2012,
@@ -2117,7 +2117,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -2125,7 +2125,7 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2012,
@@ -2133,7 +2133,7 @@
     "Pays": "Finlande",
     "Nombre": 2,
     "Total": 26,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2012,
@@ -2141,7 +2141,7 @@
     "Pays": "NA",
     "Nombre": 2,
     "Total": 13,
-    "Pourcentage": "15,38%"
+    "Pourcentage": 15.385
   },
   {
     "Annee": 2012,
@@ -2149,15 +2149,15 @@
     "Pays": "Angleterre",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2012,
     "Scene": "Warzone",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2012,
@@ -2165,7 +2165,7 @@
     "Pays": "Angleterre",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -2173,23 +2173,23 @@
     "Pays": "Islande",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
     "Scene": "Main 02",
-    "Pays": "Grèce",
+    "Pays": "Grece",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
     "Scene": "Main 02",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -2197,7 +2197,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 1,
     "Total": 13,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2012,
@@ -2205,7 +2205,7 @@
     "Pays": "Italie",
     "Nombre": 1,
     "Total": 25,
-    "Pourcentage": "4,00%"
+    "Pourcentage": 4
   },
   {
     "Annee": 2012,
@@ -2213,7 +2213,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2012,
@@ -2221,7 +2221,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 2,
     "Total": 24,
-    "Pourcentage": "8,33%"
+    "Pourcentage": 8.333
   },
   {
     "Annee": 2013,
@@ -2229,7 +2229,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 7,
     "Total": 24,
-    "Pourcentage": "29,17%"
+    "Pourcentage": 29.167
   },
   {
     "Annee": 2013,
@@ -2237,7 +2237,7 @@
     "Pays": "France",
     "Nombre": 4,
     "Total": 26,
-    "Pourcentage": "15,38%"
+    "Pourcentage": 15.385
   },
   {
     "Annee": 2013,
@@ -2245,7 +2245,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 12,
     "Total": 27,
-    "Pourcentage": "44,44%"
+    "Pourcentage": 44.444
   },
   {
     "Annee": 2013,
@@ -2253,7 +2253,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2261,7 +2261,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 24,
-    "Pourcentage": "8,33%"
+    "Pourcentage": 8.333
   },
   {
     "Annee": 2013,
@@ -2269,7 +2269,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 13,
     "Total": 27,
-    "Pourcentage": "48,15%"
+    "Pourcentage": 48.148
   },
   {
     "Annee": 2013,
@@ -2277,7 +2277,7 @@
     "Pays": "Finlande",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2013,
@@ -2285,15 +2285,15 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2013,
     "Scene": "Altar",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2013,
@@ -2301,7 +2301,7 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2309,23 +2309,23 @@
     "Pays": "France",
     "Nombre": 2,
     "Total": 24,
-    "Pourcentage": "8,33%"
+    "Pourcentage": 8.333
   },
   {
     "Annee": 2013,
     "Scene": "Main 01",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2013,
     "Scene": "Temple",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 8,
     "Total": 27,
-    "Pourcentage": "29,63%"
+    "Pourcentage": 29.63
   },
   {
     "Annee": 2013,
@@ -2333,7 +2333,7 @@
     "Pays": "Allemagne",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2013,
@@ -2341,7 +2341,7 @@
     "Pays": "Autriche",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2349,7 +2349,7 @@
     "Pays": "Espagne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2357,7 +2357,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 7,
     "Total": 27,
-    "Pourcentage": "25,93%"
+    "Pourcentage": 25.926
   },
   {
     "Annee": 2013,
@@ -2365,7 +2365,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2013,
@@ -2373,7 +2373,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 13,
     "Total": 26,
-    "Pourcentage": "50,00%"
+    "Pourcentage": 50
   },
   {
     "Annee": 2013,
@@ -2381,7 +2381,7 @@
     "Pays": "Angleterre",
     "Nombre": 5,
     "Total": 24,
-    "Pourcentage": "20,83%"
+    "Pourcentage": 20.833
   },
   {
     "Annee": 2013,
@@ -2389,7 +2389,7 @@
     "Pays": "Pays de Galles",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2013,
@@ -2397,7 +2397,7 @@
     "Pays": "Angleterre",
     "Nombre": 5,
     "Total": 27,
-    "Pourcentage": "18,52%"
+    "Pourcentage": 18.519
   },
   {
     "Annee": 2013,
@@ -2405,7 +2405,7 @@
     "Pays": "Australie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2413,7 +2413,7 @@
     "Pays": "Angleterre",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2421,15 +2421,15 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
     "Scene": "Valley",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 5,
     "Total": 26,
-    "Pourcentage": "19,23%"
+    "Pourcentage": 19.231
   },
   {
     "Annee": 2013,
@@ -2437,7 +2437,7 @@
     "Pays": "France",
     "Nombre": 11,
     "Total": 11,
-    "Pourcentage": "100,00%"
+    "Pourcentage": 100
   },
   {
     "Annee": 2013,
@@ -2445,23 +2445,23 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2013,
     "Scene": "Temple",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2013,
     "Scene": "Altar",
-    "Pays": "Grèce",
+    "Pays": "Grece",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2469,15 +2469,15 @@
     "Pays": "Australie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
     "Scene": "Main 02",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2013,
@@ -2485,15 +2485,15 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
     "Scene": "Main 01",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 3,
     "Total": 24,
-    "Pourcentage": "12,50%"
+    "Pourcentage": 12.5
   },
   {
     "Annee": 2013,
@@ -2501,7 +2501,7 @@
     "Pays": "Finlande",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2013,
@@ -2509,7 +2509,7 @@
     "Pays": "Espagne",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2013,
@@ -2517,7 +2517,7 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2525,7 +2525,7 @@
     "Pays": "France",
     "Nombre": 5,
     "Total": 27,
-    "Pourcentage": "18,52%"
+    "Pourcentage": 18.519
   },
   {
     "Annee": 2013,
@@ -2533,7 +2533,7 @@
     "Pays": "Colombie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2541,15 +2541,15 @@
     "Pays": "France",
     "Nombre": 6,
     "Total": 27,
-    "Pourcentage": "22,22%"
+    "Pourcentage": 22.222
   },
   {
     "Annee": 2013,
     "Scene": "Altar",
-    "Pays": "Brésil",
+    "Pays": "Bresil",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2557,7 +2557,7 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2013,
@@ -2565,7 +2565,7 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2573,7 +2573,7 @@
     "Pays": "France",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2013,
@@ -2581,7 +2581,7 @@
     "Pays": "France",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2013,
@@ -2589,7 +2589,7 @@
     "Pays": "Portugal",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2597,7 +2597,7 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2013,
@@ -2605,7 +2605,7 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2013,
@@ -2613,7 +2613,7 @@
     "Pays": "Australie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2621,7 +2621,7 @@
     "Pays": "Irlande",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2629,7 +2629,7 @@
     "Pays": "Chili",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2013,
@@ -2637,15 +2637,15 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
     "Scene": "Temple",
-    "Pays": "Grèce",
+    "Pays": "Grece",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2653,7 +2653,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2661,15 +2661,15 @@
     "Pays": "Italie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
     "Scene": "Temple",
-    "Pays": "Îles Féroé",
+    "Pays": "ÃŽles Feroe",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2677,7 +2677,7 @@
     "Pays": "Angleterre",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2013,
@@ -2685,7 +2685,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2013,
@@ -2693,7 +2693,7 @@
     "Pays": "Danemark",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2013,
@@ -2701,15 +2701,15 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2014,
     "Scene": "Temple",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 8,
     "Total": 27,
-    "Pourcentage": "29,63%"
+    "Pourcentage": 29.63
   },
   {
     "Annee": 2014,
@@ -2717,7 +2717,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 11,
     "Total": 24,
-    "Pourcentage": "45,83%"
+    "Pourcentage": 45.833
   },
   {
     "Annee": 2014,
@@ -2725,7 +2725,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 9,
     "Total": 26,
-    "Pourcentage": "34,62%"
+    "Pourcentage": 34.615
   },
   {
     "Annee": 2014,
@@ -2733,15 +2733,15 @@
     "Pays": "Espagne",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2014,
     "Scene": "Main 02",
-    "Pays": "Brésil",
+    "Pays": "Bresil",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2014,
@@ -2749,7 +2749,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2014,
@@ -2757,7 +2757,7 @@
     "Pays": "France",
     "Nombre": 11,
     "Total": 11,
-    "Pourcentage": "100,00%"
+    "Pourcentage": 100
   },
   {
     "Annee": 2014,
@@ -2765,7 +2765,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 13,
     "Total": 26,
-    "Pourcentage": "50,00%"
+    "Pourcentage": 50
   },
   {
     "Annee": 2014,
@@ -2773,7 +2773,7 @@
     "Pays": "Allemagne",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2014,
@@ -2781,7 +2781,7 @@
     "Pays": "France",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2014,
@@ -2789,7 +2789,7 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2014,
@@ -2797,7 +2797,7 @@
     "Pays": "France",
     "Nombre": 6,
     "Total": 27,
-    "Pourcentage": "22,22%"
+    "Pourcentage": 22.222
   },
   {
     "Annee": 2014,
@@ -2805,7 +2805,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2014,
@@ -2813,7 +2813,7 @@
     "Pays": "Angleterre",
     "Nombre": 5,
     "Total": 24,
-    "Pourcentage": "20,83%"
+    "Pourcentage": 20.833
   },
   {
     "Annee": 2014,
@@ -2821,7 +2821,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 15,
     "Total": 27,
-    "Pourcentage": "55,56%"
+    "Pourcentage": 55.556
   },
   {
     "Annee": 2014,
@@ -2829,15 +2829,15 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2014,
     "Scene": "Main 01",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 2,
     "Total": 24,
-    "Pourcentage": "8,33%"
+    "Pourcentage": 8.333
   },
   {
     "Annee": 2014,
@@ -2845,7 +2845,7 @@
     "Pays": "Suisse",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2014,
@@ -2853,7 +2853,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 8,
     "Total": 27,
-    "Pourcentage": "29,63%"
+    "Pourcentage": 29.63
   },
   {
     "Annee": 2014,
@@ -2861,7 +2861,7 @@
     "Pays": "Pays de Galles",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2014,
@@ -2869,7 +2869,7 @@
     "Pays": "France",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2014,
@@ -2877,7 +2877,7 @@
     "Pays": "Japon",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2014,
@@ -2885,7 +2885,7 @@
     "Pays": "Canada",
     "Nombre": 2,
     "Total": 26,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2014,
@@ -2893,7 +2893,7 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2014,
@@ -2901,7 +2901,7 @@
     "Pays": "Japon",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2014,
@@ -2909,7 +2909,7 @@
     "Pays": "France",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2014,
@@ -2917,7 +2917,7 @@
     "Pays": "Australie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2014,
@@ -2925,7 +2925,7 @@
     "Pays": "Roumanie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2014,
@@ -2933,23 +2933,23 @@
     "Pays": "Allemagne",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2014,
     "Scene": "Valley",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2014,
     "Scene": "Main 02",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2014,
@@ -2957,7 +2957,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2014,
@@ -2965,7 +2965,7 @@
     "Pays": "Canada",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2014,
@@ -2973,7 +2973,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2014,
@@ -2981,7 +2981,7 @@
     "Pays": "Pays de Galles",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2014,
@@ -2989,7 +2989,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2014,
@@ -2997,7 +2997,7 @@
     "Pays": "Finlande",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2014,
@@ -3005,15 +3005,15 @@
     "Pays": "Singapour",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2014,
     "Scene": "Main 02",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 2,
     "Total": 26,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2014,
@@ -3021,15 +3021,15 @@
     "Pays": "France",
     "Nombre": 3,
     "Total": 24,
-    "Pourcentage": "12,50%"
+    "Pourcentage": 12.5
   },
   {
     "Annee": 2014,
     "Scene": "Warzone",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 2,
     "Total": 26,
-    "Pourcentage": "7,69%"
+    "Pourcentage": 7.692
   },
   {
     "Annee": 2014,
@@ -3037,7 +3037,7 @@
     "Pays": "Angleterre",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2014,
@@ -3045,15 +3045,15 @@
     "Pays": "France",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2014,
     "Scene": "Warzone",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2014,
@@ -3061,7 +3061,7 @@
     "Pays": "Belgique",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2014,
@@ -3069,23 +3069,23 @@
     "Pays": "Italie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2014,
     "Scene": "Altar",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2014,
     "Scene": "Altar",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2014,
@@ -3093,7 +3093,7 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2014,
@@ -3101,7 +3101,7 @@
     "Pays": "Autriche",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2014,
@@ -3109,15 +3109,15 @@
     "Pays": "Afrique du Sud",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2014,
     "Scene": "Altar",
-    "Pays": "Grèce",
+    "Pays": "Grece",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2014,
@@ -3125,7 +3125,7 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2014,
@@ -3133,7 +3133,7 @@
     "Pays": "Islande",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2014,
@@ -3141,15 +3141,15 @@
     "Pays": "Irlande",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2014,
     "Scene": "Altar",
-    "Pays": "Nouvelle-Zélande",
+    "Pays": "Nouvelle-Zelande",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2014,
@@ -3157,15 +3157,15 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2014,
     "Scene": "Temple",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
@@ -3173,7 +3173,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 10,
     "Total": 24,
-    "Pourcentage": "41,67%"
+    "Pourcentage": 41.667
   },
   {
     "Annee": 2015,
@@ -3181,7 +3181,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 15,
     "Total": 27,
-    "Pourcentage": "55,56%"
+    "Pourcentage": 55.556
   },
   {
     "Annee": 2015,
@@ -3189,7 +3189,7 @@
     "Pays": "Australie",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2015,
@@ -3197,15 +3197,15 @@
     "Pays": "Ecosse",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
     "Scene": "Altar",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 7,
     "Total": 27,
-    "Pourcentage": "25,93%"
+    "Pourcentage": 25.926
   },
   {
     "Annee": 2015,
@@ -3213,7 +3213,7 @@
     "Pays": "France",
     "Nombre": 5,
     "Total": 27,
-    "Pourcentage": "18,52%"
+    "Pourcentage": 18.519
   },
   {
     "Annee": 2015,
@@ -3221,15 +3221,15 @@
     "Pays": "Russie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
     "Scene": "Main 02",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2015,
@@ -3237,7 +3237,7 @@
     "Pays": "Angleterre",
     "Nombre": 6,
     "Total": 24,
-    "Pourcentage": "25,00%"
+    "Pourcentage": 25
   },
   {
     "Annee": 2015,
@@ -3245,7 +3245,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 14,
     "Total": 26,
-    "Pourcentage": "53,85%"
+    "Pourcentage": 53.846
   },
   {
     "Annee": 2015,
@@ -3253,7 +3253,7 @@
     "Pays": "France",
     "Nombre": 6,
     "Total": 26,
-    "Pourcentage": "23,08%"
+    "Pourcentage": 23.077
   },
   {
     "Annee": 2015,
@@ -3261,7 +3261,7 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
@@ -3269,7 +3269,7 @@
     "Pays": "France",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2015,
@@ -3277,7 +3277,7 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 26,
-    "Pourcentage": "11,54%"
+    "Pourcentage": 11.538
   },
   {
     "Annee": 2015,
@@ -3285,7 +3285,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2015,
@@ -3293,15 +3293,15 @@
     "Pays": "Pays-Bas",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2015,
     "Scene": "Main 01",
-    "Pays": "Brésil",
+    "Pays": "Bresil",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2015,
@@ -3309,7 +3309,7 @@
     "Pays": "France",
     "Nombre": 10,
     "Total": 11,
-    "Pourcentage": "90,91%"
+    "Pourcentage": 90.909
   },
   {
     "Annee": 2015,
@@ -3317,7 +3317,7 @@
     "Pays": "Finlande",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2015,
@@ -3325,7 +3325,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2015,
@@ -3333,7 +3333,7 @@
     "Pays": "Japon",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
@@ -3341,15 +3341,15 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2015,
     "Scene": "Temple",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
@@ -3357,7 +3357,7 @@
     "Pays": "France",
     "Nombre": 5,
     "Total": 27,
-    "Pourcentage": "18,52%"
+    "Pourcentage": 18.519
   },
   {
     "Annee": 2015,
@@ -3365,7 +3365,7 @@
     "Pays": "France",
     "Nombre": 5,
     "Total": 27,
-    "Pourcentage": "18,52%"
+    "Pourcentage": 18.519
   },
   {
     "Annee": 2015,
@@ -3373,7 +3373,7 @@
     "Pays": "Allemagne",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2015,
@@ -3381,7 +3381,7 @@
     "Pays": "Finlande",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2015,
@@ -3389,7 +3389,7 @@
     "Pays": "Belgique",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
@@ -3397,7 +3397,7 @@
     "Pays": "Japon",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
@@ -3405,7 +3405,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
@@ -3413,7 +3413,7 @@
     "Pays": "France",
     "Nombre": 3,
     "Total": 24,
-    "Pourcentage": "12,50%"
+    "Pourcentage": 12.5
   },
   {
     "Annee": 2015,
@@ -3421,7 +3421,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 12,
     "Total": 27,
-    "Pourcentage": "44,44%"
+    "Pourcentage": 44.444
   },
   {
     "Annee": 2015,
@@ -3429,7 +3429,7 @@
     "Pays": "Finlande",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2015,
@@ -3437,7 +3437,7 @@
     "Pays": "Italie",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2015,
@@ -3445,15 +3445,15 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2015,
     "Scene": "Temple",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 5,
     "Total": 27,
-    "Pourcentage": "18,52%"
+    "Pourcentage": 18.519
   },
   {
     "Annee": 2015,
@@ -3461,7 +3461,7 @@
     "Pays": "Belgique",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
@@ -3469,7 +3469,7 @@
     "Pays": "NA",
     "Nombre": 1,
     "Total": 11,
-    "Pourcentage": "9,09%"
+    "Pourcentage": 9.091
   },
   {
     "Annee": 2015,
@@ -3477,7 +3477,7 @@
     "Pays": "Australie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
@@ -3485,7 +3485,7 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2015,
@@ -3493,7 +3493,7 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2015,
@@ -3501,7 +3501,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
@@ -3509,7 +3509,7 @@
     "Pays": "Suisse",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2015,
@@ -3517,7 +3517,7 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
@@ -3525,7 +3525,7 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2015,
@@ -3533,7 +3533,7 @@
     "Pays": "Lettonie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
@@ -3541,15 +3541,15 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
     "Scene": "Valley",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2015,
@@ -3557,7 +3557,7 @@
     "Pays": "Irlande du Nord",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2015,
@@ -3565,7 +3565,7 @@
     "Pays": "Ecosse",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2015,
@@ -3573,7 +3573,7 @@
     "Pays": "Belgique",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2015,
@@ -3581,23 +3581,23 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2015,
     "Scene": "Warzone",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 1,
     "Total": 26,
-    "Pourcentage": "3,85%"
+    "Pourcentage": 3.846
   },
   {
     "Annee": 2016,
     "Scene": "Temple",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 6,
     "Total": 27,
-    "Pourcentage": "22,22%"
+    "Pourcentage": 22.222
   },
   {
     "Annee": 2016,
@@ -3605,7 +3605,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 11,
     "Total": 27,
-    "Pourcentage": "40,74%"
+    "Pourcentage": 40.741
   },
   {
     "Annee": 2016,
@@ -3613,7 +3613,7 @@
     "Pays": "France",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2016,
@@ -3621,7 +3621,7 @@
     "Pays": "France",
     "Nombre": 6,
     "Total": 27,
-    "Pourcentage": "22,22%"
+    "Pourcentage": 22.222
   },
   {
     "Annee": 2016,
@@ -3629,15 +3629,15 @@
     "Pays": "Etats-Unis",
     "Nombre": 11,
     "Total": 27,
-    "Pourcentage": "40,74%"
+    "Pourcentage": 40.741
   },
   {
     "Annee": 2016,
     "Scene": "Main 02",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2016,
@@ -3645,7 +3645,7 @@
     "Pays": "France",
     "Nombre": 8,
     "Total": 20,
-    "Pourcentage": "40,00%"
+    "Pourcentage": 40
   },
   {
     "Annee": 2016,
@@ -3653,7 +3653,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 11,
     "Total": 23,
-    "Pourcentage": "47,83%"
+    "Pourcentage": 47.826
   },
   {
     "Annee": 2016,
@@ -3661,7 +3661,7 @@
     "Pays": "Finlande",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2016,
@@ -3669,7 +3669,7 @@
     "Pays": "Italie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -3677,7 +3677,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -3685,15 +3685,15 @@
     "Pays": "Etats-Unis",
     "Nombre": 10,
     "Total": 27,
-    "Pourcentage": "37,04%"
+    "Pourcentage": 37.037
   },
   {
     "Annee": 2016,
     "Scene": "Main 02",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2016,
@@ -3701,7 +3701,7 @@
     "Pays": "Lithuanie",
     "Nombre": 1,
     "Total": 20,
-    "Pourcentage": "5,00%"
+    "Pourcentage": 5
   },
   {
     "Annee": 2016,
@@ -3709,7 +3709,7 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 23,
-    "Pourcentage": "13,04%"
+    "Pourcentage": 13.043
   },
   {
     "Annee": 2016,
@@ -3717,7 +3717,7 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -3725,7 +3725,7 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2016,
@@ -3733,7 +3733,7 @@
     "Pays": "Pays de Galles",
     "Nombre": 1,
     "Total": 23,
-    "Pourcentage": "4,35%"
+    "Pourcentage": 4.348
   },
   {
     "Annee": 2016,
@@ -3741,7 +3741,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2016,
@@ -3749,7 +3749,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 16,
     "Total": 28,
-    "Pourcentage": "57,14%"
+    "Pourcentage": 57.143
   },
   {
     "Annee": 2016,
@@ -3757,7 +3757,7 @@
     "Pays": "Irlande",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2016,
@@ -3765,7 +3765,7 @@
     "Pays": "NA",
     "Nombre": 4,
     "Total": 20,
-    "Pourcentage": "20,00%"
+    "Pourcentage": 20
   },
   {
     "Annee": 2016,
@@ -3773,15 +3773,15 @@
     "Pays": "Allemagne",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2016,
     "Scene": "Temple",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -3789,7 +3789,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 28,
-    "Pourcentage": "3,57%"
+    "Pourcentage": 3.571
   },
   {
     "Annee": 2016,
@@ -3797,7 +3797,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -3805,7 +3805,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 2,
     "Total": 23,
-    "Pourcentage": "8,70%"
+    "Pourcentage": 8.696
   },
   {
     "Annee": 2016,
@@ -3813,7 +3813,7 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2016,
@@ -3821,7 +3821,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 2,
     "Total": 20,
-    "Pourcentage": "10,00%"
+    "Pourcentage": 10
   },
   {
     "Annee": 2016,
@@ -3829,15 +3829,15 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2016,
     "Scene": "Altar",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2016,
@@ -3845,7 +3845,7 @@
     "Pays": "Italie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -3853,7 +3853,7 @@
     "Pays": "France",
     "Nombre": 2,
     "Total": 23,
-    "Pourcentage": "8,70%"
+    "Pourcentage": 8.696
   },
   {
     "Annee": 2016,
@@ -3861,7 +3861,7 @@
     "Pays": "NA",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -3869,7 +3869,7 @@
     "Pays": "France",
     "Nombre": 4,
     "Total": 28,
-    "Pourcentage": "14,29%"
+    "Pourcentage": 14.286
   },
   {
     "Annee": 2016,
@@ -3877,7 +3877,7 @@
     "Pays": "France",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2016,
@@ -3885,7 +3885,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -3893,7 +3893,7 @@
     "Pays": "Colombie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -3901,15 +3901,15 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
     "Scene": "Valley",
-    "Pays": "Corée du Sud",
+    "Pays": "Coree du Sud",
     "Nombre": 1,
     "Total": 28,
-    "Pourcentage": "3,57%"
+    "Pourcentage": 3.571
   },
   {
     "Annee": 2016,
@@ -3917,7 +3917,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 28,
-    "Pourcentage": "7,14%"
+    "Pourcentage": 7.143
   },
   {
     "Annee": 2016,
@@ -3925,7 +3925,7 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 20,
-    "Pourcentage": "5,00%"
+    "Pourcentage": 5
   },
   {
     "Annee": 2016,
@@ -3933,15 +3933,15 @@
     "Pays": "Danemark",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
     "Scene": "Warzone",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -3949,7 +3949,7 @@
     "Pays": "France",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2016,
@@ -3957,7 +3957,7 @@
     "Pays": "Japon",
     "Nombre": 1,
     "Total": 23,
-    "Pourcentage": "4,35%"
+    "Pourcentage": 4.348
   },
   {
     "Annee": 2016,
@@ -3965,15 +3965,15 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
     "Scene": "Valley",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 1,
     "Total": 28,
-    "Pourcentage": "3,57%"
+    "Pourcentage": 3.571
   },
   {
     "Annee": 2016,
@@ -3981,7 +3981,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 20,
-    "Pourcentage": "10,00%"
+    "Pourcentage": 10
   },
   {
     "Annee": 2016,
@@ -3989,7 +3989,7 @@
     "Pays": "Danemark",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -3997,15 +3997,15 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2016,
     "Scene": "Main 02",
-    "Pays": "Israël",
+    "Pays": "Israel",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -4013,7 +4013,7 @@
     "Pays": "Angleterre",
     "Nombre": 2,
     "Total": 28,
-    "Pourcentage": "7,14%"
+    "Pourcentage": 7.143
   },
   {
     "Annee": 2016,
@@ -4021,15 +4021,15 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 23,
-    "Pourcentage": "4,35%"
+    "Pourcentage": 4.348
   },
   {
     "Annee": 2016,
     "Scene": "Warzone",
-    "Pays": "Brésil",
+    "Pays": "Bresil",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -4037,15 +4037,15 @@
     "Pays": "Ecosse",
     "Nombre": 1,
     "Total": 20,
-    "Pourcentage": "5,00%"
+    "Pourcentage": 5
   },
   {
     "Annee": 2016,
     "Scene": "Warzone",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2016,
@@ -4053,7 +4053,7 @@
     "Pays": "Italie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -4061,7 +4061,7 @@
     "Pays": "Islande",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -4069,7 +4069,7 @@
     "Pays": "Belgique",
     "Nombre": 1,
     "Total": 23,
-    "Pourcentage": "4,35%"
+    "Pourcentage": 4.348
   },
   {
     "Annee": 2016,
@@ -4077,7 +4077,7 @@
     "Pays": "Ukraine",
     "Nombre": 1,
     "Total": 28,
-    "Pourcentage": "3,57%"
+    "Pourcentage": 3.571
   },
   {
     "Annee": 2016,
@@ -4085,7 +4085,7 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
@@ -4093,7 +4093,7 @@
     "Pays": "Australie",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2016,
@@ -4101,15 +4101,15 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2016,
     "Scene": "Metal Corner",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 1,
     "Total": 20,
-    "Pourcentage": "5,00%"
+    "Pourcentage": 5
   },
   {
     "Annee": 2016,
@@ -4117,7 +4117,7 @@
     "Pays": "Danemark",
     "Nombre": 1,
     "Total": 23,
-    "Pourcentage": "4,35%"
+    "Pourcentage": 4.348
   },
   {
     "Annee": 2017,
@@ -4125,7 +4125,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 13,
     "Total": 24,
-    "Pourcentage": "54,17%"
+    "Pourcentage": 54.167
   },
   {
     "Annee": 2017,
@@ -4133,7 +4133,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 11,
     "Total": 27,
-    "Pourcentage": "40,74%"
+    "Pourcentage": 40.741
   },
   {
     "Annee": 2017,
@@ -4141,7 +4141,7 @@
     "Pays": "Australie",
     "Nombre": 3,
     "Total": 24,
-    "Pourcentage": "12,50%"
+    "Pourcentage": 12.5
   },
   {
     "Annee": 2017,
@@ -4149,7 +4149,7 @@
     "Pays": "France",
     "Nombre": 7,
     "Total": 27,
-    "Pourcentage": "25,93%"
+    "Pourcentage": 25.926
   },
   {
     "Annee": 2017,
@@ -4157,7 +4157,7 @@
     "Pays": "Ecosse",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4165,7 +4165,7 @@
     "Pays": "Finlande",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4173,15 +4173,15 @@
     "Pays": "Etats-Unis",
     "Nombre": 10,
     "Total": 27,
-    "Pourcentage": "37,04%"
+    "Pourcentage": 37.037
   },
   {
     "Annee": 2017,
     "Scene": "Main 01",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2017,
@@ -4189,7 +4189,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 13,
     "Total": 27,
-    "Pourcentage": "48,15%"
+    "Pourcentage": 48.148
   },
   {
     "Annee": 2017,
@@ -4197,7 +4197,7 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4205,7 +4205,7 @@
     "Pays": "Autriche",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4213,7 +4213,7 @@
     "Pays": "France",
     "Nombre": 3,
     "Total": 24,
-    "Pourcentage": "12,50%"
+    "Pourcentage": 12.5
   },
   {
     "Annee": 2017,
@@ -4221,7 +4221,7 @@
     "Pays": "Canada",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2017,
@@ -4229,7 +4229,7 @@
     "Pays": "France",
     "Nombre": 11,
     "Total": 11,
-    "Pourcentage": "100,00%"
+    "Pourcentage": 100
   },
   {
     "Annee": 2017,
@@ -4237,7 +4237,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4245,7 +4245,7 @@
     "Pays": "Angleterre",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2017,
@@ -4253,7 +4253,7 @@
     "Pays": "NA",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2017,
@@ -4261,7 +4261,7 @@
     "Pays": "Angleterre",
     "Nombre": 5,
     "Total": 27,
-    "Pourcentage": "18,52%"
+    "Pourcentage": 18.519
   },
   {
     "Annee": 2017,
@@ -4269,7 +4269,7 @@
     "Pays": "France",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2017,
@@ -4277,7 +4277,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4285,7 +4285,7 @@
     "Pays": "Suisse",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2017,
@@ -4293,7 +4293,7 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2017,
@@ -4301,7 +4301,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2017,
@@ -4309,7 +4309,7 @@
     "Pays": "Pologne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4317,7 +4317,7 @@
     "Pays": "Etats-Unis",
     "Nombre": 9,
     "Total": 27,
-    "Pourcentage": "33,33%"
+    "Pourcentage": 33.333
   },
   {
     "Annee": 2017,
@@ -4325,7 +4325,7 @@
     "Pays": "Angleterre",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2017,
@@ -4333,7 +4333,7 @@
     "Pays": "Australie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4341,15 +4341,15 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2017,
     "Scene": "Temple",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2017,
@@ -4357,31 +4357,31 @@
     "Pays": "Belgique",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
     "Scene": "Temple",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2017,
     "Scene": "Main 02",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2017,
     "Scene": "Altar",
-    "Pays": "Suède",
+    "Pays": "Suede",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2017,
@@ -4389,7 +4389,7 @@
     "Pays": "France",
     "Nombre": 6,
     "Total": 27,
-    "Pourcentage": "22,22%"
+    "Pourcentage": 22.222
   },
   {
     "Annee": 2017,
@@ -4397,7 +4397,7 @@
     "Pays": "France",
     "Nombre": 4,
     "Total": 27,
-    "Pourcentage": "14,81%"
+    "Pourcentage": 14.815
   },
   {
     "Annee": 2017,
@@ -4405,7 +4405,7 @@
     "Pays": "Angleterre",
     "Nombre": 5,
     "Total": 27,
-    "Pourcentage": "18,52%"
+    "Pourcentage": 18.519
   },
   {
     "Annee": 2017,
@@ -4413,7 +4413,7 @@
     "Pays": "Autriche",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4421,15 +4421,15 @@
     "Pays": "Allemagne",
     "Nombre": 2,
     "Total": 27,
-    "Pourcentage": "7,41%"
+    "Pourcentage": 7.407
   },
   {
     "Annee": 2017,
     "Scene": "Altar",
-    "Pays": "Brésil",
+    "Pays": "Bresil",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4437,7 +4437,7 @@
     "Pays": "Canada",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4445,7 +4445,7 @@
     "Pays": "Suisse",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4453,7 +4453,7 @@
     "Pays": "Tunisie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4461,15 +4461,15 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
     "Scene": "Valley",
-    "Pays": "Norvège",
+    "Pays": "Norvege",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4477,7 +4477,7 @@
     "Pays": "Pays de Galles",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2017,
@@ -4485,7 +4485,7 @@
     "Pays": "Danemark",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4493,7 +4493,7 @@
     "Pays": "Ecosse",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4501,7 +4501,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4509,7 +4509,7 @@
     "Pays": "Finlande",
     "Nombre": 3,
     "Total": 27,
-    "Pourcentage": "11,11%"
+    "Pourcentage": 11.111
   },
   {
     "Annee": 2017,
@@ -4517,7 +4517,7 @@
     "Pays": "Pays de Galles",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4525,7 +4525,7 @@
     "Pays": "Pays-Bas",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4533,7 +4533,7 @@
     "Pays": "Allemagne",
     "Nombre": 1,
     "Total": 24,
-    "Pourcentage": "4,17%"
+    "Pourcentage": 4.167
   },
   {
     "Annee": 2017,
@@ -4541,15 +4541,15 @@
     "Pays": "Islande",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
     "Scene": "Temple",
-    "Pays": "Îles Féroé",
+    "Pays": "ÃŽles Feroe",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4557,7 +4557,7 @@
     "Pays": "Italie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4565,7 +4565,7 @@
     "Pays": "France",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4573,7 +4573,7 @@
     "Pays": "Russie",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   },
   {
     "Annee": 2017,
@@ -4581,6 +4581,6 @@
     "Pays": "Espagne",
     "Nombre": 1,
     "Total": 27,
-    "Pourcentage": "3,70%"
+    "Pourcentage": 3.704
   }
 ]
