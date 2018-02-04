@@ -45,6 +45,11 @@
     text-align: center;
     width: 100%;
   }
+  >.donneeliste{
+    @extend %titre-titre;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .info-epci{
