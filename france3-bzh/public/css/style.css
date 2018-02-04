@@ -131,6 +131,8 @@ h3
   background-size: 100%;
 }
 
+
+
 #nuit
 {
   visibility: hidden;
@@ -400,6 +402,63 @@ h3
   height: 2% !important;
 }
 
+
+/* -- Slide 2 evenements*/
+
+#section_evenements {
+  background-image: url(../img/slide2/background_slide2.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 800px;
+  position: relative;
+}
+#text_content_slide2 {
+  width: 35%;
+  margin-left: 15%;
+  margin-top: 5%;
+  font-size: 18px;
+  text-align: justify;
+}
+#div_indication_slide_evt {
+  float: left;
+  position: relative;
+  top: 0;
+  width: 5%
+  display: block;
+  margin-left: 15%;
+}
+#indication_slide_evt {
+  color: #F53855;
+  font-size: 12px;
+  position: relative;
+}
+#train_slide2 {
+  position: relative;
+  width: 100%;
+  /* margin-left: -10000%; */
+  top:1200%;
+}
+#donnees_slide2 {
+  text-align: center;
+  width: 100%;
+  height: 1%;
+  display: inline-block;
+  margin-left: 5%;
+}
+
+#slide2_container_text {
+  position: relative;
+  top:-15%;
+}
+
+#donnees_slide2 p{
+  text-align: center;
+}
+.data_slide2 {
+  float: left;
+  margin-left: 5%
+}
 
 .orange {
   color: #E37B40;

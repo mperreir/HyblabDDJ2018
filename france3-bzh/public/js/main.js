@@ -147,7 +147,7 @@ $( "#voiture" ).click(function() {
     $( "#voiture" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
       $("#pie_veh").css("margin-top", "7%");
-      $("#pie_veh").css("height", "40%");
+      $("#pie_veh").css("height", "25%");
       $("#pie_veh").attr("src", "img/Vehicules/voiture_graphique.svg");
 
     });
@@ -198,7 +198,7 @@ $( "#camion" ).click(function() {
     $( "#camion" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
       $("#pie_veh").css("margin-top", "5%");
-      $("#pie_veh").css("height", "45%");
+      $("#pie_veh").css("height", "35%");
       $("#pie_veh").attr("src", "img/Vehicules/camion_graphique.svg");
     });
     $("#pie_veh").fadeIn("slow");
@@ -250,7 +250,7 @@ $( "#moto" ).click(function() {
     $( "#moto" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
       $("#pie_veh").css("margin-top", "5%");
-      $("#pie_veh").css("height", "50%");
+      $("#pie_veh").css("height", "40%");
       $("#pie_veh").attr("src", "img/Vehicules/moto_graphique.svg");
     });
     $("#pie_veh").fadeIn("slow");
@@ -350,7 +350,7 @@ $( "#img_train_slide3" ).click(function() {
   if (   $("#pie_veh").attr("src") != "img/Vehicules/train_graphique.svg" ) {
     $( "#img_train_slide3" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
-      $("#pie_veh").css("height", "30%");
+      $("#pie_veh").css("height", "20%");
       $("#pie_veh").css("margin-top", "7%");
       $("#pie_veh").attr("src", "img/Vehicules/train_graphique.svg");
     });
@@ -389,6 +389,30 @@ $( "#img_train_slide3" ).click(function() {
 // $("#mort").hide();
 // $("#hospitalise").hide();
 // $("#grave").hide();
+
+
+// Slide 2 train qui avance
+
+
+// $("#train_slide2").animate(
+//   {'margin-left': "300px",
+//   'display':"block"
+// });
+
+// function blinker() {
+//     $('#indication_slide_evt').fadeOut(1500);
+//     $('#indication_slide_evt').fadeIn(1500);
+// }
+//
+// var blinkerIntervall = setInterval(blinker, 1000);
+$('#div_indication_slide_evt').click(function(){
+  $("#indication_slide_evt").animate({opacity: 0}, 800);
+  $("#train_slide2").animate(
+    {'margin-left': "300px",
+    'display':"block"
+  });
+})
+
 
 fetch('data/france.geojson')
     // this promise will be fulfilled when the json fill will be
