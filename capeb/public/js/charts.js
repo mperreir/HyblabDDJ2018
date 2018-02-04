@@ -50,24 +50,26 @@ var drawChart3dEmploi = function(data){
 	var region = {
 					"labels": ["annee","Moy_recrutement_envi"],
 					"values":[["2014","2015","2016","2017"],["1.11538461538462","1.13223140495868","1.11678832116788","1.35028248587571"]]
+
 				 };
-	data = [data.Recrutement_Evo, region];
+	data2 = [data.Recrutement_Evo, region];
 	var labels = ["Epci", "Région"];
-	var d = data.map(function(val, i) {return {
-											label: labels[i], 
+	var d = data2.map(function(val, i){return {
+											label: labels[i],
 											backgroundColor: colors[i], 
 											borderColor: colors[i], 
 											data: val.values[1].map(Number),
 											fill: true
 										  }
 								 });
-	new Chart(ctx, {
+
+	var ch = new Chart(ctx, {
 		// The type of chart we want to create
 		type: 'line',
 
 		// The data for our dataset
 		data: {
-			labels: data[0].values[0],
+			labels: data2[0].values[0],
 			datasets: d
 		},
 		// Configuration options go here
@@ -105,6 +107,24 @@ var drawChart3dEmploi = function(data){
                 }
 		}	
 	});
+	
+	cvs.onclick = function(evt) {
+      var activePoints = ch.getElementsAtEvent(evt);
+      if (activePoints[0]) {
+        var chartData = activePoints[0]['_chart'].config.data;
+        var idx = activePoints[0]['_index'];
+
+        var label = chartData.labels[idx];
+        var value = chartData.datasets[0].data[idx];
+		
+		var i = data.Recrutement_Evo_Act.values[0].indexOf(label)
+		var p = {"labels" : data.Recrutement_Evo_Act.labels.slice(1), "values": data.Recrutement_Evo_Act.values[1 + i]};
+				$(".plus").html("");
+
+
+		drawBarChart(p, "Rapartition du nombre de recrutement envisagé par activité")
+      }
+    };
 };
 
 
@@ -150,14 +170,10 @@ function drawLineChart(data, title){
 
 }
 function drawBarChart(data, title){
-	var sec = document.getElementById("page3").appendChild(document.createElement('section'))
-	sec.className = "chart"
+	var sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
+		sec.className = "plus"
 
-	var h3 = sec.appendChild(document.createElement('h3'))
-			h3.innerHTML = title
-
-	var cvs = sec.appendChild(document.createElement('canvas'))
-
+    var cvs = sec.appendChild(document.createElement('canvas'))
 
 	var ctx = cvs.getContext("2d")
 	new Chart(ctx, {
