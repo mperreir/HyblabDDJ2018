@@ -549,6 +549,13 @@ a {
   bottom: 20px;
 }
 
+/* line 36, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-data.scss */
+.partie-data > .motif-capeb {
+  position: absolute;
+  bottom: -30px;
+  right: -8px;
+}
+
 /* style de la partie team */
 /* line 2, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
 .partie-team {
