@@ -1,0 +1,104 @@
+
+#credits {
+    position: absolute;
+/*    margin-top: 5px;
+    margin-right: 400px;*/
+
+
+ /*   float:right;*/
+    top: 5px;
+    right: 400px;
+
+
+    height: 19px;
+    width: 280.39px;
+    color: rgba(0,0,0,0.8);
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 19px;
+    text-align: center;
+
+}
+
+#home {
+    position: absolute;
+    top: 5px;
+    right: 700px;
+  /*  margin-top: 5px;
+    margin-right: 150px;*/
+
+
+    height: 19px;
+    width: 280.39px;
+    color: rgba(0,0,0,0.8);
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 19px;
+    text-align: center;
+}
+
+#logo-pdl {
+    margin-left: 50px;
+
+    height: 12.59%;
+    width: 13.59%;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.16);
+}
+
+h1 {
+    height: 20.94%;
+    width: 100%;
+    color: rgba(0,0,0,0.8);
+    font-family: Lato;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 54px;
+    text-align: center;
+}
+
+#conclusion {
+    margin-left: 350px;
+
+    height: 178px;
+    width: 674px;
+    color: rgba(0,0,0,0.8);
+    font-family: Lato;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.logo {
+    width: 250px;
+}
+
+.ecole {
+    float:left;
+    height: 300px;
+
+    margin: 20px;
+    padding: 10px;
+
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.16);
+}
+
+.nom {
+    margin-left: 50px;
+
+    color: #000000;
+    font-family: "Lucida Grande";
+    font-size: 16px;
+    line-height: 18px;
+}
+
+#ecoles {
+  /*  margin-left: 280px;*/
+    margin-left: 15%;
+    margin-right: 15%;
+}

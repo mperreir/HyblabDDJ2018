@@ -1,0 +1,127 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    background: #ee2f2c;
+}
+
+/* partie de droite */
+
+#container {
+    height: 100%;
+    height: -webkit-calc(100% - 100px);  /* pour Chrome */
+    height: -moz-calc(100% - 100px);     /* pour Firefox */
+    height: calc(100% - 100px);           /* pour support natif */
+
+
+    padding-left: 100px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background: #FFFFFF;
+}
+
+#selectionIntevalle {
+    padding-left: 100px;
+}
+
+.intervalle {
+    color: #909192;
+    font-family: "Avenir Next";
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+#container p {
+    padding-left: 100px;
+    font-size: 14px;
+}
+
+#intro {
+    height: 25px;
+    color: #212121;
+    font-family: "Avenir Next";
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+}
+
+/* partie de gauche */
+
+#texte {
+    height: 100%;
+    height: -webkit-calc(100% - 50px);  /* pour Chrome */
+    height: -moz-calc(100% - 50px);     /* pour Firefox */
+    height: calc(100% - 50px);          /* pour support natif */
+
+    padding-left: 40px;
+    padding-right: 40px;
+
+    padding-bottom: 50px;
+
+    float:left;
+    width:400px;
+
+    background-color: #ABCC21;
+}
+
+#logo-pdl {
+    margin-left: 50px;
+    width: 174px;
+    background-color: #FFFFFF;
+}
+
+h2 {
+    color: #FFFFFF;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: Lato;
+}
+
+#credits {
+    float:right;
+    top: 5px;
+    right: 25px;
+}
+
+#home {
+    top: 5px;
+    right: 150px;
+}
+
+.accroche {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.explication {
+  /*  left: 41px;*/
+    top: 250px;
+
+    height: 23.65%;
+   /* width: 30.78%;*/
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.temoignage {
+    position: absolute;
+ /*   left: 41px;*/
+    top: 400px;
+
+    height: 158px;
+    width: 394px;
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 1px;
+    line-height: 25px;
+}

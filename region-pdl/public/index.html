@@ -7,7 +7,7 @@
     <!-- Basic viewport setting for mobile friendly page -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Déclaration de la feuille de style du document-->
-<!--    <link rel="stylesheet" href="css/style.css">-->
+    <!--    <link rel="stylesheet" href="css/style.css">-->
     <!-- Those polyfills are required so that old browsers support fetch mecanism -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
@@ -41,16 +41,24 @@
         <input title="borneInferieureAge" id="minAge" type="range" value="15" max="50" min="16" step="1" onchange="actualize(event, 'Age')">
         <input title="borneInferieureAge" id="maxAge" type="range" value="22" max="50" min="16" step="1" onchange="actualize(event, 'Age')">
 
+        <p id ="intervalleDistance"> </p>
+        <input title="borneInferieureDistance" id="minDistance" type="range" value="1" max="150" min="1" step="1" onchange="actualize(event, 'Distance')">
+        <input title="borneInferieureDistance" id="maxDistance" type="range" value="50" max="150" min="1" step="1" onchange="actualize(event, 'Distance')">
+
         <p id ="intervalleQuotient"> </p>
         <input title="borneInferieureQuotient" id="minQuotient" type="range" value="0" max="1000" min="0" step="10" onchange="actualize(event, 'Quotient')">
         <input title="borneInferieureQuotient" id="maxQuotient" type="range" value="600" max="1000" min="0" step="10" onchange="actualize(event, 'Quotient')">
 
         <p id ="intervalleNiveau"> </p>
-        <input title="borneInferieureNiveau" id="minNiveau" type="range" value="1" max="5" min="1" step="1" onchange="actualize(event, 'Niveau')">
-        <input title="borneInferieureNiveau" id="maxNiveau" type="range" value="6" max="6" min="1" step="1" onchange="actualize(event, 'Niveau')">
+            <input title="borneInferieureNiveau" id="minNiveau" type="range" value="1" max="6" min="1" step="1" onchange="actualize(event, 'Niveau')">
+            <input title="borneInferieureNiveau" id="maxNiveau" type="range" value="6" max="6" min="1" step="1" onchange="actualize(event, 'Niveau')">
     </p>
 
     <script>
+
+        //paramètres
+        var bandWidth = 30;
+        var borneX = 1600;
 
         function displayValue(event, variable){
             var varMin = document.getElementById("min" + variable).value;
@@ -64,19 +72,17 @@
             afficheBarres(datas, listeAides);
         }
 
-        displayValue("", 'Age'); //affichage de l'age par défaut
-        displayValue("", 'Quotient'); //affichage du quotient par défaut
-        displayValue("", 'Niveau'); //affichage du niveau par défaut
+        displayValue("", 'Age'); //affichage des données par défaut
+        displayValue("", 'Quotient');
+        displayValue("", 'Niveau');
+        displayValue("", 'Distance');
 
         var margin = {top: 50, right: 20, bottom: 10, left: 95},
             width = 800 - margin.left - margin.right,
             height = 200 - margin.top - margin.bottom;
 
-        var y = d3.scale.ordinal()
-            .rangeRoundBands([0, 70]);
-
-        var x = d3.scale.linear()
-            .rangeRound([0, width]);
+        var y;
+        var x;
 
         var nbCatAides;
         var nomCatAides = [];
@@ -87,23 +93,17 @@
         var datas = [];
         var idSVG = [];
 
-        var xAxis = d3.svg.axis()
-            .scale(x)
-            .orient("top");
-
-        var yAxis = d3.svg.axis()
-            .scale(y)
-            .orient("left");
-
-        var color = d3.scale.ordinal()
-            .range(couleursUtilisees);
+        var xAxis;
+        var yAxis;
+        var color;
 
         var couleurs = ["#c7001e", "#f6a580", "#cccccc", "#92c6db", "#086fad"];
+        var nbCouleursUtilisees = 3;
         var couleursUtilisees = [];
-        var aides = ["aide1", "aide2", "aide3", "aide4", "aide5"];
-        var aidesUtilisees = [];
 
         var listeAides = [];
+
+        var jsonCircles = [];
 
         function getAides(){
             $.getJSON( "data/aides.json", function(data) {
@@ -112,12 +112,13 @@
                     height = 200 - margin.top - margin.bottom;
 
                 y = d3.scale.ordinal()
-                    .rangeRoundBands([0, 70]);
+                    .rangeRoundBands([0, bandWidth]);
 
                 x = d3.scale.linear()
                     .rangeRound([0, width]);
 
-                nbCatAides = Object.keys(data).length; //on récupère le nombre de catégories d'aides
+             //   nbCatAides = Object.keys(data).length; //on récupère le nombre de catégories d'aides
+                nbCatAides = 1; //on récupère le nombre de catégories d'aides
                 nomCatAides = [];
 
                 $.each(data, function(i, aide) {
@@ -154,14 +155,8 @@
                     idSVG.push(nomAide);
                 });
 
-                couleurs = ["#c7001e", "#f6a580", "#cccccc", "#92c6db", "#086fad"];
-                couleursUtilisees = [];
-                aides = ["aide1", "aide2", "aide3", "aide4", "aide5"];
-                aidesUtilisees = [];
-
-                for (var i = 0; i < nbCatAides; i++){
-                    couleursUtilisees.push(couleurs[i]);
-                    aidesUtilisees.push(aides[i]);
+                for (var k = 0; k < nbCouleursUtilisees; k++){
+                    couleursUtilisees.push(couleurs[k]);
                 }
 
                 color = d3.scale.ordinal()
@@ -175,11 +170,9 @@
                     .scale(y)
                     .orient("left");
 
-                color.domain(aidesUtilisees);
-
                 for (var j = 0; j < nbCatAides; j++) {
 
-                    x.domain([0, 1600]).nice();
+                    x.domain([0, borneX]);
                     y.domain(datas[j].map(function (d) { return nomCatAides[j]; }));
 
                     listeAides.push(d3.select("#figure").append("svg")
@@ -189,17 +182,16 @@
                         .append("g")
                         .attr("transform", "translate(" + margin.left + "," + margin.top + ")"));
 
-                    listeAides[j].append("g")
+                    //affiche axe
+             /*       listeAides[j].append("g")
                         .attr("class", "x axis")
-                        .call(xAxis);
+                        .call(xAxis);*/
 
                     listeAides[j].append("g")
                         .attr("class", "y axis")
                         .call(yAxis);
                 }
-
                 afficheBarres(datas, listeAides);
-
 
             });
         }
@@ -222,35 +214,39 @@
             var age = getValueVariable('Age');
             var quotient = getValueVariable('Quotient');
             var niveau = getValueVariable('Niveau');
+            var distance = getValueVariable('Distance');
 
-            //       var listeAides = [];
+            jsonCircles = [];
 
-            for (var j = 0; j < 2; j++) {
+            for (var j = 0; j < nbCatAides; j++) {
                 //on sélectionne les datas correspondantes
                 var boxesU = [];
                 var xU = 0;
                 var previous = {name: "", montant: 0};
 
                 datas[j].boxes.forEach(function (aide) {
+
                     var pass = true;
                     if (((aide.agemin !== null) && (aide.agemin > age[1])) || ((aide.agemax !== null) && (aide.agemax < age[0]))) {
-                        //check l'age
                         pass = false;
                     }
                     if (((aide.quotientmin !== null) && (aide.quotientmin > quotient[1])) || ((aide.quotientmax !== null) && (aide.quotientmax < quotient[0]))) {
-                        //check le coeff
-                        console.log("trop petit quotient");
                         pass = false;
                     }
                     if (((aide.niveaumin !== null) && (aide.niveaumin > niveau[1])) || ((aide.niveaumax !== null) && (aide.niveaumax < niveau[0]))) {
-                        //check le coeff
                         pass = false;
                     }
+                    if (((aide.distancemin !== null) && (aide.distancemin > distance[1])) || ((aide.distancemax !== null) && (aide.distancemax < distance[0]))) {
+                        pass = false;
+                    }
+
                     if (pass && aide.name === previous.name) {
                         // si le précédent était la meme aide mais avec un montant inférieur, on l'enlève
                         if (aide.montant > previous.montant) {
                             boxesU.pop();
-                            xU = xU - previous.montant;
+                            if (xU - previous.montant >=0) {
+                                xU = xU - previous.montant;
+                            } else xU = 0;
                         } else { //sinon, on ajoute pas celui ci
                             aide.x0 = previous.x0;
                             aide.x1 = previous.x1;
@@ -258,8 +254,13 @@
                             pass = false;
                         }
                     }
+
                     if (pass) {
-                        aide.x0 = xU;
+                        if ( boxesU.length >= 1 ) {
+                            aide.x0 = boxesU[boxesU.length-1].x1;
+                        } else {
+                            aide.x0 = xU;
+                        }
                         aide.x1 = aide.montant + xU;
                         boxesU.push(aide);
                         xU += aide.montant;
@@ -267,13 +268,17 @@
                     previous = aide;
                 }, xU, previous);
 
+                var colorsCircles = ["green", "red", "blue"];
+
+                for (var i = 0; i < boxesU.length ; i++){
+                    jsonCircles.push({ "x_axis": boxesU[i].x1 *(width / borneX), "y_axis": bandWidth/2, "radius": bandWidth/2, "color" : colorsCircles[i], name: "cc" });
+                }
+
                 vakken = listeAides[j].selectAll(".question")
                     .data(datas[j])
                     .enter().append("g")
                     .attr("class", "bar")
-                    .attr("transform", function (d) {
-                        return "translate(0," + y(d.name) + ")";
-                    });
+                    .attr("transform", function (d) { return "translate(0," + y(d.name) + ")"; });
 
                 bars = vakken.selectAll("rect")
                     .data(boxesU)
@@ -281,48 +286,28 @@
 
                 bars.append("rect")
                     .attr("height", y.rangeBand())
-                    .attr("x", function (d) {
-                        return x(d.x0);
-                    }) //d.x0 au lieu de 0
-                    .attr("width", function (d) {
-                        return x(d.x1) - x(d.x0);
-                    }) //d.x0 au lieu de 0
-                    .style("fill", function (d) {
-                        return color(d.name);
-                    });
+                    .attr("x", function (d) { return x(d.x0); }) //d.x0 au lieu de 0
+                    .attr("width", function (d) { return x(d.x1) - x(d.x0); }) //d.x0 au lieu de 0
+                    .style("fill", function (d) { return color(d.name); });
 
                 bars.append("text")
-                    .attr("x", function (d) {
-                        return x(d.x0);
-                    })  //d.x0 au lieu de 0
+                    .attr("x", function (d) { return x(d.x0); })  //d.x0 au lieu de 0
                     .attr("y", y.rangeBand() / 2)
-                    .attr("dy", "0.5em")
+                    .attr("dy", "0.5em") // pour le petit décalage
                     .attr("dx", "0.5em")
                     .style("font", "10px sans-serif")
-                    .style("text-anchor", "begin")
-                    .text(function (d) {
-                        return d.name
-                    });
+        //            .style("text-anchor", "begin")
+                    .text(function (d) { return d.name });
 
                 vakken.insert("rect", ":first-child")
                     .attr("height", y.rangeBand())
                     .attr("x", "1")
                     .attr("width", width)
                     .attr("fill-opacity", "0.5")
-                    .style("fill", "#F5F5F5")
-                    .attr("class", function (d, index) {
-                        return index % 2 == 0 ? "even" : "uneven";
-                    });
+                    .style("fill", "#F5F5F5");
 
                 listeAides[j].append("g")
                     .attr("class", "y axis")
-                    .append("line")
-                    .attr("x1", x(0))
-                    .attr("x2", x(0))
-                    .attr("y2", height);
-
-                listeAides[j].append("g")
-                    .attr("class", "x axis")
                     .append("line")
                     .attr("x1", x(0))
                     .attr("x2", x(0))
@@ -333,6 +318,89 @@
                     .style("fill", "none")
                     //   .style("stroke", "#00913c")
                     .style("shape-rendering", "crispEdges");
+
+                var circles = listeAides[j].selectAll("circle")
+                    .data(jsonCircles)
+                    .enter()
+                    .append("circle");
+
+                var truc = listeAides[j].selectAll("g")
+                    .data(jsonCircles);
+
+                var styleCircles = circles
+                    .attr("cx", function (d) { return d.x_axis; })
+                    .attr("cy", function (d) { return d.y_axis; })
+                    .attr("r", function (d) { return d.radius; })
+                    .attr("stroke","black")
+                    .attr("fill", function (d) { return d.color; });
+
+                truc.append("text")
+                    .attr("dx", function(d){console.log(d);return d.x_axis-20})
+                    .attr("dy", function(d){return d.y_axis-30})
+                    .text(function(d){return d.color;});
+
+
+                //listeAides[0]
+       /*         var svg2 = d3.select("body").append("svg")
+                    .attr("width", width2)
+                    .attr("height", height2);*/
+
+                /* Define the data for the circles */
+      /*          var elem2 = svg2.selectAll("g")
+                    .data(jsonCircles);*/
+
+                /*Create and place the "blocks" containing the circle and the text */
+          /*      var elemEnter2 = elem2.enter()
+                    .append("g")
+                    .attr("transform", function(d){return "translate("+d.x_axis+",80)"});*/
+
+                var elem2 = listeAides[j].selectAll("g")
+                    .data(jsonCircles);
+
+          /*      var elemEnter2 = elem2.enter()
+                    .append("g")
+                    .attr("transform", function(d){return "translate("+d.x_axis+",80)"});*/
+
+   /*             var circle2 = elem2.append("circle")
+                    .attr("r", function(d){return d.radius} )
+                    .attr("cx", function (d) { return d.x_axis; })
+                    .attr("cy", function (d) { return 0; })
+                    .attr("stroke","black")
+                    .attr("fill", "blue");*/
+
+          /*      elem2.append("text")
+                    .attr("dx", function(d){return 50})
+                    .text(function(d){console.log(d);return d.x_axis});*/
+
+
+
+       /*         var width2 = 960,
+                    height2 = 500;
+
+                var svg = d3.select("body").append("svg")
+                    .attr("width", width2)
+                    .attr("height", height2);
+
+                    // Define the data for the circles
+                    var elem = svg.selectAll("g")
+                        .data(jsonCircles);
+
+                    //Create and place the "blocks" containing the circle and the text
+                    var elemEnter = elem.enter()
+                        .append("g")
+                        .attr("transform", function(d){return "translate("+d.x_axis+",20)"});
+
+                    //Create the circle for each block
+                    var circle = elemEnter.append("circle")
+                        .attr("r", function(d){return d.radius} )
+                        .attr("stroke","black")
+                        .attr("fill", "blue");
+
+                    // Create the text for each block
+                    elemEnter.append("text")
+                        .attr("dx", function(d){return -5})
+                        .text(function(d){return "blop"});*/
+
             }
         }
     </script>
