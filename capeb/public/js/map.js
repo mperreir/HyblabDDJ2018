@@ -15,10 +15,13 @@ var height = viewportHeight;
 var page2 = d3.select(".map-pdl");
 var svg = page2.append("svg")
     .attr("width", width).attr("height", height);
+
+console.log(width);
+console.log(height);
 var projection = d3.geoConicConformal()
-    .center([2.454071, 46.279229])
+    .center([2.8, 44.5])
     .scale(width*10)
-    .translate([width, height*0.8]);
+    .translate([width, height]);
 var path = d3.geoPath(projection);
 
 path.projection(projection);
@@ -72,18 +75,14 @@ $ (document).ready(function(){
 d3.select(window).on('resize', resize);
 
 function resize() {
-    width = parseInt(d3.select('.map-pdl').style('width'));
-    width = width;
-    height = height;
+    var width = parseInt(d3.select('.map-pdl').style('width'));
+    var height = parseInt(d3.select('.map-pdl').style('heigth'));
 
     projection
         .scale([width*10])
-        .translate([width,height*0.8]);
+        .translate([width/2,height/2]);
 
     d3.select("map-pdl").attr("width",width).attr("height",height);
     d3.select("svg").attr("width",width).attr("height",height);
-
     d3.selectAll("path").attr('d', path);
-
-
 }
