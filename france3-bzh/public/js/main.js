@@ -388,13 +388,31 @@ $( "#img_train_slide3" ).click(function() {
 // $("#mort").hide();
 // $("#hospitalise").hide();
 // $("#grave").hide();
+
+$('section_evenements').hover(function() {
+    $("#train_slide2").css('opacity', '1');
+})
+$('section_evenements').focusout(function() {
+    $("#train_slide2").css('opacity', '0');
+})
+
+
 $('#div_indication_slide_evt').click(function(){
   $("#indication_slide_evt").animate({opacity: 0}, 800);
   $("#train_slide2").animate(
-    {'margin-left': "300px",
+    {'margin-left': "0px;",
     'display':"block"
   });
+  $("#donnees_slide2").animate({
+    opacity: 1,
+    'top': '10%'
+  }, 500);
+  $("#train_slide2").animate({
+    'left': '-15%'
+  }, 500);
 })
+
+
 
 /* CARTE */
 

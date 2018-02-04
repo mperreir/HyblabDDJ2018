@@ -417,14 +417,11 @@ h3
 
 
 /* -- Slide 2 evenements*/
-
 #section_evenements {
-  background-image: url(../img/slide2/background_slide2.png);
+  /* background-image: url(../img/slide2/background_slide2.svg); */
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 800px;
-  position: relative;
 }
 #text_content_slide2 {
   width: 35%;
@@ -447,22 +444,27 @@ h3
   position: relative;
 }
 #train_slide2 {
-  position: relative;
+  position: absolute;
   width: 100%;
+  left: -110%;
+  margin-top: 10%;
   /* margin-left: -10000%; */
-  top:1200%;
+  /* top:1200%; */
 }
 #donnees_slide2 {
   text-align: center;
   width: 100%;
-  height: 1%;
+  height: 100%;
   display: inline-block;
-  margin-left: 5%;
+  position: relative;
+  top: 55%;
+  opacity: 0;
+   overflow: hidden;
 }
 
 #slide2_container_text {
   position: relative;
-  top:-15%;
+  top:5%;
 }
 
 #donnees_slide2 p{
@@ -470,7 +472,13 @@ h3
 }
 .data_slide2 {
   float: left;
-  margin-left: 5%
+  margin-left: 5%;
+  font-weight: normal !important;
+}
+
+.data_slide2 span{
+  font-size: 56px;
+  font-weight: bold;
 }
 
 .orange {
@@ -726,6 +734,3 @@ svg[hidden]:not(:root) {
 .row .material-switch {
   float: right;
 }
-
-
-
