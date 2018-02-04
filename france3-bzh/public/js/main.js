@@ -516,8 +516,6 @@ fetch('data/acc_regions.json')
     // this promise will be fulfilled when the json will be parsed
     .then(function (json) {
 
-
-<<<<<<< HEAD
         // Get the context of the canvas element we want to select
         var ctx = document.getElementById("chart_region_acc").getContext("2d");
 
@@ -555,10 +553,10 @@ fetch('data/acc_regions.json')
              }
         });
     });
-/* CARTE */
-=======
+
+
 /* --------------------------------- CARTE ----------------------------- */
->>>>>>> e6f8e0de7b52b38896311f20e1accdf49c63a7f7
+
 
 var pnDisplay = false;
 var accDisplay = false;
