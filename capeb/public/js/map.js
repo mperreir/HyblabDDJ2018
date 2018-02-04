@@ -218,7 +218,7 @@ function miniStats(regionStats, d) {
         .then(function (json) {
             var asNumbers = json.values[0].map(Number);
             var indexOfMax = asNumbers.indexOf(Math.max(...asNumbers));
-            document.getElementsByClassName("info-emploi")[0].getElementsByClassName("donneetexte")[0].innerHTML = json.labels[indexOfMax];
+            document.getElementsByClassName("info-emploi")[0].getElementsByClassName("donneeliste")[0].innerHTML = json.labels[indexOfMax];
         });
 
     //5 : distance / moyenne / bubble chart
