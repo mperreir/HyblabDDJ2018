@@ -8,17 +8,34 @@
   >.map-pdl{
     grid-column: 2;
     grid-row: 2;
-    background-color: red;
+    width: 100%;
+    height: 100%;
+    >svg{
+      filter: drop-shadow(5px 5px 10px rgba( 29, 29, 27, 0.3 ));
+    }
   }
   >.content-data{
     color: $black;
     grid-column: 3;
     grid-row: 2;
-    background-color: blue;
-    .texte-data{
+    .textes-data{
+      height: 60%;
+      width: 85%;
+      transform: translate(0, -50%);
+      margin: 47% 0;
       >.title{
         @extend %titre-epci;
       }
+      >.texte{
+        position: absolute;
+        bottom: 20px;
+        @extend %texte-labeur;
+      }
     }
+  }
+  >.motif-capeb{
+    position: absolute;
+    bottom: -30px;
+    right: -8px;
   }
 }

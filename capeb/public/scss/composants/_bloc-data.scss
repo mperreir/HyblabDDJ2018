@@ -43,8 +43,9 @@
   transform: rotate3d(1, 0, 0, 180deg );
   background-color: $data-metier1;
   >.description-data{
+    margin-top: 30%;
     width: 100%;
-    @extend %titre-titre;
+    @extend %mini-titre;
     hyphens: manual;
   }
   >span{

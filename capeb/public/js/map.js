@@ -7,18 +7,21 @@ $ (document).ready(function(){
 });
 
 
-var viewportWidth = $(window).width();
-var viewportHeight = $(window).height()/2;
-var width = viewportWidth * .97;
-var height = width/1.85;
+var viewportWidth = $(".map-pdl").width();
+var viewportHeight = $(".map-pdl").height();
+var width = viewportWidth;
+var height = viewportHeight;
 
 var page2 = d3.select(".map-pdl");
 var svg = page2.append("svg")
     .attr("width", width).attr("height", height);
+
+console.log(width);
+console.log(height);
 var projection = d3.geoConicConformal()
-    .center([2.454071, 46.279229])
+    .center([2.8, 44.5])
     .scale(width*10)
-    .translate([width, height*0.8]);
+    .translate([width, height]);
 var path = d3.geoPath(projection);
 
 path.projection(projection);
@@ -29,7 +32,6 @@ $ (document).ready(function(){
         map.enter()
             .append("path")
             .attr("fill", "white")
-            .attr("stroke", "black")
             .attr("d", path)
             .on("click", function (d) {
 
@@ -63,7 +65,7 @@ $ (document).ready(function(){
             .on("mouseout", function() {
                 d3.select(this).transition()
                     .delay("50")
-                    .duration("200")
+                    .duration("1000")
                     .style("fill", "white");
                 d3.select("#titre-epci").text('');
             })
@@ -73,19 +75,14 @@ $ (document).ready(function(){
 d3.select(window).on('resize', resize);
 
 function resize() {
-    width = parseInt(d3.select('.map-pdl').style('width'));
-    width = $(window).width() * .97;
-    height = width/1.85;
+    var width = parseInt(d3.select('.map-pdl').style('width'));
+    var height = parseInt(d3.select('.map-pdl').style('heigth'));
 
     projection
         .scale([width*10])
-        .translate([width,height*0.8]);
+        .translate([width/2,height/2]);
 
     d3.select("map-pdl").attr("width",width).attr("height",height);
     d3.select("svg").attr("width",width).attr("height",height);
-
     d3.selectAll("path").attr('d', path);
-
-
 }
-
