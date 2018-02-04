@@ -12,6 +12,7 @@ var data_capeb = path.join(__dirname,'./data/CAPEBPaysDelaLoire_2014-2017.csv')
 var stat_files = ['Activité2017.csv',
 				  'Marchés_publics2017.csv',
 				  'Zone_intervention2017.csv',
+				  'NombreDeRecrutementsEnvisage_2017.csv',
 				  'DD_2017.csv',
 				  'Contrats_2014-2017.csv',
 				  'recrutement2014_2017.csv'
@@ -21,6 +22,7 @@ var stats_json = {}
 var critere = ['Activite',
   			   'Marches_publics',
   			   'Zone_intervention',
+			   'Nombre_Recrutements_Envisage_2017',
   			   'Developpement_durable',
   			   'Contrats',
   			   'Recrutement_Evo'
@@ -45,7 +47,7 @@ app.get('/:epci/stats', (req, res) => {
 				var cells = line.split(',')
 
 				if(cells[0] == req.params.epci){
-					if(idf >= 3){
+					if(idf >= 4){
 						cells.slice(1).map((val, j) => {
 							json['values'][j].push(val)
 						});

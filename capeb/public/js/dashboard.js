@@ -49,7 +49,7 @@ function miniStats(regionStats, d) {
         });
 
 
-    //3 & 8 & 7 pour eviter re faire un fetch
+    //3 & 8 & 7 & 4 pour eviter re faire un fetch
     fetch("/capeb/data/" + d.properties.siren_epci + "/stats")
         .then(function (value) {
             return value.json();
@@ -108,24 +108,19 @@ function miniStats(regionStats, d) {
             var mean = parseFloat(stats.Marches_publics.values[0]);
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = Math.round(mean * 100);
             dataFrame.style.backgroundColor = colorsForRegion[matchColor(mean, 0, 0.227, 0.227/5, (0.5 - 0.227)/5, false)];
-        });
-
-    //4 : embauche / métier qui embauche le plus/ double chart with rotation
-    fetch("/capeb/data/" + d.properties.siren_epci + "/recrutements")
-        .then(function (value) {
-            return value.json();
-        })
-        .catch(function (error) {
-            console.log("error");
-            console.log(error);
-            return {};
-        })
-        .then(function (json) {
-            var asNumbers = json.values[0].map(Number);
+            
+            //4 : embauche / métier qui embauche le plus/ double chart with rotation
+			var asNumbers = stats.Nombre_Recrutements_Envisage_2017.values.map(Number);
             var indexOfMax = asNumbers.indexOf(Math.max(...asNumbers));
-            document.getElementsByClassName("info-emploi")[0].getElementsByClassName("donneetexte")[0].innerHTML = json.labels[indexOfMax];
+            document.getElementsByClassName("info-emploi")[0].getElementsByClassName("donneetexte")[0].innerHTML = stats.Nombre_Recrutements_Envisage_2017.labels[indexOfMax];
+			
+			$('#card-emploi .open').each(function(){
+                $(this).on('click', function() {
+                    drawChart3dEmploi(stats);
+                });
+            });
+			
         });
-
     //5 : distance / moyenne / bubble chart
     fetch("/capeb/data/" + d.properties.siren_epci + "/distance")
         .then(function (value) {
