@@ -10,7 +10,6 @@ $ (document).ready(drawMap());
 
 d3.select(window).on('resize', function(){
     $(".map-pdl").innerHTML = "";
-    console.log("coucou");
     drawMap();
 });
 
