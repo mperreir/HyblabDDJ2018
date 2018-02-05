@@ -31,14 +31,14 @@ ecpi,chemin,count
 200071934,Peinture&CA.Batiments.neufs&Stable&CDI,6
 200071934,Peinture&CA.Batiments.neufs&Stable&Apprentis,1
 200071934,Peinture&CA.Batiments.neufs&Stable&Intérimaires,0
-200071934,Electricité&&A la hausse&CDD,0
-200071934,Electricité&&A la hausse&CDI,2.33333333333333
-200071934,Electricité&&A la hausse&Apprentis,3
-200071934,Electricité&&A la hausse&Intérimaires,0
-200071934,Electricité&&Stable&CDD,1.33333333333333
-200071934,Electricité&&Stable&CDI,8.22222222222222
-200071934,Electricité&&Stable&Apprentis,2.4
-200071934,Electricité&&Stable&Intérimaires,1
+200071934,Electricité&Pas de réponse&A la hausse&CDD,0
+200071934,Electricité&Pas de réponse&A la hausse&CDI,2.33333333333333
+200071934,Electricité&Pas de réponse&A la hausse&Apprentis,3
+200071934,Electricité&Pas de réponse&A la hausse&Intérimaires,0
+200071934,Electricité&Pas de réponse&Stable&CDD,1.33333333333333
+200071934,Electricité&Pas de réponse&Stable&CDI,8.22222222222222
+200071934,Electricité&Pas de réponse&Stable&Apprentis,2.4
+200071934,Electricité&Pas de réponse&Stable&Intérimaires,1
 200071934,plâtrerie-isolation&CA.Batiments.neufs&Stable&CDD,0
 200071934,plâtrerie-isolation&CA.Batiments.neufs&Stable&CDI,1
 200071934,plâtrerie-isolation&CA.Batiments.neufs&Stable&Apprentis,0
@@ -135,14 +135,14 @@ ecpi,chemin,count
 200070233,plâtrerie-isolation&CA.Logements.neufs&Stable&CDI,1.5
 200070233,plâtrerie-isolation&CA.Logements.neufs&Stable&Apprentis,1
 200070233,plâtrerie-isolation&CA.Logements.neufs&Stable&Intérimaires,0
-200070233,Autre&&A la hausse&CDD,1
-200070233,Autre&&A la hausse&CDI,10
-200070233,Autre&&A la hausse&Apprentis,0
-200070233,Autre&&A la hausse&Intérimaires,0
-200070233,Autre&&Stable&CDD,0
-200070233,Autre&&Stable&CDI,0
-200070233,Autre&&Stable&Apprentis,0
-200070233,Autre&&Stable&Intérimaires,0
+200070233,Autre&Pas de réponse&A la hausse&CDD,1
+200070233,Autre&Pas de réponse&A la hausse&CDI,10
+200070233,Autre&Pas de réponse&A la hausse&Apprentis,0
+200070233,Autre&Pas de réponse&A la hausse&Intérimaires,0
+200070233,Autre&Pas de réponse&Stable&CDD,0
+200070233,Autre&Pas de réponse&Stable&CDI,0
+200070233,Autre&Pas de réponse&Stable&Apprentis,0
+200070233,Autre&Pas de réponse&Stable&Intérimaires,0
 200070233,Métiers de la pierre&CA.Batiments.neufs&Stable&CDD,0
 200070233,Métiers de la pierre&CA.Batiments.neufs&Stable&CDI,9
 200070233,Métiers de la pierre&CA.Batiments.neufs&Stable&Apprentis,0
@@ -287,14 +287,14 @@ ecpi,chemin,count
 248500464,plomberie-chauffage-couverture&CA.Batiments.neufs&Stable&CDI,1.5
 248500464,plomberie-chauffage-couverture&CA.Batiments.neufs&Stable&Apprentis,1
 248500464,plomberie-chauffage-couverture&CA.Batiments.neufs&Stable&Intérimaires,0
-248500464,menuiserie-charpente&&A la hausse&CDD,1.5
-248500464,menuiserie-charpente&&A la hausse&CDI,4.71428571428571
-248500464,menuiserie-charpente&&A la hausse&Apprentis,1.16666666666667
-248500464,menuiserie-charpente&&A la hausse&Intérimaires,1
-248500464,menuiserie-charpente&&Stable&CDD,0
-248500464,menuiserie-charpente&&Stable&CDI,6.5
-248500464,menuiserie-charpente&&Stable&Apprentis,1.5
-248500464,menuiserie-charpente&&Stable&Intérimaires,0
+248500464,menuiserie-charpente&Pas de réponse&A la hausse&CDD,1.5
+248500464,menuiserie-charpente&Pas de réponse&A la hausse&CDI,4.71428571428571
+248500464,menuiserie-charpente&Pas de réponse&A la hausse&Apprentis,1.16666666666667
+248500464,menuiserie-charpente&Pas de réponse&A la hausse&Intérimaires,1
+248500464,menuiserie-charpente&Pas de réponse&Stable&CDD,0
+248500464,menuiserie-charpente&Pas de réponse&Stable&CDI,6.5
+248500464,menuiserie-charpente&Pas de réponse&Stable&Apprentis,1.5
+248500464,menuiserie-charpente&Pas de réponse&Stable&Intérimaires,0
 248500464,maçonnerie-carrelage&CA.Batiments.neufs&A la hausse&CDD,1
 248500464,maçonnerie-carrelage&CA.Batiments.neufs&A la hausse&CDI,5.25
 248500464,maçonnerie-carrelage&CA.Batiments.neufs&A la hausse&Apprentis,1
@@ -327,14 +327,14 @@ ecpi,chemin,count
 248500464,Travaux publics, Paysage&CA.Batiments.neufs&A la hausse&CDI,6
 248500464,Travaux publics, Paysage&CA.Batiments.neufs&A la hausse&Apprentis,1
 248500464,Travaux publics, Paysage&CA.Batiments.neufs&A la hausse&Intérimaires,0
-200073260,plomberie-chauffage-couverture&&A la hausse&CDD,1
-200073260,plomberie-chauffage-couverture&&A la hausse&CDI,5.66666666666667
-200073260,plomberie-chauffage-couverture&&A la hausse&Apprentis,1.33333333333333
-200073260,plomberie-chauffage-couverture&&A la hausse&Intérimaires,0
-200073260,plomberie-chauffage-couverture&&Stable&CDD,1
-200073260,plomberie-chauffage-couverture&&Stable&CDI,3.28571428571429
-200073260,plomberie-chauffage-couverture&&Stable&Apprentis,1
-200073260,plomberie-chauffage-couverture&&Stable&Intérimaires,1
+200073260,plomberie-chauffage-couverture&Pas de réponse&A la hausse&CDD,1
+200073260,plomberie-chauffage-couverture&Pas de réponse&A la hausse&CDI,5.66666666666667
+200073260,plomberie-chauffage-couverture&Pas de réponse&A la hausse&Apprentis,1.33333333333333
+200073260,plomberie-chauffage-couverture&Pas de réponse&A la hausse&Intérimaires,0
+200073260,plomberie-chauffage-couverture&Pas de réponse&Stable&CDD,1
+200073260,plomberie-chauffage-couverture&Pas de réponse&Stable&CDI,3.28571428571429
+200073260,plomberie-chauffage-couverture&Pas de réponse&Stable&Apprentis,1
+200073260,plomberie-chauffage-couverture&Pas de réponse&Stable&Intérimaires,1
 200073260,menuiserie-charpente&CA.Batiments.neufs&A la hausse&CDD,1
 200073260,menuiserie-charpente&CA.Batiments.neufs&A la hausse&CDI,3.2
 200073260,menuiserie-charpente&CA.Batiments.neufs&A la hausse&Apprentis,1.5
@@ -659,14 +659,14 @@ ecpi,chemin,count
 200071918,Peinture&CA.Batiments.neufs&Stable&CDI,3
 200071918,Peinture&CA.Batiments.neufs&Stable&Apprentis,1
 200071918,Peinture&CA.Batiments.neufs&Stable&Intérimaires,0
-200071918,Electricité&&A la hausse&CDD,2
-200071918,Electricité&&A la hausse&CDI,21
-200071918,Electricité&&A la hausse&Apprentis,6
-200071918,Electricité&&A la hausse&Intérimaires,5
-200071918,Electricité&&Stable&CDD,0
-200071918,Electricité&&Stable&CDI,2.75
-200071918,Electricité&&Stable&Apprentis,2
-200071918,Electricité&&Stable&Intérimaires,1
+200071918,Electricité&Pas de réponse&A la hausse&CDD,2
+200071918,Electricité&Pas de réponse&A la hausse&CDI,21
+200071918,Electricité&Pas de réponse&A la hausse&Apprentis,6
+200071918,Electricité&Pas de réponse&A la hausse&Intérimaires,5
+200071918,Electricité&Pas de réponse&Stable&CDD,0
+200071918,Electricité&Pas de réponse&Stable&CDI,2.75
+200071918,Electricité&Pas de réponse&Stable&Apprentis,2
+200071918,Electricité&Pas de réponse&Stable&Intérimaires,1
 200071918,Autre&CA.Batiments.neufs&A la hausse&CDD,3
 200071918,Autre&CA.Batiments.neufs&A la hausse&CDI,0
 200071918,Autre&CA.Batiments.neufs&A la hausse&Apprentis,0
@@ -719,14 +719,14 @@ ecpi,chemin,count
 200071900,Autre&CA.Batiments.neufs&Stable&CDI,2.5
 200071900,Autre&CA.Batiments.neufs&Stable&Apprentis,0
 200071900,Autre&CA.Batiments.neufs&Stable&Intérimaires,1
-200071900,Travaux publics, Paysage&&A la hausse&CDD,0
-200071900,Travaux publics, Paysage&&A la hausse&CDI,5
-200071900,Travaux publics, Paysage&&A la hausse&Apprentis,1
-200071900,Travaux publics, Paysage&&A la hausse&Intérimaires,0
-200071900,Travaux publics, Paysage&&Stable&CDD,0
-200071900,Travaux publics, Paysage&&Stable&CDI,4.71428571428571
-200071900,Travaux publics, Paysage&&Stable&Apprentis,2
-200071900,Travaux publics, Paysage&&Stable&Intérimaires,0
+200071900,Travaux publics, Paysage&Pas de réponse&A la hausse&CDD,0
+200071900,Travaux publics, Paysage&Pas de réponse&A la hausse&CDI,5
+200071900,Travaux publics, Paysage&Pas de réponse&A la hausse&Apprentis,1
+200071900,Travaux publics, Paysage&Pas de réponse&A la hausse&Intérimaires,0
+200071900,Travaux publics, Paysage&Pas de réponse&Stable&CDD,0
+200071900,Travaux publics, Paysage&Pas de réponse&Stable&CDI,4.71428571428571
+200071900,Travaux publics, Paysage&Pas de réponse&Stable&Apprentis,2
+200071900,Travaux publics, Paysage&Pas de réponse&Stable&Intérimaires,0
 248500415,plomberie-chauffage-couverture&CA.Batiments.neufs&A la hausse&CDD,0
 248500415,plomberie-chauffage-couverture&CA.Batiments.neufs&A la hausse&CDI,4
 248500415,plomberie-chauffage-couverture&CA.Batiments.neufs&A la hausse&Apprentis,1
@@ -811,14 +811,14 @@ ecpi,chemin,count
 248500621,Electricité&CA.Batiments.neufs&Stable&CDI,5
 248500621,Electricité&CA.Batiments.neufs&Stable&Apprentis,1
 248500621,Electricité&CA.Batiments.neufs&Stable&Intérimaires,0
-248500621,plâtrerie-isolation&&A la hausse&CDD,0
-248500621,plâtrerie-isolation&&A la hausse&CDI,3.5
-248500621,plâtrerie-isolation&&A la hausse&Apprentis,2
-248500621,plâtrerie-isolation&&A la hausse&Intérimaires,1
-248500621,plâtrerie-isolation&&Stable&CDD,1
-248500621,plâtrerie-isolation&&Stable&CDI,4
-248500621,plâtrerie-isolation&&Stable&Apprentis,1
-248500621,plâtrerie-isolation&&Stable&Intérimaires,0
+248500621,plâtrerie-isolation&Pas de réponse&A la hausse&CDD,0
+248500621,plâtrerie-isolation&Pas de réponse&A la hausse&CDI,3.5
+248500621,plâtrerie-isolation&Pas de réponse&A la hausse&Apprentis,2
+248500621,plâtrerie-isolation&Pas de réponse&A la hausse&Intérimaires,1
+248500621,plâtrerie-isolation&Pas de réponse&Stable&CDD,1
+248500621,plâtrerie-isolation&Pas de réponse&Stable&CDI,4
+248500621,plâtrerie-isolation&Pas de réponse&Stable&Apprentis,1
+248500621,plâtrerie-isolation&Pas de réponse&Stable&Intérimaires,0
 248500621,Autre&CA.Batiments.neufs&A la hausse&CDD,0
 248500621,Autre&CA.Batiments.neufs&A la hausse&CDI,0
 248500621,Autre&CA.Batiments.neufs&A la hausse&Apprentis,0
@@ -1011,14 +1011,14 @@ ecpi,chemin,count
 200071553,maçonnerie-carrelage&CA.Batiments.neufs&Stable&CDI,6.77777777777778
 200071553,maçonnerie-carrelage&CA.Batiments.neufs&Stable&Apprentis,1
 200071553,maçonnerie-carrelage&CA.Batiments.neufs&Stable&Intérimaires,0
-200071553,Electricité&&A la hausse&CDD,0
-200071553,Electricité&&A la hausse&CDI,5.33333333333333
-200071553,Electricité&&A la hausse&Apprentis,1.5
-200071553,Electricité&&A la hausse&Intérimaires,0
-200071553,Electricité&&Stable&CDD,1
-200071553,Electricité&&Stable&CDI,6.91666666666667
-200071553,Electricité&&Stable&Apprentis,2.8
-200071553,Electricité&&Stable&Intérimaires,1
+200071553,Electricité&Pas de réponse&A la hausse&CDD,0
+200071553,Electricité&Pas de réponse&A la hausse&CDI,5.33333333333333
+200071553,Electricité&Pas de réponse&A la hausse&Apprentis,1.5
+200071553,Electricité&Pas de réponse&A la hausse&Intérimaires,0
+200071553,Electricité&Pas de réponse&Stable&CDD,1
+200071553,Electricité&Pas de réponse&Stable&CDI,6.91666666666667
+200071553,Electricité&Pas de réponse&Stable&Apprentis,2.8
+200071553,Electricité&Pas de réponse&Stable&Intérimaires,1
 200071553,plâtrerie-isolation&CA.Logements.neufs&A la hausse&CDD,1.5
 200071553,plâtrerie-isolation&CA.Logements.neufs&A la hausse&CDI,3.5
 200071553,plâtrerie-isolation&CA.Logements.neufs&A la hausse&Apprentis,0
@@ -1375,14 +1375,14 @@ ecpi,chemin,count
 200072726,plâtrerie-isolation&CA.Logements.neufs&A la hausse&CDI,0
 200072726,plâtrerie-isolation&CA.Logements.neufs&A la hausse&Apprentis,0
 200072726,plâtrerie-isolation&CA.Logements.neufs&A la hausse&Intérimaires,0
-200072726,Autre&&A la hausse&CDD,0
-200072726,Autre&&A la hausse&CDI,1
-200072726,Autre&&A la hausse&Apprentis,0
-200072726,Autre&&A la hausse&Intérimaires,3
-200072726,Autre&&Stable&CDD,1
-200072726,Autre&&Stable&CDI,1.66666666666667
-200072726,Autre&&Stable&Apprentis,3
-200072726,Autre&&Stable&Intérimaires,1.5
+200072726,Autre&Pas de réponse&A la hausse&CDD,0
+200072726,Autre&Pas de réponse&A la hausse&CDI,1
+200072726,Autre&Pas de réponse&A la hausse&Apprentis,0
+200072726,Autre&Pas de réponse&A la hausse&Intérimaires,3
+200072726,Autre&Pas de réponse&Stable&CDD,1
+200072726,Autre&Pas de réponse&Stable&CDI,1.66666666666667
+200072726,Autre&Pas de réponse&Stable&Apprentis,3
+200072726,Autre&Pas de réponse&Stable&Intérimaires,1.5
 200072726,Travaux publics, Paysage&CA.Batiments.neufs&Stable&CDD,0
 200072726,Travaux publics, Paysage&CA.Batiments.neufs&Stable&CDI,2
 200072726,Travaux publics, Paysage&CA.Batiments.neufs&Stable&Apprentis,0
@@ -1431,14 +1431,14 @@ ecpi,chemin,count
 244400404,Electricité&CA.Logements.neufs&Stable&CDI,2
 244400404,Electricité&CA.Logements.neufs&Stable&Apprentis,1
 244400404,Electricité&CA.Logements.neufs&Stable&Intérimaires,0
-244400404,plâtrerie-isolation&&A la hausse&CDD,0
-244400404,plâtrerie-isolation&&A la hausse&CDI,0
-244400404,plâtrerie-isolation&&A la hausse&Apprentis,0
-244400404,plâtrerie-isolation&&A la hausse&Intérimaires,0
-244400404,plâtrerie-isolation&&Stable&CDD,0
-244400404,plâtrerie-isolation&&Stable&CDI,2
-244400404,plâtrerie-isolation&&Stable&Apprentis,1
-244400404,plâtrerie-isolation&&Stable&Intérimaires,1
+244400404,plâtrerie-isolation&Pas de réponse&A la hausse&CDD,0
+244400404,plâtrerie-isolation&Pas de réponse&A la hausse&CDI,0
+244400404,plâtrerie-isolation&Pas de réponse&A la hausse&Apprentis,0
+244400404,plâtrerie-isolation&Pas de réponse&A la hausse&Intérimaires,0
+244400404,plâtrerie-isolation&Pas de réponse&Stable&CDD,0
+244400404,plâtrerie-isolation&Pas de réponse&Stable&CDI,2
+244400404,plâtrerie-isolation&Pas de réponse&Stable&Apprentis,1
+244400404,plâtrerie-isolation&Pas de réponse&Stable&Intérimaires,1
 244400404,Autre&CA.Batiments.neufs&A la hausse&CDD,1
 244400404,Autre&CA.Batiments.neufs&A la hausse&CDI,4
 244400404,Autre&CA.Batiments.neufs&A la hausse&Apprentis,1
@@ -1511,26 +1511,26 @@ ecpi,chemin,count
 243500741,plomberie-chauffage-couverture&CA.Batiments.neufs&Stable&CDI,2.55555555555556
 243500741,plomberie-chauffage-couverture&CA.Batiments.neufs&Stable&Apprentis,2
 243500741,plomberie-chauffage-couverture&CA.Batiments.neufs&Stable&Intérimaires,0
-243500741,menuiserie-charpente&&A la hausse&CDD,0
-243500741,menuiserie-charpente&&A la hausse&CDI,1.66666666666667
-243500741,menuiserie-charpente&&A la hausse&Apprentis,0
-243500741,menuiserie-charpente&&A la hausse&Intérimaires,0
-243500741,menuiserie-charpente&&Stable&CDD,0
-243500741,menuiserie-charpente&&Stable&CDI,4
-243500741,menuiserie-charpente&&Stable&Apprentis,1.11111111111111
-243500741,menuiserie-charpente&&Stable&Intérimaires,0
+243500741,menuiserie-charpente&Pas de réponse&A la hausse&CDD,0
+243500741,menuiserie-charpente&Pas de réponse&A la hausse&CDI,1.66666666666667
+243500741,menuiserie-charpente&Pas de réponse&A la hausse&Apprentis,0
+243500741,menuiserie-charpente&Pas de réponse&A la hausse&Intérimaires,0
+243500741,menuiserie-charpente&Pas de réponse&Stable&CDD,0
+243500741,menuiserie-charpente&Pas de réponse&Stable&CDI,4
+243500741,menuiserie-charpente&Pas de réponse&Stable&Apprentis,1.11111111111111
+243500741,menuiserie-charpente&Pas de réponse&Stable&Intérimaires,0
 243500741,maçonnerie-carrelage&CA.Batiments.neufs&A la hausse&CDD,0
 243500741,maçonnerie-carrelage&CA.Batiments.neufs&A la hausse&CDI,0
 243500741,maçonnerie-carrelage&CA.Batiments.neufs&A la hausse&Apprentis,0
 243500741,maçonnerie-carrelage&CA.Batiments.neufs&A la hausse&Intérimaires,0
-243500741,Peinture&&A la hausse&CDD,4
-243500741,Peinture&&A la hausse&CDI,0
-243500741,Peinture&&A la hausse&Apprentis,0
-243500741,Peinture&&A la hausse&Intérimaires,0
-243500741,Peinture&&Stable&CDD,1
-243500741,Peinture&&Stable&CDI,3
-243500741,Peinture&&Stable&Apprentis,1
-243500741,Peinture&&Stable&Intérimaires,0
+243500741,Peinture&Pas de réponse&A la hausse&CDD,4
+243500741,Peinture&Pas de réponse&A la hausse&CDI,0
+243500741,Peinture&Pas de réponse&A la hausse&Apprentis,0
+243500741,Peinture&Pas de réponse&A la hausse&Intérimaires,0
+243500741,Peinture&Pas de réponse&Stable&CDD,1
+243500741,Peinture&Pas de réponse&Stable&CDI,3
+243500741,Peinture&Pas de réponse&Stable&Apprentis,1
+243500741,Peinture&Pas de réponse&Stable&Intérimaires,0
 243500741,Electricité&CA.Logements.neufs&A la hausse&CDD,1
 243500741,Electricité&CA.Logements.neufs&A la hausse&CDI,3.5
 243500741,Electricité&CA.Logements.neufs&A la hausse&Apprentis,1
@@ -1567,14 +1567,14 @@ ecpi,chemin,count
 200000438,plâtrerie-isolation&CA.Logements.neufs&Stable&CDI,9
 200000438,plâtrerie-isolation&CA.Logements.neufs&Stable&Apprentis,0
 200000438,plâtrerie-isolation&CA.Logements.neufs&Stable&Intérimaires,0
-200067866,plomberie-chauffage-couverture&&A la hausse&CDD,0
-200067866,plomberie-chauffage-couverture&&A la hausse&CDI,3.66666666666667
-200067866,plomberie-chauffage-couverture&&A la hausse&Apprentis,1
-200067866,plomberie-chauffage-couverture&&A la hausse&Intérimaires,0
-200067866,plomberie-chauffage-couverture&&Stable&CDD,1
-200067866,plomberie-chauffage-couverture&&Stable&CDI,4
-200067866,plomberie-chauffage-couverture&&Stable&Apprentis,2
-200067866,plomberie-chauffage-couverture&&Stable&Intérimaires,1.6
+200067866,plomberie-chauffage-couverture&Pas de réponse&A la hausse&CDD,0
+200067866,plomberie-chauffage-couverture&Pas de réponse&A la hausse&CDI,3.66666666666667
+200067866,plomberie-chauffage-couverture&Pas de réponse&A la hausse&Apprentis,1
+200067866,plomberie-chauffage-couverture&Pas de réponse&A la hausse&Intérimaires,0
+200067866,plomberie-chauffage-couverture&Pas de réponse&Stable&CDD,1
+200067866,plomberie-chauffage-couverture&Pas de réponse&Stable&CDI,4
+200067866,plomberie-chauffage-couverture&Pas de réponse&Stable&Apprentis,2
+200067866,plomberie-chauffage-couverture&Pas de réponse&Stable&Intérimaires,1.6
 200067866,maçonnerie-carrelage&CA.Batiments.neufs&A la hausse&CDD,0
 200067866,maçonnerie-carrelage&CA.Batiments.neufs&A la hausse&CDI,0
 200067866,maçonnerie-carrelage&CA.Batiments.neufs&A la hausse&Apprentis,0
@@ -2239,14 +2239,14 @@ ecpi,chemin,count
 200072718,Autre&CA.Batiments.neufs&Stable&CDI,2
 200072718,Autre&CA.Batiments.neufs&Stable&Apprentis,0
 200072718,Autre&CA.Batiments.neufs&Stable&Intérimaires,0
-200072676,menuiserie-charpente&&A la hausse&CDD,1
-200072676,menuiserie-charpente&&A la hausse&CDI,4.25
-200072676,menuiserie-charpente&&A la hausse&Apprentis,1
-200072676,menuiserie-charpente&&A la hausse&Intérimaires,0
-200072676,menuiserie-charpente&&Stable&CDD,1
-200072676,menuiserie-charpente&&Stable&CDI,1
-200072676,menuiserie-charpente&&Stable&Apprentis,0
-200072676,menuiserie-charpente&&Stable&Intérimaires,0
+200072676,menuiserie-charpente&Pas de réponse&A la hausse&CDD,1
+200072676,menuiserie-charpente&Pas de réponse&A la hausse&CDI,4.25
+200072676,menuiserie-charpente&Pas de réponse&A la hausse&Apprentis,1
+200072676,menuiserie-charpente&Pas de réponse&A la hausse&Intérimaires,0
+200072676,menuiserie-charpente&Pas de réponse&Stable&CDD,1
+200072676,menuiserie-charpente&Pas de réponse&Stable&CDI,1
+200072676,menuiserie-charpente&Pas de réponse&Stable&Apprentis,0
+200072676,menuiserie-charpente&Pas de réponse&Stable&Intérimaires,0
 200072676,Peinture&CA.Batiments.neufs&Stable&CDD,1
 200072676,Peinture&CA.Batiments.neufs&Stable&CDI,7
 200072676,Peinture&CA.Batiments.neufs&Stable&Apprentis,1

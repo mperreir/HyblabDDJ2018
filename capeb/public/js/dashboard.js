@@ -126,13 +126,16 @@ function miniStats(regionStats, d) {
             var count = stats.Developpement_durable.values[1]
             var stat2 = names.map(function(val, id) {return {"name": names[id], "value": parseInt(count[id])};});
             stat2 = stat2.sort(function(a, b) {return b.value - a.value});
-            $(".info-dd h1").text(stat2[0].name);
-            $('#card-dd .open').each(function(){
+            $(".info-dd h1").text(stat2[0].name)
+			 $('#card-dd .open').each(function(){
                 $(this).on('click', function() {
-                    document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Développement durable";
+					document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Développement durable";
                     var texte = document.getElementById("texte-dd");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
+                    
+                    drawDDChart(stats);
+                    closeOnEscape();
                 });
             });
 

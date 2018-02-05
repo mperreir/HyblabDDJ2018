@@ -3,12 +3,9 @@ var csv = null;
 
 var express = require('express');
 var app = express();
-var d3 = require('d3');
-var fetch = require('node-fetch');
 var path = require('path');
 var fs = require('fs');
 
-var data_capeb = path.join(__dirname,'./data/CAPEBPaysDelaLoire_2014-2017.csv')
 var stat_files = ['Activité2017.csv',
 				  'Marchés_publics2017.csv',
 				  'Zone_intervention2017.csv',
@@ -17,23 +14,76 @@ var stat_files = ['Activité2017.csv',
 				  'Contrats_2014-2017.csv',
 				  'recrutement2014_2017.csv',
 				  'recrutement_Activité2014_2017.csv',
-				  'FreinsMP.csv'
+				  'FreinsMP.csv',
+				  'Distance.csv',
+				  'sunburst.csv',
+				  'ConjonctureEPCI.csv',
+				  'Investissement2014-2017EPCI.csv',
+				  'NombreDeRecrutementsEnvisage_2017.csv',
+				  'DD_INTERET_2017.csv'
 				  ].map(f => path.join(__dirname,"./data/stats/".concat(f)))
 
 var stats_json = {}
-var critere = ['Activite',
-  			   'Marches_publics',
-  			   'Zone_intervention',
-			   'Nombre_Recrutements_Envisage_2017',
-  			   'Developpement_durable',
-  			   'Contrats',
-  			   'Recrutement_Evo',
-  			   'Recrutement_Evo_Act',
-  			   'FreinsMP'
+var critere = [{"name": 'Activite', "split": false},
+  			   {"name": 'Marches_publics', "split": false},
+  			   {"name": 'Zone_intervention', "split": false},
+			   {"name": 'Nombre_Recrutements_Envisage_2017', "split": false},
+  			   {"name": 'Developpement_durable', "split": false},
+  			   {"name": 'Contrats', "split": false},
+  			   {"name": 'Recrutement_Evo', "split": false},
+  			   {"name": 'Recrutement_Evo_Act', "split": false},
+  			   {"name": 'FreinsMP', "split": false},
+  			   {"name": 'Distance', "split": true},
+  			   {"name": 'Sunburst', "split": true},
+  			   {"name": 'Conjoncture', "split": true},
+  			   {"name": 'Investissement', "split": true},
+  			   {"name": 'Recrutement', "split": true},
+  			   {"name": 'Interet_ApsectDD', "split": true}
   			  ]
 
 var keys = []
 var crt_arr = []
+
+app.get('/regionStats', function(req, res){
+    var json = {};
+    var csv = path.join(__dirname,'./data/stats/stats_region.csv');
+    var data = fs.readFileSync(csv, 'utf8');
+    data.split(/\r\n|\n/).forEach(function (line, id) {
+
+        if(id == 0){
+            keys = line.split(",");
+        }
+        else{
+            var cells = line.split(',');
+    
+            json = keys.map((key, i) => {return {[key]: cells[i]};});
+        }
+    });
+    
+    res.json(json);
+
+});
+
+app.get('/region', function(req, res){
+    var json = {};
+    var csv = path.join(__dirname,'./data/stats/stats_region.csv');
+    var data = fs.readFileSync(csv, 'utf8');
+    data.split(/\r\n|\n/).forEach(function (line, id) {
+
+        if(id == 0){
+            keys = line.split(",");
+        }
+        else{
+            var cells = line.split(',');
+    
+            keys.map((key, i) => {json[key]= cells[i]});
+        }
+    });
+    
+    res.json(json);
+
+});
+
 
 app.get('/:epci/stats', function(req, res) {
 
@@ -41,28 +91,46 @@ app.get('/:epci/stats', function(req, res) {
 		var json = {}
 		crt_arr = []
 		var data = fs.readFileSync(file, 'utf8');
+		var nbline = 0
+				
 		data.split(/\r\n|\n/).forEach(function(line, id) {
 			if(id == 0){
 				keys = line.split(",");
 				json['labels'] = keys.slice(1);
-				json['values'] =  Array.from({length: json['labels'].length}, (v, i) => []);
+				json['values'] =  [];
 			}
 			else{
 				var cells = line.split(',')
 
 				if(cells[0] == req.params.epci){
-					if(idf >= 4){
-						cells.slice(1).map(function(val, j) {
-							json['values'][j].push(val)
-						});
+					
+					if(nbline >= 1){
+						if(critere[idf].split){
+							json['values'].push(cells.slice(1));
+						}
+						else{
+							if(nbline == 1){
+								json['values'] = json['values'].map(val => [val])
+							}
+							cells.slice(1).map(function(val, j) {
+								json['values'][j].push(val)
+							});
+						}		
 					}
 					else{
-						json['values'] = cells.slice(1);
+						if(critere[idf].split){
+							json['values'].push(cells.slice(1));
+						}
+						else{
+							json['values'] = cells.slice(1);
+						}
 					}
+					
+					nbline++;
 				}
 			}
 		})
-		stats_json[critere[idf]] = json
+		stats_json[critere[idf].name] = json
 
 	})
 	res.charset = 'utf8';
@@ -76,12 +144,12 @@ app.get('/:epci/distance', function(req, res){
     var data = fs.readFileSync(csv, 'utf8');
     data.split(/\r\n|\n/).forEach(function (line, id) {
         if(id == 0){
-            keys = line.split(";");
+            keys = line.split(",");
             json['labels'] = keys.slice(1);
             json['values'] =  [];
         }
         else{
-            var cells = line.split(';');
+            var cells = line.split(',');
             if(cells[0] == req.params.epci){
                 json['values'].push(cells.slice(1));
             }
@@ -121,12 +189,12 @@ app.get('/:epci/conjoncture', function(req, res){
     var data = fs.readFileSync(csv, 'utf8');
     data.split(/\r\n|\n/).forEach(function (line, id) {
         if(id == 0){
-            keys = line.split(";");
+            keys = line.split(",");
             json['labels'] = keys.slice(1);
             json['values'] =  [];
         }
         else{
-            var cells = line.split(';');
+            var cells = line.split(',');
             if(cells[0] == req.params.epci){
                 json['values'].push(cells.slice(1));
             }
@@ -247,6 +315,5 @@ app.get('/regionStats', function(req, res){
     res.json(json);
 
 });
-
 
 module.exports = app;

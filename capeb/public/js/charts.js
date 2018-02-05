@@ -16,6 +16,143 @@ var colorZoom = [
     'rgba(255,224,0,0.8)',
 ];
 
+var drawDDChart = (stats) => {
+	function scale(number) {
+        var start = 10;
+        var inc = 8;
+        if (number == 0) {
+            return start;
+        } else if (number <= 2) {
+            return start + inc;
+        } else if (number <= 5) {
+            return start + inc * 2;
+        } else if (number <= 10) {
+            return start + inc * 3;
+        } else {
+            return start + inc * 4;
+        }
+    }
+    var sec = document.getElementById("dataviz-section");
+    if (sec !== null) {
+        sec.remove();
+    }
+    sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
+    sec.setAttribute("id", "dataviz-section");
+
+    var h3 = document.getElementById("title-dataviz");
+    if (h3 !== null) {
+        h3.remove();
+    }
+    var h3 = sec.appendChild(document.createElement('h3'));
+    h3.setAttribute("id", "title-dataviz");
+    h3.innerHTML = "Qui veut gagner des salariés ?";
+
+    var canvas = document.getElementById("canvas-dataviz");
+    if (canvas !== null) {
+        canvas.remove();
+    }
+    canvas = document.createElement('canvas');
+    canvas.setAttribute("id", "canvas-dataviz");
+
+    var cvs = sec.appendChild(canvas);
+
+
+    var ctx = cvs.getContext("2d");
+	var datasets = stats.Developpement_durable.values[0].map((aspect, id) => {
+		return {
+			label: aspect,
+			data: [
+					{
+						x: id,
+						y: 2,
+						r: scale(parseInt(stats.Developpement_durable.values[1][id]))
+					}
+				  ],
+		    backgroundColor: colors[id],
+		};
+
+	});
+	var ch = new Chart(ctx,
+					{
+						type: 'bubble',
+						data: {'datasets': datasets},
+						options: {
+							onClick: function(e) {
+								var element = this.getElementAtEvent(e);
+
+								// If you click on at least 1 element ...
+								if (element.length > 0) {
+									// Logs it
+									console.log(element[0]);
+
+									// Here we get the data linked to the clicked bubble ...
+									var datasetLabel = this.config.data.datasets[element[0]._datasetIndex].label;
+
+									var d = {'labels': [], 'values': []}
+
+									stats.Interet_ApsectDD.values.map((cell) => {
+											if(cell[0] === datasetLabel){
+												d.labels.push(cell[1]);
+												d.values.push(cell[2]);
+											}
+									});
+
+
+									$("#canvas-dataviz").fadeOut();
+									$(".plus").html("");
+									drawPieChart(d, datasetLabel);
+
+								}
+							},
+							hover: {
+								mode: 'nearest',
+								intersect: true,
+								onHover: function(e) {
+									var point = this.getElementAtEvent(e);
+									if (point.length) e.target.style.cursor = 'pointer';
+									else e.target.style.cursor = 'default';
+								}
+							},
+							tooltips: {
+								 callbacks: {
+									label: function(t, d) {
+									   return d.datasets[t.datasetIndex].label +
+											  ': Total: ' + t.yLabel + ')';
+									}
+								 }
+							  },
+							scales: {
+									xAxes: [{
+										ticks: {
+											display: false
+										},
+										gridLines: {
+											display: false
+										},
+										scaleLabel: {
+											display: false,
+										}
+									}],
+									yAxes: [{
+										ticks: {
+											display: false
+										},
+										gridLines: {
+											display: false,
+											drawBorder: false
+										}
+									}]
+								},
+								 legend: {
+									display: false
+								 }
+						}
+					}
+	);
+
+
+}
+
 var wordCloud = (FreinsMP) => {
     var frequency_list = FreinsMP.values[0].map((name, id) => {
         return {
@@ -174,9 +311,11 @@ var drawChart3dEmploi = function(data) {
                 "labels": data.Recrutement_Evo_Act.labels.slice(1),
                 "values": data.Recrutement_Evo_Act.values[1 + i]
             };
-            $(".plus").html("");
 
-            drawBarChart(p, "Moyenne Nb récrutement envisagé")
+			$("#canvas-dataviz").fadeOut();
+			$(".plus").html("");
+            drawBarChart(p, "Moyenne Nb récrutement envisagé " +  label)
+
         }
     };
 };
@@ -230,9 +369,18 @@ function drawLineChart(data){
 		data: d,
 		// Configuration options go here
 		options: {
-			tooltips: {
+			 tooltips: {
                 mode: 'index',
                 intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true,
+                onHover: function(e) {
+                    var point = this.getElementAtEvent(e);
+                    if (point.length) e.target.style.cursor = 'pointer';
+                    else e.target.style.cursor = 'default';
+                }
             },
 			scales: {
                 xAxes: [{
@@ -268,19 +416,22 @@ function drawLineChart(data){
 function drawBarChart(data, title) {
     var sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
     sec.className = "plus"
+	sec.onclick = () => {
+		sec.style.display = "none";
 
+		document.getElementById("canvas-dataviz").style.display = "block";
+	}
     var cvs = sec.appendChild(document.createElement('canvas'))
 
     var ctx = cvs.getContext("2d")
     new Chart(ctx, {
         // The type of chart we want to create
         type: 'bar',
-
+        label: 'no ',
         // The data for our dataset
         data: {
             labels: data.labels,
             datasets: [{
-                label: title,
                 backgroundColor: colors,
                 borderWidth: 0,
                 data: data.values,
@@ -298,21 +449,29 @@ function drawBarChart(data, title) {
                   drawBorder: false
               }
             }]
-          }
+          },
+				title:{
+                    display:true,
+                    text: title
+                }
         }
     });
 
 }
 
-function drawPieChart(data) {
-    var sec = document.getElementById("page3").appendChild(document.createElement('section'))
-    sec.className = "chart"
+function drawPieChart(data, title) {
+     var sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
+    sec.className = "plus"
+	sec.onclick = () => {
+		sec.style.display = "none";
 
+		document.getElementById("canvas-dataviz").style.display = "block";
+	}
+    var cvs = sec.appendChild(document.createElement('canvas'))
 
-    var cvs2 = sec.appendChild(document.createElement('canvas'))
-    var ctx2 = cvs2.getContext("2d")
+    var ctx = cvs.getContext("2d")
 
-    new Chart(ctx2, {
+    new Chart(ctx, {
         type: 'pie',
         data: {
             labels: data.labels,
@@ -333,8 +492,12 @@ function drawPieChart(data) {
                     drawBorder: false
                 }
               }]
-            }
-        }
+            },
+            title:{
+                display:true,
+                text: title
+                }
+              }
     });
 }
 
