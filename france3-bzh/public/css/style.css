@@ -485,10 +485,11 @@ button:focus { outline-style: none; }
 
 #ens_ecole
 {
+  width: 100%;
   text-align: center;
   position: absolute;
   bottom: 0;
-  transform: translate(100%,-300%);
+  transform: translateY(-300%);
 }
 
 #ens_ecole a
@@ -647,6 +648,8 @@ button:focus { outline-style: none; }
 #hospitalise span{
   color: white;
 }
+
+
 
 #cache.misere
 {
