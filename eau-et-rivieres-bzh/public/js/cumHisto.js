@@ -9,23 +9,72 @@ var lastChanged = dep1;
 buildHisto("#histGauche",annee,dep1);
 buildHisto("#histDroite",annee,dep2);
 buildHisto("#bonhomme",anneeCambon,"Campbon");
+upDateTexteGauche();
+upDateTexteDroite();
+$("#descriptionHisto").hide();
 
-$('#2012').on('click', function(event) {annee="2012";upDateHisto('#histGauche');upDateHisto('#histDroite');});
-$('#2013').on('click', function(event) {annee="2013";upDateHisto('#histGauche');upDateHisto('#histDroite');});
-$('#2014').on('click', function(event) {annee="2014";upDateHisto('#histGauche');upDateHisto('#histDroite');});
-$('#2015').on('click', function(event) {annee="2015";upDateHisto('#histGauche');upDateHisto('#histDroite');});
-$('#2016').on('click', function(event) {annee="2016";upDateHisto('#histGauche');upDateHisto('#histDroite');});
+
+$('#2012').on('click', function(event) {
+	annee="2012";
+	upDateHisto('#histGauche');
+	upDateHisto('#histDroite');
+	upDateTexteGauche();
+	upDateTexteDroite();
+	$('#2012').css('background-color','#404142');
+	$('#2013, #2014, #2015, #2016').css('background-color','white');
+});
+
+$('#2013').on('click', function(event) {
+	annee="2013";
+	upDateHisto('#histGauche');
+	upDateHisto('#histDroite');
+	upDateTexteGauche();
+	upDateTexteDroite();
+	$('#2013').css('background-color','#404142');
+	$('#2012, #2014, #2015, #2016').css('background-color','white');
+});
+
+
+$('#2014').on('click', function(event) {
+	annee="2014";
+	upDateHisto('#histGauche');
+	upDateHisto('#histDroite');
+	upDateTexteGauche();
+	upDateTexteDroite();
+	$('#2014').css('background-color','#404142');
+	$('#2012, #2013, #2015, #2016').css('background-color','white');
+});
+
+$('#2015').on('click', function(event) {
+	annee="2015";
+	upDateHisto('#histGauche');
+	upDateHisto('#histDroite');
+	upDateTexteGauche();
+	upDateTexteDroite();
+	$('#2015').css('background-color','#404142');
+	$('#2012, #2013, #2014, #2016').css('background-color','white');
+});
+
+$('#2016').on('click', function(event) {
+	annee="2016";
+	upDateHisto('#histGauche');
+	upDateHisto('#histDroite');
+	upDateTexteGauche();
+	upDateTexteDroite();
+	$('#2016').css('background-color','#404142');
+	$('#2012, #2013, #2014, #2015').css('background-color','white');
+});
 
 //onClick for Cotes_Armor
-$('#FR-22').on('click', function(event) {changeOneHisto("Cotes_Armor")});
-$('#FR-29').on('click', function(event) {changeOneHisto("Finistere")});
-$('#FR-35').on('click', function(event) {changeOneHisto("Ile_et_Vilaine")});
-$('#FR-44').on('click', function(event) {changeOneHisto("Loire_Atlantique")});
-$('#FR-49').on('click', function(event) {changeOneHisto("Maine_et_Loire")});
-$('#FR-53').on('click', function(event) {changeOneHisto("Mayenne")});
-$('#FR-56').on('click', function(event) {changeOneHisto("Morbihan")});
+$('#FR-22').on('click', function(event) {changeOneHisto("Cotes_Armor");});
+$('#FR-29').on('click', function(event) {changeOneHisto("Finistere");});
+$('#FR-35').on('click', function(event) {changeOneHisto("Ile_et_Vilaine");});
+$('#FR-44').on('click', function(event) {changeOneHisto("Loire_Atlantique");});
+$('#FR-49').on('click', function(event) {changeOneHisto("Maine_et_Loire");});
+$('#FR-53').on('click', function(event) {changeOneHisto("Mayenne");});
+$('#FR-56').on('click', function(event) {changeOneHisto("Morbihan");});
 
-$('#C2012').on('click', function(event) {anneeCambon="2012";upDateHisto('#bonhomme')});
+$('#C2012').on('click', function(event) {anneeCambon="2012";upDateHisto('#bonhomme');});
 $('#C2013').on('click', function(event) {anneeCambon="2013";upDateHisto('#bonhomme');});
 $('#C2014').on('click', function(event) {anneeCambon="2014";upDateHisto('#bonhomme');});
 $('#C2015').on('click', function(event) {anneeCambon="2015";upDateHisto('#bonhomme');});
@@ -37,13 +86,23 @@ function changeOneHisto(newDep){
 	  if(lastChanged == dep1){
 			dep2 = newDep;
 			upDateHisto("#histDroite");
-	    lastChanged = dep2;
+			upDateTexteDroite();
+	    	lastChanged = dep2;
 		}else{
 			dep1 = newDep;
 			upDateHisto("#histGauche");
+			upDateTexteGauche();
 			lastChanged = dep1;
 		}
 	}
+}
+
+function upDateTexteGauche(){
+	$("#descriptionGauche").text($("#Finistere .2016").text());
+}
+
+function upDateTexteDroite(){
+	$("#descriptionDroite").text($("#Finistere .2016").text());
 }
 
 function upDateHisto(histo){
@@ -62,10 +121,10 @@ function upDateHisto(histo){
 function buildHisto(parent, ann, dep){
 
 	var svg = d3.select(parent),
-	    margin = {top: 20, right: 80, bottom: 130, left: 80},
+	    margin = {top: 0, right: 80, bottom: 0, left: 80},
 	    width = +svg.attr("width") - margin.left - margin.right,
 	    height = +svg.attr("height") - margin.top - margin.bottom,
-	    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	    g = svg.append("g").attr("transform", "translate(" + (margin.left) + "," + (margin.top) + ")");
 
 	var x = d3.scaleBand()
 	    .rangeRound([0, width])
@@ -117,7 +176,7 @@ function buildHisto(parent, ann, dep){
 	    .data(function(d) { return d; })
 	    .enter().append("rect")
 	      .attr("x", function(d) { return x(d.data.DEPARTEMENT); })
-	      .attr("y", function(d) { return y(d[1]); })
+	      .attr("y", function(d) { return y(d[1])+50; })
 	      .attr("height", function(d) { return y(d[0]) - y(d[1]); })
 				.attr("fill", getColor)
 	      .attr("width", x.bandwidth());
@@ -149,6 +208,10 @@ function buildHisto(parent, ann, dep){
 				return "white";
 			}
 		}
+
+
+
+
 		if(dep == "Campbon"){
 			g.append("image")
 				.attr("xlink:href","img/Corps.svg")
@@ -157,12 +220,18 @@ function buildHisto(parent, ann, dep){
 				.attr("x",-120)
 				.attr("y",-20);
 		}else{
+			//The water butt width has to be the same than the
+			//histogram width
+			var widthWatBut =  x.bandwidth();
+			var heightWatBut =  height;
+
 			g.append("image")
-				.attr("xlink:href","img/Citerne.svg")
-				.attr("width", 420)
-				.attr("height", 280)
-				.attr("x",-120)
-				.attr("y",-60);
+				.attr("xlink:href","img/Citerne2.svg")
+				.style("width", widthWatBut)
+				.style("height", heightWatBut)
+				.attr("preserveAspectRatio","none");
+				//.attr("transform", "translate(" + width/2 + "," + height/2 + ")");
+
 		}
 
 
@@ -170,6 +239,7 @@ function buildHisto(parent, ann, dep){
 	  //    .attr("class", "axis")
 	  //    .attr("transform", "translate(0," + String(height) + ")")
 	  //    .call(d3.axisBottom(x));
+
 		g.append("g")
 				.append("text")
 				.attr("x",90)
@@ -208,7 +278,7 @@ function buildHisto(parent, ann, dep){
 	      .call(d3.axisLeft(y).ticks(null, "s"))
 	    .append("text")
 	      .attr("x", 2)
-	      .attr("y", y(y.ticks().pop()) + 0.5)
+	      .attr("y", y(y.ticks().pop()) + -20)
 	      .attr("dy", "0.32em")
 	      .attr("fill", "#000")
 	      .attr("font-weight", "bold")
@@ -236,7 +306,7 @@ function buildHisto(parent, ann, dep){
 		}
 
 		if(dep != dep1){
-
+			/*
 			var lastLab = "ORGANES";
 		  var legend = g.append("g")
 		      .attr("font-family", "sans-serif")
@@ -257,7 +327,7 @@ function buildHisto(parent, ann, dep){
 		      .attr("dy", "0.32em")
 					.style("text-anchor", "middle")
 		      .text(getLab);
-
+			*/
 		}
 	});
 }
