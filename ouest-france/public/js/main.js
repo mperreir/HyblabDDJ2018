@@ -2416,7 +2416,7 @@ function controleurFrance() {
     for (var i = 0, length = villes_svg.length; i < length; i++) {
         villes_svg[i].addEventListener("click",
             function () {
-                console.log(this.id);
+                popup(this.id, currentYear, dataFrance);
             }, false);
     }
     d3.select(villes).selectAll("circle")
@@ -2424,6 +2424,7 @@ function controleurFrance() {
                      .attr("onmouseout", "evt.target.setAttribute('opacity','1)');");
 
     var dataFrance = loadData('data/AnneeGroupeVilleNombreGroupes.json');
+
 
     var franceTotal = document.getElementById("franceTotal");
     var france2006 = document.getElementById("france2006");
@@ -2441,160 +2442,124 @@ function controleurFrance() {
 
     var buttons = [franceTotal, france2006, france2007, france2008, france2009, france2010, france2011, france2012, france2013, france2014, france2015, france2016, france2017];
 
-    setYearActive(buttons, 0);
+    var currentYear = "global";
+
+
+    var croix = document.getElementsByClassName("croix");
+
+    croix.onclick = function(){
+        document.getElementById("fenetrePopupFrance").className = "fenetrePopup--hidden";
+        console.log("niinin");
+    }
 
     france2006.onclick = function(){
+        currentYear = "2006";
         setYearActive(buttons, 1);
         reinitVilles(villes, dataFrance);
         montrerVilles(villes, dataFrance, "2006");
     }
 
     france2007.onclick = function(){
+        currentYear = "2007";
         setYearActive(buttons, 2);
         reinitVilles(villes, dataFrance);
         montrerVilles(villes, dataFrance, "2007");
     }
 
     france2008.onclick = function(){
-
+        currentYear = "2008";
         setYearActive(buttons, 3);
         reinitVilles(villes, dataFrance);
         montrerVilles(villes, dataFrance, "2008");
     }
 
     france2009.onclick = function(){
-
+        currentYear = "2009";
         setYearActive(buttons, 4);
         reinitVilles(villes, dataFrance);
         montrerVilles(villes, dataFrance, "2009");
     }
 
     france2010.onclick = function(){
+        currentYear = "2010";
         setYearActive(buttons, 5);
         reinitVilles(villes, dataFrance);
         montrerVilles(villes, dataFrance, "2010");
     }
 
     france2011.onclick = function(){
+        currentYear = "2011";
         setYearActive(buttons, 6);
         reinitVilles(villes, dataFrance);
         montrerVilles(villes, dataFrance, "2011");
     }
 
     france2012.onclick = function(){
+        currentYear = "2012";
         setYearActive(buttons, 7);
         reinitVilles(villes, dataFrance);
         montrerVilles(villes, dataFrance, "2012");
     }
 
     france2013.onclick = function(){
+        currentYear = "2013";
         setYearActive(buttons, 8);
         reinitVilles(villes, dataFrance);
         montrerVilles(villes, dataFrance, "2013");
     }
 
     france2014.onclick = function(){
+        currentYear = "2014";
         setYearActive(buttons, 9);
         reinitVilles(villes, dataFrance);
         montrerVilles(villes, dataFrance, "2014");
     }
 
     france2015.onclick = function(){
+        currentYear = "2015";
         setYearActive(buttons, 10);
         reinitVilles(villes, dataFrance);
         montrerVilles(villes, dataFrance, "2015");
     }
 
     france2016.onclick = function(){
+        currentYear = "2016";
         setYearActive(buttons, 11);
         reinitVilles(villes, dataFrance);
         montrerVilles(villes, dataFrance, "2016");
     }
 
     france2017.onclick = function(){
+        currentYear = "2017";
         setYearActive(buttons, 12);
         reinitVilles(villes, dataFrance);
         montrerVilles(villes, dataFrance, "2017");
     }
 
     franceTotal.onclick = function(){
+        currentYear = "global";
         setYearActive(buttons, 0);
         totalVilles(villes, dataFrance);
     }
-
-    /*
-     var aixEnProvence = villes.getElementById("Aix-en-Provence");
-     var albi = villes.getElementById("Albi");
-     var amiens =villes.getElementById("Amiens");
-     var angers =villes.getElementById("Angers");
-     var annecy =villes.getElementById("Annecy");
-     var antibes =villes.getElementById("Antibes");
-     var avignon =villes.getElementById("Avignon");
-     var bagnolsSurCèze =villes.getElementById("Bagnols-Sur-Cèze");
-     var bayonne =villes.getElementById("Bayonne");
-     var beauvais =villes.getElementById("Beauvais");
-     var belfort =villes.getElementById("Belfort");
-     var besancon =villes.getElementById("Besançon");
-     var boismé =villes.getElementById("Boismé");
-     var bordeaux =villes.getElementById("Bordeaux");
-     var brest =villes.getElementById("Brest");
-     var caen =villes.getElementById("Caen");
-     var cambrai =villes.getElementById("Cambrai");
-     var cannes =villes.getElementById("Cannes");
-     var chateauThierry =villes.getElementById("Château-Thierry");
-     var cholet =villes.getElementById("Cholet");
-     var clisson =villes.getElementById("Clisson");
-     var compiègne =villes.getElementById("Compiègne");
-     var douai =villes.getElementById("Douai");
-     var douchyLesMines =villes.getElementById("Douchy-les-Mines");
-     var elancourt =villes.getElementById("Elancourt");
-     var evreux =villes.getElementById("Evreux");
-     var fontenayLeComte =villes.getElementById("Fontenay-le-Comte");
-     var paris =villes.getElementById("Paris");
-     var grenoble =villes.getElementById("Grenoble");
-     var laRochelle =villes.getElementById("La Rochelle");
-     var laval =villes.getElementById("Laval");
-     var lePerreuxSurMarne =villes.getElementById("Le Perreux-sur-Marne");
-     var lievin =villes.getElementById("Liévin");
-     var lille =villes.getElementById("Lille");
-     var limoges =villes.getElementById("Limoges");
-     var lorient =villes.getElementById("Lorient");
-     var lyon =villes.getElementById("Lyon");
-     var macon =villes.getElementById("Mâcon");
-     var magescq =villes.getElementById("Magescq");
-     var marseille =villes.getElementById("Marseille");
-     var meaux =villes.getElementById("Meaux");
-     var metz =villes.getElementById("Metz");
-     var montaigu =villes.getElementById("Montaigu");
-     var montpellier =villes.getElementById("Montpellier");
-     var morlaix =villes.getElementById("Morlaix");
-     var mulhouse =villes.getElementById("Mulhouse");
-     var nancy =villes.getElementById("Nancy");
-     var nanterre =villes.getElementById("Nanterre");
-     var nantes =villes.getElementById("Nantes");
-     var nice =villes.getElementById("Nice");
-     var niort =villes.getElementById("Niort");
-     var orléans =villes.getElementById("Orléans");
-     var paimpol =villes.getElementById("Paimpol");
-     var pau =villes.getElementById("Pau");
-     var poitiers =villes.getElementById("Poitiers");
-     var quimper =villes.getElementById("Quimper");
-     var rambouillet =villes.getElementById("Rambouillet");
-     var rennes =villes.getElementById("Rennes");
-     var saintEtienne =villes.getElementById("Saint-Étienne");
-     var strasbourg =villes.getElementById("Strasbourg");
-     var tarbes =villes.getElementById("Tarbes");
-     var thaonLesVosges =villes.getElementById("Thaon-les-Vosges");
-     var toulouse =villes.getElementById("Toulouse");
-     var tours =villes.getElementById("Tours");
-     var treillieres =villes.getElementById("Treillières");
-     var valence =villes.getElementById("Valence");
-     var valenciennes =villes.getElementById("Valenciennes"); */
 }
 
 /**************************************************************************************************/
 
 
+function popup(nomVille, anneeCourante, data){
+
+    if (anneeCourante !== "global") {
+        document.getElementById("fenetrePopupFrance").className = "fenetrePopup";
+        document.getElementById("ville").innerHTML = nomVille;
+        for(var i = 0; i < data.length ; i++) {
+            if (data[i].Annee === anneeCourante) {
+                $("<li>data[i].Groupe</li>").appendTo("artistes");
+            }
+        }
+
+    }
+
+}
 
 
 
@@ -2638,7 +2603,6 @@ function reinitVilles(villes, dataFrance) {
 
 function montrerVilles(villes, dataFrance, annee) {
 
-    var villesAnnees=[];
     for (var i = 0; i < dataFrance.length; i++) {
         if (dataFrance[i].Annee == annee) {
             var circle = villes.getElementById(dataFrance[i].Ville).getElementsByTagName("circle");
