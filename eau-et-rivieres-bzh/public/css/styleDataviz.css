@@ -122,9 +122,17 @@ body{
 
 .cellule{
     text-align: left;
-    padding: 5px;
     padding-left: 10px;
     width: 33%;
+    display: inline-flex;
+}
+
+.pLegende {
+    padding-left: 0.7vw;
+}
+
+.cellule svg {
+    margin-top: 0.2vw;
 }
 
 #buttonSP {
@@ -605,14 +613,23 @@ body{
     border: 3px solid black;
     top: 28%;
     left: 75%;
-    width: 18%;
-    height: 46%;
+    width: 18vw;
     text-align: justify;
 }
 
 .pSection8 {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 0.37vw;
+    padding-bottom: 0.37vw;
+    padding-left: 1vw;
+}
+
+.articleS8 {
+    display: inline-flex;
+    padding-left: 0.6vw;
+}
+
+.articleS8 svg {
+    margin-top: 0.6vw;
 }
 
 /* Bonhomme */
