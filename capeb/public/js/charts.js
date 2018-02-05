@@ -460,6 +460,7 @@ function createConjonctureDataviz(json){
         cpt++;
         if (cpt==4){
             dataset.data = data;
+            dataset.borderColor = "white";
             dataset.label = labels[cpty-1];
             d.datasets.push(dataset);
             dataset = {};
@@ -510,7 +511,7 @@ function createConjonctureDataviz(json){
         data: d,
         options: {
             tooltips: {
-                display: true
+                display: false
             },
             scales: {
                 xAxes: [{
