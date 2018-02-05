@@ -28,8 +28,8 @@
     <script src="https://d3js.org/d3-array.v1.min.js" defer></script>
     <script src="https://d3js.org/d3-geo.v1.min.js" defer></script>
 
-	<!-- D3-cloud -->
-	<script src="js/d3.layout.cloud.js" defer></script>
+    <!-- D3-cloud -->
+    <script src="js/d3.layout.cloud.js" defer></script>
 
     <!-- Chartjs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js" defer></script>
@@ -92,37 +92,89 @@
         <div class="modal-frame">
             <div class="modal">
                 <div class="modal-inset">
-                  <div class="button">
-                    <svg class="close" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <div class="button">
+                        <svg class="close" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g transform="translate(25.0, 25.0)">
-                              <path d="M20,0 L0,20"></path>
-                              <path d="M0,0 L20,20"></path>
+                                <path d="M20,0 L0,20"></path>
+                                <path d="M0,0 L20,20"></path>
                             </g>
-                    </svg>
-                    <svg class="next" viewBox="0 0 50 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <g transform="translate(20.0, 25.0)">
-                        <polyline points="0 20 10 10 0 0"></polyline>
-                      </g>
-                    </svg>
-                    <svg class="prev" viewBox="0 0 50 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <g transform="translate(10.0, 25.0)">
-                        <polyline points="20 0 10 10 20 20"></polyline>
-                      </g>
-                    </svg>
-                  </div>
-                  <h2>Nom epci - nom pôle</h2>
-                  <div class="texte-dataviz">
-                    <h3>question posée</h3>
-                    <div class="separateur"></div>
-                    <p class="explication-data">
-                      kjhgkjsd lhbslhjdflhjsd fhjsbdfhbs hdlbfshbfjs
-                    </p>
-                  </div>
-                  <div class="modal-body">
-                    <div id="dataviz"></div>
-                  </div>
-                  <div class="legende-dataviz">
-                  </div>
+                        </svg>
+                        <svg class="next" viewBox="0 0 50 70" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g transform="translate(20.0, 25.0)">
+                                <polyline points="0 20 10 10 0 0"></polyline>
+                            </g>
+                        </svg>
+                        <svg class="prev" viewBox="0 0 50 70" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g transform="translate(10.0, 25.0)">
+                                <polyline points="20 0 10 10 20 20"></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                    <h2 id="modal-nom-epci"></h2>
+                    <div id="texte-conjoncture" class="texte-dataviz" style="display: none">
+                        <h3>Comment ça va chez vous ?</h3>
+                        <div class="separateur"></div>
+                        <p class="explication-data">
+                            Quand le bâtiment va, tout va. Des artisans qui ont le moral, c’est bon pour votre territoire ! La note de conjoncture de votre territoire a été calculée à partir des 4 éléments vitaux de l’entreprise.
+                        </p>
+                    </div>
+                    <div id="texte-investissement" class="texte-dataviz" style="display: none">
+                        <h3>Investir ou ne pas investir ?</h3>
+                        <div class="separateur"></div>
+                        <p class="explication-data">
+                            La volonté d’investissement des artisans traduit une vision positive du futur. Chaque euro dépensé par l’un gonflera la trésorerie de l’entreprise de l’autre. Les encourager dans cette voie prend tout son sens pour dynamiser l’économie locale !
+                        </p>
+                    </div>
+                    <div id="texte-emploi" class="texte-dataviz" style="display: none">
+                        <h3>Qui veut gagner des salariés ?</h3>
+                        <div class="separateur"></div>
+                        <p class="explication-data">
+                            Regain d’optimisme chez les entreprises ! Aujourd’hui l’heure est à l’emploi mais les artisans ne trouvent pas chaussure à leur pied. Toujours plus de reconversions et de formations, c’est une victoire pour le territoire ! L’idée ? Former ceux qui seront les artisans de demain.
+                        </p>
+                    </div>
+                    <div id="texte-distance" class="texte-dataviz" style="display: none">
+                        <h3>Zone d’intervention : Jusqu’où sont-ils capables d’aller ?</h3>
+                        <div class="separateur"></div>
+                        <p class="explication-data">
+                            Même s’ils sont capables d’aller au bout du monde pour leurs clients, ils préfèrent rester à proximité. Une distance courte indique que la demande locale est forte. Certains métiers, aux savoirs-faire bien spécifiques, doivent toutefois s’éloigner pour trouver des chantiers.
+                        </p>
+                    </div>
+                    <div id="texte-contrat" class="texte-dataviz" style="display: none">
+                        <h3>Bonne santé rime-t-elle avec durée ?</h3>
+                        <div class="separateur"></div>
+                        <p class="explication-data">
+                            Un carnet de commande rempli, c’est la garantie de CDI ! Plus vos artisans ont une vision à long terme, plus ils signent des contrats à long terme. 1er formateur d’apprentis, ils s’engagent dès aujourd’hui pour l’avenir des jeunes. L’apprentissage est un engagement sur l’avenir qu’il faut développer.
+                        </p>
+                    </div>
+                    <div id="texte-mp" class="texte-dataviz" style="display: none">
+                        <h3>Le marché public, une pratique en place ?</h3>
+                        <div class="separateur"></div>
+                        <p class="explication-data">
+                            L’allotissement dans les marchés publics, c’est bien pour les artisans. Bon nombre aiment travailler pour leur mairie ou leur communauté de communes mais sont freinés dans leur élan par la complexité, les prix trop bas, les délais à rallonge… Objectif 2018 : simplification !
+                        </p>
+                    </div>
+                    <div id="texte-dd" class="texte-dataviz" style="display: none">
+                        <h3>Développement durable, RSE : sur quoi les artisans jouent-ils collectifs ?</h3>
+                        <div class="separateur"></div>
+                        <p class="explication-data">
+                            - Ils créent des emplois non-délocalisables,<br>
+                            - participent au dynamisme économique local<br>
+                            - trient toujours plus et mieux les déchets de chantier,<br>
+                            - conseillent leurs clients pour que leurs maisons ne soient plus des passoires thermiques,<br>
+                            - aménagent les logements des seniors pour qu’ils puissent continuer à participer au concours de belote du coin,<br>
+                            - sponsorisent les équipes de sport locales,<br>
+                            - etc., etc., etc.<br>
+                            Leur engagement n’est plus à prouver !
+                        </p>
+                    </div>
+                    <div class="modal-body">
+                        <div id="dataviz"></div>
+                    </div>
+                    <div class="legende-dataviz">
+                    </div>
                 </div>
             </div>
         </div>
@@ -192,7 +244,7 @@
                 <div class="map-pdl">
                 </div>
                 <div class="motif-capeb">
-                  <img src="img/image/motif-capeb.svg" alt="">
+                    <img src="img/image/motif-capeb.svg" alt="">
                 </div>
             </section>
         </div>
@@ -328,86 +380,86 @@
 
     <div class="section">
         <section class="partie-team">
-          <div class="logo-bam">
-            <object type="image/svg+xml" data="img/gif_animated.svg"></object>
-          </div>
-          <h1 class="title">Notre (super) équipe !</h1>
-          <div class="logo-crews">
-            <div class="bloc-logo capeb">
-              <img class="logocrew" src="img/logo/LogoCapeb.png" alt="logo de la capeb">
+            <div class="logo-bam">
+                <object type="image/svg+xml" data="img/gif_animated.svg"></object>
             </div>
-            <div class="bloc-logo agr">
-              <img class="logocrew" src="img/logo/LogoAgr.png" alt="logo de de l'AGR, l'école de l'image">
+            <h1 class="title">Notre (super) équipe !</h1>
+            <div class="logo-crews">
+                <div class="bloc-logo capeb">
+                    <img class="logocrew" src="img/logo/LogoCapeb.png" alt="logo de la capeb">
+                </div>
+                <div class="bloc-logo agr">
+                    <img class="logocrew" src="img/logo/LogoAgr.png" alt="logo de de l'AGR, l'école de l'image">
+                </div>
+                <div class="bloc-logo polytech">
+                    <img class="logocrew" src="img/logo/LogoPolytech.png" alt="logo de Polytech Nantes">
+                </div>
+                <div class="bloc-logo sc">
+                    <img class="logocrew" src="img/logo/LogoAudencia.png" alt="logo de Audencia SciencesCom">
+                </div>
             </div>
-            <div class="bloc-logo polytech">
-              <img class="logocrew" src="img/logo/LogoPolytech.png" alt="logo de Polytech Nantes">
+            <div class="members-crews">
+                <div class="crew capeb">
+                    <p class="folio"><a href="#">Christelle JOLY</a></p>
+                    <p class="folio"><a href="#">Mélanie VILLENEUVE</a></p>
+                </div>
+                <div class="crew agr">
+                    <p class="folio"><a href="#">Corentin RIVIERE</a></p>
+                    <p class="folio"><a href="#">Chloé MARTIN</a></p>
+                    <p class="folio"><a href="#">Antoine SIMEHA</a></p>
+                </div>
+                <div class="crew polytech">
+                    <p class="folio"><a href="#">Yulin CHAI</a></p>
+                    <p class="folio"><a href="#">Lucas PAGANO</a></p>
+                    <p class="folio"><a href="#">Elmokhtar MOHAMED MOUSSA</a></p>
+                </div>
+                <div class="crew sc">
+                    <p class="folio"><a href="#">Angélina HERBERT</a></p>
+                    <p class="folio"><a href="#">Adrien MOUTEAU</a></p>
+                    <p class="folio"><a href="#">Manon CUNY</a></p>
+                    <p class="folio"><a href="#">Alexandra PROVOT</a></p>
+                </div>
             </div>
-            <div class="bloc-logo sc">
-              <img class="logocrew" src="img/logo/LogoAudencia.png" alt="logo de Audencia SciencesCom">
-            </div>
-          </div>
-          <div class="members-crews">
-            <div class="crew capeb">
-              <p class="folio"><a href="#">Christelle JOLY</a></p>
-              <p class="folio"><a href="#">Mélanie VILLENEUVE</a></p>
-            </div>
-            <div class="crew agr">
-              <p class="folio"><a href="#">Corentin RIVIERE</a></p>
-              <p class="folio"><a href="#">Chloé MARTIN</a></p>
-              <p class="folio"><a href="#">Antoine SIMEHA</a></p>
-            </div>
-            <div class="crew polytech">
-              <p class="folio"><a href="#">Yulin CHAI</a></p>
-              <p class="folio"><a href="#">Lucas PAGANO</a></p>
-              <p class="folio"><a href="#">Elmokhtar MOHAMED MOUSSA</a></p>
-            </div>
-            <div class="crew sc">
-              <p class="folio"><a href="#">Angélina HERBERT</a></p>
-              <p class="folio"><a href="#">Adrien MOUTEAU</a></p>
-              <p class="folio"><a href="#">Manon CUNY</a></p>
-              <p class="folio"><a href="#">Alexandra PROVOT</a></p>
-            </div>
-          </div>
         </section>
     </div>
 
     <div class="section">
         <section class="partie-soutien">
-          <h1 class="title">Ils soutiennent le HYBLAB !</h1>
-          <div class="soutiens-hyblab">
-            <a href="#" class="soutien bottom right hyblab">
-              <img src="img/logo/LogoHyblab.png" alt="logo du hyblab">
-            </a>
-            <a href="#" class="soutien bottom right pdl">
-              <img src="img/logo/LogoPdl.png" alt="logo des Pays de la Loire">
-            </a>
-            <a href="#" class="soutien bottom right dep">
-              <img src="img/logo/LogoDep.png" alt="logo de la Loire Atlantique">
-            </a>
-            <a href="#" class="soutien bottom nantes">
-              <img src="img/logo/LogoNantes.png" alt="logo de Nantes Métropole">
-            </a>
-            <a href="#" class="soutien right agr">
-              <img src="img/logo/LogoAgr.png" alt="logo de l'AGR l'école de l'image">
-            </a>
-            <a href="#" class="soutien right polytech">
-              <img src="img/logo/LogoPolytech.png" alt="logo de Polytech Nantes">
-            </a>
-            <a href="#" class="soutien right sc">
-              <img src="img/logo/LogoAudencia.png" alt="logo de Audencia SciencesCom">
-            </a>
-            <a href="#" class="soutien medialab">
-              <img src="img/logo/LogoMedialab.png" alt="logo du Cluster Ouest Media Lab">
-            </a>
-          </div>
-          <div class="open-source">
-            <a class="opensource" href="#">
-              <img class="logo-cc" src="img/icon/cc.svg" alt="Creative Commons">
-            </a>
-            <a class="opensource" href="#">
-              <img class="logo-osi" src="img/icon/osi.svg" alt="Open source Initiative">
-            </a>
-          </div>
+            <h1 class="title">Ils soutiennent le HYBLAB !</h1>
+            <div class="soutiens-hyblab">
+                <a href="#" class="soutien bottom right hyblab">
+                    <img src="img/logo/LogoHyblab.png" alt="logo du hyblab">
+                </a>
+                <a href="#" class="soutien bottom right pdl">
+                    <img src="img/logo/LogoPdl.png" alt="logo des Pays de la Loire">
+                </a>
+                <a href="#" class="soutien bottom right dep">
+                    <img src="img/logo/LogoDep.png" alt="logo de la Loire Atlantique">
+                </a>
+                <a href="#" class="soutien bottom nantes">
+                    <img src="img/logo/LogoNantes.png" alt="logo de Nantes Métropole">
+                </a>
+                <a href="#" class="soutien right agr">
+                    <img src="img/logo/LogoAgr.png" alt="logo de l'AGR l'école de l'image">
+                </a>
+                <a href="#" class="soutien right polytech">
+                    <img src="img/logo/LogoPolytech.png" alt="logo de Polytech Nantes">
+                </a>
+                <a href="#" class="soutien right sc">
+                    <img src="img/logo/LogoAudencia.png" alt="logo de Audencia SciencesCom">
+                </a>
+                <a href="#" class="soutien medialab">
+                    <img src="img/logo/LogoMedialab.png" alt="logo du Cluster Ouest Media Lab">
+                </a>
+            </div>
+            <div class="open-source">
+                <a class="opensource" href="#">
+                    <img class="logo-cc" src="img/icon/cc.svg" alt="Creative Commons">
+                </a>
+                <a class="opensource" href="#">
+                    <img class="logo-osi" src="img/icon/osi.svg" alt="Open source Initiative">
+                </a>
+            </div>
         </section>
     </div>
 
