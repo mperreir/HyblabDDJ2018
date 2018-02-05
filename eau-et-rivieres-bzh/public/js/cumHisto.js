@@ -9,23 +9,72 @@ var lastChanged = dep1;
 buildHisto("#histGauche",annee,dep1);
 buildHisto("#histDroite",annee,dep2);
 buildHisto("#bonhomme",anneeCambon,"Campbon");
+upDateTexteGauche();
+upDateTexteDroite();
+$("#descriptionHisto").hide();
 
-$('#2012').on('click', function(event) {annee="2012";upDateHisto('#histGauche');upDateHisto('#histDroite');});
-$('#2013').on('click', function(event) {annee="2013";upDateHisto('#histGauche');upDateHisto('#histDroite');});
-$('#2014').on('click', function(event) {annee="2014";upDateHisto('#histGauche');upDateHisto('#histDroite');});
-$('#2015').on('click', function(event) {annee="2015";upDateHisto('#histGauche');upDateHisto('#histDroite');});
-$('#2016').on('click', function(event) {annee="2016";upDateHisto('#histGauche');upDateHisto('#histDroite');});
+
+$('#2012').on('click', function(event) {
+	annee="2012";
+	upDateHisto('#histGauche');
+	upDateHisto('#histDroite');
+	upDateTexteGauche();
+	upDateTexteDroite();
+	$('#2012').css('background-color','#404142');
+	$('#2013, #2014, #2015, #2016').css('background-color','white');
+});
+
+$('#2013').on('click', function(event) {
+	annee="2013";
+	upDateHisto('#histGauche');
+	upDateHisto('#histDroite');
+	upDateTexteGauche();
+	upDateTexteDroite();
+	$('#2013').css('background-color','#404142');
+	$('#2012, #2014, #2015, #2016').css('background-color','white');
+});
+
+
+$('#2014').on('click', function(event) {
+	annee="2014";
+	upDateHisto('#histGauche');
+	upDateHisto('#histDroite');
+	upDateTexteGauche();
+	upDateTexteDroite();
+	$('#2014').css('background-color','#404142');
+	$('#2012, #2013, #2015, #2016').css('background-color','white');
+});
+
+$('#2015').on('click', function(event) {
+	annee="2015";
+	upDateHisto('#histGauche');
+	upDateHisto('#histDroite');
+	upDateTexteGauche();
+	upDateTexteDroite();
+	$('#2015').css('background-color','#404142');
+	$('#2012, #2013, #2014, #2016').css('background-color','white');
+});
+
+$('#2016').on('click', function(event) {
+	annee="2016";
+	upDateHisto('#histGauche');
+	upDateHisto('#histDroite');
+	upDateTexteGauche();
+	upDateTexteDroite();
+	$('#2016').css('background-color','#404142');
+	$('#2012, #2013, #2014, #2015').css('background-color','white');
+});
 
 //onClick for Cotes_Armor
-$('#FR-22').on('click', function(event) {changeOneHisto("Cotes_Armor")});
-$('#FR-29').on('click', function(event) {changeOneHisto("Finistere")});
-$('#FR-35').on('click', function(event) {changeOneHisto("Ile_et_Vilaine")});
-$('#FR-44').on('click', function(event) {changeOneHisto("Loire_Atlantique")});
-$('#FR-49').on('click', function(event) {changeOneHisto("Maine_et_Loire")});
-$('#FR-53').on('click', function(event) {changeOneHisto("Mayenne")});
-$('#FR-56').on('click', function(event) {changeOneHisto("Morbihan")});
+$('#FR-22').on('click', function(event) {changeOneHisto("Cotes_Armor");});
+$('#FR-29').on('click', function(event) {changeOneHisto("Finistere");});
+$('#FR-35').on('click', function(event) {changeOneHisto("Ile_et_Vilaine");});
+$('#FR-44').on('click', function(event) {changeOneHisto("Loire_Atlantique");});
+$('#FR-49').on('click', function(event) {changeOneHisto("Maine_et_Loire");});
+$('#FR-53').on('click', function(event) {changeOneHisto("Mayenne");});
+$('#FR-56').on('click', function(event) {changeOneHisto("Morbihan");});
 
-$('#C2012').on('click', function(event) {anneeCambon="2012";upDateHisto('#bonhomme')});
+$('#C2012').on('click', function(event) {anneeCambon="2012";upDateHisto('#bonhomme');});
 $('#C2013').on('click', function(event) {anneeCambon="2013";upDateHisto('#bonhomme');});
 $('#C2014').on('click', function(event) {anneeCambon="2014";upDateHisto('#bonhomme');});
 $('#C2015').on('click', function(event) {anneeCambon="2015";upDateHisto('#bonhomme');});
@@ -37,13 +86,23 @@ function changeOneHisto(newDep){
 	  if(lastChanged == dep1){
 			dep2 = newDep;
 			upDateHisto("#histDroite");
-	    lastChanged = dep2;
+			upDateTexteDroite();
+	    	lastChanged = dep2;
 		}else{
 			dep1 = newDep;
 			upDateHisto("#histGauche");
+			upDateTexteGauche();
 			lastChanged = dep1;
 		}
 	}
+}
+
+function upDateTexteGauche(){
+	$("#descriptionGauche").text($("#Finistere .2016").text());
+}
+
+function upDateTexteDroite(){
+	$("#descriptionDroite").text($("#Finistere .2016").text());
 }
 
 function upDateHisto(histo){
