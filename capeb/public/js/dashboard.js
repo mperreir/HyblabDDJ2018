@@ -27,8 +27,18 @@ function miniStats(regionStats, d) {
             var dataFrame = document.getElementsByClassName("info-conjoncture")[0];
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = parseFloat(json.values[0][0]).toFixed(1);
             dataFrame.style.backgroundColor = colorsForRegion[matchColor(json.values[0][0], 2.87, 3.78, 0.182, 0.244, false)];
-        });
+            $('#card-conjoncture .open').each(function(){
+                $(this).on('click', function() {
+                    document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Conjoncture";
+                    var texte = document.getElementById("texte-conjoncture");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
+                    fetchConjonctureData(d);
+                    closeOnEscape();
+                });
+            });
 
+        });
 
     //2 : Investissement /  / chart over time compared with region
     fetch("/capeb/data/" + d.properties.siren_epci + "/investissement")
@@ -48,7 +58,11 @@ function miniStats(regionStats, d) {
 
             $('#card-investissement .open').each(function(){
                 $(this).on('click', function() {
-                    drawLineChart(json, "Investir ou ne pas investir ?");
+                    document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Investissement";
+                    var texte = document.getElementById("texte-investissement");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
+                    drawLineChart(json);
                     closeOnEscape();
                 });
             });
@@ -98,6 +112,10 @@ function miniStats(regionStats, d) {
 
             $('#card-contrat .open').each(function(){
                 $(this).on('click', function() {
+                    document.getElementById("modal-nom-epci").innerHTML += d.properties.nom_comple + " - Contrat";
+                    var texte = document.getElementById("texte-contrat");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
                     createSunburst(d);
                     closeOnEscape();
                 });
@@ -111,17 +129,28 @@ function miniStats(regionStats, d) {
             $(".info-dd h1").text(stat2[0].name)
 			 $('#card-dd .open').each(function(){
                 $(this).on('click', function() {
+					document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Développement durable";
+                    var texte = document.getElementById("texte-dd");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
+                    
                     drawDDChart(stats);
                     closeOnEscape();
                 });
             });
+
             //7 : MP / oui/non plus représenté / camembert -> nuage de mots
             var dataFrame = document.getElementsByClassName("info-mp")[0];
             var mean = parseFloat(stats.Marches_publics.values[0]);
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = Math.round(mean * 100);
             dataFrame.style.backgroundColor = colorsForRegion[matchColor(mean, 0, 0.227, 0.227/5, (0.5 - 0.227)/5, false)];
+
             $('#card-mp .open').each(function(){
                 $(this).on('click', function() {
+                    document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Marchés publics";
+                    var texte = document.getElementById("texte-mp");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
                     wordCloud(stats.FreinsMP);
                     closeOnEscape();
                 });
@@ -130,9 +159,12 @@ function miniStats(regionStats, d) {
 			var asNumbers = stats.Nombre_Recrutements_Envisage_2017.values.map(Number);
             var indexOfMax = asNumbers.indexOf(Math.max(...asNumbers));
             document.getElementsByClassName("info-emploi")[0].getElementsByClassName("donneetexte")[0].innerHTML = stats.Nombre_Recrutements_Envisage_2017.labels[indexOfMax];
-			
-			$('#card-emploi .open').each(function(){
+            $('#card-emploi .open').each(function(){
                 $(this).on('click', function() {
+                    document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Embauche";
+                    var texte = document.getElementById("texte-emploi");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
                     drawChart3dEmploi(stats);
                     closeOnEscape();
                 });
@@ -161,7 +193,11 @@ function miniStats(regionStats, d) {
 
             $('#card-distance .open').each(function(){
                 $(this).on('click', function() {
-                    drawBubbleChart(json);
+                    document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Distance";
+                    var texte = document.getElementById("texte-distance");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
+                    drawDistanceDataviz(json);
                     closeOnEscape();
                 });
             });
@@ -220,6 +256,12 @@ function createModal(){
         $overlay.removeClass('state-show');
         $modal.removeClass('state-appear').addClass('state-leave');
         $("#dataviz").empty();
+        document.getElementById("modal-nom-epci").innerHTML = "";
+        var texte = document.getElementsByClassName("active-dataviz-text")[0];
+        if(texte !== null){
+            texte.style.display = "none";
+            texte.className = "texte-dataviz";
+        }
     });
 
 

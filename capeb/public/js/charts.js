@@ -208,14 +208,6 @@ var drawChart3dEmploi = function(data) {
     sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
     sec.setAttribute("id", "dataviz-section");
 
-    var h3 = document.getElementById("title-dataviz");
-    if (h3 !== null) {
-        h3.remove();
-    }
-    var h3 = sec.appendChild(document.createElement('h3'));
-    h3.setAttribute("id", "title-dataviz");
-    h3.innerHTML = "Qui veut gagner des salariés ?";
-
     var canvas = document.getElementById("canvas-dataviz");
     if (canvas !== null) {
         canvas.remove();
@@ -320,22 +312,13 @@ var drawChart3dEmploi = function(data) {
 };
 
 
-function drawLineChart(data, title){
+function drawLineChart(data){
     var sec = document.getElementById("dataviz-section");
     if(sec !== null) {
         sec.remove();
     }
     sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
     sec.setAttribute("id", "dataviz-section");
-
-    var h3 = document.getElementById("title-dataviz");
-    if(h3!==null){
-        h3.remove();
-    }
-    var h3 = sec.appendChild(document.createElement('h3'));
-    h3.setAttribute("id", "title-dataviz");
-    h3.innerHTML = title;
-
 
     var canvas = document.getElementById("canvas-dataviz");
     if(canvas !== null){
@@ -392,14 +375,20 @@ function drawLineChart(data, title){
                     scaleLabel: {
                         display: true,
                         labelString: 'Année'
+                    },
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
                     }
                 }],
                 yAxes: [{
                     display: true,
                     ticks: {
-                        suggestedMin: 0, // minimum will be 0, unless there is a lower value.
-                        // OR //
                         beginAtZero: true // minimum value will be 0.
+                    },
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
                     },
                     scaleLabel: {
                         display: true,
@@ -479,7 +468,7 @@ function drawPieChart(data, title) {
     });
 }
 
-function drawBubbleChart(data) {
+function drawDistanceDataviz(data) {
 
     var colorMatch = {
         Aut: colors[6],
@@ -514,14 +503,6 @@ function drawBubbleChart(data) {
     }
     sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
     sec.setAttribute("id", "dataviz-section");
-
-    var h3 = document.getElementById("title-dataviz");
-    if (h3 !== null) {
-        h3.remove();
-    }
-    h3 = sec.appendChild(document.createElement('h3'));
-    h3.setAttribute("id", "title-dataviz");
-    h3.innerHTML = "Zone d’intervention : Jusqu’où sont-ils capables d’aller ?";
 
     var canvas = document.getElementById("canvas-dataviz");
     if (canvas !== null) {
@@ -606,3 +587,123 @@ function drawBubbleChart(data) {
     });
 
 }
+
+function fetchConjonctureData(d){
+    fetch("/capeb/data/" + d.properties.siren_epci + "/conjoncture_facteurs")
+        .then(function (value) {
+            return value.json();
+        })
+        .catch(function (error) {
+            console.log("error");
+            console.log(error);
+            return {};
+        })
+        .then(function (json) {
+          createConjonctureDataviz(json);
+        });
+}
+
+function createConjonctureDataviz(json){
+    var labels = ["Chiffre d'affaires", "Marge", "Trésorerie", "Carnet de commandes"];
+    var pointsColor = [["#ACF2E2", "#50EC2", "#02998B"], ["#AEDFF8", "#68C0ED", "#427C9A"],["#D8D8D8", "#9B9B9B", "#9B9B9B"],["#EB8D8B", "#DF261D", "#A61B14"]];
+
+
+    var d = {
+        datasets: [],
+    };
+    var cptx = 1;
+    var cpty = 1;
+    var dataset = {};
+    var data = [];
+    var point = {};
+    json.values[0].forEach(function(value) {
+        point = {};
+        point.x = cptx;
+        point.y = cpty;
+        point.r = radiusmatch(value);
+        data.push(point);
+        cptx++;
+        if (cptx==4){
+            dataset.data = data;
+            d.datasets.push(dataset);
+            dataset = {};
+            data = [];
+            cpty++;
+            cptx=1;
+        }
+    });
+
+    function radiusmatch(value){
+        if(value<=0.25){
+            return 10;
+        } else if(value <= 0.50){
+            return 18;
+        } else if(value<=.75){
+            return 26;
+        } else if(value<=1){
+            return 34;
+        }
+    }
+
+    var sec = document.getElementById("dataviz-section");
+    if (sec !== null) {
+        sec.remove();
+    }
+    sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
+    sec.setAttribute("id", "dataviz-section");
+
+    var canvas = document.getElementById("canvas-dataviz");
+    if (canvas !== null) {
+        canvas.remove();
+    }
+
+    canvas = document.createElement('canvas');
+    canvas.setAttribute("id", "canvas-dataviz");
+
+    var cvs = sec.appendChild(canvas);
+    var ctx = cvs.getContext("2d");
+
+    var chart = new Chart(ctx, {
+        type: 'bubble',
+        data: d,
+        options: {
+            legend: {
+                display: false
+            },
+            elements: {
+                point: {
+                    backgroundColor: function(context) {
+                        var value = context.dataset.data[context.dataIndex];
+                        return pointsColor[value.y - 1][value.x - 1];
+                    }
+                }
+            },
+            tooltips: {
+                display: false
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                        stepSize: 1,
+                        max: 4
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    ticks: {
+                        beginAtZero: true,
+                        stepSize: 1,
+                        max: 5
+                    }
+                }]
+            }
+        }
+    });
+
+}
+
