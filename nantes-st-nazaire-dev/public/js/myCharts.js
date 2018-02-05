@@ -69,37 +69,76 @@ function createChartData(dataArray, ) {
 function triCroissant(cities, dataSets) {
     
     var datas = dataSets[0];
-    for (var i = 0; i < datas.data.length-1; i++) {
+    for (var i = 0; i < datas.data.length; i++) {
+        
         if (datas.data[i] == "null") {
-            cities.splice(i,1);
+            var k = datas.data.length
+            var verif = datas.data[k];
+            while (verif == "null") {
+                k -= 1;
+            }
+            temp = datas.data[i];
+            temp2 = cities[i];
+            temp3 = datas.backgroundColor[i];
+            datas.data[i] = datas.data[k];
+            cities[i] = cities[k];
+            datas.backgroundColor[i] = datas.backgroundColor[k];
+            datas.data[k] = temp;
+            cities[k] = temp2;
+            datas.backgroundColor[k] = temp3;
         }
     }
-    for (var ind01 = 0; ind01 < datas.data.length-1; ind01++) {
+    for (var ind01 = 0; ind01 < datas.data.length; ind01++) {
         for (var ind02 = ind01; ind02 < datas.data.length; ind02++) {
             if (datas.data[ind01] > datas.data[ind02]) {
                 temp = datas.data[ind01];
                 temp2 = cities[ind01];
+                temp3 = datas.backgroundColor[ind01];
                 datas.data[ind01] = datas.data[ind02];
                 cities[ind01] = cities[ind02];
+                datas.backgroundColor[ind01] = datas.backgroundColor[ind02];
                 datas.data[ind02] = temp;
                 cities[ind02] = temp2;
+                datas.backgroundColor[ind02] = temp3;
             }
         }
     }
 }
 
 function triDecroissant(cities, dataSets) {
-    
+
     var datas = dataSets[0];
-    for (var ind01 = 0; ind01 < datas.data.length-1; ind01++) {
+    for (var i = 0; i < datas.data.length; i++) {
+        console.log(datas.data[i])
+        if (datas.data[i] == NaN) {
+            var k = datas.data.length
+            var verif = datas.data[k];
+            while (verif == NaN) {
+                k -= 1;
+            }
+            temp = datas.data[i];
+            temp2 = cities[i];
+            temp3 = datas.backgroundColor[i];
+            datas.data[i] = datas.data[k];
+            cities[i] = cities[k];
+            datas.backgroundColor[i] = datas.backgroundColor[k];
+            datas.data[k] = temp;
+            cities[k] = temp2;
+            datas.backgroundColor[k] = temp3;
+        }
+    }
+    for (var ind01 = 0; ind01 < datas.data.length; ind01++) {
         for (var ind02 = ind01; ind02 < datas.data.length; ind02++) {
             if (datas.data[ind01] < datas.data[ind02]) {
                 temp = datas.data[ind01];
                 temp2 = cities[ind01];
+                temp3 = datas.backgroundColor[ind01];
                 datas.data[ind01] = datas.data[ind02];
                 cities[ind01] = cities[ind02];
+                datas.backgroundColor[ind01] = datas.backgroundColor[ind02];
                 datas.data[ind02] = temp;
                 cities[ind02] = temp2;
+                datas.backgroundColor[ind02] = temp3;
             }
         }
     }
@@ -161,12 +200,7 @@ function synthese(dataSets) {
         },
         options: {
             legend: {
-                position: 'top',
-                showTooltips: false,
-                scaleOverride: true,
-                scaleSteps: 4,
-                scaleStepWidth: 5,
-                scaleStartValue: 0
+                position: 'top'
             },
             title: {
                 display: true,
@@ -174,7 +208,9 @@ function synthese(dataSets) {
             },
             scale: {
                 ticks: {
-                    beginAtZero: true
+                    reverse: true,
+                    beginAtZero: true,
+                    min: 1
                 }
                 
             }
@@ -184,6 +220,45 @@ function synthese(dataSets) {
     };
 
     new Chart(document.getElementById('synthese-chart'), config);
+
+    var randomScalingFactor = function() {
+        return Math.round(Math.random() * 100);
+    };
+
+    var config = {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                ],
+                backgroundColor: [
+                    "red",
+                    "orange",
+                    "yellow",
+                    "green",
+                    "blue",
+                ],
+                label: 'Dataset 1'
+            }],
+            labels: [
+                'Red',
+                'Orange',
+                'Yellow',
+                'Green',
+                'Blue'
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    };
+
+        //var myPie = new Chart(document.getElementById('synthese-chart'), config);
 }
 
 function getSynthData(cities, dataJson) {
@@ -192,10 +267,9 @@ function getSynthData(cities, dataJson) {
     var averages = [3, 8, 13, 19, 25, 30, 34];
     var cpt = 0;
     cities.forEach(function(city) {
-        console.log(city);
         var values = [];
         averages.forEach(function(line) {
-            values.push(11 - dataJson[line][city]);
+            values.push(dataJson[line][city]);
         });
         var hiddenVal = (cpt > 3);
         dataSets.push({label: city, borderColor: colors[cpt], pointBackgroundColor: colors[cpt], data : values, hidden: hiddenVal});
@@ -209,7 +283,8 @@ function getSynthData(cities, dataJson) {
 
 $(document).ready(function() {
         //http://localhost:8081/nantes-st-nazaire-dev/rangs
-        $.post( "http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/rangs")
+        //$.post( "http://localhost:8081/nantes-st-nazaire-dev/rangs")
+        $.post( "http://localhost:8081/nantes-st-nazaire-dev/rangs")
             .done(function(data) {
                 console.log("Données de synthèse reçues");
                 var cities = ["Nantes-St-Nazaire", "Lyon", "Bordeaux", "Toulouse", "Rennes", "Lille", "Nice", "Strasbourg", "Grenoble","Aix-Marseille"];
@@ -224,7 +299,7 @@ $(document).ready(function() {
     // Assign handlers immediately after making the request,
     // and remember the jqxhr object for this request
     //http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs
-    var jqxhr = $.post( "http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs")
+    var jqxhr = $.post( "http://localhost:8081/nantes-st-nazaire-dev/actifs")
         .done(function(data) {
             console.log( "success" );
             console.log(data)
