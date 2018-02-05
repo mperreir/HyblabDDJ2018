@@ -30,7 +30,7 @@ fetch('data/datas.json')
         $('#boutonGauche').hide();
         $('#enSavoirPlus').hide();
         $('#intro2').hide();
-    })
+    });
 
     $('#boutonDroite').click(function() {
         $('#intro1').hide();
