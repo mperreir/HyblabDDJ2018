@@ -592,35 +592,6 @@ fetch('data/acc_saisons_printemps.json')
     })
     .then(function (json) {
         var ctx = document.getElementById("chart_printemps").getContext("2d");
-
-        // Define a plugin to provide data labels
-          Chart.plugins.register({
-              afterDatasetsDraw: function(chart, easing) {
-                  // To only draw at the end of animation, check for easing === 1
-                  var ctx = chart.ctx;
-                  chart.data.datasets.forEach(function (dataset, i) {
-                      var meta = chart.getDatasetMeta(i);
-                      if (!meta.hidden) {
-                          meta.data.forEach(function(element, index) {
-                              // Draw the text in black, with the specified font
-                              ctx.fillStyle = 'rgb(0, 0, 0)';
-                              var fontSize = 16;
-                              var fontStyle = 'normal';
-                              var fontFamily = 'Helvetica Neue';
-                              ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
-                              // Just naively convert to string for now
-                              var dataString = dataset.data[index].toString();
-                              // Make sure alignment settings are correct
-                              ctx.textAlign = 'center';
-                              ctx.textBaseline = 'middle';
-                              var padding = 5;
-                              var position = element.tooltipPosition();
-                              ctx.fillText(dataString, position.x, position.y - (fontSize / 2) - padding);
-                          });
-                      }
-                  });
-              }
-          });
         var myLineChart = new Chart(ctx , {
             type: "bar",
             data: json,
@@ -704,7 +675,6 @@ fetch('data/acc_saisons_ete.json')
              }
         });
     });
-
 fetch('data/acc_saisons_autonne.json')
     .then(function (response){
         if( response.ok )
@@ -752,7 +722,6 @@ fetch('data/acc_saisons_autonne.json')
              }
         });
     });
-
 fetch('data/acc_saisons_hiver.json')
     .then(function (response){
         if( response.ok )
@@ -800,6 +769,7 @@ fetch('data/acc_saisons_hiver.json')
              }
         });
     });
+    
 /* --------------------------------- CARTE ----------------------------- */
 
 
