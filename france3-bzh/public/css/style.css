@@ -166,7 +166,7 @@ h3
   width: 90% !important;
 }
 
-.q .v {
+.v {
     background-color: Transparent;
     border : 2px solid #5DC1CE;
     color: #5DC1CE;
@@ -180,7 +180,9 @@ h3
     margin-right: 50px;
 }
 
-.q .f {
+button:focus { outline-style: none; }
+
+.f {
     background-color:Transparent;
     border : 2px solid #5DC1CE;
     color: #5DC1CE;
@@ -561,10 +563,9 @@ h3
 }
 #text_content_slide2 {
   width: 35%;
-  margin-left: 15%;
-  margin-top: 5%;
   font-size: 18px;
   text-align: justify;
+  margin-top: 5%;
 }
 #div_indication_slide_evt {
   float: left;
@@ -572,7 +573,6 @@ h3
   top: 0;
   width: 5%
   display: block;
-  margin-left: 15%;
 }
 #indication_slide_evt {
   color: #F53855;
@@ -580,28 +580,39 @@ h3
   position: relative;
 }
 #train_slide2 {
-  position: absolute;
-  width: 100%;
+  position: relative;
+  width: 90%;
   left: -110%;
-  margin-top: 10%;
-  height: 20%;
+  height: auto;
   /* margin-left: -10000%; */
   /* top:1200%; */
 }
 #donnees_slide2 {
   text-align: center;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: auto;
+  transform: translate(-10%, 50%);
   display: inline-block;
-  position: relative;
-  top: 55%;
   opacity: 0;
    overflow: hidden;
 }
+#container_slide_evt {
+  position: absolute;
+  transform: translate(0%,-30%);
+  height: auto;
+   overflow: hidden;
+   height: 100%;
+   width: 100%;
 
+}
 #slide2_container_text {
   position: relative;
-  top: 10%;
+  left: 10%;
+}
+#slide2_container_text h1{
+  position: relative;
+  text-align: center;
+  right: 25%;
 }
 
 #donnees_slide2 p{
