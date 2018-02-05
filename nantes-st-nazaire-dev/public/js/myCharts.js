@@ -271,7 +271,6 @@ function synthese(dataSets) {
 }
 
 function getSynthData(cities, dataJson) {
-    console.log(dataJson)
     var dataSets = [];
     var colors = ["#34B6B3","#ffcc01", "#ed524a", "#dabf98", "#b1d952", "#7a4785", "#ea8c40", "#565656", "#8fd8ff", "#20c997", "#6610f2"]
     var averages = [3, 8, 13, 19, 25, 30, 34];
@@ -293,23 +292,24 @@ function getSynthData(cities, dataJson) {
 $(document).ready(function() {
         //http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/rangs
         //$.post( "http://localhost:8081/nantes-st-nazaire-dev/rangs")
+        /*
         $.post( "http://localhost:8081/nantes-st-nazaire-dev/rangs")
             .done(function(data) {
-                /*
                 console.log("Données de synthèse reçues");
                 var cities = ["Nantes-St-Nazaire", "Lyon", "Bordeaux", "Toulouse", "Rennes", "Lille", "Nice", "Strasbourg", "Grenoble","Aix-Marseille"];
                 var synthDataSets = getSynthData(cities, data);
                 synthese(synthDataSets);
-                */
+                
                 })
             .fail(function() {
                 console.log( "Erreur requete synthese" );
             });
-
+*/
 
     // Assign handlers immediately after making the request,
     // and remember the jqxhr object for this request
     //http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs
+    /*
     var jqxhr = $.post( "http://localhost:8081/nantes-st-nazaire-dev/actifs")
         .done(function(data) {
             console.log( "success" );
@@ -340,33 +340,10 @@ $(document).ready(function() {
         .fail(function() {
             console.log( "error" );
         });
-
+*/
         
         update();
-
-// Load a dummy json file using the fetch API
-fetch('/nantes-st-nazaire-dev/actifs')
-    // this promise will be fulfilled when the json fill will be
-    .then(function (response){
-        // if we could load the resource, parse it
-        if( response.ok )
-            return response.json();
-        else // if not, send some error message as JSON data
-            return {data: "JSON file not found"};
-
-    })
-    // in case of invalid JSON (parse error) send some error message as JSON data
-    .catch( function (error){
-        return {data: "Invalid JSON"};
-    })
-    // this promise will be fulfilled when the json will be parsed
-    .then(function (json) {
-        document.querySelector('#data')
-            .textContent = json.data;
-    });
 });
-
-    
     function update(data) {
       return fetch('/nantes-st-nazaire-dev/rangs', {
         method: 'post',
@@ -376,18 +353,6 @@ fetch('/nantes-st-nazaire-dev/actifs')
           'Content-Type': 'application/json'
         }
       })
-      /*
-        .then(function (response){
-        // if we could load the resource, parse it
-        if( response.ok )
-            return response.json();
-
-        else // if not, send some error message as JSON data
-            return {data: "JSON file not found"};
-
-        })
-*/
-      
         .then(checkStatus)
         .then(function(json) {
             console.log(json);
@@ -395,7 +360,6 @@ fetch('/nantes-st-nazaire-dev/actifs')
             var synthDataSets = getSynthData(cities, json);
             synthese(synthDataSets);
         });
-        
     }
 
     function checkStatus(response) {
