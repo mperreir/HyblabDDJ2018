@@ -1780,16 +1780,20 @@ function pin(){
     }
 }
 
-
 function controleurFrance() {
 
-    var svg = document.getElementById("mapFrance");
-    var villes = svg.contentDocument;
-
-   /* svg.selectAll("circles")
-        .attr("onmouseover", "evt.target.setAttribute('opacity', '0.5');")
-        .attr("onmouseout", "evt.target.setAttribute('opacity','1)');")
-        .attr("onClick", function() { console.log("hello");}); */
+    var villes = document.getElementById("mapFrance").contentDocument;
+    var villes_svg = villes.querySelectorAll(".ville");
+    for (var i = 0, length = villes_svg.length; i < length; i++) {
+        villes_svg[i].addEventListener("click",
+            function () {
+                console.log("clicked");
+            }, false);
+    }
+    d3.select(villes).selectAll("circle")
+                     .attr("onmouseover", "evt.target.setAttribute('opacity', '0.5');")
+                     .attr("onmouseout", "evt.target.setAttribute('opacity','1)');")
+                     //.attr("onClick", "ville()");
 
     var dataFrance = loadData('data/AnneeGroupeVilleNombreGroupes.json');
 
