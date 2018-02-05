@@ -96,8 +96,9 @@ var drawChart3dEmploi = function(data) {
     var d = data2.map(function(val, i) {
         return {
             label: labels[i],
-            backgroundColor: colors[i],
-            borderColor: colors[i],
+            backgroundColor: colorZoom[i+1],
+            borderColor: colorZoom[i+1],
+            borderWidth: "0",
             data: val.values[1].map(Number),
             fill: true
         }
@@ -133,6 +134,10 @@ var drawChart3dEmploi = function(data) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Année'
+                    },
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
                     }
                 }],
                 yAxes: [{
@@ -145,6 +150,10 @@ var drawChart3dEmploi = function(data) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Moyenne Nb récrutement envisagé'
+                    },
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
                     }
                 }]
             }
@@ -194,9 +203,13 @@ function drawLineChart(data){
 		datasets: [],
 		labels: []
 	};
-    var dataset = {data: [], label: "EPCI", backgroundColor: colorZoom[0]};
+    var dataset = {
+      data: [],
+      label: "EPCI",
+      backgroundColor: colorZoom[1],
+      borderWidth: "0"};
 
-    var datasetRegion = {data: [], label: "Région", backgroundColor: colorZoom[2]};
+    var datasetRegion = {data: [], label: "Région", backgroundColor: colorZoom[2],borderWidth: "0"};
     data.region.forEach(function(value){
         datasetRegion.data.push(parseFloat(value[1]));
 	});
@@ -269,14 +282,23 @@ function drawBarChart(data, title) {
             datasets: [{
                 label: title,
                 backgroundColor: colors,
-                borderColor: colors,
+                borderWidth: 0,
                 data: data.values,
             }]
         },
 
         // Configuration options go here
         options: {
-
+          responsive: false,
+          maintainAspectRatio: false,
+          scales: {
+            yAxes: [{
+              gridLines: {
+                  display: false,
+                  drawBorder: false
+              }
+            }]
+          }
         }
     });
 
@@ -296,7 +318,7 @@ function drawPieChart(data) {
             labels: data.labels,
             datasets: [{
                 label: "Activte",
-
+                borderWidth: 0,
                 data: data.values,
                 backgroundColor: colors,
             }]
@@ -304,6 +326,14 @@ function drawPieChart(data) {
         options: {
             responsive: false,
             maintainAspectRatio: false,
+            scales: {
+              yAxes: [{
+                gridLines: {
+                    display: false,
+                    drawBorder: false
+                }
+              }]
+            }
         }
     });
 }
@@ -370,6 +400,7 @@ function drawDistanceDataviz(data) {
         data.push(point);
         dataset.data = data;
         dataset.label = value[0];
+        dataset.borderWidth = 0;
         dataset.backgroundColor = colorMatch[value[0].substr(0, 3)];
         points.datasets.push(dataset);
     });
@@ -468,7 +499,7 @@ function createConjonctureDataviz(json){
         cpt++;
         if (cpt==4){
             dataset.data = data;
-            dataset.borderColor = "white";
+            dataset.borderWidth = 0;
             dataset.label = labels[cpty-1];
             d.datasets.push(dataset);
             dataset = {};
@@ -545,4 +576,3 @@ function createConjonctureDataviz(json){
         }
     });
 }
-
