@@ -507,7 +507,7 @@ button:focus { outline-style: none; }
 }
 
 #informations a {
-
+  text-decoration: none;
   display: block;
   margin: 2px;
   font-size: 16px;
@@ -523,6 +523,8 @@ button:focus { outline-style: none; }
   font-size:12px;
 }
 
+
+
 #equipe a p
 {
   margin-bottom: -10px;
@@ -534,6 +536,54 @@ button:focus { outline-style: none; }
 #mapid {
   height: 500px;
   width: 500px;
+}
+
+#logos
+{
+  position: absolute;
+  text-align: center;
+  bottom: 20px;
+}
+
+#logopopo
+{
+  width:8%;
+}
+#logoaudencia
+{
+  width:6.5%;
+}
+#logoagr
+{
+  width:3%;
+}
+#logocc
+{
+  width:3%;
+}
+#logofr3
+{
+  width:7%;
+}
+#logohyb
+{
+  width:15%;
+}
+#logomit
+{
+  width:3%;
+}
+#logonantes
+{
+  width:4.25%;
+}
+#logoouest
+{
+  width:8%;
+}
+#logopays
+{
+  width:10%;
 }
 
 #title_question_transport
@@ -602,6 +652,11 @@ button:focus { outline-style: none; }
 {
   position: absolute;
   bottom: 0;
+}
+
+#logo
+{
+  float: left;
 }
 
 .cache
