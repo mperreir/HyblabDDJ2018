@@ -440,16 +440,6 @@ function drawBarChart(data, title) {
 
         // Configuration options go here
         options: {
-          responsive: false,
-          maintainAspectRatio: false,
-          scales: {
-            yAxes: [{
-              gridLines: {
-                  display: false,
-                  drawBorder: false
-              }
-            }]
-          },
 				title:{
                     display:true,
                     text: title
@@ -483,16 +473,6 @@ function drawPieChart(data, title) {
             }]
         },
         options: {
-            responsive: false,
-            maintainAspectRatio: false,
-            scales: {
-              yAxes: [{
-                gridLines: {
-                    display: false,
-                    drawBorder: false
-                }
-              }]
-            },
             title:{
                 display:true,
                 text: title
