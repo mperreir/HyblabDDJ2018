@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	setTimeout(loadingScreen, 2000);
+	setTimeout(loadingScreen, 3000);
 
 	setFleche();
 

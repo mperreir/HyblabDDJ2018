@@ -16,8 +16,8 @@ app.post('/actifs', function(req, res) {
 	var sheet_name_list = workbook.SheetNames;
         var actifs_json = xlsx.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
         var actifs = xlsx.utils.sheet_to_html(workbook.Sheets[sheet_name_list[0]]);
-        res.send(actifs_json);
-        res.end();
+        res.json(actifs_json);
+        //res.end();
 
 });
 
@@ -28,6 +28,17 @@ app.post('/rangs', function(req, res) {
     res.send(rangs_json);
     res.end();
 
+});
+
+app.get('/actifs', (req, res) => {
+  console.log("xom");
+
+
+ 
+  /*
+  //res.set('Content-Type', 'text/json;charset=utf-8');
+  res.json(db.genres);
+  */
 });
 
 // You can then add whatever routing code you need

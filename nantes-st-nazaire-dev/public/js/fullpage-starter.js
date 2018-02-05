@@ -4,7 +4,7 @@ $(document).ready(function() {
         'sectionsColor': ['white', 'white', 'white', 'white', 'white', 'white', 'white', 'white'],
         'navigation': true,
         'navigationPosition': 'right',
-        'navigationTooltips': ['Introduction', 'Les villes concurrentes', 'Nantes-St Nazaire', 'Synthèse'],
+        'navigationTooltips': ['Introduction', 'Les villes concurrentes', 'Nantes-St-Nazaire', 'Synthèse', 'Remerciements'],
         menu: false,
         anchors:[],
         navigationColor: 'blue',
