@@ -60,7 +60,7 @@ function miniStats(regionStats, d) {
             $('#card-investissement .open').each(function(){
                 $(this).on('click', function() {
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Investissement";
-                    drawLineChart(json, "Investir ou ne pas investir ?");
+                    drawLineChart(json);
                     closeOnEscape();
                 });
             });

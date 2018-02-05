@@ -71,14 +71,6 @@ var drawChart3dEmploi = function(data) {
     sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
     sec.setAttribute("id", "dataviz-section");
 
-    var h3 = document.getElementById("title-dataviz");
-    if (h3 !== null) {
-        h3.remove();
-    }
-    var h3 = sec.appendChild(document.createElement('h3'));
-    h3.setAttribute("id", "title-dataviz");
-    h3.innerHTML = "Qui veut gagner des salariés ?";
-
     var canvas = document.getElementById("canvas-dataviz");
     if (canvas !== null) {
         canvas.remove();
@@ -181,22 +173,13 @@ var drawChart3dEmploi = function(data) {
 };
 
 
-function drawLineChart(data, title){
+function drawLineChart(data){
     var sec = document.getElementById("dataviz-section");
     if(sec !== null) {
         sec.remove();
     }
     sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
     sec.setAttribute("id", "dataviz-section");
-
-    var h3 = document.getElementById("title-dataviz");
-    if(h3!==null){
-        h3.remove();
-    }
-    var h3 = sec.appendChild(document.createElement('h3'));
-    h3.setAttribute("id", "title-dataviz");
-    h3.innerHTML = title;
-
 
     var canvas = document.getElementById("canvas-dataviz");
     if(canvas !== null){
@@ -291,12 +274,10 @@ function drawBarChart(data, title) {
 
 }
 
-function drawPieChart(data, title) {
+function drawPieChart(data) {
     var sec = document.getElementById("page3").appendChild(document.createElement('section'))
     sec.className = "chart"
 
-    var h3 = sec.appendChild(document.createElement('h3'))
-    h3.innerHTML = title
 
     var cvs2 = sec.appendChild(document.createElement('canvas'))
     var ctx2 = cvs2.getContext("2d")
