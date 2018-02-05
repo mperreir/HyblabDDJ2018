@@ -7,8 +7,8 @@
         "borderColor": ["#FFEAB6","#46B29D","#F0CA4D","#F53855"],
         "backgroundColor": ["#FFEAB6","#46B29D","#F0CA4D","#F53855"],
         "pointHighlightFill": "#fff",
-        "hoverBorderColor" : "#46B29D",
-        "hoverBackgroundColor" : "#46B29D",
+        "hoverBorderColor" : "#4479FF",
+        "hoverBackgroundColor" : "#4479FF",
         "pointHighlightStroke": "rgba(220,220,220,1)",
         "data": [ 55, 27,32, 16]
       }
