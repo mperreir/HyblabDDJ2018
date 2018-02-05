@@ -1,40 +1,323 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
+<html lang="fr">
   <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-		<!-- Basic viewport setting for mobile friendly page -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,600,600i,700">
+    <link rel="stylesheet" type='text/css' media='all' href="css/webslides.css">
+	<link rel="stylesheet" type='text/css' media='all' href="css/animation.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<script src="javascript/quizz.js"></script>
+	<script src="javascript/transition.js"></script>
+	<script src="javascript/marquee.js"></script>
+	<script src="javascript/various.js"></script>
+	<script src="javascript/switchBackground.js"></script>
+	<script src="javascript/webslides.js"></script>
+	<script src="javascript/echarts.min.js"></script>
+	<script src="javascript/Chart.min.js"></script>
+	
+    <title>HYBLAB 2018</title>
+	
   </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+  <body onload="marqueeLoad(1); gauge(0);">
+ 
     <div id="container">
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2018</h1>
-    </header>
+    <main role="main">
+	
+      <article id="webslides" class="vertical raleway">
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
+	  
+	  
+	  	  	  
+	    <!------------------------------------------------------------------------------------------------------------------------------------------------------>
+		<!----------------------------------------------------------------DIAPO 1------------------------------------------------------------------------------->
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+	  
+        <section class="section1">		  
+            <p class="txt1x1">LES ASSMAT</p>
+			<p class="txt1x2"> VOUS </p>
+			<p class="txt1x3">Nous avons tous déjà connu une nourrice, une nounou ou encore une babysitter au cours de notre enfance. Jusqu'en 1977, l'emploi d'une nourrice était un mode de garde peu ou pas reconnu légalement. Aujourd'hui, elles sont devenues de réelles professionnelles de la petite enfance appelées "Assistantes Maternelles" (ou AssMat).</p>			
+			<p class="txt1x4">Mais que savez-vous exactement sur ce métier ?</p>
+			<p class="txt1x5"></p>
+						
+			<MARQUEE id="marquee1" loop="0" DIRECTION="up"  SCROLLAMOUNT="6"><p></p></MARQUEE>									
+			<MARQUEE id="marquee2" loop="0" DIRECTION="up"  SCROLLAMOUNT="6"><p></p></MARQUEE>	
+			<MARQUEE id="marquee3" loop="0" DIRECTION="up"  SCROLLAMOUNT="6"><p></p></MARQUEE>		
+								
+			<img class="img1x1" src="img/illu_intro.png" alt="img intro"/>
+			<img class="img1x2" src="img/logo_dpt.png" alt="logo dpt"/>
+        </section>
+		
+		
+		
+		
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+		<!----------------------------------------------------------------DIAPO 2------------------------------------------------------------------------------->
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+		
+        <section class="section2">
+			<p class="txt2x1">UNE PROFESSION</p>
+			<p class="txt2x2">DEVENUE INDISPENSABLE</p>
+            <p class="txt2x3">Faire garder ses enfants peut virer au casse-tête ! Heureusement, le fort développement du métier d'<a class="definition2" onclick="definition(2)">assistante maternelle</a> a permis à de nombreuses familles de trouver une solution répondant à leurs besoins. Au sein de leur logement le plus souvent, les "AssMat" agréées offrent un mode de garde personnel et favorable à l'éveil de vos enfants.</p>
+			<p class="txt2x4">Laissez-nous vous transporter au coeur de cette profession pour comprendre son importance en Loire-Atlantique.</p>
+			<img class="img2x1" src="img/illu_intro.png" alt="img intro"/>
+			
+			<span class="bulle2">
+				<p class="txt2x5">LE SAVIEZ-VOUS ?</br></br></p>
+				   <p class="txt2x6"></br></br>Être assistante maternelle, c'est avant tout l'obligation de détenir un agrément délivré par le Conseil Départemental de sa résidence selon des critères bien précis.</br></br>
+					<cite>Source: assmat.loire-atlantique.fr</cite></p>
+			</span>			
+		</section>
+	
+		
+				
+				
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+		<!----------------------------------------------------------------DIAPO 3------------------------------------------------------------------------------->
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+		
+		<section class="section3">
+		
+			<p class="txt3x1">LA LOIRE-ATLANTIQUE</p>
+			<p class="txt3x2">"PRESQUE PARFAITE"</p>		
+			<p class="txt3xquestion">Quel est le<a class="definition3" onclick="definition(3)"> taux de couverture</a> en Loire-Atlantique ?</p>			
+            <p class="txt3x3">Avec un taux de couverture de 78.1%, la Loire-Atlantique est le 3ème meilleur élève français. Les capacités d'accueil sont élevées même si elles ne couvrent pas la totalité des besoins.</p>
+			<p class="txt3x4"></p>
+			
+			<button class="txt3xchoix1" onclick="reponseQ1(1)">64,8%</button>
+			<button class="txt3xchoix2" onclick="reponseQ1(2)">71,4%</button>
+			<button class="txt3xchoix3" onclick="reponseQ1(3)">78,1%</button>
+			<button class="txt3xchoix4" onclick="reponseQ1(4)">83,2%</button>
+			
+			<span class="bulle3">
+				<p class="txt3x5">LE SAVIEZ-VOUS ?</br></br></p>
+				<p class="txt3x6"></br></br>Le taux de couverture correspond au ratio entre le nombre de places offertes et le nombre d'enfants en âge d'être gardés à un instant donné sur le territoire observé.</br></br><cite>Source: data.caf.fr</cite></p>
+			</span>
+			
+			<input type="image" src="img/arrow_right2.png" class="suivant3" onclick="suivant(31)"/>
+			<input type="image" src="img/arrow_left2.png" class="precedent3" onclick="precedent(31)"/>		
+			<img class="img3x1" src="img/illu_couverture.png" alt="img couverture"/>
+			
+			<div class="graph3">                
+				<div id="echart_pyramid" style="height:370px;"></div>                          
+			</div>
+									
+			<script src="javascript/pyramid.js"></script>
+																  		  
+		</section>
+		
+		
+		
+		
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+		<!----------------------------------------------------------------DIAPO 4------------------------------------------------------------------------------->
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+		
+		<section class="section4">
+		
+			<p class="txt10x1">L'EVOLUTION <p class="txt10x2">DEPUIS 2002</p></p>
+			<p class="txt10x3">Malgré un ralentissement en 2013, l'évolution constante du nombre d'assistantes maternelles et du nombre de places offre beaucoup de possibilités pour faire garder les enfants.</p>
+					
+			<img class="img4x1" src="img/illu_agrement.png" alt="img agrement"/>
+											
+			<div class="graph4">
+                <canvas id="lineChart"></canvas>
+			</div>
+			
+			<script src="javascript/lineChart.js"></script>
+		
+		</section>
+		
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2018</p>
-    </footer>
-    </div>
+		
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+		<!----------------------------------------------------------------DIAPO 5------------------------------------------------------------------------------->
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>		
+				
+		<section class="section5">
+		
+			<p class="txt5x1">LA NAISSANCE <p class="txt5x2">D'UNE VOCATION !</p></p>
+            <p class="txt5x3">Métier à réel potentiel, l'orientation vers les métiers de la petite enfance se fait de plus en plus jeune. Dans les années 60, les assistantes maternelles commençaient plutôt à 38 ans, dans les années 2000 la moyenne s'établit à 24 ans pour le premier agrément.</p>
+			<p class="txt5x7">1938</br>1947</p>
+			<p class="txt5x8">1948</br>1957</p>
+			<p class="txt5x9">1958</br>1967</p>
+			<p class="txt5x10">1968</br>1977</p>
+			<p class="txt5x11">1978</br>1987</p>
+			<p class="txt5x12">1988</br>1998</p>
+			<p class="txt5x13">Date de naissance</p>
+			
+			<span class="bulle5">
+				<p class="txt5x4">AGE MOYEN DE PREMIER AGREMENT :</p>
+				<p class="txt5x5" id="txt5x4">45</p>
+				<p class="txt5x6"> ans</p>
+			</span>
+									
+			<img class="img5x1" src="img/illu_vieillissement.png" alt="img vieillisement" id="img5x1"/>
+			<img class="img5x2" src="img/illu_vocation_age.png" alt="img vocation"/>
+					
+			<div class="slidecontainer">
+				<input type="range" min="1" max="100" value="5" class="slider" id="myRange">
+			</div>
+						
+			<script src="javascript/slider.js"></script>
+			
+		</section>
+		
+		
+		
+						
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+		<!----------------------------------------------------------------DIAPO 6------------------------------------------------------------------------------->
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>			
+		
+		<section class="section6">
+		
+			<p class="txt6x1">PLUS BESOIN DE SE PRESSER,</p>
+			<p class="txt6x2">LES ASSMAT SONT A COTE</p>
+			<p class="txt6x4">Aussi bien dans les villes que dans les campagnes, les assistantes maternelles couvrent l'ensemble du territoire, contrairement aux crèches qui sont concentrées dans les villes. A noter, l'apparition de plus en plus de <a class="definition6" onclick="definition(6)">Maisons d'Assistantes Maternelles</a> (MAM).</p>
+			
+			<span class="bulle6">
+				<p class="txt6x5">LE SAVIEZ-VOUS ?</br></br></p>
+				<p class="txt6x6"></br></br>La maison d'assistantes maternelles est un accueil individu permettant à 4 assistantes maternelles maximum d'accueillir chacune des enfants simultanément dans un local dédié.</br></br></p>
+			</span>
+			
+		</section>
+		
+		
+		
+		
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+		<!----------------------------------------------------------------DIAPO 7------------------------------------------------------------------------------->
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>		
+				
+		<section class="section7">
+		
+			<div class="coucou">
+				<div class="">
+					<img class="img7x1" src="img/illu_matin.png" alt="img matin"/>
+				</div>
+			</div>
+			
+			<div class="test">			
+				<div class="section7x1">
+				
+					<p class="txt7x1">UN MODE DE GARDE</p>
+					<p class="txt7x2">TOUT EN SOUPLESSE</p>									
+					<p class="txt7x3">Si les enfants doivent être gardés ponctuellement ou régulièrement, tôt le matin ou tard le soir, pendant les vacances scolaires ou pendant vos nuits de gardes, il est possible de trouver une assistante maternelle qui répond à vos besoins.</p>
+					
+					<button class="button7x1" onclick="gauge(1);switchBackground(0);"></button>
+					<p class="txt7x4">Avant 7h</p>
+					<p class="txt7x9">des ASSMAT acceptent de travailler avant 7h00.</p>
+					
+					<button class="button7x2" onclick="gauge(2);switchBackground(1);"></button>
+					<p class="txt7x5">Après 20h</p>
+					<p class="txt7x10">des ASSMAT acceptent de travailler après 20h00.</p>
+					
+					<button class="button7x3" onclick="gauge(3);switchBackground(2);"></button>
+					<p class="txt7x6">Le samedi</p>
+					<p class="txt7x11">des ASSMAT acceptent de travailler le samedi.</p>
+					
+					<button class="button7x4" onclick="gauge(4);switchBackground(3);"></button>
+					<p class="txt7x7">Le dimanche</p>
+					<p class="txt7x12">des ASSMAT acceptent de travailler le dimanche.</p>
+					
+					<button class="button7x5" onclick="gauge(5);switchBackground(4);"></button>
+					<p class="txt7x8">La nuit</p>
+					<p class="txt7x13">des ASSMAT acceptent de travailler la nuit.</p>
+					
+					<button class="button7x6" onclick="switchBackground(5);"></button>
+					<p class="txt7x14">Autres</p>
+					
+					<input type="image" src="img/arrow_right2.png" class="suivant7" onclick="suivant(7)"/>
+					<input type="image" src="img/arrow_left2.png" class="precedent7" onclick="precedent(7)"/>
+					
+					<div class="graph7">                
+						<div id="echart_mini_pie" style="height:350px;"></div>                           
+					</div>
+																	
+					<div class="graph9">                
+						<div id="echart_guage" style="height:370px;"></div>                           
+					</div>
+					
+					<script src="javascript/minipie.js"></script>	
+					<script src="javascript/gauge.js"></script>
+															
+				</div>
+			</div>
+			
+		</section>
+		
+	
+
+
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+		<!----------------------------------------------------------------DIAPO 8------------------------------------------------------------------------------->
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+	
+		<section class="section8">
+		
+			<p class="txt8x1">ALORS,</p>
+			<p class="txt8x2">CONVAINCU ?</p>			
+			<p class="txt8x3">Depuis ces dernières années, devenir AssMat n'est plus une reconversion mais la volonté d'exercer une réelle profession au contact des enfants. Le nombre élevé d'assistantes maternelles dans le département, a permis à de nombreuses familles de faire garder leurs enfants en toute sérénité et de choisir le mode d'accueil qui leur correspond.</p>
+			<p class="txt8x4">Elles sont uniques, passionnées et ont l'envie de participer au bien-être et au bon développement des enfants.</p>
+			<p class="txt8x5">Lancez-vous, cherchez l'assistante maternelle qui vous correspond !</p>
+			
+			<a href="https://assmat.loire-atlantique.fr/jcms/descriptive-urlstextportal-format-fr-cra_66992"><button class="txt8x6">Je choisis mon AssMat</button></a>
+			
+			<img class="img8x1" src="img/illu_conclusion.png" alt="img vocation"/>
+			
+		</section>
+		
+		
+		
+		
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+		<!----------------------------------------------------------------DIAPO 9------------------------------------------------------------------------------->
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+		
+		<section class="section9">
+		
+		  <p class="txt9x1">L'EQUIPE HYBLAB</p>
+		  <p class="txt9x2">LES PORTEURS DE PROJET</p>   
+		
+		  <div class="section9x1">		
+			<p class="txt9x3">Yoann LE PRIOL</br>Clément LEDUC</br>Pengyu LI</p>
+			<p class="txt9x5">Anaïs BOILEAU</br>Louis GUERET</br>Sarah BRET</p>
+			<p class="txt9x6">Audrey VALLEE</br>Estelle ROQUES</br>Manon CAMESCASSE</br>Mathis TEXEREAU</br>Victor MOREAULT</p>
+			
+			
+			<img class="img9x2" src="img/polytech-nantes.png" alt="logo polytech-nantes"/>
+			<img class="img9x3" src="img/AGR.png" alt="logo AGR"/>	
+            <img class="img9x4" src="img/audencia.png" alt="logo audencia"/>	
+			<img class="img9x1" src="img/logo_univ_nantes.png" alt="logo univ nantes"/>
+		  </div>
+		  
+		  <div class="section9x2">		           
+			<p class="txt9x4">Toute l'équipe remercie chaleuresement Camille L'HOUR et Gaëlle RIVOAL du département de la Loire-Atlantique pour leur investissement et leur aide précieuse tout au long de notre travail.</p>
+			<img class="img9x6" src="img/logo_dpt.png" alt="logo dpt"/>
+			<img class="img9x7" src="img/logo_ouest_medialab.png" alt="logo ouest medialab"/>
+			<img class="img9x8" src="img/logo_cc.png" alt="logo cc"/>
+			<img class="img9x9" src="img/logo_opensource.png" alt="logo opensource"/>			
+		  </div>
+		  
+		  <img class="img9x5" src="img/illu_team.png" alt="img team"/>	
+		   
+		</section>
+					
+	  </article>
+    
+	</main>
+				
+	</div>
+	   
+    <script>
+      window.ws = new WebSlides();
+    </script>
+	
   </body>
 </html>
