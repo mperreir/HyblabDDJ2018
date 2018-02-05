@@ -299,7 +299,7 @@ $(document).ready(function() {
     // Assign handlers immediately after making the request,
     // and remember the jqxhr object for this request
     //http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs
-    var jqxhr = $.post( "http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs")
+    var jqxhr = $.post( "hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs")
         .done(function(data) {
             console.log( "success" );
             console.log(data)
