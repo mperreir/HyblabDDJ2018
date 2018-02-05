@@ -2,7 +2,18 @@
 //paramètres
 var bandWidth = 600;
 var bandHeight = 30;
+var circleRadius = 40;
 var borneX = 1600;
+
+var nomAides = {"pass-permis" : "Pass permis", "pass-apprenti" : "Pass apprenti","mobili-jeune" : "Mobili jeune"};
+
+var descriptionAides = {"pass-permis" : "Le Pass permis apprenti est une aide de 400 € (sous conditions de ressources)\n" +
+    "        pour le financement du permis de conduire, destinée aux jeunes en Centre de\n" +
+    "        formation d’apprentis (CFA), en contrepartie d’un engagement actif dans la\n" +
+    "        vie de l’établissement.", "pass-apprenti" : "Le Pass apprenti vous aide à faire" +
+    " face à vos frais de transport, d’hébergement et de restauration.","mobili-jeune" : "L’aide" +
+    " au logement Mobili-Jeune s’adresse aux jeunes de moins de 30 ans en formation en alternance " +
+    "dans une entreprise du secteur privé."};
 
 function displayValue(event, variable){
     var varMin = document.getElementById("min" + variable).value;
@@ -21,31 +32,22 @@ displayValue("", 'Quotient');
 displayValue("", 'Niveau');
 displayValue("", 'Distance');
 
-var margin;
-
-var y;
-var x;
+var margin, y,x;
 
 var nbCatAides;
 var nomCatAides = [];
 
-var vakken;
-var bars;
+var vakken,bars;
 
-var datas = [];
-var idSVG = [];
+var datas = [],idSVG = [];
 
-var xAxis;
-var yAxis;
-var color;
+var xAxis, yAxis, color;
 
-var couleurs = ["#c7001e", "#f6a580", "#cccccc", "#92c6db", "#086fad"];
+var couleurs = ["#019AC6", "#ABCD21", "#7B2F87", "#92c6db", "#086fad"];
 var nbCouleursUtilisees = 3;
 var couleursUtilisees = [];
 
-var listeAides = [];
-
-var jsonCircles = [];
+var listeAides = [], jsonCircles = [];
 
 function getAides(){
     $.getJSON( "data/aides.json", function(data) {
@@ -152,6 +154,23 @@ function getValueVariable(variable) {
     return intervalleVariable;
 }
 
+function afficheDescriptionAide(aide) {
+    var idAide = aide.split("\ ")[0]+"-"+aide.split("\ ")[1];
+    console.log(document.getElementById("description-aide"));
+    console.log(document.getElementById("nom-aide"));
+    document.getElementById("description-aide").childNodes[0].textContent = descriptionAides[idAide];
+    document.getElementById("nom-aide").childNodes[0].textContent = nomAides[idAide];
+ /*   document.getElementsByClassName("descriptionAide").style.opacity = '1';*/
+    document.getElementById("description-aide").style.opacity = '1';
+    document.getElementById("nom-aide").style.opacity = '1';
+}
+
+function masqueDescriptionAide(aide) {
+  /*  document.getElementsByClassName("descriptionAide").style.opacity = '0';*/
+    document.getElementById("description-aide").style.opacity = '0';
+    document.getElementById("nom-aide").style.opacity = '0';
+}
+
 function afficheBarres(datas, listeAides){
     var age = getValueVariable('Age');
     var quotient = getValueVariable('Quotient');
@@ -213,7 +232,7 @@ function afficheBarres(datas, listeAides){
         var colorsCircles = ["green", "red", "blue"];
 
         for (var i = 0; i < boxesU.length ; i++){
-            jsonCircles.push({ "x_axis": boxesU[i].x1 *(width / borneX), "y_axis": bandHeight/2, "radius": bandHeight/2, "color" : colorsCircles[i], name: "cc" });
+            jsonCircles.push({ "x_axis": boxesU[i].x1 *(width / borneX), "y_axis": bandHeight/2, "radius": circleRadius/2, "color" : colorsCircles[i], name: "cc" });
         }
 
         vakken = listeAides[j].selectAll(".question")
@@ -230,7 +249,9 @@ function afficheBarres(datas, listeAides){
             .attr("height", y.rangeBand())
             .attr("x", function (d) { return x(d.x0); }) //d.x0 au lieu de 0
             .attr("width", function (d) { return x(d.x1) - x(d.x0); }) //d.x0 au lieu de 0
-            .style("fill", function (d) { return color(d.name); });
+            .style("fill", function (d) { return color(d.name); })
+            .on('mouseover', function(d) { afficheDescriptionAide(d.name)})
+            .on('mouseout', function(d) { masqueDescriptionAide(d.name)});
 
         bars.append("text")
             .attr("x", function (d) { return x(d.x0); })  //d.x0 au lieu de 0
@@ -274,7 +295,7 @@ function afficheBarres(datas, listeAides){
             .attr("cy", function (d) { return d.y_axis; })
             .attr("r", function (d) { return d.radius; })
             .attr("stroke","black")
-            .attr("fill", function (d) { return d.color; });
+            .attr("fill", function (d) { return "white"; });
 
         truc.append("text")
             .attr("dx", function(d){return d.x_axis-20})
@@ -342,6 +363,8 @@ function afficheBarres(datas, listeAides){
                      elemEnter.append("text")
                          .attr("dx", function(d){return -5})
                          .text(function(d){return "blop"});*/
+
+
 
     }
 }

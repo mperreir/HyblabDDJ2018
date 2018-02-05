@@ -38,14 +38,40 @@ html, body{
     font-size: 14px;
 }
 
+#aide {
+ /*   opacity:0;*/
+
+    height: 126px;
+    width: 700px;
+    color: #232222;
+    font-family: Lato;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 18px;
+
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+}
+
+#nom-aide, #description-aide {
+    opacity:0;
+}
+
 #intro {
+    opacity: 0;
     height: 25px;
     color: #212121;
     font-family: "Avenir Next";
     font-size: 18px;
     line-height: 25px;
     text-align: center;
+    border-style: solid;
+    border-width: medium;
 }
+
+#container .figure:hover #intro {
+    opacity: 1;
+}
+
 
 /* partie de gauche */
 
