@@ -52,29 +52,33 @@ L.geoJson(points, {pointToLayer: function (feature, latlng) {
       }}).addTo(VillesLayer);
 
 //Initialisation
-var limitesNiveauNationnal = [[53.012027, -18.822460],[38.561766, 24.705372]],
+var limitesNiveauNationnal = [[51.369642, -20.413085],[40.594585, 25.992676]],
     limitesNiveauRegionnal = [[50.973980, -9.872491],[46.212135, 4.277899]];
+
+var minZoomVar = 5, maxZoomVar = 8;
+
 
 var mymap = L.map('mapid', {
                   maxBounds : limitesNiveauNationnal,
-                  zoomSnap : 2
-                }).setView(center = [46.52863469527167,2.43896484375],
-                          zoom = 6
+                  zoomSnap : (maxZoomVar - minZoomVar)
+                }).setView(center = [47.0453352,2.0864263],
+                          zoom = minZoomVar
                 );
 
 L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
-    maxZoom: 8,
-    minZoom: 6,
+    maxZoom: maxZoomVar,
+    minZoom: minZoomVar,
     id: 'mapbox.streets'
 }).addTo(mymap);
+
+//mymap.removeAttribution();
 
 RegionsLayer.addTo(mymap);
 
 
 //Gestion du zoom : ajout des layers et centrage sur zonne interessante
 mymap.on('zoomend', function(ev) {
-  if (mymap.getZoom() != 8){
+  if (mymap.getZoom() < 7){
     RegionsLayer.addTo(mymap);
     mymap.setMaxBounds(limitesNiveauNationnal)
   }else{
