@@ -785,12 +785,12 @@ p.titreScene
 p.sousTitreScene
 {
 	position: absolute;
-    top: 55px;
-    color: #A9FF88;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 25px;
-    left: 21px;
+	top: 55px;
+	color: #A9FF88;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+	font-size: 25px;
+	left: 21px;
 }
 
 ul.listeScene
@@ -813,7 +813,8 @@ object.mapFrance
 	width:600px;
 	height:600px;
 	position: absolute;
-	left: 150px;
+	left: 80px;
+	top: 30px;
 
 }
 
@@ -885,4 +886,55 @@ object.mapFrance
     position: relative;
     top: -16px;
     left: -24px;
+}
+
+
+/**************** FRANCE ****************/
+
+
+.jackFrance
+{
+	position: absolute;
+	top: 153px;
+	left: 83px;
+	z-index: 0;
+	width: 75%;
+	height: 75%;
+}
+
+p.texteGlobal1{
+	color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+	margin-left: 25px;
+}
+
+p.texteGlobal2{
+	color: #a9ff88;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+	margin-left: 25px;
+}
+
+
+.france-obtuse {
+	position: absolute;
+	top: 185px;
+	right: 85px;
+	padding: 15px 15px 15px 15px;
+	margin: 0;
+	color: #000;
+	background: #404040;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#404040), to(#404040));
+	background: -moz-linear-gradient(#404040, #404040);
+	background: -o-linear-gradient(#404040, #404040);
+	background: linear-gradient(#404040, #404040);
+	-webkit-border-top-left-radius: 25px 50px;
+	-webkit-border-top-right-radius: 25px 50px;
+	-webkit-border-bottom-right-radius: 25px 50px;
+	-webkit-border-bottom-left-radius: 25px 50px;
+	-moz-border-radius: 25px / 50px;
+	border-radius: 25px / 50px;
+	z-index: 2;
+	width: 250px;
 }
