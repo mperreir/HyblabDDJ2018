@@ -226,9 +226,23 @@
     grid-row: 2;
 }
 
+.modal-body #canvas-dataviz{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
 .modal-body .ps {
     font-size: 12px;
     opacity: .3;
+}
+.legende-dataviz{
+  grid-column: 4;
+  grid-row: 2;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 @-webkit-keyframes modalComeIn {

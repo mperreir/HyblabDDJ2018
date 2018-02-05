@@ -3,7 +3,7 @@
 
 // Dimensions of sunburst.
 var width = 500;
-var height = 500;
+var height = width;
 var radius = Math.min(width, height) / 2;
 
 // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
@@ -13,23 +13,23 @@ var b = {
 
 // Mapping of step names to colors2.
 var colors2 = {
-  "plomberie-chauffage-couverture": "#5687d1",
-  "maçonnerie-carrelage": "#e6194b",
-  "CA.Logements.neufs" : "#008080",
-  "menuiserie-charpente": "#3cb44b",
-  "Peinture": "#ffe119",
-  "Electricité": "#a173d1",
-  "plâtrerie-isolation": "#0082c8",
-  "Autre": "#6ab975",
-  "CA.Batiments.neufs": "#f58231",
-  "A la baisse": "#911eb4",
-  "Stable": "#46f0f0",
-  "A la hausse": "#f032e6",
-  "CDD": "#d2f53c",
-  "CDI": "#fabebe",
-  "Apprentis": "#800000",
-  "Intérimaires": "#de783b",
-  "Pas de réponse": "#bbbbb"
+  "plomberie-chauffage-couverture": "rgba(223,38,29,1)",
+  "maçonnerie-carrelage": "rgba(88,83,83,1)",
+  "CA.Logements.neufs" : "rgba(254,235,39,0.3)",
+  "menuiserie-charpente": "rgba(100,151,182,1)",
+  "Peinture": "rgba(104,192,237,1)",
+  "Electricité": "rgba(213,188,40,1)",
+  "plâtrerie-isolation": "rgba(235,103,105,1)",
+  "Autre": "rgba( 29, 29, 27, 0.3 )",
+  "CA.Batiments.neufs": "rgba(254,235,39,1)",
+  "A la baisse": "rgba(235,141,139,1)",
+  "Stable": "rgba(178, 31, 24, 1)",
+  "A la hausse": "rgba(223,38,29,1)",
+  "CDD": "rgba(255,224,0,1)",
+  "CDI": "rgba(0,141,139,1)",
+  "Apprentis": "rgba(88,83,83,1)",
+  "Intérimaires": "rgba(104,192,237,1)",
+  "Pas de réponse": "rgba( 29, 29, 27, 1 )"
 };
 
 
