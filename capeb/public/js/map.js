@@ -74,7 +74,6 @@ function drawMap(){
                     .then(function(json){
                         createModal();
                         miniStats(json, d);
-                        document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple;
                     });
 
                 // move to dashboard

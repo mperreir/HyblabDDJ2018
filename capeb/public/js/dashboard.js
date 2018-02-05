@@ -27,6 +27,12 @@ function miniStats(regionStats, d) {
             var dataFrame = document.getElementsByClassName("info-conjoncture")[0];
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = parseFloat(json.values[0][0]).toFixed(1);
             dataFrame.style.backgroundColor = colorsForRegion[matchColor(json.values[0][0], 2.87, 3.78, 0.182, 0.244, false)];
+            $('#card-conjoncture .open').each(function(){
+                $(this).on('click', function() {
+                    document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Conjoncture";
+                });
+            });
+
         });
 
 
@@ -48,6 +54,7 @@ function miniStats(regionStats, d) {
 
             $('#card-investissement .open').each(function(){
                 $(this).on('click', function() {
+                    document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Investissement";
                     drawLineChart(json, "Investir ou ne pas investir ?");
                     closeOnEscape();
                 });
@@ -98,6 +105,7 @@ function miniStats(regionStats, d) {
 
             $('#card-contrat .open').each(function(){
                 $(this).on('click', function() {
+                    document.getElementById("modal-nom-epci").innerHTML += " - Contrat";
                     createSunburst(d);
                     closeOnEscape();
                 });
@@ -108,15 +116,22 @@ function miniStats(regionStats, d) {
             var count = stats.Developpement_durable.values[1]
             var stat2 = names.map(function(val, id) {return {"name": names[id], "value": parseInt(count[id])};});
             stat2 = stat2.sort(function(a, b) {return b.value - a.value});
-            $(".info-dd h1").text(stat2[0].name)
+            $(".info-dd h1").text(stat2[0].name);
+            $('#card-dd .open').each(function(){
+                $(this).on('click', function() {
+                    document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Développement durable";
+                });
+            });
 
             //7 : MP / oui/non plus représenté / camembert -> nuage de mots
             var dataFrame = document.getElementsByClassName("info-mp")[0];
             var mean = parseFloat(stats.Marches_publics.values[0]);
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = Math.round(mean * 100);
             dataFrame.style.backgroundColor = colorsForRegion[matchColor(mean, 0, 0.227, 0.227/5, (0.5 - 0.227)/5, false)];
+
             $('#card-mp .open').each(function(){
                 $(this).on('click', function() {
+                    document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Marchés publics";
                     wordCloud(stats.FreinsMP);
                     closeOnEscape();
                 });
@@ -125,9 +140,9 @@ function miniStats(regionStats, d) {
 			var asNumbers = stats.Nombre_Recrutements_Envisage_2017.values.map(Number);
             var indexOfMax = asNumbers.indexOf(Math.max(...asNumbers));
             document.getElementsByClassName("info-emploi")[0].getElementsByClassName("donneetexte")[0].innerHTML = stats.Nombre_Recrutements_Envisage_2017.labels[indexOfMax];
-			
-			$('#card-emploi .open').each(function(){
+            $('#card-emploi .open').each(function(){
                 $(this).on('click', function() {
+                    document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Embauche";
                     drawChart3dEmploi(stats);
                     closeOnEscape();
                 });
@@ -156,6 +171,7 @@ function miniStats(regionStats, d) {
 
             $('#card-distance .open').each(function(){
                 $(this).on('click', function() {
+                    document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Distance";
                     drawBubbleChart(json);
                     closeOnEscape();
                 });
@@ -215,6 +231,7 @@ function createModal(){
         $overlay.removeClass('state-show');
         $modal.removeClass('state-appear').addClass('state-leave');
         $("#dataviz").empty();
+        document.getElementById("modal-nom-epci").innerHTML = "";
     });
 
 
