@@ -437,9 +437,11 @@ function fetchConjonctureData(d){
 
 function createConjonctureDataviz(json){
     var labels = ["Chiffre d'affaires", "Marge", "Trésorerie", "Carnet de commandes"];
+    var pointsColor = [["#ACF2E2", "#50EC2", "#02998B"], ["#AEDFF8", "#68C0ED", "#427C9A"],["#D8D8D8", "#9B9B9B", "#9B9B9B"],["#EB8D8B", "#DF261D", "#A61B14"]];
+
 
     var d = {
-        datasets: []
+        datasets: [],
     };
     var cptx = 1;
     var cpty = 1;
@@ -455,8 +457,6 @@ function createConjonctureDataviz(json){
         cptx++;
         if (cptx==4){
             dataset.data = data;
-            dataset.borderColor = "white";
-            dataset.label = labels[cpty-1];
             d.datasets.push(dataset);
             dataset = {};
             data = [];
@@ -464,7 +464,6 @@ function createConjonctureDataviz(json){
             cptx=1;
         }
     });
-
 
     function radiusmatch(value){
         if(value<=0.25){
@@ -496,10 +495,21 @@ function createConjonctureDataviz(json){
     var cvs = sec.appendChild(canvas);
     var ctx = cvs.getContext("2d");
 
-    new Chart(ctx, {
+    var chart = new Chart(ctx, {
         type: 'bubble',
         data: d,
         options: {
+            legend: {
+                display: false
+            },
+            elements: {
+                point: {
+                    backgroundColor: function(context) {
+                        var value = context.dataset.data[context.dataIndex];
+                        return pointsColor[value.y - 1][value.x - 1];
+                    }
+                }
+            },
             tooltips: {
                 display: false
             },
@@ -526,5 +536,6 @@ function createConjonctureDataviz(json){
             }
         }
     });
+
 }
 
