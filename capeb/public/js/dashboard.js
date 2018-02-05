@@ -30,6 +30,11 @@ function miniStats(regionStats, d) {
             $('#card-conjoncture .open').each(function(){
                 $(this).on('click', function() {
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Conjoncture";
+                    var texte = document.getElementById("texte-conjoncture");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
+                    fetchConjonctureData(d);
+                    closeOnEscape();
                 });
             });
 
@@ -105,7 +110,7 @@ function miniStats(regionStats, d) {
 
             $('#card-contrat .open').each(function(){
                 $(this).on('click', function() {
-                    document.getElementById("modal-nom-epci").innerHTML += " - Contrat";
+                    document.getElementById("modal-nom-epci").innerHTML += d.properties.nom_comple + " - Contrat";
                     createSunburst(d);
                     closeOnEscape();
                 });
@@ -172,7 +177,7 @@ function miniStats(regionStats, d) {
             $('#card-distance .open').each(function(){
                 $(this).on('click', function() {
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Distance";
-                    drawBubbleChart(json);
+                    drawDistanceDataviz(json);
                     closeOnEscape();
                 });
             });
@@ -232,6 +237,11 @@ function createModal(){
         $modal.removeClass('state-appear').addClass('state-leave');
         $("#dataviz").empty();
         document.getElementById("modal-nom-epci").innerHTML = "";
+        var texte = document.getElementsByClassName("active-dataviz-text")[0];
+        if(texte !== null){
+            texte.style.display = "none";
+            texte.className = "texte-dataviz";
+        }
     });
 
 
