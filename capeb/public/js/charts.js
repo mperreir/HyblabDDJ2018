@@ -1,20 +1,19 @@
 var colors = [
-    'rgb(230, 25, 75)',
-    'rgb(60, 180, 75)',
-    'rgb(255, 225, 25)',
-    'rgb(0, 130, 200)',
-    'rgb(245, 130, 48)',
-    'rgb(70, 240, 240)',
-    'rgb(240, 50, 230)',
-    'rgb(210, 245, 60)',
-    'rgb(250, 190, 190)',
-    'rgb(0, 128, 128)',
-    'rgb(230, 190, 255)',
-    'rgb(170, 110, 40)',
-    'rgb(255, 250, 200)',
-    'rgb(128, 0, 0)',
-    'rgb(170, 255, 195)',
-    'rgb(128, 128, 0)'
+    'rgba(223,38,29,1)',
+    'rgba(213,188,40,1)',
+    'rgba(88,83,83,1)',
+    'rgba(100,191,182,1)',
+    'rgba(104,192,237,1)',
+    'rgba(235,103,105,1)',
+    'rgba(29, 29, 27, 1)',
+    'rgba(255,224,0,1)',
+    'rgba(255,224,0,1)',
+    'rgba(255,224,0,1)'
+];
+var colorZoom = [
+    'rgba(223,38,29,0.8)',
+    'rgba(104,192,237,0.8)',
+    'rgba(255,224,0,0.8)',
 ];
 
 var wordCloud = (FreinsMP) => {
@@ -31,7 +30,7 @@ var wordCloud = (FreinsMP) => {
     .size([500, 500])
     .words(frequency_list)
     .padding(5)
-    .font("Impact")
+    .font("Montserrat', sans-serif")
     .fontSize(function(d) { return d.size; })
     .on("end", draw);
 
@@ -49,7 +48,7 @@ var wordCloud = (FreinsMP) => {
             .style("font-size", function(d) {
                 return d.size + "px";
             })
-            .style("font-family", "Impact")
+            .style("font-family", "Montserrat', sans-serift")
             .style("fill", function(d, i) {
                 return fill(i);
             })
@@ -212,9 +211,9 @@ function drawLineChart(data, title){
 		datasets: [],
 		labels: []
 	};
-    var dataset = {data: [], label: "EPCI", backgroundColor: colors[0]};
+    var dataset = {data: [], label: "EPCI", backgroundColor: colorZoom[0]};
 
-    var datasetRegion = {data: [], label: "Région", backgroundColor: colors[1]};
+    var datasetRegion = {data: [], label: "Région", backgroundColor: colorZoom[2]};
     data.region.forEach(function(value){
         datasetRegion.data.push(parseFloat(value[1]));
 	});
@@ -289,6 +288,7 @@ function drawBarChart(data, title) {
 
         // Configuration options go here
         options: {
+
         }
     });
 
@@ -325,14 +325,14 @@ function drawPieChart(data, title) {
 function drawBubbleChart(data) {
 
     var colorMatch = {
-        Aut: colors[0],
+        Aut: colors[6],
         Ele: colors[1],
         maç: colors[2],
         men: colors[3],
-        Mét: colors[4],
-        Pei: colors[5],
-        plâ: colors[6],
-        plo: colors[7],
+        Mét: colors[7],
+        Pei: colors[4],
+        plâ: colors[5],
+        plo: colors[0],
         Tra: colors[8]
     };
 
@@ -375,7 +375,7 @@ function drawBubbleChart(data) {
 
     var cvs = sec.appendChild(canvas);
     var ctx = cvs.getContext("2d");
-    
+
     var points = {
         datasets: []
     };
