@@ -50,8 +50,8 @@ fetch('data/reponses.json')
 
 
 function Light(){
-    $("#beforequestion").fadeTo("slow", 0.1,function(){
-        $("#beforequestion").css({'background-image':'url(img/Illu1/daynight.svg)'});
+    $("#section_illu1").fadeIn("slow",function(){
+        $("#section_illu1").css({'background-image':'url(img/Illu1/daynight.svg)'});
         $("#nuit").css({'visibility':'visible'});
         $("#jour").css({'visibility':'visible'});
     }).fadeTo('slow', 1);
@@ -821,9 +821,13 @@ function initmap() {
     // on centre sur la France
     map.setView(new L.LatLng(46.85, 2.3518), 5);
     map.removeLayer(pn);
+    pn = null;
     map.removeLayer(accidentRegion);
+    accidentRegion = null;
     map.removeLayer(coordAcc);
+    coordAcc = null;
     map.removeLayer(accidentratioRegion);
+    accidentratioRegion = null;
 }
 
 var iconPn = L.icon({
@@ -851,10 +855,12 @@ function AfficherPn(e)
 {
     if (pnDisplay == true){
         map.removeLayer(pn);
+        pn =null;
         pnDisplay = false;
         $(e).removeClass('active');
     }
     else {
+        pn = addPn();
         map.addLayer(pn);
         pnDisplay = true;
         $(e).addClass('active');
@@ -866,10 +872,12 @@ function AfficherCoordAcc(e)
 {
     if (coordacc == true){
         map.removeLayer(coordAcc);
+        coordAcc =null;
         coordacc = false;
         $(e).removeClass('active');
     }
     else {
+        coordAcc = addCoordAcc();
         map.addLayer(coordAcc);
         coordacc = true;
         $(e).addClass('active');
@@ -882,16 +890,20 @@ function AfficherAcc(e)
     var truc = document.getElementsByClassName('lie')
     if (accDisplay == true && map.hasLayer(accidentratioRegion) == false){
         map.removeLayer(accidentRegion);
+        accidentRegion =null;
         accDisplay = false;
         $(e).removeClass('active');
     }
     else if (accDisplay == false && map.hasLayer(accidentratioRegion) == false){
+        accidentRegion =addRegionAccident();
         map.addLayer(accidentRegion);
         accDisplay = true;
         $(e).addClass('active');
     }
     else if (accDisplay == true && map.hasLayer(accidentratioRegion) == true){
         map.removeLayer(accidentratioRegion);
+        accidentratioRegion = null;
+        accidentRegion =addRegionAccident();
         map.addLayer(accidentRegion);
         accDisplay = true;
         $(e).addClass('active');
@@ -906,16 +918,20 @@ function AfficherRatioRegion(e)
     console.log(truc);
     if (accDisplay == true && map.hasLayer(accidentRegion) == false){
         map.removeLayer(accidentratioRegion);
+        accidentratioRegion = null;
         accDisplay = false;
         $(e).removeClass('active');
     }
     else if (accDisplay == false && map.hasLayer(accidentRegion) == false){
+        accidentratioRegion =addRationRegionAccident();
         map.addLayer(accidentratioRegion);
         accDisplay = true;
         $(e).addClass('active');
     }
     else if (accDisplay == true && map.hasLayer(accidentRegion) == true){
         map.removeLayer(accidentRegion);
+        accidentRegion = null;
+        accidentratioRegion = addRationRegionAccident();
         map.addLayer(accidentratioRegion);
         accDisplay = true;
         $(e).addClass('active');

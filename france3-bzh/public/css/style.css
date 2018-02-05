@@ -275,6 +275,24 @@ button:focus { outline-style: none; }
   background-size: 100%;
 }
 
+#warning
+{
+  font-size: 10px;
+  text-align: center;
+  font-family: 'overpass';
+  color : white;
+}
+
+#beforeday
+{
+
+}
+
+#afterday
+{
+
+}
+
 
 
 .nothome
@@ -413,9 +431,8 @@ button:focus { outline-style: none; }
 #contain_about
 {
   float: left;
-  margin-left: 5%;
-  width: 70%;
-  margin-top: 7%;
+  margin-left: 50px;
+  width: 80%;
 }
 
 .personnages
@@ -424,8 +441,8 @@ button:focus { outline-style: none; }
 
 .personnage
 {
-  display: inline-block;
-  width: 17%;
+  float:left;
+  width: 15%;
   text-align: center;
   opacity:0.5;
 
@@ -443,26 +460,45 @@ button:focus { outline-style: none; }
 .perso {
   font-family: "work_sans";
   color: white;
-  font-size: 16px;
+  font-size: 10px;
 }
-
-
-
-
-
 
 .image_perso
 {
   text-align: center;
+  width: 50%;
 }
 
+#ens_info
+{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transform: translateY(30%);
+}
 
 #informations
 {
-  float: right;
-  margin-right: 15%;
-  width: 10%;
-  margin-top: 3%;
+  float:left;
+  transform: translateY(-10%);
+}
+
+#ens_ecole
+{
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  transform: translate(100%,-300%);
+}
+
+#ens_ecole a
+{
+  text-decoration: none;
+}
+
+#ens_ecole p
+{
+  margin-bottom: -10px;
 }
 
 #informations h2 {
@@ -471,7 +507,7 @@ button:focus { outline-style: none; }
 }
 
 #informations a {
-  text-decoration: none;
+
   display: block;
   margin: 2px;
   font-size: 16px;
@@ -479,12 +515,20 @@ button:focus { outline-style: none; }
   font-weight: bold;
 }
 
+#equipe p
+{
+  margin-bottom: -10px;
+  font-weight: bold;
+  font-family: "overpass";
+  font-size:12px;
+}
 
 #equipe a p
 {
+  margin-bottom: -10px;
   font-weight: bold;
   font-family: "overpass";
-  font-size:16px;
+  font-size:12px;
 }
 
 #mapid {
@@ -556,13 +600,25 @@ button:focus { outline-style: none; }
 
 #cache.misere
 {
-  width:1000px;
+  position: absolute;
+  bottom: 0;
 }
 
 .cache
 {
+  float: left;
+  opacity: 0.5;
   width: 25%;
-  height: 100%;
+  height: 176px;
+  background-color: black;
+}
+
+.cache:hover
+{
+  float: left;
+  opacity: 0.0;
+  width: 25%;
+  height: 176px;
   background-color: black;
 }
 
