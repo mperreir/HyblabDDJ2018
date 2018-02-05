@@ -48,6 +48,11 @@
 
   </head>
   <body>
+  <ul id="menu">
+    <li data-menuanchor="Questions" class="active" ><a href="#firstsection">Questions</a></li>
+    <li data-menuanchor="Graphiques" class=""><a href="#secondsection">Graphiques</a></li>
+    <li data-menuanchor="About" class=""><a href="#thirdsection">About</a></li>
+  </ul>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
     <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
     <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
@@ -63,7 +68,7 @@
     <div id="fullpage">
       <!-- SECTION 1-->
 
-      <div id="firstsection" class="section">
+      <div id="firstsection" class="section" data-anchor="Questions">
         <div class="slide" id="section_home">
           <section id="container_infos_nav">
             <img id="logo" src="img/home/Logo.png" alt="logo site"/>
@@ -211,7 +216,44 @@
             </section>
           </div>
           </section>
-          <!-- slide 6 AMBULANCE-->
+      </div>
+      <!-- Carte -->
+      <div id="secondsection" class="section nothome" data-anchor="Graphiques">
+        <div class="slide">
+          <div id="map" style="height:500px; width: 500px"></div>
+          <div class="bouttons">
+            <h1>Filtres</h1>
+            <h2>Informations générales</h2>
+            <div class="row">
+              <span>Passage à niveaux</span>
+              <div class="material-switch blue" onclick="AfficherPn(this)">
+              </div>
+            </div>
+            <div class="row">
+              <span>Accidents</span>
+              <div class="material-switch red" onclick="AfficherCoordAcc(this)"></div>
+            </div>
+            <h2>Informations régions</h2>
+            <div class="row">
+              <span>Accidents par régions</span>
+              <div class="material-switch yellow lie" onclick="AfficherAcc(this)"></div>
+            </div>
+            <div class="row">
+              <span>Ratio accidents par Région</span>
+              <div class="material-switch green lie" onclick="AfficherRatioRegion(this)"></div>
+            </div>
+            <div id="ampoule">
+              <img id="carte_astuce"src="img/question/tips.svg"/>
+              <span>Cliquer sur un symbole de la carte pour avoir plus d'informations</span>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div id="chart_lum_container">
+            <canvas id="myLineChart" width="740" height="200"></canvas>
+          </div>
+        </div>
+        <!-- slide 6 AMBULANCE-->
           <div class="slide nothome" >
             <div id="slide_ambu_text">
               <img   id="img_ambu" src="img/slide_acc_regions/ambulance.png" alt="ambulance" />
@@ -228,46 +270,8 @@
 
           </div>
       </div>
-      <!-- Carte -->
-      <div class="section nothome">
-        <div id="map" style="height:500px; width: 500px"></div>
-        <div class="bouttons">
-          <h1>Filtres</h1>
-          <h2>Informations générales</h2>
-          <div class="row">
-            <span>Passage à niveaux</span>
-            <div class="material-switch blue" onclick="AfficherPn(this)">
-            </div>
-          </div>
-          <div class="row">
-            <span>Accidents</span>
-            <div class="material-switch red" onclick="AfficherCoordAcc(this)"></div>
-          </div>
-          <h2>Informations régions</h2>
-          <div class="row">
-            <span>Accidents par régions</span>
-            <div class="material-switch yellow lie" onclick="AfficherAcc(this)"></div>
-          </div>
 
-          <div class="row">
-            <span>Ratio accidents par Région</span>
-            <div class="material-switch green lie" onclick="AfficherRatioRegion(this)"></div>
-          </div>
-          <div id="ampoule">
-            <img id="carte_astuce"src="img/question/tips.svg"/>
-            <span>Cliquer sur un symbole de la carte pour avoir plus d'informations</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- About -->
-      <div class="section nothome">
-          <div id="chart_lum_container">
-            <canvas id="myLineChart" width="740" height="200"></canvas>
-          </div>
-      </div>
-
-        <div class="section nothome">
+        <div id="thirdsection" class="section nothome" data-anchor="About">
           <div id="contain_about">
             <div class="personnages">
               <div class="personnage polytech">
@@ -383,7 +387,6 @@
         </div>
         </div>
     </div>
-
 
 
     <!-- Le contenu du site -->

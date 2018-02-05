@@ -57,6 +57,41 @@ header img{
 	height: auto;
 }
 
+#menu {
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    z-index: 70;
+    position: fixed;
+    background-color: transparent;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu li {
+    text-align: center;
+    width: 10%;
+    display: inline-block;
+    margin: 10px;
+    background-color: #153444;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#menu li.active {
+    background-color: #46B29D;
+}
+
+#menu li a {
+   text-decoration: none;
+   font-family: 'overpass';
+   color:#F53855;
+   font-weight: bold;
+}
 
 h1
 {
@@ -210,7 +245,7 @@ button:focus { outline-style: none; }
   position: absolute;
   width: 75%;
   top:0;
-  transform: translate(15%)
+  transform: translate(20%, 5%)
 }
 
 .section
@@ -267,8 +302,8 @@ button:focus { outline-style: none; }
 #map
 {
   background-color: #241D37;
-  margin-left: 15%;
-  float: left;
+  position: absolute !important;
+  transform: translate(25%);
 }
 
 
@@ -451,7 +486,7 @@ button:focus { outline-style: none; }
   z-index: 1;
   position: absolute;
   width: 75%;
-  top:0;
+  top:50px;
   transform: translate(15%,0%)
 }
 
@@ -460,7 +495,7 @@ button:focus { outline-style: none; }
   position: absolute;
   width: 70%;
   bottom: 0;
-  transform: translate(20%, -50%);
+  transform: translate(20%, -40%);
 }
 #graph_vehicule img{
 }
@@ -964,4 +999,26 @@ svg[hidden]:not(:root) {
 .row .material-switch {
   float: right;
   margin-right: 5%;
+}
+
+.arrowUp,
+.arrowDown{
+    position:fixed;
+    z-index:99;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-left: -38px;
+    left: 50%;
+}
+.arrowDown{
+    bottom: 20px;
+    border-width: 38.5px 34px 0 38.5px;
+    border-color: #fff transparent transparent transparent;
+}
+.arrowUp{
+    top: 20px;
+    border-width: 0 38.5px 34px 38.5px;
+    border-color: transparent transparent #fff transparent;
 }

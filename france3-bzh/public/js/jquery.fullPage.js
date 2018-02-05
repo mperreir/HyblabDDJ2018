@@ -101,9 +101,9 @@
         // Creating some defaults, extending them with any options that were provided
         options = $.extend({
             //navigation
-            menu: false,
-            anchors:[],
-            lockAnchors: false,
+            menu: '#menu',
+            anchors:['Questions','Graphiques','About'],
+            lockAnchors: true,
             navigation: false,
             navigationPosition: 'right',
             navigationTooltips: [],
@@ -123,7 +123,7 @@
             easingcss3: 'ease',
             loopBottom: false,
             loopTop: false,
-            loopHorizontal: true,
+            loopHorizontal: false,
             continuousVertical: false,
             continuousHorizontal: false,
             scrollHorizontally: false,

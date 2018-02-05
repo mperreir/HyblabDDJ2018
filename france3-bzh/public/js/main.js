@@ -6,6 +6,22 @@
 
 //---------------------
 // Initialise le fullpage
+
+$('.arrowUp').click(function(){
+    $.fn.fullpage.moveSectionUp();
+});
+
+$('.arrowDown').click(function(){
+    $.fn.fullpage.moveSectionDown();
+});
+
+$(document).ready(function(){
+  $('ul li a').click(function(){
+    $('li').removeClass("active");
+    $(this).addClass("active");
+  });
+});
+
 var q = [0,0,0,0,0]
 $(document).ready(function() {
     $('#fullpage').fullpage();
@@ -845,6 +861,7 @@ var coordAcc = addCoordAcc();
 /* création fond de carte (France avec regions)*/
 
 fetch('data/france.geojson')
+    //GeoJSON venant de grégoire david
     // this promise will be fulfilled when the json fill will be
     .then(function (response){
         // if we could load the resource, parse it

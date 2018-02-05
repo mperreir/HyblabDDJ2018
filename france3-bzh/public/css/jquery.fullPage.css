@@ -65,20 +65,20 @@ html.fp-enabled,
     margin-top: -38px;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    transform: translate3d(0,-100%,0);
 }
 .fp-controlArrow.fp-prev {
-    display:none;
+    display:block;
     left: 15px;
     width: 0;
     border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
+    border-color: transparent #46B29D transparent transparent;
 }
 .fp-controlArrow.fp-next {
     right: 15px;
     border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #fff;
-    display:none;
+    border-color: transparent transparent transparent #46B29D;
+    display:block;
 }
 .fp-scrollable {
     overflow: hidden;
