@@ -99,20 +99,18 @@ function reponse(bouton)
     {
       if(parent[i].attributes[1].nodeValue =="v button")
       {
-        // parent[i].style.border="2px solid #4CAF50"
+        parent[i].style.border="2px solid #4CAF50"
         // parent[i].style.color="#4CAF50"
         $(parent[i]).animate({
-          border : "2px solid #4CAF50",
-          color: "#4CAF50"
+          borderColor: "#4CAF50"
         }, 800);
       }
       else
       {
-        // parent[i].style.border="2px solid #F53855"
+        parent[i].style.border="2px solid #F53855"
         // parent[i].style.color="#F53855"
         $(parent[i]).animate({
-          border : "2px solid #F53855",
-          color: "#F53855"
+          borderColor: "#F53855"
         }, 800);
       }
 
@@ -776,7 +774,7 @@ fetch('data/acc_saisons_hiver.json')
               },
               title: {
                     display: true,
-                    fontSize : 60,
+                    fontSize : 80,
                     text: 'Hiver',
                 },
                legend: {
