@@ -9,7 +9,6 @@ body {
     height: calc(100%);          /* pour support natif */
 }
 
-
 a:link, a:visited {
     color: #212121;
     text-decoration: none;
@@ -30,7 +29,7 @@ header {
     left: 300px;
 
     height: 19px;
-    width: 280.39px;
+ /*   width: 280.39px;*/
     font-family: Lato;
     font-size: 16px;
     font-weight: 300;
@@ -47,7 +46,7 @@ header {
     left: 400px;
 
     height: 19px;
-    width: 280.39px;
+  /*  width: 280.39px;*/
     font-family: Lato;
     font-size: 16px;
     font-weight: 300;
@@ -110,7 +109,7 @@ h1 {
     margin-left: 50px;
 
     color: #000000;
-    font-family: "Lucida Grande";
+    font-family: "Lato";
     font-size: 16px;
     line-height: 18px;
 }

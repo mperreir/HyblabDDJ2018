@@ -517,7 +517,7 @@ app.controller('myCtrl', function ($scope) {
 });
 
 function returnPage() {
-    document.getElementById("main").style.display="none"
+    document.getElementById("main").style.display="none";
 
 }
 

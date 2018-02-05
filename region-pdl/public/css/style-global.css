@@ -46,18 +46,18 @@ a.lienActuel:hover {
     margin: auto;
 }
 
-#rond1 {
+#rond1, #rond11 {
     top: 45%;
 }
 
-#rond2 {
+#rond2, #rond22 {
     top: 49%;
 }
 
-#rond3 {
+#rond3, #rond33 {
     top: 53%;
 }
 
-#rond4 {
+#rond4, #rond44 {
     top: 57%;
 }

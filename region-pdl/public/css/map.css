@@ -85,6 +85,7 @@ a:hover {
     margin-top: 10px;
     top: 5px;
     left: 300px;
+    font-family: Lato;
 
     width:70px;
 }
@@ -95,6 +96,7 @@ a:hover {
     margin-top: 10px;
     top: 5px;
     left: 380px;
+    font-family: Lato;
 
     width:100px;
 }
