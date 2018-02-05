@@ -782,11 +782,21 @@ p.titreScene
     font-size: 45px;
     left: 150px;
 }
+p.sousTitreScene
+{
+	position: absolute;
+    top: 55px;
+    color: #A9FF88;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    left: 21px;
+}
 
 ul.listeScene
 {
 	position: absolute;
-    top: 72px;
+    top: 87px;
     color: white;
 }
 
