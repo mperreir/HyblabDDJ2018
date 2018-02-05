@@ -327,21 +327,24 @@ app.controller('myCtrl', function ($scope) {
         var percent = (100 * total / totalM).toPrecision(3);
         var percentStr = percent + '%';
 
-        d3.select('#exp')
-                .text(percentStr + '\n' + '\n \r Effectifs par rapport à la capacité max.\n');
+        // d3.select('#exp')
+        //         .text(percentStr + '\n' + '\n \r Effectifs par rapport à la capacité max.\n');
 
         d3.select('#showExplain')
                 .style('visibility', '');
 
-        // var option1 = {
-        //     value:percent,
-        //     name:' Effectifs par rapport à la capacité max',//必填
-        //     backgroundColor:null,
-        //     color:['#a0cb4d','#c1dac2'],
-        //     fontSize:16,
-        //     domEle:document.getElementById("showExplain")//必填
-        // },percentPie1 = new PercentPie(option1);
-        // percentPie1.init();
+        d3.select('#exp1')
+                .text('Effectifs par rapport à la capacité max.\n');
+        var option1 = {
+            value:percent,
+            name:'',//必填
+            backgroundColor:null,
+            color:['#a0cb4d','#c6dac4'],
+            fontSize:24,
+            fontFamily: 'sans-serif',
+            domEle:document.getElementById("exp")//必填
+        },percentPie1 = new PercentPie(option1);
+        percentPie1.init();
     }
 
     function initializeBreadcrumbTrail() {
@@ -482,7 +485,7 @@ app.controller('myCtrl', function ($scope) {
             series: [{
                 name: 'name',
                 type: 'pie',
-                radius: ['60%', '75%'],
+                radius: ['65%', '90%'],
                 avoidLabelOverlap: false,
                 hoverAnimation:false,
                 label: {
@@ -491,9 +494,10 @@ app.controller('myCtrl', function ($scope) {
                         position: 'center',
                         textStyle: {
                             fontSize: _that.fontSize,
-                            // fontWeight: ''
+                            fontWeight: 'bold',
+                            color:['#000000']
                         },
-                        formatter:'{b}\n{c}%'
+                        formatter:'{c}%'
                     }
                 },
                 data: [{
@@ -507,7 +511,12 @@ app.controller('myCtrl', function ($scope) {
                 },
                     {
                         value: 100-_that.value,
-                        name: ''
+                        name: '',
+                        label: {
+                            normal: {
+                                show: false
+                            }
+                        }
                     }
                 ]
             }]
