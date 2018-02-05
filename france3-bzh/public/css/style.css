@@ -870,9 +870,10 @@ text-align: center;
 }
 #container_slide_saisons {
   position: absolute;
-  top:5%;
+  top:10%;
 }
 #container_slide_saisons canvas{
+
   width: 20% !important;
   height: auto !important;
   float: left;
