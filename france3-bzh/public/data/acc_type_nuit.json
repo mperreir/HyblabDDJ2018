@@ -1,0 +1,16 @@
+{
+  "labels": [ "Courses/Achats", "Ecole","Domicile Travail", "Indéterminé","Promenade", "Utilisaion professionnelle"],
+    "datasets": [
+    {
+      "label": "Nombre d'accidents",
+      "fill": false,
+      "borderColor": ["#F53855","#4479FF","#FFEAB6","#E37B40", "#46B29D", "#F0CA4D"],
+      "backgroundColor": ["#F53855","#4479FF","#FFEAB6","#E37B40", "#46B29D", "#F0CA4D"],
+      "pointHighlightFill": "#fff",
+      "hoverBorderColor" : "#FFFFFF",
+      "hoverBackgroundColor" : "#FFFFFF",
+      "pointHighlightStroke": "rgba(220,220,220,1)",
+      "data": [ 1, 1, 5,	17,	32 , 41]
+    }
+  ]
+}

@@ -769,7 +769,87 @@ fetch('data/acc_saisons_hiver.json')
              }
         });
     });
-    
+// ----------------------------Heure /type ------------------------------------------
+fetch('data/acc_type_nuit.json')
+    .then(function (response){
+        if( response.ok )
+            return response.json();
+            return {data: "JSON file not found"};
+
+    })
+    .catch( function (error){
+        return {data: "Invalid JSON"};
+    })
+    .then(function (json) {
+        var ctx = document.getElementById("chart_pie_nuit").getContext("2d");
+
+        var myLineChart = new Chart(ctx , {
+            type: "pie",
+            data: json,
+            options : {
+              tooltips: {
+                titleFontSize: 24,
+                bodyFontSize: 24,
+                mode: 'single',
+                callbacks: {
+                    label: function(tooltipItems, data) {
+                        return data['labels'][tooltipItems['index']] + " : " +data['datasets'][0]['data'][tooltipItems['index']] + '%';
+                      },
+                }
+              },
+              title: {
+                    display: true,
+                    fontSize : 40,
+                    text: 'Nuit',
+                    fontColor :"#FFEAB6"
+                },
+               legend: {
+                   display: false
+               }
+
+             }
+        });
+    });
+fetch('data/acc_type_jour.json')
+    .then(function (response){
+        if( response.ok )
+            return response.json();
+            return {data: "JSON file not found"};
+
+    })
+    .catch( function (error){
+        return {data: "Invalid JSON"};
+    })
+    .then(function (json) {
+        var ctx = document.getElementById("chart_pie_jour").getContext("2d");
+
+        var myLineChart = new Chart(ctx , {
+            type: "pie",
+            data: json,
+            options : {
+              tooltips: {
+                titleFontSize: 24,
+                bodyFontSize: 24,
+                mode: 'single',
+                callbacks: {
+                    label: function(tooltipItems, data) {
+                        return data['labels'][tooltipItems['index']] + " : " +data['datasets'][0]['data'][tooltipItems['index']] + '%';
+                      },
+                }
+              },
+              title: {
+                    display: true,
+                    fontSize : 40,
+                    text: 'Jour',
+                    fontColor :"#3D224C"
+                },
+               legend: {
+                   display: false
+               }
+
+             }
+        });
+    });
 /* --------------------------------- CARTE ----------------------------- */
 
 

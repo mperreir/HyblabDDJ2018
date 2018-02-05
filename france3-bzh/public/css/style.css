@@ -766,7 +766,32 @@ text-align: center;
   margin: 2%;
 }
 
+#slide_montre {
+  background-image: url(../img/slide_typesTrajets/background_heure.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 
+#container_slide_jour {
+
+  width: 40% !important;
+  float: left;
+  margin-left: 10%;
+  height: auto !important;
+}
+#slide_container_montres {
+  position: absolute;
+  top:10%;
+  width: 100%;
+
+}
+
+#container_slide_nuit {
+  width: 40%;
+  float: left;
+  height: auto !important;
+}
 /*--------*/
 .orange {
   color: #E37B40;
