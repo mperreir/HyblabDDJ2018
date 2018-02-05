@@ -1,21 +1,19 @@
 html, body{
     height: 100%;
     margin: 0;
-    background: #ee2f2c;
 }
 
 /* partie de droite */
 
-#container {
+#containerAides {
     height: 100%;
-    height: -webkit-calc(100% - 100px);  /* pour Chrome */
-    height: -moz-calc(100% - 100px);     /* pour Firefox */
-    height: calc(100% - 100px);           /* pour support natif */
-
+    height: -webkit-calc(100% - 55px);  /* pour Chrome */
+    height: -moz-calc(100% - 55px);     /* pour Firefox */
+    height: calc(100% - 55px);           /* pour support natif */
 
     padding-left: 100px;
 
-    padding-top: 50px;
+    padding-top: 5px;
     padding-bottom: 50px;
 
     background: #FFFFFF;
@@ -33,49 +31,122 @@ html, body{
     line-height: 20px;
 }
 
-#container p {
-    padding-left: 100px;
+#intervalleQuotient, #intervalleAge, #intervalleDistance {
+    display:inline-block;
+    width:50%;
+}
+
+#intervalleAge {
+    display:inline-block;
+    width:50%;
+}
+
+#containerAides p {
     font-size: 14px;
 }
 
 #aide {
- /*   opacity:0;*/
 
-    height: 126px;
-    width: 700px;
     color: #232222;
     font-family: Lato;
     font-size: 15px;
     letter-spacing: 1px;
     line-height: 18px;
 
+    padding-top: 10px;
+
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
 }
 
-#nom-aide, #description-aide {
-    opacity:0;
+#criteres {
+    float:right;
+
+    width: 750px;
+    color: #232222;
+    font-family: Lato;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 18px;
+
+    margin-right: 50px;
+    margin-top: 15px;
+    padding-left: 20px;
+
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
 }
 
-#intro {
-    opacity: 0;
-    height: 25px;
-    color: #212121;
-    font-family: "Avenir Next";
-    font-size: 18px;
-    line-height: 25px;
+
+.descriptionAide {
+    float:right;
+    width: 400px;
+    height: 200px;
+
+    margin-right: 50px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+#nom-aide {
+    width: 400px;
+    height: 24px;
+    color: #000000;
+    font-family: Lato;
+    font-size: 20px;
+    line-height: 1px;
+}
+
+#description-aide {
+    height: 72px;
+    width: 343.59px;
+    color: #232222;
+    font-family: Lato;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 18px;
+}
+
+#lien-aide {
+    position: relative;
+    bottom: -25px;
+    left: 270px;
+
+    height: 19px;
+    width: 93px;
+    color: #4199BE;
+    border: 1px solid #4199BE;
+
+    padding: 2px;
+
     text-align: center;
-    border-style: solid;
-    border-width: medium;
+    text-decoration: none;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1px;
 }
 
-#container .figure:hover #intro {
+#containerAides .figure:hover #intro {
     opacity: 1;
+}
+
+#montant-aide {
+    float: left;
+
+    margin-left: 100px;
+
+    font-size: 80px;
+
+    color: #009BC2;
+    font-family: Lato;
+    font-weight: bold;
 }
 
 
 /* partie de gauche */
 
-#texte {
+.texte {
     height: 100%;
     height: -webkit-calc(100% - 50px);  /* pour Chrome */
     height: -moz-calc(100% - 50px);     /* pour Firefox */
@@ -105,13 +176,13 @@ h2 {
     font-family: Lato;
 }
 
-#credits {
+.credits {
     float:right;
     top: 5px;
     right: 25px;
 }
 
-#home {
+.home {
     top: 5px;
     right: 150px;
 }

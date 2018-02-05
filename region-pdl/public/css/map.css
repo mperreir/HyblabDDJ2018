@@ -8,7 +8,7 @@ html, body{
 
 /* partie de droite */
 
-#container {
+#containerMap {
     height: 100%;
     height: -webkit-calc(100%);  /* pour Chrome */
     height: -moz-calc(100%);     /* pour Firefox */
@@ -54,7 +54,7 @@ html, body{
     z-index: 1;
 }
 
-#logo-pdl {
+.logo-pdl {
     margin-left: 50px;
     width: 174px;
     background-color: #FFFFFF;

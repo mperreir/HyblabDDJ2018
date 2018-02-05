@@ -7,12 +7,13 @@
     <!-- Basic viewport setting for mobile friendly page -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Déclaration de la feuille de style du document-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/aides.css">
+    <link rel="stylesheet" href="css/style-global.css">
     <!-- Those polyfills are required so that old browsers support fetch mecanism -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
     <!-- Simple sample script that loads data from a dummy json file -->
-    <script src="js/example.js" defer></script>
     <script src="js/aides.js" defer></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/d3.js"></script>
@@ -24,56 +25,63 @@
 <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
 <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
 <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+<div class="texte">
+    <a href="index.html"><img class="logo-pdl" src="img/logo-pdl.png"/></a>
+    <h2 class="home"> HOME </h2>
+    <h2 class="credits"> CREDITS </h2>
 
-<div id="texte">
-    <a href="index.html"><img id="logo-pdl" src="img/logo-pdl.png"/></a>
-    <h2 id="home"> HOME </h2>
-    <h2 id="credits"> CREDITS </h2>
+    <p class="accroche"> Vous vous formez,<br>
+        nous vous soutenons</p>
 
-    <p id="textAccroche" class="accroche"> Vous vous formez,<br>
-    nous vous soutenons</p>
-
-    <p id="textExplication" class="explication"> Logement, matériel, démarches, la Région soutient votre apprentissage et met tout
+    <p class="explication"> Logement, matériel, démarches, la Région soutient votre apprentissage et met tout
         en oeuvre pour vous permettre d’entreprendre sereinement votre formation.
         100% des apprentis bénéficient d’un minimum d’aide de 79€*.<br>
         *côté dataviz : aides directes et indirectes </p>
 
-    <p id="texTemoignage" class="temoignage"> « J’ai voulu devenir apprentie parce que cela représentait une situation financière plus
+    <p class="temoignage"> « J’ai voulu devenir apprentie parce que cela représentait une situation financière plus
         avantageuse pour moi. » <br>
         Marine Paillot, Chargée d’affaires chez Enedis
     </p>
 
 </div>
 
-<div id="container">
+<div id="containerAides">
 
     <p id="figure" class="figure"></p>
 
+    <h2 id="montant-aide"> 0 € </h2>
+
     <div id="aide" class="descriptionAide">
-        <h1 id="nom-aide"> Nom aide </h1>
-        <p id="description-aide"> Description de l'aide survolée</p>
+        <h1 id="nom-aide"> Survolez une barre avec votre souris </h1>
+        <p id="description-aide"> et vous aurez une description de l'aide correspondante !</p>
+
+        <a id="lien-aide" href="chooseGFE.html">En savoir plus</a>
     </div>
 
-    <p id="intro"> Afin de vous guider au mieux pour avoir vos aides, remplissez les champs suivants : </p>
-
-    <p id="selectionIntevalle" >
+    <div id="criteres">
+        <p id="selectionIntevalle" >
         <p id ="intervalleAge" class="intervalle"> </p>
-        <input title="borneInferieureAge" id="minAge" type="range" value="15" max="50" min="16" step="1" onchange="actualize(event, 'Age')">
-        <input title="borneInferieureAge" id="maxAge" type="range" value="22" max="50" min="16" step="1" onchange="actualize(event, 'Age')">
-
-        <p id ="intervalleDistance" class="intervalle"> </p>
-        <input title="borneInferieureDistance" id="minDistance" type="range" value="1" max="150" min="1" step="1" onchange="actualize(event, 'Distance')">
-        <input title="borneInferieureDistance" id="maxDistance" type="range" value="50" max="150" min="1" step="1" onchange="actualize(event, 'Distance')">
+        <input title="borneInferieureAge" id="minAge" type="range" value="18" max="50" min="16" step="1" onchange="actualize(event, 'Age')">
+     <!--   <input title="borneInferieureAge" id="maxAge" type="range" value="22" max="50" min="16" step="1" onchange="actualize(event, 'Age')"> -->
 
         <p id ="intervalleQuotient" class="intervalle"> </p>
         <input title="borneInferieureQuotient" id="minQuotient" type="range" value="0" max="1000" min="0" step="10" onchange="actualize(event, 'Quotient')">
-        <input title="borneInferieureQuotient" id="maxQuotient" type="range" value="600" max="1000" min="0" step="10" onchange="actualize(event, 'Quotient')">
+        <!--  <input title="borneInferieureQuotient" id="maxQuotient" type="range" value="600" max="1000" min="0" step="10" onchange="actualize(event, 'Quotient')"> -->
+
+        <p id ="intervalleDistance" class="intervalle"> </p>
+        <input title="borneInferieureDistance" id="minDistance" type="range" value="1" max="150" min="1" step="1" onchange="actualize(event, 'Distance')">
+      <!--  <input title="borneInferieureDistance" id="maxDistance" type="range" value="50" max="150" min="1" step="1" onchange="actualize(event, 'Distance')"> -->
 
         <p id ="intervalleNiveau" class="intervalle"> </p>
         <input title="borneInferieureNiveau" id="minNiveau" type="range" value="1" max="6" min="1" step="1" onchange="actualize(event, 'Niveau')">
-        <input title="borneInferieureNiveau" id="maxNiveau" type="range" value="6" max="6" min="1" step="1" onchange="actualize(event, 'Niveau')">
-    </p>
+      <!--  <input title="borneInferieureNiveau" id="maxNiveau" type="range" value="6" max="6" min="1" step="1" onchange="actualize(event, 'Niveau')"> -->
+        </p>
+    </div>
 
+    <a id="rond1" class="lienActuel" href="chooseGFE.html"></a>
+    <a id="rond2" class="lienRond" href="chooseGFE.html"></a>
+    <a id="rond3" class="lienRond" href="chooseGFE.html"></a>
+    <a id="rond4" class="lienRond" href="chooseGFE.html"></a>
 
 </div>
 </body>

@@ -1,0 +1,63 @@
+a.lienRond {
+    position: absolute;
+    right: 20px;
+    border-radius: 25px;
+    height: 10px;
+    width: 10px;
+
+    background-color: #4199BE;
+    border: none;
+
+    display: block;
+    margin: auto;
+}
+
+a.lienRond:hover {
+     border-radius: 25px;
+
+     background-color: #2a5872;
+     border: none;
+
+     display: block;
+     margin: auto;
+ }
+
+a.lienActuel {
+    position: absolute;
+    right: 18px;
+    border-radius: 25px;
+    height: 15px;
+    width: 15px;
+
+    background-color: #4199BE;
+    border: none;
+
+    display: block;
+    margin: auto;
+}
+
+a.lienActuel:hover {
+    border-radius: 25px;
+
+    background-color: #2a5872;
+    border: none;
+
+    display: block;
+    margin: auto;
+}
+
+#rond1 {
+    top: 45%;
+}
+
+#rond2 {
+    top: 49%;
+}
+
+#rond3 {
+    top: 53%;
+}
+
+#rond4 {
+    top: 57%;
+}

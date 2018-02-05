@@ -1,8 +1,11 @@
 
+/* chargement des ronds */
+
+
 //paramètres
 var bandWidth = 600;
 var bandHeight = 30;
-var circleRadius = 40;
+var circleRadius = 35;
 var borneX = 1600;
 
 var nomAides = {"pass-permis" : "Pass permis", "pass-apprenti" : "Pass apprenti","mobili-jeune" : "Mobili jeune"};
@@ -15,11 +18,25 @@ var descriptionAides = {"pass-permis" : "Le Pass permis apprenti est une aide de
     " au logement Mobili-Jeune s’adresse aux jeunes de moins de 30 ans en formation en alternance " +
     "dans une entreprise du secteur privé."};
 
+var lienAides = {"pass-permis" : "http://www.paysdelaloire.fr/services-en-ligne/aides-regionales/aides-regionales-themes/formation/actu-detaillee/n/pass-permis-apprenti/",
+    "pass-apprenti" : "http://www.paysdelaloire.fr/services-en-ligne/aides-regionales/aides-regionales-themes/formation/actu-detaillee/n/pass-apprenti-2/",
+    "mobili-jeune" : "http://www.infos-jeunes.fr/dispositifs/mobili-jeune-aide-au-logement-pour-les-jeunes-en-alternance"};
+
 function displayValue(event, variable){
-    var varMin = document.getElementById("min" + variable).value;
-    var varMax = document.getElementById("max" + variable).value;
-    var afficheVar = document.getElementById("intervalle" + variable);
-    afficheVar.innerHTML = variable + " entre " + varMin + " et " + varMax;
+    var varMin, afficheVar;
+
+    varMin = document.getElementById("min" + variable).value;
+    afficheVar = document.getElementById("intervalle" + variable);
+
+    if (variable === "Age"){
+        afficheVar.innerHTML = "Quel est votre age ? " + varMin + " ans";
+    } else if (variable === "Distance"){
+        afficheVar.innerHTML = "Moyenne des distances domicile-CFA, domicile-entreprise : " + varMin + " km";
+    } else if (variable === "Quotient"){
+        afficheVar.innerHTML = "Quel est votre quotient familial ? " + varMin;
+    } else if (variable === "Niveau"){
+        afficheVar.innerHTML = "Quel niveau d'étude vous intéresse ? " + varMin + " (5 = niveau CAP, 4 = bac, 3 = bac+2, 2 = bac+3/4, 1 = bac+5/ et +)";
+    }
 }
 
 function actualize(event, variable){
@@ -51,9 +68,9 @@ var listeAides = [], jsonCircles = [];
 
 function getAides(){
     $.getJSON( "data/aides.json", function(data) {
-        margin = {top: 50, right: 20, bottom: 10, left: 95},
+        margin = {top: 50, right: 30, bottom: 10, left: 95},
             width = bandWidth - margin.left - margin.right,
-            height = 200 - margin.top - margin.bottom;
+            height = 90 - margin.top - margin.bottom;
 
         y = d3.scale.ordinal()
             .rangeRoundBands([0, bandHeight]);
@@ -117,7 +134,7 @@ function getAides(){
         for (var j = 0; j < nbCatAides; j++) {
 
             x.domain([0, borneX]);
-            y.domain(datas[j].map(function (d) { return nomCatAides[j]; }));
+            y.domain(datas[j].map(function (d) { return ""; })); //nomCatAides[j]
 
             listeAides.push(d3.select("#figure").append("svg")
                 .attr("width", width + margin.left + margin.right)
@@ -136,39 +153,43 @@ function getAides(){
                 .call(yAxis);
         }
         afficheBarres(datas, listeAides);
+        afficheCercles(datas);
 
     });
 }
 
 getAides();
 
+function afficheMontant(boxesU){
+   document.getElementById("montant-aide").innerText = boxesU[boxesU.length-1].x1 + " €";
+}
+
 function getValueVariable(variable) {
     var intervalleVariable = [];
-    if (document.getElementById("min" + variable).value < document.getElementById("max" + variable).value) {
-        intervalleVariable.push(parseInt(document.getElementById("min" + variable).value, 10));
-        intervalleVariable.push(parseInt(document.getElementById("max" + variable).value, 10));
-    } else {
-        intervalleVariable.push(parseInt(document.getElementById("max" + variable).value, 10));
-        intervalleVariable.push(parseInt(document.getElementById("min" + variable).value, 10));
-    }
+
+    intervalleVariable.push(parseInt(document.getElementById("min" + variable).value, 10));
+    intervalleVariable.push(parseInt(document.getElementById("min" + variable).value, 10));
+
     return intervalleVariable;
 }
 
 function afficheDescriptionAide(aide) {
     var idAide = aide.split("\ ")[0]+"-"+aide.split("\ ")[1];
-    console.log(document.getElementById("description-aide"));
-    console.log(document.getElementById("nom-aide"));
+
     document.getElementById("description-aide").childNodes[0].textContent = descriptionAides[idAide];
     document.getElementById("nom-aide").childNodes[0].textContent = nomAides[idAide];
- /*   document.getElementsByClassName("descriptionAide").style.opacity = '1';*/
+    document.getElementById("lien-aide").childNodes[0].parentElement.attributes["href"].nodeValue = lienAides[idAide];
+
     document.getElementById("description-aide").style.opacity = '1';
     document.getElementById("nom-aide").style.opacity = '1';
+    document.getElementById("lien-aide").style.opacity = '1';
 }
 
 function masqueDescriptionAide(aide) {
-  /*  document.getElementsByClassName("descriptionAide").style.opacity = '0';*/
-    document.getElementById("description-aide").style.opacity = '0';
-    document.getElementById("nom-aide").style.opacity = '0';
+    /*  document.getElementsByClassName("descriptionAide").style.opacity = '0';*/
+    /*   document.getElementById("description-aide").style.opacity = '0';
+       document.getElementById("nom-aide").style.opacity = '0';
+       document.getElementById("lien-aide").style.opacity = '0';*/
 }
 
 function afficheBarres(datas, listeAides){
@@ -177,7 +198,7 @@ function afficheBarres(datas, listeAides){
     var niveau = getValueVariable('Niveau');
     var distance = getValueVariable('Distance');
 
-    jsonCircles = [];
+    jsonCircles = [{ "x_axis": 0, "y_axis": bandHeight/2, "radius": circleRadius/2, "color" : "white", name: "cc" }];
 
     for (var j = 0; j < nbCatAides; j++) {
         //on sélectionne les datas correspondantes
@@ -187,32 +208,41 @@ function afficheBarres(datas, listeAides){
 
         datas[j].boxes.forEach(function (aide) {
 
+     //       console.log(aide);
+
             var pass = true;
             if (((aide.agemin !== null) && (aide.agemin > age[1])) || ((aide.agemax !== null) && (aide.agemax < age[0]))) {
+    //            console.log("mauvais age " + age);
                 pass = false;
             }
             if (((aide.quotientmin !== null) && (aide.quotientmin > quotient[1])) || ((aide.quotientmax !== null) && (aide.quotientmax < quotient[0]))) {
+     //           console.log("mauvais quotient " + quotient);
                 pass = false;
             }
             if (((aide.niveaumin !== null) && (aide.niveaumin > niveau[1])) || ((aide.niveaumax !== null) && (aide.niveaumax < niveau[0]))) {
+     //           console.log("mauvais niveau " + niveau);
                 pass = false;
             }
             if (((aide.distancemin !== null) && (aide.distancemin > distance[1])) || ((aide.distancemax !== null) && (aide.distancemax < distance[0]))) {
+     //           console.log("mauvais distance " + distance);
                 pass = false;
             }
 
-            if (pass && aide.name === previous.name) {
-                // si le précédent était la meme aide mais avec un montant inférieur, on l'enlève
-                if (aide.montant > previous.montant) {
-                    boxesU.pop();
-                    if (xU - previous.montant >=0) {
-                        xU = xU - previous.montant;
-                    } else xU = 0;
-                } else { //sinon, on ajoute pas celui ci
-                    aide.x0 = previous.x0;
-                    aide.x1 = previous.x1;
-                    aide.montant = previous.montant;
-                    pass = false;
+            if (boxesU.length >= 1) {
+                if (pass && aide.name === boxesU[boxesU.length - 1].name) {
+                    // si le précédent était la meme aide mais avec un montant inférieur, on l'enlève
+                    if (aide.montant > previous.montant) {
+          //              console.log("on enlève " + previous.name)
+          //              console.log(boxesU.pop().name);
+                        if (xU - previous.montant >= 0) {
+                            xU = xU - previous.montant;
+                        } else xU = 0;
+                    } else { //sinon, on ajoute pas celui ci
+                        aide.x0 = previous.x0;
+                        aide.x1 = previous.x1;
+                        aide.montant = previous.montant;
+                        pass = false;
+                    }
                 }
             }
 
@@ -223,6 +253,7 @@ function afficheBarres(datas, listeAides){
                     aide.x0 = xU;
                 }
                 aide.x1 = aide.montant + xU;
+         //       console.log("on ajoute " + aide.name);
                 boxesU.push(aide);
                 xU += aide.montant;
             }
@@ -253,21 +284,21 @@ function afficheBarres(datas, listeAides){
             .on('mouseover', function(d) { afficheDescriptionAide(d.name)})
             .on('mouseout', function(d) { masqueDescriptionAide(d.name)});
 
-        bars.append("text")
+  /*      bars.append("text")
             .attr("x", function (d) { return x(d.x0); })  //d.x0 au lieu de 0
             .attr("y", y.rangeBand() / 2)
             .attr("dy", "0.5em") // pour le petit décalage
             .attr("dx", "0.5em")
             .style("font", "10px sans-serif")
             //            .style("text-anchor", "begin")
-            .text(function (d) { return d.name });
+            .text(function (d) { return d.name });*/
 
-        vakken.insert("rect", ":first-child")
+   /*     vakken.insert("rect", ":first-child")
             .attr("height", y.rangeBand())
             .attr("x", "1")
             .attr("width", width)
             .attr("fill-opacity", "0.5")
-            .style("fill", "#F5F5F5");
+            .style("fill", "#F5F5F5");*/
 
         listeAides[j].append("g")
             .attr("class", "y axis")
@@ -287,20 +318,20 @@ function afficheBarres(datas, listeAides){
             .enter()
             .append("circle");
 
-        var truc = listeAides[j].selectAll("g")
-            .data(jsonCircles);
+    /*    var truc = listeAides[j].selectAll("g")
+            .data(jsonCircles);*/
 
         var styleCircles = circles
             .attr("cx", function (d) { return d.x_axis; })
             .attr("cy", function (d) { return d.y_axis; })
             .attr("r", function (d) { return d.radius; })
             .attr("stroke","black")
-            .attr("fill", function (d) { return "white"; });
+            .attr("fill", "white");
 
-        truc.append("text")
-            .attr("dx", function(d){return d.x_axis-20})
-            .attr("dy", function(d){return d.y_axis-30})
-            .text(function(d){return d.color;});
+    /*    truc.append("text")
+            .attr("dx", function(d){return d.x_axis-30})
+            .attr("dy", function(d){return -15})
+            .text(function(d){ return d.x_axis;});*/
 
 
         //listeAides[0]
@@ -317,8 +348,8 @@ function afficheBarres(datas, listeAides){
                   .append("g")
                   .attr("transform", function(d){return "translate("+d.x_axis+",80)"});*/
 
-        var elem2 = listeAides[j].selectAll("g")
-            .data(jsonCircles);
+ /*       var elem2 = listeAides[j].selectAll("g")
+            .data(jsonCircles);*/
 
         /*      var elemEnter2 = elem2.enter()
                   .append("g")
@@ -364,7 +395,19 @@ function afficheBarres(datas, listeAides){
                          .attr("dx", function(d){return -5})
                          .text(function(d){return "blop"});*/
 
-
+        afficheMontant(boxesU);
 
     }
+
+    return boxesU;
+}
+
+function afficheCercles (boxesU){
+    var jsonCircles = [{ "x_axis": 0, "y_axis": bandHeight/2, "radius": circleRadius/2, "color" : "white", name: "cc" }];
+
+    for (var i = 0; i < boxesU.length ; i++){
+        jsonCircles.push({ "x_axis": boxesU[i].x1 *(width / borneX), "y_axis": bandHeight/2, "radius": circleRadius/2, "color" : colorsCircles[i], name: "cc" });
+    }
+
+
 }
