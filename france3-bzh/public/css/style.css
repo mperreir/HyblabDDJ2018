@@ -554,6 +554,18 @@ button:focus { outline-style: none; }
   color: white;
 }
 
+#cache.misere
+{
+  width:1000px;
+}
+
+.cache
+{
+  width: 25%;
+  height: 100%;
+  background-color: black;
+}
+
 #mort {
   margin-top: 100%;
   display: none;
