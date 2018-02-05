@@ -1785,6 +1785,12 @@ function controleurFrance() {
 
     var svg = document.getElementById("mapFrance");
     var villes = svg.contentDocument;
+
+   /* svg.selectAll("circles")
+        .attr("onmouseover", "evt.target.setAttribute('opacity', '0.5');")
+        .attr("onmouseout", "evt.target.setAttribute('opacity','1)');")
+        .attr("onClick", function() { console.log("hello");}); */
+
     var dataFrance = loadData('data/AnneeGroupeVilleNombreGroupes.json');
 
     var franceTotal = document.getElementById("franceTotal");
@@ -1884,74 +1890,74 @@ function controleurFrance() {
         totalVilles(villes, dataFrance);
     }
 
-	/*
-	 var aixEnProvence = villes.getElementById("Aix-en-Provence");
-	 var albi = villes.getElementById("Albi");
-	 var amiens =villes.getElementById("Amiens");
-	 var angers =villes.getElementById("Angers");
-	 var annecy =villes.getElementById("Annecy");
-	 var antibes =villes.getElementById("Antibes");
-	 var avignon =villes.getElementById("Avignon");
-	 var bagnolsSurCèze =villes.getElementById("Bagnols-Sur-Cèze");
-	 var bayonne =villes.getElementById("Bayonne");
-	 var beauvais =villes.getElementById("Beauvais");
-	 var belfort =villes.getElementById("Belfort");
-	 var besancon =villes.getElementById("Besançon");
-	 var boismé =villes.getElementById("Boismé");
-	 var bordeaux =villes.getElementById("Bordeaux");
-	 var brest =villes.getElementById("Brest");
-	 var caen =villes.getElementById("Caen");
-	 var cambrai =villes.getElementById("Cambrai");
-	 var cannes =villes.getElementById("Cannes");
-	 var chateauThierry =villes.getElementById("Château-Thierry");
-	 var cholet =villes.getElementById("Cholet");
-	 var clisson =villes.getElementById("Clisson");
-	 var compiègne =villes.getElementById("Compiègne");
-	 var douai =villes.getElementById("Douai");
-	 var douchyLesMines =villes.getElementById("Douchy-les-Mines");
-	 var elancourt =villes.getElementById("Elancourt");
-	 var evreux =villes.getElementById("Evreux");
-	 var fontenayLeComte =villes.getElementById("Fontenay-le-Comte");
-	 var paris =villes.getElementById("Paris");
-	 var grenoble =villes.getElementById("Grenoble");
-	 var laRochelle =villes.getElementById("La Rochelle");
-	 var laval =villes.getElementById("Laval");
-	 var lePerreuxSurMarne =villes.getElementById("Le Perreux-sur-Marne");
-	 var lievin =villes.getElementById("Liévin");
-	 var lille =villes.getElementById("Lille");
-	 var limoges =villes.getElementById("Limoges");
-	 var lorient =villes.getElementById("Lorient");
-	 var lyon =villes.getElementById("Lyon");
-	 var macon =villes.getElementById("Mâcon");
-	 var magescq =villes.getElementById("Magescq");
-	 var marseille =villes.getElementById("Marseille");
-	 var meaux =villes.getElementById("Meaux");
-	 var metz =villes.getElementById("Metz");
-	 var montaigu =villes.getElementById("Montaigu");
-	 var montpellier =villes.getElementById("Montpellier");
-	 var morlaix =villes.getElementById("Morlaix");
-	 var mulhouse =villes.getElementById("Mulhouse");
-	 var nancy =villes.getElementById("Nancy");
-	 var nanterre =villes.getElementById("Nanterre");
-	 var nantes =villes.getElementById("Nantes");
-	 var nice =villes.getElementById("Nice");
-	 var niort =villes.getElementById("Niort");
-	 var orléans =villes.getElementById("Orléans");
-	 var paimpol =villes.getElementById("Paimpol");
-	 var pau =villes.getElementById("Pau");
-	 var poitiers =villes.getElementById("Poitiers");
-	 var quimper =villes.getElementById("Quimper");
-	 var rambouillet =villes.getElementById("Rambouillet");
-	 var rennes =villes.getElementById("Rennes");
-	 var saintEtienne =villes.getElementById("Saint-Étienne");
-	 var strasbourg =villes.getElementById("Strasbourg");
-	 var tarbes =villes.getElementById("Tarbes");
-	 var thaonLesVosges =villes.getElementById("Thaon-les-Vosges");
-	 var toulouse =villes.getElementById("Toulouse");
-	 var tours =villes.getElementById("Tours");
-	 var treillieres =villes.getElementById("Treillières");
-	 var valence =villes.getElementById("Valence");
-	 var valenciennes =villes.getElementById("Valenciennes"); */
+    /*
+     var aixEnProvence = villes.getElementById("Aix-en-Provence");
+     var albi = villes.getElementById("Albi");
+     var amiens =villes.getElementById("Amiens");
+     var angers =villes.getElementById("Angers");
+     var annecy =villes.getElementById("Annecy");
+     var antibes =villes.getElementById("Antibes");
+     var avignon =villes.getElementById("Avignon");
+     var bagnolsSurCèze =villes.getElementById("Bagnols-Sur-Cèze");
+     var bayonne =villes.getElementById("Bayonne");
+     var beauvais =villes.getElementById("Beauvais");
+     var belfort =villes.getElementById("Belfort");
+     var besancon =villes.getElementById("Besançon");
+     var boismé =villes.getElementById("Boismé");
+     var bordeaux =villes.getElementById("Bordeaux");
+     var brest =villes.getElementById("Brest");
+     var caen =villes.getElementById("Caen");
+     var cambrai =villes.getElementById("Cambrai");
+     var cannes =villes.getElementById("Cannes");
+     var chateauThierry =villes.getElementById("Château-Thierry");
+     var cholet =villes.getElementById("Cholet");
+     var clisson =villes.getElementById("Clisson");
+     var compiègne =villes.getElementById("Compiègne");
+     var douai =villes.getElementById("Douai");
+     var douchyLesMines =villes.getElementById("Douchy-les-Mines");
+     var elancourt =villes.getElementById("Elancourt");
+     var evreux =villes.getElementById("Evreux");
+     var fontenayLeComte =villes.getElementById("Fontenay-le-Comte");
+     var paris =villes.getElementById("Paris");
+     var grenoble =villes.getElementById("Grenoble");
+     var laRochelle =villes.getElementById("La Rochelle");
+     var laval =villes.getElementById("Laval");
+     var lePerreuxSurMarne =villes.getElementById("Le Perreux-sur-Marne");
+     var lievin =villes.getElementById("Liévin");
+     var lille =villes.getElementById("Lille");
+     var limoges =villes.getElementById("Limoges");
+     var lorient =villes.getElementById("Lorient");
+     var lyon =villes.getElementById("Lyon");
+     var macon =villes.getElementById("Mâcon");
+     var magescq =villes.getElementById("Magescq");
+     var marseille =villes.getElementById("Marseille");
+     var meaux =villes.getElementById("Meaux");
+     var metz =villes.getElementById("Metz");
+     var montaigu =villes.getElementById("Montaigu");
+     var montpellier =villes.getElementById("Montpellier");
+     var morlaix =villes.getElementById("Morlaix");
+     var mulhouse =villes.getElementById("Mulhouse");
+     var nancy =villes.getElementById("Nancy");
+     var nanterre =villes.getElementById("Nanterre");
+     var nantes =villes.getElementById("Nantes");
+     var nice =villes.getElementById("Nice");
+     var niort =villes.getElementById("Niort");
+     var orléans =villes.getElementById("Orléans");
+     var paimpol =villes.getElementById("Paimpol");
+     var pau =villes.getElementById("Pau");
+     var poitiers =villes.getElementById("Poitiers");
+     var quimper =villes.getElementById("Quimper");
+     var rambouillet =villes.getElementById("Rambouillet");
+     var rennes =villes.getElementById("Rennes");
+     var saintEtienne =villes.getElementById("Saint-Étienne");
+     var strasbourg =villes.getElementById("Strasbourg");
+     var tarbes =villes.getElementById("Tarbes");
+     var thaonLesVosges =villes.getElementById("Thaon-les-Vosges");
+     var toulouse =villes.getElementById("Toulouse");
+     var tours =villes.getElementById("Tours");
+     var treillieres =villes.getElementById("Treillières");
+     var valence =villes.getElementById("Valence");
+     var valenciennes =villes.getElementById("Valenciennes"); */
 }
 
 /**************************************************************************************************/
@@ -2030,7 +2036,6 @@ function setElementsHidden(tabElements, className, index) {
 
     tabElements[index].className = className;
 }
-
 
 function camembert(data, id){
     var couleur = ['#d6f2b3', '#bbdb83', '#8eaf46', '#a9ff88', '#85c275', '#57664d', '#66cc33', '#479116', '#3f5b33'];
