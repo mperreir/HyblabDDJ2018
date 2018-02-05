@@ -437,15 +437,12 @@ function fetchConjonctureData(d){
 
 function createConjonctureDataviz(json){
     var labels = ["Chiffre d'affaires", "Marge", "Trésorerie", "Carnet de commandes"];
-    var firstPointLabels = ["B", "H", "S"];
-    var secondPointLabels = [ "< 1", "1-3", "3-6", "> 6"];
 
     var d = {
         datasets: []
     };
     var cptx = 1;
     var cpty = 1;
-    var cpt = 1;
     var dataset = {};
     var data = [];
     var point = {};
@@ -454,11 +451,9 @@ function createConjonctureDataviz(json){
         point.x = cptx;
         point.y = cpty;
         point.r = radiusmatch(value);
-        (cpty<4) ? point.text = firstPointLabels[cptx-1] : point.text = secondPointLabels[cptx-1];
         data.push(point);
         cptx++;
-        cpt++;
-        if (cpt==4){
+        if (cptx==4){
             dataset.data = data;
             dataset.borderColor = "white";
             dataset.label = labels[cpty-1];
@@ -467,11 +462,6 @@ function createConjonctureDataviz(json){
             data = [];
             cpty++;
             cptx=1;
-            if(cpty==4){
-                cpt=0;
-            } else {
-                cpt=1;
-            }
         }
     });
 
@@ -522,7 +512,7 @@ function createConjonctureDataviz(json){
                     ticks: {
                         beginAtZero: true,
                         stepSize: 1,
-                        max: 5
+                        max: 4
                     }
                 }],
                 yAxes: [{
