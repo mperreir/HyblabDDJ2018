@@ -250,9 +250,9 @@ $( "#voiture" ).click(function() {
   if (   $("#pie_veh").attr("src") != "img/Vehicules/voiture_graphique.svg" ) {
     $( "#voiture" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
-      $("#pie_veh").css("margin-top", "25%");
       $("#pie_veh").css("width", "40%");
       $("#pie_veh").css("height", "auto");
+      $("#pie_veh").css("transform", "translate(75%,40%)");
       $("#pie_veh").attr("src", "img/Vehicules/voiture_graphique.svg");
 
     });
@@ -302,9 +302,9 @@ $( "#camion" ).click(function() {
   if (   $("#pie_veh").attr("src") != "img/Vehicules/camion_graphique.svg" ) {
     $( "#camion" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
-      $("#pie_veh").css("margin-top", "25%");
       $("#pie_veh").css("width", "40%");
       $("#pie_veh").css("height", "auto");
+      $("#pie_veh").css("transform", "translate(75%,15%)");
       $("#pie_veh").attr("src", "img/Vehicules/camion_graphique.svg");
     });
     $("#pie_veh").fadeIn("slow");
@@ -355,9 +355,9 @@ $( "#moto" ).click(function() {
   if (   $("#pie_veh").attr("src") != "img/Vehicules/moto_graphique.svg" ) {
     $( "#moto" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
-      $("#pie_veh").css("margin-top", "25%");
       $("#pie_veh").css("width", "40%");
       $("#pie_veh").css("height", "auto");
+      $("#pie_veh").css("transform", "translate(75%,15%)");
       $("#pie_veh").attr("src", "img/Vehicules/moto_graphique.svg");
     });
     $("#pie_veh").fadeIn("slow");
@@ -406,9 +406,9 @@ $( "#pieton" ).click(function() {
   if (   $("#pie_veh").attr("src") != "img/Vehicules/personnage_graphique.svg" ) {
     $( "#pieton" ).css("opacity", "1");
     $("#pie_veh").fadeOut("slow", function() {
-      $("#pie_veh").css("margin-top", "25%");
       $("#pie_veh").css("width", "10%");
       $("#pie_veh").css("height", "auto");
+      $("#pie_veh").css("transform", "translate(450%,0%)");
       $("#pie_veh").attr("src", "img/Vehicules/personnage_graphique.svg");
     });
     $("#pie_veh").fadeIn("slow");
@@ -460,7 +460,7 @@ $( "#img_train_slide3" ).click(function() {
     $("#pie_veh").fadeOut("slow", function() {
       $("#pie_veh").css("width", "40%");
       $("#pie_veh").css("height", "auto");
-      $("#pie_veh").css("margin-top", "25%");
+      $("#pie_veh").css("transform", "translate(75%,40%)");
       $("#pie_veh").attr("src", "img/Vehicules/train_graphique.svg");
     });
     $("#pie_veh").fadeIn("slow");
