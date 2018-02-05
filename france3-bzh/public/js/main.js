@@ -92,30 +92,47 @@ function reponse(bouton)
     case "q5":
         j = 4
 
-}
+      }
   if(q[j] == 0){
     var parent = bouton.parentNode.childNodes;
     for (var i=1; i< 6; i = i+2)
     {
       if(parent[i].attributes[1].nodeValue =="v button")
       {
-        parent[i].style.border="2px solid #4CAF50"
-        parent[i].style.color="#4CAF50"
+        // parent[i].style.border="2px solid #4CAF50"
+        // parent[i].style.color="#4CAF50"
+        $(parent[i]).animate({
+          border : "2px solid #4CAF50",
+          color: "#4CAF50"
+        }, 800);
       }
       else
       {
-        parent[i].style.border="2px solid #F53855"
-        parent[i].style.color="#F53855"
+        // parent[i].style.border="2px solid #F53855"
+        // parent[i].style.color="#F53855"
+        $(parent[i]).animate({
+          border : "2px solid #F53855",
+          color: "#F53855"
+        }, 800);
       }
 
     }
-    text.innerText = rep;
     text.style.display = "block";
+    text.innerText = rep;
     text.style.marginBottom = "40px";
+    text.style.opacity = "0";
+    $(text).animate({
+      opacity: 1
+    }, 800);
+
     if (more)
     {
       textmore.innerText = more;
       divmore.style.display = "block";
+      divmore.style.opacity = "0";
+      $(divmore).animate({
+        opacity: 1
+      }, 800);
     }
 
     q[j] == 1
