@@ -746,8 +746,8 @@ img.barrePlan
 {
 	background-color: black;
     opacity: 0.8;
-    width: 499px;
-    height: 396px;
+    width: 577px;
+    height: 439px;
     top: 127px;
     left: 100px;
     position: absolute;
@@ -767,7 +767,7 @@ p.croix
 {
 	color: #767676;
     position: absolute;
-    left: 471px;
+    left: 543px;
     top: 4px;
     font-size: 26px;
 }
@@ -786,7 +786,7 @@ p.titreScene
 ul.listeScene
 {
 	position: absolute;
-    top: 50px;
+    top: 72px;
     color: white;
 }
 
@@ -810,8 +810,9 @@ object.mapFrance
 .camembertScene
 {
 	position: absolute;
-    left: 262px;
-    top: 206px;
+    left: 221px;
+    top: 199px;
+    z-index: 5;
 }
 
 .camembertScene--hidden
@@ -836,4 +837,42 @@ object.mapFrance
     left: 894px;
     color: white;
     font-size: 20px;
+}
+
+.pointLegendePodium
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 10000px;
+    position: relative;
+    top: -17px;
+    left: -25px;
+}
+
+.legendeScene
+{
+	position: absolute;
+    top: 53px;
+    left: 359px;
+    color: white;
+}
+
+.legendeScene--hidden
+{
+	position: absolute;
+    top: 132px;
+    left: 894px;
+    color: white;
+    opacity: 0;
+}
+
+.pointLegendeScene
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 10000px;
+    background: #A9FF88;
+    position: relative;
+    top: -16px;
+    left: -24px;
 }

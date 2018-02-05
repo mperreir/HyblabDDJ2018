@@ -28,6 +28,16 @@ function controleurPlan(){
 
     var tabScenes = [scene1, scene2, scene3, scene4, scene5, scene6, scene7];
 
+    var legendeScene1 = document.getElementById("legendeScene1");
+    var legendeScene2 = document.getElementById("legendeScene2");
+    var legendeScene3 = document.getElementById("legendeScene3");
+    var legendeScene4 = document.getElementById("legendeScene4");
+    var legendeScene5 = document.getElementById("legendeScene5");
+    var legendeScene6 = document.getElementById("legendeScene6");
+    var legendeScene7 = document.getElementById("legendeScene7");
+
+    var couleur = ['#d6f2b3', '#bbdb83', '#8eaf46', '#a9ff88', '#85c275', '#57664d', '#66cc33', '#479116', '#3f5b33'];
+
     anneeEvolution.onclick = function(){
         textePlan.textContent = "J’ai pu voir passer sur la Main 01 près de 306 groupes au Hellfest. Une vraie ribambelle d’artistes depuis plus de 13 ans. Cela est dû au nombre grandissant de mes amis les festivaliers. De 22 000 à 152 000 tickets vendus en 13 ans, quelle évolution, c’est incroyable! Venez vite voir cet élargissement considérable du Hellfest !";
 
@@ -112,8 +122,28 @@ function controleurPlan(){
             choix.textContent = groupe;
             scene2.appendChild(choix);
         });
-        camembertScene(2006, "Hard n'Heavy stage", "#pieScene1");
-        camembertScene(2006, "Main", "#pieScene2");
+        var pays1 = camembertScene(2006, "Hard n'Heavy stage", "#pieScene1");
+        for (var i = 0; i<pays1.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays1[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene1.appendChild(legende);
+        }
+        var pays2 = camembertScene(2006, "Main", "#pieScene2");
+        for (var i = 0; i<pays2.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays2[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene2.appendChild(legende);
+        }
     }
 
     annee2007.onclick = function(){
@@ -1172,9 +1202,13 @@ function controleurPodium()
     var Podium2016 = document.getElementById("Podium2016");
     var Podium2017 = document.getElementById("Podium2017");
 
+    var couleur = ['#d6f2b3', '#bbdb83', '#8eaf46', '#a9ff88', '#85c275', '#57664d', '#66cc33', '#479116', '#3f5b33'];
+
     var tabPodiums = [PodiumEvolution, Podium2006, Podium2007, Podium2008, Podium2009, Podium2010, Podium2011, Podium2012, Podium2013, Podium2014, Podium2015, Podium2016, Podium2017];
 
     var TextePodium = document.getElementById("textePodium");
+
+    var légende = document.getElementById("legendePodium");
 
     PodiumEvolution.onclick = function(){
 
@@ -1189,7 +1223,18 @@ function controleurPodium()
         TextePodium.textContent = "Pour cette première édition du Hellfest, 35% des groupes proviennent des Etats-Unis. En deuxième position se trouvent la France et l'Angleterre, représentant respectivement 16% et 11% du total des groupes. 15% des groupes viennent de pays scandinaves, dont la moitié de la Suède.";
 
         setYearActive(tabPodiums, 1);
-        camembertPodium(2006);
+        var pays = camembertPodium(2006);
+        $('li').remove();
+        for (var i = 0; i<pays.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendePodium";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendePodium.appendChild(legende);
+        }
         document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
         document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
         document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1209,7 +1254,18 @@ function controleurPodium()
         TextePodium.textContent = "2007 s'accompagne d'une nette hausse de participation des groupes français, aussi nombreux que les groupes américains. La somme des deux représente plus de la moitié du total des groupes.";
 
         setYearActive(tabPodiums, 2);
-        camembertPodium(2007);
+        var pays = camembertPodium(2007);
+        $('li').remove();
+        for (var i = 0; i<pays.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendePodium";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendePodium.appendChild(legende);
+        }
         document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
         document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
         document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1229,7 +1285,18 @@ function controleurPodium()
         TextePodium.textContent = "En 2008, le Hellfest élargit ses horizons et accueille des groupes japonais, autrichiens et irlandais. La participation de la France diminue et équivaut presque à celle de l'Angleterre et de la Suède.";
 
         setYearActive(tabPodiums, 3);
-        camembertPodium(2008);
+        var pays = camembertPodium(2008);
+        $('li').remove();
+        for (var i = 0; i<pays.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendePodium";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendePodium.appendChild(legende);
+        }
         document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
         document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
         document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1249,7 +1316,18 @@ function controleurPodium()
         TextePodium.textContent = "Jamais les Etats-Unis n'ont atteint un tel taux de participation : ils représentent en 2009 plus de 40% des groupes ! En revanche, les participation des pays scandinaves recule.";
 
         setYearActive(tabPodiums, 4);
-        camembertPodium(2009);
+        var pays = camembertPodium(2009);
+        $('li').remove();
+        for (var i = 0; i<pays.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendePodium";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendePodium.appendChild(legende);
+        }
 
         document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
         document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1270,7 +1348,18 @@ function controleurPodium()
         TextePodium.textContent = "Les groupe français sont en perte de vitesse en cette année 2010... La Roumanie fait son entrée dans le festival avec le groupe Negurâ Bunget.";
 
         setYearActive(tabPodiums, 5);
-        camembertPodium(2010);
+        var pays = camembertPodium(2010);
+        $('li').remove();
+        for (var i = 0; i<pays.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendePodium";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendePodium.appendChild(legende);
+        }
 
         document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
         document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1291,7 +1380,18 @@ function controleurPodium()
         TextePodium.textContent = "Alors que la France est toujours moins bien représentée, de nouveaux pays font leur apparition sur la scène du métal. L'Ecosse, la Russie, l'Irlande du Nord et la Letonnie sont les petits nouveaux de 2011.";
 
         setYearActive(tabPodiums, 6);
-        camembertPodium(2011);
+        var pays = camembertPodium(2011);
+        $('li').remove();
+        for (var i = 0; i<pays.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendePodium";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendePodium.appendChild(legende);
+        }
 
         document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
         document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1312,7 +1412,18 @@ function controleurPodium()
         TextePodium.textContent = "2012 est synonyme d'âge d'or des groupes français. Ils connaissent une fulgurante augmentation pour la représentativité du pays. Pour la première fois le groupe Solstafir devient ambassadeur de son pays : l'Islande.";
 
         setYearActive(tabPodiums, 7);
-        camembertPodium(2012);
+        var pays = camembertPodium(2012);
+        $('li').remove();
+        for (var i = 0; i<pays.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendePodium";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendePodium.appendChild(legende);
+        }
 
         document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
         document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1333,7 +1444,18 @@ function controleurPodium()
         TextePodium.textContent = "La Suède et l'Angleterre sont au coude à coude sur la troisième place du podium. Quant aux iles Féroé, le Chili et la Colombie, ils s'installent pour la première fois au Hellfest.";
 
         setYearActive(tabPodiums, 8);
-        camembertPodium(2013);
+        var pays = camembertPodium(2013);
+        $('li').remove();
+        for (var i = 0; i<pays.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendePodium";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendePodium.appendChild(legende);
+        }
 
         document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
         document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1354,8 +1476,18 @@ function controleurPodium()
         TextePodium.textContent = "Encore jamais représentée au Hellfest, cette année l'Afrique du sud fait son entrée dans le palmarès des groupes présent au festival.";
 
         setYearActive(tabPodiums, 9);
-        camembertPodium(2014);
-
+        var pays = camembertPodium(2014);
+        $('li').remove();
+        for (var i = 0; i<pays.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendePodium";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendePodium.appendChild(legende);
+        }
         document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
         document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
         document.getElementById('troisiemeAmericain').className = "americain troiseme drapeau--hidden";
@@ -1375,7 +1507,18 @@ function controleurPodium()
         TextePodium.textContent = "Pour la seconde fois, l'Irlande du nord est présente au Hellfest pour des représentations toujours plus impressionnantes !";
 
         setYearActive(tabPodiums, 10);
-        camembertPodium(2015);
+        var pays = camembertPodium(2015);
+        $('li').remove();
+        for (var i = 0; i<pays.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendePodium";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendePodium.appendChild(legende);
+        }
 
         document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
         document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1396,7 +1539,18 @@ function controleurPodium()
         TextePodium.textContent = "En 2016, pour la première fois depuis la création du Hellfest, un groupe ukrainien se produit sur l'une des scènes du festival, pour le plaisir de nos oreilles.";
 
         setYearActive(tabPodiums, 11);
-        camembertPodium(2016);
+        var pays = camembertPodium(2016);
+        $('li').remove();
+        for (var i = 0; i<pays.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendePodium";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendePodium.appendChild(legende);
+        }
 
         document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
         document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1417,7 +1571,18 @@ function controleurPodium()
         TextePodium.textContent = "Apparition inédite dans la programmation du festival en cette année 2017, la Tunisie invite le public à découvrir ses artistes aux multiples talents.";
 
         setYearActive(tabPodiums, 12);
-        camembertPodium(2017);
+        var pays = camembertPodium(2017);
+        $('li').remove();
+        for (var i = 0; i<pays.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendePodium";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendePodium.appendChild(legende);
+        }
 
         document.getElementById('premierAmericain').className = "fadeInDown animated americain premier drapeau";
         document.getElementById('deuxiemeAmericain').className = "americain deuxieme drapeau--hidden";
@@ -1465,6 +1630,14 @@ function pin(){
     var s6 = document.getElementById("scene6");
     var s7 = document.getElementById("scene7");
 
+    var l1 = document.getElementById("legendeScene1");
+    var l2 = document.getElementById("legendeScene2");
+    var l3 = document.getElementById("legendeScene3");
+    var l4 = document.getElementById("legendeScene4");
+    var l5 = document.getElementById("legendeScene5");
+    var l6 = document.getElementById("legendeScene6");
+    var l7 = document.getElementById("legendeScene7");
+
     var p1 = document.getElementById("pieScene1");
     var p2 = document.getElementById("pieScene2");
     var p3 = document.getElementById("pieScene3");
@@ -1476,6 +1649,8 @@ function pin(){
     var scenes = [s1, s2, s3, s4, s5, s6, s7];
 
     var pies = [p1, p2, p3, p4, p5, p6, p7];
+
+    var legende = [l1, l2, l3, l4, l5, l6, l7];
 
     var popup = document.getElementById("fenetrePopup");
     var croix = document.getElementById("croix");
@@ -1490,12 +1665,14 @@ function pin(){
         popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 0);
         setElementsHidden(pies, "camembertScene",0);
+        setElementsHidden(legende, "legendeScene",0);
     }
     pin200602.onclick = function(){
         titre.textContent = "Main Stage";
         popup.className = "fenetrePopup";
         setElementsHidden(scenes, "listeScene", 1);
         setElementsHidden(pies, "camembertScene",1);
+        setElementsHidden(legende, "legendeScene",1);
     }
     pin200701.onclick = function(){
         titre.textContent = "Discover Stage";
@@ -1893,37 +2070,51 @@ function camembert(data, id){
             clickable: true // If set to true a user can select a different slice by clicking on it.
         });
     });
+    return j;
 }
 
 function camembertPodium(annee)
 {
     var json = loadData("data/AnneePaysPourcentage.json");
     var pourcentage = [];
-    var pays = [];
+    var p = [];
     json.forEach(function(nation){
         if (nation.Annee === annee)
         {
             pourcentage.push(nation.Pourcentage);
-            pays.push(nation.Pays)
+            p.push(nation.Pays)
         }
     });
-    camembert(pourcentage, "#piePodium");
+    var j = camembert(pourcentage, "#piePodium");
+    var pays = [];
+    for (var i = 0; i<j; i++)
+    {
+        pays.push(p[i]);
+    }
+    pays.push("Autres");
+    return pays;
 }
 
 function camembertScene(annee, scene, id)
 {
     var json = loadData("data/AnneeScenePaysNombreTotalPourcentage.json");
     var pourcentage = [];
-    var pays = [];
+    var p = [];
     json.forEach(function(nation){
         if (nation.Annee === annee && nation.Scene === scene )
         {
             pourcentage.push(nation.Pourcentage);
-            pays.push(nation.Pays)
+            p.push(nation.Pays)
         }
     });
-    console.log(pourcentage);
-    camembert(pourcentage, id);
+    var j = camembert(pourcentage, id);
+    var pays = [];
+    for (var i = 0; i<j; i++)
+    {
+        pays.push(p[i]);
+    }
+    pays.push("Autres");
+    return pays;
 }
 
 
