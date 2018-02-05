@@ -23,7 +23,7 @@ a {
 }
 
 /* line 19, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/modules/_extends.scss */
-.textes-intro > .title, .bloc-recto .donneetexte, .info-epci > .Texte {
+.textes-intro > .title, .bloc-recto .donneetexte, .info-epci > .Texte, .partie-team > .title {
   font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-weight: bold;
@@ -51,7 +51,7 @@ a {
 }
 
 /* line 43, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/modules/_extends.scss */
-.textes-intro > .texte, .bloc-verso > span, .bloc-verso > .goToData, .button-zoom > .niveau-zoom, .info-epci > .description, .partie-data > .content-data .textes-data > .texte {
+.textes-intro > .texte, .bloc-verso > span, .bloc-verso > .goToData, .button-zoom > .niveau-zoom, .info-epci > .description, .partie-data > .content-data .textes-data > .texte, .partie-team .members-crews > .crew > .folio {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: medium;
@@ -582,6 +582,105 @@ a {
 /* line 2, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
 .partie-team {
   background-color: #ffffff;
+}
+
+/* line 5, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
+.partie-team > .logo-bam {
+  height: 33.33%;
+  width: 50%;
+  position: relative;
+  margin: auto;
+}
+
+/* line 10, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
+.partie-team > .logo-bam > img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin-left: 50%;
+  margin-top: 25%;
+}
+
+/* line 17, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
+.partie-team > .title {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #1d1d1b;
+}
+
+/* line 24, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
+.partie-team > .logo-crews {
+  position: relative;
+  height: 10%;
+  width: 66.66%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 100%;
+}
+
+/* line 32, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
+.partie-team > .logo-crews > .capeb {
+  grid-column: 1;
+  grid-row: 1;
+  border-right: solid 0.5px #1d1d1b;
+}
+
+/* line 37, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
+.partie-team > .logo-crews > .agr {
+  grid-column: 2;
+  grid-row: 1;
+  border-right: solid 0.5px #1d1d1b;
+}
+
+/* line 42, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
+.partie-team > .logo-crews > .polytech {
+  grid-column: 3;
+  grid-row: 1;
+  border-right: solid 0.5px #1d1d1b;
+}
+
+/* line 47, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
+.partie-team > .logo-crews > .sc {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+/* line 51, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
+.partie-team > .logo-crews > .bloc-logo {
+  position: relative;
+}
+
+/* line 53, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
+.partie-team > .logo-crews > .bloc-logo > .logocrew {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin-left: 50%;
+  margin-top: 15%;
+}
+
+/* line 61, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
+.partie-team .members-crews {
+  position: relative;
+  width: 66.66%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
+/* line 67, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
+.partie-team .members-crews > .crew {
+  margin-top: 40px;
+  grid-auto-flow: column;
+}
+
+/* line 70, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-team.scss */
+.partie-team .members-crews > .crew > .folio {
+  height: 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: #1d1d1b;
 }
 
 /* style de la partie soutien */
