@@ -69,6 +69,7 @@ html.fp-enabled,
 }
 .fp-controlArrow.fp-prev {
     display:block;
+    opacity: 0.1;
     left: 15px;
     width: 0;
     border-width: 38.5px 34px 38.5px 0;
@@ -76,10 +77,19 @@ html.fp-enabled,
 }
 .fp-controlArrow.fp-next {
     right: 15px;
+    opacity: 0.1;
     border-width: 38.5px 0 38.5px 34px;
     border-color: transparent transparent transparent #46B29D;
     display:block;
 }
+
+.fp-controlArrow.fp-prev:hover {
+    opacity: 1;
+}
+.fp-controlArrow.fp-next:hover {
+    opacity: 1;
+}
+
 .fp-scrollable {
     overflow: hidden;
     position: relative;

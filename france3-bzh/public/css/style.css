@@ -178,8 +178,8 @@ h3
   display: none;
   color :#F53855;
   font-family: 'overpass';
-  text-align: justify;
-  width: 750px;
+  text-align: center;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -199,6 +199,7 @@ h3
 {
   width : 5%;
   float: left;
+  transform: translateY(50%);
 }
 
 .more p
@@ -256,7 +257,7 @@ button:focus { outline-style: none; }
   z-index: 1;
   position: absolute;
   width: 75%;
-  top:0;
+  top:50px;
   transform: translate(20%, 5%)
 }
 
@@ -530,7 +531,7 @@ button:focus { outline-style: none; }
 }
 #leger p{
   font-size: 100%;
-  color: #FFEAB6;
+  color: #46B29D;
 }
 #grave {
     margin-top:50%;
@@ -539,7 +540,7 @@ button:focus { outline-style: none; }
 }
 #grave p{
   font-size: 100%;
-  color: #46B29D;
+  color: #F0CA4D;
 }
 #hospitalise {
   margin-top: 100%;
@@ -547,10 +548,22 @@ button:focus { outline-style: none; }
 }
 #hospitalise p{
   font-size: 100%;
-  color: #F0CA4D;
+  color: #FFEAB6;
 }
 #hospitalise span{
   color: white;
+}
+
+#cache.misere
+{
+  width:1000px;
+}
+
+.cache
+{
+  width: 25%;
+  height: 100%;
+  background-color: black;
 }
 
 #mort {
