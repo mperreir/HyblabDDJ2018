@@ -502,12 +502,16 @@ button:focus { outline-style: none; }
   transform: translate(15%,0%)
 }
 
+#transport
+{
+  width: 100%;
+  height: 300px;
+}
+
 #graph_vehicule {
   text-align: center;
-  position: absolute;
-  width: 70%;
-  bottom: 0;
-  transform: translate(20%, -40%);
+  width: 100%;
+  position: relative;
 }
 #graph_vehicule img{
 }
@@ -517,10 +521,11 @@ button:focus { outline-style: none; }
 }
 #pie_veh {
   display: none;
+  position: relative;
 }
 #leger {
   margin-top:50%;
-  font-size: 16px;
+  font-size: 90%;
   display: none;
 }
 #leger p{
@@ -529,7 +534,7 @@ button:focus { outline-style: none; }
 }
 #grave {
     margin-top:50%;
-    font-size: 16px;
+    font-size: 90%;
     display: none;
 }
 #grave p{
@@ -566,13 +571,18 @@ button:focus { outline-style: none; }
 #section_illu_camion h1{
 }
 #left_infos_grav {
-  float: left;
-  width: 30%;
+  position: absolute;
+  left: 50px;
+  width: 20%;
+  transform: translateY(-25%);
 
 }
 #right_infos_grav {
-  float: right;
-  width: 30%;
+  position: absolute;
+  top: 0px;
+  right: 50px;
+  width: 20%;
+  transform: translateY(-25%);
 }
 
 #titre_accident
@@ -588,7 +598,7 @@ button:focus { outline-style: none; }
 
 #infos_accidents {
   text-align: center;
-  font-size: 24px;
+  font-size: 100%;
   color: white;
   height: auto;
 }
