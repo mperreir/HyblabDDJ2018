@@ -30,15 +30,13 @@ app.post('/rangs', function(req, res) {
 
 });
 
-app.get('/actifs', (req, res) => {
-  console.log("xom");
+app.get('/rangs', function(req, res) {
+	var workbook = xlsx.readFile('./nantes-st-nazaire-dev/rangs-finaux.xlsx');
+	var sheet_name_list = workbook.SheetNames;
+    var rangs_json = xlsx.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
+    res.send(rangs_json);
+    res.end();
 
-
- 
-  /*
-  //res.set('Content-Type', 'text/json;charset=utf-8');
-  res.json(db.genres);
-  */
 });
 
 // You can then add whatever routing code you need

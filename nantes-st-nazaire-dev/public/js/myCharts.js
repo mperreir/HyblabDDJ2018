@@ -345,7 +345,7 @@ $(document).ready(function() {
         update();
 });
     function update(data) {
-      return fetch('/nantes-st-nazaire-dev/rangs', {
+      fetch('/nantes-st-nazaire-dev/rangs', {
         method: 'post',
         body: JSON.stringify(data),
         headers: {
@@ -363,6 +363,7 @@ $(document).ready(function() {
     }
 
     function checkStatus(response) {
+        /*
       if (response.status >= 200 && response.status < 300) {
         return response.json()
       } else {
@@ -370,4 +371,6 @@ $(document).ready(function() {
         error.response = response
         throw error
       }
+      */
+      return response.json()
     }
