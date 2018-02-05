@@ -261,7 +261,6 @@ function drawLineChart(data, title){
             }
 		}
 	});
-		console.log(c.options)
 }
 
 function drawBarChart(data, title) {
