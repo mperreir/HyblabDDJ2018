@@ -40,6 +40,7 @@ app.controller('myCtrl', function ($scope) {
                 .append('svg:g')
                 .attr('id', 'container')
                 .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
+        drawLegend();
     };
 
     var partition = d3.layout.partition()
@@ -135,7 +136,7 @@ app.controller('myCtrl', function ($scope) {
         data.boxes = [];
         var hierarchyData = {name: 'root', children: []},
                 levels = ['SECTEUR', 'NIV'];
-        d3.json('../data/Eff_new.json', function (dataset) {
+        d3.json('data/Eff_new.json', function (dataset) {
             // select some important infos
             angular.forEach(dataset, function (value, key) {
                 if (value.GFE === params.first) {
@@ -182,6 +183,9 @@ app.controller('myCtrl', function ($scope) {
                     });
                 })
             });
+            document.getElementById("main").style.display=""
+            d3.select('#showExplain')
+                .style('visibility', 'hidden');
             createVisualization(hierarchyData);
         });
     };
@@ -189,11 +193,11 @@ app.controller('myCtrl', function ($scope) {
     function createVisualization(json) {
         // Basic setup of page elements.
         document.getElementById('chart').innerHTML = '';
-        $scope.initChart();
-        
-        initializeBreadcrumbTrail();
+        document.getElementById('legend').innerHTML = '';
 
-        drawLegend();
+        $scope.initChart();
+
+        initializeBreadcrumbTrail();
         d3.select('#togglelegend').on('click', toggleLegend);
 
         // Bounding circle underneath the sunburst, to make it easier to detect
@@ -228,22 +232,22 @@ app.controller('myCtrl', function ($scope) {
         // Get total size of the tree = value of root node from partition.
         totalSize = path.node().__data__.value;
 
-        var show = [];
-        d3.select('#percentage')
-                .text(show);
-
-        // var show1 = [];
-        // d3.select('#exp1')
-        //         .text(show1);
-        // var show2 = [];
-        // d3.select('#exp2')
-        //         .text(show2);
-        // var show3 = [];
-        // d3.select('#exp3')
-        //         .text(show3);
-        var showT = [];
-        d3.select('exp')
-                .text(showT);
+        // var show = [];
+        // d3.select('#percentage')
+        //         .text(show);
+        //
+        // // var show1 = [];
+        // // d3.select('#exp1')
+        // //         .text(show1);
+        // // var show2 = [];
+        // // d3.select('#exp2')
+        // //         .text(show2);
+        // // var show3 = [];
+        // // d3.select('#exp3')
+        // //         .text(show3);
+        // var showT = [];
+        // d3.select('exp')
+        //         .text(showT);
     }
 
     // Fade all but the current sequence, and show it in the breadcrumb trail.
@@ -257,9 +261,8 @@ app.controller('myCtrl', function ($scope) {
         d3.select('#percentage')
                 .text(percentageString);
 
-        console.log("test");
         d3.select('#explanation')
-                .style('visibility', '');
+                .style("visibility", "");
 
         var sequenceArray = getAncestors(d);
         updateBreadcrumbs(sequenceArray, percentageString);
@@ -329,6 +332,16 @@ app.controller('myCtrl', function ($scope) {
 
         d3.select('#showExplain')
                 .style('visibility', '');
+
+        // var option1 = {
+        //     value:percent,
+        //     name:' Effectifs par rapport à la capacité max',//必填
+        //     backgroundColor:null,
+        //     color:['#a0cb4d','#c1dac2'],
+        //     fontSize:16,
+        //     domEle:document.getElementById("showExplain")//必填
+        // },percentPie1 = new PercentPie(option1);
+        // percentPie1.init();
     }
 
     function initializeBreadcrumbTrail() {
@@ -410,7 +423,7 @@ app.controller('myCtrl', function ($scope) {
     function drawLegend() {
         // Dimensions of legend item: width, height, spacing, radius of rounded rect.
         var li = {
-            w: 90, h: 30, s: 3, r: 3
+            w: 75, h: 25, s: 3, r: 3
         };
 
         var legend = d3.select('#legend').append('svg:svg')
@@ -451,4 +464,61 @@ app.controller('myCtrl', function ($scope) {
             legend.style('visibility', 'hidden');
         }
     }
+
+    function PercentPie(option){
+        this.backgroundColor = option.backgroundColor||'#fff';
+        this.color           = option.color||['#a0cb4d','#c1dac2'];
+        this.fontSize        = option.fontSize||12;
+        this.domEle          = option.domEle;
+        this.value           = option.value;
+        this.name            = option.name;
+        this.title           = option.title;
+    }
+    PercentPie.prototype.init = function(){
+        var _that = this;
+        var option = {
+            backgroundColor:_that.backgroundColor,
+            color:_that.color,
+            series: [{
+                name: 'name',
+                type: 'pie',
+                radius: ['60%', '75%'],
+                avoidLabelOverlap: false,
+                hoverAnimation:false,
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'center',
+                        textStyle: {
+                            fontSize: _that.fontSize,
+                            // fontWeight: ''
+                        },
+                        formatter:'{b}\n{c}%'
+                    }
+                },
+                data: [{
+                    value: _that.value,
+                    name: _that.name,
+                    label:{
+                        normal:{
+                            show:true
+                        }
+                    }
+                },
+                    {
+                        value: 100-_that.value,
+                        name: ''
+                    }
+                ]
+            }]
+        };
+        echarts.init(_that.domEle).setOption(option);
+    };
 });
+
+function returnPage() {
+    document.getElementById("main").style.display="none"
+
+}
+
+

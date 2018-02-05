@@ -15,57 +15,113 @@
     <link rel="stylesheet" type="text/css" href="css/style_sun.css"/>
     <script src="js/angular.min.js"></script>
     <script src="js/GFEsunburst.js"></script>
+    <script src="js/echarts.js"></script>
+
 </head>
 
 <body ng-controller="myCtrl">
 <!--<div class="container">-->
-<div id="content">
 
-    <div id="con_right">
-        <div id="main">
-            <div id="sidebar">
-                <input type="checkbox" id="togglelegend"> Legend<br/>
-                <div id="legend" style="visibility: hidden;"></div>
-            </div>
-            <div id="sequence"></div>
-            <div id="chart">
-                <div id="explanation" style="visibility: hidden;">
-                    <span id="percentage"></span><br/>
-                    de apprentissages dans cette partie
-                </div>
-            </div>
-
-            <div id="showExplain" style="visibility: hidden;">
-                <div id="exp">
-                    <span id="percent"></span><br/>
-                    Effectifs par rapport à la capacité max.
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="con_left">
+<div id="texte">
     <nav class="top_nav" role="navigation">
-        <div class="text-left" style="width: 400px;margin-left: -10px">
+        <div class="text-left" style="width: 500px;margin-left: -35px">
             <ul>
-                <l1><img id="logo-pdl" src="img/logo-pdl.png"/></l1>
-                <li><a href="#">Home</a></li>
+                <l1><a href="index.html"><img id="logo-pdl" src="img/logo-pdl.png"/></a></l1>
+                <li><a href="index.html">Home</a></li>
                 <!--<li><a href="#">Étude</a></li>-->
                 <!--<li><a href="#">Bourse</a></li>-->
                 <!--<li><a href="#">Trouver CFA</a></li>-->
-                <li><a href="#">Crédit</a></li>
+                <li><a href="credits.html">Crédit</a></li>
             </ul>
         </div>
     </nav>
-    <div id="sideMenu" class="menu">
-        <ul id="demo-list">
-            <li ng-repeat="a in aJson"><a a href="javascript:void(0)" ng-click="clickGetImage(a)" target="_blank">
-                {{a.first}} : {{a.second}}</a></li>
-        </ul>
-        <!--<p ng-repeat="a in aJson"><a href="javascript:void(0)" ng-click="clickGetImage(a)" target="_blank">-->
-        <!--{{a.first}} : {{a.second}}</a></p>-->
-    </div>
+
+    <p id="textAccroche" class="accroche"> Votre voie: </p>
+    <p id="textExp">de nombreuses opportunitiés</p>
+
+    <p id="textExplication" class="explication"> L'apprentissage regroupe un large panel de formations,allant
+        du CAP au BAC+5, et ce dans tous les secteurs d'activités.
+        <br>Près de 22 domaines de formation sont representés.</p>
+
+    <p id="texTemoignage" class="temoignage"> « Je suis dans ma 4e année d'apprentissage. Aujourd'hui
+        épanoui dans ma vie professionnelle, j'affirme que l'apprentissage est une voie dans laquelle on
+        peut réussir.» <br>
+        Aubin Paquier, Brevet Professionnel Art de la Cuisine
+    </p>
+
 </div>
+
+
+<div id="container">
+<!--<div id="content">-->
+    <!--<div id="con_right">-->
+    <div id="main" style="display: none;">
+        <div id="sidebar">
+            <input type="checkbox" id="togglelegend"> Legend<br/>
+            <div id="legend" style="visibility: hidden;"></div>
+        </div>
+        <div id="sequence"></div>
+        <div id="chart">
+            <div id="explanation" style="visibility: hidden;">
+                <span id="percentage"></span><br/>
+                de apprentissages dans cette partie
+            </div>
+        </div>
+
+        <div id="showExplain" style="visibility: hidden;">
+            <div id="exp">
+                <span id="percent"></span><br>
+                Effectifs par rapport à la capacité max.
+            </div>
+        </div>
+        <div class="btn" onclick="returnPage()"> Retour </div>
+    </div>
+    <div class="box">
+        <div id="sideMenu" class="menu">
+            <!--<div class="box">-->
+                <div id="btn" class="btn-default">
+                    <i class="iconfont icon-tool"></i>CHOISIS UN GFE
+                </div>
+                <!--<div class="menu">-->
+                <!--<ul id="demo-list">-->
+                <!--<div class="item">-->
+                    <!--<div class="no-logo">-->
+                        <ul id="demo-list">
+                            <li ng-repeat="a in aJson">
+                                <a href="#" ng-click="clickGetImage(a)">{{a.second}}</a>
+                            </li>
+                        </ul>
+                        <!--<a href="#" ng-click="clickGetImage(a)">{{a.second}}</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="text-left">-->
+                <!--<ul id="demo-list">-->
+                <!--<li ng-repeat="a in aJson"><a href="#" ng-click="clickGetImage(a)">-->
+                <!--{{a.first}} : {{a.second}}</a></li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--<p ng-repeat="a in aJson"><a href="javascript:void(0)" ng-click="clickGetImage(a)" target="_blank">-->
+                <!--{{a.first}} : {{a.second}}</a></p>-->
+            </div>
+        </div>
+</div>
+
+
+
+<!--<div id="con_left">-->
+    <!--<nav class="top_nav" role="navigation">-->
+        <!--<div class="text-left" style="width: 400px;margin-left: -10px">-->
+            <!--<ul>-->
+                <!--<l1><img id="logo-pdl" src="img/logo-pdl.png"/></l1>-->
+                <!--<li><a href="#">Home</a></li>-->
+                <!--&lt;!&ndash;<li><a href="#">Étude</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><a href="#">Bourse</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><a href="#">Trouver CFA</a></li>&ndash;&gt;-->
+                <!--<li><a href="#">Crédit</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</nav>-->
+<!--</div>-->
 <!--</div>-->
 <script type="text/javascript">
     d3.select(self.frameElement).style("height", "700px");

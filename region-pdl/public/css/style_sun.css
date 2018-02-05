@@ -1,4 +1,8 @@
-
+html, body{
+    height: 100%;
+    margin: 0;
+    background: #fff;
+}
 body {
     font-family: "Space Mono", Arial, serif;
     font-weight: 400;
@@ -30,22 +34,94 @@ a:hover, a:active, a:focus {
     background-color: #FFFFFF;
 }
 
-.container{
-    padding: 0;
-    margin: 0;
+/*.container{*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+/*}*/
+#container {
+    height: 100%;                        /* para falta de suporte */
+    height: -webkit-calc(100% - 100px);  /* para Chrome */
+    height: -moz-calc(100% - 100px);     /* para Firefox */
+    height: calc(100% - 100px);          /* para suporte nativo */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #FFFFFF;
 }
+
+#texte {
+    height: 100%;                        /* para falta de suporte */
+    height: -webkit-calc(100% - 50px);  /* para Chrome */
+    height: -moz-calc(100% - 50px);     /* para Firefox */
+    height: calc(100% );          /* para suporte nativo */
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    float:left;
+    width:37.8%;
+    background-color: #4e2850;
+}
+
+.accroche {
+    margin-top: 40px;
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#textExp{
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 30px;
+    /*margin-top: -42px;*/
+}
+
+.explication {
+    /*  left: 41px;*/
+    top: 250px;
+
+    margin-top: 40px;
+
+    height: 23.65%;
+    /* width: 30.78%;*/
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.temoignage {
+    position: absolute;
+    /*   left: 41px;*/
+    top: 400px;
+    margin-top: 40px;
+    height: 158px;
+    width: 394px;
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
 #sideMenu{
     position: relative;
     padding-top: 10px;
     padding-bottom: 20px;
-    padding-left: 10px;
+    padding-left: 20px;
     padding-right: 10px;
     margin: 0;
     /*width:260px;*/
-    width:100%;
+    /*width:62.2%;*/
     font-size: 12px;
     line-height: 1;
-    background: #4e2850;
+    background: #ffffff;
     /*border-width:3px;*/
     /*border-style:dashed;*/
     /*border-color: #000000;*/
@@ -83,9 +159,13 @@ p{
 
 #main {
     /*width: 750px;*/
-    position: relative;
-    width: 100%;
-
+    position: absolute;
+    z-index: 1;
+    width: 62.2%;
+    /*top:50%; left:50%;*/
+    background: #ffffff;
+    margin-left: 37.8%;
+    margin-top: -50px;
 }
 
 #sidebar {
@@ -116,8 +196,10 @@ p{
 
 #chart {
     position: relative;
-    margin-left: 100px;
-    margin-top: 50px;
+    margin-left: -60px;
+    /*margin-top: 50px;*/
+    width: 50%;
+    margin-right: 0;
 }
 
 #chart path {
@@ -138,24 +220,16 @@ p{
     font-size: 2.5em;
 }
 
-#percent1 {
-    font-size: 2.5em;
-}
-#percent2 {
-    font-size: 2.5em;
-}
-#percent3 {
-    font-size: 2.5em;
-}
-
 #showExplain{
-    margin-left: 100px;
-    width: 100%;
+    /*margin-left: 100px;*/
+    /*width: 100%;*/
+    /*width: 50px;*/
     min-height: 100px;
-    max-height: 400px;
+    max-height: 600px;
+    position: relative;
 }
 
-#exp, #exp1, #exp2, #exp3{
+#exp{
     width:150px;
     margin-left: 200px;
     color: rgba(0,0,0,0.8);
@@ -165,6 +239,7 @@ p{
     line-height: 1.7;
     text-align: center;
 }
+
 #demo-list a{
     overflow:hidden;
     text-overflow:ellipsis;
@@ -185,7 +260,7 @@ p{
     width: 100%;
     float: left;
     position: relative;
-    background: #4e2850;
+    background: #ffffff;
     margin-left: -38px;
 }
 
@@ -198,20 +273,25 @@ p{
 }
 
 .menu ul li {
-    width: 100%;
+    width: 235px;
+    height: 50px;
     display: block;
     float: left;
-    position: relative
+    position: relative;
+    border: 1px solid #4199BE;
+    margin: 5px;
+    transition: all .3s;
 }
 
 .menu ul li a {
+    word-wrap:break-word;
     width: 100%;
-    padding: 5px 22px;
+    padding: 15px 20px;
     float: left;
     text-decoration: none;
-    color: #f0f0f0;
+    color: #000000;
     font-size: 13px;
-    background: #4e2850;
+    background: #ffffff;
     white-space: nowrap;
     position: relative;
     overflow: hidden;
@@ -223,12 +303,12 @@ p{
 
 .menu>ul>li.active>a,.menu>ul>li:hover>a {
     color: #fff;
-    background: #bf9ddb
+    background: #a2d8f2
 }
 
-.menu>ul>li>a {
-    border-bottom: solid 1px #4e2850
-}
+/*.menu>ul>li>a {*/
+    /*border-bottom: solid 1px #5e8fb8*/
+/*}*/
 
 .menu ul li a i {
     width: 34px;
@@ -236,6 +316,86 @@ p{
     line-height: 18px;
     font-size: 16px;
     text-align: center;
+}
+.box {
+    overflow: hidden;
+    margin: 20px 20px;
+    background: #fff;
+    padding-bottom: 20px;
+    line-height: 1.3;
+}
+
+.box a{
+    font-size: smaller;
+}
+
+/*.main .box .sub-category > div {*/
+    /*padding: 12px 0 0 2.1%;*/
+    /*font-size: 18px;*/
+/*}*/
+
+.box .item {
+    width: 31.23%;
+    /*box-shadow: 1px 2px 3px #f2f6f8;*/
+    border-radius: 1px;
+    background: #fff;
+    padding: 10px;
+    min-width: 210px;
+    margin: 10px 0 0 2.1%;
+    float: left;
+    overflow: hidden;
+    transition: all .3s;
+    border: 1px solid #4199BE;
+}
+
+.box .item:hover {
+    transform: translateY(-5px);
+}
+.box .item .no-logo ul li{
+    /*color: #3273dc;*/
+    /*font-weight: bold;*/
+    font-size: 14px;
+    color: #000000;
+    font-family: ".SF NS Display";
+    line-height: 17px;
+}
+.box .item .logo {
+    height: 40px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+    color: #3273dc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 .1rem;
+}
+.box .item .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.main .box .item .desc {
+    color: gray;
+    font-size: 12px;
+    padding-top: 10px;
+    height: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+#btn{
+    position:relative;
+    text-align: center;
+    width: 100%;
+    color: #4199BE;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 15px;
 }
 .top_nav a {
     padding: 5px 10px;
