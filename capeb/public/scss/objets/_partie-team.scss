@@ -7,14 +7,11 @@
     width: 50%;
     position: relative;
     margin: auto;
-    >img{
+    >object{
       position: absolute;
       transform: translate(-50%, -50%);
       margin-left: 50%;
       margin-top: 25%;
-      outline: 3px solid $white;
-      outline-offset: -3px;
-      filter: contrast(130%);
     }
   }
   >.title{
