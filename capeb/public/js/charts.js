@@ -569,7 +569,6 @@ function createConjonctureDataviz(json){
                         var fontStyle = 'normal';
                         var fontFamily = 'Helvetica Neue';
                         ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
-                        // Just naively convert to string for now
                         // <---- ADJUST TO DESIRED TEXT --->
                         var dataString = dataset.data[index].text;
                         // Make sure alignment settings are correct
