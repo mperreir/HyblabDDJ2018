@@ -71,7 +71,6 @@ $ (document).ready(function(){
 
             .on("mouseover", function(d) {
                 d3.select(this).transition()
-                    .delay("50")
                     .duration("200")
                     .style("fill", "#CCE748")
                     .style("cursor", "pointer");
@@ -99,5 +98,5 @@ function resize() {
 
     d3.select("map-pdl").attr("width",width).attr("height",height);
     d3.select("svg").attr("width",width).attr("height",height);
-        d3.selectAll("path").attr('d', path);
+        d3.selectAll("path").attr('d',path);
 }

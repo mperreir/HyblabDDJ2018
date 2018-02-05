@@ -12,6 +12,8 @@
       transform: translate(-50%, -50%);
       margin-left: 50%;
       margin-top: 25%;
+      outline: 3px solid $white;
+      outline-offset: -3px;
     }
   }
   >.title{
@@ -32,17 +34,17 @@
     >.capeb{
       grid-column: 1;
       grid-row: 1;
-      border-right: solid 0.5px $black;
+      border-right: solid 0.5px rgba(29, 29, 27, 0.5);
     }
     >.agr{
       grid-column: 2;
       grid-row: 1;
-      border-right: solid 0.5px $black;
+      border-right: solid 0.5px rgba(29, 29, 27, 0.5);
     }
     >.polytech{
       grid-column: 3;
       grid-row: 1;
-      border-right: solid 0.5px $black;
+      border-right: solid 0.5px rgba(29, 29, 27, 0.5);
     }
     >.sc{
       grid-column: 4;
@@ -72,7 +74,7 @@
         width: 100%;
         position: relative;
         text-align: center;
-        color: $black;
+        color: rgba(29, 29, 27, 0.5);
         @extend %texte-labeur;
       }
     }
