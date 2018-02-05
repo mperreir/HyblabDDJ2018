@@ -68,6 +68,16 @@ header img{
     background-color: transparent;
 }
 
+#beforequestion
+{
+  background-image: url(../img/Illu1/first.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100%
+}
+
 #menu ul {
     list-style: none;
 }
@@ -135,9 +145,11 @@ h3
 }
 
 #chart_lum_container {
+  position: absolute;
+  left: 20%;
   width: 60%;
-  height: 60%;
-
+  height: auto;
+  transform: translateY(-50%);
 }
 
 #myChart {
@@ -692,10 +704,11 @@ text-align: center;
 }
 /* slide avec l'ambulance */
 #chart_region_acc {
-  float: right;
-  width: 40% !important;
-  height: 60% !important;
-  margin-right: 7%;
+  position: absolute;
+  right: 50px;
+  width: 60% !important;
+  height: auto !important;
+  transform: translateY(25%);
 }
 #slide_ambu_text p{
   font-size: 16px;

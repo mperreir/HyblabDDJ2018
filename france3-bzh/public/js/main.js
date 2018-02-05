@@ -50,8 +50,8 @@ fetch('data/reponses.json')
 
 
 function Light(){
-    $("#section_illu1").fadeTo("slow", 0.1,function(){
-        $("#section_illu1").css({'background-image':'url(img/Illu1/daynight.svg)'});
+    $("#beforequestion").fadeTo("slow", 0.1,function(){
+        $("#beforequestion").css({'background-image':'url(img/Illu1/daynight.svg)'});
         $("#nuit").css({'visibility':'visible'});
         $("#jour").css({'visibility':'visible'});
     }).fadeTo('slow', 1);
@@ -549,12 +549,12 @@ fetch('data/acc_regions.json')
               scales: {
                   yAxes: [{
                       ticks: {
-                          fontSize: 40
+                          fontSize: 24
                       }
                   }],
                   xAxes: [{
                       ticks: {
-                          fontSize: 40
+                          fontSize: 24
                       }
                   }]
               },
