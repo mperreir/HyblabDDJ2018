@@ -53,7 +53,7 @@
   ), webkit moz);
   background-color: $data-metier1;
   >.description-data{
-    margin-top: 30%;
+    margin: 10% 0 1.5em 0;
     width: 100%;
     @extend %mini-titre;
     @include prefix((
@@ -61,7 +61,9 @@
     ), webkit moz);
   }
   >span{
-    @extend %texte-labeur;
+    font-family: $main-font;
+    font-size: 30px;
+    font-weight: 400;
   }
   >.goToData{
     height: 48px;

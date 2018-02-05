@@ -227,12 +227,20 @@ function drawLineChart(data){
                     scaleLabel: {
                         display: true,
                         labelString: 'Année'
+                    },
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
                     }
                 }],
                 yAxes: [{
                     display: true,
                     ticks: {
                         beginAtZero: true // minimum value will be 0.
+                    },
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
                     },
                     scaleLabel: {
                         display: true,

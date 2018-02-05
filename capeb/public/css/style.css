@@ -51,7 +51,7 @@ a {
 }
 
 /* line 43, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/modules/_extends.scss */
-.textes-intro > .texte, .bloc-verso > span, .bloc-verso > .goToData, .button-zoom > .niveau-zoom, .info-epci > .description, .partie-data > .content-data .textes-data > .texte, .partie-team .members-crews > .crew > .folio {
+.textes-intro > .texte, .bloc-verso > .goToData, .button-zoom > .niveau-zoom, .info-epci > .description, .partie-data > .content-data .textes-data > .texte, .partie-team .members-crews > .crew > .folio {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: medium;
@@ -292,14 +292,21 @@ a {
 
 /* line 55, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .bloc-verso > .description-data {
-  margin-top: 30%;
+  margin: 10% 0 1.5em 0;
   width: 100%;
   -webkit-hyphens: manual;
   -moz-hyphens: manual;
   hyphens: manual;
 }
 
-/* line 66, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+/* line 63, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+.bloc-verso > span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/* line 68, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .bloc-verso > .goToData {
   height: 48px;
   width: 80%;
@@ -316,7 +323,7 @@ a {
   color: #ffffff;
 }
 
-/* line 82, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
+/* line 84, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-data.scss */
 .bloc-verso > .goToData:hover {
   background-color: #f06555;
   cursor: pointer;
