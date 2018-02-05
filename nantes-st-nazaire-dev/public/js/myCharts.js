@@ -282,9 +282,9 @@ function getSynthData(cities, dataJson) {
 }
 
 $(document).ready(function() {
-        //http://localhost:8081/nantes-st-nazaire-dev/rangs
+        //http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/rangs
         //$.post( "http://localhost:8081/nantes-st-nazaire-dev/rangs")
-        $.post( "http://localhost:8081/nantes-st-nazaire-dev/rangs")
+        $.post( "http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/rangs")
             .done(function(data) {
                 console.log("Données de synthèse reçues");
                 var cities = ["Nantes-St-Nazaire", "Lyon", "Bordeaux", "Toulouse", "Rennes", "Lille", "Nice", "Strasbourg", "Grenoble","Aix-Marseille"];
@@ -299,7 +299,7 @@ $(document).ready(function() {
     // Assign handlers immediately after making the request,
     // and remember the jqxhr object for this request
     //http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs
-    var jqxhr = $.post( "http://localhost:8081/nantes-st-nazaire-dev/actifs")
+    var jqxhr = $.post( "http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs")
         .done(function(data) {
             console.log( "success" );
             console.log(data)
