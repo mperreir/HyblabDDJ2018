@@ -5,7 +5,6 @@
 var express = require('express');
 var path = require('path');
 var xlsx = require('xlsx');
-var fs = require('fs');
 
 var app = express();
 
@@ -15,17 +14,6 @@ app.use('/',express.static(path.join(__dirname, 'public')));
 app.post('/actifs', function(req, res) {
 	var workbook = xlsx.readFile('./nantes-st-nazaire-dev/actifs.xlsx');
 	var sheet_name_list = workbook.SheetNames;
-	/*
-
-	var actifs = xlsx.utils.sheet_to_html(workbook.Sheets[sheet_name_list[0]]);
-	var actifscsv = xlsx.utils.sheet_to_csv(workbook.Sheets[sheet_name_list[0]]);
-
-	console.log(workbook.Sheets['Feuil1'])
-	console.log(workbook.Sheets['Feuil1']['A1'])
-	console.log(actifscsv)
-		response.send(actifs);
-        response.end();
-        */
         var actifs_json = xlsx.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
         var actifs = xlsx.utils.sheet_to_html(workbook.Sheets[sheet_name_list[0]]);
         res.send(actifs_json);
