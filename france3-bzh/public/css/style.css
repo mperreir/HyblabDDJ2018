@@ -675,8 +675,21 @@ button:focus { outline-style: none; }
   font-size: 56px;
   font-weight: bold;
 }
+/* Slide 3 type pns */
+#text_content_slide3 {
+  font-size: 16px;
+  text-align: justify;
+}
 
-
+#text_content_slide3 {
+text-align: center;
+}
+#typesPns {
+  width: 60%;
+  position: relative;
+  left: 19%;
+  margin-top:5%;
+}
 /* slide avec l'ambulance */
 #chart_region_acc {
   float: right;
