@@ -244,6 +244,10 @@ function drawLineChart(data, title){
                     scaleLabel: {
                         display: true,
                         labelString: 'Année'
+                    },
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
                     }
                 }],
                 yAxes: [{
@@ -252,6 +256,10 @@ function drawLineChart(data, title){
                         suggestedMin: 0, // minimum will be 0, unless there is a lower value.
                         // OR //
                         beginAtZero: true // minimum value will be 0.
+                    },
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
                     },
                     scaleLabel: {
                         display: true,
