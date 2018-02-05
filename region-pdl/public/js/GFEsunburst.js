@@ -192,6 +192,7 @@ app.controller('myCtrl', function ($scope) {
         $scope.initChart();
         
         initializeBreadcrumbTrail();
+
         drawLegend();
         d3.select('#togglelegend').on('click', toggleLegend);
 
@@ -231,15 +232,15 @@ app.controller('myCtrl', function ($scope) {
         d3.select('#percentage')
                 .text(show);
 
-        var show1 = [];
-        d3.select('#exp1')
-                .text(show1);
-        var show2 = [];
-        d3.select('#exp2')
-                .text(show2);
-        var show3 = [];
-        d3.select('#exp3')
-                .text(show3);
+        // var show1 = [];
+        // d3.select('#exp1')
+        //         .text(show1);
+        // var show2 = [];
+        // d3.select('#exp2')
+        //         .text(show2);
+        // var show3 = [];
+        // d3.select('#exp3')
+        //         .text(show3);
         var showT = [];
         d3.select('exp')
                 .text(showT);
@@ -256,6 +257,7 @@ app.controller('myCtrl', function ($scope) {
         d3.select('#percentage')
                 .text(percentageString);
 
+        console.log("test");
         d3.select('#explanation')
                 .style('visibility', '');
 
@@ -309,6 +311,8 @@ app.controller('myCtrl', function ($scope) {
     }
 
     function getDescription(d) {
+        totalM =0 ;
+        total = 0;
         if (d.depth === 1) {
             for (var i = 0; i < d.children.length; i++) {
                 for (var j = 0; j < d.children[i].children.length; j++) {
