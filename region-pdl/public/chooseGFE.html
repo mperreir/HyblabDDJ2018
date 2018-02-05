@@ -25,56 +25,7 @@
 
     <!-- Simple sample script that loads data from a dummy json file -->
     <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
-
 </head>
-<script type="text/javascript">
-    window.onload = function() {
-        var oBox = document.getElementById('box');
-        var oBtn = document.getElementById('btn');
-
-        function addEveent(ele, type, fn) {
-            if (ele.addEventListener) {
-                ele.addEventListener(type, fn, false)
-            } else if (ele.attachEvent) {
-                ele.attachEvent("on" + type, fn)
-            } else {
-                ele['on' + type] = fn;
-            }
-        }
-        addEveent(oBtn, 'click', fnMove);
-
-        function fnMove() {
-            var oLeft = parseInt(oBox.offset);
-            if (oLeft === -300) {
-                animate(10);
-            } else {
-                animate1(-10);
-            }
-        }
-
-        function animate(speed) {
-            var t = setInterval(function() {
-                var oLeft = parseInt(oBox.offsetLeft);
-                if ((oLeft = -300 && oLeft < 0)) {
-                    oBox.style["margin-left"] = oBox.offsetLeft + speed + 'px';
-                } else {
-                    clearInterval(t)
-                }
-            }, 10)
-        }
-
-        function animate1(speed) {
-            var t = setInterval(function() {
-                var oLeft = parseInt(oBox.offsetLeft);
-                if (oLeft <= 0 && oLeft > -300) {
-                    oBox.style["margin-left"] = oBox.offsetLeft + speed + 'px';
-                } else {
-                    clearInterval(t)
-                }
-            }, 10)
-        }
-    }
-</script>
 <body>
 <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
 <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
@@ -82,14 +33,14 @@
 
 <div id="texte">
     <nav class="top_nav" role="navigation">
-        <div class="text-left" style="width: 400px;margin-left: -10px">
+        <div class="text-left" style="width: 500px;margin-left: -40px">
             <ul>
-                <l1><img id="logo-pdl" src="img/logo-pdl.png"/></l1>
-                <li><a href="#">Home</a></li>
+                <l1><a href="index.html"><img id="logo-pdl" src="img/logo-pdl.png"/></a></l1>
+                <li><a href="index.html">Home</a></li>
                 <!--<li><a href="#">Étude</a></li>-->
                 <!--<li><a href="#">Bourse</a></li>-->
                 <!--<li><a href="#">Trouver CFA</a></li>-->
-                <li><a href="#">Crédit</a></li>
+                <li><a href="credits.html">Crédit</a></li>
             </ul>
         </div>
     </nav>
@@ -124,114 +75,115 @@
         <!--<div><i class="iconfont icon-tool"></i>实用工具</div>-->
         <!--</div>-->
         <!--<div>-->
-        <a href="javascript:void(0)" ng-click="clickGetImage1()" target="_blank">
+        <!--<a href="javascript:void(0)" onlick="clickGetImage1()" target="_blank">-->
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Agriculture</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage2()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Pêche - Mer - Aquaculture</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage6()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Mécanique - Automatismes</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage10()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Textile - Habillement - Cuir</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage11()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Travail du bois</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage15()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Commerce et distribution</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage3()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Bâtiment gros œuvre - Génie civil - Extraction</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage4()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Bâtiment : équipements et finitions</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage5()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Structures métalliques - Travail des métaux - Fonderie</div>
             </div>
         </a>
 
-        <a href="javascript:void(0)" ng-click="clickGetImage7()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Electricité - Electrotechnique - Electronique</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage9()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Production alimentaire - Cuisine</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage12()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Techniques graphiques - Impression</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage13()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Transports - Conduite - Manutention - Magasinage</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage14()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Tertiaire de bureau - Tertiaire spécialisé</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage16()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Paramédical - Travail social - Soins personnels</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage18()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Nettoyage - Assainissement - Environnement - Sécurité</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage19()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Techniques de la communication - Média</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage20()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Arts appliqués - Arts du spectacle</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage22()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Formations d’aide à l’insertion sociale et professionnelle</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage8()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Travail des matériaux - Industries de process - Laboratoire</div>
             </div>
         </a>
-        <a href="javascript:void(0)" ng-click="clickGetImage17()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Hôtellerie - Restauration - Tourisme - Sports - Animation socioculturelle - Loisirs</div>
             </div>
         </a>
 
-        <a href="javascript:void(0)" ng-click="clickGetImage21()" target="_blank">
+        <a href="sunburstGFE.html" target="_blank">
             <div class="item">
                 <div class="no-logo">Formations générales - Généralistes - Développement personnel</div>
             </div>
