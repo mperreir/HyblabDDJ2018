@@ -208,9 +208,9 @@ button:focus { outline-style: none; }
   text-align: center;
   z-index: 1;
   position: absolute;
-  top: 0;
   width: 75%;
-  transform: translateX(20%)
+  top:0;
+  transform: translate(15%)
 }
 
 .section
@@ -444,13 +444,25 @@ button:focus { outline-style: none; }
   width: 500px;
 }
 
+#title_question_transport
+{
+  display: block;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  width: 75%;
+  top:0;
+  transform: translate(15%,0%)
+}
+
 #graph_vehicule {
   text-align: center;
-  position: relative;
-  height: 40%;
+  position: absolute;
+  width: 70%;
+  bottom: 0;
+  transform: translate(20%, -50%);
 }
 #graph_vehicule img{
-  height: 40%;
 }
 
 #graph_vehicule div{
@@ -461,20 +473,20 @@ button:focus { outline-style: none; }
 }
 #leger {
   margin-top:50%;
-  font-size: 24px;
+  font-size: 16px;
   display: none;
 }
 #leger p{
-  font-size: 24px;
+  font-size: 100%;
   color: #FFEAB6;
 }
 #grave {
     margin-top:50%;
-    font-size: 24px;
+    font-size: 16px;
     display: none;
 }
 #grave p{
-  font-size: 24px;
+  font-size: 100%;
   color: #46B29D;
 }
 #hospitalise {
@@ -482,7 +494,7 @@ button:focus { outline-style: none; }
   display: none;
 }
 #hospitalise p{
-  font-size: 24px;
+  font-size: 100%;
   color: #F0CA4D;
 }
 #hospitalise span{
@@ -494,26 +506,26 @@ button:focus { outline-style: none; }
   display: none;
 }
 #mort p{
-  font-size: 24px;
+  font-size: 100%;
   color: #F53855;
 }
 #vehicule_selection {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  transform: translateY(0%);
   text-align: center;
-  margin-top: 5%;
 }
 #section_illu_camion h1{
-  margin-top: -5%;
 }
 #left_infos_grav {
   float: left;
-  margin-left: 20%;
-  width: 10%;
+  width: 30%;
 
 }
 #right_infos_grav {
   float: right;
-  margin-right: 20%;
-  width: 10%;
+  width: 30%;
 }
 
 #titre_accident
@@ -522,17 +534,16 @@ button:focus { outline-style: none; }
 
 #vehicule_selection img{
   width: 6%;
-  height: 6%;
-  margin-right: 5%;
-  margin-left: 5%;
+  height: auto;
   opacity: 0.5;
+  margin-right: 5%;
 }
 
 #infos_accidents {
   text-align: center;
   font-size: 24px;
   color: white;
-  height: 3%;
+  height: auto;
 }
 
 #infos_accidents span{
@@ -550,7 +561,7 @@ button:focus { outline-style: none; }
 
 #pieton{
   width: 2% !important;
-  height: 2% !important;
+  height: auto !important;
 }
 
 
@@ -635,9 +646,8 @@ button:focus { outline-style: none; }
 #chart_region_acc {
   float: right;
   width: 40% !important;
-  height: auto !important;
+  height: 60% !important;
   margin-right: 7%;
-  margin-top: 5%;
 }
 #slide_ambu_text p{
   font-size: 16px;
@@ -648,7 +658,7 @@ button:focus { outline-style: none; }
 }
 #slide_ambu_text {
   float: left;
-  margin-left: 10%;
+  margin-left: 7%;
   width: 35%;
 }
 .orange {
