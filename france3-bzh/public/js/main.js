@@ -320,7 +320,7 @@ $( "#camion" ).click(function() {
       $("#pie_veh").css("width", "40%");
       $("#pie_veh").css("height", "auto");
       $("#pie_veh").css("transform", "translate(75%,15%)");
-      $("#pie_veh").attr("src", "img/Vehicules/camion_graphique.svg");
+      $("#pie_veh").attr("src", "img/Vehicules/camion.png");
     });
     $("#pie_veh").fadeIn("slow");
     $("#grave").fadeOut("slow", function() {
@@ -424,7 +424,7 @@ $( "#pieton" ).click(function() {
       $("#pie_veh").css("width", "10%");
       $("#pie_veh").css("height", "auto");
       $("#pie_veh").css("transform", "translate(450%,0%)");
-      $("#pie_veh").attr("src", "img/Vehicules/personnage_graphique.svg");
+      $("#pie_veh").attr("src", "img/Vehicules/personnage.png");
     });
     $("#pie_veh").fadeIn("slow");
     $("#grave").fadeOut("slow", function() {
