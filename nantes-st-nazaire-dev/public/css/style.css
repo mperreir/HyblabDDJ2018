@@ -20,6 +20,7 @@ a{
 	text-decoration:none;
 }
 
+/* --------------- GENERAL --------------- */
 #loading-screen {
 	position: absolute;
 	height: 100%;
@@ -32,7 +33,10 @@ a{
 	visibility: hidden;
 }
 
-/* --------------- GENERAL --------------- */
+#fp-nav {
+	display: none;
+}
+
 img#loading {
 	margin-top: 10%;
 	height: 200px;
@@ -53,7 +57,7 @@ ul {
 
 /* --------------- SYNTHESE --------------- */
 #section-synthese {
-	padding: 60px 80px;
+	padding: 42px 80px;
 }
 
 .synthese-title {
@@ -64,6 +68,7 @@ ul {
 
 #section-synthese p {
 	width: 60%;
+	font-size: 12px;
 }
 
 #img-synthese {
@@ -73,7 +78,7 @@ ul {
 }
 
 #synth-chart-block {
-	width: 820px;
+	width: 740px;
 	position: relative;
 	margin-right: auto;
 	margin-left: auto;

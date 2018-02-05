@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	setTimeout(loadingScreen, 3000);
+	setTimeout(loadingScreen, 2000);
 
 	setFleche();
 
@@ -34,6 +34,8 @@ function loadingScreen() {
     $("#loading-screen").fadeOut(function() {
 
     	$("#fullpage").css("visibility","visible");
+    	$.fn.fullpage.setAllowScrolling(true);
+		$("#fp-nav").css("display","block")
     });
 }
 

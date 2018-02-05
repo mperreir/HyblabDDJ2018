@@ -263,7 +263,7 @@ function synthese(dataSets) {
 
 function getSynthData(cities, dataJson) {
     var dataSets = [];
-    var colors = ["#265C8E","red", "blue", "yellow", "green", "#BF55EC", "#22A7F0", "#F9690E", "#D2527F", "black", "black"]
+    var colors = ["#265C8E","red", "blue", "yellow", "green", "#BF55EC", "#22A7F0", "#F9690E", "#D2527F", "#20c997", "#6610f2"]
     var averages = [3, 8, 13, 19, 25, 30, 34];
     var cpt = 0;
     cities.forEach(function(city) {
@@ -284,7 +284,7 @@ function getSynthData(cities, dataJson) {
 $(document).ready(function() {
         //http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/rangs
         //$.post( "http://localhost:8081/nantes-st-nazaire-dev/rangs")
-        $.post( "http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/rangs")
+        $.post( "http://localhost:8081/nantes-st-nazaire-dev/rangs")
             .done(function(data) {
                 console.log("Données de synthèse reçues");
                 var cities = ["Nantes-St-Nazaire", "Lyon", "Bordeaux", "Toulouse", "Rennes", "Lille", "Nice", "Strasbourg", "Grenoble","Aix-Marseille"];
@@ -299,10 +299,9 @@ $(document).ready(function() {
     // Assign handlers immediately after making the request,
     // and remember the jqxhr object for this request
     //http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs
-    var jqxhr = $.post( "hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs")
+    var jqxhr = $.post( "http://localhost:8081/nantes-st-nazaire-dev/actifs")
         .done(function(data) {
             console.log( "success" );
-            console.log(data)
 
             console.log("Mean :" + getMean(data[0]));
             var cities = getChartLabels(data[0]);
@@ -317,14 +316,14 @@ $(document).ready(function() {
             triDecroissant(cities,dataSets);
             console.log(cities)
             console.log(dataSets)
-            printBarChart(cities, dataSets, "transport2");
+            //printBarChart(cities, dataSets, "transport2");
 
             var cities = getChartLabels(data[0]);
             var dataSets = createChartData(data, 23);
             triDecroissant(cities,dataSets);
             console.log(cities)
             console.log(dataSets)
-            printBarChart(cities, dataSets, "transport3");
+            //printBarChart(cities, dataSets, "transport3");
 
             })
         .fail(function() {
