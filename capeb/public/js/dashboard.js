@@ -30,11 +30,15 @@ function miniStats(regionStats, d) {
             $('#card-conjoncture .open').each(function(){
                 $(this).on('click', function() {
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Conjoncture";
+                    var texte = document.getElementById("texte-conjoncture");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
+                    fetchConjonctureData(d);
+                    closeOnEscape();
                 });
             });
 
         });
-
 
     //2 : Investissement /  / chart over time compared with region
     fetch("/capeb/data/" + d.properties.siren_epci + "/investissement")
@@ -55,7 +59,10 @@ function miniStats(regionStats, d) {
             $('#card-investissement .open').each(function(){
                 $(this).on('click', function() {
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Investissement";
-                    drawLineChart(json, "Investir ou ne pas investir ?");
+                    var texte = document.getElementById("texte-investissement");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
+                    drawLineChart(json);
                     closeOnEscape();
                 });
             });
@@ -105,7 +112,10 @@ function miniStats(regionStats, d) {
 
             $('#card-contrat .open').each(function(){
                 $(this).on('click', function() {
-                    document.getElementById("modal-nom-epci").innerHTML += " - Contrat";
+                    document.getElementById("modal-nom-epci").innerHTML += d.properties.nom_comple + " - Contrat";
+                    var texte = document.getElementById("texte-contrat");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
                     createSunburst(d);
                     closeOnEscape();
                 });
@@ -120,6 +130,9 @@ function miniStats(regionStats, d) {
             $('#card-dd .open').each(function(){
                 $(this).on('click', function() {
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Développement durable";
+                    var texte = document.getElementById("texte-dd");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
                 });
             });
 
@@ -132,6 +145,9 @@ function miniStats(regionStats, d) {
             $('#card-mp .open').each(function(){
                 $(this).on('click', function() {
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Marchés publics";
+                    var texte = document.getElementById("texte-mp");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
                     wordCloud(stats.FreinsMP);
                     closeOnEscape();
                 });
@@ -143,6 +159,9 @@ function miniStats(regionStats, d) {
             $('#card-emploi .open').each(function(){
                 $(this).on('click', function() {
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Embauche";
+                    var texte = document.getElementById("texte-emploi");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
                     drawChart3dEmploi(stats);
                     closeOnEscape();
                 });
@@ -172,7 +191,10 @@ function miniStats(regionStats, d) {
             $('#card-distance .open').each(function(){
                 $(this).on('click', function() {
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Distance";
-                    drawBubbleChart(json);
+                    var texte = document.getElementById("texte-distance");
+                    texte.className += " active-dataviz-text";
+                    texte.style.display = "block";
+                    drawDistanceDataviz(json);
                     closeOnEscape();
                 });
             });
@@ -232,6 +254,11 @@ function createModal(){
         $modal.removeClass('state-appear').addClass('state-leave');
         $("#dataviz").empty();
         document.getElementById("modal-nom-epci").innerHTML = "";
+        var texte = document.getElementsByClassName("active-dataviz-text")[0];
+        if(texte !== null){
+            texte.style.display = "none";
+            texte.className = "texte-dataviz";
+        }
     });
 
 
