@@ -166,12 +166,13 @@ p{
     background: #ffffff;
     margin-left: 37.8%;
     margin-top: -50px;
+    height: 100%;
 }
 
 #sidebar {
     position: relative;
     float: right;
-    width: 100px;
+    width: 90px;
     text-align: right;
     font-size: 12px;
     margin-top: 10px;
@@ -197,9 +198,9 @@ p{
 #chart {
     position: relative;
     margin-left: -60px;
-    /*margin-top: 50px;*/
     width: 50%;
     margin-right: 0;
+    margin-top: 30px;
 }
 
 #chart path {
@@ -224,20 +225,40 @@ p{
     /*margin-left: 100px;*/
     /*width: 100%;*/
     /*width: 50px;*/
-    min-height: 100px;
-    max-height: 600px;
+    /*min-height: 100px;*/
+    height: 200px;
+    float:right;
+    width: 180px;
+    /*max-height: 600px;*/
     position: relative;
+    margin-top: 170px;
+    margin-left: -30px;
+    margin-right: 40px;
 }
 
 #exp{
-    width:150px;
-    margin-left: 200px;
+    width:100%;
+    position: relative;
+    height: 100%;
+    /*margin-left: 200px;*/
+}
+
+#exp1{
+    width:100%;
+    position: relative;
+    height: 50px;
+    /*margin-left: 200px;*/
     color: rgba(0,0,0,0.8);
     font-family: Lato;
     font-size: 14px;
     font-style: italic;
     line-height: 1.7;
     text-align: center;
+}
+
+.btn{
+    margin-top: 80px;
+    /*margin-bottom: 30px;*/
 }
 
 #demo-list a{
@@ -396,6 +417,7 @@ p{
     font-size: 14px;
     font-weight: bold;
     line-height: 15px;
+    margin-bottom: 20px;
 }
 .top_nav a {
     padding: 5px 10px;
