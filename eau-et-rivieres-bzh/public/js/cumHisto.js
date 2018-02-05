@@ -62,10 +62,10 @@ function upDateHisto(histo){
 function buildHisto(parent, ann, dep){
 
 	var svg = d3.select(parent),
-	    margin = {top: 20, right: 80, bottom: 130, left: 80},
+	    margin = {top: 0, right: 80, bottom: 0, left: 80},
 	    width = +svg.attr("width") - margin.left - margin.right,
 	    height = +svg.attr("height") - margin.top - margin.bottom,
-	    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	    g = svg.append("g").attr("transform", "translate(" + (margin.left) + "," + (margin.top) + ")");
 
 	var x = d3.scaleBand()
 	    .rangeRound([0, width])
@@ -117,7 +117,7 @@ function buildHisto(parent, ann, dep){
 	    .data(function(d) { return d; })
 	    .enter().append("rect")
 	      .attr("x", function(d) { return x(d.data.DEPARTEMENT); })
-	      .attr("y", function(d) { return y(d[1]); })
+	      .attr("y", function(d) { return y(d[1])+50; })
 	      .attr("height", function(d) { return y(d[0]) - y(d[1]); })
 				.attr("fill", getColor)
 	      .attr("width", x.bandwidth());
@@ -149,6 +149,10 @@ function buildHisto(parent, ann, dep){
 				return "white";
 			}
 		}
+
+
+
+
 		if(dep == "Campbon"){
 			g.append("image")
 				.attr("xlink:href","img/Corps.svg")
@@ -157,12 +161,18 @@ function buildHisto(parent, ann, dep){
 				.attr("x",-120)
 				.attr("y",-20);
 		}else{
+			//The water butt width has to be the same than the
+			//histogram width
+			var widthWatBut =  x.bandwidth();
+			var heightWatBut =  height;
+
 			g.append("image")
-				.attr("xlink:href","img/Citerne.svg")
-				.attr("width", 420)
-				.attr("height", 280)
-				.attr("x",-120)
-				.attr("y",-60);
+				.attr("xlink:href","img/Citerne2.svg")
+				.style("width", widthWatBut)
+				.style("height", heightWatBut)
+				.attr("preserveAspectRatio","none");
+				//.attr("transform", "translate(" + width/2 + "," + height/2 + ")");
+
 		}
 
 
@@ -170,6 +180,7 @@ function buildHisto(parent, ann, dep){
 	  //    .attr("class", "axis")
 	  //    .attr("transform", "translate(0," + String(height) + ")")
 	  //    .call(d3.axisBottom(x));
+
 		g.append("g")
 				.append("text")
 				.attr("x",90)
@@ -208,7 +219,7 @@ function buildHisto(parent, ann, dep){
 	      .call(d3.axisLeft(y).ticks(null, "s"))
 	    .append("text")
 	      .attr("x", 2)
-	      .attr("y", y(y.ticks().pop()) + 0.5)
+	      .attr("y", y(y.ticks().pop()) + -20)
 	      .attr("dy", "0.32em")
 	      .attr("fill", "#000")
 	      .attr("font-weight", "bold")
@@ -236,7 +247,7 @@ function buildHisto(parent, ann, dep){
 		}
 
 		if(dep != dep1){
-
+			/*
 			var lastLab = "ORGANES";
 		  var legend = g.append("g")
 		      .attr("font-family", "sans-serif")
@@ -257,7 +268,7 @@ function buildHisto(parent, ann, dep){
 		      .attr("dy", "0.32em")
 					.style("text-anchor", "middle")
 		      .text(getLab);
-
+			*/
 		}
 	});
 }
