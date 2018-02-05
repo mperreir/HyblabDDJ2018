@@ -579,8 +579,227 @@ fetch('data/acc_regions.json')
              }
         });
     });
+// ----------------------------SAISONS ------------------------------------------
+fetch('data/acc_saisons_printemps.json')
+    .then(function (response){
+        if( response.ok )
+            return response.json();
+            return {data: "JSON file not found"};
+
+    })
+    .catch( function (error){
+        return {data: "Invalid JSON"};
+    })
+    .then(function (json) {
+        var ctx = document.getElementById("chart_printemps").getContext("2d");
+
+        // Define a plugin to provide data labels
+          Chart.plugins.register({
+              afterDatasetsDraw: function(chart, easing) {
+                  // To only draw at the end of animation, check for easing === 1
+                  var ctx = chart.ctx;
+                  chart.data.datasets.forEach(function (dataset, i) {
+                      var meta = chart.getDatasetMeta(i);
+                      if (!meta.hidden) {
+                          meta.data.forEach(function(element, index) {
+                              // Draw the text in black, with the specified font
+                              ctx.fillStyle = 'rgb(0, 0, 0)';
+                              var fontSize = 16;
+                              var fontStyle = 'normal';
+                              var fontFamily = 'Helvetica Neue';
+                              ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+                              // Just naively convert to string for now
+                              var dataString = dataset.data[index].toString();
+                              // Make sure alignment settings are correct
+                              ctx.textAlign = 'center';
+                              ctx.textBaseline = 'middle';
+                              var padding = 5;
+                              var position = element.tooltipPosition();
+                              ctx.fillText(dataString, position.x, position.y - (fontSize / 2) - padding);
+                          });
+                      }
+                  });
+              }
+          });
+        var myLineChart = new Chart(ctx , {
+            type: "bar",
+            data: json,
+            options : {
+              scales: {
+                  yAxes: [{
+                    ticks: {
+                        display: false
+                    }
+                  }],
+                  xAxes: [{
+                      categoryPercentage: 1.0,
+                      barPercentage: 1.0,
+                      ticks: {
+                          display: false
+                      }
+                  }]
+              },
+              tooltips: {
+                titleFontSize: 60,
+                bodyFontSize: 60
+              },
+              title: {
+                  display:true,
+                  fontSize : 60,
+                  text: 'Printemps'
+                },
+               legend: {
+                   display: false
+               }
+
+             }
+        });
 
 
+    });
+fetch('data/acc_saisons_ete.json')
+    .then(function (response){
+        if( response.ok )
+            return response.json();
+            return {data: "JSON file not found"};
+
+    })
+    .catch( function (error){
+        return {data: "Invalid JSON"};
+    })
+    .then(function (json) {
+        var ctx = document.getElementById("chart_ete").getContext("2d");
+
+        var myLineChart = new Chart(ctx , {
+            type: "bar",
+            data: json,
+            options : {
+              scales: {
+                  yAxes: [{
+                    ticks: {
+                        display: false
+                    }
+                  }],
+                  xAxes: [{
+                      categoryPercentage: 1.0,
+                      barPercentage: 1.0,
+                      ticks: {
+                          display: false
+                      }
+                  }]
+              },
+              tooltips: {
+                titleFontSize: 60,
+                bodyFontSize: 60
+              },
+              title: {
+                  display:true,
+                  fontSize : 60,
+                  text: 'Eté'
+                },
+               legend: {
+                   display: false
+               }
+
+             }
+        });
+    });
+
+fetch('data/acc_saisons_autonne.json')
+    .then(function (response){
+        if( response.ok )
+            return response.json();
+            return {data: "JSON file not found"};
+
+    })
+    .catch( function (error){
+        return {data: "Invalid JSON"};
+    })
+    .then(function (json) {
+        var ctx = document.getElementById("chart_autonne").getContext("2d");
+
+        var myLineChart = new Chart(ctx , {
+            type: "bar",
+            data: json,
+            options : {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          display: false
+                      }
+                  }],
+                  xAxes: [{
+                      categoryPercentage: 1.0,
+                      barPercentage: 1.0,
+                      ticks: {
+                          display: false,
+                      }
+                  }]
+              },
+              tooltips: {
+                titleFontSize: 60,
+                bodyFontSize: 60
+              },
+              title: {
+                  display:true,
+                  fontSize : 60,
+                  text: 'Autonne'
+                },
+               legend: {
+                   display: false
+               }
+
+             }
+        });
+    });
+
+fetch('data/acc_saisons_hiver.json')
+    .then(function (response){
+        if( response.ok )
+            return response.json();
+            return {data: "JSON file not found"};
+
+    })
+    .catch( function (error){
+        return {data: "Invalid JSON"};
+    })
+    .then(function (json) {
+        var ctx = document.getElementById("chart_hiver").getContext("2d");
+
+        var myLineChart = new Chart(ctx , {
+            type: "bar",
+            data: json,
+            options : {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          display: false
+                      }
+                  }],
+                  xAxes: [{
+                      categoryPercentage: 1.0,
+                      barPercentage: 1.0,
+                      ticks: {
+                          display: false
+                      }
+                  }]
+              },
+              tooltips: {
+                titleFontSize: 60,
+                bodyFontSize: 60
+              },
+              title: {
+                    display: true,
+                    fontSize : 60,
+                    text: 'Hiver',
+                },
+               legend: {
+                   display: false
+               }
+
+             }
+        });
+    });
 /* --------------------------------- CARTE ----------------------------- */
 
 

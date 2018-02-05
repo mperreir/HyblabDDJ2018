@@ -691,6 +691,8 @@ button:focus { outline-style: none; }
 #text_content_slide3 {
   font-size: 16px;
   text-align: justify;
+  width: 50%;
+  margin: auto;
 }
 
 #text_content_slide3 {
@@ -706,7 +708,7 @@ text-align: center;
 #chart_region_acc {
   position: absolute;
   right: 50px;
-  width: 60% !important;
+  width: 55% !important;
   height: auto !important;
   transform: translateY(25%);
 }
@@ -722,6 +724,27 @@ text-align: center;
   margin-left: 7%;
   width: 35%;
 }
+
+/* Slide saisons */
+#slide_saisons {
+  background-image: url(../img/4saisons/decorSaison.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#container_slide_saisons {
+  position: absolute;
+  top:5%;
+}
+#container_slide_saisons canvas{
+  width: 20% !important;
+  height: auto !important;
+  float: left;
+  margin: 2%;
+}
+
+
+/*--------*/
 .orange {
   color: #E37B40;
 }
