@@ -112,19 +112,21 @@
     <div id="fullpage">
       <div class="section" data-anchor="page1">
       	<div id="page1DisplayOn">
-          <section id="section1">
+          <section id="section1" class="panel">
+            <p class="title pTitle"> Comparez les nappes souterraines de la Bretagne </p>
             <p class="pContent pTop normal">
-              Cette data visualisation invite à comparer la présence des pesticides dans les nappes souterraines en Bretagne. Il existe
-              différents réservoirs d’eau naturels : les nappes souterraines phréatiques ou aquifères. Les réserves d’eau souterraine en
-              Bretagne sont principalement des nappes aquifères. A la différence des nappes phréatiques, l’eau stockée dans un aquifère
-              provient d’une infiltration par les roches. On ne peut que l’extraire par forage.
+              Cette data visualisation vous invite à comparer la présence des pesticides dans les nappes souterraines en Bretagne.
             </p>
             <p class="pContent pBottom normal">
-               La toxicité des pesticides est répertoriée selon le système international d’étiquetage des matières (ex : H300, mortel en
-              cas d’ingestion). L’analyse présentée se base selon cet étiquetage.
+              Il existe différents types de réservoirs d’eau naturels : les nappes phréatiques ou les aquifères. Les réserves d’eau souterraine
+              en Bretagne sont principalement des aquifères. A la différence des nappes phréatiques, l’eau stockée dans un aquifère provient
+              d’une infiltration dans les failles du socle rocheux breton. La toxicité des pesticides est répertoriée selon le système
+              international d’étiquetage des substances pesticides (ex : H300, mortel en cas d’ingestion). Ainsi ce système d’étiquetage,
+              non officiel, permet de qualifier les toxicités potentielles de toutes les masses d’eau de Bretagne. L’analyse présentée
+              ici se base sur les étiquettes des six substances les plus trouvées.
             </p>
           </section>
-          <section id="section2">
+          <section id="section2" class="panel">
             <ul class="timeline timeline-horizontal">
               <li class="timeline-item">
                 <button class="timeline-badge primary" id="2012"><p class="normal pTimeline"> 2012 </p></button>
@@ -143,7 +145,7 @@
               </li>
             </ul>
           </section>
-          <section id="section3">
+          <section id="section3" class="panel">
             <article id="zone1" class="article1">
             	<!--<script id="#hist1"> </script> -->
                 <svg id="histGauche" width="400" height="350"></svg>
@@ -309,7 +311,7 @@
       </div>
 
       <div class="section" data-anchor="page2">
-        <section id="section4">
+        <section id="section4" class="panel">
           <p class="title pTitle">
             EXEMPLE NAPPE DE CAMPBON
           </p>
@@ -324,7 +326,7 @@
           de la Région Nazairienne (CARENE).
           </p>
         </section>
-        <section id="section5">
+        <section id="section5" class="panel">
           <svg version="1.1" id="citerne" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 78.2 84.1" style="enable-background:new 0 0 78.2 84.1;" xml:space="preserve">
             <polygon class="st100" points="3,35.8 3,71.1 9.5,75.1 74.3,72 74.8,36.7 53.2,36.3 " />
@@ -335,8 +337,7 @@
             <polyline class="st102" points="2.7,71.3 2.7,17.1 2.7,12.7 " />
           </svg>
           <p class="pContent normal" id="pCiterne">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac porttitor felis, eu efficitur elit. Sed laoreet semper libero
-            vel lobortis. Mauris in tortor id quam faucibus commodo vel id mauris. Donec tincidunt scelerisque iaculis.
+            Station de prélèvement et de contrôle de l'eau de la nappe de Campbon.
           </p>
         </section>
           <svg id="mapCampbon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -550,33 +551,31 @@
           </svg>
       </div>
       <div class="section" data-anchor="page3">
-        <section id="section6">
+        <section id="section6" class="panel">
           <p class="title pTitle"> NAPPE DE CAMPBON ET LA SANTE</p>
           <p class="title pTitle"> ANNEE 201X </p>
           <p class="pContent normal"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac porttitor felis, eu efficitur elit. Sed laoreet semper libero
           vel lobortis. Mauris in tortor id quam faucibus commodo vel id mauris. Donec tincidunt scelerisque iaculis. </p>
         </section>
-        <section id="section7">
-          <ul class="timeline timeline-horizontal">
-            <li class="timeline-item">
-              <button class="timeline-badge primary" id="C2012"><p class="normal pTimeline" > 2012 </p></button>
-            </li>
-            <li class="timeline-item">
-              <button class="timeline-badge primary" id="C2013"><p class="normal pTimeline"> 2013 </p></button>
-            </li>
-            <li class="timeline-item">
-              <button class="timeline-badge primary" id="C2014"><p class="normal pTimeline"> 2014 </p></button>
-            </li>
-            <li class="timeline-item">
-              <button class="timeline-badge primary" id="C2015"><p class="normal pTimeline"> 2015 </p></button>
-            </li>
-            <li class="timeline-item">
-              <button class="timeline-badge primary" id="C2016"><p class="normal pTimeline"> 2016 </p></button>
-            </li>
-          </ul>
-        </section>
+        <ul class="timeline timeline-horizontal">
+          <li class="timeline-item">
+            <button class="timeline-badge primary" id="C2012"><p class="normal pTimeline" > 2012 </p></button>
+          </li>
+          <li class="timeline-item">
+            <button class="timeline-badge primary" id="C2013"><p class="normal pTimeline"> 2013 </p></button>
+          </li>
+          <li class="timeline-item">
+            <button class="timeline-badge primary" id="C2014"><p class="normal pTimeline"> 2014 </p></button>
+          </li>
+          <li class="timeline-item">
+            <button class="timeline-badge primary" id="C2015"><p class="normal pTimeline"> 2015 </p></button>
+          </li>
+          <li class="timeline-item">
+            <button class="timeline-badge primary" id="C2016"><p class="normal pTimeline"> 2016 </p></button>
+          </li>
+        </ul>
         <svg id="bonhomme" width="350" height="350"></svg>
-        <section id="section8">
+        <section id="section8" class="panel">
           <p class="pTitle title"> Dangers des principaux pesticides </p>
           <article class="articleS8">
             <svg width="30" height="10">
@@ -622,9 +621,9 @@
         </section>
       </div>
       <div class="section" data-anchor="page4">
-        <p id="pCredits1" class="title"> Le média et les partenaires </p>
+        <p id="pCredits1" class="title panel"> Le média et les partenaires </p>
         <a href="http://www.eau-et-rivieres.org/home"> <img src="img/logosDivers/logoMedia.png" alt="logo Eau et Rivieres de Bretagne" id="logoMedia"/> </a>
-        <section id="section9">
+        <section id="section9" class="panel">
           <p class="normal pContent pTop"> L’association Eau et Rivières de Bretagne est agréée au titre de la protection de l’environnement, pour assurer « dans l’intérêt
           général la protection, la mise en valeur, la gestion et la restauration de la ressource en eau et des écosystèmes aquatiques,
           dans une perspective de société écologiquement viable », par arrêté préfectoral du 17 décembre 2013. </p>
@@ -633,7 +632,7 @@
           et informatives auprès du grand public. </p>
           <p class="normal pContent pBottom"> L'Association née en 1969, comprend aujourd'hui 1 200 adhérents, une centaine d'associations et 17 salariés. </p>
         </section>
-        <section id="section10">
+        <section id="section10" class="panel">
           <p class="normal pContent pTop">
             Groupe BigData Eau et Rivières de Bretagne :
             <br>
@@ -664,54 +663,96 @@
         </table>
       </div>
       <div class="section" data-anchor="page5">
-        <p id="pCredits2" class="title"> Etudiants participant au projet </p>
+        <p id="pCredits2" class="title panel"> Etudiants participant au projet </p>
         <table id="logosNous">
           <tr>
             <td>
-              <img src="img/etudiants/Alexis.png" alt="Alexis">
-              <p class="name title"> Alexis </p>
+              <img src="img/etudiants/Alexis.png" alt="Alexis" class="imageNous">
+              <p class="name title"> 
+                Alexis 
+                <br>
+                SciencesCom 
+              </p>
             </td>
             <td>
-              <img src="img/etudiants/Angela.png" alt="Angela">
-              <p class="name title"> Angela </p>
+              <img src="img/etudiants/Angela.png" alt="Angela" class="imageNous">
+              <p class="name title"> 
+                Angela 
+                <br>  
+                SciencesCom 
+              </p>
             </td>
             <td>
-              <img src="img/etudiants/Axel.png" alt="Axel">
-              <p class="name title"> Axel </p>
+              <a href="https://www.linkedin.com/in/axel-journe-555a0a140/">
+                <img src="img/etudiants/Axel.png" alt="Axel" class="imageNous">
+              </a>
+              <p class="name title"> 
+                Axel 
+                <br>  
+                Polytech 
+              </p>
             </td>
             <td>
-              <img src="img/etudiants/Clothilde.png" alt="Clothilde">
-              <p class="name title"> Clothilde </p>
+              <img src="img/etudiants/Clothilde.png" alt="Clothilde" class="imageNous">
+              <p class="name title"> 
+                Clothilde 
+                <br>  
+                AGR 
+              </p>
             </td>
             <td>
-              <img src="img/etudiants/Flore.png" alt="Flore">
-              <p class="name title"> Flore </p>
+              <img src="img/etudiants/Flore.png" alt="Flore" class="imageNous">
+              <p class="name title"> 
+                Flore 
+                <br>  
+                AGR 
+              </p>
             </td>
           </tr>
           <tr>
             <td>
-              <img src="img/etudiants/Lara.png" alt="Lara">
-              <p class="name title"> Lara </p>
+              <img src="img/etudiants/Lara.png" alt="Lara" class="imageNous">
+              <p class="name title"> 
+                Lara 
+                <br>  
+                SciencesCom 
+              </p>
             </td>
             <td>
               <a href="http://cargocollective.com/matthieunourisson">
-                <img src="img/etudiants/Matthieu.png" alt="Matthieu">
+                <img src="img/etudiants/Matthieu.png" alt="Matthieu" class="imageNous">
               </a>
-              <p class="name title"> Matthieu </p>
+              <p class="name title"> 
+                Matthieu 
+                <br>  
+                AGR 
+              </p>
             </td>
             <td>
               <a href="https://www.linkedin.com/in/neil-rittner-65aa60137/">
-                <img src="img/etudiants/Niel.png" alt="Neil">
+                <img src="img/etudiants/Niel.png" alt="Neil" class="imageNous">
               </a>
-              <p class="name title"> Neil </p>
+              <p class="name title"> 
+                Neil 
+                <br>  
+                Polytech 
+              </p>
             </td>
             <td>
-              <img src="img/etudiants/Nolwenn.png" alt="Nolwenn">
-              <p class="name title"> Nolwenn </p>
+              <img src="img/etudiants/Nolwenn.png" alt="Nolwenn" class="imageNous">
+              <p class="name title"> 
+                Nolwenn 
+                <br>  
+                SciencesCom 
+              </p>
             </td>
             <td>
-              <img src="img/etudiants/Tristan.png" alt="Tristan">
-              <p class="name title"> Tristan </p>
+              <img src="img/etudiants/Tristan.png" alt="Tristan" class="imageNous">
+              <p class="name title"> 
+                Tristan 
+                <br>  
+                Polytech 
+              </p>
             </td>
           </tr>
         </table>

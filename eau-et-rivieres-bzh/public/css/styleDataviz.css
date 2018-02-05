@@ -29,7 +29,12 @@ body{
     width: auto;
 }
 
-
+.panel {
+    border: 3px solid black;
+    background: white;
+    position: absolute;
+    float: left;
+}
 
 /* ######################################################################### */
 /* --------------- Page 1 --------------- */
@@ -40,12 +45,8 @@ body{
 
 /* Section 1 */
 #section1 {
-    float: left;
-    position: absolute;
-    border: solid 3px black;
-    background-color: white;
-    top: 7%;
-    left: 5%;
+    top: 7vh;
+    left: 5vw;
     width: 40vw;
     word-wrap : break-word;
     text-align: justify;
@@ -57,38 +58,31 @@ body{
 }
 
 .pTop {
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding-top: 0.5vw;
 }
 
 .pBottom {
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding-top: 0.2vw;
+    padding-bottom: 0.5vw;
 }
 
 /* Section 2 */
 #section2 {
-    float: left;
     width: 40vw;
-    position: absolute;
-    top: 78%;
-    left: 8%;
+    top: 78vh;
+    left: 8vw;
 }
 
 /* Section 3 */
 #section3 {
-    float: left;
-    position: absolute;
-    top: 7%;
-    left: 50%;
+    top: 7vh;
+    left: 50vw;
     width: 46vw;
-    height: 78%;
+    height: 80vh;
     word-wrap : break-word;
-    background-color: white;
-    border: 3px solid black;
 }
 
-/* Bonhomme */
+/* Histogrammes */
 #histDroite {
     float: left;
     position: absolute;
@@ -138,18 +132,18 @@ body{
 #buttonSP {
     float: left;
     position: absolute;
-    left: 80%;
-    top: 90%;
-
+    left: 80vw;
+    top: 90vh;
+    width: 15vw;
 }
 
 /* Carte Départements */
 #mapBretagne {
     float: left;
-    width: 40%;
+    width: 30vw;
     position: absolute;
-    top: 40%;
-    left: 5%;
+    top: 50vh;
+    left: 9vw;
 }
 
 #mapBretagne path {
@@ -288,7 +282,7 @@ body{
 }
 
 .st17 {
-    font-size: 7px;
+    font-size: 0.45vw;
 }
 
 .enSavoirPlusP1{
@@ -296,7 +290,7 @@ body{
     border: solid;
     border-width: 5px;
     position: absolute;
-    top: 100px;
+    top: 20vh;
     margin-right: 20%;
     margin-left: 20%;
     margin-top: 0px;
@@ -338,38 +332,30 @@ body{
 /* ######################################################################### */
 /* Section 4 */
 #section4 {
-    float: left;
-    position: absolute;
-    top: 7%;
-    left: 5%;
+    top: 7vh;
+    left: 5vw;
     width: 25vw;
-    border: 3px solid black;
-    background-color: white;
     word-wrap : break-word;
     text-align: justify;
 }
 
 .pTitle {
-    padding: 10px;
+    padding: 0.7vw 0.7vw 0 0.7vw;
 }
 
 /* Section 5 */
 #section5 {
-    float: left;
-    position: absolute;
-    top: 68%;
-    left: 5%;
+    top: 68vh;
+    left: 5vw;
     width: 25vw;
     height: 11.5vw;
-    border: 3px solid black;
-    background-color: white;
 }
 
 #pCiterne {
     float: left;
     position: absolute;
     left: 30%;
-    top: 10%;
+    top: 34%;
     width: 17.5vw;
     text-align: justify;
 }
@@ -515,12 +501,8 @@ body{
 /* ######################################################################### */
 /* Section 6 */
 #section6 {
-    float: left;
-    position: absolute;
-    background-color: white;
-    border: 3px solid black;
-    top: 7%;
-    left: 5%;
+    top: 7vh;
+    left: 5vw;
     width: 31vw;
     text-align: justify;
 }
@@ -529,8 +511,8 @@ body{
 #section7 {
     float: left;
     position: absolute;
-    top: 70%;
-    left: 3.6%;
+    top: 70vh;
+    left: 3.6vw;
     width: 40vw;
 }
 
@@ -548,8 +530,8 @@ body{
 }
 
 .timeline .timeline-item .timeline-badge {
-  width: 40px;
-  height: 40px;
+  width: 2.08vw;
+  height: 2.08vw;
   line-height: 50px;
   position: absolute;
   border: 3px solid black;
@@ -579,17 +561,17 @@ body{
 .timeline-horizontal:before {
   height: 3px;
   top: auto;
-  bottom: 19px;
+  bottom: 13px;
   left: 5%;
   width: 101%;
-  margin-bottom: 20px;
+  margin-bottom: 7%;
 }
 
 .timeline-horizontal .timeline-item {
   display: table-cell;
-  height: 70px;
+  height: 3.64vw;
   width: 20%;
-  min-width: 80px;
+  min-width: 4.16vw;
   float: left;
   left: 10.5%;
   margin: 0 auto;
@@ -607,12 +589,8 @@ body{
 
 /* Section 8 */
 #section8 {
-    float: left;
-    position: absolute;
-    background-color: white;
-    border: 3px solid black;
-    top: 28%;
-    left: 75%;
+    top: 28vh;
+    left: 75vw;
     width: 18vw;
     text-align: justify;
 }
@@ -648,15 +626,11 @@ body{
 /* ######################################################################### */
 /* Petit paragraphe */
 #pCredits1 {
-    float: left;
-    position: absolute;
-    top: 7%;
-    left: 35%;
-    width: 30%;
+    top: 7vh;
+    left: 35vw;
+    width: 30vw;
     padding: 10px;
     text-align: center;
-    background-color: white;
-    border: 3px solid black;
 }
 
 /* Logo Eau et Rivieres */
@@ -666,31 +640,23 @@ body{
     width: 20vw;
     height: auto;
     border: 3px solid black;
-    top: 20%;
-    left: 54%;
+    top: 20vh;
+    left: 54vw;
 }
 
 /* Section 9 */
 #section9 {
-    float: left;
-    position: absolute;
-    border: 3px solid black;
-    background-color: white;
     width: 35vw;
-    top: 18%;
-    left: 8%;
+    top: 18vh;
+    left: 8vw;
     text-align: justify;
 }
 
 /* Section 10 */
 #section10 {
-    float: left;
-    position: absolute;
-    border: 3px solid black;
-    background-color: white;
     width: 35vw;
-    top: 35%;
-    left: 54%;
+    top: 35vh;
+    left: 54vw;
     text-align: justify;
 }
 
@@ -747,27 +713,33 @@ body{
 /* ######################################################################### */
 /* Petit paragraphe */
 #pCredits2 {
-    float: left;
-    position: absolute;
-    top: 15%;
-    left: 35%;
+    top: 15vh;
+    left: 35vw;
     width: 30vw;
     padding: 10px;
     text-align: center;
-    background-color: white;
-    border: 3px solid black;
 }
 
 /* Tableau de logos */
 #logosNous {
     float: left;
     position: absolute;
-    top: 40%;
+    top: 32vh;
     width: 90vw;
-    left: 5%;
+    left: 5vw;
     text-align: center;
     border-collapse: separate;
-    border-spacing: 10px 30px;; /* Nombre de pixels d'espace horizontal (5px), vertical (8px) */
+    border-spacing: 10px 30px;
+}
+
+#logosNous td {
+    width: 12%;
+    height: auto;
+}
+
+.imageNous {
+    max-width: 90%;
+    height: auto;
 }
 
 .name {
