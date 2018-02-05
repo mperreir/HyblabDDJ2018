@@ -65,11 +65,11 @@
 
       <div id="firstsection" class="section">
         <div class="slide" id="section_home">
-          <span id="container_infos_nav">
-            <h1>Arrêt d'urgence </br>Pleins feux sur les accidents aux passages à niveau</h1>
-            <p>
+          <section id="container_infos_nav">
+            <img id="logo" src="img/home/Logo.png" alt="logo site"/>
+            <!-- <p id="logotext">
             Les accidents aux passages à niveau sont malheureusement souvent d'actualité. L'année 2017 a été marquée par un terrible accident en décembre au passage à niveau de Millas, où 5 adolescents ont péri suite à la collision entre un train et un car scolaire.
-            </p>
+            </p>-->
               <div >
                 <h3>Démarrer <br/>l'expérience</h3>
                 <div id="infos_nav_souris">
@@ -79,7 +79,7 @@
                   <img  src="img/home/TOUCHES.png" alt="Descend avec le clavier !" />
                 </div>
             </div>
-          </span>
+          </section>
         </div>
         <div class="slide nothome" id="section_evenements">
           <div id="slide2_container_text">
@@ -101,7 +101,7 @@
 
         </div>
         <div class="slide" id="section_home">
-          <span class="title_question" id="container_infos_nav">
+          <section class="title_question">
             <h1>Pensez-vous que le nombre de passages à niveau en France depuis ces 20 dernières années a :</h1>
               <div id="q1" class="q">
                 <button type="button"  class="v button" onclick="reponse(this);">Baissé</button>
@@ -112,10 +112,10 @@
               <div class="r" id="r1">
                 <p> aezaeaeaeazeaze </p>
               </div>
-          </span>
+          </section>
         </div>
         <div class="slide" id="section_home">
-          <span class="title_question" id="container_infos_nav">
+          <section class="title_question">
             <h1>Quelle distance parcourt un train lancé à 100km/h pour s'arrêter ?</h1>
               <div id="q2" class="q">
                 <button type="button"  class="f button" onclick="reponse(this);">100m</button>
@@ -126,10 +126,10 @@
               <div class="r" id="r2">
                 <p> aezaeaeaeazeaze </p>
               </div>
-          </span>
+          </section>
         </div>
         <div class="slide" id="section_home">
-          <span class="title_question" id="container_infos_nav">
+          <section class="title_question">
             <h1>Combien de véhicules traversent chaque jour un passage à niveau ?</h1>
               <div id="q3" class="q">
                 <button type="button"  class="f button" onclick="reponse(this);">500 000</button>
@@ -140,15 +140,15 @@
               <div class="r" id="r3">
                 <p> aezaeaeaeazeaze </p>
               </div>
-          </span>
+          </section>
         </div>
         <div class="slide" id="section_home">
-          <span class="title_question" id="container_infos_nav">
+          <section class="title_question">
             <h1>Selon vous, les principaux responsables des accidents aux passages à niveau sont :</h1>
               <div id="q4" class="q">
-                <button type="button"  class="f button" onclick="reponse(this);">Les automobilistes</button>
+                <button type="button"  class="v button" onclick="reponse(this);">Les automobilistes</button>
                 <button type="button"  class="f button" onclick="reponse(this);">Les trains</button>
-                <button type="button"  class="v button" onclick="reponse(this);">Les passages à niveau</button>
+                <button type="button"  class="f button" onclick="reponse(this);">Les passages à niveau</button>
               </div>
 
               <div class="r" id="r4">
@@ -158,11 +158,11 @@
                 <img src="img/question/tips.svg"/>
                 <p id="more21"> zaeazeaze </p>
               </div>
-          </span>
+          </section>
         </div>
           <!-- Slide jour / nuit -->
           <div class="slide nothome" id="section_illu1">
-            <span class="title_question" id="container_infos_nav">
+            <section class="title_question">
               <h1>Pensez-vous que les accidents se font le plus souvent de nuit ou de jour ?</h1>
 
               <div id="q5" class="q">
@@ -171,7 +171,7 @@
               </div>
               <p id="nuit">29%</p>
               <p id="jour">71%</p>
-            </span>
+            </section>
           </div>
 
           <!-- slide 3 -->
@@ -182,6 +182,7 @@
 
           <!-- slide 4 CAMION-->
           <div class="slide nothome" id="section_illu_camion">
+          <section class="title_question">
             <h1>Quelle type de véhicule provoque le plus d'accidents ?</h1>
             <h2 id="infos_accidents"></h2>
               <div id="graph_vehicule">
@@ -207,7 +208,7 @@
                 <img  class="select_veh" id="img_train_slide3" src="img/Vehicules/Train.svg" alt="train" />
               </div>
           </div>
-
+          </section>
           <!-- slide 6 AMBULANCE-->
           <div class="slide nothome" >
             <div id="slide_ambu_text">
