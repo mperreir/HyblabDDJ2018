@@ -115,9 +115,8 @@ h1
 p
 {
   color:white;
-  font-weight: bold;
   font-family: "work_sans";
-  font-size:12px;
+  font-size:16px;
 }
 a
 {
@@ -148,6 +147,7 @@ h3
 
 #chart_lum_container {
   position: absolute;
+  text-align: center;
   left: 20%;
   width: 60%;
   height: auto;
@@ -270,12 +270,7 @@ button:focus { outline-style: none; }
 
 /* -- Slide jour nuit */
 
-#section_illu1 {
-  background-color:url(../img/Illu1/first.svg);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
+
 
 #warning
 {
@@ -285,17 +280,6 @@ button:focus { outline-style: none; }
   color : white;
 }
 
-.beforeday
-{
-  width: 100%;
-  height:100vh;
-  background-image : url(../img/Illu1/first.svg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  position: absolute;
-  top: 0;
-
-}
 
 .spinner{
   display: block;
@@ -533,7 +517,7 @@ button:focus { outline-style: none; }
   position: absolute;
   width: 100%;
   top: 0;
-  transform: translateY(30%);
+  transform: translateY(20%);
 }
 
 #informations
@@ -547,8 +531,7 @@ button:focus { outline-style: none; }
   width: 100%;
   text-align: center;
   position: absolute;
-  bottom: 0;
-  transform: translateY(-200%);
+  bottom: 15%;
 }
 
 #ens_ecole a
@@ -926,12 +909,7 @@ text-align: center;
 }
 
 /* Slide saisons */
-#slide_saisons {
-  background-image: url(../img/4saisons/decorSaison.png);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
+
 #container_slide_saisons {
   position: absolute;
   top:10%;
@@ -944,12 +922,7 @@ text-align: center;
   margin: 2%;
 }
 
-#slide_montre {
-  background: #241D37;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
+
 
 #container_slide_jour {
 
@@ -1346,7 +1319,7 @@ svg[hidden]:not(:root) {
 .arrows path {
   stroke: #2994D1;
   fill: transparent;
-  stroke-width: 5px;
+  stroke-width: 3px;
   animation: arrow 2s infinite;
   -webkit-animation: arrow 2s infinite;
 }
@@ -1377,7 +1350,3 @@ svg[hidden]:not(:root) {
   -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
 }
 
-.arrows path.a3 {
-  animation-delay:0s;
-  -webkit-animation-delay:0s; /* Safari 和 Chrome */
-}
