@@ -6,8 +6,6 @@
 }
 
 #sidebar {
-  grid-column: 4;
-  grid-row: 2;
 }
 #sequence {
   display: none;
@@ -16,8 +14,6 @@
 }
 
 #legend {
-  grid-column: 4;
-  grid-row: 2;
   padding: 10px 0 0 3px;
 }
 
