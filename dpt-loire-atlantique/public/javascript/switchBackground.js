@@ -1,5 +1,4 @@
 var graph = 0;
-document.getElementsByClassName("graph7")[0].style.display = 'none';
 
 function switchBackground(id){
 																
