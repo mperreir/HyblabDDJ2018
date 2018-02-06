@@ -24,12 +24,10 @@ $ (document).ready(function(){
             return {};
         })
         .then(function(json){
-           console.log(json);
            var conjonctureEPCI = {};
            json.values.forEach(function(value){
                 conjonctureEPCI[value[0]] = value[1];
             });
-           console.log(conjonctureEPCI);
            drawMap(conjonctureEPCI);
         });
 
