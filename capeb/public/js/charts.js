@@ -627,7 +627,7 @@ function fetchConjonctureData(d) {
 function createConjonctureDataviz(json) {
     var labelsy = ["Chiffre d'affaires", "Marge", "Trésorerie", "Carnet de commandes"];
     var labelsx = ["À la baisse", "Stable", "À la hausse"];
-    var pointsColor = [["#ACF2E2", "#50EC2", "#02998B"], ["#AEDFF8", "#68C0ED", "#427C9A"], ["#D8D8D8", "#9B9B9B", "#9B9B9B"], ["#EB8D8B", "#DF261D", "#A61B14"]];
+    var pointsColor = [["#ACF2E2", "#50EC2", "#02998B"], ["#AEDFF8", "#68C0ED", "#427C9A"], ["#D8D8D8", "#9B9B9B", "#585354"], ["#EB8D8B", "#DF261D", "#A61B14"]];
 
 
     var d = {
@@ -658,15 +658,7 @@ function createConjonctureDataviz(json) {
     });
 
     function radiusmatch(value) {
-        if (value <= 0.25) {
-            return 12.25;
-        } else if (value <= 0.50) {
-            return 25;
-        } else if (value <= .75) {
-            return 37.5;
-        } else if (value <= 1) {
-            return 50;
-        }
+      return (value*50)
     }
 
     var sec = document.getElementById("dataviz-section");
