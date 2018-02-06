@@ -107,6 +107,7 @@ header img{
 
 h1
 {
+  font-size: 36px;
   font-family: "overpass";
   font-weight: bold;
   color:#F53855;
@@ -197,6 +198,12 @@ h3
   margin-right: auto;
 }
 
+#more22:hover + #more21
+{
+  display:block;
+}
+
+
 .more img
 {
   width : 5%;
@@ -212,6 +219,8 @@ h3
 
 #more21
 {
+  display: none;
+  background-color: #30354C;
   text-align: justify;
   width: 90% !important;
 }
@@ -253,6 +262,17 @@ button:focus { outline-style: none; }
 /* -- Slide questions 1 */
 
 .title_question
+{
+  display: block;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  width: 75%;
+  top:50px;
+  transform: translate(20%, 5%)
+}
+
+.auto
 {
   display: block;
   text-align: center;
@@ -930,6 +950,7 @@ text-align: center;
   float: left;
   margin-left: 10%;
   height: auto !important;
+  transform:translateX(25%);
 }
 #slide_container_montres {
   position: absolute;
@@ -945,6 +966,7 @@ text-align: center;
 }
 #legende_trajets {
   margin-left: 40%;
+  transform: translateY(-100%);
 }
 
 #saison_graph {
