@@ -66,6 +66,7 @@ header img{
     z-index: 70;
     position: fixed;
     background-color: transparent;
+    display: none;
 }
 
 #beforequestion
@@ -269,7 +270,7 @@ button:focus { outline-style: none; }
 /* -- Slide jour nuit */
 
 #section_illu1 {
-  background-image: url(../img/Illu1/first.svg);
+  background-color:url(../img/Illu1/first.svg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -285,15 +286,33 @@ button:focus { outline-style: none; }
 
 #beforeday
 {
+  width: 100%;
+  height:100vh;
+  background-image : url(../img/Illu1/first.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
 
 }
-
-#afterday
+#loading
 {
-
+  width: 100%;
+  height:100vh;
+  background-color: #241D37;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1000000;
 }
 
-
+#loading img
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 
 .nothome
 {

@@ -7,6 +7,11 @@
 //---------------------
 // Initialise le fullpage
 
+window.onload = function(){
+  $("#loading").delay(5000).fadeOut('slow');
+  $("#menu").delay(5000).fadeIn('slow');
+};
+
 $('.arrowUp').click(function(){
     $.fn.fullpage.moveSectionUp();
 });
@@ -50,8 +55,8 @@ fetch('data/reponses.json')
 
 
 function Light(){
-    $("#section_illu1").fadeIn("slow",function(){
-        $("#section_illu1").css({'background-image':'url(img/Illu1/daynight.svg)'});
+    $("#beforeday").fadeTo("slow",0.1,function(){
+        $("#beforeday").css({'background-image':'url(img/Illu1/daynight.svg)'});
         $("#nuit").css({'visibility':'visible'});
         $("#jour").css({'visibility':'visible'});
     }).fadeTo('slow', 1);

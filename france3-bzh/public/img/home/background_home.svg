@@ -604,9 +604,10 @@
              xlink:href="#train"
              attributeName="transform"
              type="translate"
-             dur="20s"
-             values="-460 875 ; -460 875 ; 1920 875 ; 1920 875 ; -460 875"
-             keyTimes="0;0.2;0.3;0.75;1"
+             dur="20"
+             values="-460 875 ; -460 875 ; 230 875; 330 875 ; 420 875; 420 875 ; 510 875 ; 710 875 ;1920 875;
+             1920 875; 910 875 ; 710 875 ; 620 875; 620 875; 510 875; 220 875; -460 875"
+             keyTimes="0;0.05;0.15;0.2;0.3;0.35;0.4;0.45;0.55;0.60;0.7;0.75;0.8;0.85;0.90;0.95;1"
              repeatCount="indefinite"
              id="train-animation"></animateTransform>
 </svg>
