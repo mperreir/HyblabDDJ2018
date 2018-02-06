@@ -117,3 +117,42 @@ fetch('data/datas.json')
             $('#dpt').attr('src','img/cotesdarmor.png');
         }
     });
+
+    $(function() {
+        $('#descriptionBonhomme2012').hide();
+        $('#descriptionBonhomme2013').hide();
+        $('#descriptionBonhomme2014').hide();
+        $('#descriptionBonhomme2015').hide();
+        $('#descriptionBonhomme2016').hide();
+        $('#descC2012').hide();
+        $('#descC2013').hide();
+        $('#descC2014').hide();
+        $('#descC2015').hide();
+        $('#descC2016').hide();
+        $('#descriptionBonhomme').html($('#descriptionBonhomme2012').html());
+    });
+
+    $('#C2012').click(function() {
+        $('#descriptionBonhomme').html($('#descriptionBonhomme2012').html());
+        $('#anneeCampbon').text($("#descC2012 p").text());
+    })
+
+    $('#C2013').click(function() {
+        $('#descriptionBonhomme').html($('#descriptionBonhomme2013').html());
+        $('#anneeCampbon').text($("#descC2013 p").text());
+    })
+
+    $('#C2014').click(function() {
+        $('#descriptionBonhomme').html($('#descriptionBonhomme2014').html());
+        $('#anneeCampbon').text($("#descC2014 p").text());
+    })
+
+    $('#C2015').click(function() {
+        $('#descriptionBonhomme').html($('#descriptionBonhomme2015').html());
+        $('#anneeCampbon').text($("#descC2015 p").text());
+    })
+
+    $('#C2016').click(function() {
+        $('#descriptionBonhomme').html($('#descriptionBonhomme2016').html());
+        $('#anneeCampbon').text($("#descC2016 p").text());
+    })

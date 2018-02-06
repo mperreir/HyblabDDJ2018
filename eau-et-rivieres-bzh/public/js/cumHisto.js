@@ -74,11 +74,36 @@ $('#FR-49').on('click', function(event) {changeOneHisto("Maine_et_Loire");});
 $('#FR-53').on('click', function(event) {changeOneHisto("Mayenne");});
 $('#FR-56').on('click', function(event) {changeOneHisto("Morbihan");});
 
-$('#C2012').on('click', function(event) {anneeCambon="2012";upDateHisto('#bonhomme');});
-$('#C2013').on('click', function(event) {anneeCambon="2013";upDateHisto('#bonhomme');});
-$('#C2014').on('click', function(event) {anneeCambon="2014";upDateHisto('#bonhomme');});
-$('#C2015').on('click', function(event) {anneeCambon="2015";upDateHisto('#bonhomme');});
-$('#C2016').on('click', function(event) {anneeCambon="2016";upDateHisto('#bonhomme');});
+$('#C2012').on('click', function(event) {
+	anneeCambon="2012";
+	upDateHisto('#bonhomme');
+	$('#C2012').css('background-color','#404142');
+	$('#C2013, #C2014, #CC2015, #C2016').css('background-color','white');
+});
+$('#C2013').on('click', function(event) {
+	anneeCambon="2013";
+	upDateHisto('#bonhomme');
+	$('#C2013').css('background-color','#404142');
+	$('#C2012, #C2014, #C2015, #C2016').css('background-color','white');
+});
+$('#C2014').on('click', function(event) {
+	anneeCambon="2014";
+	upDateHisto('#bonhomme');
+	$('#C2014').css('background-color','#404142');
+	$('#C2012, #C2013, #C2015, #C2016').css('background-color','white');
+});
+$('#C2015').on('click', function(event) {
+	anneeCambon="2015";
+	upDateHisto('#bonhomme');
+	$('#C2015').css('background-color','#404142');
+	$('#C2012, #C2013, #C2014, #C2016').css('background-color','white');
+});
+$('#C2016').on('click', function(event) {
+	anneeCambon="2016";
+	upDateHisto('#bonhomme');
+	$('#C2016').css('background-color','#404142');
+	$('#C2012, #C2013, #C2014, #C2015').css('background-color','white');
+});
 
 
 function changeOneHisto(newDep){
@@ -98,11 +123,11 @@ function changeOneHisto(newDep){
 }
 
 function upDateTexteGauche(){
-	$("#descriptionGauche").text($("#Finistere .2016").text());
+	$("#descriptionGauche").text($("#"+dep1+" ."+annee).text());
 }
 
 function upDateTexteDroite(){
-	$("#descriptionDroite").text($("#Finistere .2016").text());
+	$("#descriptionDroite").text($("#"+dep2+" ."+annee).text());
 }
 
 function upDateHisto(histo){
