@@ -1,19 +1,14 @@
-var current_d = 0
+var current_d = 0;
 
+//backToMap button
+$ (document).ready(function(){
+    document.getElementsByClassName("backToMap")[0].addEventListener("click", function () {
+        var location = document.location.href;
+        document.location.href = location.slice(0, location.lastIndexOf("/"));
+    });
+});
 
 function miniStats(regionStats, d) {
-    var colorsForRegion = [
-        "rgba(240,101,85,1)",
-        "rgba(244,133,64,1)",
-        "rgba(248,165,43,1)",
-        "rgba(251,157,21,1)",
-        "rgba(255,229,0,1)",
-        "rgba(225,223,36,1)",
-        "rgba(195,216,76,1)",
-        "rgba(165,210,113,1)",
-        "rgba(135,203,151,1)",
-        "rgba(105,197,185,1)"
-    ];
 
     //1 : conjoncture / number / multibubble
     fetch("/capeb/data/" + d.properties.siren_epci + "/conjoncture")

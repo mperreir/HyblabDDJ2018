@@ -316,4 +316,26 @@ app.get('/regionStats', function(req, res){
 
 });
 
+
+
+app.get('/conjoncture_map', function(req, res){
+    var json = {};
+    var csv = path.join(__dirname,'./data/stats/ConjonctureEPCI.csv');
+    var data = fs.readFileSync(csv, 'utf8');
+    data.split(/\r\n|\n/).forEach(function (line, id) {
+        if(id == 0){
+            keys = line.split(",");
+            json['labels'] = keys;
+            json['values'] =  [];
+        }
+        else{
+            var cells = line.split(',');
+            json['values'].push(cells);
+        }
+    });
+    res.json(json);
+
+});
+
+
 module.exports = app;
