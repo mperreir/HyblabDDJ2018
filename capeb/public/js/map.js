@@ -13,7 +13,28 @@ var colorsForRegion = [
     "rgba(105,197,185,1)"
 ];
 
-$ (document).ready(function(){
+function initializeDashboard() {
+    var html = document.getElementById("regionDashboard").innerHTML;
+    var sectionDashboard = document.getElementById("dashboard-slide");
+    sectionDashboard.innerHTML = html;
+    document.getElementsByClassName("backToMap")[0].addEventListener("click", function () {
+        var location = document.location.href;
+        document.location.href = location.slice(0, location.lastIndexOf("/"));
+    });
+    document.getElementById("nom_epci").innerText = "Région";
+    document.getElementById("switchToRegion").checked = true;
+    document.getElementById("switchToRegion").addEventListener("change", function(){
+        if(this.checked){
+            initializeDashboard();
+        } else{
+            var idEpci = document.getElementById("cacheEPCI").innerHTML;
+            var path = $(document.getElementById(idEpci));
+            onSvgClick(path[0].__data__);
+        }
+    });
+}
+
+$(document).ready(function () {
     fetch("/capeb/data/conjoncture_map")
         .then(function (value) {
             return value.json();
@@ -23,23 +44,43 @@ $ (document).ready(function(){
             console.log(error);
             return {};
         })
-        .then(function(json){
-           var conjonctureEPCI = {};
-           json.values.forEach(function(value){
+        .then(function (json) {
+            initializeDashboard();
+
+            var conjonctureEPCI = {};
+            json.values.forEach(function (value) {
                 conjonctureEPCI[value[0]] = value[1];
             });
-           drawMap(conjonctureEPCI);
+            drawMap(conjonctureEPCI);
+            d3.select(window).on('resize', function () {
+                $(".map-pdl").innerHTML = "";
+                drawMap();
+            });
+            $()
         });
-
 });
 
-d3.select(window).on('resize', function(){
-    $(".map-pdl").innerHTML = "";
-    drawMap();
-});
+// emulate a click on svg
+function onSvgClick(d){
+    fetch("/capeb/data/regionStats")
+        .then(function (value) {
+            return value.json();
+        })
+        .catch(function (error) {
+            console.log("error");
+            console.log(error);
+            return {};
+        })
+        .then(function (json) {
+            document.getElementById("cacheEPCI").innerHTML = d.properties.siren_epci;
+            document.getElementById("nom_epci").innerText = d.properties.nom_comple;
+            createModal();
+            miniStats(json, d);
+            document.getElementById("switchToRegion").checked = false;
+        });
+}
 
-
-function drawMap(conjonctureEpci){
+function drawMap(conjonctureEpci) {
     var mapPdl = $(".map-pdl");
     var viewportWidth = mapPdl.width();
     var viewportHeight = mapPdl.height();
@@ -49,7 +90,7 @@ function drawMap(conjonctureEpci){
     var map = d3.select(".map-pdl");
 
     var svg = document.getElementById("svg-map");
-    if(svg!== null) {
+    if (svg !== null) {
         svg.remove();
     }
     svg = map.append("svg")
@@ -58,19 +99,19 @@ function drawMap(conjonctureEpci){
 
     d3.json("data/merged.geojson", function (err, geoJSON) {
         var center = d3.geo.centroid(geoJSON);
-        var scale = width*10;
-        var offset = [width/2, height/2];
+        var scale = width * 10;
+        var offset = [width / 2, height / 2];
         var projection = d3.geo.mercator().scale(scale).center(center).translate(offset);
 
         var path = d3.geoPath(projection);
 
         // using the path determine the bounds of the current map and use
         // these to determine better values for the scale and translation
-        var bounds  = path.bounds(geoJSON);
-        var hscale  = scale*width  / (bounds[1][0] - bounds[0][0]);
-        var vscale  = scale*height / (bounds[1][1] - bounds[0][1]);
-        var scale2   = (hscale < vscale) ? hscale : vscale;
-        var offset2  = [width - (bounds[0][0] + bounds[1][0])/2, height - (bounds[0][1] + bounds[1][1])/2];
+        var bounds = path.bounds(geoJSON);
+        var hscale = scale * width / (bounds[1][0] - bounds[0][0]);
+        var vscale = scale * height / (bounds[1][1] - bounds[0][1]);
+        var scale2 = (hscale < vscale) ? hscale : vscale;
+        var offset2 = [width - (bounds[0][0] + bounds[1][0]) / 2, height - (bounds[0][1] + bounds[1][1]) / 2];
 
         // new projection
         projection = d3.geo.mercator().center(center)
@@ -84,9 +125,10 @@ function drawMap(conjonctureEpci){
             .attr("fill", "white")
             .attr("stroke-width", "0.1px")
             .attr("stroke", "rgba( 29, 29, 27, 0.5 )")
+            .attr("id", function(d){return d.properties.siren_epci;
+            })
             .attr("d", path)
             .on("click", function (d) {
-
                 fetch("/capeb/data/regionStats")
                     .then(function (value) {
                         return value.json();
@@ -96,17 +138,17 @@ function drawMap(conjonctureEpci){
                         console.log(error);
                         return {};
                     })
-                    .then(function(json){
+                    .then(function (json) {
+                        document.getElementById("cacheEPCI").innerHTML = d.properties.siren_epci;
                         createModal();
                         miniStats(json, d);
+                        document.getElementById("switchToRegion").checked = false;
+                        // move to dashboard
+                        document.location.href = document.location + "/slide2";
+                        document.getElementById("nom_epci").innerText = d.properties.nom_comple;
                     });
-
-                // move to dashboard
-                document.location.href = document.location + "/slide2";
-                document.getElementById("nom_epci").innerText = d.properties.nom_comple;
             })
-
-            .on("mouseover", function(d) {
+            .on("mouseover", function (d) {
                 var conjoncture = conjonctureEpci[d.properties.siren_epci];
                 var color = colorsForRegion[matchColor(conjoncture, 2.87, 3.78, 0.182, 0.244, false)];
                 d3.select(this).transition()
@@ -115,7 +157,7 @@ function drawMap(conjonctureEpci){
                     .style("cursor", "pointer");
                 d3.select("#titre-epci").text(d.properties.nom_comple);
             })
-            .on("mouseout", function() {
+            .on("mouseout", function () {
                 d3.select(this).transition()
                     .delay("200")
                     .duration("3000")
