@@ -3,8 +3,6 @@ html, body{
     margin: 0;
     background: #fff;
 }
-
-
 /*
 a {
     color: #000000;
@@ -56,9 +54,9 @@ a:hover, a:active, a:focus {
    width:37.8%;
    background-color: #4e2850;
 }*/
-/*
+
 .accroche {
-    margin-top: 40px;
+    margin-top: 60px;
     color: #FFFFFF;
     font-family: Lato;
     font-size: 25px;
@@ -68,9 +66,7 @@ a:hover, a:active, a:focus {
 
 .explication {
     top: 250px;
-
-    margin-top: 40px;
-
+    margin-top: 50px;
     height: 23.65%;
     color: #FFFFFF;
     font-family: Lato;
@@ -82,7 +78,7 @@ a:hover, a:active, a:focus {
 .temoignage {
     position: absolute;
     top: 400px;
-    margin-top: 40px;
+    margin-top: 55px;
     height: 158px;
     width: 394px;
     color: #FFFFFF;
@@ -91,7 +87,7 @@ a:hover, a:active, a:focus {
     font-style: italic;
     letter-spacing: 1px;
     line-height: 25px;
-}*/
+}
 
 #sideMenu{
     position: relative;
