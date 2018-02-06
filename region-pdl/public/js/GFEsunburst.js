@@ -1,8 +1,8 @@
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function ($scope) {
     //initialise a svg
-    var width = 550;
-    var height = 400;
+    var width = 450;
+    var height = 350;
     var radius = Math.min(width, height) / 2;
 
     // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
@@ -12,6 +12,12 @@ app.controller('myCtrl', function ($scope) {
     var totalSize = 0;
     var totalM = 0;
     var total = 0;
+    var totalM1 = 0;
+    var total1 = 0;
+    var totalM2 = 0;
+    var total2 = 0;
+    var totalM3 = 0;
+    var total3 = 0;
 
 // Mapping of step names to colors.
     var colors = {
@@ -27,7 +33,7 @@ app.controller('myCtrl', function ($scope) {
         'Secteur-04': '#1078a8',
         'Secteur-05': '#149ed9',
         'Secteur-06': '#00bbff',
-        'Secteur-07': '#83a1a8',
+        'Secteur-07': '#33AFCE',
         'Secteur-08': '#77c0db',
         'Secteur-09': '#b9e3ec'
     };
@@ -186,6 +192,8 @@ app.controller('myCtrl', function ($scope) {
             document.getElementById("main").style.display=""
             d3.select('#showExplain')
                 .style('visibility', 'hidden');
+            d3.select('#dessus')
+                .style('visibility', 'hidden');
             createVisualization(hierarchyData);
         });
     };
@@ -316,16 +324,47 @@ app.controller('myCtrl', function ($scope) {
     function getDescription(d) {
         totalM =0 ;
         total = 0;
+        totalM1 = 0;
+        total1 = 0;
+        totalM2 = 0;
+        total2 = 0;
+        totalM3 = 0;
+        total3 = 0;
         if (d.depth === 1) {
             for (var i = 0; i < d.children.length; i++) {
                 for (var j = 0; j < d.children[i].children.length; j++) {
                     totalM += d.children[i].children[j].T_Max;
                     total += d.children[i].children[j].T_effectifs;
+                    totalM1 += d.children[i].children[j].an1_Max;
+                    total1 += d.children[i].children[j].an1_Effectifs;
+                    totalM2 += d.children[i].children[j].an2_Max;
+                    total2 += d.children[i].children[j].an2_Effectifs;
+                    totalM3 += d.children[i].children[j].an3_Max;
+                    total3 += d.children[i].children[j].an3_Effectifs;
                 }
             }
         }
+
         var percent = (100 * total / totalM).toPrecision(3);
-        var percentStr = percent + '%';
+
+        var percent1,percent2 ,percent3;
+
+        if(totalM1===0){
+            percent1 =0;
+        }else{
+            percent1 = (100 * total1 / totalM1).toPrecision(3);
+        }
+        if(totalM2===0){
+            percent2 =0;
+        }else{
+            percent2 = (100 * total2 / totalM2).toPrecision(3);
+        }
+        if(totalM3===0){
+            percent3 =0;
+        }else{
+            percent = (100 * total3 / totalM3).toPrecision(3);
+        }
+        // var percentStr = percent + '%';
 
         // d3.select('#exp')
         //         .text(percentStr + '\n' + '\n \r Effectifs par rapport à la capacité max.\n');
@@ -333,19 +372,72 @@ app.controller('myCtrl', function ($scope) {
         d3.select('#showExplain')
                 .style('visibility', '');
 
+        d3.select('#dessus')
+            .style('visibility', '');
+
         d3.select('#exp1')
                 .text('Effectifs par rapport à la capacité max.\n');
-        var option1 = {
-            value:percent,
+
+
+        d3.select('#text')
+            .text('Effectifs par rapport à la capacité max.\n');
+
+        // d3.select('#an1')
+        //     .text('Effectifs par rapport à la capacité max.\n');
+        //
+        // d3.select('#exp1')
+        //     .text('Effectifs par rapport à la capacité max.\n');
+        // d3.select('#exp1')
+        //     .text('Effectifs par rapport à la capacité max.\n');
+
+        var option = {
+            value: percent,
             name:'',//必填
             backgroundColor:null,
             color:['#a0cb4d','#c6dac4'],
             fontSize:24,
             fontFamily: 'sans-serif',
             domEle:document.getElementById("exp")//必填
+        },percentPie = new PercentPie(option);
+        percentPie.init();
+
+        var option1 = {
+            value: percent1,
+            name:'Année1',//必填
+            backgroundColor:null,
+            color:['#4bb8e6','#ffffff'],
+            fontSize:14,
+            fontWeight:  100,
+            fontFamily: 'sans-serif',
+            domEle:document.getElementById("expan1")//必填
         },percentPie1 = new PercentPie(option1);
         percentPie1.init();
+
+        var option2 = {
+            value: percent2,
+            name:'Année2',//必填
+            backgroundColor:null,
+            color:['#4bb8e6','#ffffff'],
+            fontSize:14,
+            fontWeight: 100,
+            fontFamily: 'sans-serif',
+            domEle:document.getElementById("expan2")//必填
+        },percentPie2 = new PercentPie(option2);
+        percentPie2.init();
+
+        var option3 = {
+            value: percent3,
+            name:'Année3',//必填
+            backgroundColor:null,
+            color:['#4bb8e6','#ffffff'],
+            fontSize:14,
+            fontWeight: 100,
+            fontFamily: 'sans-serif',
+            domEle:document.getElementById("expan3")//必填
+        },percentPie3 = new PercentPie(option3);
+        percentPie3.init();
     }
+
 
     function initializeBreadcrumbTrail() {
         // Add the svg area.
@@ -476,6 +568,7 @@ app.controller('myCtrl', function ($scope) {
         this.value           = option.value;
         this.name            = option.name;
         this.title           = option.title;
+        this.fontWeight      = option.fontWeight
     }
     PercentPie.prototype.init = function(){
         var _that = this;
@@ -494,10 +587,10 @@ app.controller('myCtrl', function ($scope) {
                         position: 'center',
                         textStyle: {
                             fontSize: _that.fontSize,
-                            fontWeight: 'bold',
+                            fontWeight: 500,
                             color:['#000000']
                         },
-                        formatter:'{c}%'
+                        formatter:'{b}\n{c}%'
                     }
                 },
                 data: [{
