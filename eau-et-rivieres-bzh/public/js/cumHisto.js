@@ -265,7 +265,7 @@ function buildHisto(parent, ann, dep){
 				return colDict[colIndex-1];
 			}
 		}
-		if (ann != "All"){
+		if (ann != "All" && dep != "Campbon"){
 			//The water butt width has to be the same than the
 			//histogram width
 			var widthWatBut =  x.bandwidth();
@@ -277,11 +277,17 @@ function buildHisto(parent, ann, dep){
 				.style("height", heightWatBut)
 				.attr("y",-34)
 				.attr("preserveAspectRatio","none");
-		}else if (dep != "Campbon"){
-				g.append("g")
-				    .attr("class", "axis")
-				    .attr("transform", "translate(0," + String(height) + ")")
-				    .call(d3.axisBottom(x));
+		}else if (dep == "Campbon"){
+
+			var widthBottle =  1.01*x.bandwidth();
+			var heightBottle =  height*1.2;
+
+			g.append("image")
+				.attr("xlink:href","img/bouteille.svg")
+				.style("width", widthBottle)
+				.style("height", heightBottle)
+				.attr("y",-32)
+				.attr("preserveAspectRatio","none");
 		}
 
 		g.append("g")
