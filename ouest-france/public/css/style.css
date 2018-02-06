@@ -911,6 +911,14 @@ p.texteGlobal1{
 	margin-left: 25px;
 }
 
+p.texteGlobal1--hidden{
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
 p.texteGlobal2{
 	color: #a9ff88;
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -979,6 +987,7 @@ object.mapFrance
 
 }
 
+/********************************************************************************************************************/
 .graph
 {
 	width: 500px;

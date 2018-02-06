@@ -211,38 +211,38 @@ function controleurPlan(){
         });
 
         var pays1 = camembertScene(2007, "Discover stage", "#pieScene1");
-            for (var i = 0; i<pays1.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays1[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene1.appendChild(legende);
-            }
-            var pays2 = camembertScene(2007, "Gibson stage", "#pieScene2");
-            for (var i = 0; i<pays2.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays2[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene2.appendChild(legende);
-            }
-            var pays3 = camembertScene(2007, "Main", "#pieScene3");
-            for (var i = 0; i<pays3.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays3[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene3.appendChild(legende);
-            }
+        for (var i = 0; i<pays1.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays1[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene1.appendChild(legende);
+        }
+        var pays2 = camembertScene(2007, "Gibson stage", "#pieScene2");
+        for (var i = 0; i<pays2.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays2[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene2.appendChild(legende);
+        }
+        var pays3 = camembertScene(2007, "Main", "#pieScene3");
+        for (var i = 0; i<pays3.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays3[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene3.appendChild(legende);
+        }
     }
     annee2008.onclick = function(){
         textePlan.textContent = "Le nombre de groupes augmentente considérablement par rapport à 2007, passant de 84 à 108. Les groupes sont répartis entre 3 scènes distinctes et hiérarchisées : la main, la second stage et enfin la discover stage.";
@@ -309,38 +309,38 @@ function controleurPlan(){
         });
 
         var pays1 = camembertScene(2008, "Discover stage", "#pieScene1");
-            for (var i = 0; i<pays1.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays1[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene1.appendChild(legende);
-            }
-            var pays2 = camembertScene(2008, "Second stage", "#pieScene2");
-            for (var i = 0; i<pays2.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays2[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene2.appendChild(legende);
-            }
-            var pays3 = camembertScene(2008, "Main", "#pieScene3");
-            for (var i = 0; i<pays3.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays3[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene3.appendChild(legende);
-            }
+        for (var i = 0; i<pays1.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays1[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene1.appendChild(legende);
+        }
+        var pays2 = camembertScene(2008, "Second stage", "#pieScene2");
+        for (var i = 0; i<pays2.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays2[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene2.appendChild(legende);
+        }
+        var pays3 = camembertScene(2008, "Main", "#pieScene3");
+        for (var i = 0; i<pays3.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays3[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene3.appendChild(legende);
+        }
     }
 
     annee2009.onclick = function(){
@@ -418,49 +418,49 @@ function controleurPlan(){
         });
 
         var pays1 = camembertScene(2009, "Main 01", "#pieScene1");
-            for (var i = 0; i<pays1.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays1[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene1.appendChild(legende);
-            }
-            var pays2 = camembertScene(2009, "Main 02", "#pieScene2");
-            for (var i = 0; i<pays2.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays2[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene2.appendChild(legende);
-            }
-            var pays3 = camembertScene(2009, "Rock Hard tent", "#pieScene3");
-            for (var i = 0; i<pays3.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays3[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene3.appendChild(legende);
-            }
-            var pays4 = camembertScene(2009, "Terrorizer tent", "#pieScene4");
-            for (var i = 0; i<pays4.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays4[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene4.appendChild(legende);
-            }
+        for (var i = 0; i<pays1.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays1[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene1.appendChild(legende);
+        }
+        var pays2 = camembertScene(2009, "Main 02", "#pieScene2");
+        for (var i = 0; i<pays2.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays2[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene2.appendChild(legende);
+        }
+        var pays3 = camembertScene(2009, "Rock Hard tent", "#pieScene3");
+        for (var i = 0; i<pays3.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays3[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene3.appendChild(legende);
+        }
+        var pays4 = camembertScene(2009, "Terrorizer tent", "#pieScene4");
+        for (var i = 0; i<pays4.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays4[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene4.appendChild(legende);
+        }
 
     }
     annee2010.onclick = function(){
@@ -538,49 +538,49 @@ function controleurPlan(){
         });
 
         var pays1 = camembertScene(2010, "Main 01", "#pieScene1");
-            for (var i = 0; i<pays1.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays1[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene1.appendChild(legende);
-            }
-            var pays2 = camembertScene(2010, "Main 02", "#pieScene2");
-            for (var i = 0; i<pays2.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays2[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene2.appendChild(legende);
-            }
-            var pays3 = camembertScene(2010, "Rock Hard tent", "#pieScene3");
-            for (var i = 0; i<pays3.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays3[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene3.appendChild(legende);
-            }
-            var pays4 = camembertScene(2010, "Terrorizer tent", "#pieScene4");
-            for (var i = 0; i<pays4.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays4[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene4.appendChild(legende);
-            }
+        for (var i = 0; i<pays1.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays1[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene1.appendChild(legende);
+        }
+        var pays2 = camembertScene(2010, "Main 02", "#pieScene2");
+        for (var i = 0; i<pays2.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays2[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene2.appendChild(legende);
+        }
+        var pays3 = camembertScene(2010, "Rock Hard tent", "#pieScene3");
+        for (var i = 0; i<pays3.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays3[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene3.appendChild(legende);
+        }
+        var pays4 = camembertScene(2010, "Terrorizer tent", "#pieScene4");
+        for (var i = 0; i<pays4.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays4[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene4.appendChild(legende);
+        }
     }
     annee2011.onclick = function(){
         textePlan.textContent ="118 groupes sont présents en 2011. C’est un nombre relativement constant depuis l’édition de 2008.";
@@ -657,49 +657,49 @@ function controleurPlan(){
         });
 
         var pays1 = camembertScene(2011, "Main 01", "#pieScene1");
-            for (var i = 0; i<pays1.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays1[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene1.appendChild(legende);
-            }
-            var pays2 = camembertScene(2011, "Main 02", "#pieScene2");
-            for (var i = 0; i<pays2.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays2[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene2.appendChild(legende);
-            }
-            var pays3 = camembertScene(2011, "Rock Hard tent", "#pieScene3");
-            for (var i = 0; i<pays3.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays3[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene3.appendChild(legende);
-            }
-            var pays4 = camembertScene(2011, "Terrorizer tent", "#pieScene4");
-            for (var i = 0; i<pays4.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays4[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene4.appendChild(legende);
-            }
+        for (var i = 0; i<pays1.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays1[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene1.appendChild(legende);
+        }
+        var pays2 = camembertScene(2011, "Main 02", "#pieScene2");
+        for (var i = 0; i<pays2.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays2[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene2.appendChild(legende);
+        }
+        var pays3 = camembertScene(2011, "Rock Hard tent", "#pieScene3");
+        for (var i = 0; i<pays3.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays3[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene3.appendChild(legende);
+        }
+        var pays4 = camembertScene(2011, "Terrorizer tent", "#pieScene4");
+        for (var i = 0; i<pays4.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays4[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene4.appendChild(legende);
+        }
     }
     annee2012.onclick = function(){
         textePlan.textContent ="Le Hellfest n'accueille plus 4 scènes mais bien 7 scènes pour un total de 170 artistes en cette année 2012, un véritable boom par rapport à l’année précédente. La Warzone met à l’honneur le punk hardcore, la Valley  le sludge/ stoner et le Metal Corner déniche les talents de demain . Autres changements, la Terrorizer tent laisse place au Temple (doom / pagan metal / black metal) et la Rock Hard tent devient l’Altar ( death metal / grind).";
@@ -806,82 +806,82 @@ function controleurPlan(){
         });
 
         var pays1 =  camembertScene(2012, "Altar", "#pieScene1");
-            for (var i = 0; i<pays1.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays1[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene1.appendChild(legende);
-            }
-            var pays2 = camembertScene(2012, "Main 01", "#pieScene2");
-            for (var i = 0; i<pays2.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays2[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene2.appendChild(legende);
-            }
-            var pays3 = camembertScene(2012, "Main 02", "#pieScene3");
-            for (var i = 0; i<pays3.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays3[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene3.appendChild(legende);
-            }
-            var pays4 = camembertScene(2012, "Metal Corner", "#pieScene4");
-            for (var i = 0; i<pays4.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays4[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene4.appendChild(legende);
-            }
-            var pays5 = camembertScene(2012, "Temple", "#pieScene5");
-            for (var i = 0; i<pays5.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays5[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene5.appendChild(legende);
-            }
-            var pays6 = camembertScene(2012, "Valley", "#pieScene6");
-            for (var i = 0; i<pays6.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays6[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene6.appendChild(legende);
-            }
-            var pays7 = camembertScene(2012, "Warzone", "#pieScene7");
-            for (var i = 0; i<pays7.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays7[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene7.appendChild(legende);
-            }
+        for (var i = 0; i<pays1.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays1[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene1.appendChild(legende);
+        }
+        var pays2 = camembertScene(2012, "Main 01", "#pieScene2");
+        for (var i = 0; i<pays2.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays2[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene2.appendChild(legende);
+        }
+        var pays3 = camembertScene(2012, "Main 02", "#pieScene3");
+        for (var i = 0; i<pays3.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays3[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene3.appendChild(legende);
+        }
+        var pays4 = camembertScene(2012, "Metal Corner", "#pieScene4");
+        for (var i = 0; i<pays4.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays4[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene4.appendChild(legende);
+        }
+        var pays5 = camembertScene(2012, "Temple", "#pieScene5");
+        for (var i = 0; i<pays5.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays5[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene5.appendChild(legende);
+        }
+        var pays6 = camembertScene(2012, "Valley", "#pieScene6");
+        for (var i = 0; i<pays6.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays6[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene6.appendChild(legende);
+        }
+        var pays7 = camembertScene(2012, "Warzone", "#pieScene7");
+        for (var i = 0; i<pays7.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays7[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene7.appendChild(legende);
+        }
     }
     annee2013.onclick = function(){
         textePlan.textContent ="170 artistes montent sur les planches du Hellfest en 2013, une répétition de 2012 avec les mêmes scènes.";
@@ -988,82 +988,82 @@ function controleurPlan(){
         });
 
         var pays1 =  camembertScene(2013, "Altar", "#pieScene1");
-            for (var i = 0; i<pays1.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays1[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene1.appendChild(legende);
-            }
-            var pays2 = camembertScene(2013, "Main 01", "#pieScene2");
-            for (var i = 0; i<pays2.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays2[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene2.appendChild(legende);
-            }
-            var pays3 = camembertScene(2013, "Main 02", "#pieScene3");
-            for (var i = 0; i<pays3.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays3[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene3.appendChild(legende);
-            }
-            var pays4 = camembertScene(2013, "Metal Corner", "#pieScene4");
-            for (var i = 0; i<pays4.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays4[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene4.appendChild(legende);
-            }
-            var pays5 = camembertScene(2013, "Temple", "#pieScene5");
-            for (var i = 0; i<pays5.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays5[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene5.appendChild(legende);
-            }
-            var pays6 = camembertScene(2013, "Valley", "#pieScene6");
-            for (var i = 0; i<pays6.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays6[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene6.appendChild(legende);
-            }
-            var pays7 = camembertScene(2013, "Warzone", "#pieScene7");
-            for (var i = 0; i<pays7.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays7[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene7.appendChild(legende);
-            }
+        for (var i = 0; i<pays1.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays1[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene1.appendChild(legende);
+        }
+        var pays2 = camembertScene(2013, "Main 01", "#pieScene2");
+        for (var i = 0; i<pays2.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays2[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene2.appendChild(legende);
+        }
+        var pays3 = camembertScene(2013, "Main 02", "#pieScene3");
+        for (var i = 0; i<pays3.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays3[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene3.appendChild(legende);
+        }
+        var pays4 = camembertScene(2013, "Metal Corner", "#pieScene4");
+        for (var i = 0; i<pays4.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays4[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene4.appendChild(legende);
+        }
+        var pays5 = camembertScene(2013, "Temple", "#pieScene5");
+        for (var i = 0; i<pays5.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays5[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene5.appendChild(legende);
+        }
+        var pays6 = camembertScene(2013, "Valley", "#pieScene6");
+        for (var i = 0; i<pays6.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays6[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene6.appendChild(legende);
+        }
+        var pays7 = camembertScene(2013, "Warzone", "#pieScene7");
+        for (var i = 0; i<pays7.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays7[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene7.appendChild(legende);
+        }
     }
     annee2014.onclick = function(){
         textePlan.textContent ="Le format des scènes du Hellfest de 2012 reste toujours le même pour acceuillir le même nombre d’artistes.";
@@ -1170,82 +1170,82 @@ function controleurPlan(){
         });
 
         var pays1 =  camembertScene(2014, "Altar", "#pieScene1");
-            for (var i = 0; i<pays1.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays1[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene1.appendChild(legende);
-            }
-            var pays2 = camembertScene(2014, "Main 01", "#pieScene2");
-            for (var i = 0; i<pays2.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays2[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene2.appendChild(legende);
-            }
-            var pays3 = camembertScene(2014, "Main 02", "#pieScene3");
-            for (var i = 0; i<pays3.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays3[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene3.appendChild(legende);
-            }
-            var pays4 = camembertScene(2014, "Metal Corner", "#pieScene4");
-            for (var i = 0; i<pays4.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays4[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene4.appendChild(legende);
-            }
-            var pays5 = camembertScene(2014, "Temple", "#pieScene5");
-            for (var i = 0; i<pays5.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays5[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene5.appendChild(legende);
-            }
-            var pays6 = camembertScene(2014, "Valley", "#pieScene6");
-            for (var i = 0; i<pays6.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays6[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene6.appendChild(legende);
-            }
-            var pays7 = camembertScene(2014, "Warzone", "#pieScene7");
-            for (var i = 0; i<pays7.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays7[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene7.appendChild(legende);
-            }
+        for (var i = 0; i<pays1.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays1[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene1.appendChild(legende);
+        }
+        var pays2 = camembertScene(2014, "Main 01", "#pieScene2");
+        for (var i = 0; i<pays2.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays2[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene2.appendChild(legende);
+        }
+        var pays3 = camembertScene(2014, "Main 02", "#pieScene3");
+        for (var i = 0; i<pays3.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays3[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene3.appendChild(legende);
+        }
+        var pays4 = camembertScene(2014, "Metal Corner", "#pieScene4");
+        for (var i = 0; i<pays4.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays4[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene4.appendChild(legende);
+        }
+        var pays5 = camembertScene(2014, "Temple", "#pieScene5");
+        for (var i = 0; i<pays5.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays5[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene5.appendChild(legende);
+        }
+        var pays6 = camembertScene(2014, "Valley", "#pieScene6");
+        for (var i = 0; i<pays6.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays6[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene6.appendChild(legende);
+        }
+        var pays7 = camembertScene(2014, "Warzone", "#pieScene7");
+        for (var i = 0; i<pays7.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays7[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene7.appendChild(legende);
+        }
 
     }
     annee2015.onclick = function(){
@@ -1354,82 +1354,82 @@ function controleurPlan(){
 
 
         var pays1 =  camembertScene(2015, "Altar", "#pieScene1");
-            for (var i = 0; i<pays1.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays1[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene1.appendChild(legende);
-            }
-            var pays2 = camembertScene(2015, "Main 01", "#pieScene2");
-            for (var i = 0; i<pays2.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays2[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene2.appendChild(legende);
-            }
-            var pays3 = camembertScene(2015, "Main 02", "#pieScene3");
-            for (var i = 0; i<pays3.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays3[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene3.appendChild(legende);
-            }
-            var pays4 = camembertScene(2015, "Metal Corner", "#pieScene4");
-            for (var i = 0; i<pays4.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays4[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene4.appendChild(legende);
-            }
-            var pays5 = camembertScene(2015, "Temple", "#pieScene5");
-            for (var i = 0; i<pays5.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays5[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene5.appendChild(legende);
-            }
-            var pays6 = camembertScene(2015, "Valley", "#pieScene6");
-            for (var i = 0; i<pays6.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays6[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene6.appendChild(legende);
-            }
-            var pays7 = camembertScene(2015, "Warzone", "#pieScene7");
-            for (var i = 0; i<pays7.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays7[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene7.appendChild(legende);
-            }
+        for (var i = 0; i<pays1.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays1[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene1.appendChild(legende);
+        }
+        var pays2 = camembertScene(2015, "Main 01", "#pieScene2");
+        for (var i = 0; i<pays2.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays2[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene2.appendChild(legende);
+        }
+        var pays3 = camembertScene(2015, "Main 02", "#pieScene3");
+        for (var i = 0; i<pays3.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays3[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene3.appendChild(legende);
+        }
+        var pays4 = camembertScene(2015, "Metal Corner", "#pieScene4");
+        for (var i = 0; i<pays4.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays4[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene4.appendChild(legende);
+        }
+        var pays5 = camembertScene(2015, "Temple", "#pieScene5");
+        for (var i = 0; i<pays5.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays5[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene5.appendChild(legende);
+        }
+        var pays6 = camembertScene(2015, "Valley", "#pieScene6");
+        for (var i = 0; i<pays6.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays6[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene6.appendChild(legende);
+        }
+        var pays7 = camembertScene(2015, "Warzone", "#pieScene7");
+        for (var i = 0; i<pays7.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays7[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene7.appendChild(legende);
+        }
     }
     annee2016.onclick = function(){
         textePlan.textContent ="Le Metal Corner en partenariat avec Deezer Open Hell'Stage en 2016 accueille presque le double de ce qu’il a l’habitude d’avoir. Cette scène où les groupes de métals s’affrontent pour se produirent sur une “main stage” rencontre un véritable succès.";
@@ -1536,82 +1536,82 @@ function controleurPlan(){
         });
 
         var pays1 =  camembertScene(2016, "Altar", "#pieScene1");
-            for (var i = 0; i<pays1.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays1[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene1.appendChild(legende);
-            }
-            var pays2 = camembertScene(2016, "Main 01", "#pieScene2");
-            for (var i = 0; i<pays2.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays2[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene2.appendChild(legende);
-            }
-            var pays3 = camembertScene(2016, "Main 02", "#pieScene3");
-            for (var i = 0; i<pays3.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays3[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene3.appendChild(legende);
-            }
-            var pays4 = camembertScene(2016, "Metal Corner", "#pieScene4");
-            for (var i = 0; i<pays4.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays4[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene4.appendChild(legende);
-            }
-            var pays5 = camembertScene(2016, "Temple", "#pieScene5");
-            for (var i = 0; i<pays5.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays5[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene5.appendChild(legende);
-            }
-            var pays6 = camembertScene(2016, "Valley", "#pieScene6");
-            for (var i = 0; i<pays6.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays6[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene6.appendChild(legende);
-            }
-            var pays7 = camembertScene(2016, "Warzone", "#pieScene7");
-            for (var i = 0; i<pays7.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays7[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene7.appendChild(legende);
-            }
+        for (var i = 0; i<pays1.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays1[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene1.appendChild(legende);
+        }
+        var pays2 = camembertScene(2016, "Main 01", "#pieScene2");
+        for (var i = 0; i<pays2.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays2[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene2.appendChild(legende);
+        }
+        var pays3 = camembertScene(2016, "Main 02", "#pieScene3");
+        for (var i = 0; i<pays3.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays3[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene3.appendChild(legende);
+        }
+        var pays4 = camembertScene(2016, "Metal Corner", "#pieScene4");
+        for (var i = 0; i<pays4.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays4[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene4.appendChild(legende);
+        }
+        var pays5 = camembertScene(2016, "Temple", "#pieScene5");
+        for (var i = 0; i<pays5.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays5[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene5.appendChild(legende);
+        }
+        var pays6 = camembertScene(2016, "Valley", "#pieScene6");
+        for (var i = 0; i<pays6.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays6[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene6.appendChild(legende);
+        }
+        var pays7 = camembertScene(2016, "Warzone", "#pieScene7");
+        for (var i = 0; i<pays7.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays7[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene7.appendChild(legende);
+        }
     }
     annee2017.onclick = function(){
         textePlan.textContent ="167 artistes font monter les décibels en 2017 pour faire vibrer les festivaliers.";
@@ -1717,82 +1717,82 @@ function controleurPlan(){
             scene7.appendChild(choix);
         });
         var pays1 =  camembertScene(2017, "Altar", "#pieScene1");
-            for (var i = 0; i<pays1.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays1[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene1.appendChild(legende);
-            }
-            var pays2 = camembertScene(2017, "Main 01", "#pieScene2");
-            for (var i = 0; i<pays2.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays2[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene2.appendChild(legende);
-            }
-            var pays3 = camembertScene(2017, "Main 02", "#pieScene3");
-            for (var i = 0; i<pays3.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays3[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene3.appendChild(legende);
-            }
-            var pays4 = camembertScene(2017, "Metal Corner", "#pieScene4");
-            for (var i = 0; i<pays4.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays4[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene4.appendChild(legende);
-            }
-            var pays5 = camembertScene(2017, "Temple", "#pieScene5");
-            for (var i = 0; i<pays5.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays5[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene5.appendChild(legende);
-            }
-            var pays6 = camembertScene(2017, "Valley", "#pieScene6");
-            for (var i = 0; i<pays6.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays6[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene6.appendChild(legende);
-            }
-            var pays7 = camembertScene(2017, "Warzone", "#pieScene7");
-            for (var i = 0; i<pays7.length; i++)
-                {
-                    var legende = document.createElement('li');
-                legende.textContent = pays7[i];
-                var point = document.createElement('div');
-                point.className = "pointLegendeScene";
-                point.style.background = couleur[i];
-                legende.appendChild(point);
-                legendeScene7.appendChild(legende);
-            }
+        for (var i = 0; i<pays1.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays1[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene1.appendChild(legende);
+        }
+        var pays2 = camembertScene(2017, "Main 01", "#pieScene2");
+        for (var i = 0; i<pays2.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays2[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene2.appendChild(legende);
+        }
+        var pays3 = camembertScene(2017, "Main 02", "#pieScene3");
+        for (var i = 0; i<pays3.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays3[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene3.appendChild(legende);
+        }
+        var pays4 = camembertScene(2017, "Metal Corner", "#pieScene4");
+        for (var i = 0; i<pays4.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays4[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene4.appendChild(legende);
+        }
+        var pays5 = camembertScene(2017, "Temple", "#pieScene5");
+        for (var i = 0; i<pays5.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays5[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene5.appendChild(legende);
+        }
+        var pays6 = camembertScene(2017, "Valley", "#pieScene6");
+        for (var i = 0; i<pays6.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays6[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene6.appendChild(legende);
+        }
+        var pays7 = camembertScene(2017, "Warzone", "#pieScene7");
+        for (var i = 0; i<pays7.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays7[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene7.appendChild(legende);
+        }
     }
 
 }
@@ -2460,8 +2460,8 @@ function controleurFrance() {
         },false);
     }
     d3.select(villes).selectAll("circle")
-                     .attr("onmouseover", "evt.target.setAttribute('opacity', '0.5');")
-                     .attr("onmouseout", "evt.target.setAttribute('opacity','1)');");
+        .attr("onmouseover", "evt.target.setAttribute('opacity', '0.5');")
+        .attr("onmouseout", "evt.target.setAttribute('opacity','1)');");
 
     var dataFrance = loadData('data/AnneeGroupeVilleNombreGroupes.json');
 
@@ -2484,7 +2484,6 @@ function controleurFrance() {
 
     var currentYear = "global";
 
-
     var croix = document.querySelector("#fenetrePopupFrance .croix");
 
     croix.onclick = function(){
@@ -2492,6 +2491,7 @@ function controleurFrance() {
     }
 
     france2006.onclick = function(){
+        setTextYearFrance("Sur les 12 groupes français qui jouent à la première édition du Hellfest, près de la moitié viennent d’Ile de France. Ondres, petite ville de Nouvelle-Aquitaine, est représentée par le géant du métal Gojira.");
         currentYear = "2006";
         setYearActive(buttons, 1);
         reinitVilles(villes, dataFrance);
@@ -2499,6 +2499,7 @@ function controleurFrance() {
     }
 
     france2007.onclick = function(){
+        setTextYearFrance("En 2007, le Hellfest élargit ses horizons. A travers les 23 groupes présents, quasiment toutes les régions de France sont représentées. Pour la première fois, le festival accueille un groupe Nantais.");
         currentYear = "2007";
         setYearActive(buttons, 2);
         reinitVilles(villes, dataFrance);
@@ -2506,6 +2507,7 @@ function controleurFrance() {
     }
 
     france2008.onclick = function(){
+        setTextYearFrance("En 2008, le nombre de groupes français est réduit de moitié par rapport à l’année passée. Il proviennent de grandes villes comme Paris, Marseille, Bordeaux ou encore St Etienne à l’instar de l’incontournable groupe Benighted.");
         currentYear = "2008";
         setYearActive(buttons, 3);
         reinitVilles(villes, dataFrance);
@@ -2513,6 +2515,7 @@ function controleurFrance() {
     }
 
     france2009.onclick = function(){
+        setTextYearFrance("Les  franciliens sont moins nombreux en 2009, au profit de groupes provenant de petites villes de Poitou-Charente ou Auvergne-Rhône-Alpes. Pour la deuxième fois depuis le début du festival, le groupe Aquitain Gojira rejoint le festival.");
         currentYear = "2009";
         setYearActive(buttons, 4);
         reinitVilles(villes, dataFrance);
@@ -2520,6 +2523,7 @@ function controleurFrance() {
     }
 
     france2010.onclick = function(){
+        setTextYearFrance("En 2010, les 9 groupes accueillis par le Hellfest viennent de grandes villes de France comme Lille, Montpellier, Paris ou Bordeaux. Les groupes français sont peu mais représentent de grosses têtes d’affiches comme avec Mas Hysteria ou Loudblast. ");
         currentYear = "2010";
         setYearActive(buttons, 5);
         reinitVilles(villes, dataFrance);
@@ -2527,6 +2531,7 @@ function controleurFrance() {
     }
 
     france2011.onclick = function(){
+        setTextYearFrance("9 groupes français sont toujours sur les planches du Hellfest en 2011. Dagoba de Marseille ou Klone de Poitiers : le métal français reste bien représenté cette année encore.");
         currentYear = "2011";
         setYearActive(buttons, 6);
         reinitVilles(villes, dataFrance);
@@ -2534,6 +2539,7 @@ function controleurFrance() {
     }
 
     france2012.onclick = function(){
+        setTextYearFrance("Le Hellfest boom: c’est en 2012! Les français sont passés de 9 à 34 groupes en un an: une véritable progression pour la représentation de la scène française.");
         currentYear = "2012";
         setYearActive(buttons, 7);
         reinitVilles(villes, dataFrance);
@@ -2541,6 +2547,7 @@ function controleurFrance() {
     }
 
     france2013.onclick = function(){
+        setTextYearFrance("3llipse, Dancefloor Disaster, DJ Kurgan, Karma Zero et War inside: voici les 5 groupes Nantais parmi les 34 français présents en 2013. Paris et Bordeaux figurent aussi dans les villes très représentées!")
         currentYear = "2013";
         setYearActive(buttons, 8);
         reinitVilles(villes, dataFrance);
@@ -2548,6 +2555,7 @@ function controleurFrance() {
     }
 
     france2014.onclick = function(){
+        setTextYearFrance("En 2014, le Hellfest accueille majoritairement des groupes venant d’île-de-France, pour le plaisir des festivaliers, confirmés comme amateurs.");
         currentYear = "2014";
         setYearActive(buttons, 9);
         reinitVilles(villes, dataFrance);
@@ -2555,6 +2563,7 @@ function controleurFrance() {
     }
 
     france2015.onclick = function(){
+        setTextYearFrance("Cette année, les différentes scènes du Hellfest ont l’honneur d'accueillir un florilèges d'artistes talentueux, provenant tout droit d’Ile-de-France, berceau des arts musicaux.");
         currentYear = "2015";
         setYearActive(buttons, 10);
         reinitVilles(villes, dataFrance);
@@ -2562,6 +2571,7 @@ function controleurFrance() {
     }
 
     france2016.onclick = function(){
+        setTextYearFrance("Présent depuis de nombreuses années sur le devant de la scène métal, les franciliens ne dérogent pas à la règle cette année.");
         currentYear = "2016";
         setYearActive(buttons, 11);
         reinitVilles(villes, dataFrance);
@@ -2569,6 +2579,7 @@ function controleurFrance() {
     }
 
     france2017.onclick = function(){
+        setTextYearFrance("La sulfureuse édition 2017 du Hellfest met en avant des talents venus de la France entière.");
         currentYear = "2017";
         setYearActive(buttons, 12);
         reinitVilles(villes, dataFrance);
@@ -2576,6 +2587,7 @@ function controleurFrance() {
     }
 
     franceTotal.onclick = function(){
+        setTextGeneralFrance();
         currentYear = "global";
         setYearActive(buttons, 0);
         totalVilles(villes, dataFrance);
@@ -2736,15 +2748,15 @@ function camembertPodium(annee)
     while(i<j)
     {
         if (pourcentage[k] >=5)
-                {
-                    pays.push(p[k]);
-                k++;
-                i++;
-            }
-            else
-            {
-                k++;
-            }
+        {
+            pays.push(p[k]);
+            k++;
+            i++;
+        }
+        else
+        {
+            k++;
+        }
     }
     pays.push("Autres");
     return pays;
@@ -2769,15 +2781,15 @@ function camembertScene(annee, scene, id)
     while(i<j)
     {
         if (pourcentage[k] >=5)
-                {
-                    pays.push(p[k]);
-                k++;
-                i++;
-            }
-            else
-            {
-                k++;
-            }
+        {
+            pays.push(p[k]);
+            k++;
+            i++;
+        }
+        else
+        {
+            k++;
+        }
     }
     pays.push("Autres");
     return pays;
@@ -2814,6 +2826,28 @@ function removeItem(ulId){
 
 }
 
+function setTextYearFrance(content) {
+
+    console.log("neinfie");
+    document.getElementById("texteFrance1").textContent = content;
+    document.getElementById("texteFrance2").className = "texteGlobal1--hidden";
+    document.getElementById("texteFranceVert").className = "texteGlobal2--hidden";
+}
+
+function setTextGeneralFrance() {
+    var blackquote1 = document.getElementById("texteFrance1");
+    var blackquote2 = document.getElementById("texteFrance2");
+    var blackquote3 = document.getElementById("texteFranceVert");
+
+    blackquote2.className = "texteGlobal1";
+    blackquote3.className = "texteGlobal2";
+
+    blackquote1.textContent = "Près de 200 groupes français se sont invités au Hellfest depuis 2006...";
+    blackquote2.textContent = "De Paris à Nantes en passant par Marseille, les 4 coins de la France sont représentés, même si une forte présence francilienne se dégage...";
+    blackquote3.textContent = "Est-ce que l'un de ces groupes vient de votre ville ?";
+
+}
+
 function graphiqueLine()
 {
     var us = pourcentagePays("Etats-Unis");
@@ -2821,71 +2855,71 @@ function graphiqueLine()
     var al = pourcentagePays("Allemagne");
     var uk = pourcentagePays("Angleterre");
     var lineData = {
-    labels : ["2006","2008","2009","2010","2011","2012","2013", "2014", "2015", "2016", "2017"],
-    datasets : [
+        labels : ["2006","2008","2009","2010","2011","2012","2013", "2014", "2015", "2016", "2017"],
+        datasets : [
+            {
+                label: "My First dataset",
+                fillColor : "rgba( 169,255,136,0.2)",
+                strokeColor : "rgba( 169,255,136,1)",
+                pointColor : "rgba( 169,255,136,1)",
+            pointStrokeColor : "#fff",
+    pointHighlightFill : "#fff",
+    pointHighlightStroke : "rgba( 169,255,136,1)",
+    data : us
+},
     {
-      label: "My First dataset",
-      fillColor : "rgba( 169,255,136,0.2)",
-      strokeColor : "rgba( 169,255,136,1)",
-      pointColor : "rgba( 169,255,136,1)",
-      pointStrokeColor : "#fff",
-      pointHighlightFill : "#fff",
-      pointHighlightStroke : "rgba( 169,255,136,1)",
-      data : us
+        label: "My Second dataset",
+            fillColor : "rgba(87,102,77,0.2)",
+        strokeColor : "rgba(87,102,77,1)",
+        pointColor : "rgba((87,102,77,1)",
+        pointStrokeColor : "#fff",
+        pointHighlightFill : "#fff",
+        pointHighlightStroke : "rgba(87,102,77,1)",
+        data : fr
     },
     {
-      label: "My Second dataset",
-      fillColor : "rgba(87,102,77,0.2)",
-      strokeColor : "rgba(87,102,77,1)",
-      pointColor : "rgba((87,102,77,1)",
-      pointStrokeColor : "#fff",
-      pointHighlightFill : "#fff",
-      pointHighlightStroke : "rgba(87,102,77,1)",
-      data : fr
-    },
-    {
-      label: "My third dataset",
-      fillColor : "rgba(63,91,51,0.2)",
-      strokeColor : "rgba(63,91,51,1)",
-      pointColor : "rgba(63,91,51,1)",
-      pointStrokeColor : "#fff",
-      pointHighlightFill : "#fff",
-      pointHighlightStroke : "rgba(63,91,51,1)",
-      data : al
+        label: "My third dataset",
+            fillColor : "rgba(63,91,51,0.2)",
+        strokeColor : "rgba(63,91,51,1)",
+        pointColor : "rgba(63,91,51,1)",
+        pointStrokeColor : "#fff",
+        pointHighlightFill : "#fff",
+        pointHighlightStroke : "rgba(63,91,51,1)",
+        data : al
     },{
-      label: "My last dataset",
-      fillColor : "rgba(133,194,117,0.2)",
-      strokeColor : "rgba(133,194,117,1)",
-      pointColor : "rgba(133,194,117,1)",
-      pointStrokeColor : "#fff",
-      pointHighlightFill : "#fff",
-      pointHighlightStroke : "rgba(133,194,117,1)",
-      data : uk
-    }
-    ]
+    label: "My last dataset",
+        fillColor : "rgba(133,194,117,0.2)",
+        strokeColor : "rgba(133,194,117,1)",
+        pointColor : "rgba(133,194,117,1)",
+        pointStrokeColor : "#fff",
+        pointHighlightFill : "#fff",
+        pointHighlightStroke : "rgba(133,194,117,1)",
+        data : uk
+}
+]
 
-  }
+}
 
     // doughnut chart options
     var lineOptions = {
-      responsive: true
+        responsive: true
     }
 
-  // get line chart canvas
-  var line = document.getElementById('line').getContext('2d');
+    // get line chart canvas
+    var line = document.getElementById('line').getContext('2d');
 
-  // draw line chart
-  new Chart(line).Line(lineData, lineOptions);
+    // draw line chart
+    new Chart(line).Line(lineData, lineOptions);
 
-  /* 
-   * E. line chart
-   */
+    /*
+     * E. line chart
+     */
 
-  /* 
-   * S. bar chart 
-   */
+    /*
+     * S. bar chart
+     */
 
-  // bar chart data
+    // bar chart data
 
 }
 
