@@ -21,37 +21,38 @@ header img{
 }
 
 #section0{
-	background: url(../img/background.jpg);
-	width:100%;
-	height: 100%;
+  background: #1A1A1A;
+  width:100%;
+  height: 100%;
 }
 
 
 #section1{
-	background: url(../img/background.jpg);
-	width:100%;
-	height: 100%;
+  background: #1A1A1A;
+  width:100%;
+  height: 100%;
 }
 
 #section2{
-	background: url(../img/background.jpg);
-	width:100%;
-	height: 100%;
+  background: #1A1A1A;
+  width:100%;
+  height: 100%;
 }
 
 
 #section3{
-	background: url(../img/background.jpg);
-	width:100%;
-	height: 100%;
+  background: #1A1A1A;
+  width:100%;
+  height: 100%;
 }
 
  
 #section4{
-	background: url(../img/background.jpg);
-	width:100%;
-	height: 100%;
+  background: #1A1A1A;
+  width:100%;
+  height: 100%;
 }
+
 
 
 .col.s1
@@ -662,6 +663,15 @@ p.dateMenu
 	margin-left: 25px;
 }
 
+p.dateMenu--hidden
+{
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
 h1.titres
 {
 	position: absolute;
@@ -905,6 +915,14 @@ p.texteGlobal2{
 	font-family: 'Open Sans light', sans-serif;
 	font-weight: 700;
 	margin-left: 25px;
+}
+
+p.texteGlobal2--hidden{
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  pointer-events: none;
 }
 
 
