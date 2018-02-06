@@ -25,6 +25,7 @@
     bottom: 20px;
     right: 20px;
     >.donneeliste{
+      @extend %data-liste;
       float: right;
       text-align: right;
       width: calc(100% - 30px);
@@ -38,25 +39,21 @@
 
 .n1{
   @extend %data-liste;
-  text-align: right;
   font-size: 4vw;
   line-height: 0.9;
 }
 .n2{
   @extend %data-liste;
-  text-align: right;
   font-size: 3vw;
   line-height: 1;
 }
 .n3{
   @extend %data-liste;
-  text-align: right;
   font-size: 2vw;
   line-height: 1.1;
 }
 .n4{
   @extend %data-liste;
-  text-align: right;
   font-size: 1vw;
   line-height: 1.2;
 }
@@ -82,11 +79,11 @@
 }
 
 .info-conjoncture{
-  background-color: $main-color;
+  background-color: $scale-color50;
 }
 
 .info-investissement{
-  background-color: $main-color;
+  background-color: $scale-color50;
 }
 
 .info-emploi{
@@ -94,7 +91,7 @@
 }
 
 .info-distance{
-  background-color: $main-color;
+  background-color: $scale-color50;
 }
 
 .info-contrat{
@@ -102,7 +99,7 @@
 }
 
 .info-mp{
-  background-color: $main-color;
+  background-color: $scale-color50;
 }
 
 .info-dd{

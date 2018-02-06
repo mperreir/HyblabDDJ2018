@@ -92,21 +92,22 @@ function miniStats(regionStats, d) {
             var liste = document.getElementsByClassName("info-contrat")[0].getElementsByClassName("liste")[0];
             liste.className
             liste.innerHTML = "";
-            var h = document.createElement("h1");
-            liste.appendChild(h);
-            h.className += "donneeliste n1";
-            h.innerHTML = stat[0].name;
-            var ni = "n1";
+            var span = document.createElement("span");
+            liste.appendChild(span);
+            span.className += "donneeliste";
+            span.innerHTML = stat[0].name;
+            var ni = "4vw";
             var count = 0;
             for (var i = 1; i < 4; i++) {
                 if (stat[i].value < stat[i - 1].value) {
                     count++;
-                    ni = "n" + count;
+                    ni = count + "vw";
                 }
-                h = document.createElement("h1");
-                liste.appendChild(h);
-                h.className += "donneeliste " + ni;
-                h.innerHTML = stat[i].name;
+                span = document.createElement("span");
+                liste.appendChild(span);
+                span.className += "donneeliste";
+                span.style.fontSize = ni;
+                span.innerHTML = stat[i].name;
             }
 
             $('#card-contrat .open').each(function(){
@@ -134,7 +135,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-dd");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
-                    
+
                     drawDDChart(stats);
                     closeOnEscape();
                 });
@@ -173,7 +174,7 @@ function miniStats(regionStats, d) {
                     closeOnEscape();
                 });
             });
-			
+
         });
     //5 : distance / moyenne / bubble chart
     fetch("/capeb/data/" + d.properties.siren_epci + "/distance")
@@ -285,7 +286,7 @@ function createModal(){
                 $modal.removeClass('state-leave').addClass('state-appear');
             });
         });
-        
+
     $('.prev').on('click', function(){
 		current_d--;
 		if(current_d < 0){
@@ -293,13 +294,13 @@ function createModal(){
 		}
 		$('.close').click()
 		$(dataviz[current_d] + " .open").click();
-		
+
 	});
 	$('.next').on('click', function() {
 		current_d = (current_d + 1) % dataviz.length;
 		$('.close').click()
 		$(dataviz[current_d] + " .open").click();
-		
+
 	})
 }
 
