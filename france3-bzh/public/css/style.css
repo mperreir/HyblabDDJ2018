@@ -115,9 +115,8 @@ h1
 p
 {
   color:white;
-  font-weight: bold;
   font-family: "work_sans";
-  font-size:12px;
+  font-size:16px;
 }
 a
 {
@@ -1497,4 +1496,3 @@ svg[hidden]:not(:root) {
             transform: translate3d(0, 50%, 0) rotateX(-90deg) scale(0.5) skewX(-3deg);
   }
 }
-
