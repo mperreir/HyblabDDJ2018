@@ -635,6 +635,50 @@ body{
     width: 30vw;
 }
 
+/*Solutions alternatives*/
+#btnSolution{
+    float: left;
+    position: absolute;
+    left: 80vw;
+    top: 90vh;
+    width: 15vw;
+}
+
+#popupSolution{
+    font-weight: 400;
+    border: solid;
+    border-width: 5px;
+    position: absolute;
+    top: 15vh;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 0px;
+    padding: 20px;
+    background: white;
+    z-index: 2;
+    display: none;
+}
+
+#popupSolutionHaut{
+    font-weight: 700;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 1vw;
+}
+
+#popupSolutionBas{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+.solutionColonne{
+    width: 25vw;
+    padding: 1vw;
+}
+
 
 
 /* ######################################################################### */
