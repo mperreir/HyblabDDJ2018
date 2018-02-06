@@ -41,7 +41,8 @@ function displayValue(event, variable){
 
 function actualize(event, variable){
     displayValue(event, variable);
-    afficheBarres(datas, listeAides);
+    var boxes = afficheBarres(datas, listeAides);
+    afficheCercles(boxes, listeAides, jsonCircles);
 }
 
 displayValue("", 'Age'); //affichage des données par défaut
@@ -65,12 +66,13 @@ var nbCouleursUtilisees = 3;
 var couleursUtilisees = [];
 
 var listeAides = [], jsonCircles = [];
+var circles = [];
 
 function getAides(){
     $.getJSON( "data/aides.json", function(data) {
-        margin = {top: 50, right: 30, bottom: 10, left: 95},
+        margin = {top: 5, right: 30, bottom: 10, left: 95},
             width = bandWidth - margin.left - margin.right,
-            height = 90 - margin.top - margin.bottom;
+            height = 45 - margin.top - margin.bottom;
 
         y = d3.scale.ordinal()
             .rangeRoundBands([0, bandHeight]);
@@ -152,8 +154,12 @@ function getAides(){
                 .attr("class", "y axis")
                 .call(yAxis);
         }
-        afficheBarres(datas, listeAides);
-        afficheCercles(datas);
+
+
+        var boxes = afficheBarres(datas, listeAides);
+        console.log(jsonCircles);
+
+        afficheCercles(boxes, listeAides, jsonCircles);
 
     });
 }
@@ -198,7 +204,7 @@ function afficheBarres(datas, listeAides){
     var niveau = getValueVariable('Niveau');
     var distance = getValueVariable('Distance');
 
-    jsonCircles = [{ "x_axis": 0, "y_axis": bandHeight/2, "radius": circleRadius/2, "color" : "white", name: "cc" }];
+    jsonCircles = [{ "x_axis": 0, "y_axis": bandHeight/2, "radius": circleRadius/2, "color" : "white", name: "cc", id: "initial" }];
 
     for (var j = 0; j < nbCatAides; j++) {
         //on sélectionne les datas correspondantes
@@ -263,7 +269,7 @@ function afficheBarres(datas, listeAides){
         var colorsCircles = ["green", "red", "blue"];
 
         for (var i = 0; i < boxesU.length ; i++){
-            jsonCircles.push({ "x_axis": boxesU[i].x1 *(width / borneX), "y_axis": bandHeight/2, "radius": circleRadius/2, "color" : colorsCircles[i], name: "cc" });
+            jsonCircles.push({ "x_axis": boxesU[i].x1 *(width / borneX), "y_axis": bandHeight/2, "radius": circleRadius/2, "color" : colorsCircles[i], name: "cc", id: "cercle"+i });
         }
 
         vakken = listeAides[j].selectAll(".question")
@@ -313,22 +319,25 @@ function afficheBarres(datas, listeAides){
             //   .style("stroke", "#00913c")
             .style("shape-rendering", "crispEdges");
 
-        var circles = listeAides[j].selectAll("circle")
+        //à garder
+        circles = listeAides[j].selectAll("circle")
             .data(jsonCircles)
             .enter()
             .append("circle");
 
-        console.log(circles);
+        console.log(jsonCircles);
 
     /*    var truc = listeAides[j].selectAll("g")
             .data(jsonCircles);*/
 
-        var styleCircles = circles
+    //à garder
+  /*      circles
+            .attr("id", function (d) { return d.id; })
             .attr("cx", function (d) { return d.x_axis; })
             .attr("cy", function (d) { return d.y_axis; })
             .attr("r", function (d) { return d.radius; })
             .attr("stroke","black")
-            .attr("fill", "white");
+            .attr("fill", "white");*/
 
     /*    truc.append("text")
             .attr("dx", function(d){return d.x_axis-30})
@@ -398,20 +407,45 @@ function afficheBarres(datas, listeAides){
                          .text(function(d){return "blop"});*/
 
         afficheMontant(boxesU);
-
     }
+
+    console.log(boxesU);
 
     return boxesU;
 }
 
-function afficheCercles (boxesU){
-    var jsonCircles = [{ "x_axis": 0, "y_axis": bandHeight/2, "radius": circleRadius/2, "color" : "white", name: "cc" }];
+function afficheCercles(boxesU, listeAides, jsonCircles){
+    console.log(jsonCircles);
 
-    for (var i = 0; i < boxesU.length ; i++){
-        jsonCircles.push({ "x_axis": boxesU[i].x1 *(width / borneX), "y_axis": bandHeight/2, "radius": circleRadius/2, "color" : colorsCircles[i], name: "cc" });
+
+    for (var i = 0; i < boxesU.length; i++) {
+        document.getElementById("cercle"+i).cx = boxesU[i].x1 *(width / borneX);
     }
 
+    for (var j = boxesU.length;  j < 3; j++) {
+        document.getElementById("cercle"+j).cx = 0;
+    }
 
+  //  jsonCircles = [{ "x_axis": 0, "y_axis": bandHeight/2, "radius": circleRadius/2, "color" : "white", name: "cc", id: "initial" }];
 
+    console.log(boxesU);
 
+  /*  for (var i = 0; i < boxesU.length ; i++){
+        jsonCircles.push({ "x_axis": boxesU[i].x1 *(width / borneX), "y_axis": bandHeight/2, "radius": circleRadius/2, "color" : "white", name: "cc", id: "cercle"+i });
+    }*/
+
+/*    circles = listeAides[0].selectAll("circle")
+        .data(jsonCircles)
+        .enter()
+        .append("circle");
+
+    console.log(jsonCircles);
+
+    circles
+        .attr("id", function (d) { console.log(d.id); return d.id; })
+        .attr("cx", function (d) { return d.x_axis; })
+        .attr("cy", function (d) { return d.y_axis; })
+        .attr("r", function (d) { return d.radius; })
+        .attr("stroke","black")
+        .attr("fill", "white");*/
 }

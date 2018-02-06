@@ -62,7 +62,7 @@ html, body {
     height: -moz-calc(100% - 50px);     /* pour Firefox */
     height: calc(100% - 50px);          /* pour support natif */
 
-    padding-left: 40px;
+    padding-left: 3%;
     padding-right: 40px;
 
     padding-bottom: 50px;
@@ -70,6 +70,28 @@ html, body {
     float:left;
   /*  width:400px; */
     width: 30%;
+}
+
+.accroche1, .accroche2 {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    padding: 0;
+    margin: 0;
+}
+
+.accroche1 {
+    margin-top: 20%;
+
+    font-size: 30px;
+}
+
+.accroche2 {
+    font-size: 26px;
+
+    margin-bottom: 12%;
 }
 
 .accroche {
@@ -81,21 +103,35 @@ html, body {
 }
 
 .explication {
-    top: 250px;
+    top: 30%;
 
-    height: 23.65%;
+ /*   height: 23.65%;*/
     color: #FFFFFF;
     font-family: Lato;
-    font-size: 11px;
+    font-size: 15px;
     letter-spacing: 1px;
     line-height: 25px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.phraseConvaincante {
+
+    color: #FFFFFF;
+    font-family: Lato;
+
+    font-size: 26px;
+    font-weight: bold;
+
+    margin: 2px 0 0 0;
+    padding: 0;
 }
 
 .temoignage {
     position: absolute;
-    top: 400px;
+    top: 80%;
 
-    height: 158px;
     width: 394px;
     color: #FFFFFF;
     font-family: Lato;
