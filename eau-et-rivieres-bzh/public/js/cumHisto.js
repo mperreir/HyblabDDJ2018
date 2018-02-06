@@ -145,9 +145,9 @@ function upDateHisto(histo){
 function buildHisto(parent, ann, dep){
 
 	var svg = d3.select(parent),
-	    margin = {top: 0, right: 80, bottom: 0, left: 80},
+	    margin = {top: 120, right: 80, bottom: 0, left: 80},
 	    width = +svg.attr("width") - margin.left - margin.right,
-	    height = +svg.attr("height") - margin.top - margin.bottom,
+	    height = +svg.attr("height") - margin.top - margin.bottom-50,
 	    g = svg.append("g").attr("transform", "translate(" + (margin.left) + "," + (margin.top) + ")");
 
 	var x = d3.scaleBand()
@@ -190,18 +190,22 @@ function buildHisto(parent, ann, dep){
 	  z.domain(keys);
 
 		var lastCol = "ORGANES";
+		var coeffRed_histo = 0.99;
+		var coeffRed =1;
+		var coeffTr = 0;
 
 	  g.append("g")
 	    .selectAll("g")
 	    .data(d3.stack().keys(keys)(data))
+			.attr("height",100)
 	    .enter().append("g")
 	      .attr("fill", function(d) { return z(d.key); })
 	    .selectAll("rect")
 	    .data(function(d) { return d; })
 	    .enter().append("rect")
-	      .attr("x", function(d) { return x(d.data.DEPARTEMENT); })
-	      .attr("y", function(d) { return y(d[1])+50; })
-	      .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+	      .attr("x", function(d) { return (d.data.DEPARTEMENT); })
+	      .attr("y", function(d) { return y(d[1])+coeffTr; })
+	      .attr("height", function(d) { return (y(d[0]) - y(d[1])); })
 				.attr("fill", getColor)
 	      .attr("width", x.bandwidth());
 
@@ -237,22 +241,23 @@ function buildHisto(parent, ann, dep){
 
 
 		if(dep == "Campbon"){
-			g.append("image")
+			/*g.append("image")
 				.attr("xlink:href","img/Corps.svg")
 				.attr("width", 420)
 				.attr("height", 400)
 				.attr("x",-120)
-				.attr("y",-20);
+				.attr("y",-20);*/
 		}else{
 			//The water butt width has to be the same than the
 			//histogram width
 			var widthWatBut =  x.bandwidth();
-			var heightWatBut =  height;
+			var heightWatBut =  height*1.5;
 
 			g.append("image")
 				.attr("xlink:href","img/Citerne2.svg")
 				.style("width", widthWatBut)
 				.style("height", heightWatBut)
+				.attr("y",-90)
 				.attr("preserveAspectRatio","none");
 				//.attr("transform", "translate(" + width/2 + "," + height/2 + ")");
 
@@ -266,8 +271,8 @@ function buildHisto(parent, ann, dep){
 
 		g.append("g")
 				.append("text")
-				.attr("x",90)
-				.attr("y",250)
+				.attr("x",100)
+				.attr("y",230)
 				.text(getCleanDepName)
 				.attr("font-family", "sans-serif")
 				.attr("font-size", "30px")
@@ -302,7 +307,7 @@ function buildHisto(parent, ann, dep){
 	      .call(d3.axisLeft(y).ticks(null, "s"))
 	    .append("text")
 	      .attr("x", 2)
-	      .attr("y", y(y.ticks().pop()) + -20)
+	      .attr("y", y(y.ticks().pop()) )
 	      .attr("dy", "0.32em")
 	      .attr("fill", "#000")
 	      .attr("font-weight", "bold")
