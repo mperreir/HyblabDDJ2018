@@ -175,7 +175,7 @@ jQuery(document).ready(function($){
       newImg2=document.createElement('img');
       newImg2.setAttribute('class','legend-mapW')
       newImg2.setAttribute('src','./img/legend-mapW.png');
-      newLi.appendChild(newImg2); 
+      newLi.appendChild(newImg2);
       newA.addEventListener('mouseover',()=>{newA.setAttribute('style','display:hover;')})
       newLi.appendChild(newA);
       newLi.appendChild(newImg);
@@ -213,6 +213,7 @@ jQuery(document).ready(function($){
     newA.appendChild(newImg3);
     place.appendChild(newA);
     peloton = document.createElement("object");
+    peloton.setAttribute('class','bubbles');
     peloton.setAttribute("data","peloton.html");
     peloton.setAttribute("width","80%");
     peloton.setAttribute("height","100%");
@@ -406,7 +407,24 @@ jQuery(document).ready(function($){
 			var classEnetering = 'selected enter-left',
 				classLeaving = 'leave-right';
 		}
+    if (showingBubbles==0){
+    for (var i=0; i<document.getElementsByClassName('map')[0].childNodes.length; i++){
+      if (document.getElementsByClassName('map')[0].childNodes[i].class='selected') document.getElementsByClassName('map')[0].childNodes[i].setAttribute('class','');
+      if (document.getElementsByClassName('map')[0].childNodes[i].childNodes[2].dataset.date==eventDate) document.getElementsByClassName('map')[0].childNodes[i].setAttribute('class','selected');
 
+    }
+
+
+    }
+    else{
+      peloton = document.createElement("object");
+      peloton.setAttribute('class','bubbles');
+      peloton.setAttribute("data","peloton.html");
+      peloton.setAttribute("width","80%");
+      peloton.setAttribute("height","100%");
+      console.log(peloton);
+      document.getElementsByClassName('bubbles')[0].parentNode.replaceChild(peloton,document.getElementsByClassName('bubbles')[0])
+    }
 
 		selectedContent.attr('class', classEnetering);
 		visibleContent.attr('class', classLeaving).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
