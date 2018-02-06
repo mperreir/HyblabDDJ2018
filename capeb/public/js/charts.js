@@ -71,6 +71,10 @@ var drawDDChart = function(stats) {
             type: 'bubble',
             data: {'datasets': datasets},
             options: {
+                title: {
+                    display: true,
+                    text: "Niveau d’engagement par thème"
+                },
                 onClick: function (e) {
                     var element = this.getElementAtEvent(e);
 
@@ -112,8 +116,7 @@ var drawDDChart = function(stats) {
                 tooltips: {
                     callbacks: {
                         label: function (t, d) {
-                            return d.datasets[t.datasetIndex].label +
-                                ': Total: ' + t.yLabel + ')';
+                            return d.datasets[t.datasetIndex].label + " : " + t.yLabel;
                         }
                     }
                 },
