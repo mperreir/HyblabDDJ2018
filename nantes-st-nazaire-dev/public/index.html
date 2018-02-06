@@ -129,11 +129,13 @@
 
                                 <div class=" mainScreen">
                                   <div id="bl-main" class="bl-main">
-                                    <section id="0" class=" categorie-des cat0">
+                                         <section id="0" class=" categorie-des cat0">
                                       <img src="img/common/tete.png" class="femme">
                                     <img src="img/cadreDeVie/cadredevie.png" class="mainIllustration">
                                      <img src="img/common/commentaire.png" class="commentaire">
                                       <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux commons en communs.</p>
+                                      <canvas id="Loyer mensuel médian au m2 (parc privé) - 2016"></canvas>
+                                      <canvas id="Qualité de l’air 2016 (Jours avec un indice très bon à bon -1 à 4-)"></canvas>
                                     </section>
 
                                     <section class=" categorie-des cat1">
@@ -142,16 +144,20 @@
                                     <img src="img/enseignement/enseignement.png" class="mainIllustration">
                                      <img src="img/common/commentaire.png" class="commentaire">
                                       <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux commons en communs.</p>
+                                      <canvas id="Evolution annuelle moyenne de la part des diplômés de l’enseignement supérieur dans la population (2009-2014)"></canvas>
+                                      <canvas id="Taux de réussite au baccalauréat général"></canvas>
                                     </section>
 
                                     <section class=" categorie-des cat2"> 
                                     <div class="cat-chart-block">
-                                        <canvas id="histogrammeEmploi1"></canvas>
                                     </div>
                                       <img src="img/common/tete.png" class="femme">
                                     <img src="img/emploi/emploi.png" class="mainIllustration">
                                      <img src="img/common/commentaire.png" class="commentaire">
                                       <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
+                                      <canvas id="Taux de chômage 2016"></canvas>
+                                      <canvas id="Evolution annuelle moyenne 2009-2014 de la part des cadres dans pop act."></canvas>
+                                      <canvas id ="Evolution annuelle 2011-2016 du Nombre d'établissements"></canvas>
                                     </section>
 
                                     <section class=" categorie-des cat3">
@@ -159,6 +165,8 @@
                                     <img src="img/culture/culture.png" class="mainIllustration">
                                      <img src="img/common/commentaire.png" class="commentaire">
                                       <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
+                                      <canvas id="Nombre de congrès internationaux en 2016"></canvas>
+                                      <canvas id="Evolution annuelle moyenne du nombre d'emplois dans les ICC 2011-2016"></canvas>
                                     </section>
 
                                     <section class=" categorie-des cat4">
@@ -166,6 +174,8 @@
                                     <img src="img/industrie/industrie.png" class="mainIllustration">
                                      <img src="img/common/commentaire.png" class="commentaire">
                                       <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
+                                      <canvas id="Nombre d'emplois dans l'aéronautique"></canvas>
+                                      <canvas id="Nombre d'emplois dans la l'industrie navale"></canvas>
                                     </section>
 
                                     <section class=" categorie-des cat5">
@@ -173,18 +183,21 @@
                                     <img src="img/numerique/numerique.png" class="mainIllustration">
                                      <img src="img/common/commentaire.png" class="commentaire">
                                       <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
+                                      <canvas id="Part des emplois privés dans le numérique en 2016"></canvas>
+                                      <canvas id="Evolution annuelle de la part des emploi ''conception recherche'' 2009-2014"></canvas>
                                     </section>
 
                                     <section class=" categorie-des cat6">
-                                        <div class="cat-chart-block"> 
-                                            <canvas id="transport1"></canvas>
-                                            <canvas id="transport2"></canvas>
+                                        <div class="cat-chart-block">
                                         </div>
                                         <img src="img/common/indicateur6.png" class="indicateur6 img-responsive">
                                         <img src="img/common/tete.png" class="femme img-responsive">
-                                    <img src="img/transports/transport.png" class="mainIllustration img-responsive">
                                      <img src="img/common/commentaire.png" class="commentaire img-responsive">
                                       <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
+                                      <canvas id="Evolution moyenne annuelle du nombre de passagers 2011-2016 (en pourcentages)"></canvas>
+                                      <div id="df">
+                                      <canvas id="Nombre de kilomètres parcourus en transport en commun par habitant en 2014"></canvas></div>
+                                      <canvas id="Temps de connexion à Paris en train (en minutes)"></canvas>
                                     </section>
                     </div>
 
@@ -226,7 +239,11 @@
                               </div>
 
                               <div class="row social">
-                                <img src="img/menu/fb.png"> <img src="img/menu/twitter.png">  <img src="img/menu/in.png"> <img src="img/menu/share.png"> 
+                                <a href="http://www.google.fr" target="_blank"><span id="social-fb"><img class="i1" src="img/menu/fb.png"><img class="i2" src="img/menu/fb2.png"></span></a>
+                                <span id="social-twitter"><img class="i1" src="img/menu/twitter.png"><img class="i2" src="img/menu/twitter2.png"></span>
+                                <span id="social-in"><img class="i1" src="img/menu/in.png"><img class="i2" src="img/menu/in2.png"></span>
+                                <span id="social-share"><img class="i1" src="img/menu/share.png"><img class="i2" src="img/menu/share2.png"></span>
+                                     
                               </div>
                                 </div>
                               </div>
@@ -240,6 +257,7 @@
                     <div id="synth-chart-block">
                         <canvas id="synthese-chart"></canvas>
                     </div>  
+                    <p>Les rangs indiqués sont les classements moyens des villes vues sous les différents angles donnés plus haut.</p>
                     <img class="flecheBas" src="img/main/FLECHEBAS.png" alt="nextPage">
                 </div>
 
@@ -253,9 +271,9 @@
                             <p> Olwen GENDROT</p>
                         </div>
 
-                        <div class="text-center group">
+                        <div class="text-center group group-mid">
                             <img src="img/maquette/CREDITS/Group2.png">
-                            <h1>SCIENCES COM'</h1>
+                            <h1>SCIENCESCOM'</h1>
                             <p> Louis FAYOLLE</p>
                             <p> Solenn PAGE</p>
                             <p> Romain MORICE</p>
@@ -265,13 +283,13 @@
                         <div class="text-center group side-group"> 
                             <img class="polytechguys" src="img/maquette/CREDITS/Group3.png">
                             <h1 >POLYTECH</h1>
-                            <p> Yacouba DIABY</p>
+                            <a href="dyacouba.raidghost.com"><p> Yacouba DIABY</p></a>
                             <p> Amadou KANE</p>
                             <p> Matthieu FAVREL</p>
                         </div>
-                        <p class="text-center datasource">Les données de notre équipe nous ont été fournies par l’AURAN.
+                        <p class="datasource">Les données de notre équipe nous ont été fournies par l’AURAN.
                             Ces données ont été récoltées sur la période de 0000 à 0000.</p>
-                            <img src="img/maquette/CREDITS/Group4.png">
+                        <img id="logos" src="img/maquette/CREDITS/Group4.png">
                     </div>
                 </div>
             </div>

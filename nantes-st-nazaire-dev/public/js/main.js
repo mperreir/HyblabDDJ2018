@@ -25,7 +25,15 @@ $(document).ready(function() {
 			hideCityDes(ville);
 		});
 
-
+	$(".social span").hover(function() {
+		
+		$(this).find(".i1").css("display","none");
+		$(this).find(".i2").css("display","inline-block");
+	},
+	function() {
+		$(this).find(".i2").css("display","none");
+		$(this).find(".i1").css("display","inline-block");
+	});
 
 });
 

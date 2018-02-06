@@ -99,6 +99,10 @@ function triCroissant(cities, dataSets) {
             }
         }
     }
+    cities = cities.slice(0,9);
+    datas.data = datas.data.slice(0,9);
+    datas.backgroundColor = datas.backgroundColor.slice(0,9);
+    return ([cities, [datas]])
 }
 
 function triDecroissant(cities, dataSets) {
@@ -134,6 +138,10 @@ function triDecroissant(cities, dataSets) {
             }
         }
     }
+    cities = cities.slice(0,5);
+    datas.data = datas.data.slice(0,5);
+    datas.backgroundColor = datas.backgroundColor.slice(0,5);
+    return ([cities, [datas]])
 }
 
 function printBarChart(cities, dataSets, chartId) {
@@ -192,20 +200,21 @@ function synthese(dataSets) {
         },
         options: {
             legend: {
-                position: 'top',
+                position: 'right',
                 labels: {
                     boxWidth: 2,
                 }
             },
             title: {
                 display: true,
-                text: 'Comparaison des rangs des villes selon nos critères'
+                text: 'Comparaison générale des villes concurrentes'
             },
             scale: {
                 ticks: {
                     reverse: true,
                     beginAtZero: true,
-                    min: 1
+                    min: 1,
+                    max: 10
                 }
                 
             }
@@ -214,7 +223,12 @@ function synthese(dataSets) {
         
     };
 
-    new Chart(document.getElementById('synthese-chart'), config);
+    var chart = new Chart(document.getElementById('synthese-chart'), config);
+
+     $("body").click(function() {
+                console.log("skrt1")
+                chart.update(chart);
+            })
 
     var randomScalingFactor = function() {
         return Math.round(Math.random() * 100);
@@ -231,13 +245,7 @@ function synthese(dataSets) {
                     randomScalingFactor(),
                     randomScalingFactor(),
                 ],
-                backgroundColor: [
-                    "red",
-                    "orange",
-                    "yellow",
-                    "green",
-                    "blue",
-                ],
+                backgroundColor: ["#34B6B3","#ffcc01", "#ed524a", "#dabf98", "#b1d952", "#7a4785", "#ea8c40", "#565656", "#8fd8ff", "#20c997", "#6610f2"],
                 label: 'Dataset 1'
             }],
             labels: [
@@ -254,12 +262,13 @@ function synthese(dataSets) {
                     boxWidth: 0,
             }
 
-        },
+        }
+        
 
 }
     };
-
-        //var myPie = new Chart(document.getElementById('synthese-chart'), config);
+    return chart;
+    //var myPie = new Chart(document.getElementById('synthese-chart'), config);
 }
 
 function getSynthData(cities, dataJson) {
@@ -272,9 +281,8 @@ function getSynthData(cities, dataJson) {
         averages.forEach(function(line) {
             values.push(dataJson[line][city]);
         });
-        var hiddenVal = (cpt > 3);
+        var hiddenVal = (cpt > 0);
         dataSets.push({label: city, borderColor: colors[cpt], pointBackgroundColor: colors[cpt], data : values, hidden: hiddenVal});
-
         cpt++;
 
     });
@@ -310,18 +318,83 @@ $(document).ready(function() {
 
             var cities = getChartLabels(data[0]);
             var dataSets = createChartData(data, 21);
-            triDecroissant(cities,dataSets);
-            printBarChart(cities, dataSets, "transport1");
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Evolution moyenne annuelle du nombre de passagers 2011-2016 (en pourcentages)");
 
             var cities = getChartLabels(data[0]);
             var dataSets = createChartData(data, 22);
-            triDecroissant(cities,dataSets);
-            printBarChart(cities, dataSets, "transport2");
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Nombre de kilomètres parcourus en transport en commun par habitant en 2014");
 
             var cities = getChartLabels(data[0]);
             var dataSets = createChartData(data, 23);
-            triDecroissant(cities,dataSets);
-            printBarChart(cities, dataSets, "transport3");
+            var result = triCroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Temps de connexion à Paris en train (en minutes)");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 24);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Nombre de congrès internationaux en 2016");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 25);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Evolution annuelle moyenne du nombre d'emplois dans les ICC 2011-2016");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 18);
+            var result = triCroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Taux de chômage 2016");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 19);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Evolution annuelle moyenne 2009-2014 de la part des cadres dans pop act.");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 20);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Evolution annuelle 2011-2016 du Nombre d'établissements");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 32);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Nombre d'emplois dans l'aéronautique");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 30);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Nombre d'emplois dans la l'industrie navale");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 37);
+            var result = triCroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Loyer mensuel médian au m2 (parc privé) - 2016");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 38);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Qualité de l’air 2016 (Jours avec un indice très bon à bon -1 à 4-)");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 34);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Part des emplois privés dans le numérique en 2016");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 36);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Evolution annuelle de la part des emploi ''conception recherche'' 2009-2014");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 29);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Taux de réussite au baccalauréat général");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 39);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "Evolution annuelle moyenne de la part des diplômés de l’enseignement supérieur dans la population (2009-2014)");
 
             })
         .fail(function() {
@@ -345,8 +418,9 @@ $(document).ready(function() {
             console.log(json);
             var cities = ["Nantes-St-Nazaire", "Lyon", "Bordeaux", "Toulouse", "Rennes", "Lille", "Nice", "Strasbourg", "Grenoble","Aix-Marseille"];
             var synthDataSets = getSynthData(cities, json);
-            synthese(synthDataSets);
+            var synthChart = synthese(synthDataSets);
         });
+
     }
 
     function checkStatus(response) {

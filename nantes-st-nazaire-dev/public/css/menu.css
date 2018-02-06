@@ -157,3 +157,11 @@ div.categorie .chevron {
 	width: 50%;
 
 }
+
+.social img {
+	width: 30px;
+}
+
+.social .i2 {
+	display: none; 
+}
