@@ -13,7 +13,6 @@ upDateTexteGauche();
 upDateTexteDroite();
 $("#descriptionHisto").hide();
 
-
 $('#2012').on('click', function(event) {
 	annee="2012";
 	upDateHisto('#histGauche');
