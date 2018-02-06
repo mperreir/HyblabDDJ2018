@@ -2236,7 +2236,6 @@ function controleurPodium()
         document.getElementById("saviez").className = "dateMenu--hidden";
         document.getElementById("graph").className = "graph--hidden";
         document.getElementById("legendeGraph").className = "legendeGraph--hidden";
-
         setYearActive(tabPodiums, 12);
         var pays = camembertPodium(2017);
         $('li').remove();
@@ -2467,10 +2466,11 @@ function pin(){
 function controleurFrance() {
 
     var villes = document.getElementById("mapFrance").contentDocument;
-    var villes_svg = document.getElementById("mapFrance").contentDocument.querySelectorAll(".ville");
+    var villes_svg = document.getElementById("mapFrance").contentDocument.querySelectorAll(".ville")
+    var clic = false;
     for (var i = 0, length = villes_svg.length; i < length; i++) {
         villes_svg[i].addEventListener("click", function() {
-            popup(this.id, currentYear, dataFrance);
+            clic = popup(this.id, currentYear, dataFrance, clic);
         },false);
     }
     d3.select(villes).selectAll("circle")
@@ -2498,10 +2498,10 @@ function controleurFrance() {
 
     var currentYear = "global";
 
-    var croix = document.querySelector("#fenetrePopupFrance .croix");
+    var croix = document.querySelector("#fenetrePopupFrance .croixFrance");
 
     croix.onclick = function(){
-        closePopup();
+        clic = closePopup(clic);
     }
 
     france2006.onclick = function(){
@@ -2611,24 +2611,31 @@ function controleurFrance() {
 /**************************************************************************************************/
 
 
-function popup(nomVille, anneeCourante, data){
-
+function popup(nomVille, anneeCourante, data, clic){
     if (anneeCourante !== "global") {
-        document.getElementById("fenetrePopupFrance").className = "fenetrePopup";
-        document.getElementById("ville").innerHTML = nomVille;
-        for(var i = 0; i < data.length ; i++) {
-            if (data[i].Annee == anneeCourante && data[i].Ville == nomVille) {
-                addItem("artistes", data[i].Groupe);
+        if (clic === false) {
+            clic = true;
+            document.getElementById("fenetrePopupFrance").className = "fenetrePopupFrance";
+            document.getElementById("ville").innerHTML = " Groupes de " + nomVille;
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].Annee == anneeCourante && data[i].Ville == nomVille) {
+                    addItem("artistes", data[i].Groupe);
+                }
             }
         }
-
     }
+
+    return clic;
 
 }
 
-function closePopup() {
-    removeItem("artistes");
-    document.getElementById("fenetrePopupFrance").className = "fenetrePopup--hidden";
+function closePopup(clic) {
+    if (clic === true) {
+        clic = false;
+        removeItem("artistes");
+        document.getElementById("fenetrePopupFrance").className = "fenetrePopupFrance--hidden";
+    }
+    return clic;
 }
 
 
@@ -2865,54 +2872,54 @@ function setTextGeneralFrance() {
 function graphiqueLine()
 {
     var us = pourcentagePays("Etats-Unis");
-    console.log(us);
     var fr = pourcentagePays("France");
     var al = pourcentagePays("Allemagne");
     var uk = pourcentagePays("Angleterre");
     var lineData = {
         labels : ["2006","2008","2009","2010","2011","2012","2013", "2014", "2015", "2016", "2017"],
         datasets : [
-        {
-            label: "My First dataset",
-            fillColor : "rgba( 169, 255, 136,0.57)",
-            strokeColor : "rgba(169, 255, 136,1)",
-            pointColor : "rgba( 169, 255, 136,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba( 169, 255, 136,1)",
-            data : us
-    },
-    {
-        label: "My Second dataset",
-        fillColor : "rgba(133, 194, 117,0.40)",
-        strokeColor : "rgba(133, 194, 117,1)",
-        pointColor : "rgba(133, 194, 117,1)",
-        pointStrokeColor : "#fff",
-        pointHighlightFill : "#fff",
-        pointHighlightStroke : "rgba(133, 194, 117,1)",
-        data : fr
-    },
-    {
-        label: "My third dataset",
-            fillColor : "rgba(102, 204, 51,0.40)",
-        strokeColor : "rgba(102, 204, 51,1)",
-        pointColor : "rgba(102, 204, 51,1)",
-        pointStrokeColor : "#fff",
-        pointHighlightFill : "#fff",
-        pointHighlightStroke : "rgba(102, 204, 51,1)",
-        data : uk
-    },{
-    label: "My last dataset",
-        fillColor : "rgba(71, 145, 22,0.2)",
-        strokeColor : "rgba(71, 145, 22,1)",
-        pointColor : "rgba(71, 145, 22,1)",
-        pointStrokeColor : "#fff",
-        pointHighlightFill : "#fff",
-        data : al
-}
-]
+            {
+                label: "My First dataset",
+                fillColor : "rgba( 169, 255, 136,0.57)",
+                strokeColor : "rgba(169, 255, 136,1)",
+                pointColor : "rgba( 169, 255, 136,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba( 169, 255, 136,1)",
+                data : us
+            },
+            {
+                label: "My Second dataset",
+                fillColor : "rgba(133, 194, 117,0.40)",
+                strokeColor : "rgba(133, 194, 117,1)",
+                pointColor : "rgba(133, 194, 117,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(133, 194, 117,1)",
+                data : fr
+            },
+            {
+                label: "My third dataset",
+                fillColor : "rgba(102, 204, 51,0.40)",
+                strokeColor : "rgba(102, 204, 51,1)",
+                pointColor : "rgba(102, 204, 51,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(102, 204, 51,1)",
+                data : uk
+            },{
+                label: "My last dataset",
+                fillColor : "rgba(71, 145, 22,0.2)",
+                strokeColor : "rgba(71, 145, 22,1)",
+                pointColor : "rgba(71, 145, 22,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(133,194,117,1)",
+                data : al
+            }
+        ]
 
-}
+    }
 
     // doughnut chart options
     var lineOptions = {
@@ -2941,12 +2948,12 @@ function gif()
 {
     var element = document.getElementById('jackGif')
     lottie.loadAnimation({
-    container: element, // the dom element that will contain the animation
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: 'img/headbanggingjackIII.json' // the path to the animation json
-});
+        container: element, // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'img/headbanggingjackIII.json' // the path to the animation json
+    });
 }
 
 
