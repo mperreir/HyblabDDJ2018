@@ -172,16 +172,16 @@ var data = [{
 /***********/
 
 /* 1.9 -  Conférence */
-{'id': '2.80',"parent":1.9,"name":"Jean-Yves Paumier","value":81},
-{'id': '2.81',"parent":1.9,"name":"Nantes","value":76},
-{'id': '2.82',"parent":1.9,"name":"Jules Verne","value":72},
-{'id': '2.83',"parent":1.9,"name":"Amiens","value":63},
-{'id': '2.84',"parent":1.9,"name":"Olivier Sauzereau","value":46},
-{'id': '2.85',"parent":1.9,"name":"Voyages Extraordinaires","value":45},
-{'id': '2.86',"parent":1.9,"name":"Science-Fiction","value":34},
-{'id': '2.87',"parent":1.9,"name":"L'Ile dans l'œuvre de Jules Verne","value":29},
-{'id': '2.88',"parent":1.9,"name":"Salon International du livre insulaire","value":29},
-{'id': '2.89',"parent":1.9,"name":"Astronomie","value":24},
+{'id': '2.80',"parent":1.9,"name ":"Jean-Yves Paumier","value":81},
+{'id': '2.81',"parent":1.9,"name ":"Nantes","value":76},
+{'id': '2.82',"parent":1.9,"name ":"Jules Verne","value":72},
+{'id': '2.83',"parent":1.9,"name ":"Amiens","value":63},
+{'id': '2.84',"parent":1.9,"name ":"Olivier Sauzereau","value":46},
+{'id': '2.85',"parent":1.9,"name ":"Voyages Extraordinaires","value":45},
+{'id': '2.86',"parent":1.9,"name ":"Science-Fiction","value":34},
+{'id': '2.87',"parent":1.9,"name ":"L'Ile dans l'œuvre de Jules Verne","value":29},
+{'id': '2.88',"parent":1.9,"name ":"Salon International du livre insulaire","value":29},
+{'id': '2.89',"parent":1.9,"name ":"Astronomie","value":24},
 
 /***********/
 
@@ -202,29 +202,30 @@ var data = [{
 // Splice in transparent for the center circle
 Highcharts.getOptions().colors.splice(0, 0, 'transparent');
 
- $('#container_slide7_graphique1').highcharts({
+
+Highcharts.chart('slide7_graphique1', {
+
+    chart: {
+        height: '100%'
+    },
 
     title: {
-        text: 'Mots-clés associés à Jules Verne',
-        marginTop: 20,
+        text: 'Mots-clés associés à Jules Verne'
     },
-    plotOptions: {
-        sunburst: {
-        }
-
-  },
     colors: [
-        'white',//pour le centre du graphique
-        '#323FDE',
-        '#365bf7',
-        '#447efb',
-        '#239ee7',
-        '#55B4EC',
-        '#7DC3EC',
-        '#856CFF',
-        '#7274f6',
-        '#7129f7',
-        '#3e12cf',
+      'white',//pour le centre du graphique
+      '#0064eb',
+      '#469afb',
+      '#0064eb',
+      '#469afb',
+      '#0064eb',
+      '#469afb',
+      '#0064eb',
+      '#469afb',
+      '#0064eb',
+      '#469afb',
+      '#0064eb',
+      '#469afb',
 
 
             ],
@@ -235,11 +236,6 @@ Highcharts.getOptions().colors.splice(0, 0, 'transparent');
         cursor: 'pointer',
         dataLabels: {
             format: '{point.name}',
-            filter: {
-                property: 'innerArcLength',
-                operator: '>',
-                value: 10
-            }
 
         },
         levels: [{
@@ -247,23 +243,26 @@ Highcharts.getOptions().colors.splice(0, 0, 'transparent');
             levelIsConstant: false,
             dataLabels: {
                 rotationMode: 'parallel',
-                filter: {
-                  property: 'outerArcLength',
-                  operator: '>',
-                    value: 64
-                }
-
             }
         }, {
             level: 2,
             colorByPoint: true,
+            dataLabels: {
+                rotationMode: 'parallel'
+            }
         },
         {
             level: 3,
             colorVariation: {
                 key: 'brightness',
                 to: -0.5
-            },
+            }
+        }, {
+            level: 4,
+            colorVariation: {
+                key: 'brightness',
+                to: 0.5
+            }
         }]
 
     }],
@@ -271,7 +270,6 @@ Highcharts.getOptions().colors.splice(0, 0, 'transparent');
         headerFormat: "",
         pointFormat: '<b>{point.value}</b> occurances pour le thème <b>{point.name}</b> '
     }
-
 });
 
 

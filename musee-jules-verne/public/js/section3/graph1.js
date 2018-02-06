@@ -1,5 +1,4 @@
-
-//================= Graphique 1 - Mois
+//================= Graphique 1 de la slide 3
 
 var ctx = document.getElementById("slide3_graphique1").getContext('2d');
 
@@ -79,23 +78,41 @@ data: {
         backgroundColor: yellow_gradient,
         hoverBackgroundColor: hover_yellow_gradient,
       }, {
-        label: 'Articles publiés par année',
+        label: "Afficher le nombre d'articles collectés par année",
         data: [1004,1906,2219,3032,3347,4095,4079,5297,3957,4831,1970],
         fill: false,
         borderColor: "#0972FF",
-        backgroundColor: "#0972FF",
+        backgroundColor: "#0972FF",//permet couleur de la légende
         type: 'line',
         pointBackgroundColor: "rgba(255,255,255,1)",
         pointRadius: 4,
         pointHoverRadius: 8,
         pointHoverBackgroundColor: "rgba(255,255,255,1)",
         pointHoverBorderColor: "#0972FF",
+        borderDash: [2,4],
       }],
   labels: ['2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017']
 },
       options: {
         responsive: true,
          //maintainAspectRatio: false,
+
+//=============Mise A Jour Samdei 02/02 10h
+         tooltips: {//personnalistion des bulles d'informations
+           enabled: true,
+             cornerRadius: 4,
+             caretSize: 0,//taille de la flèche
+             xPadding: 16,
+             yPadding: 16,
+             backgroundColor: 'rgba(255, 255, 255, 0.9)',
+             titleFontStyle: 'bold',//gestion du titre
+             titleMarginBottom: 15,
+             titleFontColor: 'black',
+             bodyFontColor: 'black',//gestion du texte restant
+             borderColor: 'rgba(0,0,0,0.1)',
+             borderWidth: 1,
+             displayColors: false,
+           },
 
           scales: {
               yAxes: [{
@@ -130,14 +147,16 @@ data: {
                return false;
              },
                fontColor: "#0972FF",
-
-    }
+             }
           },
           title: {
             position: 'bottom',
             display: true,
-            text: "Nombre d'articles publiés sur Jules Verne, de juillet 2007 à avril 2017" ,
+            text: "Nombre d'articles collectés sur Jules Verne, de juillet 2007 à avril 2017" ,
           },
         },
 
   });
+
+
+//================= Fin du Graphique 1 de la slide 3
