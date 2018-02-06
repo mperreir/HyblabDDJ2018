@@ -8,7 +8,7 @@ var radius = Math.min(width, height) / 2;
 
 // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
 var b = {
-  w: 200, h: 30, s: 3, t: 10
+  w: 220, h: 30, s: 3, t: 10
 };
 
 // Mapping of step names to colors2.
@@ -242,7 +242,7 @@ function updateBreadcrumbs(nodeArray, percentageString) {
 
   // Now move and update the percentage at the end.
   d3.select("#trail").select("#endlabel")
-      .attr("x", (nodeArray.length + 0.5) * (b.w + b.s))
+      .attr("x", (nodeArray.length + 0.2) * (b.w + b.s))
       .attr("y", b.h / 2)
       .attr("dy", "0.35em")
       .attr("text-anchor", "middle")
