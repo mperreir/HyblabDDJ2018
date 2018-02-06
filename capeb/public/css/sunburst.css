@@ -8,7 +8,6 @@
 #sidebar {
   grid-column: 4;
   grid-row: 2;
-  background-color: aqua;
 }
 #sequence {
   display: none;
