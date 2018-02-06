@@ -1,12 +1,8 @@
 /* just a sample css rule to show that everything works */
 
-/* Header */
-header{
-}
-
 body{
 	font-family: 'Montserrat', sans-serif;
-	background : #96edbd;
+	background : #2D4D92;
 	text-align: justify;
 	z-index: 1;
 }
@@ -20,9 +16,9 @@ body{
 	border:solid;
 	border-width: 4px;
 	background: white;
-	padding-right: 15px;
-	padding-left: 15px;
-	padding-top: 0px;
+	padding-right: 30px;  
+	padding-left: 30px;
+	padding-top: 10px;  
 	padding-bottom: 0px;
 	margin-top: 10px;
 	margin-right: 20%;
@@ -38,6 +34,7 @@ body{
 
 #boutonGauche, #boutonEnSavoirPlus{
 	display: none;
+	margin-right: 1%;
 }
 
 #btnCommencer{
@@ -45,16 +42,17 @@ body{
   	align-items: center;
   	justify-content: center;
 	border:solid;
+	border-width: 5px;
 	border-radius: 5px;
-	background: #58BC81;
+	background: none;
 	width: 20%;
 	margin: auto;
-	margin-top: 20px;
+	margin-top: 30px;
 	padding: 20px 20px 20px 20px;
 	font-weight: 700;
 	font-size: 1.2em;
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 
 #bntCommencer:hover {
@@ -62,8 +60,8 @@ body{
 }
 
 #btnCommencer:active {
-	border-color: white;
-	color: white;
+	border-color: black; 
+	color: black; 
 }
 
 #enSavoirPlus{
@@ -100,6 +98,13 @@ body{
 
 #enSavoirPlusBas p{
 	width: 45%;
+}
+
+h1{
+	position: relative;
+	margin: inherit;
+	margin-top: 4px;
+	margin-left: 2%;
 }
 
 #displayOn{

@@ -165,3 +165,18 @@ fetch('data/datas.json')
     $('.definitionDichloOff').click(function() {
         alert("Hello");
     });*/
+
+    //Santé solutions alternatives
+    $(function() {
+        $('#popupSolution').hide();
+    });
+
+    $('#btnSolution').click(function() {
+        $('#sante').css('filter','blur(3px)');
+        $('#popupSolution').show();
+    })
+
+    $('#exitSolution').click(function() { 
+        $('#sante').css('filter','blur(0px)');
+        $('#popupSolution').hide();
+    });
