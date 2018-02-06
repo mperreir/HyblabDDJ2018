@@ -402,6 +402,12 @@ body{
     justify-content: space-between;
 }
 
+#histTemps{
+
+    left: 40%;
+    width: 100%;
+}
+
 #enSavoirPlusBasP1 article{
     text-align: justify;
     margin: 20px;
