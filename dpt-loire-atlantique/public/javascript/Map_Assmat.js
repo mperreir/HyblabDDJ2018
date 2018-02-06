@@ -1,16 +1,17 @@
 var width = 800,
   height = 600;
 
-var svg = d3.select( "#section6" )
+var svg = d3.select( "#testMap" )
   .append( "svg" )
-  .attr( "id", "map_assmat")
+  .attr( "width", width )
+  .attr( "height", height );
 
-var departement = svg.append( "g" ).attr("map_departement");
+var departement = svg.append( "g" );
 
 var albersProjection = d3.geoAiry()
   .scale( 39000 )
   .rotate( [1.7,0] )
-  .center( [0, 47.35] )
+  .center( [0, 47.36] )
   .translate( [width/2,height/2] );
 
 var geoPath = d3.geoPath()
@@ -25,58 +26,85 @@ departement.selectAll( "path" )
   .attr( "d", geoPath );
 
 
+var creche_location = svg.append( "g" );
+var projection_creche = d3.geoProject(creches, albersProjection);
+
 var assmat_location = svg.append( "g" );
-var projection_assmat = d3.geoProject(assmat, albersProjection)
+var projection_assmat = d3.geoProject(assmat, albersProjection);
 
 var mam_location = svg.append( "g" );
-var projection_mam = d3.geoProject(mam, albersProjection)
+var projection_mam = d3.geoProject(mam, albersProjection);
 
-function print_locations_assmat(elt){
-  if (elt.checked){
+var pressAssmat = 0;
+
+function print_locations_assmat(){
+  if (pressAssmat == 0){
     assmat_location.selectAll( "path" )
       .data( projection_assmat.features )
       .enter()
       .append( "circle" )
-      .attr( "fill", "#Acc815" )
-      .attr( "stroke", "#F56525" )
+      .attr( "fill", "#6F9925" )
+      .attr( "stroke", "#6F9925" )
       .attr( "stroke-width", 1)
       .attr( "cx", function(d){return  ( d.geometry.coordinates[0]); } )
       .attr( "cy", function(d){return d.geometry.coordinates[1]; } )
-      .attr( "r", 0.9);
+      .attr( "r", 0.7);
+	  pressAssmat = 1;
+	  document.getElementsByClassName("button6x1")[0].style.backgroundColor = '#6F9925';
   }
-  else
+  else if(pressAssmat == 1){
     assmat_location.selectAll( "circle" ).remove();
+	pressAssmat = 0;
+	document.getElementsByClassName("button6x1")[0].style.backgroundColor = '#bbbbbb';
+  }
 }
 
-function print_locations_mam(elt){
-  if (elt.checked){
+var pressMam = 0;
+
+function print_locations_mam(){
+  if (pressMam == 0){
     mam_location.selectAll( "path" )
       .data( projection_mam.features )
       .enter()
       .append( "circle" )
-      .attr( "fill", "F4F359B" )
-      .attr( "stroke", "#4F359B" )
+      .attr( "fill", "#000000" )
+      .attr( "stroke", "#000000" )
       .attr( "stroke-width", 1)
       .attr( "cx", function(d){return  ( d.geometry.coordinates[0]); } )
       .attr( "cy", function(d){return d.geometry.coordinates[1]; } )
-      .attr( "r", 2);
+      .attr( "r", 3);
+	  pressMam = 1;
+	  document.getElementsByClassName("button6x2")[0].style.backgroundColor = '#000000';	
   }
-  else
+  else if(pressMam == 1){
     mam_location.selectAll( "circle" ).remove();
+	pressMam = 0;
+	document.getElementsByClassName("button6x2")[0].style.backgroundColor = '#bbbbbb';
+  }
 }
-/*
-var creches_location = svg.append( "g");
 
-var projection_creches = d3.geoProject(creches, albersProjection)
-creches_location.selectAll( "path" )
-  .data( projection_creches.features )
-  .enter()
-  .append( "circle" )
-  .attr( "fill", "blue" )
-  .attr( "stroke", "#F56525" )
-  .attr( "stroke-width", 1)
-  .attr( "cx", function(d){return (d.geometry.coordinates[0]); } )
-  .attr( "cy", function(d){return (d.geometry.coordinates[1]); } )
-  .attr( "r", 0.9);
-*/
+var pressCreche = 0;
+
+function print_locations_creche(){
+  if (pressCreche == 0){
+    creche_location.selectAll( "path" )
+      .data( projection_creche.features )
+      .enter()
+      .append( "circle" )
+      .attr( "fill", "#CD5334" )
+      .attr( "stroke", "#CD5334" )
+      .attr( "stroke-width", 1)
+      .attr( "cx", function(d){return  ( d.geometry.coordinates[0]); } )
+      .attr( "cy", function(d){return d.geometry.coordinates[1]; } )
+      .attr( "r", 3);
+	  pressCreche = 1;
+	  document.getElementsByClassName("button6x3")[0].style.backgroundColor = '#CD5334';	
+  }
+  else if(pressCreche == 1){
+    creche_location.selectAll( "circle" ).remove();
+	pressCreche = 0;
+	document.getElementsByClassName("button6x3")[0].style.backgroundColor = '#bbbbbb';
+  }
+}
+
 

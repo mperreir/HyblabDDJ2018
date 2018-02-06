@@ -90,7 +90,7 @@
           itemGap: 20,
           textStyle: {
             color: 'rgba(30,144,255,0.3)',
-            fontSize: 27,
+            fontSize: 40,
             fontWeight: 'bold'
           }
         },
@@ -104,6 +104,10 @@
           y: 0,
           itemGap: 12,
           data: ['Horaires atypiques', 'Périscolaire', 'Temps partiel', 'Vacances scolaires', 'Mercredi'],
+		  textStyle: {
+            fontSize: 14,
+            fontWeight: 'bold'
+          }
         },
 	
 		
@@ -112,7 +116,7 @@
           name: 'Horaires atypiques',
           type: 'pie',
           clockWise: true,
-          radius: [55,70],
+          radius: [35,50],
           itemStyle: dataStyle1,
           data: [{
             value: 34,
@@ -127,7 +131,7 @@
           name: 'Périscolaire',
           type: 'pie',
           clockWise: true,
-          radius: [75,90],
+          radius: [55,70],
           itemStyle: dataStyle2,
           data: [{
             value: 37,
@@ -142,7 +146,7 @@
           name: 'Temps partiel',
           type: 'pie',
           clockWise: true,
-          radius: [95,110],
+          radius: [75,90],
           itemStyle: dataStyle3,
           data: [{
             value: 59,
@@ -157,7 +161,7 @@
           name: 'Vacances scolaires',
           type: 'pie',
           clockWise: true,
-          radius: [135,150],
+          radius: [115,130],
           itemStyle: dataStyle5,
           data: [{
             value: 84,
@@ -172,7 +176,7 @@
           name: 'Mercredi',
           type: 'pie',
           clockWise: true,
-          radius: [115,130],
+          radius: [95,110],
           itemStyle: dataStyle4,
           data: [{
             value: 78,
