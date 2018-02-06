@@ -231,6 +231,7 @@ var drawChart3dEmploi = function (data) {
     var labels = ["Epci", "Région"];
     var d = data2.map(function (val, i) {
         return {
+            tension: 0,
             label: labels[i],
             backgroundColor: colorZoom[i + 1],
             borderColor: colorZoom[i + 1],
@@ -418,7 +419,7 @@ function drawLineChart(data) {
 
 function drawBarChart(data, title) {
     var sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
-    sec.className = "plus"
+    sec.className = "plus";
     sec.onclick = function() {
         sec.style.display = "none";
 
