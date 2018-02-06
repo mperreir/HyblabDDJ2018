@@ -110,15 +110,15 @@ function drawMap(conjonctureEpci){
                 var conjoncture = conjonctureEpci[d.properties.siren_epci];
                 var color = colorsForRegion[matchColor(conjoncture, 2.87, 3.78, 0.182, 0.244, false)];
                 d3.select(this).transition()
-                    .duration("200")
+                    .duration("0")
                     .style("fill", color)
                     .style("cursor", "pointer");
                 d3.select("#titre-epci").text(d.properties.nom_comple);
             })
             .on("mouseout", function() {
                 d3.select(this).transition()
-                    .delay("50")
-                    .duration("1000")
+                    .delay("200")
+                    .duration("3000")
                     .style("fill", "white");
                 d3.select("#titre-epci").text('');
             })

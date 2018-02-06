@@ -659,13 +659,13 @@ function createConjonctureDataviz(json) {
 
     function radiusmatch(value) {
         if (value <= 0.25) {
-            return 10;
+            return 12.25;
         } else if (value <= 0.50) {
-            return 18;
+            return 25;
         } else if (value <= .75) {
-            return 26;
+            return 37.5;
         } else if (value <= 1) {
-            return 34;
+            return 50;
         }
     }
 
