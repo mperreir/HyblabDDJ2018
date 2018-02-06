@@ -4,9 +4,9 @@
   color: $white;
   position: relative;
   @include prefix((
-  transform-style: preserve-3d,
-  transition: transform 0.5s,
-  perspective: 1300px
+    transform-style: preserve-3d,
+    transition: transform 0.5s,
+    perspective: 1300px
   ), webkit moz );
   >.card{
     width: 100%;
@@ -57,7 +57,7 @@
     width: 100%;
     @extend %mini-titre;
     @include prefix((
-      hyphens: manual
+      hyphens: manual,
     ), webkit moz);
   }
   >span{
@@ -79,6 +79,7 @@
     text-align: center;
     line-height: 48px;
     @extend %texte-labeur;
+    background-color: $capeb;
     color: $white;
   }
   >.goToData:hover{

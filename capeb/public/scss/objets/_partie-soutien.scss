@@ -65,6 +65,14 @@
         padding: 2.5%;
       }
     }
+    >.soutien:hover{
+      >img{
+        width: calc(95% + 2px);
+        padding: calc(2.5% - 2px);
+        top: 1px;
+        left: 1px;
+      }
+    }
     >.bottom:before {
       content : "";
       position: absolute;

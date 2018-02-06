@@ -1,22 +1,16 @@
 /* style de la partie zoom de la nav-bar */
 
 .button-zoom{
-  >.button{
-    cursor: pointer;
-    float: left;
-    width: 48px;
-    height: 48px;
-  }
-  >.button:last-of-type{
-    margin-right: 24px;
-  }
-  >.button:hover{
-    stroke-width: 4;
-  }
   >.niveau-zoom{
     @extend %texte-labeur;
-    text-align: left;
+    text-align: right;
+    margin-right: 48px;
     height: 48px;
     line-height: 48px;
+  }
+  >.niveau-zoom:hover{
+    font-weight: 500;
+    margin-right: 47px;
+    cursor: pointer;
   }
 }

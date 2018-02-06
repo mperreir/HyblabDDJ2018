@@ -75,6 +75,9 @@
         color: rgba(29, 29, 27, 0.5);
         @extend %texte-labeur;
       }
+      >.folio:hover{
+        font-weight: 500;
+      }
     }
   }
 }
