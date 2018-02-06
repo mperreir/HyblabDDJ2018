@@ -180,6 +180,7 @@ body{
     float: left;
     position: absolute;
     left: 45%;
+    top: -10%;
     width: 30.5vw;
 }
 
@@ -187,6 +188,7 @@ body{
     float: left;
     position: absolute;
     left: 0%;
+    top: -10%;
     width: 30.5vw;
 }
 
@@ -201,7 +203,7 @@ body{
     padding: 5px;
     text-align: justify;
     position: absolute;
-    top: 57%;
+    top: 55%;
     left: 1%;
     width: 48%;
 }
@@ -210,7 +212,7 @@ body{
     padding: 5px;
     text-align: justify;
     position: absolute;
-    top: 57%;
+    top: 55%;
     left: 51%;
     width: 48%;
 }
