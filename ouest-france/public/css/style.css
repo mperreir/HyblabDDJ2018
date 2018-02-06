@@ -21,34 +21,35 @@ header img{
 }
 
 #section0{
-  background: #1A1A1A;
+  background: #262626;
   width:100%;
   height: 100%;
 }
 
 
 #section1{
-  background: #1A1A1A;
-  width:100%;
-  height: 100%;
+  background: url(../img/Data1Background.png) no-repeat;
+  background-size: 100% 100%;
+  background-color: #262626;
+
 }
 
 #section2{
-  background: #1A1A1A;
-  width:100%;
-  height: 100%;
+  background: url(../img/Data2Background.png) no-repeat;
+  background-size: 100% 100%;
+  background-color: #262626;
 }
 
 
 #section3{
-  background: #1A1A1A;
-  width:100%;
-  height: 100%;
+  background: url(../img/Data3Background.png) no-repeat;
+  background-size: 100% 100%;
+  background-color: #262626;
 }
 
 
 #section4{
-  background: #1A1A1A;
+  background: #262626;
   width:100%;
   height: 100%;
 }
@@ -703,6 +704,7 @@ h3.TitreAccueil
 	color: white;
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-weight: 700;
+	text-align: justify;
 }
 
 img.barrePodium
@@ -890,6 +892,25 @@ ul.listeScene--hidden
     left: -24px;
 }
 
+.legendeGraph
+{
+	position: absolute;
+    top: 412px;
+    left: 831px;
+    color: white;
+}
+
+.pointLegendeGraph
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 10000px;
+    background: #A9FF88;
+    position: relative;
+    top: -16px;
+    left: -24px;
+}
+
 
 /**************** FRANCE ****************/
 
@@ -909,6 +930,7 @@ p.texteGlobal1{
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-weight: 700;
 	margin-left: 25px;
+	text-align: justify;
 }
 
 p.texteGlobal1--hidden{
@@ -924,6 +946,7 @@ p.texteGlobal2{
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-weight: 700;
 	margin-left: 25px;
+	text-align: justify;
 }
 
 p.texteGlobal2--hidden{

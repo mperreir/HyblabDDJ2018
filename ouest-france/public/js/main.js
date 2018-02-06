@@ -2859,7 +2859,7 @@ function graphiqueLine()
         datasets : [
             {
                 label: "My First dataset",
-                fillColor : "rgba( 169,255,136,0.2)",
+                fillColor : "rgba( 169,255,136,0.57)",
                 strokeColor : "rgba( 169,255,136,1)",
                 pointColor : "rgba( 169,255,136,1)",
             pointStrokeColor : "#fff",
@@ -2869,7 +2869,7 @@ function graphiqueLine()
 },
     {
         label: "My Second dataset",
-            fillColor : "rgba(87,102,77,0.2)",
+            fillColor : "rgba(87,102,77,0.40)",
         strokeColor : "rgba(87,102,77,1)",
         pointColor : "rgba((87,102,77,1)",
         pointStrokeColor : "#fff",
@@ -2879,7 +2879,7 @@ function graphiqueLine()
     },
     {
         label: "My third dataset",
-            fillColor : "rgba(63,91,51,0.2)",
+            fillColor : "rgba(63,91,51,0.30)",
         strokeColor : "rgba(63,91,51,1)",
         pointColor : "rgba(63,91,51,1)",
         pointStrokeColor : "#fff",
@@ -2923,10 +2923,23 @@ function graphiqueLine()
 
 }
 
+function gif()
+{
+    var element = document.getElementById('jackGif')
+    lottie.loadAnimation({
+    container: element, // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'img/headbanggingjackIII.json' // the path to the animation json
+});
+}
+
+
 
 /**********************************************************************************************************************/
 //loadData();
-
+gif();
 setTimeout(function(){
     graphiqueLine();
     pin();
