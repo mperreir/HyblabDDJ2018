@@ -178,16 +178,20 @@ function buildHisto(parent, ann, dep){
 
 		for (var i=0;i<FullData.length;i++){
 			if(FullData[i].DEPARTEMENT == dep && FullData[i].ANNEE == ann){
-				data = [FullData[i]]
+				//console.log(FullData[i]);
+				//delete FullData[i]["SOMME"];
+				//console.log(FullData[i]);
+				data = [FullData[i]];
 			}
 		}
 
 	  var keys = columns.slice(2);
-	  //console.log(keys);
+		//keys.splice(-1,1);
 
 	  //data.sort(function(a, b) { return b.total - a.total; });
 	  x.domain(data.map(function(d) { return d.DEPARTEMENT; }));
-	  y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+	  y.domain([0, d3.max(data, function(d) { return 60; })]).nice();
+		//y.domain(d3.extent(data, function(d) { return d.total; }));
 	  z.domain(keys);
 
 		var lastCol = "ORGANES";
@@ -198,20 +202,18 @@ function buildHisto(parent, ann, dep){
 	  g.append("g")
 	    .selectAll("g")
 	    .data(d3.stack().keys(keys)(data))
-			.attr("height",100)
 	    .enter().append("g")
 	      .attr("fill", function(d) { return z(d.key); })
 	    .selectAll("rect")
 	    .data(function(d) { return d; })
 	    .enter().append("rect")
-	      .attr("x", function(d) { return (d.data.DEPARTEMENT); })
-	      .attr("y", function(d) { return y(d[1])+coeffTr; })
-	      .attr("height", function(d) { return (y(d[0]) - y(d[1])); })
+	      .attr("x", function(d) {return x(d.data.DEPARTEMENT); })
+	      .attr("y", function(d) {return y(d[1])-1; })
+	      .attr("height", function(d) {return (y(d[0]) - y(d[1])); })
 				.attr("fill", getColor)
-	      .attr("width", x.bandwidth());
+	      .attr("width", coeffRed_histo*x.bandwidth());
 
 		function getColor(d){
-
 			if(lastCol == "ORGANES"){
 				lastCol = "MORTEL";
 				return "#D42E1E";
@@ -228,13 +230,10 @@ function buildHisto(parent, ann, dep){
 				lastCol = "FOETUS";
 				return "#58BC81";
 			}else  if(lastCol == "FOETUS"){
-				lastCol = "ORGANES"
+				lastCol = "ORGANES";
 				return "#AA3565";
-			}else  if(lastCol == "ORGANES"){
-				lastCol = "MORTEL";
-				return "black";
 			}else{
-				return "white";
+				return "black";
 			}
 		}
 
