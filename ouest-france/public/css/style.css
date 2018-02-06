@@ -809,6 +809,7 @@ ul.listeScene
 	position: absolute;
     top: 87px;
     color: white;
+    list-style: none;
 }
 
 ul.listeScene--hidden
