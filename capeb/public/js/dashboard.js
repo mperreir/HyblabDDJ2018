@@ -112,7 +112,7 @@ function miniStats(regionStats, d) {
 
             $('#card-contrat .open').each(function(){
                 $(this).on('click', function() {
-                    document.getElementById("modal-nom-epci").innerHTML += d.properties.nom_comple + " - Contrat";
+                    document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Contrat";
                     var texte = document.getElementById("texte-contrat");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
