@@ -1,12 +1,39 @@
 "use strict";
-$ (document).ready(function(){
-    document.getElementsByClassName("backToMap")[0].addEventListener("click", function () {
-        var location = document.location.href;
-        document.location.href = location.slice(0, location.lastIndexOf("/"));
-    });
-});
+// will be used in dashboard too
+var colorsForRegion = [
+    "rgba(240,101,85,1)",
+    "rgba(244,133,64,1)",
+    "rgba(248,165,43,1)",
+    "rgba(251,157,21,1)",
+    "rgba(255,229,0,1)",
+    "rgba(225,223,36,1)",
+    "rgba(195,216,76,1)",
+    "rgba(165,210,113,1)",
+    "rgba(135,203,151,1)",
+    "rgba(105,197,185,1)"
+];
 
-$ (document).ready(drawMap());
+$ (document).ready(function(){
+    fetch("/capeb/data/conjoncture_map")
+        .then(function (value) {
+            return value.json();
+        })
+        .catch(function (error) {
+            console.log("error");
+            console.log(error);
+            return {};
+        })
+        .then(function(json){
+           console.log(json);
+           var conjonctureEPCI = {};
+           json.values.forEach(function(value){
+                conjonctureEPCI[value[0]] = value[1];
+            });
+           console.log(conjonctureEPCI);
+           drawMap(conjonctureEPCI);
+        });
+
+});
 
 d3.select(window).on('resize', function(){
     $(".map-pdl").innerHTML = "";
@@ -14,7 +41,7 @@ d3.select(window).on('resize', function(){
 });
 
 
-function drawMap(){
+function drawMap(conjonctureEpci){
     var mapPdl = $(".map-pdl");
     var viewportWidth = mapPdl.width();
     var viewportHeight = mapPdl.height();
@@ -82,9 +109,11 @@ function drawMap(){
             })
 
             .on("mouseover", function(d) {
+                var conjoncture = conjonctureEpci[d.properties.siren_epci];
+                var color = colorsForRegion[matchColor(conjoncture, 2.87, 3.78, 0.182, 0.244, false)];
                 d3.select(this).transition()
                     .duration("200")
-                    .style("fill", "#CCE748")
+                    .style("fill", color)
                     .style("cursor", "pointer");
                 d3.select("#titre-epci").text(d.properties.nom_comple);
             })
