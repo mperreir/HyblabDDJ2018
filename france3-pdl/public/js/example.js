@@ -174,7 +174,7 @@ jQuery(document).ready(function($){
       newA.appendChild(newImg3);
       newImg2=document.createElement('img');
       newImg2.setAttribute('class','legend-mapW')
-      newImg2.setAttribute('src','./img/legend-mapW.png');
+      newImg2.setAttribute('src','./img/legend-mapW.PNG');
       newLi.appendChild(newImg2);
       newA.addEventListener('mouseover',()=>{newA.setAttribute('style','display:hover;')})
       newLi.appendChild(newA);
@@ -224,7 +224,7 @@ jQuery(document).ready(function($){
       }
     }
     newImg.setAttribute('class','legend-map');
-    newImg.setAttribute('src','./img/legend-map.png');
+    newImg.setAttribute('src','./img/legend-map.PNG');
     place.appendChild(peloton);
     place.appendChild(newImg);
 
