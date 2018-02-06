@@ -19,6 +19,12 @@ body{
     font-size: 0.9vw;
 }
 
+.pTitle {
+    padding-top : 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 /* ----- Header ----- */
 .navbar-brand>img {
     height: 20px;
@@ -26,10 +32,14 @@ body{
 }
 
 .panel {
-    border: 3px solid black;
+    border: 4px solid black;
     background: white;
     position: absolute;
     float: left;
+}
+
+.panel:nth-of-type(2){
+	border: 2px solid black;
 }
 
 
@@ -122,9 +132,9 @@ body{
     filter :blur(0px);
 }
 
-/* Section 1 */
+/* Section 1 : Présentation générale dataviz */
 #section1 {
-    top: 7vh;
+    top: 10vh;
     left: 5vw;
     width: 40vw;
     word-wrap : break-word;
@@ -132,8 +142,8 @@ body{
 }
 
 .pContent {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .pTop {
@@ -148,13 +158,13 @@ body{
 /* Timeline1 : Positionnement et taille */
 #timeline1 {
     width: 22vw;
-    top: 37vh;
+    top: 43vh;
     left: 12vw;
 }
 
-/* Section 3 */
-#section3 {
-    top: 7vh;
+/* Section 2 : Histogrammes, textes et légende */
+#section2 {
+    top: 10vh;
     left: 50vw;
     width: 46vw;
     height: 80vh;
@@ -178,12 +188,14 @@ body{
     width: 20.7vw;
 }
 
+/* Textes + histogrammes */
 .article1 {
     float: left;
     width: 50%;
     height: 80%;
 }
 
+/* Légendes */
 #legendeTitle {
     padding-left: 10px;
 }
@@ -208,6 +220,7 @@ body{
     margin-top: 0.2vw;
 }
 
+/* Bouton en Savoir Plus */
 #buttonSP {
     float: left;
     position: absolute;
@@ -219,9 +232,9 @@ body{
 /* Carte Départements */
 #mapBretagne {
     float: left;
-    width: 30vw;
+    width: 28vw;
     position: absolute;
-    top: 50vh;
+    top: 59vh;
     left: 9vw;
 }
 
@@ -388,7 +401,7 @@ body{
 }
 
 #boutonExitP1{
-    margin-top: 17px;
+    margin-top: 7px;
     height: 36px;
     width: 36px;
 }
@@ -397,6 +410,7 @@ body{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 #enSavoirPlusBasP1 article{
@@ -409,33 +423,29 @@ body{
 /* ######################################################################### */
 /* --------------- Page 2 --------------- */
 /* ######################################################################### */
-/* Section 4 */
-#section4 {
-    top: 7vh;
+/* Section 3 : Présentation Nappe Campbon */
+#section3 {
+    top: 10vh;
     left: 5vw;
     width: 25vw;
     word-wrap : break-word;
     text-align: justify;
 }
 
-.pTitle {
-    padding: 0.7vw 0.7vw 0 0.7vw;
-}
-
-/* Section 5 */
-#section5 {
-    top: 68vh;
+/* Section 4 : Légende Station */
+#section4 {
+    top: 75vh;
     left: 5vw;
-    width: 25vw;
-    height: 11.5vw;
+    width: 20vw;
+    height: 10vw;
 }
 
 #pCiterne {
     float: left;
     position: absolute;
-    left: 30%;
-    top: 34%;
-    width: 17.5vw;
+    left: 25%;
+    top: 28%;
+    width: 15.5vw;
     text-align: justify;
 }
 
@@ -482,9 +492,9 @@ body{
 #mapCampbon {
     float: left;
     position: absolute;
-    top: 7%;
-    left: 40%;
-    width: 45%;
+    top: 10vh;
+    left: 40vw;
+    width: 45vw;
 }
 
 .st200 {
@@ -578,9 +588,9 @@ body{
 /* ######################################################################### */
 /* --------------- Page 3 --------------- */
 /* ######################################################################### */
-/* Section 6 : Texte Nappe de Campbon par année*/
-#section6 {
-    top: 7vh;
+/* Section 5 : Texte Nappe de Campbon par année*/
+#section5 {
+    top: 10vh;
     left: 5vw;
     width: 31vw;
     text-align: justify;
@@ -589,30 +599,30 @@ body{
 /* Timeline 2 : positionnement et taille */
 #timeline2 {
     width: 22vw;
-    top: 30vh;
-    left: 43vw;
+    top: 36vh;
+    left: 41vw;
 }
 
-/* Section 8 : Légende */
-#section8 {
-    top: 28vh;
-    left: 75vw;
-    width: 18vw;
+/* Section 6 : Légende */
+#section6 {
+    top: 30vh;
+    left: 72vw;
+    width: 23vw;
     text-align: justify;
 }
 
-.pSection8 {
+.pSection6 {
     padding-top: 0.37vw;
     padding-bottom: 0.37vw;
     padding-left: 1vw;
 }
 
-.articleS8 {
+.articleS6 {
     display: inline-flex;
     padding-left: 0.6vw;
 }
 
-.articleS8 svg {
+.articleS6 svg {
     margin-top: 0.6vw;
 }
 
@@ -620,7 +630,7 @@ body{
 #bonhomme {
     float: left;
     position: absolute;
-    top: 10vh;
+    top: 13vh;
     left: 40vw;
     width: 30vw;
 }
@@ -632,7 +642,7 @@ body{
 /* ######################################################################### */
 /* Petit paragraphe */
 #pCredits1 {
-    top: 7vh;
+    top: 10vh;
     left: 35vw;
     width: 30vw;
     padding: 10px;
@@ -645,21 +655,20 @@ body{
     position: absolute;
     width: 20vw;
     height: auto;
-    border: 3px solid black;
     top: 20vh;
     left: 54vw;
 }
 
-/* Section 9 : Présentation Eau et Rivieres */
-#section9 {
+/* Section 7 : Présentation Eau et Rivieres */
+#section7 {
     width: 35vw;
-    top: 18vh;
+    top: 20vh;
     left: 8vw;
     text-align: justify;
 }
 
-/* Section 10 : Remerciements Eau et Rivieres */
-#section10 {
+/* Section 8 : Remerciements Eau et Rivieres */
+#section8 {
     width: 35vw;
     top: 35vh;
     left: 54vw;
@@ -672,7 +681,7 @@ body{
     position: absolute;
     width: 75%;
     left: 12%;
-    top: 60%;
+    top: 62%;
     border-collapse: separate;
     border-spacing: 10px 20px; /* Nombre de pixels d'espace horizontal (5px), vertical (8px) */
 }
@@ -680,7 +689,6 @@ body{
 #logos td {
     width: 12%;
     height: auto;
-    border: 3px solid black;
     text-align: center;
     background-color: white;
 }
