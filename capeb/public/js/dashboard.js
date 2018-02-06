@@ -101,7 +101,7 @@ function miniStats(regionStats, d) {
                 span = document.createElement("span");
                 liste.appendChild(span);
                 span.className += "donneeliste";
-                span.style.fontSize = scaleBetween(value.percentage, 1.2, 4, 0, 1) + "vw";
+                span.style.fontSize = scaleBetween(value.percentage, 0, 12, 0, 1) + "vw";
                 span.innerHTML = value.name;
             });
 

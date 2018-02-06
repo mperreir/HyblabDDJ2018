@@ -39,7 +39,7 @@ var vis
 var partition
 var arc
 var sunBurst = function(js){
-	$("#dataviz").html("<div id='main'><div id='sequence'></div><div id='chart'><div id='explanation' style='visibility: hidden;'><span id='percentage'></span><br/></div></div></div><div id='sidebar' style='visibility: hidden;'><input type='checkbox' id='togglelegend' style='visibility: hidden;'> Legend<br/><div id='legend' style='visibility: hidden;'></div></div>");
+	$("#dataviz").html("<div id='main'><div id='sequence'></div><div id='chart'><div id='explanation' style='display: none;'><span id='percentage'></span><br/></div></div></div><div id='sidebar' style='visibility: hidden;'><input type='checkbox' id='togglelegend' style='visibility: hidden;'> Legend<br/><div id='legend' style='visibility: hidden;'></div></div>");
 
 	vis = d3.select("#chart").append("svg:svg")
 		.attr("width", width)

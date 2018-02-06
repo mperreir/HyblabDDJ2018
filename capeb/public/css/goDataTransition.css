@@ -149,7 +149,7 @@
   fill: none;
 }
 
-.modal-inset .button #unzoom:hover, .next:hover, .prev:hover{
+.modal-inset .button .next:hover, .prev:hover, #unzoom:hover{
   stroke-width: 4;
   cursor: pointer;
 }
@@ -195,8 +195,6 @@
 
 .texte-dataviz .explication-data{
   font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
-  text-align: left;
   font-size: 16px;
   font-weight: 400;
   text-align: justify;
@@ -204,6 +202,15 @@
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
+}
+
+.texte-dataviz .rappel-data{
+  margin-top: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: justify;
 }
 
 .modal-body {
