@@ -249,7 +249,7 @@ function buildHisto(parent, ann, dep){
 	    .data(function(d) { return d; })
 	    .enter().append("rect")
 	      .attr("x", function(d) { return x(d.data.ANNEE)})
-	      .attr("y", function(d) {return y(d[1])-1; })
+	      .attr("y", function(d) {return y(d[1])+1; })
 	      .attr("height", function(d) {return (y(d[0]) - y(d[1])); })
 				.attr("fill", getColor)
 	      .attr("width", coeffRed_histo*x.bandwidth());
@@ -269,13 +269,13 @@ function buildHisto(parent, ann, dep){
 			//The water butt width has to be the same than the
 			//histogram width
 			var widthWatBut =  x.bandwidth();
-			var heightWatBut =  height*1.5;
+			var heightWatBut =  height*1.2;
 
 			g.append("image")
 				.attr("xlink:href","img/Citerne2.svg")
 				.style("width", widthWatBut)
 				.style("height", heightWatBut)
-				.attr("y",-90)
+				.attr("y",-34)
 				.attr("preserveAspectRatio","none");
 		}else if (dep != "Campbon"){
 				g.append("g")
