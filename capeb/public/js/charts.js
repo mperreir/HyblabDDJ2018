@@ -112,22 +112,25 @@ var drawDDChart = function(stats) {
                 tooltips: {
                     callbacks: {
                         label: function (t, d) {
-                            return d.datasets[t.datasetIndex].label +
-                                ': Total: ' + t.yLabel + ')';
+                            return d.datasets[t.datasetIndex].label + ':' + t.yLabel;
                         }
                     }
                 },
                 scales: {
                     xAxes: [{
                         ticks: {
-                            display: false
+                            display: false,
+                            min: -1,
+                            max: stats.Developpement_durable.values[0].length
                         },
                         gridLines: {
                             display: false
                         },
                         scaleLabel: {
                             display: false,
-                        }
+                        },
+                        
+
                     }],
                     yAxes: [{
                         ticks: {
@@ -157,7 +160,7 @@ var wordCloud = function(FreinsMP) {
     var fill = d3.scale.category20();
 
     var layout = d3.layout.cloud()
-        .size([500, 500])
+        .size([600, 600])
         .words(frequency_list)
         .padding(5)
         .font("Montserrat', sans-serif")
