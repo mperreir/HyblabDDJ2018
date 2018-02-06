@@ -228,7 +228,7 @@ var drawChart3dEmploi = function (data) {
         "labels": ["annee", "Moy_recrutement_envi"],
         "values": [
             ["2014", "2015", "2016", "2017"],
-            ["1.11538461538462", "1.13223140495868", "1.11678832116788", "1.35028248587571"]
+            ["8.321377", "12.15517", "17.19409", "25.60819"]
         ]
 
     };
@@ -261,7 +261,7 @@ var drawChart3dEmploi = function (data) {
         options: {
             title: {
                 display: true,
-                text: "% d’entreprises envisageant d’embaucher en 2018"
+                text: "Evolution du % d’entreprises qui envisagent d'embaucher"
             },
             tooltips: {
                 mode: 'index',
@@ -293,11 +293,14 @@ var drawChart3dEmploi = function (data) {
                     ticks: {
                         suggestedMin: 0, // minimum will be 0, unless there is a lower value.
                         // OR //
-                        beginAtZero: true // minimum value will be 0.
+                        beginAtZero: true, // minimum value will be 0.
+                        callback: function(value){
+                            return value + "%";
+                        }
                     },
                     scaleLabel: {
                         display: true,
-                        labelString: 'Moyenne Nb récrutement envisagé'
+                        labelString: "% d'entreprises qui envisagent d'embaucher"
                     },
                     gridLines: {
                         display: false,
@@ -307,7 +310,8 @@ var drawChart3dEmploi = function (data) {
             }
         }
     });
-
+    
+/*
     cvs.onclick = function (evt) {
         var activePoints = ch.getElementsAtEvent(evt);
         if (activePoints[0]) {
@@ -330,6 +334,7 @@ var drawChart3dEmploi = function (data) {
 
         }
     };
+*/
 };
 
 
