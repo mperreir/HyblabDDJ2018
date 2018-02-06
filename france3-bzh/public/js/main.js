@@ -7,11 +7,10 @@
 //---------------------
 // Initialise le fullpage
 
-window.onload = async function(){
-  $("#loading").delay(5000).fadeOut('slow');
-  $("#menu").delay(5000).fadeIn('slow');
-
-  $(".fp-controlArrow.fp-next").delay(5000).fadeIn('slow');
+window.onload = function(){
+  $("#loading").fadeOut('slow');
+  $("#menu").fadeIn('slow');
+  $(".fp-controlArrow.fp-next").fadeIn('slow');
 };
 
 $('.arrowUp').click(function(){
@@ -893,7 +892,6 @@ function initmap() {
     // on centre sur la France
     map.setView(new L.LatLng(44.85, 3.4518), 5.5);
     map.removeLayer(pn);
-    pn = null;
     map.removeLayer(accidentRegion);
     accidentRegion = null;
     map.removeLayer(coordAcc);
@@ -927,12 +925,11 @@ function AfficherPn(e)
 {
     if (pnDisplay == true){
         map.removeLayer(pn);
-        pn =null;
         pnDisplay = false;
         $(e).removeClass('active');
     }
     else {
-        pn = addPn();
+
         map.addLayer(pn);
         pnDisplay = true;
         $(e).addClass('active');
@@ -986,8 +983,7 @@ function AfficherAcc(e)
 
 function AfficherRatioRegion(e)
 {
-    var truc = document.getElementsByClassName('lie')
-    console.log(truc);
+    var truc = document.getElementsByClassName('lie');
     if (accDisplay == true && map.hasLayer(accidentRegion) == false){
         map.removeLayer(accidentratioRegion);
         accidentratioRegion = null;
@@ -1042,7 +1038,6 @@ function addPn ()
     })
     // this promise will be fulfilled when the json will be parsed
     .then(function (Geojson) {
-
         for (var i in Geojson.features)
         {
             markers.addLayer(L.marker(Geojson.features[i].geometry.coordinates, {
@@ -1151,7 +1146,6 @@ function addCoordAcc(){
     })
     // this promise will be fulfilled when the json will be parsed
     .then(function (Geojson) {
-
         for (var i in Geojson.features)
         {
             markers.addLayer(L.marker(Geojson.features[i].geometry.coordinates, {
@@ -1186,6 +1180,7 @@ fetch('data/france.geojson')
     .then(function (Geojson) {
         // Get the context of the canvas element we want to select
         L.geoJSON(Geojson, {style:function(feature) {
+
             return {
                 'fillColor': '#30354C',
                 'weight': 0.5,
@@ -1211,6 +1206,8 @@ var coordacc = false;*/
 var switchClick = function(e) {
   $(this).toggleClass('active');
 };
+
+
 
 (function($) {
   $.fn.materialSwitch = function(options) {
