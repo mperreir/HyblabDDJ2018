@@ -1,24 +1,29 @@
 
 /* partie de droite */
 
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 #containerMap {
     height: 100%;
     height: -webkit-calc(100%);  /* pour Chrome */
     height: -moz-calc(100%);     /* pour Firefox */
     height: calc(100%);           /* pour support natif */
-
-
     padding-left: 100px;
-
     background: #FAFAFA;
+}
+
+.credits, .home {
+    outline: none;
+    font-size: 14px;
 }
 
 #map {
     float: right;
-
     width: 1000px;
     height: 500px;
-
     z-index: -1;
 }
 
@@ -26,8 +31,17 @@
 
 .texte {
     position: absolute;
-
     background-color: #009BC2;
-
     z-index: 1;
+}
+
+.temoignage {
+    position: absolute;
+    top: 50%;
+    width: 394px;
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 25px;
 }

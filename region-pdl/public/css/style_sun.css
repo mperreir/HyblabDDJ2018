@@ -75,6 +75,10 @@ a:hover, a:active, a:focus {
     letter-spacing: 1px;
     line-height: 25px;
 }
+.credits, .home {
+    outline: none;
+    font-size: 14px;
+}
 
 .temoignage {
     position: absolute;

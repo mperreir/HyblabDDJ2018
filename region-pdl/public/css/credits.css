@@ -7,6 +7,8 @@ body {
     height: -webkit-calc(100%);  /* pour Chrome */
     height: -moz-calc(100%);     /* pour Firefox */
     height: calc(100%);          /* pour support natif */
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 a:link, a:visited {
@@ -80,7 +82,7 @@ h1 {
 
 #conclusion {
     margin-left: 350px;
-
+    margin-top: -90px;
     height: 178px;
     width: 674px;
     color: rgba(0,0,0,0.8);
@@ -96,11 +98,12 @@ h1 {
 
 .ecole {
     float:left;
-    height: 300px;
+    height: 280px;
     /*width: 100%;*/
 
     margin: 20px;
     padding: 10px;
+    margin-top: -50px;
 
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.16);
 }

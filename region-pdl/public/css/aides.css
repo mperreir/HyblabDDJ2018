@@ -35,6 +35,11 @@
     width:50%;
 }
 
+.credits, .home {
+    outline: none;
+    font-size: 14px;
+}
+
 #intervalleAge {
     display:inline-block;
     width:50%;
