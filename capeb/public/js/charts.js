@@ -325,7 +325,7 @@ var drawChart3dEmploi = function (data) {
 };
 
 
-function drawLineChart(data) {
+function investissementDataviz(data) {
     var sec = document.getElementById("dataviz-section");
     if (sec !== null) {
         sec.remove();
@@ -348,7 +348,7 @@ function drawLineChart(data) {
     };
     var dataset = {
         data: [],
-        label: "EPCI",
+        label: "Votre secteur",
         backgroundColor: colorZoom[1],
         borderWidth: "0",
         tension: 0

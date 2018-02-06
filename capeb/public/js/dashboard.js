@@ -63,7 +63,7 @@ function miniStats(regionStats, d) {
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
                     document.getElementById("rappel-investissement").innerHTML = (json.values[3][1] * 100).toFixed(1) + "% des artisans de votre territoire déclarent vouloir investir en 2018";
-                    drawLineChart(json);
+                    investissementDataviz(json);
                     closeOnEscape();
                 });
             });
