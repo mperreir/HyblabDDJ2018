@@ -85,20 +85,20 @@ var drawDDChart = function(stats) {
                         var d = {'labels': [], 'values': []}
 
                         stats.Interet_ApsectDD.values.map(function(cell) {
-                            if(cell[0] === datasetLabel
-                    )
-                        {
-                            d.labels.push(cell[1]);
-                            d.values.push(cell[2]);
-                        }
-                    });
-
+							if(cell[0] === datasetLabel)
+							{
+								d.labels.push(cell[1]);
+								d.values.push(cell[2]);
+							}
+						});
 
                         $("#canvas-dataviz").fadeOut();
                         $(".plus").html("");
-                        drawPieChart(d, datasetLabel);
 
-                    }
+                        drawPieChart(d, datasetLabel);
+		                $(".plus").append($.parseHTML("<svg id='unzoom' viewBox='0 0 50 70' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g transform='translate(10.0, 25.0)'><polyline points='20 0 10 10 20 20'></polyline></g></svg>"))
+
+						}
                 },
                 hover: {
                     mode: 'nearest',
@@ -155,7 +155,7 @@ var wordCloud = function(FreinsMP) {
             "text": name,
             "size": FreinsMP.values[1][id]
         };
-});
+	});
 
     var fill = d3.scale.category20();
 
@@ -322,6 +322,7 @@ var drawChart3dEmploi = function (data) {
             $("#canvas-dataviz").fadeOut();
             $(".plus").html("");
             drawBarChart(p, "Moyenne Nb récrutement envisagé " + label)
+		    $(".plus").append($.parseHTML("<svg id='unzoom' viewBox='0 0 50 70' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g transform='translate(10.0, 25.0)'><polyline points='20 0 10 10 20 20'></polyline></g></svg>"))
 
         }
     };
