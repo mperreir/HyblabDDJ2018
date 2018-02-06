@@ -53,16 +53,17 @@
   ), webkit moz);
   background-color: $data-metier1;
   >.description-data{
-    margin: 10% 0 1.5em 0;
+    margin: 10vh 0 1.5em 0;
     width: 100%;
     @extend %mini-titre;
+    font-size: 2vw;
     @include prefix((
       hyphens: manual,
     ), webkit moz);
   }
   >span{
     font-family: $main-font;
-    font-size: 30px;
+    font-size: 2vw;
     font-weight: 400;
   }
   >.goToData{

@@ -1,7 +1,7 @@
 .bloc-recto{
   >.donnee{
     @extend %data-donnee;
-    margin-top: 20%;
+    margin-top: 5vh;
     text-align: center;
     width: 100%;
   }
@@ -16,7 +16,7 @@
   }
   .donneetexte{
     @extend %titre-titre;
-    margin-top: 30%;
+    margin-top: 6.5vh;
     text-align: center;
     width: 100%;
   }
@@ -71,7 +71,7 @@
     @extend %mini-titre;
     text-align: left;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 8vh;
   }
   >.picto{
     position: absolute;
