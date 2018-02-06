@@ -635,15 +635,22 @@ p{
     width: 760px;
     margin-top: -2px;
     margin-left: 30px;
+
     /*border: dotted;*/
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.05);
+    /*box-shadow: 3px 2px 2px 1px rgba(0,0,0,0.05);*/
+    border: dotted;
+    border-color: #e6e6e6;
     color: #666;
+    padding-top: 5px;
+    padding-bottom: 6px;
 }
 
 #text{
     font-family: "Space Mono", Arial, serif;
     font-size: 17px;
     font-style: italic;
+    padding-top: 10px;
+    padding-left: 15px;
 ;
 }
 
