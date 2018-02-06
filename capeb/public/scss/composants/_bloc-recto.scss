@@ -39,25 +39,25 @@
 .n1{
   @extend %data-liste;
   text-align: right;
-  font-size: calc(56px + (100vw - 400px) / (800 - 400));
+  font-size: 4vw;
   line-height: 0.9;
 }
 .n2{
   @extend %data-liste;
   text-align: right;
-  font-size: calc(56px - ((14px *1)+ 7) + (100vw - 400px) / (800 - 400));
+  font-size: 3vw;
   line-height: 1;
 }
 .n3{
   @extend %data-liste;
   text-align: right;
-  font-size: calc(56px - ((14px *2)+ 7) + (100vw - 400px) / (800 - 400));
+  font-size: 2vw;
   line-height: 1.1;
 }
 .n4{
   @extend %data-liste;
   text-align: right;
-  font-size: calc(56px - ((14px *3)+ 7) + (100vw - 400px) / (800 - 400));
+  font-size: 1vw;
   line-height: 1.2;
 }
 
