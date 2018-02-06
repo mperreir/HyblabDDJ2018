@@ -39,14 +39,6 @@ var drawDDChart = (stats) => {
     sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
     sec.setAttribute("id", "dataviz-section");
 
-    var h3 = document.getElementById("title-dataviz");
-    if (h3 !== null) {
-        h3.remove();
-    }
-    var h3 = sec.appendChild(document.createElement('h3'));
-    h3.setAttribute("id", "title-dataviz");
-    h3.innerHTML = "Qui veut gagner des salariés ?";
-
     var canvas = document.getElementById("canvas-dataviz");
     if (canvas !== null) {
         canvas.remove();
