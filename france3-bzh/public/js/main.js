@@ -7,11 +7,29 @@
 //---------------------
 // Initialise le fullpage
 
+
 window.onload = function(){
   $("#loading").fadeOut('slow');
   $("#menu").fadeIn('slow');
   $(".fp-controlArrow.fp-next").fadeIn('slow');
+  $.fn.fullpage.moveTo('Questions');
 };
+
+function MoveToto(e)
+{
+  if($(e)[0].innerText == "Questions")
+  {
+    $.fn.fullpage.moveTo('Questions');
+  }
+  else if($(e)[0].innerText == "Carte")
+  {
+    $.fn.fullpage.moveTo('Carte');
+  }
+  else if($(e)[0].innerText == "About")
+  {
+    $.fn.fullpage.moveTo('About');
+  }
+}
 
 $('.arrowUp').click(function(){
     $.fn.fullpage.moveSectionUp();
@@ -27,6 +45,23 @@ $(document).ready(function(){
     $(this).addClass("active");
   });
 });
+
+$('#fullpage').fullpage({
+  onLeave: function(index, nextIndex, direction){
+    console.log(index);
+    console.log(direction);
+    console.log(nextIndex);
+    if(index == 2 && direction =='down' || index == 1 && direction =='down' && nextIndex == 3)
+    {
+      $('.ico').fadeOut("slow");
+    }
+    else if (index == 3 && direction =='up' ||index == 2 && direction =='up')
+    {
+      $('.ico').fadeIn("slow");
+    }
+  }
+});
+
 
 var q = [0,0,0,0,0]
 $(document).ready(function() {
