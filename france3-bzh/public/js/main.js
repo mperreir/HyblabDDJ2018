@@ -7,6 +7,13 @@
 //---------------------
 // Initialise le fullpage
 
+window.onload = async function(){
+  $("#loading").delay(5000).fadeOut('slow');
+  $("#menu").delay(5000).fadeIn('slow');
+
+  $(".fp-controlArrow.fp-next").delay(5000).fadeIn('slow');
+};
+
 $('.arrowUp').click(function(){
     $.fn.fullpage.moveSectionUp();
 });
@@ -50,8 +57,8 @@ fetch('data/reponses.json')
 
 
 function Light(){
-    $("#section_illu1").fadeIn("slow",function(){
-        $("#section_illu1").css({'background-image':'url(img/Illu1/daynight.svg)'});
+    $(".beforeday").fadeTo("slow",0.1,function(){
+        $(".beforeday").css({'background-image':'url(img/Illu1/daynight.svg)'});
         $("#nuit").css({'visibility':'visible'});
         $("#jour").css({'visibility':'visible'});
     }).fadeTo('slow', 1);
@@ -876,15 +883,15 @@ function initmap() {
 // paramÃ©trage de la carte
     map = new L.Map('map',{
         attributionControl: false,
-        zoomSnap: 1,
-        minZoom: 5,
+        zoomSnap: 0.5,
+        minZoom: 5.5,
         maxZoom: 10,
         zoomControl:false,
         layers:[pn,accidentRegion,coordAcc,accidentratioRegion]});
 
     // crÃ©ation des "tiles" avec open street map
     // on centre sur la France
-    map.setView(new L.LatLng(46.85, 2.3518), 5);
+    map.setView(new L.LatLng(44.85, 3.4518), 5.5);
     map.removeLayer(pn);
     pn = null;
     map.removeLayer(accidentRegion);

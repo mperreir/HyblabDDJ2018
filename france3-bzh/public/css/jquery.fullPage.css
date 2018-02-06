@@ -80,7 +80,7 @@ html.fp-enabled,
     opacity: 0.1;
     border-width: 38.5px 0 38.5px 34px;
     border-color: transparent transparent transparent #46B29D;
-    display:block;
+    display:none;
 }
 
 .fp-controlArrow.fp-prev:hover {
