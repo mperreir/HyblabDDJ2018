@@ -140,7 +140,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-dd");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
-                    document.getElementById("rappel-dd").innerHTML = "La thématique phare sur votre secteur est : :" + stat2[0].name;
+                    document.getElementById("rappel-dd").innerHTML = "La thématique phare sur votre secteur est : " + stat2[0].name;
                     drawDDChart(stats);
                     closeOnEscape();
                 });
@@ -211,7 +211,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-distance");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
-                    document.getElementById("rappel-emploi").innerHTML = "Les artisans de votre secteur parcourent en moyenne " + stats.Nombre_Recrutements_Envisage_2017.labels[indexOfMax] + " km";
+                    document.getElementById("rappel-distance").innerHTML = "Les artisans de votre secteur parcourent en moyenne " + Math.round(mean) + " km";
                     drawDistanceDataviz(json);
                     closeOnEscape();
                 });
@@ -304,6 +304,7 @@ function createModal(){
 		$(dataviz[current_d] + " .open").click();
 
 	});
+
 	$('.next').on('click', function() {
 		current_d = (current_d + 1) % dataviz.length;
 		$('.close').click()
