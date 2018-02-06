@@ -17,23 +17,22 @@
 
 #nana-nantes {
 	width: 8%;
-	top: 205px;
 	margin-left: 2%;
 	position: relative;
-	top: 30px;
+	top: 50px;
 }
 
 #bulle {
 	position: absolute;
 	width: 4%;
-	top: 24%;
+	top: 100px;
 	left: 67%;
 }
 
 #presentation-block {
 	position: absolute;
 	width: 24%;
-	top: 15%;
+	top: 8%;
 	left: 70%;
 	color: black;
 	font-size: 16px;
@@ -41,6 +40,112 @@
 
 #presentation1, #presentation2 {
 	margin-bottom: 20px;
+}
+
+@media (max-width:1200px) {
+	#bulle {
+		left: 64%;
+		top: 20%;
+	}
+	#carte-container {
+		
+	}
+}
+
+@media (max-width: 990px) {
+	#bulle {
+		top: 33%;
+	}
+	#carte-container {
+		
+	}
+	.pourquoi {
+		margin-left: 4%;
+		margin-bottom: 80px;
+	}
+
+	#nantes-img {
+		width: 48%;
+		margin-left: 0%;
+		margin-top: 3%;
+	}
+
+	#nana-nantes {
+		width: 8%;
+		margin-left: 2%;
+		position: relative;
+		margin-top: 5%;
+	}
+}
+
+@media (max-width: 760px) {
+	#presentation-block {
+		left: 60%;
+		top: 16%;
+		width: 30%;
+
+	}
+	#bulle {
+		left: 55%;
+		top: 290px;
+	}
+	.pourquoi {
+		margin-left: 4%;
+		margin-bottom: 80px;
+	}
+
+	#nantes-img {
+		width: 48%;
+		margin-left: 0%;
+		margin-top: 20%;
+	}
+
+	#nana-nantes {
+		width: 8%;
+		margin-left: 2%;
+		position: relative;
+		margin-top: 18%;
+	}
+}
+
+@media (max-width: 610px) { 
+	#presentation-block {
+		font-size: 14px;
+	}
+	#nana-nantes {
+		position: relative;
+		top: 36px;
+	}
+}
+
+@media (max-width: 560px) {
+	#presentation-block {
+
+		position: relative;
+		left: 0px;
+		margin-left: 20px;
+		width: auto;
+		top: 0px;
+	}
+	#bulle {
+		display: none;
+	}
+	.pourquoi {
+		margin-left: 4%;
+		margin-bottom: 60px;
+	}
+
+	#nantes-img {
+		position: relative;
+		top : 0px;
+		margin-left: 20px;
+		width: 70%;
+	}
+
+	#nana-nantes {
+		top: 35px;
+		width: 10%;
+	}
 }
 /* --------------- INTRO 2 --------------- */
 #section-carte {
@@ -228,5 +333,13 @@ p.ville-des {
 	}
 	#carte-container {
 		zoom: 60%;
+	}
+	#plus, #chacune {
+		font-size: 12px;
+	}
+	p.ville-des, #survolez-ville {
+		width: 80%;
+		top: 65%;
+		left: 10%;
 	}
 }

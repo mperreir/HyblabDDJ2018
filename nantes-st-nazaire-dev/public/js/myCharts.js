@@ -48,7 +48,7 @@ function getChartValues(dataArray) {
     return chartValues;
 }
 
-function createChartData(dataArray, ) {
+function createChartData(dataArray) {
     console.log(dataArray)
     var dataSets = [];
     for (var i = 1; i < arguments.length; i++) {
@@ -58,7 +58,7 @@ function createChartData(dataArray, ) {
         dataSet = {
             label: values["indicator"],
             data: values["data"],
-            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"]
+            backgroundColor: ["#648DF3", "#2A5DDA","#143380","#DA3030","#DA3030","#DA3030","#DA3030","#DA3030","#DA3030","#DA3030","#DA3030","#DA3030"]
         };
         console.log(dataSet);
         dataSets.push(dataSet);
@@ -69,25 +69,6 @@ function createChartData(dataArray, ) {
 function triCroissant(cities, dataSets) {
     
     var datas = dataSets[0];
-    for (var i = 0; i < datas.data.length; i++) {
-        
-        if (datas.data[i] == "null") {
-            var k = datas.data.length
-            var verif = datas.data[k];
-            while (verif == "null") {
-                k -= 1;
-            }
-            temp = datas.data[i];
-            temp2 = cities[i];
-            temp3 = datas.backgroundColor[i];
-            datas.data[i] = datas.data[k];
-            cities[i] = cities[k];
-            datas.backgroundColor[i] = datas.backgroundColor[k];
-            datas.data[k] = temp;
-            cities[k] = temp2;
-            datas.backgroundColor[k] = temp3;
-        }
-    }
     for (var ind01 = 0; ind01 < datas.data.length; ind01++) {
         for (var ind02 = ind01; ind02 < datas.data.length; ind02++) {
             if (datas.data[ind01] > datas.data[ind02]) {
@@ -103,30 +84,26 @@ function triCroissant(cities, dataSets) {
             }
         }
     }
+    for (var j = 0; j < datas.data.length; j++) {
+        for (var i = 0; i < datas.data.length - 1; i++) {
+            if (datas.data[i] == 0) {
+                temp = datas.data[i];
+                temp2 = cities[i];
+                temp3 = datas.backgroundColor[i];
+                datas.data[i] = datas.data[i+1];
+                cities[i] = cities[i+1];
+                datas.backgroundColor[i] = datas.backgroundColor[i+1];
+                datas.data[i+1] = temp;
+                cities[i+1] = temp2;
+                datas.backgroundColor[i+1] = temp3;
+            }
+        }
+    }
 }
 
 function triDecroissant(cities, dataSets) {
 
     var datas = dataSets[0];
-    for (var i = 0; i < datas.data.length; i++) {
-        console.log(datas.data[i])
-        if (datas.data[i] == NaN) {
-            var k = datas.data.length
-            var verif = datas.data[k];
-            while (verif == NaN) {
-                k -= 1;
-            }
-            temp = datas.data[i];
-            temp2 = cities[i];
-            temp3 = datas.backgroundColor[i];
-            datas.data[i] = datas.data[k];
-            cities[i] = cities[k];
-            datas.backgroundColor[i] = datas.backgroundColor[k];
-            datas.data[k] = temp;
-            cities[k] = temp2;
-            datas.backgroundColor[k] = temp3;
-        }
-    }
     for (var ind01 = 0; ind01 < datas.data.length; ind01++) {
         for (var ind02 = ind01; ind02 < datas.data.length; ind02++) {
             if (datas.data[ind01] < datas.data[ind02]) {
@@ -139,6 +116,21 @@ function triDecroissant(cities, dataSets) {
                 datas.data[ind02] = temp;
                 cities[ind02] = temp2;
                 datas.backgroundColor[ind02] = temp3;
+            }
+        }
+    }
+    for (var j = 0; j < datas.data.length; j++) {
+        for (var i = 0; i < datas.data.length - 1; i++) {
+            if (datas.data[i] == 0) {
+                temp = datas.data[i];
+                temp2 = cities[i];
+                temp3 = datas.backgroundColor[i];
+                datas.data[i] = datas.data[i+1];
+                cities[i] = cities[i+1];
+                datas.backgroundColor[i] = datas.backgroundColor[i+1];
+                datas.data[i+1] = temp;
+                cities[i+1] = temp2;
+                datas.backgroundColor[i+1] = temp3;
             }
         }
     }
@@ -309,38 +301,33 @@ $(document).ready(function() {
     // Assign handlers immediately after making the request,
     // and remember the jqxhr object for this request
     //http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs
-    /*
+
     var jqxhr = $.post( "http://localhost:8081/nantes-st-nazaire-dev/actifs")
         .done(function(data) {
             console.log( "success" );
 
             console.log("Mean :" + getMean(data[0]));
+
             var cities = getChartLabels(data[0]);
             var dataSets = createChartData(data, 21);
             triDecroissant(cities,dataSets);
-            console.log(cities)
-            console.log(dataSets)
             printBarChart(cities, dataSets, "transport1");
 
             var cities = getChartLabels(data[0]);
             var dataSets = createChartData(data, 22);
             triDecroissant(cities,dataSets);
-            console.log(cities)
-            console.log(dataSets)
-            //printBarChart(cities, dataSets, "transport2");
+            printBarChart(cities, dataSets, "transport2");
 
             var cities = getChartLabels(data[0]);
             var dataSets = createChartData(data, 23);
             triDecroissant(cities,dataSets);
-            console.log(cities)
-            console.log(dataSets)
-            //printBarChart(cities, dataSets, "transport3");
+            printBarChart(cities, dataSets, "transport3");
 
             })
         .fail(function() {
             console.log( "error" );
         });
-*/
+
         
         update();
 });
