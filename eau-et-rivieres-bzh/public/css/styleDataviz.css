@@ -19,10 +19,6 @@ body{
     font-size: 0.9vw;
 }
 
-.section {
-    background-color: #96edbd;
-}
-
 /* ----- Header ----- */
 .navbar-brand>img {
     height: 20px;
@@ -113,7 +109,8 @@ body{
 
 .pTimeline {
     padding-top: 100%;
-    margin-left: -2px;
+    margin-left: -8px;
+    color: white;
 }
 
 
@@ -592,8 +589,8 @@ body{
 /* Timeline 2 : positionnement et taille */
 #timeline2 {
     width: 22vw;
-    top: 10vh;
-    left: 8.2vw;
+    top: 30vh;
+    left: 43vw;
 }
 
 /* Section 8 : Légende */
