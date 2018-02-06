@@ -17,6 +17,9 @@
   </head>
   <body>
     <div id="container">
+      <div class='popup map-popup'><span>Visualisez l’entrée de nouveaux pays dans le Tour de France sur une période donnée.</span></div>
+      <div class='popup bubbles-popup'><span>Visualisez la répartition du peloton par pays pour une année donnée.</span></div>
+
 
     <!-- l'entête de la page: titre, barre de recherche -->
     <!--<header>
@@ -27,10 +30,11 @@
     <!-- Le contenu du site -->
     <section class="cd-horizontal-timeline">
     <div class="topPage">
-      <h class="page-title"><img src="./img/titre-peloton.png"/></h>
+      <div class=conclusion-button><a href=#0 class="to-new back"><img src="./img/icon-next.png"/></a></div>
+      <h class="page-title"><img src="./img/titre-map.png"/></h>
       <div class=buttons>
-        <a href="#0" class="to-new inactive"><img src="./img/icon-peloton-on.png"/></a>
-        <a href="#0" class="to-new active"><img src="./img/icon-map-off.png"/></a>
+        <a class="to-new active"><img src="./img/icon-peloton-OFF.png"/></a>
+        <a class="to-new inactive"><img src="./img/icon-map-ON.png"/></a>
       </div>
       <hr width="1" size="59%"/>
   	   <div class="timeline">
@@ -43,7 +47,6 @@
 
   			        </div> <!-- .events -->
   		     </div> <!-- .events-wrapper -->
-
   		<ul class="cd-timeline-navigation">
   			<li><a href="#0" class="prev inactive">Prev</a></li>
   			<li><a href="#0" class="next"></a></li>
@@ -55,6 +58,7 @@
   <div class=line style="margin-top:2%;"><hr width="19%" size="12%"/><hr class=round-right width=1% size=12%/></div>
   <div class=line style="margin-top:1%;"><hr width="100%" size="12%"/></div>
 
+
   <div class="peloton"></div>
 
   <div class=line style="margin-bottom:1%; margin-top:2%;"><hr width="100%" size="12%"/></div>
@@ -65,35 +69,10 @@
   		</ol>
       <div class="degrader-bandeau"/>
   	</div> <!-- .events-content -->
-    <div class=maillots>
-      <div class=jaune>
-        <img src="./img/maillots-jaune.png"/>
-        <div class=legend>
-          <span>vainqueur</span>
-          <p class=vainqueur></p>
-        </div>
-      </div>
-      <div class=divers>
-        <div class="vert maillot">
-          <img src="./img/maillots-vert.png"/>
-        <div class=legend>
-          <span>meilleur<br/>sprinteur</span>
-          <p class=vainqueur></p>
-        </div>
-      </div>
-        <div class="pois maillot">
-          <img src="./img/maillots-pois.png"/>
-          <div class=legend>
-            <span>meilleur
-              grimpeur</span>
-            <p class=vainqueur></p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ol class=maillots>
+    </ol>
   </section>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
     <!-- Notre pied de page -->
     <!--<footer>
       <p>Copyright Hyblab team 2018</p>

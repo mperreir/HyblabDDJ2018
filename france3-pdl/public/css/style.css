@@ -33,7 +33,7 @@ body {
   font-size: 1.6rem;
   font-family: "Source Sans Pro", sans-serif;
   color: #383838;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
 }
 
 a {
@@ -298,7 +298,7 @@ Main Components
   position: absolute;
   display:inline-flex;
   width: 100%;
-  height:17.5%;
+  height:19.5%;
   background-color: #FFCE00;
   overflow: hidden;
   -webkit-transition: height 0.4s;
@@ -472,14 +472,6 @@ Main Components
   }
 }
 
-.infos{
-  background-color: grey;
-  height:17%;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-}
-
 .buttons{
   width:11.80%;
   display:flex;
@@ -510,14 +502,17 @@ Main Components
   	background: linear-gradient(90deg, #FFFFFF 0%, #FFCE00 100%);
 }
 
+.maillots .selected{
+  display:flex;
+}
+
 .maillots{
   background-color: #FFFFFF;
   width:38%;
   position:relative;
-  display:flex;
 }
 
-.maillots .jaune{
+.maillots .selected .jaune{
   height: 61%;
   width: 37%;
   margin-left: 2%;
@@ -525,6 +520,16 @@ Main Components
   margin-bottom: auto;
   display: flex;
 }
+
+.maillots .jaune img{
+  margin-top:18%;
+}
+
+.maillots .jaune .legend{
+  margin-top:18%;
+  display:unset;
+}
+
 
 .maillots .divers .maillot{
   display: flex;
@@ -548,11 +553,11 @@ Main Components
 
 .maillots .divers span{
   margin-bottom: 19%;
-  margin-top: auto;
+  margin-top: 38%;
   height: 12%;
   width: 100%;
   color: #16037C;
-	font-family: "Open Sans";
+  font-family: "Open Sans";
   font-size: 9px;
   font-weight: bold;
   line-height: 9px;
@@ -586,8 +591,11 @@ Main Components
 }
 
 .maillots .divers .legend{
-  margin-top: 10%;
   height: 70%;
+}
+
+.maillots .divers .legend p{
+  margin-left:6%;
 }
 
 .maillots img{
@@ -599,7 +607,10 @@ Main Components
 }
 
 .maillots .divers img{
-  max-width:55px;
+  max-width: 55px;
+  margin-top: 0px;
+  max-height: 47px;
+  margin-bottom: 0px;
 }
 
 .topPage h{
@@ -669,18 +680,105 @@ object{
   cursor:default;
 }
 
-.peloton img{
-  height: auto;
-  width: 50%;
+.buttons .active{
+  cursor:pointer;
+}
+
+.peloton .map img{
+  height: 430px;
+  width: 60%;
   margin-left: 3%;
-  margin-top: 2%;
+  margin-top: 3%;
   display:none;
 }
 
-.peloton .selected{
+.peloton .selected .map-visual{
   display:inherit;
 }
 
 .events .hidden{
   display:none;
+}
+
+.map .selected{
+  display:flex;
+  height:300px;
+}
+
+
+.peloton .selected .chrono{
+  width: 8%;
+  height: 60%;
+  margin-top: 10%;
+  margin-bottom: auto;
+  display: inherit;
+}
+
+.peloton .map .selected .info{
+  width: 50%;
+  height: 13%;
+  margin-top: 117%;
+  margin-bottom: 9%;
+  margin-left: 13%;
+  display: inherit;
+
+}
+
+.peloton .info{
+  width: 50%;
+  height: 13%;
+  margin-top: 117%;
+  margin-bottom: 9%;
+  margin-left: 13%;
+  display:inherit;
+}
+
+.peloton .map .info{
+  display:none;
+}
+
+.peloton{
+  display:flex;
+}
+
+.maillots .legend p{
+  height: 63.39%;
+  width: 100%;
+  color: #16037C;
+  font-family: "Open Sans";
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
+  margin: auto;
+}
+
+.divers div{
+  si
+}
+
+.popup {
+  margin-top: 20%;
+  padding: 20px;
+  margin-left: 3%;
+  background: #f8f8f8;
+  border-radius: 5px;
+  width: 17%;
+  position: absolute;
+  transition: all 5s ease-in-out;
+  display:none;
+}
+
+.map-popup{
+  margin-top: 15%;
+}
+
+.back{
+  transform: rotate(180deg);
+}
+
+.peloton .map .legend-mapW{
+  display: flex;
+  width: 12%;
+  margin-top: 25%;
+  height: 22%;
 }

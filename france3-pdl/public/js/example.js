@@ -8,9 +8,12 @@
 jQuery(document).ready(function($){
   var tabtab = {};
   var dates = [];
-  var showingBubbles = 1;
+  var showingBubbles = 0;
   var timelines = $('.cd-horizontal-timeline'),
       eventsMinDistance = 60;
+      lines=document.getElementsByClassName('line');
+  var curDisp;
+      cur=0;
       navigate=document.getElementsByClassName("buttons")[0].children;
 
   var promise3 = new Promise((resolve, reject) => {
@@ -51,6 +54,69 @@ jQuery(document).ready(function($){
           if (i==0){newLi.setAttribute("class","selected");}
           newLi.setAttribute("data-date",json.dates[i].date);
           document.getElementsByClassName('timeline-events')[0].appendChild(newLi);
+
+          newLi=document.createElement('li');
+          newLi.setAttribute('data-date',json.dates[i].date)
+          if (i==0){newLi.setAttribute("class","selected");}
+          newMaillot=document.createElement('div');
+          newMaillot.setAttribute('class','jaune');
+          var newImg=document.createElement('img');
+          newImg.setAttribute('src','./img/maillots-jaune.png');
+          newMaillot.appendChild(newImg);
+          var newDiv=document.createElement('div');
+          newDiv.setAttribute('class','legend');
+          var newSpan = document.createElement('span');
+          var newP = document.createElement('p');
+          newSpan.innerHTML='vainqueur';
+          newP.setAttribute('class','vainqueur');
+          console.log(json.dates[i].winner.name)
+          newP.innerHTML=json.dates[i].winner.name+'<br/>'+json.dates[i].winner.fName+'<br/>'+json.dates[i].winner.nation;
+          newDiv.appendChild(newSpan);
+          newDiv.appendChild(newP);
+          newMaillot.appendChild(newDiv);
+          newLi.appendChild(newMaillot);
+          var newDivers = document.createElement('div');
+          newDivers.setAttribute('class','divers');
+          try {
+          newMaillot=document.createElement('div');
+          newMaillot.setAttribute('class','vert');
+          var newImg=document.createElement('img');
+          newImg.setAttribute('src','./img/maillots-vert.png');
+          newMaillot.appendChild(newImg);
+          var newDiv=document.createElement('div');
+          newDiv.setAttribute('class','legend');
+          var newSpan = document.createElement('span');
+          var newP = document.createElement('p');
+          newSpan.innerHTML='meilleur<br/>grimpeur';
+          newP.setAttribute('class','climb');
+          newP.innerHTML=json.dates[i].climber.name+'<br/>'+json.dates[i].climber.fName+'<br/>'+json.dates[i].climber.nation;
+          newDiv.appendChild(newSpan);
+          newDiv.appendChild(newP);
+          newMaillot.appendChild(newDiv);
+          newDivers.appendChild(newMaillot);
+          }
+          catch(error){}
+          try{
+          newMaillot=document.createElement('div');
+          newMaillot.setAttribute('class','pois');
+          var newImg=document.createElement('img');
+          newImg.setAttribute('src','./img/maillots-pois.png');
+          newMaillot.appendChild(newImg);
+          var newDiv=document.createElement('div');
+          newDiv.setAttribute('class','legend');
+          var newSpan = document.createElement('span');
+          var newP = document.createElement('p');
+          newP.innerHTML=json.dates[i].sprinter.name+'<br/>'+json.dates[i].sprinter.fName+'<br/>'+json.dates[i].sprinter.nation;
+          newSpan.innerHTML='meilleur<br/>sprinteur';
+          newP.setAttribute('class','sprint');
+          newDiv.appendChild(newSpan);
+          newDiv.appendChild(newP);
+          newMaillot.appendChild(newDiv);
+          newDivers.appendChild(newMaillot);
+          }
+          catch(error){}
+          newLi.appendChild(newDivers)
+          document.getElementsByClassName('maillots')[0].appendChild(newLi);
           tabtab[json.dates[i].date]=json.dates[i].tableau;
         }
         sessionStorage.setItem('tab', tabtab[json.dates[0].date]);
@@ -61,30 +127,108 @@ jQuery(document).ready(function($){
       });
     });
     promise3.then(values => {
-      var peloton = document.createElement("object");
-      peloton.setAttribute("data","peloton.html");
-      peloton.setAttribute("width","80%");
-      peloton.setAttribute("height","100%");
-      document.getElementsByClassName("peloton")[0].appendChild(peloton);
       (timelines.length > 0) && initTimeline(timelines);
 
         for (var i=0; i<dates.length;i++) {
           if (document.getElementsByClassName('timeline-events')[0].childNodes[i+1].classList[0]=='selected'){
-            var curDisp=document.getElementsByClassName('timeline-events')[0].childNodes[i+1];
+            curDisp=document.getElementsByClassName('timeline-events')[0].childNodes[i+1];
           }
         }
+        navigate[1].addEventListener('click',createBubbles());
         for (var i=1; i<curDisp.childNodes.length; i++) $(curDisp.childNodes[i]).hide();
-        var i=0;
-        setInterval(
-          ()=>{
-            $(curDisp.childNodes[i]).fadeOut(1000,()=>{
-              if (i==curDisp.childNodes.length-1)  i=0;
-              else i+=1;
-              $(curDisp.childNodes[i]).fadeIn(1000)
-            })
-          }, 20000
-      );
+        setInterval(call, 30000);
+      createMap();
     });
+
+  function createMap(){
+    document.getElementsByClassName('page-title')[0].firstChild.setAttribute('src','./img/titre-map.png')
+    showingBubbles=0;
+    var place = document.getElementsByClassName('peloton')[0];
+    while (place.firstChild) {
+        place.removeChild(place.firstChild);
+    }
+    navigate[0].addEventListener('click',createBubbles);
+    navigate[1].removeEventListener('click',createMap);
+    navigate[0].setAttribute('class','to-new active');
+    navigate[1].setAttribute('class','to-new inactive');
+    navigate[1].firstChild.setAttribute('src','./img/icon-map-ON.png');
+    navigate[0].firstChild.setAttribute('src','./img/icon-peloton-OFF.png');
+    $(document.getElementsByClassName('degrader-bandeau')[0]).fadeOut(1000);
+    $(document.getElementsByClassName('maillots')[0]).fadeOut(1000);
+    for (var i = 0; i<lines.length; i++) $(lines[i]).hide();
+    var peloton=document.createElement('ol');
+    peloton.setAttribute('class','map');
+    for (var i=0; i<dates.length; i++){
+      newLi=document.createElement('li');
+      newImg=document.createElement('img');
+      newImg.setAttribute('src','./img/maps/'+dates[i]+'-FR.png');
+      if(dates[i]==document.getElementsByClassName('selected')[0].dataset.date) newLi.setAttribute('class','selected');
+      newImg.setAttribute('data-date',dates[i]);
+      newImg.setAttribute('class','map-visual');
+      newA=document.createElement('a');
+      newImg3=document.createElement('img');
+      newImg3.addEventListener('mouseover',()=>{document.getElementsByClassName('map-popup')[0].setAttribute('style','display:flex;');})
+      newImg3.addEventListener('mouseout',()=>{document.getElementsByClassName('map-popup')[0] .setAttribute('style','display:none;');})
+      newImg3.setAttribute('src','./img/icon-button-i.png');
+      newImg3.setAttribute('class','info');
+      newA.appendChild(newImg3);
+      newImg2=document.createElement('img');
+      newImg2.setAttribute('class','legend-mapW')
+      newImg2.setAttribute('src','./img/legend-mapW.png');
+      newLi.appendChild(newImg2); 
+      newA.addEventListener('mouseover',()=>{newA.setAttribute('style','display:hover;')})
+      newLi.appendChild(newA);
+      newLi.appendChild(newImg);
+      newImg2=document.createElement('img');
+      newImg2.setAttribute('src','./img/chrono/legende-carteFR'+dates[i]+'.png');
+      newImg2.setAttribute('class','chrono');
+      newLi.appendChild(newImg2);
+      peloton.appendChild(newLi);
+    }
+    document.getElementsByClassName('peloton')[0].appendChild(peloton);
+  }
+
+  function createBubbles(){
+    document.getElementsByClassName('page-title')[0].firstChild.setAttribute('src','./img/titre-peloton.png')
+    showingBubbles=1;
+    var place = document.getElementsByClassName('peloton')[0];
+    while (place.firstChild) {
+        place.removeChild(place.firstChild);
+    }
+    navigate[1].addEventListener('click',createMap);
+    navigate[0].removeEventListener('click',createBubbles);
+    navigate[0].setAttribute('class','to-new inactive');
+    navigate[1].setAttribute('class','to-new active');
+    navigate[1].firstChild.setAttribute('src','./img/icon-map-OFF.png');
+    navigate[0].firstChild.setAttribute('src','./img/icon-peloton-ON.png');
+    $(document.getElementsByClassName('degrader-bandeau')[0]).fadeIn(1000);
+    $(document.getElementsByClassName('maillots')[0]).fadeIn(1000);
+    for (var i = 0; i<lines.length; i++) $(lines[i]).show();
+    newA=document.createElement('a');
+    newImg3=document.createElement('img');
+    newImg3.addEventListener('mouseover',()=>{document.getElementsByClassName('bubbles-popup')[0].setAttribute('style','display:flex;');})
+    newImg3.addEventListener('mouseout',()=>{document.getElementsByClassName('bubbles-popup')[0] .setAttribute('style','display:none;');})
+    newImg3.setAttribute('src','./img/icon-button-i.png');
+    newImg3.setAttribute('class','info');
+    newA.appendChild(newImg3);
+    place.appendChild(newA);
+    peloton = document.createElement("object");
+    peloton.setAttribute("data","peloton.html");
+    peloton.setAttribute("width","80%");
+    peloton.setAttribute("height","100%");
+    newImg = document.createElement('img');
+    for (var i=0; i<dates.length;i++) {
+      if (document.getElementsByClassName('timeline-events')[0].childNodes[i+1].classList[0]=='selected'){
+        curDisp=document.getElementsByClassName('timeline-events')[0].childNodes[i+1];
+      }
+    }
+    newImg.setAttribute('class','legend-map');
+    newImg.setAttribute('src','./img/legend-map.png');
+    place.appendChild(peloton);
+    place.appendChild(newImg);
+
+  }
+
 
 	function initTimeline(timelines) {
 		timelines.each(function(){
@@ -138,7 +282,13 @@ jQuery(document).ready(function($){
         }
         updateVisibleContent($(this), timelineComponents['eventsContent']);
         sessionStorage.setItem('tab', tabtab[$(this).data('date')]);
-        updateContent();
+        var curDispfat=document.getElementsByClassName('timeline-events')[0].childNodes;
+        for (var i=1; i<curDispfat.length; i++){
+          if (curDispfat[i].getAttribute('class')=='selected enter-right' || curDispfat[i].getAttribute('class')=='selected enter-left') curDisp=curDispfat[i];
+        }
+        for (var i=1; i<curDisp.childNodes.length; i++) $(curDisp.childNodes[i]).hide();
+        cur=0;
+        let wat=setInterval(call,30000);
 			});
 
 			//on swipe, show next/prev event content
@@ -215,7 +365,6 @@ jQuery(document).ready(function($){
 
 	function updateFilling(selectedEvent, filling, totWidth) {
 		//change .filling-line length according to the selected event
-    console.log(selectedEvent)
 		var eventStyle = window.getComputedStyle(selectedEvent.get(0), null),
 			eventLeft = eventStyle.getPropertyValue("left"),
 			eventWidth = eventStyle.getPropertyValue("width");
@@ -258,20 +407,12 @@ jQuery(document).ready(function($){
 				classLeaving = 'leave-right';
 		}
 
+
 		selectedContent.attr('class', classEnetering);
 		visibleContent.attr('class', classLeaving).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
 			visibleContent.removeClass('leave-right leave-left');
 			selectedContent.removeClass('enter-left enter-right');
 		});
-		/*eventsContent.css('height', selectedContentHeight+'px');*/
-    if (showingBubbles==0){
-      document.getElementsByClassName('selected')[1].setAttribute('class','');
-      for (var j=0; j<document.getElementsByClassName('map')[0].childNodes.length; j++){
-        if (document.getElementsByClassName('map')[0].childNodes[j].dataset.date==eventDate){
-          document.getElementsByClassName('map')[0].childNodes[j].setAttribute('class','selected');
-        }
-      }
-    }
 	}
 
 	function updateOlderEvents(event) {
@@ -315,7 +456,7 @@ jQuery(document).ready(function($){
 	    return dateArrays;
 	}
 
-	function parseDate2(events) {
+	/*function parseDate2(events) {
 		var dateArrays = [];
 		events.each(function(){
 			var singleDate = $(this),
@@ -334,7 +475,7 @@ jQuery(document).ready(function($){
 			dateArrays.push(newDate);
 		});
 	    return dateArrays;
-	}
+	}*/
 
 	function daydiff(first, second) {
 	    return Math.round((second-first));
@@ -376,94 +517,20 @@ jQuery(document).ready(function($){
 		return window.getComputedStyle(document.querySelector('.cd-horizontal-timeline'), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
 	}
 
-  navigate[0].addEventListener('click',()=>{
-    event.preventDefault();
-    if (navigate[0].classList[1]=='active') {
-      $(document.getElementsByClassName('degrader-bandeau')[0]).fadeIn(1000)
-      $(document.getElementsByClassName('maillots')[0]).fadeIn(1000)
-      showingBubbles=1-showingBubbles;
-      updateButtons();
-      updateContent();
-    }
-  },false)
-
-  navigate[1].addEventListener('click',()=>{
-    event.preventDefault();
-    if (navigate[1].classList[1]=='active') {
-      $(document.getElementsByClassName('degrader-bandeau')[0]).fadeOut(1000)
-      $(document.getElementsByClassName('maillots')[0]).fadeOut(1000)
-      for (var i in document.getElementsByClassName('maillots'))
-      showingBubbles=1-showingBubbles;
-      updateButtons();
-      updateContent();
-    }
-  },false)
-
-  function updateButtons() {
-    var title = document.createElement('img');
-    if (showingBubbles==1){
-      navigate[0].setAttribute("class","to-new inactive");
-      navigate[1].setAttribute("class","to-new active");
-      title.setAttribute('src','./img/titre-peloton.png');
-    }
-    else{
-      navigate[1].setAttribute("class","to-new inactive");
-      navigate[0].setAttribute("class","to-new active");
-      title.setAttribute('src','./img/titre-map.png');
-      peloton=document.createElement('ol');
-      peloton.setAttribute('class','map');
-      for (var i=0; i<dates.length; i++){
-        newLi=document.createElement('img');
-        newLi.setAttribute('src','./img/maps/'+dates[i]+'-FR.png');
-        if(dates[i]==document.getElementsByClassName('selected')[0].dataset.date) newLi.setAttribute('class','selected');
-        newLi.setAttribute('data-date',dates[i]);
-        peloton.appendChild(newLi);
-      }
-    }
-    document.getElementsByClassName('page-title')[0].replaceChild(title,document.getElementsByClassName('page-title')[0].firstChild)
-    var replacing1 = document.createElement('img');
-    var replacing2 = document.createElement('img');
-    if (navigate[0].classList[1]=='active') replacing1.setAttribute('src','./img/icon-peloton-off.png');
-    else replacing1.setAttribute('src','./img/icon-peloton-on.png');
-    navigate[0].replaceChild(replacing1,navigate[0].firstChild);
-    if (navigate[1].classList[1]=='active') replacing2.setAttribute('src','./img/icon-map-off.png');
-    else replacing2.setAttribute('src','./img/icon-map-on.png');
-    navigate[1].replaceChild(replacing2,navigate[1].firstChild);
-  }
-
-  function updateContent(){
-    if (showingBubbles==1){
-      peloton = document.createElement("object");
-      peloton.setAttribute("data","peloton.html");
-      peloton.setAttribute("width","80%");
-      peloton.setAttribute("height","100%");
-      for (var i=0; i<dates.length;i++) {
-        if (document.getElementsByClassName('timeline-events')[0].childNodes[i+1].classList[0]=='selected'){
-          var curDisp=document.getElementsByClassName('timeline-events')[0].childNodes[i+1];
-          console.log(curDisp);
-        }
-      }
-      for (var i=1; i<curDisp.childNodes.length; i++) $(curDisp.childNodes[i]).hide();
-      var i=0;
-      let wat=setInterval(call,20000);
-
     function call(){
-      $(curDisp.childNodes[i]).fadeOut(100,()=>{
-        if (i==curDisp.childNodes.length-1)  i=0;
-        else i+=1;
-        $(curDisp.childNodes[i]).fadeIn(100)
+      console.log(curDisp)
+      $(curDisp.childNodes[cur]).fadeOut(100,()=>{
+        $(curDisp.childNodes[cur]).fadeIn(100)
       });
+      if (cur==curDisp.childNodes.length-1)  cur=0;
+      else cur+=1;
     }
-  }
 
+    document.getElementsByClassName('bubbles-popup')[0].addEventListener('mouseover',()=>{document.getElementsByClassName('bubbles-popup')[0].setAttribute('style','display:flex;');})
+    document.getElementsByClassName('bubbles-popup')[0].addEventListener('mouseout',()=>{document.getElementsByClassName('bubbles-popup')[0] .setAttribute('style','display:none;');})
 
-      /*peloton=document.createElement('img');
-      peloton.setAttribute('src','./img/maps/'+document.getElementsByClassName('selected')[0].dataset.date+'-FR.png');
-      document.getElementsByClassName("peloton")[0].replaceChild(peloton,document.getElementsByClassName("peloton")[0].firstChild);*/
-    document.getElementsByClassName("peloton")[0].replaceChild(peloton,document.getElementsByClassName("peloton")[0].firstChild);
-  }
-
-
+    document.getElementsByClassName('map-popup')[0].addEventListener('mouseover',()=>{document.getElementsByClassName('map-popup')[0].setAttribute('style','display:flex;');})
+    document.getElementsByClassName('map-popup')[0].addEventListener('mouseout',()=>{document.getElementsByClassName('map-popup')[0] .setAttribute('style','display:none;');})
 
   promise3.catch((error)=>{console.log("upsy")});
 });
