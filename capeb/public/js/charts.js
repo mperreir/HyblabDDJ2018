@@ -246,6 +246,7 @@ var drawChart3dEmploi = function (data) {
         // The type of chart we want to create
         type: 'line',
 
+
         // The data for our dataset
         data: {
             labels: data2[0].values[0],
@@ -253,9 +254,13 @@ var drawChart3dEmploi = function (data) {
         },
         // Configuration options go here
         options: {
+            title: {
+                display: true,
+                text: "% d’entreprises envisageant d’embaucher en 2018"
+            },
             tooltips: {
                 mode: 'index',
-                intersect: false,
+                intersect: false
             },
             hover: {
                 mode: 'nearest',
@@ -460,7 +465,7 @@ function drawPieChart(data, title) {
         sec.style.display = "none";
         document.getElementById("canvas-dataviz").style.display = "block";
     };
-    var cvs = sec.appendChild(document.createElement('canvas'))
+    var cvs = sec.appendChild(document.createElement('canvas'));
 
     var ctx = cvs.getContext("2d")
 
@@ -620,7 +625,8 @@ function fetchConjonctureData(d) {
 }
 
 function createConjonctureDataviz(json) {
-    var labels = ["Chiffre d'affaires", "Marge", "Trésorerie", "Carnet de commandes"];
+    var labelsy = ["Chiffre d'affaires", "Marge", "Trésorerie", "Carnet de commandes"];
+    var labelsx = ["À la baisse", "Stable", "À la hausse"];
     var pointsColor = [["#ACF2E2", "#50EC2", "#02998B"], ["#AEDFF8", "#68C0ED", "#427C9A"], ["#D8D8D8", "#9B9B9B", "#9B9B9B"], ["#EB8D8B", "#DF261D", "#A61B14"]];
 
 
@@ -637,12 +643,12 @@ function createConjonctureDataviz(json) {
         point.x = cptx;
         point.y = cpty;
         point.r = radiusmatch(value);
+        point.percentage = value;
         data.push(point);
         cptx++;
         if (cptx == 4) {
             dataset.data = data;
             dataset.borderColor = "white";
-            dataset.label = labels[cpty - 1];
             d.datasets.push(dataset);
             dataset = {};
             data = [];
@@ -685,6 +691,10 @@ function createConjonctureDataviz(json) {
         type: 'bubble',
         data: d,
         options: {
+            title: {
+                display: true,
+                text: "Tendance 2017 des indicateurs clés des entreprises"
+            },
             legend: {
                 display: false
             },
@@ -697,7 +707,12 @@ function createConjonctureDataviz(json) {
                 }
             },
             tooltips: {
-                display: false
+                callbacks: {
+                    label: function (tooltipItem, data) {
+                        var value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                        return [(value.percentage*100).toFixed(1) +  " %"];
+                    }
+                }
             },
             scales: {
                 xAxes: [{
@@ -706,6 +721,9 @@ function createConjonctureDataviz(json) {
                         display: false
                     },
                     ticks: {
+                        callback: function(value, index, values){
+                            return labelsx[value-1];
+                        },
                         beginAtZero: true,
                         stepSize: 1,
                         max: 4
@@ -713,7 +731,13 @@ function createConjonctureDataviz(json) {
                 }],
                 yAxes: [{
                     display: true,
+                    gridLines: {
+                        display: false
+                    },
                     ticks: {
+                        callback: function(value, index, values){
+                                return labelsy[value-1];
+                        },
                         beginAtZero: true,
                         stepSize: 1,
                         max: 5
