@@ -17,5 +17,3 @@ app.use(express.static(path.join(__dirname, 'public')));
 // server and visiting http(s)://127.0.0.1:8080/name_of_you_project/ (if on a local server)
 // or more generally: http(s)://server_name:port/name_of_you_project/
 module.exports = app;
-
-app.listen(8080);
