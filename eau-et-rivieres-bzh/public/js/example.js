@@ -140,19 +140,28 @@ fetch('data/datas.json')
     $('#C2013').click(function() {
         $('#descriptionBonhomme').html($('#descriptionBonhomme2013').html());
         $('#anneeCampbon').text($("#descC2013 p").text());
-    })
+    });
 
     $('#C2014').click(function() {
         $('#descriptionBonhomme').html($('#descriptionBonhomme2014').html());
         $('#anneeCampbon').text($("#descC2014 p").text());
-    })
+    });
 
     $('#C2015').click(function() {
         $('#descriptionBonhomme').html($('#descriptionBonhomme2015').html());
         $('#anneeCampbon').text($("#descC2015 p").text());
-    })
+    });
 
     $('#C2016').click(function() {
         $('#descriptionBonhomme').html($('#descriptionBonhomme2016').html());
         $('#anneeCampbon').text($("#descC2016 p").text());
-    })
+    });
+
+    /*$(function() {
+        $('.definitionDichloOn').hide();
+        $('.definitionDichlo').hide();
+    });
+
+    $('.definitionDichloOff').click(function() {
+        alert("Hello");
+    });*/
