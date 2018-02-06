@@ -8,7 +8,7 @@ var radius = Math.min(width, height) / 2;
 
 // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
 var b = {
-  w: 250, h: 30, s: 3, t: 10
+  w: 220, h: 30, s: 3, t: 10
 };
 
 // Mapping of step names to colors2.
@@ -39,7 +39,7 @@ var vis
 var partition
 var arc
 var sunBurst = function(js){
-	$("#dataviz").html("<div id='main'><div id='sequence'></div><div id='chart'><div id='explanation' style='visibility: hidden;'><span id='percentage'></span><br/></div></div></div><div id='sidebar'><input type='checkbox' id='togglelegend'> Legend<br/><div id='legend' style='visibility: hidden;'></div></div>");
+	$("#dataviz").html("<div id='main'><div id='sequence'></div><div id='chart'><div id='explanation' style='visibility: hidden;'><span id='percentage'></span><br/></div></div></div><div id='sidebar' style='visibility: hidden;'><input type='checkbox' id='togglelegend' style='visibility: hidden;'> Legend<br/><div id='legend' style='visibility: hidden;'></div></div>");
 
 	vis = d3.select("#chart").append("svg:svg")
 		.attr("width", width)
@@ -86,8 +86,8 @@ function createVisualization(json) {
 
   // Basic setup of page elements.
   initializeBreadcrumbTrail();
-  drawLegend();
-  d3.select("#togglelegend").on("click", toggleLegend);
+  //drawLegend();
+  //d3.select("#togglelegend").on("click", toggleLegend);
 
   // Bounding circle underneath the sunburst, to make it easier to detect
   // when the mouse leaves the parent g.
@@ -187,7 +187,7 @@ function getAncestors(node) {
 function initializeBreadcrumbTrail() {
   // Add the svg area.
   var trail = d3.select("#sequence").append("svg:svg")
-      .attr("width", width)
+      .attr("width",  1000)
       .attr("height", 50)
       .attr("id", "trail");
   // Add the label at the end, for the percentage.
@@ -242,7 +242,7 @@ function updateBreadcrumbs(nodeArray, percentageString) {
 
   // Now move and update the percentage at the end.
   d3.select("#trail").select("#endlabel")
-      .attr("x", (nodeArray.length + 0.5) * (b.w + b.s))
+      .attr("x", (nodeArray.length + 0.2) * (b.w + b.s))
       .attr("y", b.h / 2)
       .attr("dy", "0.35em")
       .attr("text-anchor", "middle")

@@ -65,11 +65,16 @@ var drawDDChart = function(stats) {
         };
 
 });
+
     var ch = new Chart(ctx,
         {
             type: 'bubble',
             data: {'datasets': datasets},
             options: {
+                title: {
+                    display: true,
+                    text: "Niveau d’engagement par thème"
+                },
                 onClick: function (e) {
                     var element = this.getElementAtEvent(e);
 
@@ -84,20 +89,20 @@ var drawDDChart = function(stats) {
                         var d = {'labels': [], 'values': []}
 
                         stats.Interet_ApsectDD.values.map(function(cell) {
-                            if(cell[0] === datasetLabel
-                    )
-                        {
-                            d.labels.push(cell[1]);
-                            d.values.push(cell[2]);
-                        }
-                    });
-
+							if(cell[0] === datasetLabel)
+							{
+								d.labels.push(cell[1]);
+								d.values.push(cell[2]);
+							}
+						});
 
                         $("#canvas-dataviz").fadeOut();
                         $(".plus").html("");
-                        drawPieChart(d, datasetLabel);
 
-                    }
+                        drawPieChart(d, datasetLabel);
+		                $(".plus").append($.parseHTML("<svg id='unzoom' viewBox='0 0 50 70' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g transform='translate(10.0, 25.0)'><polyline points='20 0 10 10 20 20'></polyline></g></svg>"))
+
+						}
                 },
                 hover: {
                     mode: 'nearest',
@@ -111,22 +116,25 @@ var drawDDChart = function(stats) {
                 tooltips: {
                     callbacks: {
                         label: function (t, d) {
-                            return d.datasets[t.datasetIndex].label +
-                                ': Total: ' + t.yLabel + ')';
+                            return d.datasets[t.datasetIndex].label + ': ' + t.yLabel;
                         }
                     }
                 },
                 scales: {
                     xAxes: [{
                         ticks: {
-                            display: false
+                            display: false,
+                            min: -1,
+                            max: stats.Developpement_durable.values[0].length
                         },
                         gridLines: {
                             display: false
                         },
                         scaleLabel: {
                             display: false,
-                        }
+                        },
+                        
+
                     }],
                     yAxes: [{
                         ticks: {
@@ -138,9 +146,6 @@ var drawDDChart = function(stats) {
                         }
                     }]
                 },
-                legend: {
-                    display: false
-                }
             }
         }
     );
@@ -154,12 +159,12 @@ var wordCloud = function(FreinsMP) {
             "text": name,
             "size": FreinsMP.values[1][id]
         };
-});
+	});
 
     var fill = d3.scale.category20();
 
     var layout = d3.layout.cloud()
-        .size([500, 500])
+        .size([600, 600])
         .words(frequency_list)
         .padding(5)
         .font("Montserrat', sans-serif")
@@ -321,13 +326,14 @@ var drawChart3dEmploi = function (data) {
             $("#canvas-dataviz").fadeOut();
             $(".plus").html("");
             drawBarChart(p, "Moyenne Nb récrutement envisagé " + label)
+		    $(".plus").append($.parseHTML("<svg id='unzoom' viewBox='0 0 50 70' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g transform='translate(10.0, 25.0)'><polyline points='20 0 10 10 20 20'></polyline></g></svg>"))
 
         }
     };
 };
 
 
-function drawLineChart(data) {
+function investissementDataviz(data) {
     var sec = document.getElementById("dataviz-section");
     if (sec !== null) {
         sec.remove();
@@ -350,7 +356,7 @@ function drawLineChart(data) {
     };
     var dataset = {
         data: [],
-        label: "EPCI",
+        label: "Votre secteur",
         backgroundColor: colorZoom[1],
         borderWidth: "0",
         tension: 0
@@ -359,12 +365,12 @@ function drawLineChart(data) {
 
     var datasetRegion = {data: [], label: "Région", backgroundColor: colorZoom[2], borderWidth: "0", tension:0};
     data.region.forEach(function (value) {
-        datasetRegion.data.push(parseFloat(value[1]));
+        datasetRegion.data.push(parseFloat(value[1])*100);
     });
 
     data.values.forEach(function (value) {
         d.labels.push(value[0]);
-        dataset.data.push(parseFloat(value[1]));
+        dataset.data.push(parseFloat(value[1])*100);
     });
 
     d.datasets.push(dataset);
@@ -380,7 +386,7 @@ function drawLineChart(data) {
         options: {
             tooltips: {
                 mode: 'index',
-                intersect: false,
+                intersect: false
             },
             hover: {
                 mode: 'nearest',
@@ -406,15 +412,17 @@ function drawLineChart(data) {
                 yAxes: [{
                     display: true,
                     ticks: {
-                        beginAtZero: true // minimum value will be 0.
+                        beginAtZero: true, // minimum value will be 0.
+                        callback: function(value){
+                            return value + "%";
+                        }
                     },
                     gridLines: {
                         display: false,
                         drawBorder: false
                     },
                     scaleLabel: {
-                        display: true,
-                        labelString: 'Pourcentage de Oui'
+                        display: true
                     }
                 }]
             }
@@ -713,7 +721,7 @@ function createConjonctureDataviz(json) {
                         display: false
                     },
                     ticks: {
-                        callback: function(value, index, values){
+                        callback: function(value){
                             return labelsx[value-1];
                         },
                         beginAtZero: true,
@@ -727,7 +735,7 @@ function createConjonctureDataviz(json) {
                         display: false
                     },
                     ticks: {
-                        callback: function(value, index, values){
+                        callback: function(value){
                                 return labelsy[value-1];
                         },
                         beginAtZero: true,

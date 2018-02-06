@@ -31,6 +31,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-conjoncture");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
+                    document.getElementById("rappel-conjoncture").innerHTML = "Selon les artisans de votre secteur la conjoncture mérite une note de : " + parseFloat(json.values[0][0]).toFixed(1) + "/10      ";
                     fetchConjonctureData(d);
                     closeOnEscape();
                 });
@@ -61,7 +62,8 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-investissement");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
-                    drawLineChart(json);
+                    document.getElementById("rappel-investissement").innerHTML = (json.values[3][1] * 100).toFixed(1) + "% des artisans de votre territoire déclarent vouloir investir en 2018";
+                    investissementDataviz(json);
                     closeOnEscape();
                 });
             });
@@ -90,25 +92,27 @@ function miniStats(regionStats, d) {
             stat = stat.sort(function(a, b) {return b.value - a.value});
 
             var liste = document.getElementsByClassName("info-contrat")[0].getElementsByClassName("liste")[0];
-            liste.className
             liste.innerHTML = "";
-            var span = document.createElement("span");
-            liste.appendChild(span);
-            span.className += "donneeliste";
-            span.innerHTML = stat[0].name;
-            var ni = "4vw";
-            var count = 0;
-            for (var i = 1; i < 4; i++) {
-                if (stat[i].value < stat[i - 1].value) {
-                    count++;
-                    ni = count + "vw";
-                }
+
+            // faire les pourcentages
+            var sum = 0;
+            stat.forEach(function(value){
+               sum += value.value;
+            });
+
+            stat.forEach(function(value){
+                value.percentage = value.value/sum;
+            });
+
+            stat.forEach(function(value){
                 span = document.createElement("span");
                 liste.appendChild(span);
                 span.className += "donneeliste";
-                span.style.fontSize = ni;
-                span.innerHTML = stat[i].name;
-            }
+                span.style.fontSize = scaleBetween(value.percentage, 1.2, 4, 0, 1) + "vw";
+                span.innerHTML = value.name;
+            });
+
+
 
             $('#card-contrat .open').each(function(){
                 $(this).on('click', function() {
@@ -117,6 +121,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-contrat");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
+                    document.getElementById("rappel-contrat").innerHTML = "Les artisans de votre territoire privilégient les : " + stat[0].name + ", " + stat[1].name;
                     createSunburst(d);
                     closeOnEscape();
                 });
@@ -135,7 +140,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-dd");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
-
+                    document.getElementById("rappel-dd").innerHTML = "La thématique phare sur votre secteur est : " + stat2[0].name;
                     drawDDChart(stats);
                     closeOnEscape();
                 });
@@ -154,6 +159,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-mp");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
+                    document.getElementById("rappel-mp").innerHTML =  Math.round(mean * 100) + "% des artisans de votre territoire déclarent réaliser des marchés publics";
                     wordCloud(stats.FreinsMP);
                     closeOnEscape();
                 });
@@ -170,6 +176,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-emploi");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
+                    document.getElementById("rappel-emploi").innerHTML = "Le métier qui prévoie d’embaucher le plus en 2018 c’est : " + stats.Nombre_Recrutements_Envisage_2017.labels[indexOfMax];
                     drawChart3dEmploi(stats);
                     closeOnEscape();
                 });
@@ -204,6 +211,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-distance");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
+                    document.getElementById("rappel-distance").innerHTML = "Les artisans de votre secteur parcourent en moyenne " + Math.round(mean) + " km";
                     drawDistanceDataviz(json);
                     closeOnEscape();
                 });
@@ -287,7 +295,7 @@ function createModal(){
             });
         });
 
-    $('.prev').on('click', () => {
+    $('.prev').on('click', function(){
 		current_d--;
 		if(current_d < 0){
 			current_d = dataviz.length - 1;
@@ -295,8 +303,9 @@ function createModal(){
 		$('.close').click()
 		$(dataviz[current_d] + " .open").click();
 
-	})
-	$('.next').on('click', () => {
+	});
+
+	$('.next').on('click', function() {
 		current_d = (current_d + 1) % dataviz.length;
 		$('.close').click()
 		$(dataviz[current_d] + " .open").click();
@@ -310,4 +319,8 @@ function closeOnEscape() {
             $('.close').click();
         }
     });
+}
+
+function scaleBetween(unscaledNum, minAllowed, maxAllowed, min, max) {
+    return (maxAllowed - minAllowed) * (unscaledNum - min) / (max - min) + minAllowed;
 }
