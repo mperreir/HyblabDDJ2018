@@ -259,6 +259,11 @@ div.visited .intro {
     box-shadow: 0 0 1vw rgba(0, 0, 0, .5);
   }
 
+  #accueil {
+  	height: 100vh;
+  	width: 100vw;
+  }
+
   .visited section {
     animation: fade ease-out 2s;
     animation-delay: 00ms;
