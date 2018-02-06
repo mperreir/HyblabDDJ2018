@@ -4,7 +4,7 @@
 <head>
   <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
   <meta charset="utf-8">
-  <title>Hyblab 2018</title>
+  <title>PestiBusters</title>
   <!-- Basic viewport setting for mobile friendly page -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -43,6 +43,7 @@
   <script type="text/javascript">
     $(document).ready(function () {
         $('#fullpage').fullpage({
+          sectionsColor: ['#3362C3', '#3362C3', '#688DD8', '#FFFFFF', '#96edbd'],
           css3: true,
           navigation : true,
 
@@ -123,7 +124,7 @@
               d’une infiltration dans les failles du socle rocheux breton. La toxicité des pesticides est répertoriée selon le système
               international d’étiquetage des substances pesticides (ex : H300, mortel en cas d’ingestion). Ainsi ce système d’étiquetage,
               non officiel, permet de qualifier les toxicités potentielles de toutes les masses d’eau de Bretagne. L’analyse présentée
-              ici se base sur les étiquettes des six substances les plus trouvées.
+              ici se base sur les étiquettes des vingt substances les plus trouvées (par département).
             </p>
           </section>
           <ul class="timeline timeline-horizontal" id="timeline1">
@@ -157,54 +158,93 @@
             </article>
             <article id="descriptionHisto">
               <article id="Cotes_Armor">
-                <p class="2012">Forte présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leurs contacts, ils provoquent des brûlures cutanées. D’autres pesticides également présents sont mortels. Enfin, on retrouve aussi un certain nombre de substances cancérigènes et d’autres substances nocives pour les organes.</p>
-                <p class="2013">Forte présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leurs contacts, ils provoquent des brûlures cutanées. D’autres pesticides sont également présents en forte quantité et sont mortels. Enfin, on retrouve aussi un certain nombre de substances nuisibles à la santé des organes humains.</p>
-                <p class="2014">Présence de pesticides, toxiques en cas d’ingestion et d’inhalation.  De même, à leurs contacts, ils provoquent des brûlures cutanées. On retrouve aussi un certain nombre de substances nocives pour les organes et d’autres qui mortelles.</p>
-                <p class="2015">Présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leurs contacts, ils peuvent provoquer des brûlures cutanées et sont nocifs pour les organes. On retrouve aussi un certain nombre de substances mortelles.</p>
-                <p class="2016">Très forte présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leurs contacts, ils peuvent provoquer des brûlures cutanées. D’autres pesticides présents sont nocifs pour les organes et mortels. Enfin, on retrouve aussi un certain nombre de substances cancérigènes.</p>
-              </article>
-              <article id="Finistere">
-                <p class="2012">Forte présence de pesticides, toxiques en cas d’ingestion et d’inhalation. Ces produits peuvent provoquer aussi des brûlures cutanées. On retrouve aussi des composants pouvant être mortels et d’autres nocifs pour les organes.</p>
-                <p class="2013">Forte présence de pesticides, toxiques en cas d’ingestion et d’inhalation. On retrouve aussi des composants pouvant être mortels et d’autres nocifs pour les organes. Enfin, on trouve aussi des substances pouvant induire une anomalie génétique.</p>
-                <p class="2014">Présence de substances nocives pour les organes. D’autres pesticides présents sont toxiques en cas d’inhalation ou d’ingestions. D’autres sont également mortels.</p>
-                <p class="2015">Présence de substances nocives pour les organes. D’autres pesticides présents sont toxiques en cas d’inhalation ou d’ingestions. D’autres sont également mortels</p>
-                <p class="2016">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation. On retrouve aussi des composants pouvant être nocifs pour les organes et d’autres mortels. Enfin on retrouve aussi des substances cancérigènes.</p>
-              </article>
-              <article id="Ile_et_Vilaine">
-                <p class="2012">Forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation. On retrouve également des substances mortelles.</p>
-                <p class="2013">Forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation. Sont également présent des molécules mortelles et d’autres induisant des anomalies génétiques. On trouve aussi des pesticides qui provoquent des effets néfastes sur les organes.</p>
-                <p class="2014">Forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation et néfastes pour les organes. D’autres présentent des risques mortels.</p>
-                <p class="2015">Forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation et qui sont néfastes pour les organes. D’autres présentent des risques mortels.</p>
-                <p class="2016">Très forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation. On trouve également des substances avec des effets néfastes sur les organes et d’autres avec des effets mortels.</p>
-              </article>
-              <article id="Loire_Atlantique">
-                <p class="2012">Présence importante de produits phytosanitaires, toxiques en cas d’ingestion ou d’inhalation. On trouve des pesticides avec des effets néfastes sur les organes et d’autres étant susceptibles d’être cancérigènes et mortels.</p>
-                <p class="2013">Présence de substances pesticides, toxiques en cas d’ingestion ou d’inhalation. On en trouve avec des effets néfastes sur les organes et d’autres étant susceptibles d’être cancérigènes et mortels.</p>
-                <p class="2014">Présence de produits phytosanitaires, toxiques en cas d’ingestion ou d’inhalation. On trouve des substances avec des effets néfastes sur les organes et d’autres étant susceptibles d’être cancérigènes et mortels.</p>
-                <p class="2015">Présence des pesticides toxiques en cas d’ingestion ou d’inhalation. On en trouve avec des effets néfastes sur les organes et d’autres étant susceptibles d’être cancérigènes et mortels.</p>
-                <p class="2016">Très forte présence de substances chimiques non naturelles, toxiques en cas d’ingestion ou d’inhalation. On trouve des pesticides provoquant des effets néfastes sur les organes.</p>
-              </article>
-              <article id="Maine_et_Loire">
-                <p class="2012">Présence importante de substances pesticides avec des effets toxiques en cas d’inhalation ou d’ingestion. On trouve également des pesticides pouvant être mortels et avec des effets nocifs sur les organes.</p>
-                <p class="2013">Présence importante de produit avec des effets toxiques en cas d’inhalation ou d’ingestion. On trouve également des pesticides pouvant être mortels et avec des effets nocifs sur les organes.</p>
-                <p class="2014">Présence importante de produit avec des effets nocifs sur les organes et toxiques en cas d’inhalation ou d’ingestion. On trouve également des pesticides pouvant être mortels.</p>
-                <p class="2015">Présence importante de produit avec des effets nocifs sur les organes et toxiques en cas d’inhalation ou d’ingestion. On trouve également des pesticides pouvant être mortels.</p>
-                <p class="2016">Présence importante de produit avec des effets toxiques en cas d’inhalation ou d’ingestion. On trouve également des pesticides pouvant être mortels et avec des effets nocifs sur les organes.</p>
-              </article>
-              <article id="Mayenne">
-                <p class="2012">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation, ainsi que de substances dangereuses pour les organes, voire mortelles.</p>
-                <p class="2013">Forte présence de pesticides toxique en cas d’ingestion et d’inhalation, ainsi que de substances dangereuses pour les organes, voire mortelles.</p>
-                <p class="2014">Forte présence de produit dangereux pour les organes et toxique en cas d’ingestion, ainsi que des risques mortels.</p>
-                <p class="2015">Forte présence de produit dangereux pour les organes et toxique en cas d’ingestion, ainsi que des risques mortels.</p>
-                <p class="2016">Forte présence de composants toxiques en cas d’ingestion et d’inhalation, ainsi que substances dangereuses pour les organes, et même mortelles.</p>
-              </article>
-              <article id="Morbihan">
-                <p class="2012">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation. De même, à leurs contacts, ils provoquent des brûlures cutanées. D’autres pesticides sont très présents dans les eaux souterraines et sont mortels. Enfin, on retrouve aussi un certain nombre de substances dangereuses pour l’intégrité des organes humains.</p>
-                <p class="2013">Présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leurs contacts, ils provoquent des brûlures cutanées. D’autres pesticides également présents sont mortels. Enfin, on retrouve aussi un certain nombre de substances nocives pour les organes.</p>
-                <p class="2014">Présence de composants, néfastes pour les organes. D’autres pesticides présents sont mortels. Enfin, on retrouve aussi un certain nombre de substances qui sont toxiques en cas d’ingestion ou d’inhalation.</p>
-                <p class="2015">Présence de composants, néfastes pour les organes. D’autres pesticides présents sont mortels. Enfin, on retrouve aussi un certain nombre de substances qui sont toxiques en cas d’ingestion ou d’inhalation.</p>
-                <p class="2016">Présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leurs contacts, ils provoquent des brûlures cutanées. D’autres pesticides également présents sont mortels. Enfin, on retrouve aussi un certain nombre de substances cancérigènes et d’autres substances nocives pour les organes de l’homme.</p>
-              </article>
+                <p class="2012">Forte présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils provoquent des brûlures
+                  cutanées. D’autres pesticides également présents sont mortels. Enfin, on retrouve aussi un certain nombre de substances
+                  cancérigènes et d’autres substances nocives pour les organes.</p>
+                <p class="2013">Forte présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils provoquent des brûlures
+                  cutanées. D’autres pesticides sont également présents en forte quantité et sont mortels. Enfin, on retrouve aussi un certain
+                  nombre de substances nuisibles aux organes humains.</p>
+                <p class="2014">Présence de pesticides, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils provoquent des brûlures
+                  cutanées. On retrouve aussi un certain nombre de substances nocives pour les organes et d’autres qui mortelles.</p>
+                <p class="2015">Présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils peuvent provoquer des brûlures
+                  cutanées et sont nocifs pour les organes. On retrouve aussi un certain nombre de substances mortelles.</p>
+                <p class="2016">Très forte présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils peuvent provoquer
+                  des brûlures cutanées. D’autres pesticides présents sont nocifs pour les organes et mortels. Enfin, on retrouve aussi un
+                  certain nombre de substances cancérigènes.</p>
+                </article>
+                <article id="Finistere">
+                  <p class="2012">Forte présence de pesticides, toxiques en cas d’ingestion et d’inhalation. Ces produits peuvent provoquer aussi des brûlures
+                    cutanées. On retrouve aussi des composants pouvant être mortels et d’autres nocifs pour les organes.</p>
+                  <p class="2013">Forte présence de pesticides, toxiques en cas d’ingestion et d’inhalation. On retrouve aussi des composants pouvant être
+                    mortels et d’autres nocifs pour les organes. Enfin, on trouve aussi des substances pouvant induire une anomalie génétique.</p>
+                  <p class="2014">Présence de substances nocives pour les organes. D’autres pesticides présents sont toxiques en cas d’inhalation ou d’ingestions.
+                    D’autres sont également mortels.</p>
+                  <p class="2015">Présence de substances nocives pour les organes. D’autres pesticides présents sont toxiques en cas d’inhalation ou d’ingestions.
+                    D’autres sont également mortels</p>
+                  <p class="2016">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation. On retrouve aussi des composants pouvant être
+                    nocifs pour les organes et d’autres mortels. Enfin on retrouve aussi des substances cancérigènes.</p>
+                </article>
+                <article id="Ile_et_Vilaine">
+                  <p class="2012">Forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation. On retrouve également des substances mortelles.</p>
+                  <p class="2013">Forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation. Sont également présentes des molécules mortelles
+                    et d’autres induisant des anomalies génétiques. On trouve aussi des pesticides qui provoquent des effets néfastes sur
+                    les organes.</p>
+                  <p class="2014">Forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation et néfastes pour les organes. D’autres présentent
+                    des risques mortels.</p>
+                  <p class="2015">Forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation ou qui sont néfastes pour les organes. D’autres
+                    présentent des risques mortels.</p>
+                  <p class="2016">Très forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation. On trouve également des substances avec
+                    des effets néfastes sur les organes et d’autres avec des effets mortelles.</p>
+                </article>
+                <article id="Loire_Atlantique">
+                  <p class="2012">Présence importante de produits phytosanitaires, toxiques en cas d’ingestion ou d’inhalation. On trouve des pesticides
+                    avec des effets néfastes sur les organes et d’autres étant susceptibles d’être cancérigènes et mortels.</p>
+                  <p class="2013">Présence de substances pesticides, toxiques en cas d’ingestion ou d’inhalation. On en trouve avec des effets néfastes sur
+                    les organes et d’autres étant susceptibles d’être cancérigènes et mortelles.</p>
+                  <p class="2014">Présence de produits phytosanitaires, toxiques en cas d’ingestion ou d’inhalation. On trouve des substances avec des effets
+                    néfastes sur les organes et d’autres étant susceptibles d’être cancérigènes et mortelles.</p>
+                  <p class="2015">Présence de pesticides toxiques en cas d’ingestion ou d’inhalation. On en trouve avec des effets néfastes sur les organes
+                    et d’autres étant susceptibles d’être cancérigènes et mortels.</p>
+                  <p class="2016">Très forte présence de substances chimiques non naturelles, toxiques en cas d’ingestion ou d’inhalation. On trouve des
+                    pesticides provoquant des effets néfastes sur les organes.</p>
+                </article>
+                <article id="Maine_et_Loire">
+                  <p class="2012">Présence importante de substances pesticides avec des effets toxiques en cas d’inhalation ou d’ingestion. On trouve également
+                    des pesticides pouvant être mortels et avec des effets nocifs sur les organes.</p>
+                  <p class="2013">Présence importante de produits avec des effets toxiques en cas d’inhalation ou d’ingestion. On trouve également des pesticides
+                    pouvant être mortels et avec des effets nocifs sur les organes.</p>
+                  <p class="2014">Présence importante de produits avec des effets nocifs sur les organes et toxiques en cas d’inhalation ou d’ingestion.
+                    On trouve également des pesticides pouvant être mortels.</p>
+                  <p class="2015">Présence importante de produits avec des effets nocifs sur les organes et toxiques en cas d’inhalation ou d’ingestion.
+                    On trouve également des pesticides pouvant être mortels.</p>
+                  <p class="2016">Présence importante de produits avec des effets toxiques en cas d’inhalation ou d’ingestion. On trouve également des pesticides
+                    pouvant être mortels et avec des effets nocifs sur les organes.</p>
+                </article>
+                <article id="Mayenne">
+                  <p class="2012">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation, ainsi que de substances dangereuses pour les
+                    organes, voire mortelles.</p>
+                  <p class="2013">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation, ainsi que de substances dangereuses pour les
+                    organes, voire mortelles.</p>
+                  <p class="2014">Forte présence de produits dangereux pour les organes et toxiques en cas d’ingestion, ainsi que des risques mortels.</p>
+                  <p class="2015">Forte présence de produits dangereux pour les organes et toxiques en cas d’ingestion, ainsi que des risques mortels.</p>
+                  <p class="2016">Forte présence de composants toxiques en cas d’ingestion et d’inhalation, ainsi que substances dangereuses pour les organes,
+                    et même mortelles.</p>
+                </article>
+                <article id="Morbihan">
+                  <p class="2012">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils provoquent des brûlures
+                    cutanées. D’autres pesticides sont très présents dans les eaux souterraines et sont mortels. Enfin, on retrouve aussi
+                    un certain nombre de substances dangereuses pour l’intégrité des organes humains.</p>
+                  <p class="2013">Présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils provoquent des brûlures
+                    cutanées. D’autres pesticides également présents sont mortels. Enfin, on retrouve aussi un certain nombre de substances
+                    nocives pour les organes.</p>
+                  <p class="2014">Présence de composants, néfastes pour les organes. D’autres pesticides présents sont mortels. Enfin, on retrouve aussi
+                    un certain nombre de substances qui sont toxiques en cas d’ingestion ou d’inhalation.</p>
+                  <p class="2015">Présence de composants, néfastes pour les organes. D’autres pesticides présents sont mortels. Enfin, on retrouve aussi
+                    un certain nombre de substances qui sont toxiques en cas d’ingestion ou d’inhalation.</p>
+                  <p class="2016">Présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils provoquent des brûlures
+                    cutanées. D’autres pesticides également présents sont mortels. Enfin, on retrouve aussi un certain nombre de substances
+                    cancérigènes et d’autres substances nocives pour les organes de l’homme.</p>
+                </article>
             </article>
             <p class="title" id="legendeTitle">  Principaux dangers des pesticides </p>
             <table id="legende">
@@ -229,12 +269,12 @@
                 <td class="normal cellule">
                   <svg width="30" height="10">
                     <rect width="30" height="10" style="fill:#008442;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
-                  <p class="pLegende"> Impact génital </p>
+                  <p class="pLegende"> Impact génétique </p>
                 </td>
                 <td class="normal cellule">
                   <svg width="30" height="10">
                     <rect width="30" height="10" style="fill:#58BC81;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
-                  <p class="pLegende"> Impact foetus </p>
+                  <p class="pLegende"> Impact fœtus </p>
                 </td>
                 <td class="normal cellule">
                   <svg width="30" height="10">
@@ -366,8 +406,8 @@
             naturel en fait d’elle une eau d'extrême qualité.
           </p>
           <p class="pContent pBottom normal">
-          La nappe de Campbon approvisionne les robinets des habitants de la région nazairienne, exploitée par la Communauté d’Agglomération
-          de la Région Nazairienne (CARENE).
+            La nappe de Campbon approvisionne les robinets des habitants de la région nazairienne, exploitée par la Communauté d’Agglomération
+            de la Région Nazairienne (CARENE).
           </p>
         </section>
         <section id="section5" class="panel">
@@ -599,7 +639,7 @@
           <p class="title pTitle"> NAPPE DE CAMPBON ET LA SANTE</p>
           <p id="anneeCampbon" class="title pTitle"> ANNEE 2012 </p>
           <p id="descriptionBonhomme" class="pContent normal"></p>
-          <p class="pContent normal">Selon les années, les industriels et les agriculteurs utilisent des produits phytosanitaires différents ainsi, les substances actives présentes présente dans les nappes souterraines évoluent. Les cocktails de substances néfastes se transforment et les effets toxiques sont modifiés.</p>
+          <p class="pContent normal">Selon les années, les industriels et les agriculteurs utilisent des produits phytosanitaires différents ainsi, les substances actives présentes dans les nappes souterraines évoluent. Les cocktails de substances néfastes se transforment et les effets toxiques sont modifiés.</p>
         </section>
         <article id="descC2012">
           <p>ANNEE 2012</p>
@@ -627,7 +667,7 @@
         <article id="descriptionBonhomme2013">
           <p>Forte présence de substances pesticides toxiques par inhalation et ingestion. Diverses substances provoquant des anomalies génétiques avec des effets graves sur les organes et pouvant entraîner la mort. Parmi eux :</p>
           <ul>
-            <li><strong>Chloroforme</strong> :<br> fortement présent. Utilisé pour rendre l’eau potable, il est très toxique ! Susceptible de provoquer le cancer, le chloroforme peut aussi avoir des effets graves pour les organes ou nuire à la fertilité ou au fœtus. Cet assainissant peut également irriter la peau et les yeux.</li>
+            <li><strong>Chloroforme</strong> :<br> Fortement présent. Utilisé pour rendre l’eau potable, il est très toxique ! Susceptible de provoquer le cancer, le chloroforme peut aussi avoir des effets graves pour les organes ou nuire à la fertilité ou au fœtus. Cet assainissant peut également irriter la peau et les yeux.</li>
             <li><strong>Dichlorométhane (solvant)</strong> :<br> Connu pour son effet narcotique, il est l’un des solvants les plus irritant. Aujourd’hui, vendu en décapant de peinture et vernis, il est à l’origine de nombreuses toxicités mortelles au travail.</li>
             <li><strong>Toluene (solvant)</strong> :<br> Nécessaire à la fabrication des vernis ou autres produits colorants, sa simple inhalation peut entraîner des effets allant de l’irritation de la gorge à la perte de conscience.</li>
           </ul>
@@ -692,7 +732,7 @@
           <article class="articleS8">
             <svg width="30" height="10">
               <rect width="30" height="10" style="fill:#7CCAE2;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
-            <p class="normal pContent pSection8"> Toxic/Nocif </p>
+            <p class="normal pContent pSection8"> Toxique/Nocif </p>
           </article>
           <br>
           <article class="articleS8">
@@ -704,7 +744,7 @@
           <article class="articleS8">
             <svg width="30" height="10">
               <rect width="30" height="10" style="fill:#58BC81;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
-            <p class="normal pContent pSection8"> Impact foetus </p>
+            <p class="normal pContent pSection8"> Impact fœtus </p>
           </article>
           <br>
           <article class="articleS8">
@@ -722,7 +762,7 @@
           général la protection, la mise en valeur, la gestion et la restauration de la ressource en eau et des écosystèmes aquatiques,
           dans une perspective de société écologiquement viable », par arrêté préfectoral du 17 décembre 2013. </p>
           <p class="normal pContent"> Elle fait oeuvre d’éducation populaire en élevant la conscience écologique, la connaissance des règles qui régissent les
-          équilibres naturels et le respect du patrimoine naturel et en contribuant à développer les activités éducatives, récréatives
+          équilibres naturels et le respect du patrimoine naturel, et en contribuant à développer les activités éducatives, récréatives
           et informatives auprès du grand public. </p>
           <p class="normal pContent pBottom"> L'Association née en 1969, comprend aujourd'hui 1 200 adhérents, une centaine d'associations et 17 salariés. </p>
         </section>
@@ -787,7 +827,9 @@
               </p>
             </td>
             <td>
-              <img src="img/etudiants/Clothilde.png" alt="Clothilde" class="imageNous">
+              <a href="https://www.behance.net/clothildecbfd1">
+                <img src="img/etudiants/Clothilde.png" alt="Clothilde" class="imageNous">
+              </a>
               <p class="name title">
                 Clothilde
                 <br>
@@ -795,7 +837,9 @@
               </p>
             </td>
             <td>
-              <img src="img/etudiants/Flore.png" alt="Flore" class="imageNous">
+              <a href="http://florefvr.tumblr.com/">
+                <img src="img/etudiants/Flore.png" alt="Flore" class="imageNous">
+              </a>
               <p class="name title">
                 Flore
                 <br>
