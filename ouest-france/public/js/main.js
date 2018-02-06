@@ -2453,7 +2453,7 @@ function pin(){
 function controleurFrance() {
 
     var villes = document.getElementById("mapFrance").contentDocument;
-    var villes_svg = villes.querySelectorAll(".ville");
+    var villes_svg = document.getElementById("mapFrance").contentDocument.querySelectorAll(".ville");
     for (var i = 0, length = villes_svg.length; i < length; i++) {
         villes_svg[i].addEventListener("click", function() {
             popup(this.id, currentYear, dataFrance);
@@ -2485,7 +2485,7 @@ function controleurFrance() {
     var currentYear = "global";
 
 
-    var croix = document.getElementsByClassName("croix");
+    var croix = document.querySelector("#fenetrePopupFrance .croix");
 
     croix.onclick = function(){
         closePopup();
@@ -2640,7 +2640,7 @@ function totalVilles(villes, dataFrance) {
 
 function reinitVilles(villes, dataFrance) {
     for (var i = 0; i < dataFrance.length; i++) {
-        villes.getElementById(dataFrance[i].Ville).style.display = "none";
+        document.getElementById("mapFrance").contentDocument.getElementById(dataFrance[i].Ville).style.display = "none";
     }
 }
 
@@ -2648,9 +2648,9 @@ function montrerVilles(villes, dataFrance, annee) {
 
     for (var i = 0; i < dataFrance.length; i++) {
         if (dataFrance[i].Annee == annee) {
-            var circle = villes.getElementById(dataFrance[i].Ville).getElementsByTagName("circle");
+            var circle = document.getElementById("mapFrance").contentDocument.getElementById(dataFrance[i].Ville).getElementsByTagName("circle");
             circle[0].setAttribute("r", 2.8+ 1.15*dataFrance[i].NombreGroupes);
-            villes.getElementById(dataFrance[i].Ville).style.display = "inline";
+            document.getElementById("mapFrance").contentDocument.getElementById(dataFrance[i].Ville).style.display = "inline";
 
         }
     }
@@ -2892,9 +2892,13 @@ function graphiqueLine()
 
 /**********************************************************************************************************************/
 //loadData();
-graphiqueLine();
-pin();
-controleurPodium();
-controleurFrance();
-controleurPlan();
-setTimeout(chargement, 5000);
+
+setTimeout(function(){
+    graphiqueLine();
+    pin();
+    controleurPodium();
+    controleurFrance();
+    controleurPlan();
+    chargement()
+},2000);
+
