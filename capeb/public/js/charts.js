@@ -16,8 +16,8 @@ var colorZoom = [
     'rgba(255,224,0,0.8)',
 ];
 
-var drawDDChart = (stats) => {
-	function scale(number) {
+var drawDDChart = function(stats) {
+    function scale(number) {
         var start = 10;
         var inc = 8;
         if (number == 0) {
@@ -32,6 +32,7 @@ var drawDDChart = (stats) => {
             return start + inc * 4;
         }
     }
+
     var sec = document.getElementById("dataviz-section");
     if (sec !== null) {
         sec.remove();
@@ -50,122 +51,127 @@ var drawDDChart = (stats) => {
 
 
     var ctx = cvs.getContext("2d");
-	var datasets = stats.Developpement_durable.values[0].map((aspect, id) => {
-		return {
-			label: aspect,
-			data: [
-					{
-						x: id,
-						y: 2,
-						r: scale(parseInt(stats.Developpement_durable.values[1][id]))
-					}
-				  ],
-		    backgroundColor: colors[id],
-		};
+    var datasets = stats.Developpement_durable.values[0].map(function(aspect, id){
+        return {
+            label: aspect,
+            data: [
+                {
+                    x: id,
+                    y: 2,
+                    r: scale(parseInt(stats.Developpement_durable.values[1][id]))
+                }
+            ],
+            backgroundColor: colors[id],
+        };
 
-	});
-	var ch = new Chart(ctx,
-					{
-						type: 'bubble',
-						data: {'datasets': datasets},
-						options: {
-							onClick: function(e) {
-								var element = this.getElementAtEvent(e);
+});
+    var ch = new Chart(ctx,
+        {
+            type: 'bubble',
+            data: {'datasets': datasets},
+            options: {
+                onClick: function (e) {
+                    var element = this.getElementAtEvent(e);
 
-								// If you click on at least 1 element ...
-								if (element.length > 0) {
-									// Logs it
-									console.log(element[0]);
+                    // If you click on at least 1 element ...
+                    if (element.length > 0) {
+                        // Logs it
+                        console.log(element[0]);
 
-									// Here we get the data linked to the clicked bubble ...
-									var datasetLabel = this.config.data.datasets[element[0]._datasetIndex].label;
+                        // Here we get the data linked to the clicked bubble ...
+                        var datasetLabel = this.config.data.datasets[element[0]._datasetIndex].label;
 
-									var d = {'labels': [], 'values': []}
+                        var d = {'labels': [], 'values': []}
 
-									stats.Interet_ApsectDD.values.map((cell) => {
-											if(cell[0] === datasetLabel){
-												d.labels.push(cell[1]);
-												d.values.push(cell[2]);
-											}
-									});
+                        stats.Interet_ApsectDD.values.map(function(cell) {
+                            if(cell[0] === datasetLabel
+                    )
+                        {
+                            d.labels.push(cell[1]);
+                            d.values.push(cell[2]);
+                        }
+                    });
 
 
-									$("#canvas-dataviz").fadeOut();
-									$(".plus").html("");
-									drawPieChart(d, datasetLabel);
+                        $("#canvas-dataviz").fadeOut();
+                        $(".plus").html("");
+                        drawPieChart(d, datasetLabel);
 
-								}
-							},
-							hover: {
-								mode: 'nearest',
-								intersect: true,
-								onHover: function(e) {
-									var point = this.getElementAtEvent(e);
-									if (point.length) e.target.style.cursor = 'pointer';
-									else e.target.style.cursor = 'default';
-								}
-							},
-							tooltips: {
-								 callbacks: {
-									label: function(t, d) {
-									   return d.datasets[t.datasetIndex].label +
-											  ': Total: ' + t.yLabel + ')';
-									}
-								 }
-							  },
-							scales: {
-									xAxes: [{
-										ticks: {
-											display: false
-										},
-										gridLines: {
-											display: false
-										},
-										scaleLabel: {
-											display: false,
-										}
-									}],
-									yAxes: [{
-										ticks: {
-											display: false
-										},
-										gridLines: {
-											display: false,
-											drawBorder: false
-										}
-									}]
-								},
-								 legend: {
-									display: false
-								 }
-						}
-					}
-	);
+                    }
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true,
+                    onHover: function (e) {
+                        var point = this.getElementAtEvent(e);
+                        if (point.length) e.target.style.cursor = 'pointer';
+                        else e.target.style.cursor = 'default';
+                    }
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function (t, d) {
+                            return d.datasets[t.datasetIndex].label +
+                                ': Total: ' + t.yLabel + ')';
+                        }
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            display: false
+                        },
+                        gridLines: {
+                            display: false
+                        },
+                        scaleLabel: {
+                            display: false,
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            display: false
+                        },
+                        gridLines: {
+                            display: false,
+                            drawBorder: false
+                        }
+                    }]
+                },
+                legend: {
+                    display: false
+                }
+            }
+        }
+    );
 
 
 }
 
-var wordCloud = (FreinsMP) => {
-    var frequency_list = FreinsMP.values[0].map((name, id) => {
+var wordCloud = function(FreinsMP) {
+    var frequency_list = FreinsMP.values[0].map(function(name, id){
         return {
             "text": name,
             "size": FreinsMP.values[1][id]
         };
-    })
+});
 
-   var fill = d3.scale.category20();
+    var fill = d3.scale.category20();
 
-	var layout = d3.layout.cloud()
-    .size([500, 500])
-    .words(frequency_list)
-    .padding(5)
-    .font("Montserrat', sans-serif")
-    .fontSize(function(d) { return d.size; })
-    .on("end", draw);
+    var layout = d3.layout.cloud()
+        .size([500, 500])
+        .words(frequency_list)
+        .padding(5)
+        .font("Montserrat', sans-serif")
+        .fontSize(function (d) {
+            return d.size;
+        })
+        .on("end", draw);
 
-	layout.start();
+    layout.start();
+
     function draw(words) {
-		$("#dataviz").html("")
+        $("#dataviz").html("")
         d3.select("#dataviz").append("svg")
             .attr("width", layout.size()[0])
             .attr("height", layout.size()[1])
@@ -174,24 +180,25 @@ var wordCloud = (FreinsMP) => {
             .selectAll("text")
             .data(words)
             .enter().append("text")
-            .style("font-size", function(d) {
+            .style("font-size", function (d) {
                 return d.size + "px";
             })
             .style("font-family", "Montserrat', sans-serift")
-            .style("fill", function(d, i) {
+            .style("fill", function (d, i) {
                 return fill(i);
             })
             .attr("text-anchor", "middle")
-            .attr("transform", function(d) {
+            .attr("transform", function (d) {
                 return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
             })
-            .text(function(d) {
+            .text(function (d) {
                 return d.text;
             });
     };
-};
+}
+;
 
-var drawChart3dEmploi = function(data) {
+var drawChart3dEmploi = function (data) {
 
     var sec = document.getElementById("dataviz-section");
     if (sec !== null) {
@@ -222,16 +229,17 @@ var drawChart3dEmploi = function(data) {
     };
     data2 = [data.Recrutement_Evo, region];
     var labels = ["Epci", "Région"];
-    var d = data2.map(function(val, i) {
+    var d = data2.map(function (val, i) {
         return {
             label: labels[i],
-            backgroundColor: colorZoom[i+1],
-            borderColor: colorZoom[i+1],
+            backgroundColor: colorZoom[i + 1],
+            borderColor: colorZoom[i + 1],
             borderWidth: "0",
             data: val.values[1].map(Number),
             fill: true
         }
     });
+
 
     var ch = new Chart(ctx, {
         // The type of chart we want to create
@@ -251,7 +259,7 @@ var drawChart3dEmploi = function(data) {
             hover: {
                 mode: 'nearest',
                 intersect: true,
-                onHover: function(e) {
+                onHover: function (e) {
                     var point = this.getElementAtEvent(e);
                     if (point.length) e.target.style.cursor = 'pointer';
                     else e.target.style.cursor = 'default';
@@ -289,7 +297,7 @@ var drawChart3dEmploi = function(data) {
         }
     });
 
-    cvs.onclick = function(evt) {
+    cvs.onclick = function (evt) {
         var activePoints = ch.getElementsAtEvent(evt);
         if (activePoints[0]) {
             var chartData = activePoints[0]['_chart'].config.data;
@@ -304,25 +312,25 @@ var drawChart3dEmploi = function(data) {
                 "values": data.Recrutement_Evo_Act.values[1 + i]
             };
 
-			$("#canvas-dataviz").fadeOut();
-			$(".plus").html("");
-            drawBarChart(p, "Moyenne Nb récrutement envisagé " +  label)
+            $("#canvas-dataviz").fadeOut();
+            $(".plus").html("");
+            drawBarChart(p, "Moyenne Nb récrutement envisagé " + label)
 
         }
     };
 };
 
 
-function drawLineChart(data){
+function drawLineChart(data) {
     var sec = document.getElementById("dataviz-section");
-    if(sec !== null) {
+    if (sec !== null) {
         sec.remove();
     }
     sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
     sec.setAttribute("id", "dataviz-section");
 
     var canvas = document.getElementById("canvas-dataviz");
-    if(canvas !== null){
+    if (canvas !== null) {
         canvas.remove();
     }
     canvas = document.createElement('canvas');
@@ -330,51 +338,54 @@ function drawLineChart(data){
 
     var cvs = sec.appendChild(canvas);
 
-	var d =  {
-		datasets: [],
-		labels: []
-	};
+    var d = {
+        datasets: [],
+        labels: []
+    };
     var dataset = {
-      data: [],
-      label: "EPCI",
-      backgroundColor: colorZoom[1],
-      borderWidth: "0"};
+        data: [],
+        label: "EPCI",
+        backgroundColor: colorZoom[1],
+        borderWidth: "0",
+        tension: 0
 
-    var datasetRegion = {data: [], label: "Région", backgroundColor: colorZoom[2],borderWidth: "0"};
-    data.region.forEach(function(value){
+    };
+
+    var datasetRegion = {data: [], label: "Région", backgroundColor: colorZoom[2], borderWidth: "0", tension:0};
+    data.region.forEach(function (value) {
         datasetRegion.data.push(parseFloat(value[1]));
-	});
+    });
 
-    data.values.forEach(function(value){
+    data.values.forEach(function (value) {
         d.labels.push(value[0]);
-		dataset.data.push(parseFloat(value[1]));
+        dataset.data.push(parseFloat(value[1]));
     });
 
     d.datasets.push(dataset);
-	d.datasets.push(datasetRegion);
+    d.datasets.push(datasetRegion);
 
     var ctx = cvs.getContext("2d");
-	var c = new Chart(ctx, {
-		// The type of chart we want to create
-		type: 'line',
-		// The data for our dataset
-		data: d,
-		// Configuration options go here
-		options: {
-			 tooltips: {
+    var c = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+        // The data for our dataset
+        data: d,
+        // Configuration options go here
+        options: {
+            tooltips: {
                 mode: 'index',
                 intersect: false,
             },
             hover: {
                 mode: 'nearest',
                 intersect: true,
-                onHover: function(e) {
+                onHover: function (e) {
                     var point = this.getElementAtEvent(e);
                     if (point.length) e.target.style.cursor = 'pointer';
                     else e.target.style.cursor = 'default';
                 }
             },
-			scales: {
+            scales: {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
@@ -401,18 +412,18 @@ function drawLineChart(data){
                     }
                 }]
             }
-		}
-	});
+        }
+    });
 }
 
 function drawBarChart(data, title) {
     var sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
     sec.className = "plus"
-	sec.onclick = () => {
-		sec.style.display = "none";
+    sec.onclick = function() {
+        sec.style.display = "none";
 
-		document.getElementById("canvas-dataviz").style.display = "block";
-	}
+        document.getElementById("canvas-dataviz").style.display = "block";
+    };
     var cvs = sec.appendChild(document.createElement('canvas'))
 
     var ctx = cvs.getContext("2d")
@@ -432,23 +443,22 @@ function drawBarChart(data, title) {
 
         // Configuration options go here
         options: {
-				title:{
-                    display:true,
-                    text: title
-                }
+            title: {
+                display: true,
+                text: title
+            }
         }
     });
 
 }
 
 function drawPieChart(data, title) {
-     var sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
+    var sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
     sec.className = "plus"
-	sec.onclick = () => {
-		sec.style.display = "none";
-
-		document.getElementById("canvas-dataviz").style.display = "block";
-	}
+    sec.onclick = function() {
+        sec.style.display = "none";
+        document.getElementById("canvas-dataviz").style.display = "block";
+    };
     var cvs = sec.appendChild(document.createElement('canvas'))
 
     var ctx = cvs.getContext("2d")
@@ -465,11 +475,11 @@ function drawPieChart(data, title) {
             }]
         },
         options: {
-            title:{
-                display:true,
+            title: {
+                display: true,
                 text: title
-                }
-              }
+            }
+        }
     });
 }
 
@@ -502,6 +512,7 @@ function drawDistanceDataviz(data) {
             return start + inc * 4;
         }
     }
+
     var sec = document.getElementById("dataviz-section");
     if (sec !== null) {
         sec.remove();
@@ -523,7 +534,7 @@ function drawDistanceDataviz(data) {
         datasets: []
     };
 
-    data.values.forEach(function(value) {
+    data.values.forEach(function (value) {
         var dataset = {};
         var data = [];
         var point = {};
@@ -544,12 +555,12 @@ function drawDistanceDataviz(data) {
         tooltips: false,
         elements: {
             point: {
-                backgroundColor: function(context) {
+                backgroundColor: function (context) {
                     var value = context.dataset.data[context.dataIndex];
                     return colorMatch[value.metier.substr(0, 3)];
                 },
 
-                r: function(context) {
+                r: function (context) {
                     var value = context.dataset.data[context.dataIndex];
                     var size = context.chart.width;
                     var base = Math.abs(value.v) / 1000;
@@ -579,9 +590,7 @@ function drawDistanceDataviz(data) {
         },
         legend: {
             display: true,
-            labels: {
-
-            }
+            labels: {}
         }
     };
 
@@ -594,7 +603,7 @@ function drawDistanceDataviz(data) {
 
 }
 
-function fetchConjonctureData(d){
+function fetchConjonctureData(d) {
     fetch("/capeb/data/" + d.properties.siren_epci + "/conjoncture_facteurs")
         .then(function (value) {
             return value.json();
@@ -605,13 +614,13 @@ function fetchConjonctureData(d){
             return {};
         })
         .then(function (json) {
-          createConjonctureDataviz(json);
+            createConjonctureDataviz(json);
         });
 }
 
-function createConjonctureDataviz(json){
+function createConjonctureDataviz(json) {
     var labels = ["Chiffre d'affaires", "Marge", "Trésorerie", "Carnet de commandes"];
-    var pointsColor = [["#ACF2E2", "#50EC2", "#02998B"], ["#AEDFF8", "#68C0ED", "#427C9A"],["#D8D8D8", "#9B9B9B", "#9B9B9B"],["#EB8D8B", "#DF261D", "#A61B14"]];
+    var pointsColor = [["#ACF2E2", "#50EC2", "#02998B"], ["#AEDFF8", "#68C0ED", "#427C9A"], ["#D8D8D8", "#9B9B9B", "#9B9B9B"], ["#EB8D8B", "#DF261D", "#A61B14"]];
 
 
     var d = {
@@ -622,33 +631,33 @@ function createConjonctureDataviz(json){
     var dataset = {};
     var data = [];
     var point = {};
-    json.values[0].forEach(function(value) {
+    json.values[0].forEach(function (value) {
         point = {};
         point.x = cptx;
         point.y = cpty;
         point.r = radiusmatch(value);
         data.push(point);
         cptx++;
-        if (cptx==4){
+        if (cptx == 4) {
             dataset.data = data;
             dataset.borderColor = "white";
-            dataset.label = labels[cpty-1];
+            dataset.label = labels[cpty - 1];
             d.datasets.push(dataset);
             dataset = {};
             data = [];
             cpty++;
-            cptx=1;
+            cptx = 1;
         }
     });
 
-    function radiusmatch(value){
-        if(value<=0.25){
+    function radiusmatch(value) {
+        if (value <= 0.25) {
             return 10;
-        } else if(value <= 0.50){
+        } else if (value <= 0.50) {
             return 18;
-        } else if(value<=.75){
+        } else if (value <= .75) {
             return 26;
-        } else if(value<=1){
+        } else if (value <= 1) {
             return 34;
         }
     }
@@ -680,7 +689,7 @@ function createConjonctureDataviz(json){
             },
             elements: {
                 point: {
-                    backgroundColor: function(context) {
+                    backgroundColor: function (context) {
                         var value = context.dataset.data[context.dataIndex];
                         return pointsColor[value.y - 1][value.x - 1];
                     }
