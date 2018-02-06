@@ -214,9 +214,10 @@ a {
 .nav-bar > .epci {
   grid-column: 2 / 3;
   justify-self: stretch;
+  margin-left: 4%;
 }
 
-/* line 29, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_nav-bar.scss */
+/* line 30, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_nav-bar.scss */
 .nav-bar > .button-zoom {
   grid-column: 3 /4;
   justify-self: stretch;
