@@ -1,4 +1,11 @@
-
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
 /** colonne de gauche **/
 
@@ -11,6 +18,7 @@
 
 .credits, .home {
     outline: none;
+    text-transform: uppercase;
     color: rgba(255, 255, 255, 0.7);
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
@@ -41,40 +49,7 @@
 
 .credits:hover, .credits:focus, .home:hover, .home:focus {
     color: black;
-}
-
-a:link, a:visited {
-    color: #FFFFFF;
     text-decoration: none;
-}
-
-a:hover {
-    color: #757575;
-    text-decoration: none;
-
-    width: 80px;
-}
-
-#home {
-    position: absolute;
-
-    margin-top: 10px;
-    top: 5px;
-    left: 300px;
-    font-family: Lato;
-
-    width:70px;
-}
-
-#credits {
-    position: absolute;
-
-    margin-top: 10px;
-    top: 5px;
-    left: 380px;
-    font-family: Lato;
-
-    width:100px;
 }
 
 /* textes de la colonne */

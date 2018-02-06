@@ -2,21 +2,22 @@
 
 home
 
-- accent sur crédits
-- bouton commencer
-- texte : dispositifs aideS
+- accent sur crédits x
+- bouton commencer x
+- texte : dispositifs aideS x
 
 
--> corriger ordre des dataviz
+-> corriger ordre des dataviz x
 
--> supprimer l'italique pour le témoignage
+-> supprimer l'italique pour le témoignage x
+
+sunburst
 
 - toggle pour le "choisis ton GFE"
 - mettre les icones
 - mettre les noms entier
 - enlever la petite barre blanche
 
-sunburst
 - que le sunburst corresponde à la maquette
 - survolez pour plus d'informations
 
@@ -26,7 +27,7 @@ map
 
 aides
 
--diriger vers un autre onglet
+- diriger vers un autre onglet
 - corriger le bug des ronds
 - changer l'apparence du résultat
 
