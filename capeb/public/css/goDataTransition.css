@@ -149,7 +149,7 @@
   fill: none;
 }
 
-.modal-inset .button #unzoom:hover, .next:hover, .prev:hover{
+.modal-inset .button .next:hover, .prev:hover, #unzoom:hover{
   stroke-width: 4;
   cursor: pointer;
 }
