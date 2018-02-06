@@ -17,9 +17,6 @@ html, body{
 
     padding-left: 100px;
 
-   /* padding-top: 50px;*/
-   /* padding-bottom: 50px;*/
-
     background: #FAFAFA;
 }
 
@@ -34,104 +31,10 @@ html, body{
 
 /* partie de gauche */
 
-#texte {
+.texte {
     position: absolute;
-    height: 100%;
-    height: -webkit-calc(100% - 50px);  /* pour Chrome */
-    height: -moz-calc(100% - 50px);     /* pour Firefox */
-    height: calc(100% - 50px);          /* pour support natif */
-
-    padding-left: 40px;
-    padding-right: 40px;
-
-    padding-bottom: 50px;
-
-    float:left;
-    width:400px;
 
     background-color: #009BC2;
 
     z-index: 1;
-}
-
-.logo-pdl {
-    margin-left: 50px;
-    width: 174px;
-    background-color: #FFFFFF;
-}
-
-h2 {
-    color: #FFFFFF;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-family: Lato;
-}
-
-a:link, a:visited {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #757575;
-    text-decoration: none;
-
-    width: 80px;
-}
-
-#home {
-    position: absolute;
-
-    margin-top: 10px;
-    top: 5px;
-    left: 300px;
-    font-family: Lato;
-
-    width:70px;
-}
-
-#credits {
-    position: absolute;
-
-    margin-top: 10px;
-    top: 5px;
-    left: 380px;
-    font-family: Lato;
-
-    width:100px;
-}
-
-.accroche {
-    color: #FFFFFF;
-    font-family: Lato;
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.explication {
-    /*  left: 41px;*/
-    top: 250px;
-
-    height: 23.65%;
-    /* width: 30.78%;*/
-    color: #FFFFFF;
-    font-family: Lato;
-    font-size: 11px;
-    letter-spacing: 1px;
-    line-height: 25px;
-}
-
-.temoignage {
-    position: absolute;
-    top: 400px;
-
-    height: 158px;
-    width: 394px;
-    color: #FFFFFF;
-    font-family: Lato;
-    font-size: 14px;
-    font-style: italic;
-    letter-spacing: 1px;
-    line-height: 25px;
 }

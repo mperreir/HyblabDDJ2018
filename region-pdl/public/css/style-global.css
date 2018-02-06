@@ -1,3 +1,134 @@
+
+
+/** colonne de gauche **/
+
+/* logo, liens home et cédits */
+.logo-pdl {
+    margin-left: 50px;
+    width: 180px;
+    background-color: #FFFFFF;
+}
+
+.credits, .home {
+    outline: none;
+    color: rgba(255, 255, 255, 0.7);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    text-decoration: none;
+    font-family: Lato;
+}
+
+.credits {
+    position: absolute;
+
+    margin-top: 10px;
+    top: 5px;
+    left: 380px;
+
+    width: 100px;
+}
+
+.home {
+    position: absolute;
+
+    margin-top: 10px;
+    top: 5px;
+    left: 300px;
+
+    width:70px;
+}
+
+.credits:hover, .credits:focus, .home:hover, .home:focus {
+    color: black;
+}
+
+a:link, a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #757575;
+    text-decoration: none;
+
+    width: 80px;
+}
+
+#home {
+    position: absolute;
+
+    margin-top: 10px;
+    top: 5px;
+    left: 300px;
+    font-family: Lato;
+
+    width:70px;
+}
+
+#credits {
+    position: absolute;
+
+    margin-top: 10px;
+    top: 5px;
+    left: 380px;
+    font-family: Lato;
+
+    width:100px;
+}
+
+/* textes de la colonne */
+/* partie de gauche */
+
+.texte {
+    height: 100%;
+    height: -webkit-calc(100% - 50px);  /* pour Chrome */
+    height: -moz-calc(100% - 50px);     /* pour Firefox */
+    height: calc(100% - 50px);          /* pour support natif */
+
+    padding-left: 40px;
+    padding-right: 40px;
+
+    padding-bottom: 50px;
+
+    float:left;
+    width:400px;
+}
+
+.accroche {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.explication {
+    top: 250px;
+
+    height: 23.65%;
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.temoignage {
+    position: absolute;
+    top: 400px;
+
+    height: 158px;
+    width: 394px;
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+/** lien rond sur la droite **/
+
 a.lienRond {
     position: absolute;
     right: 20px;

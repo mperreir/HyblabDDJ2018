@@ -38,12 +38,12 @@ body{
     width:37.8%;
     background-color: #4e2850;
 }
-
+/*
 #logo-pdl {
     margin-left: 0;
     width: 174px;
     background-color: #FFFFFF;
-}
+}*/
 
 h2 {
     color: #FFFFFF;
@@ -51,17 +51,17 @@ h2 {
     letter-spacing: 1px;
     font-family: Lato;
 }
-
+/*
 #credits {
     top: 5px;
     right: 25px;
-}
-
+}*/
+/*
 #home {
     top: 5px;
     right: 150px;
-}
-
+}*/
+/*
 .accroche {
     margin-top: 40px;
     color: #FFFFFF;
@@ -71,24 +71,12 @@ h2 {
     letter-spacing: 2px;
 }
 
-#textExp{
-    color: #FFFFFF;
-    font-family: Lato;
-    font-size: 23px;
-    font-weight: bold;
-    letter-spacing: 2px;
-	line-height: 30px;
-    /*margin-top: -42px;*/
-}
-
 .explication {
-    /*  left: 41px;*/
     top: 250px;
 
     margin-top: 40px;
 
     height: 23.65%;
-    /* width: 30.78%;*/
     color: #FFFFFF;
     font-family: Lato;
     font-size: 15px;
@@ -98,7 +86,6 @@ h2 {
 
 .temoignage {
     position: absolute;
-    /*   left: 41px;*/
     top: 400px;
     margin-top: 40px;
     height: 158px;
@@ -109,7 +96,7 @@ h2 {
     font-style: italic;
     letter-spacing: 1px;
     line-height: 25px;
-}
+}*/
 
 .box {
     overflow: hidden;
@@ -191,7 +178,7 @@ h2 {
     font-weight: bold;
     line-height: 15px;
 }
-
+/*
 .top_nav a {
     padding: 5px 10px;
     color: #000;
@@ -320,4 +307,4 @@ h2 {
     height: 2px;
     background: #317AE1;
     margin: 0 auto;
-}
+}*/

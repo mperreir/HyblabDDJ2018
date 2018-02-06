@@ -3,6 +3,7 @@ html, body{
     margin: 0;
     background: #fff;
 }
+
 body {
     font-family: "Space Mono", Arial, serif;
     font-weight: 400;
@@ -15,7 +16,7 @@ body {
     overflow-x: hidden;
     /*overflow-y: hidden;*/
 }
-
+/*
 a {
     color: #000000;
     -webkit-transition: 0.5s;
@@ -26,13 +27,13 @@ a:hover, a:active, a:focus {
     color: #000000;
     outline: none;
     text-decoration: none;
-}
-
+}*/
+/*
 #logo-pdl {
     margin-left: 0;
     width: 174px;
     background-color: #FFFFFF;
-}
+}*/
 
 /*.container{*/
     /*padding: 0;*/
@@ -60,7 +61,7 @@ a:hover, a:active, a:focus {
     width:37.8%;
     background-color: #4e2850;
 }
-
+/*
 .accroche {
     margin-top: 40px;
     color: #FFFFFF;
@@ -70,24 +71,12 @@ a:hover, a:active, a:focus {
     letter-spacing: 2px;
 }
 
-#textExp{
-    color: #FFFFFF;
-    font-family: Lato;
-    font-size: 23px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    line-height: 30px;
-    /*margin-top: -42px;*/
-}
-
 .explication {
-    /*  left: 41px;*/
     top: 250px;
 
     margin-top: 40px;
 
     height: 23.65%;
-    /* width: 30.78%;*/
     color: #FFFFFF;
     font-family: Lato;
     font-size: 15px;
@@ -97,7 +86,6 @@ a:hover, a:active, a:focus {
 
 .temoignage {
     position: absolute;
-    /*   left: 41px;*/
     top: 400px;
     margin-top: 40px;
     height: 158px;
@@ -108,7 +96,7 @@ a:hover, a:active, a:focus {
     font-style: italic;
     letter-spacing: 1px;
     line-height: 25px;
-}
+}*/
 
 #sideMenu{
     position: relative;
@@ -419,6 +407,7 @@ p{
     line-height: 15px;
     margin-bottom: 20px;
 }
+/*
 .top_nav a {
     padding: 5px 10px;
     color: #000;
@@ -547,4 +536,4 @@ p{
     height: 2px;
     background: #4e2850;
     margin: 0 auto;
-}
+}*/
