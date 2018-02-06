@@ -286,7 +286,7 @@ function createModal(){
             });
         });
         
-    $('.prev').on('click', () => {
+    $('.prev').on('click', function(){
 		current_d--;
 		if(current_d < 0){
 			current_d = dataviz.length - 1;
@@ -294,8 +294,8 @@ function createModal(){
 		$('.close').click()
 		$(dataviz[current_d] + " .open").click();
 		
-	})
-	$('.next').on('click', () => {
+	});
+	$('.next').on('click', function() {
 		current_d = (current_d + 1) % dataviz.length;
 		$('.close').click()
 		$(dataviz[current_d] + " .open").click();
