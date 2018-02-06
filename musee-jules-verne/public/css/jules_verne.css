@@ -277,11 +277,6 @@ div.visited .intro {
   	width: 60vw;
   }
 
-  #slide7_graphique1 {
-	height: 70vh;
-}
-
-
     @keyframes fade {
             0% {
               opacity: 0;
