@@ -52,7 +52,7 @@
   <body>
   <ul id="menu">
     <li data-menuanchor="Questions" class="active" ><a href="#firstsection">Questions</a></li>
-    <li data-menuanchor="Graphiques" class=""><a href="#secondsection">Graphiques</a></li>
+    <li data-menuanchor="Carte" class=""><a href="#secondsection">Carte</a></li>
     <li data-menuanchor="About" class=""><a href="#thirdsection">About</a></li>
   </ul>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
@@ -183,7 +183,7 @@
         </div>
           <!-- Slide jour / nuit -->
           <div class="slide nothome" id="section_illu1">
-              <div id="beforeday"></div>
+              <div class="beforeday"></div>
             <section class="title_question">
 
               <h1>Pensez-vous que les accidents se font le plus souvent de nuit ou de jour ?</h1>
@@ -197,7 +197,35 @@
             </section>
 
           </div>
+          <!-- slide 5 MONTRES-->
+          <div class="slide nothome" id="slide_montre">
+            <div class="beforeday"></div>
+            <div id="slide_container_montres">
+              <h1>Les types de trajets, lors des accidents</h1>
+                <div id="container_chart_type_montre">
+                  <div id="container_slide_nuit">
+                    <canvas id="chart_pie_nuit"></canvas>
+                  </div>
+                  <div id="container_slide_jour">
+                    <canvas id="chart_pie_jour"></canvas>
+                  </div>
+                </div>
 
+            </div>
+          </div>
+           <!-- Slide SAISONS -->
+          <div class="slide nothome" id="slide_saisons">
+            <div id="container_slide_saisons">
+              <h1>A quelle saison ont lieu les accidents les plus graves ?</h1>
+              <canvas id="chart_printemps"></canvas>
+              <canvas id="chart_ete"></canvas>
+              <canvas id="chart_autonne"></canvas>
+              <canvas id="chart_hiver"></canvas>
+            </div>
+            <div id="saison_graph">
+              <
+            </div>
+          </div>
           <!-- slide 4 CAMION-->
           <div class="slide nothome" id="section_illu_camion">
           <section id="transport">
@@ -227,6 +255,30 @@
                 </div>
             </section>
           </div>
+          <!-- Accidents en fct de l'age et des véhicules -->
+        <div class="slide nothome">
+          <div id="chart_lum_container">
+            <h1>Les accidents en fonction de l'âge et du véhicule conduit</h1>
+            <canvas id="myLineChart"></canvas>
+          </div>
+        </div>
+
+        <!-- slide 6 AMBULANCE-->
+          <div class="slide nothome" >
+            <div id="slide_ambu_text">
+              <img   id="img_ambu" src="img/slide_acc_regions/ambulance.png" alt="ambulance" />
+              <h1>A quel niveaux se trouve votre région dans le graphique ?</h1>
+              <p>
+                Le nombre d’accidents est généralement proportionnel à la circulation,
+                donc au nombre d’habitants. L’Ile de France étant la région la plus
+                peuplée, la circulation y est plus dense et les accidents, notamment
+                aux passages à niveau, plus nombreux.
+              </p>
+            </div>
+            <canvas id="chart_region_acc"></canvas>
+          </div>
+
+
           </section>
 
       </div>
@@ -234,7 +286,7 @@
       <!-- Carte -->
       <div id="secondsection" class="section nothome" data-anchor="Graphiques">
         <div class="slide">
-          <div id="map" style="height:500px; width: 500px"></div>
+          <div id="map" style="height:600px; width: 600px"></div>
           <div class="bouttons">
             <h1>Filtres</h1>
             <p id="warning"> Certains filtres peuvent mettre du temps à s'afficher </p>
@@ -263,59 +315,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Accidents en fct de l'age et des véhicules -->
-        <div class="slide">
-          <div id="chart_lum_container">
-            <h1>Les accidents en fonction de l'âge et du véhicule conduit</h1>
-            <canvas id="myLineChart"></canvas>
-          </div>
-        </div>
-
-        <!-- slide 5 MONTRES-->
-          <div class="slide nothome" id="slide_montre">
-            <div id="slide_container_montres">
-              <h1>Les types de trajets, lors des accidents</h1>
-                <div id="container_chart_type_montre">
-                  <div id="container_slide_nuit">
-                    <canvas id="chart_pie_nuit"></canvas>
-                  </div>
-                  <div id="container_slide_jour">
-                    <canvas id="chart_pie_jour"></canvas>
-                  </div>
-                </div>
-
-            </div>
-          </div>
-
-        <!-- slide 6 AMBULANCE-->
-          <div class="slide nothome" >
-            <div id="slide_ambu_text">
-              <img   id="img_ambu" src="img/slide_acc_regions/ambulance.png" alt="ambulance" />
-              <h1>A quel niveaux se trouve votre région dans le graphique ?</h1>
-              <p>
-                Le nombre d’accidents est généralement proportionnel à la circulation,
-                donc au nombre d’habitants. L’Ile de France étant la région la plus
-                peuplée, la circulation y est plus dense et les accidents, notamment
-                aux passages à niveau, plus nombreux.
-              </p>
-            </div>
-            <canvas id="chart_region_acc"></canvas>
-          </div>
-
-          <!-- Slide SAISONS -->
-          <div class="slide nothome" id="slide_saisons">
-            <div id="container_slide_saisons">
-              <h1>A quelle saison ont lieu les accidents les plus graves ?</h1>
-              <canvas id="chart_printemps"></canvas>
-              <canvas id="chart_ete"></canvas>
-              <canvas id="chart_autonne"></canvas>
-              <canvas id="chart_hiver"></canvas>
-            </div>
-            <div id="saison_graph">
-              <
-            </div>
-          </div>
       </div>
 
         <div id="thirdsection" class="section nothome" data-anchor="About">

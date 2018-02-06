@@ -102,7 +102,7 @@
         options = $.extend({
             //navigation
             menu: '#menu',
-            anchors:['Questions','Graphiques','About'],
+            anchors:['Questions','Carte','About'],
             lockAnchors: true,
             navigation: false,
             navigationPosition: 'right',
