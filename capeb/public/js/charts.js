@@ -71,6 +71,10 @@ var drawDDChart = function(stats) {
             type: 'bubble',
             data: {'datasets': datasets},
             options: {
+                title: {
+                    display: true,
+                    text: "Niveau d’engagement par thème"
+                },
                 onClick: function (e) {
                     var element = this.getElementAtEvent(e);
 
@@ -112,7 +116,7 @@ var drawDDChart = function(stats) {
                 tooltips: {
                     callbacks: {
                         label: function (t, d) {
-                            return d.datasets[t.datasetIndex].label + ':' + t.yLabel;
+                            return d.datasets[t.datasetIndex].label + ': ' + t.yLabel;
                         }
                     }
                 },
@@ -329,7 +333,7 @@ var drawChart3dEmploi = function (data) {
 };
 
 
-function drawLineChart(data) {
+function investissementDataviz(data) {
     var sec = document.getElementById("dataviz-section");
     if (sec !== null) {
         sec.remove();
@@ -352,7 +356,7 @@ function drawLineChart(data) {
     };
     var dataset = {
         data: [],
-        label: "EPCI",
+        label: "Votre secteur",
         backgroundColor: colorZoom[1],
         borderWidth: "0",
         tension: 0
@@ -361,12 +365,12 @@ function drawLineChart(data) {
 
     var datasetRegion = {data: [], label: "Région", backgroundColor: colorZoom[2], borderWidth: "0", tension:0};
     data.region.forEach(function (value) {
-        datasetRegion.data.push(parseFloat(value[1]));
+        datasetRegion.data.push(parseFloat(value[1])*100);
     });
 
     data.values.forEach(function (value) {
         d.labels.push(value[0]);
-        dataset.data.push(parseFloat(value[1]));
+        dataset.data.push(parseFloat(value[1])*100);
     });
 
     d.datasets.push(dataset);
@@ -382,7 +386,7 @@ function drawLineChart(data) {
         options: {
             tooltips: {
                 mode: 'index',
-                intersect: false,
+                intersect: false
             },
             hover: {
                 mode: 'nearest',
@@ -408,15 +412,17 @@ function drawLineChart(data) {
                 yAxes: [{
                     display: true,
                     ticks: {
-                        beginAtZero: true // minimum value will be 0.
+                        beginAtZero: true, // minimum value will be 0.
+                        callback: function(value){
+                            return value + "%";
+                        }
                     },
                     gridLines: {
                         display: false,
                         drawBorder: false
                     },
                     scaleLabel: {
-                        display: true,
-                        labelString: 'Pourcentage de Oui'
+                        display: true
                     }
                 }]
             }

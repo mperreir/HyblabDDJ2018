@@ -31,6 +31,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-conjoncture");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
+                    document.getElementById("rappel-conjoncture").innerHTML = "Selon les artisans de votre secteur la conjoncture mérite une note de : " + parseFloat(json.values[0][0]).toFixed(1) + "/10      ";
                     fetchConjonctureData(d);
                     closeOnEscape();
                 });
@@ -61,7 +62,8 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-investissement");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
-                    drawLineChart(json);
+                    document.getElementById("rappel-investissement").innerHTML = (json.values[3][1] * 100).toFixed(1) + "% des artisans de votre territoire déclarent vouloir investir en 2018";
+                    investissementDataviz(json);
                     closeOnEscape();
                 });
             });
@@ -119,6 +121,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-contrat");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
+                    document.getElementById("rappel-contrat").innerHTML = "Les artisans de votre territoire privilégient les : " + stat[0].name + ", " + stat[1].name;
                     createSunburst(d);
                     closeOnEscape();
                 });
@@ -137,7 +140,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-dd");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
-
+                    document.getElementById("rappel-dd").innerHTML = "La thématique phare sur votre secteur est : " + stat2[0].name;
                     drawDDChart(stats);
                     closeOnEscape();
                 });
@@ -156,6 +159,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-mp");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
+                    document.getElementById("rappel-mp").innerHTML =  Math.round(mean * 100) + "% des artisans de votre territoire déclarent réaliser des marchés publics";
                     wordCloud(stats.FreinsMP);
                     closeOnEscape();
                 });
@@ -172,6 +176,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-emploi");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
+                    document.getElementById("rappel-emploi").innerHTML = "Le métier qui prévoie d’embaucher le plus en 2018 c’est : " + stats.Nombre_Recrutements_Envisage_2017.labels[indexOfMax];
                     drawChart3dEmploi(stats);
                     closeOnEscape();
                 });
@@ -206,6 +211,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-distance");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
+                    document.getElementById("rappel-distance").innerHTML = "Les artisans de votre secteur parcourent en moyenne " + Math.round(mean) + " km";
                     drawDistanceDataviz(json);
                     closeOnEscape();
                 });
@@ -298,6 +304,7 @@ function createModal(){
 		$(dataviz[current_d] + " .open").click();
 
 	});
+
 	$('.next').on('click', function() {
 		current_d = (current_d + 1) % dataviz.length;
 		$('.close').click()
