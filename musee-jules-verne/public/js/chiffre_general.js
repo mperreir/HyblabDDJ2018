@@ -1,4 +1,4 @@
-var params_jules_verne = {
+ var params_jules_verne = {
         container: document.getElementById('jules_verne'),
         renderer: 'svg',
         loop: false,
@@ -34,6 +34,10 @@ function anim_chiffre5() {
 function anim_jules_verne() {
 	lottie.play();
 }
+
+function anim_accueil() {
+    anim_accueil = lottie.loadAnimation(params_accueil);
+}
 	  
 $(document).ready(function() {
     $('#fullpage').fullpage({
@@ -44,6 +48,12 @@ $(document).ready(function() {
         currentSection.addClass('visited');
     	var loadedSection = $(this);
 
+			
+			 if(index === 1 && accueil_activ === 0){
+			
+            setTimeout(anim_accueil, 1000);
+            accueil_activ = 1;
+        }
         //Anim Jules Verne section se lance à l'entrée
 
         if(index === 2 && jules_verne_activ === 0){
@@ -83,6 +93,7 @@ $(document).ready(function() {
     });
 });
 
+var accueil_activ = 0;
 var chiffre1_activ = 0;
 var chiffre2_activ = 0;
 var chiffre3_activ = 0;
@@ -158,5 +169,19 @@ var params_jules_verne = {
     var anim_jules_verne;
 
     anim_jules_verne = lottie.loadAnimation(params_jules_verne);
+
+var params_accueil = {
+        container: document.getElementById('accueil'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        animationData: accueil,
+	name: 'accueil',
+    };
+
+
+    var anim_accueil;
+
+
 
 	
