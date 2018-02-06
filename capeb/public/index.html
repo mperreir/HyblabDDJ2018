@@ -76,16 +76,15 @@
                 }
             });
 
-
             // can't move to dataviz slide without clicking on map
             $.fn.fullpage.setKeyboardScrolling(false, 'right, left');
         });
-
     </script>
 
 </head>
 <body>
 <div id="fullpage">
+    <div id="cacheEPCI" style="display: none"></div>
     <script id="blockOfStuff" type="text/html">
         <div class="modal-frame">
             <div class="modal">
@@ -185,6 +184,139 @@
         <div class="modal-overlay"></div>
     </script>
 
+    <script id="regionDashboard" type="text/html">
+        <section class="partie-dashboard">
+            <nav class="nav-bar">
+                <svg class="backToMap" stroke-width="2" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                        <g transform="translate(17, 14)" stroke="#FFFFFF">
+                            <polyline
+                                    transform="translate(5.583333, 10.500000) rotate(180.000000) translate(-5.583333, -10.500000) "
+                                    points="0.795391216 20.0833333 10.375 10.5 0.791666667 0.916666667"></polyline>
+                        </g>
+                    </g>
+                </svg>
+                <h2 id="nom_epci" class="epci">Nom epci</h2>
+                <div class="button-zoom">
+                    <p class="niveau-zoom">Vue régionale</p>
+                    <label class="switch">
+                        <input id="switchToRegion" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </nav>
+            <section class="block-data info-epci">
+                <p class="description">Entrez dans l’univers<br>des entreprises artisanales du bâtiment de votre
+                    territoire.</p>
+                <img class="picto" src="img/image/hands.svg" alt="">
+            </section>
+
+            <section class="block-data">
+                <div id="card-conjoncture" class="card">
+                    <div class="bloc-recto info-conjoncture">
+                        <h1 class="donnee">5.5</h1>
+                        <p class="echelle">/10</p>
+                    </div>
+                    <div class="bloc-verso">
+                        <p class="description-data texte-conjoncture">Conjoncture :</p>
+                        <span>Comment ça va chez vous ?</span>
+                        <a class="open goToData">plus de détails</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block-data">
+                <div id="card-investissement" class="card">
+                    <div class="bloc-recto info-investissement">
+                        <h1 class="donnee">23</h1>
+                        <p class="echelle">%</p>
+                    </div>
+                    <div class="bloc-verso">
+                        <p class="description-data texte-investissement">Investissement :</p>
+                        <span>Investir ou ne pas investir ?</span>
+                        <a class="open goToData">plus de détails</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block-data">
+                <div id="card-emploi" class="card">
+                    <div class="bloc-recto info-emploi">
+                        <h1 class="donneetexte">menuiserie - charpente</h1>
+                    </div>
+                    <div class="bloc-verso">
+                        <p class="description-data texte-emploi">Emploi :</p>
+                        <span>Qui veut gagner des salariés ?</span>
+                        <a class="open goToData">plus de détails</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block-data">
+                <div id="card-contrat" class="card">
+                    <div class="bloc-recto info-contrat">
+                        <div class="liste">
+                            <span class="donneeliste" style="font-size: 3.338vw">CDI</span>
+                            <span class="donneeliste" style="font-size: 1.505vw">Apprentis</span>
+                            <span class="donneeliste" style="font-size: 1.367vw">CDD</span>
+                            <span class="donneeliste" style="font-size: 1.311vw">Intérimaire</span>
+
+                        </div>
+                    </div>
+                    <div class="bloc-verso">
+                        <p class="description-data texte-contrat">Contrats :</p>
+                        <span>Bonne santé rime-t-elle avec durée ?</span>
+                        <a class="open goToData">plus de détails</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block-data">
+                <div id="card-distance" class="card">
+                    <div class="bloc-recto info-distance">
+                        <h1 class="donnee">60</h1>
+                        <p class="echelle">km</p>
+                    </div>
+                    <div class="bloc-verso">
+                        <p class="description-data texte-distance">Rayon d’action :</p>
+                        <span>Jusqu’où sont-ils capables d’aller ?</span>
+                        <a class="open goToData">plus de détails</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block-data">
+                <div id="card-mp" class="card">
+                    <div class="bloc-recto info-mp">
+                        <h1 class="donnee">23</h1>
+                        <p class="echelle">%</p>
+                    </div>
+                    <div class="bloc-verso">
+                        <p class="description-data texte-mp">Marchés publics :</p>
+                        <span>Une pratique en place ?</span>
+                        <a class="open goToData">plus de détails</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block-data">
+                <div id="card-dd" class="card">
+                    <div class="bloc-recto info-dd">
+                        <h1 class="donneetexte">Qualité des matériaux</h1>
+                    </div>
+                    <div class="bloc-verso">
+                        <p class="description-data texte-dd">DD & RSE :</p>
+                        <span>Sur quoi les artisans jouent-ils collectifs ?</span>
+                        <a class="open goToData">plus de détails</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </script>
+
+
+
     <div class="section">
         <section class="partie-intro">
             <div class="social-links">
@@ -243,135 +375,7 @@
                 </div>
             </section>
         </div>
-        <div class="slide" data-anchor="slide2">
-            <section class="partie-dashboard">
-                <nav class="nav-bar">
-                    <svg class="backToMap" stroke-width="2" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g stroke="none" fill="none" fill-rule="evenodd" stroke-linecap="square">
-                            <g transform="translate(17, 14)" stroke="#FFFFFF">
-                                <polyline
-                                        transform="translate(5.583333, 10.500000) rotate(180.000000) translate(-5.583333, -10.500000) "
-                                        points="0.795391216 20.0833333 10.375 10.5 0.791666667 0.916666667"></polyline>
-                            </g>
-                        </g>
-                    </svg>
-                    <h2 id="nom_epci" class="epci">Nom epci</h2>
-                    <div class="button-zoom">
-                      <p class="niveau-zoom">Vue régionale</p>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </div>
-                </nav>
-                <section class="block-data info-epci">
-                    <p class="description">Entrez dans l’univers<br>des entreprises artisanales du bâtiment de votre
-                        territoire.</p>
-                    <img class="picto" src="img/image/hands.svg" alt="">
-                </section>
-
-                <section class="block-data">
-                    <div id="card-conjoncture" class="card">
-                        <div class="bloc-recto info-conjoncture">
-                            <h1 class="donnee">5.5</h1>
-                            <p class="echelle">/10</p>
-                        </div>
-                        <div class="bloc-verso">
-                            <p class="description-data texte-conjoncture">Conjoncture :</p>
-                            <span>Comment ça va chez vous ?</span>
-                            <a class="open goToData">plus de détails</a>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="block-data">
-                    <div id="card-investissement" class="card">
-                        <div class="bloc-recto info-investissement">
-                            <h1 class="donnee">23</h1>
-                            <p class="echelle">%</p>
-                        </div>
-                        <div class="bloc-verso">
-                            <p class="description-data texte-investissement">Investissement :</p>
-                            <span>Investir ou ne pas investir ?</span>
-                            <a class="open goToData">plus de détails</a>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="block-data">
-                    <div id="card-emploi" class="card">
-                        <div class="bloc-recto info-emploi">
-                            <h1 class="donneetexte">Menuiserie - Charpente</h1>
-                        </div>
-                        <div class="bloc-verso">
-                            <p class="description-data texte-emploi">Emploi :</p>
-                            <span>Qui veut gagner des salariés ?</span>
-                            <a class="open goToData">plus de détails</a>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="block-data">
-                    <div id="card-contrat" class="card">
-                        <div class="bloc-recto info-contrat">
-                            <div class="liste">
-                              <span class="donneeliste n1">CDI</span>
-                              <span class="donneeliste n4">CDD</span>
-                              <span class="donneeliste n4">Intérimaire</span>
-                              <span class="donneeliste n4">Apprentis</span>
-                            </div>
-                        </div>
-                        <div class="bloc-verso">
-                            <p class="description-data texte-contrat">Contrats :</p>
-                            <span>Bonne santé rime-t-elle avec durée ?</span>
-                            <a class="open goToData">plus de détails</a>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="block-data">
-                  <div id="card-distance" class="card">
-                    <div class="bloc-recto info-distance">
-                      <h1 class="donnee">60</h1>
-                      <p class="echelle">km</p>
-                    </div>
-                    <div class="bloc-verso">
-                      <p class="description-data texte-distance">Rayon d’action :</p>
-                      <span>Jusqu’où sont-ils capables d’aller ?</span>
-                      <a class="open goToData">plus de détails</a>
-                    </div>
-                  </div>
-                </section>
-
-                <section class="block-data">
-                    <div id="card-mp" class="card">
-                        <div class="bloc-recto info-mp">
-                            <h1 class="donnee">23</h1>
-                            <p class="echelle">%</p>
-                        </div>
-                        <div class="bloc-verso">
-                            <p class="description-data texte-mp">Marchés publics :</p>
-                            <span>Une pratique en place ?</span>
-                            <a class="open goToData">plus de détails</a>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="block-data">
-                    <div id="card-dd" class="card">
-                        <div class="bloc-recto info-dd">
-                            <h1 class="donneetexte">Qualité des matériaux</h1>
-                        </div>
-                        <div class="bloc-verso">
-                            <p class="description-data texte-dd">DD & RSE :</p>
-                            <span>Sur quoi les artisans jouent-ils collectifs ?</span>
-                            <a class="open goToData">plus de détails</a>
-                        </div>
-                    </div>
-                </section>
-            </section>
-        </div>
+        <div id="dashboard-slide" class="slide" data-anchor="slide2"></div>
     </div>
 
     <div class="section">

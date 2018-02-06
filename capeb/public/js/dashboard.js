@@ -1,12 +1,5 @@
 var current_d = 0;
 
-//backToMap button
-$ (document).ready(function(){
-    document.getElementsByClassName("backToMap")[0].addEventListener("click", function () {
-        var location = document.location.href;
-        document.location.href = location.slice(0, location.lastIndexOf("/"));
-    });
-});
 
 function miniStats(regionStats, d) {
 
@@ -300,14 +293,14 @@ function createModal(){
 		if(current_d < 0){
 			current_d = dataviz.length - 1;
 		}
-		$('.close').click()
+		$('.close').click();
 		$(dataviz[current_d] + " .open").click();
 
 	});
 
 	$('.next').on('click', function() {
 		current_d = (current_d + 1) % dataviz.length;
-		$('.close').click()
+		$('.close').click();
 		$(dataviz[current_d] + " .open").click();
 
 	})
