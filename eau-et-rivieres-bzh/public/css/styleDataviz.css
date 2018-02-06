@@ -426,11 +426,25 @@ body{
     width: 36px;
 }
 
+#LegendeEnSavPlus{
+    left: 50%;
+    top: 40%;
+    margin: 0;
+
+
+}
+
 #enSavoirPlusBasP1{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
+}
+
+#histTemps{
+
+    left: 40%;
+    width: 100%;
 }
 
 #enSavoirPlusBasP1 article{
