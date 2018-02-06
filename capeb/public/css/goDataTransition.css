@@ -248,12 +248,10 @@
     font-size: 12px;
     opacity: .3;
 }
+
 .legende-dataviz{
-  grid-column: 5;
+  grid-column: 6;
   grid-row: 2;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
 }
 
 @-webkit-keyframes modalComeIn {

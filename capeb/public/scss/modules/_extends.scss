@@ -47,6 +47,20 @@
   line-height: 1.6;
 }
 
+%title-legend{
+  font-family: $main-font;
+  font-size: 1.2vw;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+%texte-legend{
+  font-family: $main-font;
+  font-size: 0.8vw;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
 %data-donnee{
   font-family: $main-font;
   font-size: 10vw;
@@ -62,4 +76,11 @@
 %data-liste{
   font-family: $main-font;
   font-weight: 800;
+}
+
+
+@mixin circle($width) {
+    width: $width;
+    height: $width;
+    border-radius: $width / 2;
 }

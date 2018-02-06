@@ -1,0 +1,77 @@
+.legende-dataviz{
+  >.legendRaction{
+    width: 100%;
+    height: auto;
+    >.legendMetiers{
+      position: relative;
+      float: left;
+      text-align: left;
+      >.legendTitle{
+        @extend %title-legend;
+      }
+      >.metier{
+        position: relative;
+        @extend %texte-legend;
+        height: 1.2vw;
+        line-height: 1.2vw;
+        width: 100%;
+        margin: 5px 0;
+        padding-left: 10px;
+      }
+      >.pcc{
+        border-left: solid 5px $data-metier1;
+      }
+      >.elec{
+        border-left: solid 5px $data-metier2;
+      }
+      >.macCar{
+        border-left: solid 5px $data-metier3;
+      }
+      >.menuChar{
+        border-left: solid 5px $data-metier4;
+      }
+      >.peint{
+        border-left: solid 5px $data-metier5;
+      }
+      >.platIso{
+        border-left: solid 5px $data-metier6;
+      }
+      >.autr{
+        border-left: solid 5px $autre;
+      }
+    }
+    >.legendEffectifs{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(5, min-content);
+      grid-template-rows: repeat(2, min-content);
+      >.legendTitle{
+        @extend %title-legend;
+      }
+      >.bubbl{
+        background-color: $black;
+        grid-auto-flow: row;
+        align-self: center;
+      }
+      >.b100{
+        @include circle(50px);
+      }
+      >.b610{
+        @include circle(40px);
+      }
+      >.b35{
+        @include circle(30px);
+      }
+      >.b12{
+        @include circle(20px);
+      }
+      >.b0{
+        @include circle(10px);
+      }
+      >.bublNum{
+        grid-auto-flow: row;
+        grid-row: 2;
+      }
+    }
+  }
+}
