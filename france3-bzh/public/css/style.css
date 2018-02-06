@@ -295,6 +295,44 @@ button:focus { outline-style: none; }
   top: 0;
 
 }
+
+.spinner{
+  display: block;
+  height: 50px;
+  width: 50px;
+  animation: spin 2s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+.spinner *{
+    width: 100%;
+    height: 100%;
+}
+
+#LoadingImage
+{
+  display: none;
+}
+
+.spinner-inline{
+  display: inline-block;
+  height: 10px;
+  line-height:0;
+  width: 10px;
+  animation: spin 2s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+.spinner-inline *{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes spin{
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
 #loading
 {
   width: 100%;
