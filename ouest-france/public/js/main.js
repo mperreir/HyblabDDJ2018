@@ -1832,6 +1832,7 @@ function controleurPodium()
         document.getElementById("reponse").className = "dateMenu";
         document.getElementById("saviez").className = "dateMenu";
         document.getElementById("graph").className = "graph";
+        document.getElementById("legendeGraph").className = "legendeGraph";
     }
 
     Podium2006.onclick = function(){
@@ -1841,6 +1842,7 @@ function controleurPodium()
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
         document.getElementById("graph").className = "graph--hidden";
+        document.getElementById("legendeGraph").className = "legendeGraph--hidden";
 
         setYearActive(tabPodiums, 1);
         var pays = camembertPodium(2006);
@@ -1876,6 +1878,7 @@ function controleurPodium()
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
         document.getElementById("graph").className = "graph--hidden";
+        document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 2);
         var pays = camembertPodium(2007);
         $('li').remove();
@@ -1910,6 +1913,7 @@ function controleurPodium()
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
         document.getElementById("graph").className = "graph--hidden";
+        document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 3);
         var pays = camembertPodium(2008);
         $('li').remove();
@@ -1944,6 +1948,7 @@ function controleurPodium()
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
         document.getElementById("graph").className = "graph--hidden";
+        document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 4);
         var pays = camembertPodium(2009);
         $('li').remove();
@@ -1979,6 +1984,7 @@ function controleurPodium()
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
         document.getElementById("graph").className = "graph--hidden";
+        document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 5);
         var pays = camembertPodium(2010);
         $('li').remove();
@@ -2014,6 +2020,7 @@ function controleurPodium()
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
         document.getElementById("graph").className = "graph--hidden";
+        document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 6);
         var pays = camembertPodium(2011);
         $('li').remove();
@@ -2049,6 +2056,7 @@ function controleurPodium()
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
         document.getElementById("graph").className = "graph--hidden";
+        document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 7);
         var pays = camembertPodium(2012);
         $('li').remove();
@@ -2084,6 +2092,7 @@ function controleurPodium()
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
         document.getElementById("graph").className = "graph--hidden";
+        document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 8);
         var pays = camembertPodium(2013);
         $('li').remove();
@@ -2119,6 +2128,7 @@ function controleurPodium()
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
         document.getElementById("graph").className = "graph--hidden";
+        document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 9);
         var pays = camembertPodium(2014);
         $('li').remove();
@@ -2153,6 +2163,7 @@ function controleurPodium()
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
         document.getElementById("graph").className = "graph--hidden";
+        document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 10);
         var pays = camembertPodium(2015);
         $('li').remove();
@@ -2188,6 +2199,7 @@ function controleurPodium()
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
         document.getElementById("graph").className = "graph--hidden";
+        document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 11);
         var pays = camembertPodium(2016);
         $('li').remove();
@@ -2223,6 +2235,8 @@ function controleurPodium()
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
         document.getElementById("graph").className = "graph--hidden";
+        document.getElementById("legendeGraph").className = "legendeGraph--hidden";
+
         setYearActive(tabPodiums, 12);
         var pays = camembertPodium(2017);
         $('li').remove();
@@ -2851,50 +2865,50 @@ function setTextGeneralFrance() {
 function graphiqueLine()
 {
     var us = pourcentagePays("Etats-Unis");
+    console.log(us);
     var fr = pourcentagePays("France");
     var al = pourcentagePays("Allemagne");
     var uk = pourcentagePays("Angleterre");
     var lineData = {
         labels : ["2006","2008","2009","2010","2011","2012","2013", "2014", "2015", "2016", "2017"],
         datasets : [
-            {
-                label: "My First dataset",
-                fillColor : "rgba( 169,255,136,0.57)",
-                strokeColor : "rgba( 169,255,136,1)",
-                pointColor : "rgba( 169,255,136,1)",
+        {
+            label: "My First dataset",
+            fillColor : "rgba( 169, 255, 136,0.57)",
+            strokeColor : "rgba(169, 255, 136,1)",
+            pointColor : "rgba( 169, 255, 136,1)",
             pointStrokeColor : "#fff",
-    pointHighlightFill : "#fff",
-    pointHighlightStroke : "rgba( 169,255,136,1)",
-    data : us
-},
+            pointHighlightFill : "#fff",
+            pointHighlightStroke : "rgba( 169, 255, 136,1)",
+            data : us
+    },
     {
         label: "My Second dataset",
-            fillColor : "rgba(87,102,77,0.40)",
-        strokeColor : "rgba(87,102,77,1)",
-        pointColor : "rgba((87,102,77,1)",
+        fillColor : "rgba(133, 194, 117,0.40)",
+        strokeColor : "rgba(133, 194, 117,1)",
+        pointColor : "rgba(133, 194, 117,1)",
         pointStrokeColor : "#fff",
         pointHighlightFill : "#fff",
-        pointHighlightStroke : "rgba(87,102,77,1)",
+        pointHighlightStroke : "rgba(133, 194, 117,1)",
         data : fr
     },
     {
         label: "My third dataset",
-            fillColor : "rgba(63,91,51,0.30)",
-        strokeColor : "rgba(63,91,51,1)",
-        pointColor : "rgba(63,91,51,1)",
+            fillColor : "rgba(102, 204, 51,0.40)",
+        strokeColor : "rgba(102, 204, 51,1)",
+        pointColor : "rgba(102, 204, 51,1)",
         pointStrokeColor : "#fff",
         pointHighlightFill : "#fff",
-        pointHighlightStroke : "rgba(63,91,51,1)",
-        data : al
+        pointHighlightStroke : "rgba(102, 204, 51,1)",
+        data : uk
     },{
     label: "My last dataset",
-        fillColor : "rgba(133,194,117,0.2)",
-        strokeColor : "rgba(133,194,117,1)",
-        pointColor : "rgba(133,194,117,1)",
+        fillColor : "rgba(71, 145, 22,0.2)",
+        strokeColor : "rgba(71, 145, 22,1)",
+        pointColor : "rgba(71, 145, 22,1)",
         pointStrokeColor : "#fff",
         pointHighlightFill : "#fff",
-        pointHighlightStroke : "rgba(133,194,117,1)",
-        data : uk
+        data : al
 }
 ]
 

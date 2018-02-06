@@ -896,8 +896,18 @@ ul.listeScene--hidden
 {
 	position: absolute;
     top: 412px;
-    left: 831px;
+    left: 872px;
     color: white;
+    text-decoration: none;
+}
+
+.legendeGraph--hidden
+{
+	position: absolute;
+  	overflow: hidden;
+  	width: 0;
+  	height: 0;
+  	pointer-events: none;
 }
 
 .pointLegendeGraph
@@ -905,10 +915,18 @@ ul.listeScene--hidden
     width: 15px;
     height: 15px;
     border-radius: 10000px;
-    background: #A9FF88;
     position: relative;
     top: -16px;
     left: -24px;
+}
+
+.pointLegendeGraph--hidden
+{
+	position: absolute;
+  	overflow: hidden;
+  	width: 0;
+  	height: 0;
+  	pointer-events: none;
 }
 
 
@@ -1027,4 +1045,31 @@ object.mapFrance
   	width: 0;
   	height: 0;
   	pointer-events: none;
+}
+
+.credit1
+{
+	height: 30%;
+    width: 30%;
+    position: absolute;
+    top: 140px;
+    left: -150px;
+}
+
+.credit2
+{
+	height: 155%;
+    width: 155%;
+    top: -292px;
+    left: -587px;
+    position: absolute;
+}
+
+.credit3
+{
+	height: 30%;
+    width: 30%;
+    top: 147px;
+    left: 456px;
+    position: absolute;
 }
