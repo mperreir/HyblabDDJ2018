@@ -90,25 +90,27 @@ function miniStats(regionStats, d) {
             stat = stat.sort(function(a, b) {return b.value - a.value});
 
             var liste = document.getElementsByClassName("info-contrat")[0].getElementsByClassName("liste")[0];
-            liste.className
             liste.innerHTML = "";
-            var span = document.createElement("span");
-            liste.appendChild(span);
-            span.className += "donneeliste";
-            span.innerHTML = stat[0].name;
-            var ni = "4vw";
-            var count = 0;
-            for (var i = 1; i < 4; i++) {
-                if (stat[i].value < stat[i - 1].value) {
-                    count++;
-                    ni = count + "vw";
-                }
+
+            // faire les pourcentages
+            var sum = 0;
+            stat.forEach(function(value){
+               sum += value.value;
+            });
+
+            stat.forEach(function(value){
+                value.percentage = value.value/sum;
+            });
+
+            stat.forEach(function(value){
                 span = document.createElement("span");
                 liste.appendChild(span);
                 span.className += "donneeliste";
-                span.style.fontSize = ni;
-                span.innerHTML = stat[i].name;
-            }
+                span.style.fontSize = scaleBetween(value.percentage, 1.2, 4, 0, 1) + "vw";
+                span.innerHTML = value.name;
+            });
+
+
 
             $('#card-contrat .open').each(function(){
                 $(this).on('click', function() {
@@ -310,4 +312,8 @@ function closeOnEscape() {
             $('.close').click();
         }
     });
+}
+
+function scaleBetween(unscaledNum, minAllowed, maxAllowed, min, max) {
+    return (maxAllowed - minAllowed) * (unscaledNum - min) / (max - min) + minAllowed;
 }
