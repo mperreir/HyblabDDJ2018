@@ -79,6 +79,9 @@
             Les accidents aux passages à niveau sont malheureusement souvent d'actualité. L'année 2017 a été marquée par un terrible accident en décembre au passage à niveau de Millas, où 5 adolescents ont péri suite à la collision entre un train et un car scolaire.
             </p>-->
               <div >
+                <p>
+                  Afin de réaliser ces data visualisations, nous nous sommes intéressés aux accidents survenus sur des passages à niveau pendant 10 ans (de 2006 à 2016).
+                </p>
                 <h3>Démarrer <br/>l'expérience</h3>
                 <div id="infos_nav_souris">
                   <img  src="img/home/SOURIS.png" alt="Scroll avec la molette !" />
@@ -112,7 +115,7 @@
             <div id="slide3_container_text">
               <h1>Les types de passage à niveau existant</h1>
                 <p id="text_content_slide3">
-                  Un passage à niveau est le croisement au même niveau d’une voie ferrée et d’une voie routière ou piétonne. On dénombre aujourd’hui en France plus de 15000  passages à niveaux.<br/>
+                  Un passage à niveau est le croisement au même niveau d’une voie ferrée et d’une voie routière ou piétonne. On dénombre aujourd’hui en France plus de 15000  passages à niveau.<br/>
                   </br>
                   Il en existe 5 types :
                 </p>
@@ -201,7 +204,7 @@
           <div class="slide nothome" id="slide_montre">
             <div class="beforeday"></div>
             <div id="slide_container_montres">
-              <h1>Les types de trajets, lors des accidents</h1>
+              <h1>Doit-on être plus vigilant sur les trajets habituels ?  </h1>
                 <div id="container_chart_type_montre">
                   <div id="container_slide_nuit">
                     <canvas id="chart_pie_nuit"></canvas>
@@ -210,6 +213,7 @@
                     <canvas id="chart_pie_jour"></canvas>
                   </div>
                 </div>
+                <img id="legende_trajets" src="img/4saisons/legende.png" alt="Train" />
 
             </div>
           </div>
@@ -217,13 +221,15 @@
           <div class="slide nothome" id="slide_saisons">
             <div id="container_slide_saisons">
               <h1>A quelle saison ont lieu les accidents les plus graves ?</h1>
+
               <canvas id="chart_printemps"></canvas>
               <canvas id="chart_ete"></canvas>
               <canvas id="chart_autonne"></canvas>
               <canvas id="chart_hiver"></canvas>
+
             </div>
             <div id="saison_graph">
-              <
+              <img id="legende_saisons" src="img/4saisons/legende3.png" alt="Legende saisons" />
             </div>
           </div>
           <!-- slide 4 CAMION-->
@@ -258,7 +264,7 @@
           <!-- Accidents en fct de l'age et des véhicules -->
         <div class="slide nothome">
           <div id="chart_lum_container">
-            <h1>Les accidents en fonction de l'âge et du véhicule conduit</h1>
+            <h1>Quel âge pour quels dommages corporels ?</h1>
             <canvas id="myLineChart"></canvas>
           </div>
         </div>
@@ -267,7 +273,7 @@
           <div class="slide nothome" >
             <div id="slide_ambu_text">
               <img   id="img_ambu" src="img/slide_acc_regions/ambulance.png" alt="ambulance" />
-              <h1>A quel niveaux se trouve votre région dans le graphique ?</h1>
+              <h1>A quel niveau se trouve votre région dans le graphique ?</h1>
               <p>
                 Le nombre d’accidents est généralement proportionnel à la circulation,
                 donc au nombre d’habitants. L’Ile de France étant la région la plus
@@ -292,7 +298,7 @@
             <p id="warning"> Certains filtres peuvent mettre du temps à s'afficher </p>
             <h2>Informations générales</h2>
             <div class="row">
-              <span>Passage à niveaux</span>
+              <span>Passage à niveau</span>
               <div class="material-switch blue" onclick="AfficherPn(this)">
               </div>
             </div>
@@ -416,7 +422,7 @@
               <a href="#">Facebook</a>
             </div>
             <div id="equipe">
-              <p class="vert journalistes">Porteur de projet</p>
+              <p class="vert journalistes">France3 Bretagne</p>
               <a href="http://web.polytech.univ-nantes.fr/"><p class="rouge polytechs">Polytech</p></a>
               <a href="http://sciencescom.audencia.com/"><p class="bleu audencias">ScienceCom</p></a>
               <a href="https://www.agrnantes.fr/"><p class="orange agrs">AGR Nantes</p></a>
@@ -428,6 +434,9 @@
               <a href="http://web.polytech.univ-nantes.fr/"><p class="rouge polytechs">Yannick Prié et Mathieu Perreira Da Silva </p></a>
               <a href="http://sciencescom.audencia.com/"><p class="bleu audencias">Estelle Prusker et Simon Auffret</p></a>
               <a href="https://www.agrnantes.fr/"><p class="orange agrs">Mathias Heins et Guillaume Bouterige</p></a>
+              <p id="info_dataviz">
+                Pour réaliser ces visualisations de données, nous nous sommes basés sur la base de données du gouvernement relatant le nombre d’accidents aux passages à niveau ayant engendré des dommages corporels.
+              </p>
         </div>
         <div id="logos">
           <img id="logopopo" src ="img/avatar/popo.png" alt="logo polytech"/>

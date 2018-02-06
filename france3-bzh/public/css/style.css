@@ -522,6 +522,7 @@ button:focus { outline-style: none; }
   margin-bottom: -10px;
 }
 
+
 #informations h2 {
   font-size: 18px;
   font-weight: normal;
@@ -887,7 +888,7 @@ text-align: center;
 
 /* Slide saisons */
 #slide_saisons {
-  background-image: url(../img/4saisons/decorSaison.svg);
+  background-image: url(../img/4saisons/decorSaison.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -929,6 +930,15 @@ text-align: center;
   width: 40%;
   float: left;
   height: auto !important;
+}
+#legende_trajets {
+  margin-left: 40%;
+}
+
+#saison_graph {
+  width: 100%;
+  text-align: center;
+  margin-top:10%;
 }
 /*--------*/
 .orange {
