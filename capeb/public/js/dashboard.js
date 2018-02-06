@@ -1,3 +1,5 @@
+var current_d = 0
+
 
 function miniStats(regionStats, d) {
     var colorsForRegion = [
@@ -29,6 +31,7 @@ function miniStats(regionStats, d) {
             dataFrame.style.backgroundColor = colorsForRegion[matchColor(json.values[0][0], 2.87, 3.78, 0.182, 0.244, false)];
             $('#card-conjoncture .open').each(function(){
                 $(this).on('click', function() {
+					current_d = 0;
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Conjoncture";
                     var texte = document.getElementById("texte-conjoncture");
                     texte.className += " active-dataviz-text";
@@ -58,6 +61,7 @@ function miniStats(regionStats, d) {
 
             $('#card-investissement .open').each(function(){
                 $(this).on('click', function() {
+					current_d = 1;
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Investissement";
                     var texte = document.getElementById("texte-investissement");
                     texte.className += " active-dataviz-text";
@@ -112,6 +116,7 @@ function miniStats(regionStats, d) {
 
             $('#card-contrat .open').each(function(){
                 $(this).on('click', function() {
+					current_d = 3;
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Contrat";
                     var texte = document.getElementById("texte-contrat");
                     texte.className += " active-dataviz-text";
@@ -129,6 +134,7 @@ function miniStats(regionStats, d) {
             $(".info-dd h1").text(stat2[0].name)
 			 $('#card-dd .open').each(function(){
                 $(this).on('click', function() {
+					current_d = 6;
 					document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Développement durable";
                     var texte = document.getElementById("texte-dd");
                     texte.className += " active-dataviz-text";
@@ -147,6 +153,7 @@ function miniStats(regionStats, d) {
 
             $('#card-mp .open').each(function(){
                 $(this).on('click', function() {
+					current_d = 5;
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Marchés publics";
                     var texte = document.getElementById("texte-mp");
                     texte.className += " active-dataviz-text";
@@ -161,6 +168,8 @@ function miniStats(regionStats, d) {
             document.getElementsByClassName("info-emploi")[0].getElementsByClassName("donneetexte")[0].innerHTML = stats.Nombre_Recrutements_Envisage_2017.labels[indexOfMax];
             $('#card-emploi .open').each(function(){
                 $(this).on('click', function() {
+					current_d = 2;
+
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Embauche";
                     var texte = document.getElementById("texte-emploi");
                     texte.className += " active-dataviz-text";
@@ -193,6 +202,8 @@ function miniStats(regionStats, d) {
 
             $('#card-distance .open').each(function(){
                 $(this).on('click', function() {
+					current_d = 4;
+
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Distance";
                     var texte = document.getElementById("texte-distance");
                     texte.className += " active-dataviz-text";
@@ -231,6 +242,14 @@ function matchColor(value, min, mean, firstInc, secondInc, order){
     }
     return r;
 }
+var dataviz = ['#card-conjoncture',
+			   '#card-investissement',
+			   '#card-emploi',
+			   '#card-contrat',
+			   '#card-distance',
+			   '#card-mp',
+			   '#card-dd'
+			  ]
 
 function createModal(){
     if($("#containerForModal")!==null){
@@ -271,6 +290,22 @@ function createModal(){
                 $modal.removeClass('state-leave').addClass('state-appear');
             });
         });
+        
+    $('.prev').on('click', () => {
+		current_d--;
+		if(current_d < 0){
+			current_d = dataviz.length - 1;
+		}
+		$('.close').click()
+		$(dataviz[current_d] + " .open").click();
+		
+	})
+	$('.next').on('click', () => {
+		current_d = (current_d + 1) % dataviz.length;
+		$('.close').click()
+		$(dataviz[current_d] + " .open").click();
+		
+	})
 }
 
 function closeOnEscape() {
