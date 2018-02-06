@@ -68,6 +68,151 @@
 <div id="container">
 <!--<div id="content">-->
     <!--<div id="con_right">-->
+    <div id="detail" style="display: none">
+        <div id="part1">
+            <div class="one">
+                <div class="title" id="GFE1">
+                    Agriculture:
+                </div>
+                <div class="secteurName" id="GFE1-Sect">
+                    <p>
+                        Secteur1   Aménagement paysager<br>
+                        Secteur2   Productions animales, élevages spéc., aquacultures<br>
+                        Secteur3   Productions végétales, cultures spéc, protection<br>
+                        Secteur4   Spéc. plurivalentes de l'agronomie - agriculture<br>
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            <div class="one">
+                <div class="title">
+                    Pêche - Mer - Aquaculture
+                </div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Forêts, espaces naturels, faune sauvage, pêche<br>
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            <div class="one">
+                <div class="title">
+                    Bâtiment gros œuvre - Génie civil - Extraction
+                </div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Batiment: construction et couverture<br>
+                        Secteur2   Mines et carrières, génie civil, topographie<br>
+                        Secteur3   Spéc. pluri-techno. génie civil-construction-bois
+                    </p>
+                </div>
+            </div>
+
+            <div class="one">
+                <div class="title">
+                    Bâtiment : équipements et finitions
+                </div>
+                <div class="secteurName">
+                  <p>
+                     Secteur1   Batiment: finitions
+                 </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Structures métalliques - Travail des métaux - Fonderie</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Métallurgie<br>
+                        Secteur2   Structures métalliques
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Mécanique - Automatismes</div>
+                <div class="secteurName">
+                    <p>
+                    Secteur1   Mécanique aéronautique et spatiale<br>
+                    Secteur2   Mécanique générale et de précision, usinage<br>
+                    Secteur3   Moteurs et mécanique auto<br>
+                    Secteur4   Spécialités pluritechnologiques ds transformations<br>
+                    Secteur5   Technologies de commandes, transformations indust.<br>
+                    Secteur6   Technologies industrielles fondamentales<br>
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Electricité - Electrotechnique - Electronique</div>
+                <div class="secteurName">
+                    <p>
+                        1- Electricité, électronique<br>
+                        2- Energie, génie climatique
+                    </p>
+                </div>
+            </div>
+            <div class="bottom" onclick="returnAll()"> Close </div>
+            <div class="bottom" onclick="nextPage()"> La prochaine page </div>
+
+        </div>
+
+        <div id="detail2" style="display: none">
+            <div id="part2">
+                <p>
+                    Travail des matériaux - Industries de process - Laboratoire<br>
+                    1- Matériaux de construction, verre et céramique<br>
+                    2- Plasturgie, matériaux composites<br>
+                    3- Spécialités pluri-techno, mécanique électricité<br>
+                    4- Transformations chimiques et apparentées<br>
+                </p>
+                <p>
+                    GFE-09: Production alimentaire - Cuisine<br>
+                    1- Agro-alimentaire, alimentation, cuisine
+                </p>
+                <p>
+                    GFE-10: Textile - Habillement - Cuir<br>
+                    1- Cuirs et peaux<br>
+                    2- Habillement<br>
+                    3- Spécialités pluri-technologiques matériaux souples
+                </p>
+                <p>
+                    GFE-11: Travail du bois<br>
+                    1- Travail du bois et de l'ameublement
+                </p>
+                <p>
+                    GFE-12: Techniques graphiques - Impression<br>
+                    1- Techniques de l'imprimerie et de l'édition
+                </p>
+                <p>
+                    GFE-13: Transports - Conduite - Manutention - Magasinage<br>
+                    1- Transport, manutention, magasinage
+                </p>
+                <p>
+                    GFE-14: Tertiaire de bureau - Tertiaire spécialisé<br>
+                    1- Comptabilité, gestion<br>
+                    2- Droit,sciences politiques<br>
+                    3- Finances, banque, assurances<br>
+                    4- Informatique, traitement de l'information, réseaux<br>
+                    5- Ressources humaines, gestion personnel et emploi<br>
+                    6- Secrétariat, bureautique<br>
+                    7- Spécialités plurivalentes des services
+                </p>
+                <p>
+                    GFE-15: Commerce et distribution<br>
+                    1- Commerce, vente<br>
+                    2- Spécialités plurivalentes des échanges - gestion<br>
+
+                </p>
+                <p>
+                    GFE-16: Paramédical - Travail social - Soins personnels<br>
+                    1- Coiffure, esthétique<br>
+                    2- Santé<br>
+                    3- Spécialités plurivalentes sanitaires et sociales<br>
+                    4- Travail social
+                </p>
+            </div>
+        </div>
+    </div>
     <div id="main" style="display: none;">
         <div id="sidebar">
             <input type="checkbox" id="togglelegend"> Legend<br/>
@@ -118,7 +263,7 @@
             </div>
         </div>
         <div class="btn" onclick="returnPage()"> Choisir ton GFE  </div>
-        <div class="btn" ><a href="#"></a>Détail</div>
+        <div class="btn" onclick="showDetail()" ><a href="#"></a>Détail</div>
     </div>
     <div class="box">
         <div id="sideMenu" class="menu">

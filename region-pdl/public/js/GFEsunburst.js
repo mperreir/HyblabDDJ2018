@@ -620,7 +620,19 @@ app.controller('myCtrl', function ($scope) {
 
 function returnPage() {
     document.getElementById("main").style.display="none";
-
 }
 
+function nextPage() {
+    document.getElementById("part2").style.display="";
+}
+
+function showDetail(){
+    document.getElementById("detail").style.display="";
+}
+
+function returnAll() {
+    document.getElementById("detail").style.display="none";
+    document.getElementById("main").style.display="none";
+
+}
 
