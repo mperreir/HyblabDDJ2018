@@ -1831,6 +1831,7 @@ function controleurPodium()
         document.getElementById("question").className = "texteGlobal2";
         document.getElementById("reponse").className = "dateMenu";
         document.getElementById("saviez").className = "dateMenu";
+        document.getElementById("graph").className = "graph";
     }
 
     Podium2006.onclick = function(){
@@ -1839,6 +1840,7 @@ function controleurPodium()
         document.getElementById("question").className = "texteGlobal2--hidden";
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
+        document.getElementById("graph").className = "graph--hidden";
 
         setYearActive(tabPodiums, 1);
         var pays = camembertPodium(2006);
@@ -1873,6 +1875,7 @@ function controleurPodium()
         document.getElementById("question").className = "texteGlobal2--hidden";
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
+        document.getElementById("graph").className = "graph--hidden";
         setYearActive(tabPodiums, 2);
         var pays = camembertPodium(2007);
         $('li').remove();
@@ -1906,6 +1909,7 @@ function controleurPodium()
         document.getElementById("question").className = "texteGlobal2--hidden";
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
+        document.getElementById("graph").className = "graph--hidden";
         setYearActive(tabPodiums, 3);
         var pays = camembertPodium(2008);
         $('li').remove();
@@ -1939,6 +1943,7 @@ function controleurPodium()
         document.getElementById("question").className = "texteGlobal2--hidden";
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
+        document.getElementById("graph").className = "graph--hidden";
         setYearActive(tabPodiums, 4);
         var pays = camembertPodium(2009);
         $('li').remove();
@@ -1973,6 +1978,7 @@ function controleurPodium()
         document.getElementById("question").className = "texteGlobal2--hidden";
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
+        document.getElementById("graph").className = "graph--hidden";
         setYearActive(tabPodiums, 5);
         var pays = camembertPodium(2010);
         $('li').remove();
@@ -2007,6 +2013,7 @@ function controleurPodium()
         document.getElementById("question").className = "texteGlobal2--hidden";
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
+        document.getElementById("graph").className = "graph--hidden";
         setYearActive(tabPodiums, 6);
         var pays = camembertPodium(2011);
         $('li').remove();
@@ -2041,6 +2048,7 @@ function controleurPodium()
         document.getElementById("question").className = "texteGlobal2--hidden";
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
+        document.getElementById("graph").className = "graph--hidden";
         setYearActive(tabPodiums, 7);
         var pays = camembertPodium(2012);
         $('li').remove();
@@ -2075,6 +2083,7 @@ function controleurPodium()
         document.getElementById("question").className = "texteGlobal2--hidden";
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
+        document.getElementById("graph").className = "graph--hidden";
         setYearActive(tabPodiums, 8);
         var pays = camembertPodium(2013);
         $('li').remove();
@@ -2109,6 +2118,7 @@ function controleurPodium()
         document.getElementById("question").className = "texteGlobal2--hidden";
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
+        document.getElementById("graph").className = "graph--hidden";
         setYearActive(tabPodiums, 9);
         var pays = camembertPodium(2014);
         $('li').remove();
@@ -2142,6 +2152,7 @@ function controleurPodium()
         document.getElementById("question").className = "texteGlobal2--hidden";
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
+        document.getElementById("graph").className = "graph--hidden";
         setYearActive(tabPodiums, 10);
         var pays = camembertPodium(2015);
         $('li').remove();
@@ -2176,6 +2187,7 @@ function controleurPodium()
         document.getElementById("question").className = "texteGlobal2--hidden";
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
+        document.getElementById("graph").className = "graph--hidden";
         setYearActive(tabPodiums, 11);
         var pays = camembertPodium(2016);
         $('li').remove();
@@ -2210,6 +2222,7 @@ function controleurPodium()
         document.getElementById("question").className = "texteGlobal2--hidden";
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
+        document.getElementById("graph").className = "graph--hidden";
         setYearActive(tabPodiums, 12);
         var pays = camembertPodium(2017);
         $('li').remove();
@@ -2770,6 +2783,19 @@ function camembertScene(annee, scene, id)
     return pays;
 }
 
+function pourcentagePays(pays)
+{
+    var json = loadData("data/AnneePaysPourcentage.json");
+    var pourcentage = [];
+    json.forEach(function(nation){
+        if (nation.Pays === pays)
+        {
+            pourcentage.push(nation.Pourcentage);
+        }
+    });
+    return pourcentage;
+}
+
 function addItem(ulId, value){
     var ul = document.getElementById(ulId);
     var li = document.createElement("li");
@@ -2788,9 +2814,85 @@ function removeItem(ulId){
 
 }
 
+function graphiqueLine()
+{
+    var us = pourcentagePays("Etats-Unis");
+    var fr = pourcentagePays("France");
+    var al = pourcentagePays("Allemagne");
+    var uk = pourcentagePays("Angleterre");
+    var lineData = {
+    labels : ["2006","2008","2009","2010","2011","2012","2013", "2014", "2015", "2016", "2017"],
+    datasets : [
+    {
+      label: "My First dataset",
+      fillColor : "#a9ff88",
+      strokeColor : "#a9ff88",
+      pointColor : "#a9ff88",
+      pointStrokeColor : "#fff",
+      pointHighlightFill : "#fff",
+      pointHighlightStroke : "#a9ff88",
+      data : us
+    },
+    {
+      label: "My Second dataset",
+      fillColor : "rgba(151,187,205,0.2)",
+      strokeColor : "rgba(151,187,205,1)",
+      pointColor : "rgba(151,187,205,1)",
+      pointStrokeColor : "#fff",
+      pointHighlightFill : "#fff",
+      pointHighlightStroke : "rgba(151,187,205,1)",
+      data : fr
+    },
+    {
+      label: "My third dataset",
+      fillColor : "rgba(151,187,205,0.2)",
+      strokeColor : "rgba(151,187,205,1)",
+      pointColor : "rgba(151,187,205,1)",
+      pointStrokeColor : "#fff",
+      pointHighlightFill : "#fff",
+      pointHighlightStroke : "rgba(151,187,205,1)",
+      data : al
+    },{
+      label: "My last dataset",
+      fillColor : "rgba(151,187,205,0.2)",
+      strokeColor : "rgba(151,187,205,1)",
+      pointColor : "rgba(151,187,205,1)",
+      pointStrokeColor : "#fff",
+      pointHighlightFill : "#fff",
+      pointHighlightStroke : "rgba(151,187,205,1)",
+      data : uk
+    }
+    ]
+
+  }
+
+    // doughnut chart options
+    var lineOptions = {
+      responsive: true
+    }
+
+  // get line chart canvas
+  var line = document.getElementById('line').getContext('2d');
+
+  // draw line chart
+  new Chart(line).Line(lineData, lineOptions);
+
+  /* 
+   * E. line chart
+   */
+
+  /* 
+   * S. bar chart 
+   */
+
+  // bar chart data
+
+}
+
 
 /**********************************************************************************************************************/
 //loadData();
+graphiqueLine();
 pin();
 controleurPodium();
 controleurFrance();
