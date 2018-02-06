@@ -406,6 +406,14 @@ body{
     width: 36px;
 }
 
+#LegendeEnSavPlus{
+    left: 50%;
+    top: 40%;
+    margin: 0;
+
+
+}
+
 #enSavoirPlusBasP1{
     display:flex;
     flex-direction: row;
