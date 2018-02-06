@@ -36,6 +36,88 @@ body{
     float: left;
 }
 
+
+
+/* ######################################################################### */
+/* --------------- Les Timelines --------------- */
+/* ######################################################################### */
+.timeline {
+    float: left;
+    position: absolute;
+}
+
+.timeline:before {
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    background-color: black;
+}
+
+.timeline .timeline-item {
+  position: relative;
+}
+
+.timeline .timeline-item .timeline-badge {
+    width: 2.08vw;
+    height: 2.08vw;
+    line-height: 50px;
+    position: absolute;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.timeline .timeline-item .timeline-badge.primary {
+    background-color: white;
+}
+
+.timeline .timeline-item .timeline-badge.primary:hover {
+    background-color: #c7c8ca;
+}
+
+.timeline .timeline-item .timeline-badge.primary:focus {
+    background-color: #414042;
+    outline:0;
+}
+
+.timeline-horizontal {
+    list-style: none;
+    position: relative;
+    padding: 20px 0px 20px 0px;
+    display: inline-block;
+}
+
+.timeline-horizontal:before {
+    height: 3px;
+    top: auto;
+    bottom: 13px;
+    left: 5%;
+    width: 101%;
+    margin-bottom: 7%;
+}
+
+.timeline-horizontal .timeline-item {
+    display: table-cell;
+    height: 3.64vw;
+    width: 20%;
+    min-width: 4.16vw;
+    float: left;
+    left: 10.5%;
+    margin: 0 auto;
+}
+
+.timeline-horizontal .timeline-item .timeline-badge {
+    top: auto;
+    bottom: 0px;
+}
+
+.pTimeline {
+    padding-top: 100%;
+    margin-left: -2px;
+}
+
+
+
 /* ######################################################################### */
 /* --------------- Page 1 --------------- */
 /* ######################################################################### */
@@ -66,11 +148,11 @@ body{
     padding-bottom: 0.5vw;
 }
 
-/* Section 2 */
-#section2 {
-    width: 40vw;
-    top: 78vh;
-    left: 8vw;
+/* Timeline1 : Positionnement et taille */
+#timeline1 {
+    width: 22vw;
+    top: 37vh;
+    left: 12vw;
 }
 
 /* Section 3 */
@@ -499,7 +581,7 @@ body{
 /* ######################################################################### */
 /* --------------- Page 3 --------------- */
 /* ######################################################################### */
-/* Section 6 */
+/* Section 6 : Texte Nappe de Campbon par année*/
 #section6 {
     top: 7vh;
     left: 5vw;
@@ -507,87 +589,14 @@ body{
     text-align: justify;
 }
 
-/* Section 7 */
-#section7 {
-    float: left;
-    position: absolute;
-    top: 70vh;
-    left: 3.6vw;
-    width: 40vw;
+/* Timeline 2 : positionnement et taille */
+#timeline2 {
+    width: 22vw;
+    top: 10vh;
+    left: 8.2vw;
 }
 
-/* Pour les timelines */
-.timeline:before {
-  bottom: 0;
-  position: absolute;
-  content: " ";
-  width: 3px;
-  background-color: black;
-}
-
-.timeline .timeline-item {
-  position: relative;
-}
-
-.timeline .timeline-item .timeline-badge {
-  width: 2.08vw;
-  height: 2.08vw;
-  line-height: 50px;
-  position: absolute;
-  border: 3px solid black;
-  border-radius: 50%;
-}
-
-.timeline .timeline-item .timeline-badge.primary {
-  background-color: white;
-}
-
-.timeline .timeline-item .timeline-badge.primary:hover {
-  background-color: #c7c8ca;
-}
-
-.timeline .timeline-item .timeline-badge.primary:focus {
-    background-color: #414042;
-    outline:0;
-}
-
-.timeline-horizontal {
-  list-style: none;
-  position: relative;
-  padding: 20px 0px 20px 0px;
-  display: inline-block;
-}
-
-.timeline-horizontal:before {
-  height: 3px;
-  top: auto;
-  bottom: 13px;
-  left: 5%;
-  width: 101%;
-  margin-bottom: 7%;
-}
-
-.timeline-horizontal .timeline-item {
-  display: table-cell;
-  height: 3.64vw;
-  width: 20%;
-  min-width: 4.16vw;
-  float: left;
-  left: 10.5%;
-  margin: 0 auto;
-}
-
-.timeline-horizontal .timeline-item .timeline-badge {
-  top: auto;
-  bottom: 0px;
-}
-
-.pTimeline {
-    padding-top: 100%;
-    margin-left: -2px;
-}
-
-/* Section 8 */
+/* Section 8 : Légende */
 #section8 {
     top: 28vh;
     left: 75vw;
@@ -614,8 +623,8 @@ body{
 #bonhomme {
     float: left;
     position: absolute;
-    top: 10%;
-    left: 40%;
+    top: 10vh;
+    left: 40vw;
     width: 30vw;
 }
 
@@ -644,7 +653,7 @@ body{
     left: 54vw;
 }
 
-/* Section 9 */
+/* Section 9 : Présentation Eau et Rivieres */
 #section9 {
     width: 35vw;
     top: 18vh;
@@ -652,7 +661,7 @@ body{
     text-align: justify;
 }
 
-/* Section 10 */
+/* Section 10 : Remerciements Eau et Rivieres */
 #section10 {
     width: 35vw;
     top: 35vh;
@@ -660,7 +669,7 @@ body{
     text-align: justify;
 }
 
-/* Le tableau de logos */
+/* Le tableau de logos des partenaires */
 #logos {
     float: left;
     position: absolute;
@@ -720,7 +729,7 @@ body{
     text-align: center;
 }
 
-/* Tableau de logos */
+/* Tableau de logos personnels */
 #logosNous {
     float: left;
     position: absolute;
@@ -733,7 +742,7 @@ body{
 }
 
 #logosNous td {
-    width: 12%;
+    width: 12vw;
     height: auto;
 }
 
