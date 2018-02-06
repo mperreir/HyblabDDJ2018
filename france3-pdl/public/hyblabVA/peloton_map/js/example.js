@@ -67,7 +67,7 @@ jQuery(document).ready(function($){
           newDiv.setAttribute('class','legend');
           var newSpan = document.createElement('span');
           var newP = document.createElement('p');
-          newSpan.innerHTML='vainqueur';
+          newSpan.innerHTML='winner';
           newP.setAttribute('class','vainqueur');
           console.log(json.dates[i].winner.name)
           newP.innerHTML=json.dates[i].winner.name+'<br/>'+json.dates[i].winner.fName+'<br/>'+json.dates[i].winner.nation;
