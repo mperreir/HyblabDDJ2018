@@ -721,7 +721,7 @@ function createConjonctureDataviz(json) {
                         display: false
                     },
                     ticks: {
-                        callback: function(value, index, values){
+                        callback: function(value){
                             return labelsx[value-1];
                         },
                         beginAtZero: true,
@@ -735,7 +735,7 @@ function createConjonctureDataviz(json) {
                         display: false
                     },
                     ticks: {
-                        callback: function(value, index, values){
+                        callback: function(value){
                                 return labelsy[value-1];
                         },
                         beginAtZero: true,
