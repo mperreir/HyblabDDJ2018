@@ -318,6 +318,8 @@ function afficheBarres(datas, listeAides){
             .enter()
             .append("circle");
 
+        console.log(circles);
+
     /*    var truc = listeAides[j].selectAll("g")
             .data(jsonCircles);*/
 
@@ -408,6 +410,8 @@ function afficheCercles (boxesU){
     for (var i = 0; i < boxesU.length ; i++){
         jsonCircles.push({ "x_axis": boxesU[i].x1 *(width / borneX), "y_axis": bandHeight/2, "radius": circleRadius/2, "color" : colorsCircles[i], name: "cc" });
     }
+
+
 
 
 }

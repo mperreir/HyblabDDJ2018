@@ -53,6 +53,7 @@ html, body {
 }
 
 /* textes de la colonne */
+
 /* partie de gauche */
 
 .texte {
@@ -67,7 +68,8 @@ html, body {
     padding-bottom: 50px;
 
     float:left;
-    width:400px;
+  /*  width:400px; */
+    width: 30%;
 }
 
 .accroche {

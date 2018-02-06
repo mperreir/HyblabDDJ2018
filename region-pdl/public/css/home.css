@@ -44,37 +44,28 @@ a:hover {
     width: 80px;
 }
 
-#home {
+#home, #credits {
     position: absolute;
     top: 25px;
-    left: 300px;
 
     height: 19px;
+    width: 80px;
+    font-family: Lato;
     font-family: Lato;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 2px;
     line-height: 19px;
     text-align: center;
+}
 
-    width: 80px;
+#home {
+    left: 300px;
 }
 
 #credits {
-    position: absolute;
-    top: 25px;
     left: 400px;
-
-    height: 19px;
-    width: 80px;
-
     text-transform: uppercase;
-    font-family: Lato;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    line-height: 19px;
-    text-align: center;
 }
 
 #logo-pdl {

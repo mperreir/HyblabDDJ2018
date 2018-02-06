@@ -141,13 +141,13 @@ p{
 }
 
 #main {
-    /*width: 750px;*/
+/*    width: 750px;*/
     position: absolute;
     z-index: 1;
-    width: 62.2%;
+    width: 60.2%;
     /*top:50%; left:50%;*/
     background: #ffffff;
-    margin-left: 37.8%;
+    margin-left: 36%;
     margin-top: -50px;
     height: 100%;
 }
