@@ -11,9 +11,22 @@
 window.onload = function(){
   $("#loading").fadeOut('slow');
   $("#menu").fadeIn('slow');
-  $(".fp-controlArrow.fp-next").fadeIn('slow');
+  $('.arrowsLeft').css({"display":"none"});
   $.fn.fullpage.moveTo('Questions');
 };
+
+$(document).on('click', '.arrowsDown', function(){
+  $.fn.fullpage.moveSectionDown();
+});
+$(document).on('click', '.arrowsUp', function(){
+  $.fn.fullpage.moveSectionUp();
+});
+$(document).on('click', '.arrowsRight', function(){
+  $.fn.fullpage.moveSlideRight();
+});
+$(document).on('click', '.arrowsLeft', function(){
+  $.fn.fullpage.moveSlideLeft();
+});
 
 function MoveToto(e)
 {
@@ -47,26 +60,45 @@ $(document).ready(function(){
 });
 
 $('#fullpage').fullpage({
-  onLeave: function(index, nextIndex, direction){
-    console.log(index);
-    console.log(direction);
-    console.log(nextIndex);
-    if(index == 2 && direction =='down' || index == 1 && direction =='down' && nextIndex == 3)
+  afterLoad:function(anchorLink, index){
+    if(index==1)
     {
-      $('.ico').fadeOut("slow");
+      $('.arrowsUp').css({"display":"none"});
+      $('.arrowsDown').css({"display":"block"});
     }
-    else if (index == 3 && direction =='up' ||index == 2 && direction =='up')
+    if(index==2)
     {
-      $('.ico').fadeIn("slow");
+      $('.arrowsRight').css({"display":"none"});
+      $('.arrowsUp').css({"display":"block"});
+      $('.arrowsDown').css({"display":"block"});
     }
+    if(index==3)
+    {
+      $('.arrowsRight').css({"display":"none"});
+      $('.arrowsUp').css({"display":"block"});
+      $('.arrowsDown').css({"display":"none"});
+    }
+  },
+  afterSlideLoad:function(anchorLink, index, slideAnchor, slideIndex){
+    if(slideAnchor==0){
+      $('.arrowsLeft').css({"display":"none"});
+    }
+    else if (slideAnchor>0 && slideAnchor<12)
+    {
+      $('.arrowsLeft').css({"display":"block"});
+      $('.arrowsRight').css({"display":"block"});
+    }
+    else if (slideAnchor==12)
+    {
+      $('.arrowsRight').css({"display":"none"});
+    }
+
   }
 });
 
 
 var q = [0,0,0,0,0]
-$(document).ready(function() {
-    $('#fullpage').fullpage();
-});
+
 var reponses;
 fetch('data/reponses.json')
     // this promise will be fulfilled when the json fill will be

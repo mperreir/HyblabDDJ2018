@@ -51,6 +51,7 @@ html.fp-enabled,
     position: relative;
 }
 .fp-controlArrow {
+    display:none;
     -webkit-user-select: none; /* webkit (safari, chrome) browsers */
     -moz-user-select: none; /* mozilla browsers */
     -khtml-user-select: none; /* webkit (konqueror) browsers */
@@ -68,7 +69,7 @@ html.fp-enabled,
     transform: translate3d(0,-100%,0);
 }
 .fp-controlArrow.fp-prev {
-    display:block;
+    display:none;
     opacity: 0.1;
     left: 15px;
     width: 0;
@@ -76,18 +77,12 @@ html.fp-enabled,
     border-color: transparent #46B29D transparent transparent;
 }
 .fp-controlArrow.fp-next {
+    display: none;
     right: 15px;
     opacity: 0.1;
     border-width: 38.5px 0 38.5px 34px;
     border-color: transparent transparent transparent #46B29D;
     display:none;
-}
-
-.fp-controlArrow.fp-prev:hover {
-    opacity: 1;
-}
-.fp-controlArrow.fp-next:hover {
-    opacity: 1;
 }
 
 .fp-scrollable {
