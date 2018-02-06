@@ -623,7 +623,7 @@ function returnPage() {
 }
 
 function nextPage() {
-    document.getElementById("part2").style.display="";
+    document.getElementById("detail2").style.display="";
 }
 
 function showDetail(){
@@ -633,6 +633,21 @@ function showDetail(){
 function returnAll() {
     document.getElementById("detail").style.display="none";
     document.getElementById("main").style.display="none";
+    document.getElementById("detail2").style.display="none";
+    document.getElementById("detail3").style.display="none";
+}
 
+function retourPage() {
+    document.getElementById("detail2").style.display="none";
+    document.getElementById("detail").style.display="";
+    document.getElementById("detail3").style.display="none";
+}
+
+function retourPage2() {
+    document.getElementById("detail3").style.display="none";
+    document.getElementById("detail2").style.display="";
+}
+function nextPage2() {
+    document.getElementById("detail3").style.display="";
 }
 
