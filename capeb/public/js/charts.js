@@ -65,6 +65,7 @@ var drawDDChart = function(stats) {
         };
 
 });
+
     var ch = new Chart(ctx,
         {
             type: 'bubble',
@@ -138,9 +139,6 @@ var drawDDChart = function(stats) {
                         }
                     }]
                 },
-                legend: {
-                    display: false
-                }
             }
         }
     );
