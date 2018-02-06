@@ -1,0 +1,130 @@
+
+
+html {
+  background: url("images/page.png") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+body{
+	height: 100%;
+	width: 100%;
+	display: flex;
+}
+
+.partieG {
+	width: 33%;
+	height: 100%;
+}
+
+.partieG .absolu .fleche {
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  height: 5%;
+  width: 15%;
+  color: #16037C; 
+  font-family: "Open Sans"; 
+  font-size: 1.5em;  
+  line-height: 110%;  
+}
+
+.article1{
+	position: relative;
+	top: 36%;
+}
+
+.article1 h1{
+	text-align: center;
+	margin-left: 4%;
+	margin-right: 4%;
+	height: 20%;	
+	max-width: 100%;
+	color: #FFFFFF;
+	font-family: Montserrat;
+	font-size: 47px;	
+	font-weight: bold;	
+	line-height: 110%;
+}
+
+.article1 p {
+	margin-left: 5%;
+	height: 20.77%;
+	width: 80%;	
+	color: #FFFFFF;	
+	font-family: "Open Sans";	
+	font-size: 23.5px;	
+	font-weight: 800;	
+	line-height: 125%;
+}
+
+
+
+.partieD {
+	width: 67%;
+	height: 100%;
+}
+
+.partieD p {
+	margin-top: 0%;
+	color: #0F0D76;	
+	font-family: "Open Sans";	
+	font-size: 23.5px;	
+	line-height: 105%;	
+}
+
+.article3 p {
+	height: 20.77%;
+	padding-left: 28%;
+}
+
+.article3 {
+	position: relative;
+	margin-right: 63%;
+	margin-top: 14.8%;
+	text-align: right;
+}
+
+.article2 p {
+	width: 55%;
+}
+
+
+.article2 {
+	position: relative;
+	margin-left: 73.8%;
+	margin-top: 12%;
+	text-align: left;
+}
+
+.partieD h2 {
+	color: #060E8C;
+	font-family: Montserrat;
+	font-size: 47px;	
+	font-weight: bold;
+	margin-bottom: 0%;
+}
+
+
+
+.bouton {
+	position: absolute;
+	top: 80%;
+	left: 58.7%;
+	height: 15%;
+	width: 22%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-image: url("images/bouton2.png");
+}
+
+.bouton:hover {
+	background-image: url("images/bouton1.png");
+}
+
+
+
+
+

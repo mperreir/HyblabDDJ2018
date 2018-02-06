@@ -1,0 +1,788 @@
+/* just a sample css rule to show that everything works */
+footer p
+{
+  font-size: small;
+  text-align: center;
+}
+
+header{
+  text-align: center;
+}
+
+header img{
+  max-width: 100%;
+	height: auto;
+}
+
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  height:100%;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #383838;
+  background-color: #ffffff;
+}
+
+a {
+  color: #7b9d6f;
+  text-decoration: none;
+}
+
+/* --------------------------------
+
+Main Components
+
+-------------------------------- */
+.cd-horizontal-timeline {
+  opacity: 0;
+  margin-top:0px;
+  /*margin: 2em auto;*/
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.cd-horizontal-timeline::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: 'mobile';
+  display: none;
+}
+.cd-horizontal-timeline.loaded {
+  /* show the timeline after events position has been set (using JavaScript) */
+  opacity: 1;
+  margin:0px;
+}
+.cd-horizontal-timeline .timeline {
+  position: relative;
+  height: 100px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.cd-horizontal-timeline .events-wrapper {
+  position: relative;
+  height: 100%;
+  margin: 0 40px;
+  overflow: hidden;
+}
+.cd-horizontal-timeline .events-wrapper::after, .cd-horizontal-timeline .events-wrapper::before {
+  /* these are used to create a shadow effect at the sides of the timeline */
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  height: 100%;
+  width: 20px;
+}
+.cd-horizontal-timeline .events-wrapper::before {
+  left: 0;
+  /*background-image: -webkit-linear-gradient( left , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));*/
+}
+.cd-horizontal-timeline .events-wrapper::after {
+  right: 0;
+  /*background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));*/
+}
+.cd-horizontal-timeline .events {
+  /* this is the grey line/timeline */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 49px;
+  height: 2px;
+  /* width will be set using JavaScript */
+  background: blue;
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+.cd-horizontal-timeline .filling-line {
+  /* this is used to create the orange line filling the timeline */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(237,104,34);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.cd-horizontal-timeline .emptying-line {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+.cd-horizontal-timeline .events a {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  font-size: 1.3rem;
+  padding-bottom: 15px;
+  color: #FFFFFF;
+  /* fix bug on Safari - text flickering while timeline translates */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.cd-horizontal-timeline .events a::after {
+  /* this is used to create the event spot */
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: -5px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: 2px solid blue;
+  background-color: #f8f8f8;
+  -webkit-transition: background-color 0.3s, border-color 0.3s;
+  -moz-transition: background-color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.no-touch .cd-horizontal-timeline .events a:hover::after {
+  background-color: blue;
+  border-color: blue;
+}
+.cd-horizontal-timeline .events a.selected {
+  pointer-events: none;
+}
+.cd-horizontal-timeline .events a.selected::after {
+  background-color: rgb(237, 104, 34);
+  border-color: rgb(237, 104, 34);
+}
+.cd-horizontal-timeline .events a.origin::after {
+  background-color: rgb(237, 104, 34);
+  border-color: rgb(237, 104, 34);
+}
+.cd-horizontal-timeline .events a.older-event::after {
+  border-color: blue;
+}
+@media only screen and (min-width: 1100px) {
+  .cd-horizontal-timeline {
+    margin: 6em auto;
+  }
+  .cd-horizontal-timeline::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
+}
+
+.cd-timeline-navigation a {
+  /* these are the left/right arrows to navigate the timeline */
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  /* replace text with an icon */
+  overflow: hidden;
+  color: transparent;
+  text-indent: 100%;
+  white-space: nowrap;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+
+
+.cd-timeline-navigation a::after {
+  /* arrow icon */
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(../img/cd-arrow.svg) no-repeat 0 0;
+}
+.cd-timeline-navigation a.prev {
+  left: 0;
+  background-image: url(../img/icon-next.png);
+  background-size: 65%;
+  background-position-x: center;
+  background-repeat-x: no-repeat;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -moz-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  -o-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+.cd-timeline-navigation a.next {
+  right: 0;
+  background-image: url(../img/icon-next.png);
+  background-size: 65%;
+  background-position-x: center;
+  background-repeat-x: no-repeat;
+}
+.no-touch .cd-timeline-navigation a:hover {
+  border-color: blue;
+}
+.cd-timeline-navigation a.inactive {
+  cursor: not-allowed;
+  background-image:initial;
+}
+.cd-timeline-navigation a.inactive::after {
+  background-position: 0 -16px;
+}
+.no-touch .cd-timeline-navigation a.inactive:hover {
+  border-color: transparent;
+}
+
+.cd-horizontal-timeline .events-content {
+  position: absolute;
+  display:inline-flex;
+  width: 100%;
+  height:19.5%;
+  background-color: #FFCE00;
+  overflow: hidden;
+  -webkit-transition: height 0.4s;
+  -moz-transition: height 0.4s;
+  transition: height 0.4s;
+  bottom:0;
+}
+.cd-horizontal-timeline .events-content li {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  padding: 0 5%;
+  opacity: 0;
+  -webkit-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+.cd-horizontal-timeline .events-content li.selected {
+  /* visible event content */
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+.cd-horizontal-timeline .events-content li.enter-right, .cd-horizontal-timeline .events-content li.leave-right {
+  -webkit-animation-name: cd-enter-right;
+  -moz-animation-name: cd-enter-right;
+  animation-name: cd-enter-right;
+}
+.cd-horizontal-timeline .events-content li.enter-left, .cd-horizontal-timeline .events-content li.leave-left {
+  -webkit-animation-name: cd-enter-left;
+  -moz-animation-name: cd-enter-left;
+  animation-name: cd-enter-left;
+}
+.cd-horizontal-timeline .events-content li.leave-right, .cd-horizontal-timeline .events-content li.leave-left {
+  -webkit-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  animation-direction: reverse;
+}
+.cd-horizontal-timeline .events-content li > * {
+  max-width: 800px;
+  margin: 2% auto 0 2%;
+  display: table;
+  color: #16037C;
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 24px;
+}
+.cd-horizontal-timeline .events-content h2 {
+  font-weight: bold;
+  font-size: 2.6rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.cd-horizontal-timeline .events-content em {
+  display: block;
+  font-style: italic;
+  margin: 10px auto;
+}
+.cd-horizontal-timeline .events-content em::before {
+  content: '- ';
+}
+.cd-horizontal-timeline .events-content p {
+  font-size: 1.4rem;
+  color: #000000;
+}
+.cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
+  line-height: 1.6;
+}
+@media only screen and (min-width: 768px) {
+  .cd-horizontal-timeline .events-content h2 {
+    font-size: 7rem;
+  }
+  .cd-horizontal-timeline .events-content em {
+    font-size: 2rem;
+  }
+  .cd-horizontal-timeline .events-content p {
+    font-size: 1.8rem;
+  }
+}
+
+@-webkit-keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+  }
+}
+@-moz-keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0%);
+  }
+}
+@keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+  }
+}
+@-moz-keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0%);
+  }
+}
+@keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+.buttons{
+  width:11.80%;
+  display:flex;
+  margin-left: 2.55%;
+  margin-right: auto;
+}
+
+.to-new{
+  margin:auto;
+  height: 59%;
+  width: max-content;
+}
+
+.topPage{
+  height:15.38%;
+  background-color: #16037C;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5), 0 2px 4px 0 rgba(0,0,0,0.5);
+  display:flex;
+}
+
+
+
+.degrader-bandeau {
+    height: 100%;
+  	width: 3%;
+    margin-left:auto;
+    transform: rotate(180deg);
+  	background: linear-gradient(90deg, #FFFFFF 0%, #FFCE00 100%);
+}
+
+.maillots .selected{
+  display:flex;
+}
+
+.maillots{
+  background-color: #FFFFFF;
+  width:38%;
+  position:relative;
+}
+
+.maillots .selected .jaune{
+  height: 61%;
+  width: 37%;
+  margin-left: 2%;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+}
+
+.maillots .jaune img{
+  margin-top:18%;
+}
+
+.maillots .jaune .legend{
+  margin-top:18%;
+  display:unset;
+}
+
+
+.maillots .divers .maillot{
+  display: flex;
+  width: 50%;
+  height: 50%;
+}
+
+.maillots .jaune span{
+  height: 12%;
+  width: 100%;
+  color: #16037C;
+	font-family: "Open Sans";
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 9px;
+}
+
+.maillots .divers{
+  margin-left:12%;
+}
+
+.maillots .divers span{
+  margin-bottom: 19%;
+  margin-top: 38%;
+  height: 12%;
+  width: 100%;
+  color: #16037C;
+  font-family: "Open Sans";
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 9px;
+}
+
+.maillots .jaune .vainqueur{
+  height: 63.39%;
+  width: 100%;
+  color: #16037C;
+  font-family: "Open Sans";
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
+  margin:auto;
+}
+
+.maillots .divers .vainqueur{
+  height: 63.39%;
+  width: 100%;
+  color: #16037C;
+  font-family: "Open Sans";
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
+  margin:auto;
+}
+
+.maillots .legend{
+  display: inline-flex;
+  max-height: 100%;
+}
+
+.maillots .divers .legend{
+  height: 70%;
+}
+
+.maillots .divers .legend p{
+  margin-left:6%;
+}
+
+.maillots img{
+  max-width: 88px;
+  max-height: 100%;
+  width: 100%;
+  height: auto;
+  margin: auto 5px auto 0px;
+}
+
+.maillots .divers img{
+  max-width: 55px;
+  margin-top: 0px;
+  max-height: 47px;
+  margin-bottom: 0px;
+}
+
+.topPage h{
+  width:12.75%;
+  height:auto;
+  margin-top:auto;
+  margin-bottom:auto;
+  margin-left:3.80%;
+}
+
+.topPage h img{
+  width:100%;
+  height:auto;
+}
+
+.buttons img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.conclusion-button img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.topPage hr{
+  margin-top:auto;
+  margin-bottom:auto;
+  margin-left:3%;
+  margin-right:2%;
+  background-color:#FFFFFF;
+}
+
+.conclusion-button{
+  width:5.45%;
+  display:flex;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.line{
+  display:flex;
+}
+
+.line hr{
+  background-color:#FFCE00;
+  margin-left:0px;
+  margin-right:0px;
+  border:0;
+}
+
+.line .round-right{
+  border-radius:0 50% 50% 0;
+}
+
+.line .round-left{
+  border-radius:50% 0 0 50%;
+  margin-left:auto;
+}
+
+object{
+  height:296px;
+  overflow:hidden;
+}
+
+.buttons .inactive{
+  cursor:default;
+}
+
+.buttons .active{
+  cursor:pointer;
+}
+
+.peloton .map img{
+  height: 430px;
+  width: 60%;
+  margin-left: 3%;
+  margin-top: 3%;
+  display:none;
+}
+
+.peloton .selected .map-visual{
+  display:inherit;
+}
+
+.events .hidden{
+  display:none;
+}
+
+.map .selected{
+  display:flex;
+  height:300px;
+}
+
+
+.peloton .selected .chrono{
+  width: 8%;
+  height: 60%;
+  margin-top: 10%;
+  margin-bottom: auto;
+  display: inherit;
+}
+
+.peloton .map .selected .info{
+  width: 50%;
+  height: 13%;
+  margin-top: 117%;
+  margin-bottom: 9%;
+  margin-left: 13%;
+  display: inherit;
+
+}
+
+.peloton .info{
+  width: 50%;
+  height: 13%;
+  margin-top: 117%;
+  margin-bottom: 9%;
+  margin-left: 13%;
+  display:inherit;
+}
+
+.peloton .map .info{
+  display:none;
+}
+
+.peloton{
+  display:flex;
+}
+
+.maillots .legend p{
+  height: 63.39%;
+  width: 100%;
+  color: #16037C;
+  font-family: "Open Sans";
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
+  margin: auto;
+}
+
+.divers div{
+  si
+}
+
+.popup {
+  margin-top: 20%;
+  padding: 20px;
+  margin-left: 3%;
+  background: #f8f8f8;
+  border-radius: 5px;
+  width: 17%;
+  position: absolute;
+  transition: all 5s ease-in-out;
+  display:none;
+}
+
+.map-popup{
+  margin-top: 15%;
+}
+
+.back{
+  transform: rotate(180deg);
+}
+
+.peloton .map .selected .legend-mapW{
+  display: flex;
+  width: 12%;
+  margin-top: 25%;
+  height: 22%;
+}
+
+.peloton .map .legend-mapW{
+  display: none;
+}
