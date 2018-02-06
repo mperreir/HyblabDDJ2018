@@ -14,6 +14,7 @@
   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
 
+    <link rel="stylesheet" href="css/style_graph4.css">
     <link rel="stylesheet" href="css/jules_verne.css">
     <!--Lien Google Font pour la typographie Quicksand-->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -110,7 +111,368 @@
           <h1>De la politique aux arts de la scène</h1>
         </div>
         <!--Partie contenant les graphiques-->
-        <section></section>
+        <section>
+          <ul>
+            <li class="section4_switch" id="tab_divers" >
+              <img src="./img/icon_divers.svg">
+              <h6>Divers</h6>
+            </li>
+            <li class="section4_switch" id="tab_scene">
+                <img src="./img/icon_scene.svg">
+              <h6>Arts de la Scène</h6>
+            </li>
+            <li class="section4_switch" id="tab_litterature">
+              <img src="./img/icon_litterature.svg">
+              <h6>Littérature</h6>
+            </li>
+            <li class="section4_switch" id="tab_tourisme">
+              <img src="./img/icon_tourisme.svg">
+              <h6>Tourisme</h6>
+            </li>
+            <li class="section4_switch" id="tab_exposition">
+              <img src="./img/icon_exposition.svg">
+              <h6>Exposition</h6>
+            </li>
+            <li class="section4_switch" id="tab_audiovisuel">
+              <img src="./img/icon_audiovisuel.svg">
+              <h6>Audiovisuel</h6>
+            </li>
+            <li class="section4_switch" id="tab_sciences">
+              <img src="./img/icon_sciences.svg">
+              <h6>Sciences et Techniques</h6>
+            </li>
+            <li class="section4_switch" id="tab_animation">
+              <img src="./img/icon_animation.svg">
+              <h6>Animation</h6>
+            </li>
+            <li class="section4_switch" id="tab_conference">
+              <img src="./img/icon_conference.svg">
+              <h6>Conférence</h6>
+            </li>
+            <li class="section4_switch" id="tab_politique">
+              <img src="./img/icon_politique.svg">
+              <h6>Politique</h6>
+            </li>
+          </ul>
+
+        <!-- Domaine 1 - Divers -->
+        <article id="article_divers">
+            <!-- texte descriptif + image du domaine choisi-->
+            <div class="section4_texte">
+              <img src="./img/icon_divers.svg">
+              <h2>Divers</h2>
+              <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On re</p>
+            </div>
+            <!-- Graphique Linéaire -->
+            <div class="section4_graph_line">
+              <canvas id="slide4_graphique1_divers"></canvas>
+            </div>
+            <!-- Graphique Circulaire -->
+            <div class="section4_graph_doughnut">
+              <canvas id="slide4_graphique2_divers"></canvas>
+            </div>
+        </article>
+
+        <!-- Domaine 2 - Scene -->
+        <article id="article_scene">
+            <!-- texte descriptif + image du domaine choisi-->
+            <div class="section4_texte">
+              <img src="./img/icon_scene.svg">
+              <h2>Arts de la Scène</h2>
+              <p>Texte d'introduction. Jules Verne, il est trop génial.</p>
+            </div>
+            <!-- Graphique Linéaire -->
+            <div class="section4_graph_line">
+              <canvas id="slide4_graphique1_scene"></canvas>
+            </div>
+            <!-- Graphique Circulaire -->
+            <div class="section4_graph_doughnut">
+              <canvas id="slide4_graphique2_scene"></canvas>
+            </div>
+        </article>
+
+        <!-- Domaine 3 - Littérature -->
+        <article id="article_litterature">
+            <!-- texte descriptif + image du domaine choisi-->
+            <div class="section4_texte">
+              <img src="./img/icon_litterature.svg">
+              <h2>Littérature</h2>
+              <p>Texte d'introduction. Jules Verne, il est trop génial.</p>
+            </div>
+            <!-- Graphique Linéaire -->
+            <div class="section4_graph_line">
+              <canvas id="slide4_graphique1_litterature"></canvas>
+            </div>
+            <!-- Graphique Circulaire -->
+            <div class="section4_graph_doughnut">
+              <canvas id="slide4_graphique2_litterature"></canvas>
+            </div>
+        </article>
+
+        <!-- Domaine 4 - Tourisme -->
+        <article id="article_tourisme">
+            <!-- texte descriptif + image du domaine choisi-->
+            <div class="section4_texte">
+              <img src="./img/icon_tourisme.svg">
+              <h2>Tourisme</h2>
+              <p>Texte d'introduction. Jules Verne, il est trop génial.</p>
+            </div>
+            <!-- Graphique Linéaire -->
+            <div class="section4_graph_line">
+              <canvas id="slide4_graphique1_tourisme"></canvas>
+            </div>
+            <!-- Graphique Circulaire -->
+            <div class="section4_graph_doughnut">
+              <canvas id="slide4_graphique2_tourisme"></canvas>
+            </div>
+        </article>
+
+        <!-- Domaine 5 - Exposition -->
+        <article id="article_exposition">
+            <!-- texte descriptif + image du domaine choisi-->
+            <div class="section4_texte">
+              <img src="./img/icon_exposition.svg">
+              <h2>Exposition</h2>
+              <p>Texte d'introduction. Jules Verne, il est trop génial.</p>
+            </div>
+            <!-- Graphique Linéaire -->
+            <div class="section4_graph_line">
+              <canvas id="slide4_graphique1_exposition"></canvas>
+            </div>
+            <!-- Graphique Circulaire -->
+            <div class="section4_graph_doughnut">
+              <canvas id="slide4_graphique2_exposition"></canvas>
+            </div>
+        </article>
+
+        <!-- Domaine 6 - Audiovisuel -->
+        <article id="article_audiovisuel">
+            <!-- texte descriptif + image du domaine choisi-->
+            <div class="section4_texte">
+              <img src="./img/icon_audiovisuel.svg">
+              <h2>Audiovisuel</h2>
+              <p>Texte d'introduction. Jules Verne, il est trop génial.</p>
+            </div>
+            <!-- Graphique Linéaire -->
+            <div class="section4_graph_line">
+              <canvas id="slide4_graphique1_audiovisuel"></canvas>
+            </div>
+            <!-- Graphique Circulaire -->
+            <div class="section4_graph_doughnut">
+              <canvas id="slide4_graphique2_audiovisuel"></canvas>
+            </div>
+        </article>
+
+        <!-- Domaine 7 - Sciences -->
+        <article id="article_sciences">
+            <!-- texte descriptif + image du domaine choisi-->
+            <div class="section4_texte">
+              <img src="./img/icon_sciences.svg">
+              <h2>Sciences et Techniques</h2>
+              <p>Texte d'introduction. Jules Verne, il est trop génial.</p>
+            </div>
+            <!-- Graphique Linéaire -->
+            <div class="section4_graph_line">
+              <canvas id="slide4_graphique1_sciences"></canvas>
+            </div>
+            <!-- Graphique Circulaire -->
+            <div class="section4_graph_doughnut">
+              <canvas id="slide4_graphique2_sciences"></canvas>
+            </div>
+        </article>
+
+        <!-- Domaine 8 - Animation -->
+        <article id="article_animation">
+            <!-- texte descriptif + image du domaine choisi-->
+            <div class="section4_texte">
+              <img src="./img/icon_animation.svg">
+              <h2>Animation</h2>
+              <p>Texte d'introduction. Jules Verne, il est trop génial.</p>
+            </div>
+            <!-- Graphique Linéaire -->
+            <div class="section4_graph_line">
+              <canvas id="slide4_graphique1_animation"></canvas>
+            </div>
+            <!-- Graphique Circulaire -->
+            <div class="section4_graph_doughnut">
+              <canvas id="slide4_graphique2_animation"></canvas>
+            </div>
+        </article>
+
+        <!-- Domaine 9 - Conférence -->
+        <article id="article_conference">
+            <!-- texte descriptif + image du domaine choisi-->
+            <div class="section4_texte">
+              <img src="./img/icon_conference.svg">
+              <h2>Conférence</h2>
+              <p>Texte d'introduction. Jules Verne, il est trop génial.</p>
+            </div>
+            <!-- Graphique Linéaire -->
+            <div class="section4_graph_line">
+              <canvas id="slide4_graphique1_conference"></canvas>
+            </div>
+            <!-- Graphique Circulaire -->
+            <div class="section4_graph_doughnut">
+              <canvas id="slide4_graphique2_conference"></canvas>
+            </div>
+        </article>
+
+        <!-- Domaine 10 - Politique -->
+        <article id="article_politique">
+            <!-- texte descriptif + image du domaine choisi-->
+            <div class="section4_texte">
+              <img src="./img/icon_politique.svg">
+              <h2>Politique</h2>
+              <p>Texte d'introduction. Jules Verne, il est trop génial.</p>
+            </div>
+            <!-- Graphique Linéaire -->
+            <div class="section4_graph_line">
+              <canvas id="slide4_graphique1_politique"></canvas>
+            </div>
+            <!-- Graphique Circulaire -->
+            <div class="section4_graph_doughnut">
+              <canvas id="slide4_graphique2_politique"></canvas>
+            </div>
+        </article>
+        <script>
+        jQuery(document).ready(function(){
+          jQuery('.section4_switch').click(function(event){
+          //remove all pre-existing active classes
+          jQuery('.section4_active-tab').removeClass('section4_active-tab');
+
+          //add the active class to the link we clicked
+          jQuery(this).addClass('section4_active-tab');
+
+          event.preventDefault();
+          });
+        });
+
+          /* Rend visible le domaine 1 "Divers" */
+          $(function() {
+            $('li').click(function(){
+              if ($("#tab_divers").hasClass("section4_active-tab")) {
+                //rendre inactif
+                $("#article_divers").addClass("visible");
+              } else if (!$("#tab_divers").hasClass("section4_active-tab")) {
+                //rendre actif
+                $("#article_divers").removeClass("visible");
+              }
+            });
+          });
+
+          /* Rend visible le domaine 2 "Scene" */
+          $(function() {
+            $('li').click(function(){
+              if ($("#tab_scene").hasClass("section4_active-tab")) {
+                $("#article_scene").addClass("visible");
+              } else if (!$("#tab_scene").hasClass("section4_active-tab")) {
+                $("#article_scene").removeClass("visible");
+              }
+            });
+          });
+          /* Rend visible le domaine 3 "Littérature" */
+          $(function() {
+            $('li').click(function(){
+              if ($("#tab_litterature").hasClass("section4_active-tab")) {
+                $("#article_litterature").addClass("visible");
+              } else if (!$("#tab_litterature").hasClass("section4_active-tab")) {
+                $("#article_litterature").removeClass("visible");
+              }
+            });
+          });
+          /* Rend visible le domaine 4 "Tourisme" */
+          $(function() {
+            $('li').click(function(){
+              if ($("#tab_tourisme").hasClass("section4_active-tab")) {
+                $("#article_tourisme").addClass("visible");
+              } else if (!$("#tab_tourisme").hasClass("section4_active-tab")) {
+                $("#article_tourisme").removeClass("visible");
+              }
+            });
+          });
+          /* Rend visible le domaine 5 "Exposition" */
+          $(function() {
+            $('li').click(function(){
+              if ($("#tab_exposition").hasClass("section4_active-tab")) {
+                $("#article_exposition").addClass("visible");
+              } else if (!$("#tab_exposition").hasClass("section4_active-tab")) {
+                $("#article_exposition").removeClass("visible");
+              }
+            });
+          });
+          /* Rend visible le domaine 6 "Audiovisuel" */
+          $(function() {
+            $('li').click(function(){
+              if ($("#tab_audiovisuel").hasClass("section4_active-tab")) {
+                $("#article_audiovisuel").addClass("visible");
+              } else if (!$("#tab_audiovisuel").hasClass("section4_active-tab")) {
+                $("#article_audiovisuel").removeClass("visible");
+              }
+            });
+          });
+          /* Rend visible le domaine 7 "Sciences" */
+          $(function() {
+            $('li').click(function(){
+              if ($("#tab_sciences").hasClass("section4_active-tab")) {
+                $("#article_sciences").addClass("visible");
+              } else if (!$("#tab_sciences").hasClass("section4_active-tab")) {
+                $("#article_sciences").removeClass("visible");
+              }
+            });
+          });
+          /* Rend visible le domaine 8 "Animation" */
+          $(function() {
+            $('li').click(function(){
+              if ($("#tab_animation").hasClass("section4_active-tab")) {
+                $("#article_animation").addClass("visible");
+              } else if (!$("#tab_animation").hasClass("section4_active-tab")) {
+                $("#article_animation").removeClass("visible");
+              }
+            });
+          });
+          /* Rend visible le domaine 9 "Conférence" */
+          $(function() {
+            $('li').click(function(){
+              if ($("#tab_conference").hasClass("section4_active-tab")) {
+                $("#article_conference").addClass("visible");
+              } else if (!$("#tab_conference").hasClass("section4_active-tab")) {
+                $("#article_conference").removeClass("visible");
+              }
+            });
+          });
+          /* Rend visible le domaine 10 "Politique" */
+          $(function() {
+            $('li').click(function(){
+              if ($("#tab_politique").hasClass("section4_active-tab")) {
+                $("#article_politique").addClass("visible");
+              } else if (!$("#tab_politique").hasClass("section4_active-tab")) {
+                $("#article_politique").removeClass("visible");
+              }
+            });
+          });
+
+          </script>
+          <script  src="./js/slide4_graphique1_divers.js"></script>
+          <script  src="./js/slide4_graphique2_divers.js"></script>
+          <script  src="./js/slide4_graphique1_scene.js"></script>
+          <script  src="./js/slide4_graphique2_scene.js"></script>
+          <script  src="./js/slide4_graphique1_litterature.js"></script>
+          <script  src="./js/slide4_graphique2_litterature.js"></script>
+          <script  src="./js/slide4_graphique1_tourisme.js"></script>
+          <script  src="./js/slide4_graphique2_tourisme.js"></script>
+          <script  src="./js/slide4_graphique1_exposition.js"></script>
+          <script  src="./js/slide4_graphique2_exposition.js"></script>
+          <script  src="./js/slide4_graphique1_audiovisuel.js"></script>
+          <script  src="./js/slide4_graphique2_audiovisuel.js"></script>
+          <script  src="./js/slide4_graphique1_sciences.js"></script>
+          <script  src="./js/slide4_graphique2_sciences.js"></script>
+          <script  src="./js/slide4_graphique1_animation.js"></script>
+          <script  src="./js/slide4_graphique2_animation.js"></script>
+          <script  src="./js/slide4_graphique1_conference.js"></script>
+          <script  src="./js/slide4_graphique2_conference.js"></script>
+          <script  src="./js/slide4_graphique1_politique.js"></script>
+          <script  src="./js/slide4_graphique2_politique.js"></script>
+        </section>
         <!--Mentions "Voir la suite"-->
         <div class="next">
           <h6>Voir la suite</h6>
@@ -182,7 +544,7 @@
           <h1>Voyage au centre de l’Univerne</h1>
         </div>
         <!--Partie contenant les graphiques-->
-        <section id="container_slide7_graphique1"><!--Ajout d'un identifiant à la section--->
+        <section id="container_slide7_graphique1">
           <article id="slide7_graphique1">
            <script  src="js/section7/graph1.js"></script>
           </article>

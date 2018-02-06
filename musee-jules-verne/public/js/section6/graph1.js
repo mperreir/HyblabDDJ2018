@@ -12,22 +12,22 @@ var slide6_graphique1 = new Chart(ctx, {
       {
         label: 'Simple Mention de Jules Verne (%)',
         data: [68.62,11.95,59.82,40.65,33.5,40.17,18.35,18.4,24.4,93.65],
-        backgroundColor: '#bde9ff',
+        backgroundColor: '#fff08a',
       },
       {
         label: "Inspiré par Jules Verne (%)",
         data: [20.52,31.45,15.85,39.4,26.35,24.1,58.95,58.95,10.45,1.75],
-        backgroundColor: '#8ac0ff',
+        backgroundColor: '#ffe570',
       },
       {
         label: "Consacré Jules Verne (%)",
         data: [10.56,3.3,19,19.75,39.6,10.88,20.55,20.55,65.15,4.6],
-        backgroundColor: '#0972ff',
+        backgroundColor: '#ffcc11',
       },
       {
         label: "Adaptation d'une œuvre de Jules Verne (%)",
         data: [0.3,53.3,5.33,0.2,0.55,24.85,2.15,2.1,0,0],
-        backgroundColor: '#0c5dc1',
+        backgroundColor: '#ffa200',
       }
     ]
   },
@@ -56,7 +56,12 @@ var slide6_graphique1 = new Chart(ctx, {
     },
 
     legend: {
-    display: false,
+    display: true,
+    position: 'bottom',
+    labels: {
+      boxWidth: 10,
+    },
+
     },
 
     scales: {

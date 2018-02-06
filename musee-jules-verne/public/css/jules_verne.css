@@ -254,8 +254,7 @@ div.visited .intro {
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
-        animation-delay: 1300ms;
-
+    animation-delay: 1300ms;
     opacity: 0;
     box-shadow: 0 0 1vw rgba(0, 0, 0, .5);
   }
@@ -268,16 +267,20 @@ div.visited .intro {
 
   #mapid {
     position: relative;
-    height: 60vh;
-    width: 40vw;
+    height: 70vh;
+    width: 100vw;
   }
 
   .canvas_container {
   	position: relative;
-  	height: 60vh;
-  	width: 40vw;
-    border: 2px black solid;
+  	height: 70vh;
+  	width: 60vw;
   }
+
+  #slide7_graphique1 {
+	height: 70vh;
+}
+
 
     @keyframes fade {
             0% {
