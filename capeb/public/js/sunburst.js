@@ -2,10 +2,6 @@
 
 
 // Dimensions of sunburst.
-
-console.log($(window).height());  
-console.log($(window).width()); 
- 
 var width = 0.23 * $(window).width();
 var height = width;
 var radius = Math.min(width, height) / 2;

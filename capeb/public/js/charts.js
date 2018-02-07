@@ -81,8 +81,6 @@ var drawDDChart = function(stats) {
                     // If you click on at least 1 element ...
                     if (element.length > 0) {
                         // Logs it
-                        console.log(element[0]);
-
                         // Here we get the data linked to the clicked bubble ...
                         var datasetLabel = this.config.data.datasets[element[0]._datasetIndex].label;
 
@@ -578,21 +576,6 @@ function drawDistanceDataviz(data) {
 
     var options = {
         tooltips: false,
-        elements: {
-            point: {
-                backgroundColor: function (context) {
-                    var value = context.dataset.data[context.dataIndex];
-                    return colorMatch[value.metier.substr(0, 3)];
-                },
-
-                r: function (context) {
-                    var value = context.dataset.data[context.dataIndex];
-                    var size = context.chart.width;
-                    var base = Math.abs(value.v) / 1000;
-                    return (size * 2) * base;
-                }
-            }
-        },
         scales: {
             xAxes: [{
                 gridLines: {
