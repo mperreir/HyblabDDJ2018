@@ -55,8 +55,7 @@ body{
 	width: 80%;	
 	color: #FFFFFF;	
 	font-family: "Open Sans";	
-	font-size: 2.5vmin;	
-	font-weight: 800;	
+	font-size: 2vmin;	
 	line-height: 125%;
 }
 
@@ -73,7 +72,7 @@ body{
 	font-family: "Open Sans";	
 	font-size: 2.1vmin
 	;	
-	line-height: 105%;	
+	line-height: 120%;	
 }
 
 .article3 p {
