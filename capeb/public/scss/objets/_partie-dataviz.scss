@@ -137,6 +137,7 @@
 
   >.legendMP{
     .legendChoise{
+      margin-bottom: 20px;
       >.legendTitle{
         text-align: left;
       }
@@ -158,6 +159,7 @@
       float: left;
       margin-bottom: 20px;
       >.reason{
+        margin-bottom: 20px;
         >.legendTitle{
           text-align: left;
         }
@@ -172,6 +174,7 @@
         }
       }
       >.legendDevD{
+        margin-bottom: 20px;
         >.acces{
           border-left: solid 5px $color-accessibilite;
         }

@@ -187,6 +187,18 @@
   margin-top: -15px;
 }
 
+.texte-dataviz h4{
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: left;
+  margin-top:15px;
+  grid-column: 3 ;
+  grid-row: 3 / 5;
+}
+
 .texte-dataviz .separateur{
   position: relative;
   width: 65px;
