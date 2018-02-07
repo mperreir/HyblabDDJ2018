@@ -169,7 +169,7 @@ p{
     width: 600px;
     height: 80px;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 12px;
 
 }
@@ -596,7 +596,7 @@ p{
 
 #name{
     margin-left: 350px;
-    margin-top: -40px;
+    margin-top: -45px;
     width: 400px;
     word-wrap: break-word;
     font-size: 20px;
