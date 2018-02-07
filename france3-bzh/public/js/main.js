@@ -1016,6 +1016,7 @@ var pnDisplay = false;
 var accDisplay = false;
 var coordacc = false;
 var map;
+var bounds = L.latLngBounds(new L.LatLng(40.535310, -3.911133), new L.LatLng(51.366636, 8.778320));
 function initmap() {
 // paramÃ©trage de la carte
     map = new L.Map('map',{
@@ -1024,6 +1025,8 @@ function initmap() {
         minZoom: 5,
         maxZoom: 11,
         zoomControl:true,
+        maxBounds: bounds,
+        maxBoundsViscosity: 0.75,
         layers:[pn,accidentRegion,coordAcc,accidentratioRegion]});
 
     // crÃ©ation des "tiles" avec open street map
