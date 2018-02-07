@@ -1,4 +1,5 @@
 var current_d = 0;
+var current_legend;
 
 
 function miniStats(regionStats, d) {
@@ -24,7 +25,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-conjoncture");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
-                    document.getElementById("rappel-conjoncture").innerHTML = "Selon les artisans de votre secteur la conjoncture mérite une note de : " + parseFloat(json.values[0][0]).toFixed(1) + "/10      ";
+                    document.getElementById("rappel-conjoncture").innerHTML = "Selon les artisans de votre secteur la conjoncture mérite une note de : " + parseFloat(json.values[0][0]).toFixed(1) + "/10";
                     fetchConjonctureData(d);
                     closeOnEscape();
                 });
@@ -56,6 +57,8 @@ function miniStats(regionStats, d) {
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
                     document.getElementById("rappel-investissement").innerHTML = (json.values[3][1] * 100).toFixed(1) + "% des artisans de votre territoire déclarent vouloir investir en 2018";
+                    current_legend = document.getElementsByClassName("legendInvest")[0];
+                    current_legend.style.display = "block";
                     investissementDataviz(json);
                     closeOnEscape();
                 });
@@ -101,10 +104,9 @@ function miniStats(regionStats, d) {
                 span = document.createElement("span");
                 liste.appendChild(span);
                 span.className += "donneeliste";
-                span.style.fontSize = scaleBetween(value.percentage, 0, 12, 0, 1) + "vw";
+                span.style.fontSize = scaleBetween(value.percentage, 0.5, 12, 0, 1) + "vw";
                 span.innerHTML = value.name;
             });
-
 
 
             $('#card-contrat .open').each(function(){
@@ -115,6 +117,8 @@ function miniStats(regionStats, d) {
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
                     document.getElementById("rappel-contrat").innerHTML = "Les artisans de votre territoire privilégient les : " + stat[0].name + ", " + stat[1].name;
+                    current_legend = document.getElementsByClassName("legendContrats")[0];
+                    current_legend.style.display = "block";
                     createSunburst(d);
                     closeOnEscape();
                 });
@@ -134,6 +138,8 @@ function miniStats(regionStats, d) {
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
                     document.getElementById("rappel-dd").innerHTML = "La thématique phare sur votre secteur est : " + stat2[0].name;
+                    current_legend = document.getElementsByClassName("legendDD")[0];
+                    current_legend.style.display = "block";
                     drawDDChart(stats);
                     closeOnEscape();
                 });
@@ -164,12 +170,13 @@ function miniStats(regionStats, d) {
             $('#card-emploi .open').each(function(){
                 $(this).on('click', function() {
 					current_d = 2;
-
                     document.getElementById("modal-nom-epci").innerHTML = d.properties.nom_comple + " - Embauche";
                     var texte = document.getElementById("texte-emploi");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
                     document.getElementById("rappel-emploi").innerHTML = "Le métier qui prévoie d’embaucher le plus en 2018 c’est : " + stats.Nombre_Recrutements_Envisage_2017.labels[indexOfMax];
+                    current_legend = document.getElementsByClassName("legendEmbauche")[0];
+                    current_legend.style.display = "block";
                     drawChart3dEmploi(stats);
                     closeOnEscape();
                 });
@@ -205,6 +212,8 @@ function miniStats(regionStats, d) {
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
                     document.getElementById("rappel-distance").innerHTML = "Les artisans de votre secteur parcourent en moyenne " + Math.round(mean) + " km";
+                    current_legend = document.getElementsByClassName("legendRaction")[0];
+                    current_legend.style.display = "block";
                     drawDistanceDataviz(json);
                     closeOnEscape();
                 });
@@ -278,6 +287,7 @@ function createModal(){
             texte.style.display = "none";
             texte.className = "texte-dataviz";
         }
+        current_legend.style.display = "none";
     });
 
 

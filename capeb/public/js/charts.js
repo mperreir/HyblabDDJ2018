@@ -259,6 +259,9 @@ var drawChart3dEmploi = function (data) {
         },
         // Configuration options go here
         options: {
+            legend: {
+                display: false
+            },
             title: {
                 display: true,
                 text: "Evolution du % d’entreprises qui envisagent d'embaucher"
@@ -389,6 +392,9 @@ function investissementDataviz(data) {
         data: d,
         // Configuration options go here
         options: {
+            legend: {
+                display: false
+            },
             tooltips: {
                 mode: 'index',
                 intersect: false
@@ -608,8 +614,7 @@ function drawDistanceDataviz(data) {
             }]
         },
         legend: {
-            display: true,
-            labels: {}
+            display: false
         }
     };
 
