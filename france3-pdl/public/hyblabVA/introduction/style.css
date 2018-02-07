@@ -44,7 +44,7 @@ body{
 	max-width: 100%;
 	color: #FFFFFF;
 	font-family: Montserrat;
-	font-size: 47px;	
+	font-size: 4.5vmin;	
 	font-weight: bold;	
 	line-height: 110%;
 }
@@ -55,7 +55,7 @@ body{
 	width: 80%;	
 	color: #FFFFFF;	
 	font-family: "Open Sans";	
-	font-size: 23.5px;	
+	font-size: 2vmin;	
 	font-weight: 800;	
 	line-height: 125%;
 }
@@ -71,7 +71,8 @@ body{
 	margin-top: 0%;
 	color: #0F0D76;	
 	font-family: "Open Sans";	
-	font-size: 23.5px;	
+	font-size: 2.1vmin
+	;	
 	line-height: 105%;	
 }
 
@@ -102,7 +103,7 @@ body{
 .partieD h2 {
 	color: #060E8C;
 	font-family: Montserrat;
-	font-size: 47px;	
+	font-size: 3em;	
 	font-weight: bold;
 	margin-bottom: 0%;
 }
