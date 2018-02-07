@@ -1,5 +1,5 @@
-var width = 800,
-  height = 600;
+var width = 710,
+  height = 520;
 
 var svg = d3.select( "#testMap" )
   .append( "svg" )
