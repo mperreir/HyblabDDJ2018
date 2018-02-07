@@ -1026,7 +1026,7 @@ function initmap() {
         maxZoom: 11,
         zoomControl:true,
         maxBounds: bounds,
-        maxBoundsViscosity: 0.75,
+        maxBoundsViscosity: 0.5,
         layers:[pn,accidentRegion,coordAcc,accidentratioRegion]});
 
     // crÃ©ation des "tiles" avec open street map

@@ -1,5 +1,5 @@
 {
-    "labels": [ "Grand-Est", "Corse","Bourgogne", "Auvergne", "Provence-Alpes-Cotes d'Azur", "Occitanie", "Centre", "Hauts-de-France", "Ile-de-France", "Normandie", "Bretagne", "Pays de la loire","Nouvelle-Aquitaine"],
+    "labels": ["Corse", "Bretagne","Bourgogne", "Normandie", "Centre", "Pays de la loire", "Nouvelle-Aquitaine", "Occitanie", "Grand-Est", "Auvergne", "Hauts-de-France", "Provence-Alpes-Cotes d'Azur","Ile-de-France"],
     "datasets": [
       {
         "label": "Nombre d'accidents",
@@ -10,7 +10,8 @@
         "hoverBorderColor" : "#EC666D",
         "hoverBackgroundColor" : "#EC666D",
         "pointHighlightStroke": "rgba(220,220,220,1)",
-        "data": [ 78, 0,21, 79, 97, 70, 35, 92, 193, 21, 15, 37, 66]
+        "data": [ 0, 15, 21, 21, 35, 37, 66, 70, 78, 79, 92, 97, 193]
+
       }
     ]
 
