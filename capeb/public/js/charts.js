@@ -17,10 +17,22 @@ var colorZoom = [
 ];
 
 var drawDDChart = function(stats) {
-    function radiusmatch(value) {
-        return (value*50)
+    function scale(number) {
+        var r;
+        if(number<=10){
+            r = 10;
+        } else if(number<=25){
+            r = 18;
+        } else if(number<=50){
+            r = 26;
+        } else if(number<=75){
+            r =  34;
+        } else if(number<=100){
+            r = 42;
+        }
+        return r;
     }
-	
+
     var sec = document.getElementById("dataviz-section");
     if (sec !== null) {
         sec.remove();
@@ -46,12 +58,11 @@ var drawDDChart = function(stats) {
                 {
                     x: id,
                     y: 2,
-                    r: radiusmatch(parseFloat(stats.Developpement_durable.values[1][id]))
+                    r: scale(parseFloat(stats.Developpement_durable.values[1][id]))
                 }
             ],
-            backgroundColor: colors[id],
+            backgroundColor: colors[id]
         };
-
 	});
 	
     var ch = new Chart(ctx,
@@ -132,7 +143,7 @@ var drawDDChart = function(stats) {
                             drawBorder: false
                         }
                     }]
-                },
+                }
             }
         }
     );
@@ -574,7 +585,7 @@ function drawDistanceDataviz(data) {
     (parseFloat(minX)-10<0) ? minX=0 : minX = parseFloat(minX) - 10;
     maxX = parseInt(maxX);
     minX = parseInt(minX);
-    
+
     var options = {
         tooltips: false,
         scales: {
