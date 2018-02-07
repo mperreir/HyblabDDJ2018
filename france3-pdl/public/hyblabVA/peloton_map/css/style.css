@@ -674,6 +674,8 @@ Main Components
 object{
   height:296px;
   overflow:hidden;
+  margin-left:12vw;
+  width:55vw;
 }
 
 .buttons .inactive{
