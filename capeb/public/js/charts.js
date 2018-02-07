@@ -83,11 +83,10 @@ var drawDDChart = function(stats) {
             data: {'datasets': datasets},
             options: {
                 title: {
-                    display: true,
-                    text: "Niveau d’engagement par thème"
+                    display: false
                 },
                 legend: {
-                    display: false,
+                    display: false
                 },
                 onClick: function (e) {
                     var element = this.getElementAtEvent(e);
@@ -276,8 +275,7 @@ var drawChart3dEmploi = function (data) {
                 display: false
             },
             title: {
-                display: true,
-                text: "Evolution du % d’entreprises qui envisagent d'embaucher"
+                display: true
             },
             tooltips: {
                 mode: 'index',
@@ -544,8 +542,7 @@ var drawMP = function(stats) {
         },
         options: {
             title: {
-                display: true,
-                text: "% d'entreprises qui ont réalisé des marchés public en 2017"
+                display: false,
             },
             legend: {
                 display: false
@@ -813,8 +810,7 @@ function createConjonctureDataviz(json) {
         data: d,
         options: {
             title: {
-                display: true,
-                text: "Tendance 2017 des indicateurs clés des entreprises"
+                display: false,
             },
             legend: {
                 display: false
