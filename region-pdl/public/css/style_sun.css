@@ -151,6 +151,8 @@ p{
     margin-left: 36%;
     margin-top: -50px;
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #sidebar {
@@ -266,7 +268,7 @@ p{
 
 .btn{
     position: relative;
-    margin-top: 170px;
+    margin-top: 160px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #7a7a7a;
     display: inline-block;
@@ -591,6 +593,13 @@ p{
     background: #4e2850;
     margin: 0 auto;
 }*/
+
+#name{
+    margin-left: 430px;
+    margin-top: -30px;
+    width: 320px;
+    word-wrap: break-word;
+}
 
 #expan1{
     position: relative;

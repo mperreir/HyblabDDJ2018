@@ -161,6 +161,8 @@ app.controller('myCtrl', function ($scope) {
                     });
                 }
             });
+            d3.select('#name')
+                .text(params.second);
             //Layered data
             angular.forEach(data, function (value, key) {
                 var depthCursor = hierarchyData.children;
