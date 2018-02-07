@@ -38,7 +38,7 @@ function controleurPlan(){
 
     var couleur = ['#d6f2b3', '#bbdb83', '#8eaf46', '#a9ff88', '#85c275', '#57664d', '#66cc33', '#479116', '#3f5b33'];
 
-    anneeEvolution.onclick = function(){
+    /*anneeEvolution.onclick = function(){
         textePlan.textContent = "J’ai pu voir passer sur la Main 01 près de 306 groupes au Hellfest. Une vraie ribambelle d’artistes depuis plus de 13 ans. Cela est dû au nombre grandissant de mes amis les festivaliers. De 22 000 à 152 000 tickets vendus en 13 ans, quelle évolution, c’est incroyable! Venez vite voir cet élargissement considérable du Hellfest !";
 
         setYearActive(tabAnnees, 0);
@@ -67,12 +67,13 @@ function controleurPlan(){
         document.getElementById("pin2012-05").className = "pin--2012-5"
         document.getElementById("pin2012-06").className = "pin--2012-6"
         document.getElementById("pin2012-07").className = "pin--2012-7"
-    }
+    }*/
 
-    annee2006.onclick = function(){
+    function annee2006Load(){
         textePlan.textContent = "Les 72 groupes invités à la première édition du Hellfest sont équitablement répartis entre deux scènes : Main (la scène principale) et Hard n'Heavy stage.";
 
         setYearActive(tabAnnees, 1);
+        anneeEvolution.className = "pointEvolution--hidden";
 
         document.getElementById("carte06").className = "2006 divCarte ";
         document.getElementById("carte07").className = "2007 divCarte--hidden";
@@ -98,7 +99,94 @@ function controleurPlan(){
         document.getElementById("pin2012-05").className = "pin--2012-5"
         document.getElementById("pin2012-06").className = "pin--2012-6"
         document.getElementById("pin2012-07").className = "pin--2012-7"
-        $('li').remove();
+        $('.legendeScene li').remove();
+        $('.legendeScene--hidden li').remove();
+        $('.listeScene--hidden li').remove();
+        $('.listeScene li').remove();
+        var json = loadData("data/AnneeSceneTypeGroupe.json");
+        var listeGroupe1 = new Array();
+        var listeGroupe2 = new Array();
+        json.forEach(function(groupe){
+            if (groupe.Annee === 2006 && groupe.Scene === "Hard n'Heavy stage" )
+            {
+                listeGroupe1.push(groupe.Groupe);
+            }
+            if (groupe.Annee === 2006 && groupe.Scene === "Main" )
+            {
+                listeGroupe2.push(groupe.Groupe);
+            }
+        });
+        listeGroupe1.forEach(function(groupe){
+            var choix = document.createElement('li');
+            choix.textContent = groupe;
+            scene1.appendChild(choix);
+        });
+        listeGroupe2.forEach(function(groupe){
+            var choix = document.createElement('li');
+            choix.textContent = groupe;
+            scene2.appendChild(choix);
+        });
+        var pays1 = camembertScene(2006, "Hard n'Heavy stage", "#pieScene1");
+        for (var i = 0; i<pays1.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays1[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene1.appendChild(legende);
+        }
+        var pays2 = camembertScene(2006, "Main", "#pieScene2");
+        for (var i = 0; i<pays2.length; i++)
+        {
+            var legende = document.createElement('li');
+            legende.textContent = pays2[i];
+            var point = document.createElement('div');
+            point.className = "pointLegendeScene";
+            point.style.background = couleur[i];
+            legende.appendChild(point);
+            legendeScene2.appendChild(legende);
+        }
+
+    }
+
+    annee2006Load ();
+
+    annee2006.onclick = function(){
+        textePlan.textContent = "Les 72 groupes invités à la première édition du Hellfest sont équitablement répartis entre deux scènes : Main (la scène principale) et Hard n'Heavy stage.";
+
+        setYearActive(tabAnnees, 1);
+        anneeEvolution.className = "pointEvolution--hidden";
+
+        document.getElementById("carte06").className = "2006 divCarte ";
+        document.getElementById("carte07").className = "2007 divCarte--hidden";
+        document.getElementById("carte08").className = "2008 divCarte--hidden";
+        document.getElementById("carte09").className = "2009 divCarte--hidden";
+        document.getElementById("carte12").className = "2012 divCarte--hidden";
+        document.getElementById("pin2006-01").className = "fadeInDown animated pin--2006-1"
+        document.getElementById("pin2006-02").className = "fadeInDown animated pin--2006-2"
+        document.getElementById("pin2007-01").className = "pin--2007-1"
+        document.getElementById("pin2007-02").className = "pin--2007-2"
+        document.getElementById("pin2007-03").className = "pin--2007-3"
+        document.getElementById("pin2008-01").className = "pin--2008-1"
+        document.getElementById("pin2008-02").className = "pin--2008-2"
+        document.getElementById("pin2008-03").className = "pin--2008-3"
+        document.getElementById("pin2009-01").className = "pin--2009-1"
+        document.getElementById("pin2009-02").className = "pin--2009-2"
+        document.getElementById("pin2009-03").className = "pin--2009-3"
+        document.getElementById("pin2009-04").className = "pin--2009-4"
+        document.getElementById("pin2012-01").className = "pin--2012-1"
+        document.getElementById("pin2012-02").className = "pin--2012-2"
+        document.getElementById("pin2012-03").className = "pin--2012-3"
+        document.getElementById("pin2012-04").className = "pin--2012-4"
+        document.getElementById("pin2012-05").className = "pin--2012-5"
+        document.getElementById("pin2012-06").className = "pin--2012-6"
+        document.getElementById("pin2012-07").className = "pin--2012-7"
+        $('.legendeScene li').remove();
+        $('.legendeScene--hidden li').remove();
+        $('.listeScene--hidden li').remove();
+        $('.listeScene li').remove();
         var json = loadData("data/AnneeSceneTypeGroupe.json");
         var listeGroupe1 = new Array();
         var listeGroupe2 = new Array();
@@ -150,6 +238,7 @@ function controleurPlan(){
         textePlan.textContent = "En 2007, la Hard n'Heavy est remplacée par la Gibson Stage.S'y ajoute la Discover stage, une nouvelle scène, sur laquelle 30 groupes se produisent.";
 
         setYearActive(tabAnnees, 2);
+        anneeEvolution.className = "pointEvolution--hidden";
 
         document.getElementById("carte06").className = "2006 divCarte--hidden";
         document.getElementById("carte07").className = "2007 divCarte";
@@ -175,7 +264,10 @@ function controleurPlan(){
         document.getElementById("pin2012-05").className = "pin--2012-5"
         document.getElementById("pin2012-06").className = "pin--2012-6"
         document.getElementById("pin2012-07").className = "pin--2012-7"
-        $('li').remove();
+        $('.legendeScene li').remove();
+        $('.legendeScene--hidden li').remove();
+        $('.listeScene--hidden li').remove();
+        $('.listeScene li').remove();
         var json = loadData("data/AnneeSceneTypeGroupe.json");
         var listeGroupe1 = new Array();
         var listeGroupe2 = new Array();
@@ -248,6 +340,7 @@ function controleurPlan(){
         textePlan.textContent = "Le nombre de groupes augmentente considérablement par rapport à 2007, passant de 84 à 108. Les groupes sont répartis entre 3 scènes distinctes et hiérarchisées : la main, la second stage et enfin la discover stage.";
 
         setYearActive(tabAnnees, 3);
+        anneeEvolution.className = "pointEvolution--hidden";
 
         document.getElementById("carte06").className = "2006 divCarte--hidden";
         document.getElementById("carte07").className = "2007 divCarte--hidden";
@@ -273,7 +366,10 @@ function controleurPlan(){
         document.getElementById("pin2012-05").className = "pin--2012-5"
         document.getElementById("pin2012-06").className = "pin--2012-6"
         document.getElementById("pin2012-07").className = "pin--2012-7"
-        $('li').remove();
+        $('.legendeScene li').remove();
+        $('.legendeScene--hidden li').remove();
+        $('.listeScene--hidden li').remove();
+        $('.listeScene li').remove();
         var json = loadData("data/AnneeSceneTypeGroupe.json");
         var listeGroupe1 = new Array();
         var listeGroupe2 = new Array();
@@ -347,6 +443,7 @@ function controleurPlan(){
         textePlan.textContent = "En 2009, une quatrième scène est crée. La Main 02, complétant la Main 01, favorise les groupes de métal alternatif, nu métal, métalcore et trashmétal. Les deux scènes accueillent toutes les deux 27 groupes.";
 
         setYearActive(tabAnnees, 4);
+        anneeEvolution.className = "pointEvolution--hidden";
 
         document.getElementById("carte06").className = "2006 divCarte--hidden";
         document.getElementById("carte07").className = "2007 divCarte--hidden";
@@ -372,7 +469,10 @@ function controleurPlan(){
         document.getElementById("pin2012-05").className = "pin--2012-5"
         document.getElementById("pin2012-06").className = "pin--2012-6"
         document.getElementById("pin2012-07").className = "pin--2012-7"
-        $('li').remove();
+        $('.legendeScene li').remove();
+        $('.legendeScene--hidden li').remove();
+        $('.listeScene--hidden li').remove();
+        $('.listeScene li').remove();
         var json = loadData("data/AnneeSceneTypeGroupe.json");
         var listeGroupe1 = new Array();
         var listeGroupe2 = new Array();
@@ -467,6 +567,7 @@ function controleurPlan(){
         textePlan.textContent = "En 2010, le festival conserve les mêmes scènes et le même nombre de groupes qu’en 2009. La Main 01 produit principalement les groupes de heavy metal tradiotionnel et de hardrock.";
 
         setYearActive(tabAnnees, 5);
+        anneeEvolution.className = "pointEvolution--hidden";
 
         document.getElementById("carte06").className = "2006 divCarte--hidden";
         document.getElementById("carte07").className = "2007 divCarte--hidden";
@@ -492,7 +593,10 @@ function controleurPlan(){
         document.getElementById("pin2012-05").className = "pin--2012-5"
         document.getElementById("pin2012-06").className = "pin--2012-6"
         document.getElementById("pin2012-07").className = "pin--2012-7"
-        $('li').remove();
+        $('.legendeScene li').remove();
+        $('.legendeScene--hidden li').remove();
+        $('.listeScene--hidden li').remove();
+        $('.listeScene li').remove();
         var json = loadData("data/AnneeSceneTypeGroupe.json");
         var listeGroupe1 = new Array();
         var listeGroupe2 = new Array();
@@ -586,6 +690,7 @@ function controleurPlan(){
         textePlan.textContent ="118 groupes sont présents en 2011. C’est un nombre relativement constant depuis l’édition de 2008.";
 
         setYearActive(tabAnnees, 6);
+        anneeEvolution.className = "pointEvolution--hidden";
 
         document.getElementById("carte06").className = "2006 divCarte--hidden";
         document.getElementById("carte07").className = "2007 divCarte--hidden";
@@ -611,7 +716,10 @@ function controleurPlan(){
         document.getElementById("pin2012-05").className = "pin--2012-5"
         document.getElementById("pin2012-06").className = "pin--2012-6"
         document.getElementById("pin2012-07").className = "pin--2012-7"
-        $('li').remove();
+        $('.legendeScene li').remove();
+        $('.legendeScene--hidden li').remove();
+        $('.listeScene--hidden li').remove();
+        $('.listeScene li').remove();
         var json = loadData("data/AnneeSceneTypeGroupe.json");
         var listeGroupe1 = new Array();
         var listeGroupe2 = new Array();
@@ -705,6 +813,7 @@ function controleurPlan(){
         textePlan.textContent ="Le Hellfest n'accueille plus 4 scènes mais bien 7 scènes pour un total de 170 artistes en cette année 2012, un véritable boom par rapport à l’année précédente. La Warzone met à l’honneur le punk hardcore, la Valley  le sludge/ stoner et le Metal Corner déniche les talents de demain . Autres changements, la Terrorizer tent laisse place au Temple (doom / pagan metal / black metal) et la Rock Hard tent devient l’Altar ( death metal / grind).";
 
         setYearActive(tabAnnees, 7);
+        anneeEvolution.className = "pointEvolution--hidden";
 
         document.getElementById("carte06").className = "2006 divCarte--hidden";
         document.getElementById("carte07").className = "2007 divCarte--hidden";
@@ -730,7 +839,10 @@ function controleurPlan(){
         document.getElementById("pin2012-05").className = "fadeInDown animated pin--2012-5"
         document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
         document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
-        $('li').remove();
+        $('.legendeScene li').remove();
+        $('.legendeScene--hidden li').remove();
+        $('.listeScene--hidden li').remove();
+        $('.listeScene li').remove();
         var json = loadData("data/AnneeSceneTypeGroupe.json");
         var listeGroupe1 = new Array();
         var listeGroupe2 = new Array();
@@ -887,6 +999,7 @@ function controleurPlan(){
         textePlan.textContent ="170 artistes montent sur les planches du Hellfest en 2013, une répétition de 2012 avec les mêmes scènes.";
 
         setYearActive(tabAnnees, 8);
+        anneeEvolution.className = "pointEvolution--hidden";
 
         document.getElementById("carte06").className = "2006 divCarte--hidden";
         document.getElementById("carte07").className = "2007 divCarte--hidden";
@@ -912,7 +1025,10 @@ function controleurPlan(){
         document.getElementById("pin2012-05").className = "fadeInDown animated pin--2012-5"
         document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
         document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
-        $('li').remove();
+        $('.legendeScene li').remove();
+        $('.legendeScene--hidden li').remove();
+        $('.listeScene--hidden li').remove();
+        $('.listeScene li').remove();
         var json = loadData("data/AnneeSceneTypeGroupe.json");
         var listeGroupe1 = new Array();
         var listeGroupe2 = new Array();
@@ -1069,6 +1185,7 @@ function controleurPlan(){
         textePlan.textContent ="Le format des scènes du Hellfest de 2012 reste toujours le même pour acceuillir le même nombre d’artistes.";
 
         setYearActive(tabAnnees, 9);
+        anneeEvolution.className = "pointEvolution--hidden";
 
         document.getElementById("carte06").className = "2006 divCarte--hidden";
         document.getElementById("carte07").className = "2007 divCarte--hidden";
@@ -1094,7 +1211,10 @@ function controleurPlan(){
         document.getElementById("pin2012-05").className = "fadeInDown animated pin--2012-5"
         document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
         document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
-        $('li').remove();
+        $('.legendeScene li').remove();
+        $('.legendeScene--hidden li').remove();
+        $('.listeScene--hidden li').remove();
+        $('.listeScene li').remove();
         var json = loadData("data/AnneeSceneTypeGroupe.json");
         var listeGroupe1 = new Array();
         var listeGroupe2 = new Array();
@@ -1252,6 +1372,7 @@ function controleurPlan(){
         textePlan.textContent ="Très légère baisse de nombre d’artistes en 2015 puisque les 7 scènes reçoivent 166 groupes.";
 
         setYearActive(tabAnnees, 10);
+        anneeEvolution.className = "pointEvolution--hidden";
 
         document.getElementById("carte06").className = "2006 divCarte--hidden";
         document.getElementById("carte07").className = "2007 divCarte--hidden";
@@ -1277,7 +1398,10 @@ function controleurPlan(){
         document.getElementById("pin2012-05").className = "fadeInDown animated pin--2012-5"
         document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
         document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
-        $('li').remove();
+        $('.legendeScene li').remove();
+        $('.legendeScene--hidden li').remove();
+        $('.listeScene--hidden li').remove();
+        $('.listeScene li').remove();
         var json = loadData("data/AnneeSceneTypeGroupe.json");
         var listeGroupe1 = new Array();
         var listeGroupe2 = new Array();
@@ -1435,6 +1559,7 @@ function controleurPlan(){
         textePlan.textContent ="Le Metal Corner en partenariat avec Deezer Open Hell'Stage en 2016 accueille presque le double de ce qu’il a l’habitude d’avoir. Cette scène où les groupes de métals s’affrontent pour se produirent sur une “main stage” rencontre un véritable succès.";
 
         setYearActive(tabAnnees, 11);
+        anneeEvolution.className = "pointEvolution--hidden";
 
         document.getElementById("carte06").className = "2006 divCarte--hidden";
         document.getElementById("carte07").className = "2007 divCarte--hidden";
@@ -1460,7 +1585,10 @@ function controleurPlan(){
         document.getElementById("pin2012-05").className = "fadeInDown animated pin--2012-5"
         document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
         document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
-        $('li').remove();
+        $('.legendeScene li').remove();
+        $('.legendeScene--hidden li').remove();
+        $('.listeScene--hidden li').remove();
+        $('.listeScene li').remove();
         var json = loadData("data/AnneeSceneTypeGroupe.json");
         var listeGroupe1 = new Array();
         var listeGroupe2 = new Array();
@@ -1617,6 +1745,7 @@ function controleurPlan(){
         textePlan.textContent ="167 artistes font monter les décibels en 2017 pour faire vibrer les festivaliers.";
 
         setYearActive(tabAnnees, 12);
+        anneeEvolution.className = "pointEvolution--hidden";
 
         document.getElementById("carte06").className = "2006 divCarte--hidden";
         document.getElementById("carte07").className = "2007 divCarte--hidden";
@@ -1642,7 +1771,10 @@ function controleurPlan(){
         document.getElementById("pin2012-05").className = "fadeInDown animated pin--2012-5"
         document.getElementById("pin2012-06").className = "fadeInDown animated pin--2012-6"
         document.getElementById("pin2012-07").className = "fadeInDown animated pin--2012-7"
-        $('li').remove();
+        $('.legendeScene li').remove();
+        $('.legendeScene--hidden li').remove();
+        $('.listeScene--hidden li').remove();
+        $('.listeScene li').remove();
         var json = loadData("data/AnneeSceneTypeGroupe.json");
         var listeGroupe1 = new Array();
         var listeGroupe2 = new Array();
@@ -1846,7 +1978,7 @@ function controleurPodium()
 
         setYearActive(tabPodiums, 1);
         var pays = camembertPodium(2006);
-        $('li').remove();
+        $('#legendePodium li').remove();
         for (var i = 0; i<pays.length; i++)
         {
             var legende = document.createElement('li');
@@ -1881,7 +2013,7 @@ function controleurPodium()
         document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 2);
         var pays = camembertPodium(2007);
-        $('li').remove();
+        $('#legendePodium li').remove();
         for (var i = 0; i<pays.length; i++)
         {
             var legende = document.createElement('li');
@@ -1916,7 +2048,7 @@ function controleurPodium()
         document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 3);
         var pays = camembertPodium(2008);
-        $('li').remove();
+        $('#legendePodium li').remove();
         for (var i = 0; i<pays.length; i++)
         {
             var legende = document.createElement('li');
@@ -1951,7 +2083,7 @@ function controleurPodium()
         document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 4);
         var pays = camembertPodium(2009);
-        $('li').remove();
+        $('#legendePodium li').remove();
         for (var i = 0; i<pays.length; i++)
         {
             var legende = document.createElement('li');
@@ -1987,7 +2119,7 @@ function controleurPodium()
         document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 5);
         var pays = camembertPodium(2010);
-        $('li').remove();
+        $('#legendePodium li').remove();
         for (var i = 0; i<pays.length; i++)
         {
             var legende = document.createElement('li');
@@ -2023,7 +2155,7 @@ function controleurPodium()
         document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 6);
         var pays = camembertPodium(2011);
-        $('li').remove();
+        $('#legendePodium li').remove();
         for (var i = 0; i<pays.length; i++)
         {
             var legende = document.createElement('li');
@@ -2059,7 +2191,7 @@ function controleurPodium()
         document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 7);
         var pays = camembertPodium(2012);
-        $('li').remove();
+        $('#legendePodium li').remove();
         for (var i = 0; i<pays.length; i++)
         {
             var legende = document.createElement('li');
@@ -2095,7 +2227,7 @@ function controleurPodium()
         document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 8);
         var pays = camembertPodium(2013);
-        $('li').remove();
+        $('#legendePodium li').remove();
         for (var i = 0; i<pays.length; i++)
         {
             var legende = document.createElement('li');
@@ -2131,7 +2263,7 @@ function controleurPodium()
         document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 9);
         var pays = camembertPodium(2014);
-        $('li').remove();
+        $('#legendePodium li').remove();
         for (var i = 0; i<pays.length; i++)
         {
             var legende = document.createElement('li');
@@ -2166,7 +2298,7 @@ function controleurPodium()
         document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 10);
         var pays = camembertPodium(2015);
-        $('li').remove();
+        $('#legendePodium li').remove();
         for (var i = 0; i<pays.length; i++)
         {
             var legende = document.createElement('li');
@@ -2202,7 +2334,7 @@ function controleurPodium()
         document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 11);
         var pays = camembertPodium(2016);
-        $('li').remove();
+        $('#legendePodium li').remove();
         for (var i = 0; i<pays.length; i++)
         {
             var legende = document.createElement('li');
@@ -2238,7 +2370,7 @@ function controleurPodium()
         document.getElementById("legendeGraph").className = "legendeGraph--hidden";
         setYearActive(tabPodiums, 12);
         var pays = camembertPodium(2017);
-        $('li').remove();
+        $('#legendePodium li').remove();
         for (var i = 0; i<pays.length; i++)
         {
             var legende = document.createElement('li');

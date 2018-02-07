@@ -609,6 +609,14 @@ header img{
     position: relative;
 }
 
+.pointEvolution--hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
 .pointEvolution:hover {
     width: 25px;
     height: 25px;
@@ -1091,23 +1099,23 @@ object.mapFrance
     height: 30%;
     width: 30%;
     position: absolute;
-    top: 140px;
-    left: -150px;
+    top: 94px;
+    left: -187px;
 }
 
 .credit2
 {
-    height: 155%;
-    width: 155%;
-    top: -292px;
-    left: -587px;
+    height: 37%;
+    width: 37%;
+    top: 48px;
+    left: 101px;
     position: absolute;
 }
 
 .credit3 {
     height: 30%;
     width: 30%;
-    top: 147px;
+    top: 99px;
     left: 450px;
     position: absolute;
 }
@@ -1115,21 +1123,21 @@ object.mapFrance
 .polytech
 {
     position: absolute;
-    top: 314px;
-    left: -37px;    
+    top: 270px;
+    left: -70px;    
 }
 
 .audencia
 {
     position: absolute;
-    top: 314px;
+    top: 270px;
     left: 217px;
 }
 
 .agr
 {
     position: absolute;
-    top: 314px;
+    top: 270px;
     left: 537px;
 }
 
@@ -1205,3 +1213,25 @@ object.mapFrance
     {
       height: 42px;
     }
+
+img.barreRemerciement
+{
+    position: absolute;
+    transform: rotate(90deg);
+    top: -267px;
+    left: -30px;
+    width: 30px;
+    height: 500px;
+}
+
+h1.titresRemerciement
+{
+    position: absolute;
+    color: #A9FF88;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    top: -63px;
+    left: -19px;
+    width: 400px;
+    height: 50px;
+}
