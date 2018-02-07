@@ -27,7 +27,7 @@ section {
 #section01 .absolu .fleche {
   position: absolute;
   left: 2%;
-  top: 2%;
+  top: 7%;
   height: 5%;
   width: 15%;
   color: #16037C; 
@@ -152,7 +152,7 @@ section {
   color: #16037C; 
   font-family: "Open Sans"; 
   font-size: 2.5vmin;  
-  line-height: 110%;  
+  line-height: 3.3vmin;  
   text-align: center;
   position: absolute;
   left: 46.5%;
@@ -187,8 +187,8 @@ section {
 }
 
 #section03 .article302 .diffusion {
-  height: 100%;
-  width: 80%;
+  height: 50vh;
+  width: auto;
   margin-left: 10%;
 }
 
@@ -226,7 +226,8 @@ font-size: 2.5vmin;
 #section04 .article401 p {
   height: 57%;
   width: 100%;
-  padding-top: 68%;
+  padding-top: 64%;
+  margin-bottom:4%;
   margin-left: 15%;
 }
 
