@@ -794,3 +794,7 @@ object{
 .peloton .map .legend-mapW{
   display: none;
 }
+
+.cd-horizontal-timeline .events-content .divers{
+	margin:auto auto auto auto;
+}
