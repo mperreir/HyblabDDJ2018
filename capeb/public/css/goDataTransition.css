@@ -237,15 +237,11 @@
     -o-transition-delay: 0.1s;
     -webkit-transition-delay: 0.1s;
     transition-delay: 0.1s;
-    grid-column: 3;
-    grid-row: 2 / 4;
+    grid-column: 3 ;
+    grid-row: 3 / 5;
 }
 
 .modal-body #canvas-dataviz{
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 30%;
 }
 
 .modal-body .ps {

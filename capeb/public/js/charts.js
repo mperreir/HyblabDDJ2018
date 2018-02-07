@@ -133,7 +133,7 @@ var drawDDChart = function(stats) {
                         scaleLabel: {
                             display: false,
                         },
-                        
+
 
                     }],
                     yAxes: [{
@@ -310,7 +310,7 @@ var drawChart3dEmploi = function (data) {
             }
         }
     });
-    
+
 /*
     cvs.onclick = function (evt) {
         var activePoints = ch.getElementsAtEvent(evt);
