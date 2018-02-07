@@ -159,8 +159,9 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-mp");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
-                    document.getElementById("rappel-mp").innerHTML =  Math.round(mean * 100) + "% des artisans de votre territoire déclarent réaliser des marchés publics"; 
-                    current_legend = document.getElementsByClassName("legendDD")[0];
+                    document.getElementById("rappel-mp").innerHTML =  Math.round(mean * 100) + "% des artisans de votre territoire déclarent réaliser des marchés publics";
+                    current_legend = document.getElementsByClassName("legendMP")[0];
+                    current_legend.style.display = "block";
                     drawMP(stats);
                     closeOnEscape();
                 });
