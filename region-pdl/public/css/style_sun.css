@@ -599,6 +599,8 @@ p{
     margin-top: -30px;
     width: 320px;
     word-wrap: break-word;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 #expan1{
