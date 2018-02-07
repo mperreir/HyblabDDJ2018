@@ -112,12 +112,27 @@ div.categorie .chevron {
 
 .bl-main .mainIllustration{/*.bl-main  .cat6 .mainIllustration*/
 	position: absolute;
-	top:10%;
-	/*padding-left: 30%;*/
-	right:0;
-	width:44%;
+	left: 100px;
+	top: 50%;
+	margin-top: -35%;
+	width:35%;
 	z-index:1;
 }
+
+#mainUp {
+	margin-top : -320px;
+	height: 88%;
+}
+#mainDown {
+	margin-top : -28%;
+}
+#mainDown2 {
+	margin-top: -31%;
+}
+#mainDown3 {
+	margin-top: -31%;
+}
+
 .bl-main  .femme{
 	position: absolute;
 	width:12%;
@@ -139,7 +154,7 @@ div.categorie .chevron {
 	font-size:15px;
 	position: absolute;
 	top:69%;
-	right:15%;	
+	right:12%;	
 	z-index: 2;
 	font-family: "Futura";
 }

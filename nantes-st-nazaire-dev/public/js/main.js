@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	setTimeout(loadingScreen, 3000);
+	setTimeout(loadingScreen2, 2000);
 
 	setFleche();
 
@@ -39,11 +39,19 @@ $(document).ready(function() {
 
 function loadingScreen() {
     //Configure le flottage de la flèche du bas pour changer de page
-    $("#loading-screen").fadeOut(function() {
+    $("#loading-screen2").fadeOut(function() {
 
     	$("#fullpage").css("visibility","visible");
     	$.fn.fullpage.setAllowScrolling(true);
 		$("#fp-nav").css("display","block")
+    });
+}
+
+function loadingScreen2() {
+    //Configure le flottage de la flèche du bas pour changer de page
+    $("#loading-screen").fadeOut(function() {
+    	$("#loading-screen2").css("visibility","visible");
+    	setTimeout(loadingScreen, 4000);
     });
 }
 
