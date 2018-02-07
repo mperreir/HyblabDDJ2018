@@ -618,7 +618,7 @@ Main Components
   height:auto;
   margin-top:auto;
   margin-bottom:auto;
-  margin-left:3.80%;
+  margin-left:0.80%;
 }
 
 .topPage h img{
@@ -775,6 +775,7 @@ object{
 
 .back{
   transform: rotate(180deg);
+  height:29%
 }
 
 .peloton .map .selected .legend-map{

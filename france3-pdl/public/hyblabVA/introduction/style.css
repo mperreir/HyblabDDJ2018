@@ -31,6 +31,15 @@ body{
   line-height: 110%;  
 }
 
+
+.partieG .absolu .fleche img{
+	
+	height:3vh;
+	width:auto;
+	
+}
+
+
 .article1{
 	position: relative;
 	top: 36%;
