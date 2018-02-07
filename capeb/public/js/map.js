@@ -23,6 +23,7 @@ function initializeDashboard() {
     document.getElementsByClassName("backToMap")[0].addEventListener("click", function () {
         var location = document.location.href;
         document.location.href = location.slice(0, location.lastIndexOf("/"));
+        document.getElementById("cacheEPCI").innerHTML = "";
     });
     document.getElementById("nom_epci").innerText = "Région";
     document.getElementById("switchToRegion").checked = true;
@@ -48,6 +49,7 @@ function initializeDashboard() {
 }
 
 $(document).ready(function () {
+
     fetch("/capeb/data/conjoncture_map")
         .then(function (value) {
             return value.json();
@@ -153,7 +155,9 @@ function drawMap(conjonctureEpci) {
                         document.getElementById("cacheEPCI").innerHTML = d.properties.siren_epci;
                         createModal();
                         miniStats(json, d);
-                        document.getElementById("switchToRegion").checked = false;
+                        if(document.getElementById("switchToRegion").checked !== false){
+                            document.getElementById("switchToRegion").checked = false;
+                        }
                         // move to dashboard
                         document.location.href = document.location + "/slide2";
                         document.getElementById("nom_epci").innerText = d.properties.nom_comple;
