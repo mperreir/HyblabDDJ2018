@@ -160,7 +160,7 @@
 }
 
 .questionResultatRange {
-    padding-top: 7px;
+    padding-top: 11px;
     height: 60px;
     width: 100%;
 }
@@ -169,7 +169,8 @@
 
 input {
     float: right;
-    margin-right: 10%;
+    margin-right: 7%;
+    margin-top: 2%
 }
 
 input[type=range]::-webkit-slider-runnable-track {
