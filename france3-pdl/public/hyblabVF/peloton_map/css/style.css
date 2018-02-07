@@ -354,7 +354,7 @@ Main Components
 }
 .cd-horizontal-timeline .events-content li > * {
   max-width: 800px;
-  margin: 3vh auto 0 2%;
+  margin:  auto 0 2%;
   display: table;
   color: #16037C;
   font-family: "Open Sans";
@@ -707,7 +707,7 @@ object{
 
 
 .peloton .selected .chrono{
-  width: 12vw;
+  width: 10vw;
   height: 21.5vh;
   margin-top: 10%;
   margin-bottom: auto;
@@ -780,8 +780,8 @@ object{
 
 .peloton .map .selected .legend-map{
 	
-	width:11vw;
-	height:26vh;
+	width:10%;
+	height:20%
 }
 
 .peloton .map .selected .legend-mapW{
