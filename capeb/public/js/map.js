@@ -13,6 +13,9 @@ var colorsForRegion = [
     "rgba(105,197,185,1)"
 ];
 
+var conjonctureEPCI = {};
+
+
 function initializeDashboard() {
     var html = document.getElementById("regionDashboard").innerHTML;
     var sectionDashboard = document.getElementById("dashboard-slide");
@@ -55,7 +58,6 @@ $(document).ready(function () {
             return {};
         })
         .then(function (json) {
-            var conjonctureEPCI = {};
             json.values.forEach(function (value) {
                 conjonctureEPCI[value[0]] = value[1];
             });

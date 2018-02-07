@@ -1,7 +1,6 @@
 var current_d = 0;
 var current_legend;
 
-
 function miniStats(regionStats, d) {
 
     //1 : conjoncture / number / multibubble
@@ -284,7 +283,6 @@ function createModal(){
         $overlay.removeClass('state-show');
         $modal.removeClass('state-appear').addClass('state-leave');
         $("#dataviz").empty();
-        document.getElementById("modal-nom-epci").innerHTML = "";
         var texte = document.getElementsByClassName("active-dataviz-text")[0];
         if(texte !== null){
             texte.style.display = "none";
