@@ -160,7 +160,8 @@ function miniStats(regionStats, d) {
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
                     document.getElementById("rappel-mp").innerHTML =  Math.round(mean * 100) + "% des artisans de votre territoire déclarent réaliser des marchés publics";
-                    wordCloud(stats.FreinsMP);
+                    //wordCloud(stats.FreinsMP);
+                    drawMP(stats);
                     closeOnEscape();
                 });
             });
