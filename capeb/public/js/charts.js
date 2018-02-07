@@ -18,21 +18,21 @@ var colorZoom = [
 
 var drawDDChart = function(stats) {
     function scale(number) {
-        var start = 10;
-        var inc = 8;
-        if (number == 0) {
-            return start;
-        } else if (number <= 2) {
-            return start + inc;
-        } else if (number <= 5) {
-            return start + inc * 2;
-        } else if (number <= 10) {
-            return start + inc * 3;
-        } else {
-            return start + inc * 4;
+        var r;
+        if(number<=10){
+            r = 10;
+        } else if(number<=25){
+            r = 18;
+        } else if(number<=50){
+            r = 26;
+        } else if(number<=75){
+            r =  34;
+        } else if(number<=100){
+            r = 42;
         }
+        return r;
     }
-	
+
     var sec = document.getElementById("dataviz-section");
     if (sec !== null) {
         sec.remove();
@@ -61,12 +61,10 @@ var drawDDChart = function(stats) {
                     r: scale(parseFloat(stats.Developpement_durable.values[1][id]))
                 }
             ],
-            backgroundColor: colors[id],
+            backgroundColor: colors[id]
         };
-
 	});
 	
-	console.log(stats.Developpement_durable.values[1])
     var ch = new Chart(ctx,
         {
             type: 'bubble',
@@ -82,8 +80,6 @@ var drawDDChart = function(stats) {
                     // If you click on at least 1 element ...
                     if (element.length > 0) {
                         // Logs it
-                        console.log(element[0]);
-
                         // Here we get the data linked to the clicked bubble ...
                         var datasetLabel = this.config.data.datasets[element[0]._datasetIndex].label;
 
@@ -98,7 +94,6 @@ var drawDDChart = function(stats) {
 							}
 						});
 						
-						console.log(datasetLabel + ';' + dt)
                         $("#canvas-dataviz").fadeOut();
                         $(".plus").html("");
 
@@ -138,7 +133,6 @@ var drawDDChart = function(stats) {
                             display: false,
                         },
 
-
                     }],
                     yAxes: [{
                         ticks: {
@@ -149,7 +143,7 @@ var drawDDChart = function(stats) {
                             drawBorder: false
                         }
                     }]
-                },
+                }
             }
         }
     );
@@ -631,6 +625,9 @@ function drawDistanceDataviz(data) {
         datasets: []
     };
 
+
+    var maxX=0;
+    var minX = 1000;
     data.values.forEach(function (value) {
         var dataset = {};
         var data = [];
@@ -646,25 +643,19 @@ function drawDistanceDataviz(data) {
         dataset.borderWidth = 0;
         dataset.backgroundColor = colorMatch[value[0].substr(0, 3)];
         points.datasets.push(dataset);
+
+        if(parseFloat(value[2]) > maxX){maxX = parseFloat(value[2]);}
+        if(parseFloat(value[2]) < minX){minX = parseFloat(value[2]);}
     });
+
+    // so the bubbles aren't cut on sides
+    maxX = parseFloat(maxX) + 10;
+    (parseFloat(minX)-10<0) ? minX=0 : minX = parseFloat(minX) - 10;
+    maxX = parseInt(maxX);
+    minX = parseInt(minX);
 
     var options = {
         tooltips: false,
-        elements: {
-            point: {
-                backgroundColor: function (context) {
-                    var value = context.dataset.data[context.dataIndex];
-                    return colorMatch[value.metier.substr(0, 3)];
-                },
-
-                r: function (context) {
-                    var value = context.dataset.data[context.dataIndex];
-                    var size = context.chart.width;
-                    var base = Math.abs(value.v) / 1000;
-                    return (size * 2) * base;
-                }
-            }
-        },
         scales: {
             xAxes: [{
                 gridLines: {
@@ -673,6 +664,10 @@ function drawDistanceDataviz(data) {
                 scaleLabel: {
                     display: true,
                     labelString: "Distance en kilomètres"
+                },
+                ticks: {
+                    min: minX,
+                    max: maxX
                 }
             }],
             yAxes: [{

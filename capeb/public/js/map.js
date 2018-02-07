@@ -55,12 +55,11 @@ $(document).ready(function () {
             return {};
         })
         .then(function (json) {
-            initializeDashboard();
-
             var conjonctureEPCI = {};
             json.values.forEach(function (value) {
                 conjonctureEPCI[value[0]] = value[1];
             });
+            initializeDashboard();
             drawMap(conjonctureEPCI);
             d3.select(window).on('resize', function () {
                 $(".map-pdl").innerHTML = "";

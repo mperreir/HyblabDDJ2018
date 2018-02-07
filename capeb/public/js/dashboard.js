@@ -26,6 +26,7 @@ function miniStats(regionStats, d) {
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
                     document.getElementById("rappel-conjoncture").innerHTML = "Selon les artisans de votre secteur la conjoncture mérite une note de : " + parseFloat(json.values[0][0]).toFixed(1) + "/10";
+                    current_legend = document.getElementsByClassName("legendContrats")[0];
                     fetchConjonctureData(d);
                     closeOnEscape();
                 });
@@ -116,7 +117,7 @@ function miniStats(regionStats, d) {
                     var texte = document.getElementById("texte-contrat");
                     texte.className += " active-dataviz-text";
                     texte.style.display = "block";
-                    document.getElementById("rappel-contrat").innerHTML = "Les artisans de votre territoire privilégient les : " + stat[0].name + ", " + stat[1].name;
+                    document.getElementById("rappel-contrat").innerHTML = "Les artisans de votre territoire privilégient les " + stat[0].name + " et " + stat[1].name;
                     current_legend = document.getElementsByClassName("legendContrats")[0];
                     current_legend.style.display = "block";
                     createSunburst(d);

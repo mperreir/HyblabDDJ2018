@@ -37,26 +37,6 @@
 }
 
 
-.n1{
-  @extend %data-liste;
-  font-size: 9.48vw;
-}
-.n2{
-  @extend %data-liste;
-  font-size: 1.32vw;
-  line-height: 1;
-}
-.n3{
-  @extend %data-liste;
-  font-size: 0.72vw;
-  line-height: 1.1;
-}
-.n4{
-  @extend %data-liste;
-  font-size: 0.48vw;
-  line-height: 1.2;
-}
-
 .info-epci{
   background-color: $main-color;
   width: 100%;
@@ -67,7 +47,19 @@
     @extend %mini-titre;
     text-align: left;
     width: 100%;
-    margin-top: 8vh;
+    margin: 1.3vh 0 15px 0;
+  }
+  >.iconInfo{
+    width: 36px;
+    height: 36px;
+    fill: $white;
+    float: left;
+    width: 24px;
+    height: auto;
+  }
+  >.info-texte{
+    @extend %texte-info;
+    margin-left: 30px;
   }
   >.picto{
     position: absolute;
