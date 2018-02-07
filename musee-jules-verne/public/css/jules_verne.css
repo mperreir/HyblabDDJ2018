@@ -322,12 +322,6 @@ div.titresection2
 
 /*========== CAS PARTICULIER - SECTION 4 ======*/
 
-#section4 section {
-  display: flex;
-  flex-flow: row;
-  position: relative;
-}
-
 /* LISTE DES DOMAINES - on peut le voir comme un petit menu, sur le gauche.  */
 #section4 ul {
   margin-top: auto;
@@ -340,63 +334,68 @@ div.titresection2
   justify-content: space-between;
 }
 
-  #section4 li {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    cursor: pointer;
-    padding: none;
-    transition: all ease 300ms;
-    border-left: 6px solid white;
-  }
-    #section4 h6 {
-      font-size: 1vw;
-    }
-    #section4 ul img {
-      height: 1.8vw;
-      width: 1.8vw;
-      margin: 0.25vw;
-      margin-left: 1vw;
-      padding: 0.2vw;
-    }
-    /* INTERACTIVITE DU MENU */
-    #section4 li:hover {
-      border-left: 2px solid #ffcc11;
-      transform: scale(1.05);
-      box-shadow: 0 4px 8px 3px rgba(0,0,0,0.1);
-    }
+#section4 li {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	cursor: pointer;
+	padding: none;
+	transition: all ease 300ms;
+	border-left: 6px solid white;
+}
 
-        /*éléments de la liste des domaines <li> inactifs, non sélectionnés */
-        .section4_switch {
-          color: black;
-        }
-          /*éléments de la liste des domaines <li> actifs, sélectionnés */
-        #section4 .section4_active-tab {
-            color: #2c9dff;
-            border-left: 6px solid #2c9dff;
-            box-shadow: 0 0 rgba(0,0,0,0.1);
-        }
+#section4 h6 {
+ 	font-size: 1vw;
+}
 
-        #section4 .section4_active-tab:hover {
-            color: #2c9dff;
-            border-left: 6px solid #3fbefc;
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px 3px rgba(0,0,0,0.1);
-        }
+#section4 ul img {
+	height: 1.8vw;
+	width: 1.8vw;
+	margin: 0.25vw;
+	margin-left: 1vw;
+	padding: 0.2vw;
+}
+
+/* INTERACTIVITE DU MENU */
+#section4 li:hover {
+	border-left: 2px solid #ffcc11;
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px 3px rgba(0,0,0,0.1);
+}
+
+/*éléments de la liste des domaines <li> inactifs, non sélectionnés */
+.section4_switch {
+	color: black;
+}
+
+  /*éléments de la liste des domaines <li> actifs, sélectionnés */
+#section4 .section4_active-tab {
+    color: #2c9dff;
+    border-left: 6px solid #2c9dff;
+    box-shadow: 0 0 rgba(0,0,0,0.1);
+}
+
+#section4 .section4_active-tab:hover {
+    color: #2c9dff;
+    border-left: 6px solid #3fbefc;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px 3px rgba(0,0,0,0.1);
+}
 
 /* Contenu qui change lorsqu'on sélectionne un domaine.
 la balise <article> contient à la fois le texte de présentation <div class="section4_texte">,
 et les 2 graphiques <div class="section4_graph_line"> et <div class="section4_graph_doughnut"> */
 
 #section4 article {
-  margin: 5vh 0;
   width: 80vw;
+  height: 70vh;
   display: none;
   flex-flow: row nowrap;
   opacity: 0;
-  justify-content: space-between;
-
+  justify-content: space-around;
+  align-items: center;
 }
+
 /* affichage animé d'un article lorsque son domaine est sélectionné */
 #section4 article.visible {
   display: flex;
@@ -407,14 +406,11 @@ et les 2 graphiques <div class="section4_graph_line"> et <div class="section4_gr
 
 /*Texte de présentation + illustration du domaine*/
   .section4_texte {
-    margin-left: 5vw;
-    margin-top: 10vh;
-    min-width: 19.9vw;
-    max-width: 20vw;
-    margin-right: 5vw;
+    width: 30vw;
+    max-height: 70vh;
     opacity: 0;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column;
   }
     /* Apparition animée*/
     .visible .section4_texte {
@@ -424,18 +420,17 @@ et les 2 graphiques <div class="section4_graph_line"> et <div class="section4_gr
 
       /*l'image qui illustre le domaine*/
       .section4_texte img {
-        margin-left: auto;
-        margin-right: auto;
         height: 20vh;
         width: 20vw;
         object-fit: contain;
-
+        margin: auto;
+        margin-bottom: 4vh;
       }
         /*le titre du domaine*/
         .section4_texte h2 {
           font-size: 3vw;
-          margin-top: 3vw;
-          margin-bottom: 1.5vw;
+          margin: auto;
+          margin-bottom: 4vh;
         }
           /*le texte de présentation du domaine*/
           .section4_texte p {
@@ -445,28 +440,14 @@ et les 2 graphiques <div class="section4_graph_line"> et <div class="section4_gr
 
 /* Graphique 1 // le graphique linéaire */
 div.section4_graph_line {
-  margin-top: 10vh;
-  min-width: 29.9vw;
-  max-width: 30vw;
+  width: 40vw;
+  height: 55vh;
   opacity: 0;
 }
   /* Apparition animée*/
   .visible div.section4_graph_line {
     animation: fade ease 0.5s;
     animation-delay: 200ms;
-    animation-fill-mode: forwards;
-  }
-
-div.section4_graph_doughnut {
-  height: 100%;
-  min-width: 14.9vw;
-  max-width: 15vw;
-  opacity: 0;
-}
-  /* Apparition animée*/
-  .visible div.section4_graph_doughnut {
-    animation: fade ease 0.5s;
-    animation-delay: 400ms;
     animation-fill-mode: forwards;
   }
 
