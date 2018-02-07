@@ -242,15 +242,20 @@ bottom: 2vh;
   color: rgba(0,0,0,0.76);
 }
 
-  #jules_verne{
-    background-color: white;
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    top : 0;
-    left: 50%;
-    margin-top: 0px;
-  }
+#jules_verne{
+	background-color: white;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top : 0;
+	left: 50%;
+	margin-top: 0px;
+}
+
+#accueil {
+	height: 100vh;
+	width: 100vw;
+}
 
 div.titresection2
 {
