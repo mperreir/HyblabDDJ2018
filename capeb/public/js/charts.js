@@ -464,15 +464,14 @@ function drawBarChart(data, title) {
     var ctx = cvs.getContext("2d")
     new Chart(ctx, {
         // The type of chart we want to create
-        type: 'bar',
-        label: 'no ',
+        type: 'horizontalBar',
         // The data for our dataset
         data: {
             labels: data.labels,
             datasets: [{
                 backgroundColor: colors,
                 borderWidth: 0,
-                data: data.values,
+                data: data.values.map(val => parseFloat(val).toFixed(1) * 100),
             }]
         },
 
@@ -481,10 +480,79 @@ function drawBarChart(data, title) {
             title: {
                 display: true,
                 text: title
-            }
+            },
+			legend: {
+				display: false
+			}            
         }
     });
 
+}
+
+var drawMP = (stats) => {
+	var sec = document.getElementById("dataviz-section");
+    if (sec !== null) {
+        sec.remove();
+    }
+    sec = document.getElementById("dataviz").appendChild(document.createElement('section'));
+    sec.setAttribute("id", "dataviz-section");
+
+    var canvas = document.getElementById("canvas-dataviz");
+    if (canvas !== null) {
+        canvas.remove();
+    }
+    canvas = document.createElement('canvas');
+    canvas.setAttribute("id", "canvas-dataviz");
+
+    var cvs = sec.appendChild(canvas);
+
+	var ctx = cvs.getContext("2d");
+
+    
+    var myNewChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: stats.Marches_publics.labels,
+            datasets: [{
+                label: "Activte",
+                borderWidth: 0,
+                data: stats.Marches_publics.values.map(val => parseFloat(val) * 100),
+                backgroundColor: colors,
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "% d'entreprises qui ont réalisées des marchés public en 2017"
+            }
+        }
+    });
+    canvas.onclick = function (evt) {
+				var activePoints = myNewChart.getElementsAtEvent(evt);
+				if (activePoints[0]) {
+				var chartData = activePoints[0]['_chart'].config.data;
+				var idx = activePoints[0]['_index'];
+
+				var label = chartData.labels[idx];
+				var value = chartData.datasets[0].data[idx];
+
+
+				$("#canvas-dataviz").fadeOut();
+				$(".plus").html("");
+				var dt = {"labels": stats.FreinsMP.values[0], "values": stats.FreinsMP.values[1]}
+				if(label == "Oui"){
+					label = "Difficutlés rencontrées"
+				
+					dt = {"labels": stats.DifficultésMP.values[0], "values": stats.DifficultésMP.values[1]}
+				}
+				else{
+					label = "Freins"
+				}
+				drawBarChart(dt, label);
+				$(".plus").append($.parseHTML("<svg id='unzoom' viewBox='0 0 50 70' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g transform='translate(10.0, 25.0)'><polyline points='20 0 10 10 20 20'></polyline></g></svg>"))
+
+                }
+	}
 }
 
 function drawPieChart(data, title) {

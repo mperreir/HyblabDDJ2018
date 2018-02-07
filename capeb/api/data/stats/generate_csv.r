@@ -1,7 +1,11 @@
 data = read.csv('../raw/CAPEBPaysDelaLoire_2014-2017.csv', header=TRUE, sep=";", encoding ="UTF-8")
+data2 = read.csv('Marchés_publics2017.csv', header=TRUE, sep=",", encoding ="UTF-8")
+attach(data2)
+max(Oui, na.rm = T)
+min(Oui, na.rm = T)
 attach(data)
 data$Code.postal
-
+mean(Oui, na.rm = T)
 getAttYear <- function(y, l_atr){
   l_atr = c(l_atr, "X..Date")
   return(subset(data, X..Date == y, select = l_atr))
@@ -22,6 +26,7 @@ data$Inter
 data$Marchés.publics
 
 MP = table(subset(data, data$X..Date == 2017,select = c("intercommunalite.2017_EPCI","Marchés.publics")))
+
 colnames(MP)[1] = "Pas de réponse"
 MP
 
@@ -45,7 +50,7 @@ AC
 data$intercommunalite.2017_EPCI
 
 contrats = aggregate( cbind(CDD,CDI,Apprentis,Intérimaires) ~ intercommunalite.2017_EPCI + X..Date,subset(data,select = c("intercommunalite.2017_EPCI", "X..Date","CDD", "CDI")), FUN=sum)
-write.csv(file="Contrats_2014-2017.csv",x=contrats,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
+#write.csv(file="Contrats_2014-2017.csv",x=contrats,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
 
 data$CA.réalisé
 
@@ -114,7 +119,7 @@ for(epci in epcis){
 }
 eff
 chemin
-write.csv(file="sunburst.csv",x=sunburst,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
+#write.csv(file="sunburst.csv",x=sunburst,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
 
 length(car_set)
 mean(car_set[,c])
@@ -160,14 +165,324 @@ data$CDD
 #Marche public 
 
 stat_region = matrix(nrow = 0, ncol = 4)
-colnames(stat_region) = c('Conjoncture.calculée.Moy', 'Investissement.Max', 'Zone.intervention.Moy', 'Marchés.publics.Max')
+colnames(stat_region) = c('Conjoncture.calculée.Moy', 'Investissement.Moy.Oui', 'Zone.intervention.Moy', 'Marchés.publics.Max')
 
 cc = mean(data$Conjoncture.calculée, na.rm=T)
-im = names(which.max(table(data$Investissement)))
-dm = mean(data$Zone.intervention, na.rm =T)
-mp = names(which.max(table(data$Marchés.publics)))
+im = table(data$Investissement)[-1]
+im = unname(im/sum(im))
+ 
 
-stat_region = rbind(c(cc, im, dm, mp),stat_region)
+dm = mean(data$Zone.intervention, na.rm =T)
+mp = table(data$Marchés.publics)[-1]
+mp
+mp = unname(mp/sum(mp))
+mp
+stat_region = rbind(c(cc, im[2], dm, mp[2]),stat_region)
 
 write.csv(file="stats_region.csv",x=stat_region,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
+
+sum(sum(data$Zone.intervention - mean(data$Zone.intervention, na.rm = T))^2)
+
+conj = aggregate(Conjoncture.calculée ~ intercommunalite.2017_EPCI,subset(data,select = c("intercommunalite.2017_EPCI", "Conjoncture.calculée")), FUN=mean)
+
+contrats
+
+
+
+table(data$Sujets.intérêt)[-1] + table(data$Sujets.intérêt_1)[-1]
+table(data[,316])
+
+m = c()
+table(data[307,])
+colnames(data)
+
+for(i in 307:316){
+  for(d in getAttYear(2017, colnames(data))[,i]){
+    m = c(d, m)
+  }  
+}
+reps = unique(m)
+reps = rep[-1]
+rep
+
+dd = matrix(nrow = 0, ncol = 3)
+colnames(dd) = c("epci", "Aspects", "Count")
+
+d17 = getAttYear(2017, colnames(data))
+colnames(d17)[307:316]
+table(m)
+
+for(epci in epcis){
+  sub = subset(d17, intercommunalite.2017_EPCI == epci, select = colnames(d17))
+  m = c()
+  for(i in 307:316){
+    for(d in sub[,i]){
+      if(d != ""){
+        m = c(d, m)
+      }
+    }  
+  }
+  
+  tab = table(m)
+  tab = (tab/sum(tab)) * 100
+  i = 1
+
+  for(v in tab){
+    dd = rbind(dd, c(epci, names(tab)[i], tab[i]))
+    i = i + 1
+  }
+  
+}
+m
+dd
+tab
+m
+
+dd
+sub = subset(d17, intercommunalite.2017_EPCI == 200071934, select = colnames(d17))
+sub[, 'intercommunalite.2017_EPCI']
+
+m = c()
+for(i in 307:316){
+  for(d in data[,i]){
+    m = c(d, m)
+  }  
+}
+m
+names(tab)[1]
+
+data$Suje
+dd
+colnames(data)[316]
+
+table(data[,315])
+dd
+write.csv(file="DD_2017.csv",x=dd,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
+wirte.csv()
+
+annee
+data
+
+annee
+epcis = unique(data$intercommunalite.2017_EPCI)
+data$X..Date
+annee
+acts = unique(data$Activité)
+act
+subset(data, X..Date == 2014)$X..Date
+evo_nb = matrix(nrow = 0, ncol=length(acts) + 2)
+
+colnames(evo_nb) = c('epci', 'annee', levels(acts))
+for(epci in epcis){
+  sepci = subset(data, intercommunalite.2017_EPCI == epci, select = c('X..Date','Activité', 'Nb.recr..envisagés'))
+  for(a in annee){
+    r = c(epci, a)
+    sa = subset(sepci, X..Date == a)    
+    for(act in acts){
+      sact = subset(sa, Activité == act)
+      r = c(r, sum(sact$Nb.recr..envisagés, na.rm = T))
+    }
+    evo_nb = rbind(evo_nb, r)
+  }
+  
+}
+annee
+evo_nb
+act
+row
+data$Nb.recr..envisagés
+write.csv(file="recrutement_Activité2014_2017.csv",x=evo_nb,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
+
+write.csv(evo_nb)
+
+ids = match(c('Freins.MP', 'Freins.MP_1', 'Freins.MP_2'), colnames(data))
+
+cloud = c()
+for(id in ids){
+  for(r in data[,id]){
+    cloud = c(cloud, r)
+  }
+}
+cloud_e[length(cloud_e) == 0]
+
+words = unique(cloud)
+words
+cloud_epci = matrix(nrow=0, ncol=3)
+colnames(cloud_epci) = c('epci', 'Freins.MP', 'Freq')
+for(epci in epcis){
+  sub = subset(data, intercommunalite.2017_EPCI == epci, select = c('Freins.MP', 'Freins.MP_1', 'Freins.MP_2'))  
+  cloud_e = c()
+  for(fr in c('Freins.MP', 'Freins.MP_1', 'Freins.MP_2')){
+    for(r in sub[,fr]){
+      if(r != ""){
+        cloud_e = c(cloud_e, r)
+      }
+    }
+  }
+  i = 1
+  tab = table(cloud_e)
+  #rm_empty = match("", names(tab))
+  tab = tab/(sum(tab)) 
+  for(f in tab){
+    cloud_epci = rbind(cloud_epci, c(epci, names(tab)[i], f))
+    
+    i = i + 1
+    
+  }
+  
+}
+length("")
+tab
+cloud_epci
+table(cloud_e)
+cloud_e
+tab
+match(c(""), names(tab))
+
+rm_empty
+cloud_epci
+write.csv(file="FreinsMP.csv",x=cloud_epci,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
+names(tab)[1] = ""
+data$Freins.MP_2
+cloud = c(data$Freins.MP,data$Freins.MP_1,data$Freins.MP_2)
+table(cloud)
+data$Investissement
+
+data
+data$Difficultés.MP_1
+cloud_epci = matrix(nrow=0, ncol=3)
+colnames(cloud_epci) = c('epci', 'Difficultés.MP', 'Freq')
+for(epci in epcis){
+  sub = subset(data, intercommunalite.2017_EPCI == epci, select =c('Difficultés.MP', 'Difficultés.MP_1', 'Difficultés.MP_2'))  
+  e = c()
+  for(fr in c('Difficultés.MP', 'Difficultés.MP_1', 'Difficultés.MP_2')){
+    for(r in sub[,fr]){
+        e = c(e, r)
+    }
+  }
+  i = 1
+  tab = table(e)
+  print(sum(tab/sum(tab)))
+  #rm_empty = match("", names(tab))
+  for(f in tab){
+    cloud_epci = rbind(cloud_epci, c(epci, names(tab)[i], f/sum(tab)))
+    i = i + 1
+  }
+  
+}
+cloud_e
+
+cloud_epci
+length("")
+tab
+cloud_epci
+table(cloud_e)
+cloud_e
+tab
+match(c(""), names(tab))
+
+rm_empty
+cloud_epci
+write.csv(file="DifficultésMP.csv",x=cloud_epci,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
+
+
+data$DifficultéDifficultés.MP
+aspects = unique(m)
+aspects = aspects[3:10]
+aspects
+match("Interet.Qualité.des.matériaux_2", colnames(data))
+
+aspects = c('Accessibilité', 'Assainissement', 'Déchets', 'Eco.construction', 'EcoEnergie', 'EnR', 'Qualité.de.l.U.0092.air', 'Qualité.de.l.U.0092.eau', 'Qualité.des.matériaux')
+
+interets = matrix(nrow = 0, ncol = 9)
+
+for(asp in aspects){
+  merg = c()
+  for(pl in c('', '_1', '_2')){
+      for(r in data[, paste("Interet.", asp,pl ,sep = "")]){
+        merg = c(merg, r)
+      }
+  }
+  interets = cbind(interets, merg)
+}
+aspects
+interts
+data$Interet.Qualité.des.matériaux_2
+dd_i = matrix(nrow = 0, ncol = 4)
+colnames(dd_i) = c('epci', 'aspect', 'interet', 'freq')
+
+d17 = subset(data, X..Date == 2017)  
+epcis
+
+for(epci in epcis){
+  sub = subset(d17, intercommunalite.2017_EPCI == epci)  
+  for(asp in aspects){
+    merg = c()
+    for(pl in c('', '_1', '_2')){
+      for(r in sub[, paste("Interet.", asp, pl ,sep = "")]){
+        if(r != ""){
+          merg = c(merg, r)
+        }
+      }
+    } 
+    tab = table(merg)
+    tab = (tab/sum(tab)) * 100
+    i = 1
+    for(r in tab){
+      if(r > 0){
+        dd_i = rbind(c(epci, asp, names(tab)[i], r), dd_i)
+      }
+      i = i + 1
+    }
+  }
+}
+
+write.csv(file="DD_INTERET_2017.csv",x=dd_i,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
+
+dd_i
+names(tab)[2] == ""
+
+sub$Code.postal
+data[, paste("Interet.", asp, pl ,sep = "")]
+
+names(merg)[0]
+pl
+tab
+colnames(data)[307]
+data$De
+
+
+
+d17 = subset(data, X..Date == 2014) 
+
+d17$Re
+table(d17$Recrutement.envisagé)
+
+rec_env = matrix(nrow = 0, ncol = 3)
+colnames(rec_env) = c('Epci', 'Année', 'Oui')
+
+annee
+for(epci in epcis){
+  sub = subset(data, intercommunalite.2017_EPCI == epci, select = c('X..Date', 'Recrutement.envisagé'))  
+  for(a in annee){
+    s = subset(sub, X..Date == a, select = c('Recrutement.envisagé'))
+    tab = table(s[,1])
+    print(tab)
+    if(length(tab) >= 3){
+      tab = tab[-1]
+    }
+    tab = tab/sum(tab)
+    rec_env = rbind(rec_env, c(epci,a , tab[2] * 100))
+  }
+}
+
+
+
+write.csv(file="EvoRecrutementEnv2014_2017.csv",x=rec_env,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
+
+s
+tab
+rec_env
+tab
+sub[,1]
 
