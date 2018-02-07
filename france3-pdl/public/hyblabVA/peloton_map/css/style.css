@@ -354,7 +354,7 @@ Main Components
 }
 .cd-horizontal-timeline .events-content li > * {
   max-width: 800px;
-  margin: 2% auto 0 2%;
+  margin: 3vh auto 0 2%;
   display: table;
   color: #16037C;
   font-family: "Open Sans";
@@ -707,8 +707,8 @@ object{
 
 
 .peloton .selected .chrono{
-  width: 12%;
-  height: 60%;
+  width: 12vw;
+  height: 21.5vh;
   margin-top: 10%;
   margin-bottom: auto;
   display: inherit;
@@ -779,14 +779,14 @@ object{
 }
 .legend-map{
 	
-	width:10%;
-	height:20%;
+	width:11vw;
+	height:26vh;
 }
 .peloton .map .selected .legend-mapW{
   display: flex;
-  width: 9%;
+   width: 9vw;
   margin-top: 25%;
-  height: 28%;
+  height: 10vh;
 }
 
 .peloton .map .legend-mapW{
