@@ -269,7 +269,7 @@ div.titresection2
   animation-fill-mode: forwards;
   margin-bottom: 0vh;
   margin-left: 15vh;
-  padding-top: 40vh;
+  padding-top: 15vh;
 }
 
   .titresection2 h1 {
@@ -315,7 +315,6 @@ div.titresection2
   .description {
     font-size: 1vw;
     max-width: 20vw;
-    align-self: flex-end;
     margin-bottom: 10vh;
   }
 
