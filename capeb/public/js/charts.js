@@ -559,11 +559,15 @@ function drawDistanceDataviz(data) {
         datasets: []
     };
 
+
+    var maxX=0;
+    var minX = 1000;
     data.values.forEach(function (value) {
         var dataset = {};
         var data = [];
         var point = {};
         point.x = value[2];
+        console.log(point.x);
         point.y = 0.5;
         point.r = scale(value[1]);
         point.metier = value[0];
@@ -574,7 +578,16 @@ function drawDistanceDataviz(data) {
         dataset.borderWidth = 0;
         dataset.backgroundColor = colorMatch[value[0].substr(0, 3)];
         points.datasets.push(dataset);
+
+        if(value[2] > maxX){maxX = value[2];}
+        if(value[2]< minX){minX = value[2];}
     });
+
+    // so the bubbles aren't cut on sides
+    maxX = parseFloat(maxX) + 10;
+    (parseFloat(minX)-10<0) ? minX=0 : minX = parseFloat(minX) - 10;
+    maxX = parseInt(maxX);
+    minX = parseInt(minX);
 
     var options = {
         tooltips: false,
@@ -586,6 +599,10 @@ function drawDistanceDataviz(data) {
                 scaleLabel: {
                     display: true,
                     labelString: "Distance en kilomètres"
+                },
+                ticks: {
+                    min: minX,
+                    // max: maxX
                 }
             }],
             yAxes: [{
