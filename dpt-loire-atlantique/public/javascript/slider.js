@@ -37,6 +37,6 @@ slider.oninput = function() {
 	
 	else if ((this.value > 97)&&(this.value <= 100)){
 		img.src="img/illu_vieillissement3.png";
-		age.innerHTML = 20;
+		age.innerHTML = 24;
 	}
 }
