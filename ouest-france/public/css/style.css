@@ -346,7 +346,7 @@ header img{
 
 .plan-obtuse {
     position: absolute;
-    top: 415px;
+    top: 379px;
     left: 702px;
     padding: 15px 30px;
     margin: 0;
@@ -368,7 +368,7 @@ header img{
 
 .podium-obtuse {
     position:absolute;
-    top: 50px;
+    top: 12px;
     left:300px;
     padding:15px 30px;
     margin:0;
@@ -425,7 +425,7 @@ header img{
 .jackPlan
 {
     position: absolute;
-    top: 43px;
+    top: 19px;
     left: 3px;
     z-index: 2;
     width: 110%;
@@ -955,7 +955,8 @@ ul.listeScene--hidden
 p.texteGlobal1{
     color: white;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 700;
+    font-weight: 300;
+    font-size: 17px;
     text-align: justify;
 }
 
@@ -971,6 +972,7 @@ p.texteGlobal2{
     color: #a9ff88;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
+    font-size: 17px;
     text-align: justify;
 }
 
@@ -1161,7 +1163,7 @@ object.mapFrance
 .remerciement
 {
     position: absolute;
-    top: 240px;
+    top: 176px;
     left: 800px;
     width: 350px;
 }
@@ -1171,7 +1173,7 @@ object.mapFrance
     padding: 8px;
     position: absolute;
     top: 471px;
-    left: -155px;
+    left: -156px;
     background-color: #ffffff;
     width: 1366px;
 }
@@ -1218,10 +1220,10 @@ img.barreRemerciement
 {
     position: absolute;
     transform: rotate(90deg);
-    top: -267px;
-    left: -30px;
-    width: 30px;
-    height: 500px;
+    top: -177px;
+    left: -32px;
+    width: 190px;
+    height: 321px;
 }
 
 h1.titresRemerciement
@@ -1242,4 +1244,8 @@ h1.titresRemerciement
     height: 8%;
     top: 3px;
     position: relative;
+}
+
+strong {
+    font-weight: 700 !important;
 }
