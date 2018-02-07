@@ -13,6 +13,7 @@
     <!-- Déclaration de la feuille de style du document-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/intro.css">
@@ -108,7 +109,7 @@
                             <img id="ombre-carte" src="img/intro/ombre-carte.png" alt="photo">
                         </div>
                         <p id="survolez-ville">Survolez les villes !</p>
-                        <p id="des-nantes" class="ville-des"><label class="city">NANTES</label>Chai pas quoi écrire ici</p>
+                        <p id="des-nantes" class="ville-des"><label class="city">NANTES</label>Je me suis laissée séduire par plusieurs aspects de la ville de Nantes. Nous allons les découvrir ensemble!</p>
                         <p id="des-bordeaux" class="ville-des"><label class="city">BORDEAUX</label>Avec la nouvelle ligne de train grande vitesse et des infrastructures modernes grandissantes, la capitale de la Nouvelle Aquitaine est en nette croissance.</p>
                         <p id="des-nice" class="ville-des"><label class="city">NICE</label>Avec 300 jours de soleil par an, les activités sportives extérieures sont au coeur de la métropole Niçoise.</p>
                         <p id="des-toulouse" class="ville-des"><label class="city">TOULOUSE</label>Entre mer et montagnes : Toulouse, capitale culturelle du Sud-ouest, dispose d’un emplacement géographique attrayant.</p>
@@ -124,89 +125,222 @@
                 </div>
 
                 <div class="section" id="numerique">
-
-                        <div class="row conteneur">
-
-                                <div class=" mainScreen">
-                                  <div id="bl-main" class="bl-main">
-                                         <section id="0" class=" categorie-des cat0">
-                                      <img src="img/common/tete.png" class="femme">
-                                    <img src="img/cadreDeVie/cadredevie.png" class="mainIllustration">
-                                     <img src="img/common/commentaire.png" class="commentaire">
-                                      <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux commons en communs.</p>
-                                      <canvas id="Loyer mensuel médian au m2 (parc privé) - 2016"></canvas>
-                                      <canvas id="Qualité de l’air 2016 (Jours avec un indice très bon à bon -1 à 4-)"></canvas>
+                    <div class="row conteneur">
+                        <div class=" mainScreen">
+                          <div id="bl-main" class="bl-main">
+                                <section id="7" class=" categorie-des cat7">
+                                   <img src="img/common/go2.png" class="femme2">
+                                     <img src="img/common/bull.png" class="bull">
+                                      <p class="textBullbis"> Mon choix s’est donc porté sur la métropole de Nantes/Saint-Nazaire. J’avais des critères de sélection bien particuliers, je vous laisse les découvrir en survolant les différentes catégories sur votre droite.</p>
                                     </section>
+                                 <section class=" categorie-des cat0">
+
+                                        <div class="cat-chart-block ">
+                                            <canvas class= "indicateur1" id="loyer"></canvas>
+                                            <canvas class="indicateur2" id="qualiteair"></canvas>  
+                                        </div>
+
+                                        <h1 class = "indTitle indTitle1 text-center"> Loyer mensuel au m²</h1>
+                                        <h1 class = "indTitle indTitle2 text-center"> Pourcentage d'indices de qualité de l'air très bon sur l'année  </h1>
+                                       
+
+                                        <p class="textBull textBull1">Les loyers nantais sont stables depuis plusieurs années, à un niveau relativement moins élevé que dans les autres territoires métropolitains. Cette stabilité s'explique par l'encadrement des baux en cours par l’IRL (l’indice de référence des loyers) qui est stable depuis plusieurs années, l'encadrement des hausses de loyers entre deux locataires et une construction de logements neufs permettant de limiter la tension sur le marché.</p>
+                                        <p class="textBull textBull2"> L’estuaire de la Loire bénéficie de la proximité de la façade maritime qui permet de diminuer l’impact des différentes sources de pollutions. Cela  le différencie fortement des espaces à l’intérieur des terres où l’air circule moins et où l’on observe des épisodes plus longs de forte pollution</p>
+
+                                        <img src="img/common/tete.png" class="femme img-responsive">
+                                        <img src="img/cadreDeVie/cadredevie.png" class="mainIllustration img-responsive">
+                                        <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                     
+                                     <div class="indButton">
+                                            <button type="button" class=" buttonInd1 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up  faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd2 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                    
+                                    </div>
+                                      
+                                    </section>
+
 
                                     <section class=" categorie-des cat1">
 
-                                      <img src="img/common/tete.png" class="femme">
-                                    <img src="img/enseignement/enseignement.png" class="mainIllustration">
-                                     <img src="img/common/commentaire.png" class="commentaire">
-                                      <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux commons en communs.</p>
-                                      <canvas id="Evolution annuelle moyenne de la part des diplômés de l’enseignement supérieur dans la population (2009-2014)"></canvas>
-                                      <canvas id="Taux de réussite au baccalauréat général"></canvas>
-                                    </section>
+                                        <div class="cat-chart-block ">
+                                            <canvas class= "indicateur1" id="diplomes"></canvas>
+                                            <canvas class="indicateur2" id="baccalaureat"></canvas>  
+                                        </div>
 
-                                    <section class=" categorie-des cat2"> 
-                                    <div class="cat-chart-block">
+                                        <h1 class = "indTitle indTitle1 text-center"> Evolution moyenne du nombre de diplomés</h1>
+                                        <h1 class = "indTitle indTitle2 text-center"> Taux de réussite au bac </h1>
+                                       
+
+                                        <p class="textBull textBull1"> Le nombre de diplômés dans la métropole est en perpétuelle augmentation. Cela s’explique par l’attractivité du territoire, qui attire de plus en plus de personnes qualifiées. NSNM est sur une pente dynamique et positive, la part des diplômés est plus importante que celle des sans diplômes. </p>
+                                        <p class="textBull textBull2">Le taux de réussite au Baccalauréat est de plus en plus satisfaisant, cela démontre que la métropole s’inscrit dans une dynamique de développement et d’accompagnement des jeunes</p>
+
+                                        <img src="img/common/tete.png" class="femme img-responsive">
+                                        <img src="img/enseignement/enseignement.png" class="mainIllustration img-responsive">
+                                        <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                     
+                                     <div class="indButton">
+                                            <button type="button" class=" buttonInd1 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up  faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd2 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                    
                                     </div>
-                                      <img src="img/common/tete.png" class="femme">
-                                    <img src="img/emploi/emploi.png" class="mainIllustration">
-                                     <img src="img/common/commentaire.png" class="commentaire">
-                                      <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
-                                      <canvas id="Taux de chômage 2016"></canvas>
-                                      <canvas id="Evolution annuelle moyenne 2009-2014 de la part des cadres dans pop act."></canvas>
-                                      <canvas id ="Evolution annuelle 2011-2016 du Nombre d'établissements"></canvas>
+                                      
                                     </section>
 
-                                    <section class=" categorie-des cat3">
-                                      <img src="img/common/tete.png" class="femme">
-                                    <img src="img/culture/culture.png" class="mainIllustration">
-                                     <img src="img/common/commentaire.png" class="commentaire">
-                                      <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
-                                      <canvas id="Nombre de congrès internationaux en 2016"></canvas>
-                                      <canvas id="Evolution annuelle moyenne du nombre d'emplois dans les ICC 2011-2016"></canvas>
+
+                                    <section class=" categorie-des cat2">
+
+                                        <div class="cat-chart-block ">
+                                            <canvas class= "indicateur1" id="chomage"></canvas>
+                                            <canvas class="indicateur2" id="cadres"></canvas> 
+                                            <canvas class="indicateur3" id="nbEtabl"></canvas>  
+                                        </div>
+
+                                        <h1 class = "indTitle indTitle1 text-center"> Taux de chomâge</h1>
+                                        <h1 class = "indTitle indTitle2 text-center"> Evolution annuelle moyenne de la part des cadres </h1>
+                                        <h1 class = "indTitle indTitle3 text-center"> Evolution annuelle du nombre d'établissements </h1>
+                                       
+
+                                        <p class="textBull textBull1">La zone d’emploi de la métropole Nantes-Saint Nazaire conserve un taux de chômage bien inférieur à la moyenne des grandes métropoles françaises. </p>
+                                        <p class="textBull textBull2">De part son écosystème moderne et la multitude de formations qui forment le tissu économique nantais, la métropole est de plus en plus attrayantes et voit donc son nombre de cadres augmenter de manière notoire. </p>
+                                        <p  class="textBull textBull3" >Vivier de start-up et d’idées innovantes, la métropole s’inscrit dans une dynamique de création d’établissements très positive.</p>
+                                        <img src="img/common/tete.png" class="femme img-responsive">
+                                        <img src="img/enseignement/enseignement.png" class="mainIllustration img-responsive">
+                                        <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                     
+                                     <div class="indButton">
+                                            <button type="button" class=" buttonInd1 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up  faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd2 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd3 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                    
+                                    </div>
+                                      
                                     </section>
 
-                                    <section class=" categorie-des cat4">
-                                      <img src="img/common/tete.png" class="femme">
-                                    <img src="img/industrie/industrie.png" class="mainIllustration">
-                                     <img src="img/common/commentaire.png" class="commentaire">
-                                      <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
-                                      <canvas id="Nombre d'emplois dans l'aéronautique"></canvas>
-                                      <canvas id="Nombre d'emplois dans la l'industrie navale"></canvas>
+
+                                     <section class=" categorie-des cat3">
+
+                                        <div class="cat-chart-block ">
+                                            <canvas class= "indicateur1" id="congres"></canvas>
+                                            <canvas class="indicateur2" id="icc"></canvas>  
+                                        </div>
+
+                                        <h1 class = "indTitle indTitle1 text-center"> Nombre de congrés internationaux en 2016</h1>
+                                        <h1 class = "indTitle indTitle2 text-center"> Evolution annuelle moyenne du nombre d'emplois dans les ICC 2011-2016 </h1>
+                                       
+
+                                        <p class="textBull textBull1">Nantes devient une destination reconnue en matière de tourisme d’affaire et accueille davantage de congrès internationaux depuis 2016.</p>
+                                        <p class="textBull textBull2">L’attractivité nantaise est aujourd’hui portée par le bouillonnement de son tissu économique, notamment par l’essor des Industrie culturelles et créatives  qui pénètrent les secteurs les plus traditionnels en leur insufflant une capacité d’innovation et de différenciation qui permet de s'affirmer sur la scène nationale (R&D, graphisme, art…). </p>
+
+                                        <img src="img/common/tete.png" class="femme img-responsive">
+                                        <img src="img/culture/culture.png" class="mainIllustration img-responsive">
+                                        <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                     
+                                     <div class="indButton">
+                                            <button type="button" class=" buttonInd1 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up  faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd2 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                    
+                                    </div>
+                                      
                                     </section>
+
+
+                                     <section class=" categorie-des cat4">
+
+                                        <div class="cat-chart-block ">
+                                            <canvas class= "indicateur1" id="emploisaeronautique"></canvas>
+                                            <canvas class="indicateur2" id="emploisnavale"></canvas>  
+                                        </div>
+
+                                        <h1 class = "indTitle indTitle1 text-center"> Nombre d'emplois dans l'aéronautique</h1>
+                                        <h1 class = "indTitle indTitle2 text-center"> Nombre d'emplois dans l'industrie navale </h1>
+                                       
+
+                                        <p class="textBull textBull1">L’aéronautique occupe une place de choix dans le tissu industriel de la métropole Nantes-Saint-Nazaire. Jouissant de la plus belle évolution nationale en matière de création d’emploi, Airbus et ses sous-traitants employaient 7374 personnes en 2016. </p>
+                                        <p class="textBull textBull2">Véritable fleuron de l’industrie navale en France, les Chantiers de l’Atlantique ont vu poindre certains des plus beaux paquebots du monde à l’image du Harmony of The Seas ou le Queen Mary 2. 
+                                        Aujourd’hui Nantes-Saint-Nazaire est la métropole la plus compétitive dans le secteur naval en France et employait 3820 personnes en 2016</p>
+
+                                        <img src="img/common/tete.png" class="femme img-responsive">
+                                        <img src="img/culture/culture.png" class="mainIllustration img-responsive">
+                                        <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                     
+                                     <div class="indButton">
+                                            <button type="button" class=" buttonInd1 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up  faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd2 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                    
+                                    </div>
+                                      
+                                    </section>
+
+
 
                                     <section class=" categorie-des cat5">
-                                      <img src="img/common/tete.png" class="femme">
-                                    <img src="img/numerique/numerique.png" class="mainIllustration">
-                                     <img src="img/common/commentaire.png" class="commentaire">
-                                      <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
-                                      <canvas id="Part des emplois privés dans le numérique en 2016"></canvas>
-                                      <canvas id="Evolution annuelle de la part des emploi ''conception recherche'' 2009-2014"></canvas>
+
+                                        <div class="cat-chart-block ">
+                                            <canvas class= "indicateur1" id="emploisnumerique"></canvas>
+                                            <canvas class="indicateur2" id="emploisrecherche"></canvas>  
+                                        </div>
+
+                                        <h1 class = "indTitle indTitle1 text-center"> Part des emplois dans le numérique en 2016</h1>
+                                        <h1 class = "indTitle indTitle2 text-center">  Evolution annuelle de la part des emplois “conception-recherche” entre  2009 et 2014  </h1>
+                                       
+
+                                        <p class="textBull textBull1">De même, le numérique concerne tous les secteurs d'activité avec des entreprises traditionnelles qui s'engagent dans des démarches de transition numérique. L'agglomération nantaise compte parmi les plus fortes croissances de l’emploi dans le secteur numérique. La dynamique de la French Tech permet de pousser l'entrepreneuriat numérique en réunissant l'écosystème local des start-ups</p>
+                                        <p class="textBull textBull2">Le nombre d'emploi dans la conception-recherche, qui permet d'appréhender l'importance du capital humain lié à l'innovation, a fortement progressé entre 2009 et 2014 dans l'agglomération nantaise qui se place par ailleurs en 4ème position en termes de poids dans l'emploi total après Lyon, Toulouse et Grenoble. </p>
+
+                                        <img src="img/common/tete.png" class="femme img-responsive">
+                                        <img src="img/numerique/numerique.png" class="mainIllustration img-responsive">
+                                        <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                     
+                                     <div class="indButton">
+                                            <button type="button" class=" buttonInd1 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up  faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd2 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                    
+                                    </div>
+                                      
                                     </section>
 
+
                                     <section class=" categorie-des cat6">
-                                        <div class="cat-chart-block">
+
+                                        <div class="cat-chart-block cat61">
+                                            <canvas class= "indicateur1" id="evolVoyageurs"></canvas>
+                                            <canvas class="indicateur2" id="kmTsprt"></canvas>  
+                                            <canvas class="indicateur3" id="tpsParis"></canvas>  
                                         </div>
-                                        <img src="img/common/indicateur6.png" class="indicateur6 img-responsive">
+
+                                        <h1 class = "indTitle indTitle1 text-center"> Evolution moyenne de nombre de passagers</h1>
+                                        <h1 class = "indTitle indTitle2 text-center"> Nombre de kilomètres parcouru en transport en commun par habitant </h1>
+                                        <h1 class = "indTitle indTitle3 text-center"> Temps de connexion à Paris</h1> 
+
+                                        <p class="textBull textBull1"> Les transports en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
+                                        <p class="textBull textBull2">Ce chiffre appuie l’énergie de la métropole se sentant de plus en plus impliquée dans une
+                                        dynamique écologique.</p>
+                                        <p class="textBull textBull3"> La métropole NSN devient de plus en plus attractive car sa liaison avec Paris n'est que d'une heure 56. Cela permet aux entreprises de relier la capitale rapidement.</p>      
+
+
                                         <img src="img/common/tete.png" class="femme img-responsive">
-                                     <img src="img/common/commentaire.png" class="commentaire img-responsive">
-                                      <p class="textBull"> Les common en commun à NSNM sont un outil que les citoyens utilisent largement. En effet, la dynamique territoriale Nantaise  donne la priorité aux cyclistes et aux common en communs.</p>
-                                      <canvas id="Evolution moyenne annuelle du nombre de passagers 2011-2016 (en pourcentages)"></canvas>
-                                      <div id="df">
-                                      <canvas id="Nombre de kilomètres parcourus en transport en commun par habitant en 2014"></canvas></div>
-                                      <canvas id="Temps de connexion à Paris en train (en minutes)"></canvas>
+                                        <img src="img/transports/transport.png" class="mainIllustration img-responsive">
+                                        <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                     
+                                     <div class="indButton">
+                                            <button type="button" class=" buttonInd1 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up  faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd2 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd3 btn btn-warning btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                                    </div>
+                                      
                                     </section>
                     </div>
 
                                 </div>
 
                                 <div class=" menu">
-                                  <img class="nsndev" src="img/menu/nsn.png">
+                                  <img class="nsndev" src="img/menu/nsn2.png">
                                   <p class="minititle"> Pourquoi s’installer dans la métropole Nantes St Nazaire ?</p>
                                   <div class="categorie-names col-md-4">
+                                <div class="categorie cat7" id="7">
+                                  <img class="chevron" src="img/menu/chevron.png">
+                                 <h2>Intro</h2>
+                                </div>
                                 <div class="categorie cat0" id="0">
                                   <img class="chevron" src="img/menu/chevron.png">
                                  <h2>Cadre de vie</h2>
@@ -238,11 +372,11 @@
                                 </div>
                               </div>
 
-                              <div class="row social">
-                                <a href="http://www.google.fr" target="_blank"><span id="social-fb"><img class="i1" src="img/menu/fb.png"><img class="i2" src="img/menu/fb2.png"></span></a>
-                                <span id="social-twitter"><img class="i1" src="img/menu/twitter.png"><img class="i2" src="img/menu/twitter2.png"></span>
-                                <span id="social-in"><img class="i1" src="img/menu/in.png"><img class="i2" src="img/menu/in2.png"></span>
-                                <span id="social-share"><img class="i1" src="img/menu/share.png"><img class="i2" src="img/menu/share2.png"></span>
+                              <div class="social">
+                                <a title="Partager sur Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/" target="_blank" id="lien-fb"><span id="social-fb"><img class="i1" src="img/menu/fb.png"><img class="i2" src="img/menu/fb2.png"></span></a>
+                                <a title="Partager sur Twitter" href="https://twitter.com/home?status=http%3A//hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/" target="_blank" id="lien-twitter"><span id="social-twitter"><img class="i1" src="img/menu/twitter.png"><img class="i2" src="img/menu/twitter2.png"></span></a>
+                                <a title="Partager sur LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/&title=Hyblab%20M%C3%A9tropole%20Nantes-St-Nazaire&summary=D%C3%A9couvrez%20l'histoire%20d'Emmanuelle,%20une%20jeune%20entrepreneuse%20qui%20a%20d%C3%A9cider%20de%20quitter%20Paris%20pour%20faire%20sa%20vie%20%C3%A0%20Nantes.&source=" target="_blank" id="lien-in"><span id="social-in"><img class="i1" src="img/menu/in.png"><img class="i2" src="img/menu/in2.png"></span></a>
+                                
                                      
                               </div>
                                 </div>
@@ -255,7 +389,7 @@
                     <p>Nantes Saint-Nazaire Métropole est une métropole dynamique sous différents aspects et remplie de nombreux critères que ce soit pour développer son activité ou plus simplement s'y installer.</p>
                     <img id="img-synthese" src="img/intro/emmanuelle.png" alt="img-synthese">
                     <div id="synth-chart-block">
-                        <canvas id="synthese-chart"></canvas>
+                        <canvas id="synthese-chart"></canvas>à
                     </div>  
                     <p>Les rangs indiqués sont les classements moyens des villes vues sous les différents angles donnés plus haut.</p>
                     <img class="flecheBas" src="img/main/FLECHEBAS.png" alt="nextPage">
@@ -283,7 +417,7 @@
                         <div class="text-center group side-group"> 
                             <img class="polytechguys" src="img/maquette/CREDITS/Group3.png">
                             <h1 >POLYTECH</h1>
-                            <a href="dyacouba.raidghost.com"><p> Yacouba DIABY</p></a>
+                            <a id="yac" href="http://dyacouba.raidghost.com"><p> Yacouba DIABY</p></a>
                             <p> Amadou KANE</p>
                             <p> Matthieu FAVREL</p>
                         </div>

@@ -17,26 +17,13 @@ app.post('/actifs', function(req, res) {
         var actifs_json = xlsx.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
         var actifs = xlsx.utils.sheet_to_html(workbook.Sheets[sheet_name_list[0]]);
         res.json(actifs_json);
-        //res.end();
-
 });
 
 app.post('/rangs', function(req, res) {
 	var workbook = xlsx.readFile('./nantes-st-nazaire-dev/rangs-finaux.xlsx');
 	var sheet_name_list = workbook.SheetNames;
     var rangs_json = xlsx.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
-    res.send(rangs_json);
-    res.end();
-
-});
-
-app.get('/rangs', function(req, res) {
-	var workbook = xlsx.readFile('./nantes-st-nazaire-dev/rangs-finaux.xlsx');
-	var sheet_name_list = workbook.SheetNames;
-    var rangs_json = xlsx.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
-    res.send(rangs_json);
-    res.end();
-
+    res.json(rangs_json);
 });
 
 // You can then add whatever routing code you need

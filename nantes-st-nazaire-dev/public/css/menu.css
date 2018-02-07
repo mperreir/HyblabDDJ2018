@@ -9,7 +9,6 @@ div.categorie {
 	margin-right: auto;
 	font-size: 13px;
 	border-radius: 10px;
-	z-index: 3;
 }
 .chevron {
 	position: relative;
@@ -64,8 +63,9 @@ div.categorie .chevron {
 }
 
 .section .menu .social{
-	padding-top:85px;
-	padding-left: 30%;
+	padding-top:50px;
+	text-align: center;
+
 }
 .section .menu img{
 
@@ -81,7 +81,7 @@ div.categorie .chevron {
 	padding-right: 10px;
 }
 .minititle{
-	padding-top:120px;
+	padding-top:100px;
 	padding-bottom: 30px;
 	padding-left: 7%;
 	font-size: 17px;	
@@ -132,30 +132,33 @@ div.categorie .chevron {
 	right:11%;
 	z-index: 2;
 }
-.indicateur6{
-	position: absolute;
-	top:7%;
-	left:3%;	
-	width:8%;
-	top:2%;
-}
 
 .textBull{
 	color:#838383;
-	width:35%;
+	width:39%;
 	font-size:15px;
 	position: absolute;
-	top:71%;
+	top:69%;
 	right:15%;	
 	z-index: 2;
 }
 
-
-/* Emploi */
-.cat-chart-block {
-	
-	width: 50%;
-
+.bull{
+	position: absolute;
+	right:30%;
+	top:22%;
+}
+.textBullbis{
+	width:35%;
+	font-size:15px;
+	position: absolute;
+	top:4%;
+	right:15%;	
+}
+.femme2{
+	position: absolute;
+	top:30%;
+	right:50%;	
 }
 
 .social img {
@@ -164,4 +167,8 @@ div.categorie .chevron {
 
 .social .i2 {
 	display: none; 
+}
+
+#lien-fb {
+	
 }

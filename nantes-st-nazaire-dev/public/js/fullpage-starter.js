@@ -21,10 +21,10 @@ $(document).ready(function() {
 
     //Chevrons des titres du menu
     $(".chevron").css("visibility","hidden");
-    $(".menu .cat0 .chevron").css("visibility","visible");
+    $(".menu .cat7 .chevron").css("visibility","visible");
 
     //Les catégories sont désactivées sauf la catégorie d'indice 0 qui est activée par défaut
-    setDescriptions(0); 
+    setDescriptions(7); 
 
     $(".categorie").click(function() {
         var id = $(this).attr("id");
@@ -67,6 +67,55 @@ $(document).ready(function() {
 
  $.fn.fullpage.moveSectionDown(); $.fn.fullpage.moveSectionDown();
 });
+
+ //indicateurs angles 
+    $(".indicateur1").hide();
+    $(".indicateur2").hide();
+    $(".indicateur3").hide();
+    $(".textBull1").hide();
+    $(".textBull2").hide();
+    $(".textBull3").hide();
+    $(".indTitle1").hide();
+    $(".indTitle2").hide();
+    $(".indTitle3").hide();
+
+
+    
+    $(".buttonInd1").click(function() {
+        $(".indicateur2").hide();
+        $(".indicateur3").hide();
+        $(".indicateur1").show();
+        $(".textBull2").hide();
+        $(".textBull3").hide();
+        $(".textBull1").show();
+        $(".indTitle2").hide();
+        $(".indTitle3").hide();
+        $(".indTitle1").show();
+    });
+
+    $(".buttonInd2").click(function() {
+        $(".indicateur1").hide();
+        $(".indicateur3").hide();
+        $(".indicateur2").show();
+        $(".textBull1").hide();
+        $(".textBull3").hide();
+        $(".textBull2").show();
+        $(".indTitle1").hide();
+        $(".indTitle3").hide();
+        $(".indTitle2").show();
+    });
+
+    $(".buttonInd3").click(function() {
+        $(".indicateur1").hide();
+        $(".indicateur2").hide();
+        $(".indicateur3").show();
+        $(".textBull1").hide();
+        $(".textBull2").hide();
+        $(".textBull3").show();
+        $(".indTitle2").hide();
+        $(".indTitle1").hide();
+        $(".indTitle3").show();
+    });
 
 function setDescriptions(id) {
     $("section.categorie-des").css("opacity","0");
@@ -125,4 +174,5 @@ function activateDescription(id) {
     $("section.cat" + exId).velocity({
         left: "+=120"
     });
+    $(".buttonInd1").trigger('click');
 }

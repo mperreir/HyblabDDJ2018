@@ -58,9 +58,9 @@ function createChartData(dataArray) {
         dataSet = {
             label: values["indicator"],
             data: values["data"],
-            backgroundColor: ["#648DF3", "#2A5DDA","#143380","#DA3030","#DA3030","#DA3030","#DA3030","#DA3030","#DA3030","#DA3030","#DA3030","#DA3030"]
+            backgroundColor: ["#34B6B3", "#34B6B3","#34B6B3","#FFCC01","#FFCC01","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 "]
         };
-        console.log(dataSet);
+        //console.log(dataSet);
         dataSets.push(dataSet);
     }
     return dataSets;
@@ -99,9 +99,9 @@ function triCroissant(cities, dataSets) {
             }
         }
     }
-    cities = cities.slice(0,9);
-    datas.data = datas.data.slice(0,9);
-    datas.backgroundColor = datas.backgroundColor.slice(0,9);
+    cities = cities.slice(0,8);
+    datas.data = datas.data.slice(0,8);
+    datas.backgroundColor = datas.backgroundColor.slice(0,8);
     return ([cities, [datas]])
 }
 
@@ -138,9 +138,9 @@ function triDecroissant(cities, dataSets) {
             }
         }
     }
-    cities = cities.slice(0,5);
-    datas.data = datas.data.slice(0,5);
-    datas.backgroundColor = datas.backgroundColor.slice(0,5);
+    cities = cities.slice(0,8);
+    datas.data = datas.data.slice(0,8);
+    datas.backgroundColor = datas.backgroundColor.slice(0,8);
     return ([cities, [datas]])
 }
 
@@ -159,15 +159,17 @@ function printBarChart(cities, dataSets, chartId) {
                         beginAtZero:true
                     }
                 }]
-            }
+            },
+            legend: {
+                display: false,
+                  labels: {
+                    display: false
+                  }
+              }
         }
     });
 }
 /*
-function printChart(chartData, chartId) {
-    var ctx = document.getElementById(chartId);
-    var myChart = new Chart(ctx, {
-        type: 'bar',
         data: {
             labels: cities,
             datasets: [{
@@ -175,19 +177,85 @@ function printChart(chartData, chartId) {
                 data: values,
                 backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"]
             }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true
-                    }
-                }]
+        }
+*/
+
+function printBarChartDoughnut() {
+        Chart.pluginService.register({
+        beforeDraw: function (chart) {
+            if (chart.config.options.elements.center) {
+        //Get ctx from string
+        var ctx = chart.chart.ctx;
+        
+                //Get options from the center object in options
+        var centerConfig = chart.config.options.elements.center;
+        var fontStyle = centerConfig.fontStyle || 'Arial';
+        var txt = centerConfig.text;
+        var color = centerConfig.color || '#000';
+        var sidePadding = centerConfig.sidePadding || 20;
+        var sidePaddingCalculated = (sidePadding/100) * (chart.innerRadius * 2)
+        //Start with a base font of 30px
+        ctx.font = "30px " + fontStyle;
+        
+        //Get the width of the string and also the width of the element minus 10 to give it 5px side padding
+        var stringWidth = ctx.measureText(txt).width;
+        var elementWidth = (chart.innerRadius * 2) - sidePaddingCalculated;
+
+        // Find out how much the font can grow in width.
+        var widthRatio = elementWidth / stringWidth;
+        var newFontSize = Math.floor(30 * widthRatio);
+        var elementHeight = (chart.innerRadius * 2);
+
+        // Pick a new font size so it will not be larger than the height of label.
+        var fontSizeToUse = Math.min(newFontSize, elementHeight);
+
+        //Set font settings to draw it correctly.
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        var centerX = ((chart.chartArea.left + chart.chartArea.right) / 2);
+        var centerY = ((chart.chartArea.top + chart.chartArea.bottom) / 2);
+        ctx.font = fontSizeToUse+"px " + fontStyle;
+        ctx.fillStyle = color;
+        
+        //Draw text in center
+        ctx.fillText(txt, centerX, centerY);
             }
         }
     });
+        var config = {
+            type: 'doughnut',
+            data: {
+                labels: [
+                  'Pourcentage de jours avec un indice très bon à bon 1 à 4',
+                'Pourcentage de jours avec un indice faible'
+                ],
+                datasets: [{
+                    data: [82,18 ],
+                    backgroundColor: ["#34B6B3","#FFCC01"],
+                hoverBackgroundColor: ["black ", "black"]
+                }]
+            },
+        options: {
+            elements: {
+                center: {
+                    text: '82%',
+          color: '#34B6B3', // Default is #000000
+          fontStyle: 'Arial', // Default is Arial
+          sidePadding: 20 // Defualt is 20 (as a percentage)
+                }
+            },
+            legend: {
+                display: false,
+                labels: {
+                    boxWidth: 2,
+            }
+        }
+    }};
+
+
+    var ctx = document.getElementById("qualiteair").getContext("2d");
+    var myChart = new Chart(ctx, config);
 }
-*/
 
 function synthese(dataSets) {
     var marksCanvas = document.getElementById("synthese-chart");
@@ -215,62 +283,16 @@ function synthese(dataSets) {
                     beginAtZero: true,
                     min: 1,
                     max: 10
-                }
-                
+                }    
             }
-                
         }
-        
     };
 
     var chart = new Chart(document.getElementById('synthese-chart'), config);
-
-     $("body").click(function() {
-                console.log("skrt1")
-                chart.update(chart);
-            })
-
-    var randomScalingFactor = function() {
-        return Math.round(Math.random() * 100);
-    };
-
-    var config = {
-        type: 'doughnut',
-        data: {
-            datasets: [{
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                ],
-                backgroundColor: ["#34B6B3","#ffcc01", "#ed524a", "#dabf98", "#b1d952", "#7a4785", "#ea8c40", "#565656", "#8fd8ff", "#20c997", "#6610f2"],
-                label: 'Dataset 1'
-            }],
-            labels: [
-                'Red',
-                'Orange',
-                'Yellow',
-                'Green',
-                'Blue'
-            ]
-        },
-        options: {
-            legend: {
-                labels: {
-                    boxWidth: 0,
-            }
-
-        }
-        
-
-}
-    };
-    return chart;
-    //var myPie = new Chart(document.getElementById('synthese-chart'), config);
 }
 
+
+//Fonction construisant les données du graphique radar de la synthèse
 function getSynthData(cities, dataJson) {
     var dataSets = [];
     var colors = ["#34B6B3","#ffcc01", "#ed524a", "#dabf98", "#b1d952", "#7a4785", "#ea8c40", "#565656", "#8fd8ff", "#20c997", "#6610f2"]
@@ -290,124 +312,104 @@ function getSynthData(cities, dataJson) {
 }
 
 $(document).ready(function() {
-        //http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/rangs
-        //$.post( "http://localhost:8081/nantes-st-nazaire-dev/rangs")
-        /*
-        $.post( "http://localhost:8081/nantes-st-nazaire-dev/rangs")
-            .done(function(data) {
-                console.log("Données de synthèse reçues");
-                var cities = ["Nantes-St-Nazaire", "Lyon", "Bordeaux", "Toulouse", "Rennes", "Lille", "Nice", "Strasbourg", "Grenoble","Aix-Marseille"];
-                var synthDataSets = getSynthData(cities, data);
-                synthese(synthDataSets);
-                
-                })
-            .fail(function() {
-                console.log( "Erreur requete synthese" );
-            });
-*/
 
-    // Assign handlers immediately after making the request,
-    // and remember the jqxhr object for this request
-    //http://hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/actifs
-
-    var jqxhr = $.post( "http://localhost:8081/nantes-st-nazaire-dev/actifs")
-        .done(function(data) {
+    fetch('/nantes-st-nazaire-dev/actifs', {
+      method: 'post',
+      body: JSON.stringify(),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }).then(checkStatus)
+      .then(function(data) {
             console.log( "success" );
-
-            console.log("Mean :" + getMean(data[0]));
 
             var cities = getChartLabels(data[0]);
             var dataSets = createChartData(data, 21);
             var result = triDecroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Evolution moyenne annuelle du nombre de passagers 2011-2016 (en pourcentages)");
+            printBarChart(result[0], result[1], "evolVoyageurs");
 
             var cities = getChartLabels(data[0]);
             var dataSets = createChartData(data, 22);
             var result = triDecroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Nombre de kilomètres parcourus en transport en commun par habitant en 2014");
+            printBarChart(result[0], result[1], "kmTsprt");
 
             var cities = getChartLabels(data[0]);
             var dataSets = createChartData(data, 23);
             var result = triCroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Temps de connexion à Paris en train (en minutes)");
-
-            var cities = getChartLabels(data[0]);
-            var dataSets = createChartData(data, 24);
-            var result = triDecroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Nombre de congrès internationaux en 2016");
-
-            var cities = getChartLabels(data[0]);
-            var dataSets = createChartData(data, 25);
-            var result = triDecroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Evolution annuelle moyenne du nombre d'emplois dans les ICC 2011-2016");
-
-            var cities = getChartLabels(data[0]);
-            var dataSets = createChartData(data, 18);
-            var result = triCroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Taux de chômage 2016");
-
-            var cities = getChartLabels(data[0]);
-            var dataSets = createChartData(data, 19);
-            var result = triDecroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Evolution annuelle moyenne 2009-2014 de la part des cadres dans pop act.");
-
-            var cities = getChartLabels(data[0]);
-            var dataSets = createChartData(data, 20);
-            var result = triDecroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Evolution annuelle 2011-2016 du Nombre d'établissements");
-
-            var cities = getChartLabels(data[0]);
-            var dataSets = createChartData(data, 32);
-            var result = triDecroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Nombre d'emplois dans l'aéronautique");
-
-            var cities = getChartLabels(data[0]);
-            var dataSets = createChartData(data, 30);
-            var result = triDecroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Nombre d'emplois dans la l'industrie navale");
+            printBarChart(result[0], result[1], "tpsParis");
 
             var cities = getChartLabels(data[0]);
             var dataSets = createChartData(data, 37);
             var result = triCroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Loyer mensuel médian au m2 (parc privé) - 2016");
+            printBarChart(result[0], result[1], "loyer");
 
-            var cities = getChartLabels(data[0]);
-            var dataSets = createChartData(data, 38);
-            var result = triDecroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Qualité de l’air 2016 (Jours avec un indice très bon à bon -1 à 4-)");
-
-            var cities = getChartLabels(data[0]);
-            var dataSets = createChartData(data, 34);
-            var result = triDecroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Part des emplois privés dans le numérique en 2016");
-
-            var cities = getChartLabels(data[0]);
-            var dataSets = createChartData(data, 36);
-            var result = triDecroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Evolution annuelle de la part des emploi ''conception recherche'' 2009-2014");
+            printBarChartDoughnut();
 
             var cities = getChartLabels(data[0]);
             var dataSets = createChartData(data, 29);
             var result = triDecroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Taux de réussite au baccalauréat général");
+            printBarChart(result[0], result[1], "baccalaureat");
 
             var cities = getChartLabels(data[0]);
             var dataSets = createChartData(data, 39);
             var result = triDecroissant(cities,dataSets);
-            printBarChart(result[0], result[1], "Evolution annuelle moyenne de la part des diplômés de l’enseignement supérieur dans la population (2009-2014)");
+            printBarChart(result[0], result[1], "diplomes");
+
+             var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 18);
+            var result = triCroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "chomage");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 20);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "nbEtabl");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 19);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "cadres");
+
+             var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 24);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "congres");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 25);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "icc");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 32);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "emploisaeronautique");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 30);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "emploisnavale");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 34);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "emploisnumerique");
+
+            var cities = getChartLabels(data[0]);
+            var dataSets = createChartData(data, 36);
+            var result = triDecroissant(cities,dataSets);
+            printBarChart(result[0], result[1], "emploisrecherche");
 
             })
-        .fail(function() {
-            console.log( "error" );
-        });
 
         
         update();
 });
-    function update(data) {
+
+    function update() {
       fetch('/nantes-st-nazaire-dev/rangs', {
         method: 'post',
-        body: JSON.stringify(data),
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
