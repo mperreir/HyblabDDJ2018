@@ -1829,8 +1829,8 @@ function controleurPodium()
         TextePodium.textContent = "Environ ⅓ des groupes présents pendant ces éditions viennent du pays de la country. Ils devancent de loin la France et le Royaume-Uni qui à eux deux ne parviennent même pas à égaler les Etats-Unis."
         document.getElementById("podium").className = "podium--hidden";
         document.getElementById("question").className = "texteGlobal2";
-        document.getElementById("reponse").className = "dateMenu";
-        document.getElementById("saviez").className = "dateMenu";
+        document.getElementById("reponse").className = "texteGlobal1";
+        document.getElementById("saviez").className = "texteGlobal1";
         document.getElementById("graph").className = "graph";
         document.getElementById("legendeGraph").className = "legendeGraph";
     }
@@ -2727,7 +2727,6 @@ function camembert(data, id){
         }
     }
     cam.push({ color : couleur[j], percentage : pour});
-    console.log(cam);
     $(function(){
         $(id).rotapie({
             slices: cam,

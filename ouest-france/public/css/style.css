@@ -780,7 +780,7 @@ img.barrePlan
 {
     color: #767676;
     position: absolute;
-    left: 50px;
+    left: 545px;
     top: 4px;
     font-size: 26px;
 }
@@ -948,7 +948,6 @@ p.texteGlobal1{
     color: white;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
-    margin-left: 25px;
     text-align: justify;
 }
 
@@ -964,7 +963,6 @@ p.texteGlobal2{
     color: #a9ff88;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
-    margin-left: 25px;
     text-align: justify;
 }
 
@@ -1107,6 +1105,100 @@ object.mapFrance
     height: 30%;
     width: 30%;
     top: 147px;
-    left: 456px;
+    left: 450px;
     position: absolute;
 }
+
+.polytech
+{
+    position: absolute;
+    top: 314px;
+    left: -37px;    
+}
+
+.audencia
+{
+    position: absolute;
+    top: 314px;
+    left: 217px;
+}
+
+.agr
+{
+    position: absolute;
+    top: 314px;
+    left: 537px;
+}
+
+.ecole
+{
+    color: #A9FF88;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.nom
+{
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.remerciement
+{
+    position: absolute;
+    top: 240px;
+    left: 800px;
+    width: 350px;
+}
+
+#bandeau 
+{
+    padding: 8px;
+    position: absolute;
+    top: 471px;
+    left: -155px;
+    background-color: #ffffff;
+    width: 1366px;
+}
+
+#bandeau li
+{
+      list-style-type: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 12px;
+}
+
+
+    #bandeau img{
+      height: 46px;
+    }
+
+    #bandeau #hyblab{
+      margin: 46px 0;
+      height: 50px;
+      float: left;
+    }
+
+    #bandeau #cc, #bandeau #opensource
+    {
+      height:16px;
+    }
+
+    #bandeau .stacked{
+      display:block;
+    }
+
+    #bandeau ul{
+      text-align: center;
+      padding: 0 0;
+    }
+
+    #bandeau .institutionnel
+    {
+      height: 42px;
+    }
