@@ -136,7 +136,7 @@ jQuery(document).ready(function($){
         }
         navigate[1].addEventListener('click',createBubbles());
         for (var i=1; i<curDisp.childNodes.length; i++) $(curDisp.childNodes[i]).hide();
-        setInterval(call, 30000);
+        setInterval(call, 60000);
       createMap();
     });
 
@@ -289,7 +289,7 @@ jQuery(document).ready(function($){
         }
         for (var i=1; i<curDisp.childNodes.length; i++) $(curDisp.childNodes[i]).hide();
         cur=0;
-        let wat=setInterval(call,30000);
+        let wat=setInterval(call,60000);
 			});
 
 			//on swipe, show next/prev event content
