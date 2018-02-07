@@ -11,7 +11,9 @@
 #sequence {
   /* width: auto; */
   /* height: 70px; */
+  position:  relative;
   display:  block;
+  margin-left:  0%;
 }
 
 #legend {
@@ -27,6 +29,8 @@
   width: 300px;
   display:  block;
   position: relative;
+  margin-left: auto;
+  margin-right:  auto;
 }
 
 #chart path {
