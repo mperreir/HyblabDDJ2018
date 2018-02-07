@@ -171,7 +171,7 @@ function upDateHisto(histo){
 function buildHisto(parent, ann, dep){
 
 	var svg = d3.select(parent),
-	    margin = {top: 120, right: 80, bottom: 0, left: 80},
+	    margin = {top: 120, right: 120, bottom: 0, left: 80},
 	    width = +svg.attr("width") - margin.left - margin.right,
 	    height = +svg.attr("height") - margin.top - margin.bottom-50,
 	    g = svg.append("g").attr("transform", "translate(" + (margin.left) + "," + (margin.top) + ")");
@@ -275,8 +275,17 @@ function buildHisto(parent, ann, dep){
 				.attr("xlink:href","img/Citerne2.svg")
 				.style("width", widthWatBut)
 				.style("height", heightWatBut)
-				.attr("y",-34)
+				.attr("y",-39)
 				.attr("preserveAspectRatio","none");
+
+			g.append("g")
+					.append("text")
+					.attr("x",x.bandwidth()/2)
+					.attr("y",250)
+					.text(getCleanDepName)
+					.attr("font-family", "sans-serif")
+					.attr("font-size", "30px")
+					.style("text-anchor", "middle");
 		}else if (dep == "Campbon"){
 
 			var widthBottle =  1.01*x.bandwidth();
@@ -286,18 +295,12 @@ function buildHisto(parent, ann, dep){
 				.attr("xlink:href","img/bouteille.svg")
 				.style("width", widthBottle)
 				.style("height", heightBottle)
-				.attr("y",-32)
+				.attr("y",-41)
 				.attr("preserveAspectRatio","none");
 		}
 
-		g.append("g")
-				.append("text")
-				.attr("x",100)
-				.attr("y",230)
-				.text(getCleanDepName)
-				.attr("font-family", "sans-serif")
-				.attr("font-size", "30px")
-				.style("text-anchor", "middle")
+
+
 
 		function getCleanDepName(){
 			switch(dep) {
