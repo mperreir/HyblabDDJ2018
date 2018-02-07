@@ -2868,7 +2868,7 @@ function camembert(data, id){
             maxRadius: 70, // Radius of selected slice, can be set to percentage of container width i.e. '45%'
             minInnerRadius: 35, // Smallest radius inner circle when animated, set to 0 to disable inner circle, can be set to percentage of container width i.e. '35%'
             maxInnerRadius: 45, // Normal radius inner circle, set to 0 to disable inner circle, can be set to percentage of container width i.e. '30%'
-            innerColor: '#fff', // Background color inner circle.
+            innerColor: ' #262626', // Background color inner circle.
             minFontSize: 30, // Smallest fontsize percentage when animated, set to 0 to disable percentage display, can be set to percentage of container width i.e. '20%'
             maxFontSize: 40, // Normal fontsize percentage, set to 0 to disable percentage display, can be set to percentage of container width i.e. '10%'
             fontYOffset: 0, // Vertically offset the percentage display with this value, can be set to percentage of container width i.e. '-10%'
