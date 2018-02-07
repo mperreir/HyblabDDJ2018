@@ -60,21 +60,21 @@
 
     <div id="criteres">
         <p id="selectionIntevalle" >
-        <p id ="intervalleAge" class="intervalle"> </p>
+        <p id ="phraseAge" class="phrase"> Quel est votre age ? </p>
+        <p id ="intervalleAge" class="intervalle"> </p> <p> ans </p>
         <input title="borneInferieureAge" id="minAge" type="range" value="18" max="50" min="16" step="1" onchange="actualize(event, 'Age')">
-     <!--   <input title="borneInferieureAge" id="maxAge" type="range" value="22" max="50" min="16" step="1" onchange="actualize(event, 'Age')"> -->
 
-        <p id ="intervalleQuotient" class="intervalle"> </p>
+        <p id ="phraseQuotient" class="phrase">Moyenne des distances domicile-CFA, domicile-entreprise :</p>
+        <p id ="intervalleQuotient" class="intervalle"> </p> <p> km </p>
         <input title="borneInferieureQuotient" id="minQuotient" type="range" value="0" max="1000" min="0" step="10" onchange="actualize(event, 'Quotient')">
-        <!--  <input title="borneInferieureQuotient" id="maxQuotient" type="range" value="600" max="1000" min="0" step="10" onchange="actualize(event, 'Quotient')"> -->
 
+        <p id ="phraseDistance" class="phrase">Quel est votre quotient familial ?</p>
         <p id ="intervalleDistance" class="intervalle"> </p>
         <input title="borneInferieureDistance" id="minDistance" type="range" value="1" max="150" min="1" step="1" onchange="actualize(event, 'Distance')">
-      <!--  <input title="borneInferieureDistance" id="maxDistance" type="range" value="50" max="150" min="1" step="1" onchange="actualize(event, 'Distance')"> -->
 
-        <p id ="intervalleNiveau" class="intervalle"> </p>
+        <p id ="phraseNiveau" class="phrase">Quel niveau d'étude vous intéresse ? </p>
+        <p id ="intervalleNiveau" class="intervalle"> </p> <p>  (5 = niveau CAP, 4 = bac, 3 = bac+2, 2 = bac+3/4, 1 = bac+5/ et +) </p>
         <input title="borneInferieureNiveau" id="minNiveau" type="range" value="1" max="6" min="1" step="1" onchange="actualize(event, 'Niveau')">
-      <!--  <input title="borneInferieureNiveau" id="maxNiveau" type="range" value="6" max="6" min="1" step="1" onchange="actualize(event, 'Niveau')"> -->
         </p>
     </div>
 

@@ -29,13 +29,13 @@ function displayValue(event, variable){
     afficheVar = document.getElementById("intervalle" + variable);
 
     if (variable === "Age"){
-        afficheVar.innerHTML = "Quel est votre age ? " + varMin + " ans";
+        afficheVar.innerHTML =  varMin;
     } else if (variable === "Distance"){
-        afficheVar.innerHTML = "Moyenne des distances domicile-CFA, domicile-entreprise : " + varMin + " km";
+        afficheVar.innerHTML = varMin + " km";
     } else if (variable === "Quotient"){
-        afficheVar.innerHTML = "Quel est votre quotient familial ? " + varMin;
+        afficheVar.innerHTML = varMin;
     } else if (variable === "Niveau"){
-        afficheVar.innerHTML = "Quel niveau d'étude vous intéresse ? " + varMin + " (5 = niveau CAP, 4 = bac, 3 = bac+2, 2 = bac+3/4, 1 = bac+5/ et +)";
+        afficheVar.innerHTML = varMin;
     }
 }
 
