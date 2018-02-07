@@ -10,6 +10,7 @@ var colors = [
     'rgba(255,224,0,1)',
     'rgba(255,224,0,1)'
 ];
+
 var colorZoom = [
     'rgba(223,38,29,0.8)',
     'rgba(104,192,237,0.8)',
@@ -17,6 +18,17 @@ var colorZoom = [
 ];
 
 var drawDDChart = function(stats) {
+    var colorsDD = {
+        ité:'rgba(18,68,75,100)',
+        ent:'rgba(96,192,190,100)',
+        ets:'rgba(42,114,135,100)',
+        ion:'rgba(208,2,27,100)',
+        gie:'rgba(39,194,172,100)',
+        les:'rgba(152,17,33,100)',
+        air:'rgba(235,188,42,100)',
+        eau:'rgba(96,177,192,100)',
+        aux:'rgba(214,235,55,100)'
+    };
     function scale(number) {
         var r;
         if(number<=10){
@@ -61,7 +73,7 @@ var drawDDChart = function(stats) {
                     r: scale(parseFloat(stats.Developpement_durable.values[1][id]))
                 }
             ],
-            backgroundColor: colors[id]
+            backgroundColor: colorsDD[aspect.substr(aspect.length -3)]
         };
 	});
 	
@@ -509,7 +521,6 @@ function drawPieChart(data, title) {
 function drawDistanceDataviz(data) {
 
     var colorMatch = {
-        Aut: colors[6],
         Ele: colors[1],
         maç: colors[2],
         men: colors[3],
