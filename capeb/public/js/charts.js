@@ -83,8 +83,10 @@ var drawDDChart = function(stats) {
             data: {'datasets': datasets},
             options: {
                 title: {
-                    display: true,
-                    text: "Niveau d’engagement par thème"
+                    display: false
+                },
+                legend: {
+                    display: false
                 },
                 onClick: function (e) {
                     var element = this.getElementAtEvent(e);
@@ -273,8 +275,7 @@ var drawChart3dEmploi = function (data) {
                 display: false
             },
             title: {
-                display: true,
-                text: "Evolution du % d’entreprises qui envisagent d'embaucher"
+                display: true
             },
             tooltips: {
                 mode: 'index',
@@ -483,13 +484,33 @@ function drawBarChart(data, title) {
             },
 			legend: {
 				display: false
-			}            
+			},
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        beginAtZero: true, // minimum value will be 0.
+                        callback: function (value) {
+                            return value + "%";
+                        }
+                    }
+                }],
+                    yAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                }]
+
+            }
         }
     });
 
 }
 
-var drawMP = (stats) => {
+var drawMP = function(stats) {
+    var colorsMP = ['rgba(100,191,182,100)', 'rgba(88,88,83,100)']
 	var sec = document.getElementById("dataviz-section");
     if (sec !== null) {
         sec.remove();
@@ -507,7 +528,6 @@ var drawMP = (stats) => {
     var cvs = sec.appendChild(canvas);
 
 	var ctx = cvs.getContext("2d");
-
     
     var myNewChart = new Chart(ctx, {
         type: 'pie',
@@ -516,15 +536,25 @@ var drawMP = (stats) => {
             datasets: [{
                 label: "Activte",
                 borderWidth: 0,
-                data: stats.Marches_publics.values.map(val => parseFloat(val) * 100),
-                backgroundColor: colors,
+                data: stats.Marches_publics.values.map(function(val){return parseFloat(val) * 100;}),
+                backgroundColor: colorsMP
             }]
         },
         options: {
             title: {
-                display: true,
-                text: "% d'entreprises qui ont réalisées des marchés public en 2017"
-            }
+                display: false,
+            },
+            legend: {
+                display: false
+            },
+            tooltips: {
+                callbacks: {
+                    label: function (tooltipItem, data) {
+                        var value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                        return value.toFixed(1) + ' :%';
+                    }
+                }
+            },
         }
     });
     canvas.onclick = function (evt) {
@@ -780,8 +810,7 @@ function createConjonctureDataviz(json) {
         data: d,
         options: {
             title: {
-                display: true,
-                text: "Tendance 2017 des indicateurs clés des entreprises"
+                display: false,
             },
             legend: {
                 display: false
