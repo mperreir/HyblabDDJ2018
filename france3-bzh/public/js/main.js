@@ -1020,15 +1020,15 @@ function initmap() {
 // paramÃ©trage de la carte
     map = new L.Map('map',{
         attributionControl: false,
-        zoomSnap: 0.5,
-        minZoom: 5.5,
+        zoomSnap: 1,
+        minZoom: 5,
         maxZoom: 11,
-        zoomControl:false,
+        zoomControl:true,
         layers:[pn,accidentRegion,coordAcc,accidentratioRegion]});
 
     // crÃ©ation des "tiles" avec open street map
     // on centre sur la France
-    map.setView(new L.LatLng(44.85, 3.4518), 5.5);
+    map.setView(new L.LatLng(44.85, 3.4518), 5);
     map.removeLayer(pn);
     map.removeLayer(accidentRegion);
     accidentRegion = null;
@@ -1259,7 +1259,7 @@ function addCoordAcc(){
   var markers = L.markerClusterGroup({
         removeOutsideVisibleBounds:true,
         spiderfyOnMaxZoom:false,
-        disableClusteringAtZoom: 7,
+        disableClusteringAtZoom: 9,
         iconCreateFunction: function (cluster) {
             var marker = cluster.getAllChildMarkers();
             var n = 0;
@@ -1330,6 +1330,7 @@ fetch('data/france.geojson')
         }}).addTo(map);
 });
 initmap();
+map.scrollWheelZoom.disable()
 
 $("#map").css("height", "70%");
 $("#map").css("width", "40%");
