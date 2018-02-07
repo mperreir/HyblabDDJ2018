@@ -364,3 +364,57 @@
         transform: scale(1, 1);
     }
 }
+@-webkit-keyframes modalHeadOut {
+    0% {
+        visibility: visible;
+        opacity: 1;
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        -moz-transform:scale(0.97, 0.97);
+        -ms-transform: scale(0.97, 0.97);
+        -webkit-transform: scale(0.97, 0.97);
+        transform: scale(0.97, 0.97);
+    }
+}
+@-moz-keyframes modalHeadOut {
+    0% {
+        visibility: visible;
+        opacity: 1;
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        -moz-transform: scale(0.97, 0.97);
+        -ms-transform: scale(0.97, 0.97);
+        -webkit-transform: scale(0.97, 0.97);
+        transform: scale(0.97, 0.97);
+    }
+}
+@keyframes modalHeadOut {
+    0% {
+        visibility: visible;
+        opacity: 1;
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        -moz-transform: scale(0.97, 0.97);
+        -ms-transform: scale(0.97, 0.97);
+        -webkit-transform: scale(0.97, 0.97);
+        transform: scale(0.97, 0.97);
+    }
+}
