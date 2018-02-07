@@ -1,3 +1,73 @@
+/** lien entre les secteurs et les numéros **/
+var GFE = [ 'Agriculture', 'Pêche - Mer - Aquaculture','Bâtiment gros œuvre - Génie civil - Extraction',
+'Bâtiment : équipements et finitions','Structures métalliques - Travail des métaux - Fonderie',
+    'Mécanique - Automatismes', 'Electricité - Electrotechnique - Electronique',
+    'Travail des matériaux - Industries de process - Laboratoire','Production alimentaire - Cuisine',
+    'Textile - Habillement - Cuir','Travail du bois', 'Techniques graphiques - Impression',
+    'Transports - Conduite - Manutention - Magasinage','Tertiaire de bureau - Tertiaire spécialisé',
+    'Commerce et distribution','Paramédical - Travail social - Soins personnels',
+    'Hôtellerie - Restauration - Tourisme - Sports - Animation socioculturelle - Loisirs',
+    'Nettoyage - Assainissement - Environnement - Sécurité',
+    'Techniques de la communication - Média',
+    'Arts appliqués - Arts du spectacle',
+    'Formations générales - Généralistes - Développement personnel',
+    'Formations d’aide à l’insertion sociale et professionnell'];
+
+var secteurs = { "Agriculture" : ["Amenagement paysager", "Productions animales, élevages spéc., aquacultures",
+        "Productions végétales, cultures spéc, protection", "Spéc. plurivalentes de l'agronomie - agriculture" ],
+    "Pêche - Mer - Aquaculture" : ["Forêts, espaces naturels, faune sauvage, pêche"],
+    "Bâtiment gros œuvre - Génie civil - Extraction" : ["Batiment: construction et couverture","Mines et carrières, génie civil, topographie",
+        "Spéc. pluri-techno. génie civil-construction-bois"],
+    "Bâtiment : équipements et finitions" :  ["Batiment: finitions"],
+    "Structures métalliques - Travail des métaux - Fonderie" : ["Métallurgie", "Structures métalliques"],
+    "Mécanique - Automatismes" :  ["Mécanique aéronautique et spatiale","Mécanique générale et de précision, usinage",
+        "Moteurs et mécanique auto","Spécialités pluritechnologiques des transformations",
+        "Technologies de commandes, transformations indust.","Technologies industrielles fondamentales"],
+    "Electricité - Electrotechnique - Electronique" : ["Electricité, électronique","Energie, génie climatique" ],
+    "Formations d’aide à l’insertion sociale et professionnelle": ["Développement des capacités d'orientation"],
+    "Travail des matériaux - Industries de process - Laboratoire" :  ["Matériaux de construction, verre et céramique",
+    "Plasturgie, matériaux composites", "Spécialités pluri-techno, mécanique électricité",
+        " Transformations chimiques et apparentées"],
+    "Production alimentaire - Cuisine" : ["Agro-alimentaire, alimentation, cuisine"],
+    "Textile - Habillement - Cuir" : ["Cuirs et peaux", "Habillement", "Spécialités pluri-technologiques matériaux souples"],
+    "Travail du bois" : ["Travail du bois et de l'ameublement"],
+    "Techniques graphiques - Impression" : ["Techniques de l'imprimerie et de l'édition"],
+    "Transports - Conduite - Manutention - Magasinage" : ["Transport, manutention, magasinage"],
+    "Commerce et distribution" : ["Commerce, vente","Spécialités plurivalentes des échanges - gestion" ],
+    "Tertiaire de bureau - Tertiaire spécialisé" : ["Comptabilité, gestion", "Droit,sciences politiques",
+    "Finances, banque, assurances", "Informatique, traitement de l'information, réseaux",
+        "Ressources humaines, gestion personnel et emploi", "Secrétariat, bureautique",
+        "Spécialités plurivalentes des services"],
+    "Arts appliqués - Arts du spectacle" : ["Musique, arts du spectacle"],
+    "Paramédical - Travail social - Soins personnels" : ["Coiffure, esthétique", "Santé",
+    "Spécialités plurivalentes sanitaires et sociales", "Travail social"],
+    "Hôtellerie - Restauration - Tourisme - Sports - Animation socioculturelle - Loisirs": ["Accueil, Hotellerie, tourisme",
+    "Animation culturelle, sportive et de loisirs"],
+    "Nettoyage - Assainissement - Environnement - Sécurité" : [
+        "Nettoyage-assainissement-protection-environnement", "Sécurité des biens-personnes, police, surveillance"    ],
+    "Techniques de la communication - Média" : [" Spécialités plurivalentes de la communication",
+    "Techniques de l'image et du son, métiers connexes"],
+    "Formations générales - Généralistes - Développement personnel" : [
+        "Français, littérature et civilisation française", "Chimie",
+        "Langues vivantes, civilisations étrangères", "Mathématiques",
+        "Physique", "Physique - chimie", "Sciences de la vie", "Sciences sociales","Spécialités pluriscientifiques"]
+}
+
+function recupereNom(numeroSecteur, numeroGFE) {
+    var numeroS = numeroSecteur.split("-")[1];
+    var numeroG = numeroGFE.split("-")[1];
+    var indiceS = parseInt(numeroS.substring(1, 2)) - 1;
+    var indiceG = parseInt(numeroG.substring(1, 2)) - 1;
+    var nomGFE = GFE[indiceG];
+    var nomSecteur = secteurs[nomGFE][indiceS];
+
+    console.log(nomSecteur);
+
+    return nomSecteur;
+}
+
+console.log(recupereNom("Secteur-01", "GFE-01"));
+
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function ($scope) {
     //initialise a svg
@@ -139,8 +209,10 @@ app.controller('myCtrl', function ($scope) {
 
     var GFE = 0;
     var GFETotalM = 0;
+    var GFEselectionne;
 
     $scope.clickGetImage = function (params) {
+        var GFEselectionne = params.first;
         var data = [];
         data.boxes = [];
         GFE = 0;
@@ -396,6 +468,9 @@ app.controller('myCtrl', function ($scope) {
 
             d3.select('#dessus')
                 .style('visibility', '');
+
+            console.log(d);
+            console.log(GFEselectionne);
 
             d3.select('#text')
                 .text('Effectifs par rapport à la capacité max.\n');

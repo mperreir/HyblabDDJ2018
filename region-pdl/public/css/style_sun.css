@@ -110,12 +110,12 @@ a:hover, a:active, a:focus {
     /*border-style:dashed;*/
     /*border-color: #000000;*/
 }
-/*
+
 p{
     margin-bottom: 15px;
     line-height: 200%;
     font-size: initial;
-}*/
+}
 
 #content{
     float:right;
@@ -674,6 +674,7 @@ p{
     font-style: italic;
     padding-top: 10px;
     padding-left: 15px;
+   /* width: 150px;*/
 ;
 }
 

@@ -22,21 +22,7 @@
 </head>
 
 <body ng-controller="myCtrl">
-<!--<div class="container">-->
 <div class="texte">
-    <!--    <nav class="top_nav" role="navigation">
-            <div class="text-left" style="width: 500px;margin-left: -35px">
-                <ul>
-                    <l1><a href="index.html"><img id="logo-pdl"
-                                                  src="img/logo-pdl.png"/></a></l1>
-                    <li><a href="index.html">Home</a></li>
-                    <!--<li><a href="#">Étude</a></li>-->
-    <!--<li><a href="#">Bourse</a></li>-->
-    <!--<li><a href="#">Trouver CFA</a></li>-->
-    <!--          <li><a href="credits.html">Crédits</a></li>
-          </ul>
-      </div>
-  </nav> -->
 
     <a href="index.html"><img class="logo-pdl" src="img/logo-pdl.png"/></a>
     <a class="home" href="index.html"> HOME </a>
@@ -65,8 +51,6 @@
 
 
 <div id="container">
-<!--<div id="content">-->
-    <!--<div id="con_right">-->
     <div id="detail" style="display: none">
         <div class="part">
             <div class="one">
@@ -322,7 +306,7 @@
             <div id="chart"></div>
             <div id="explanation" style="visibility: hidden;">
                 <span id="percentage"></span><br/>
-                de apprentissages dans cette partie
+                d'apprentissages dans cette partie
             </div>
         </div>
         <div id="legend-color">
@@ -337,6 +321,7 @@
         </div>
         <div id="dessus" style="visibility: hidden;">
             <div id="text"></div>
+            <div id="nomSecteur"></div>
             <div id="total_occu">
                 <div id="total"></div>
                 <div id="exptotal"></div>
@@ -361,7 +346,7 @@
         <div id="sideMenu" class="menu">
             <!--<div class="box">-->
             <div id="btn" class="btn-default">
-                <i class="iconfont icon-tool"></i>CHOISIS UN GFE
+                <i class="iconfont icon-tool"></i>Quel domaine d'activité vous intéresse-t-il ?
             </div>
             <!--<div class="menu">-->
             <!--<ul id="demo-list">-->
@@ -380,9 +365,10 @@
     d3.select(self.frameElement).style("height", "700px");
 </script>
 
+<a id="rond0" class="lienRond" href="index.html"></a>
     <a id="rond1" class="lienActuel" href="sunburstGFE.html"></a>
-    <a id="rond2" class="lienRond" href="aides.html"></a>
-    <a id="rond3" class="lienRond" href="map.html"></a>
+    <a id="rond2" class="lienRond" href="map.html"></a>
+    <a id="rond3" class="lienRond" href="aides.html"></a>
     <a id="rond4" class="lienRond" href="credits.html"></a>
 
 </body>
