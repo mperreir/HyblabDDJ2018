@@ -19,17 +19,32 @@
     grid-column: 3;
     grid-row: 2;
     .textes-data{
-      height: 65%;
+      height: 75%;
       width: 85%;
       transform: translate(0, -50%);
-      margin: 43% 0;
+      margin: 35% 0;
       >.title{
         @extend %titre-epci;
       }
-      >.texte{
+      >.container{
         position: absolute;
-        bottom: 20px;
-        @extend %texte-labeur;
+        bottom: 0px;
+        >.texte{
+          @extend %texte-labeur;
+          margin-bottom: 3vw;
+        }
+        >.iconInfo{
+          width: 36px;
+          height: 36px;
+          fill: $black;
+          float: left;
+          width: 24px;
+          height: auto;
+        }
+        >.info-texte{
+          @extend %texte-info;
+          margin-left: 30px;
+        }
       }
     }
   }
