@@ -776,7 +776,7 @@ object{
 .back{
   transform: rotate(180deg);
 }
-.peloton .map .selected .legend-map{
+.legend-map{
 	
 	width:10%;
 	height:20%
