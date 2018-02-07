@@ -232,7 +232,8 @@ font-size: 2.5vmin;
 }
 
 #section04 .article401 img {
-  height: 65%;
+  height: auto;
+  width:75%
 }
 
 #section04 .article402 {
