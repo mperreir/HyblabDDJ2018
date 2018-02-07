@@ -86,6 +86,9 @@ var drawDDChart = function(stats) {
                     display: true,
                     text: "Niveau d’engagement par thème"
                 },
+                legend: {
+                    display: false,
+                },
                 onClick: function (e) {
                     var element = this.getElementAtEvent(e);
 
@@ -543,6 +546,9 @@ var drawMP = function(stats) {
             title: {
                 display: true,
                 text: "% d'entreprises qui ont réalisé des marchés public en 2017"
+            },
+            legend: {
+                display: false
             },
             tooltips: {
                 callbacks: {
