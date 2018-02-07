@@ -8,6 +8,7 @@ var lastChanged = dep1;
 
 buildHisto("#histGauche",annee,dep1);
 buildHisto("#histDroite",annee,dep2);
+buildHisto("#histTemps","All",dep1);
 buildHisto("#bonhomme",anneeCambon,"Campbon");
 upDateTexteGauche();
 upDateTexteDroite();
@@ -104,7 +105,32 @@ $('#C2016').on('click', function(event) {
 	$('#C2012, #C2013, #C2014, #C2015').css('background-color','white');
 });
 
+$('#suivant').click(function() {
+	  $("#histTemps").empty();
 
+		if ($('#cotesdarmor').css('display') != 'none') {
+
+			buildHisto("#histTemps","All","Finistere");
+		}
+		else if ($('#finistere').css('display') != 'none') {
+			buildHisto("#histTemps","All","Ile_et_Vilaine");
+		}
+		else if ($('#illeetvilaine').css('display') != 'none') {
+			buildHisto("#histTemps","All","Loire_Atlantique");
+		}
+		else if ($('#loireatlantique').css('display') != 'none') {
+			buildHisto("#histTemps","All","Maine_et_Loire");
+		}
+		else if ($('#maineetloire').css('display') != 'none') {
+			buildHisto("#histTemps","All","Mayenne");
+		}
+		else if ($('#mayenne').css('display') != 'none') {
+			buildHisto("#histTemps","All","Morbihan");
+		}
+		else {
+			buildHisto("#histTemps","All","Cotes_Armor");
+		}
+});
 function changeOneHisto(newDep){
 	if(newDep != dep1 & newDep != dep2){
 	  if(lastChanged == dep1){
@@ -173,30 +199,46 @@ function buildHisto(parent, ann, dep){
 	},function(error, FullData) {
 
     var columns = FullData.columns;
-		var data;
+		var data = [];
 
-		for (var i=0;i<FullData.length;i++){
-			if(FullData[i].DEPARTEMENT == dep && FullData[i].ANNEE == ann){
-				//console.log(FullData[i]);
-				//delete FullData[i]["SOMME"];
-				//console.log(FullData[i]);
-				data = [FullData[i]];
+		if(ann != "All"){
+			for (var i=0;i<FullData.length;i++){
+				if(FullData[i].DEPARTEMENT == dep && FullData[i].ANNEE == ann){
+					data = [FullData[i]];
+				}
+			}
+		}else{
+			for (var i=0;i<FullData.length;i++){
+				if(FullData[i].DEPARTEMENT == dep){
+					data.push(FullData[i]);
+				}
 			}
 		}
+		//console.log(data);
 
 	  var keys = columns.slice(2);
 		//keys.splice(-1,1);
 
 	  //data.sort(function(a, b) { return b.total - a.total; });
-	  x.domain(data.map(function(d) { return d.DEPARTEMENT; }));
+	  x.domain(data.map(function(d) { return d.ANNEE; }));
 	  y.domain([0, d3.max(data, function(d) { return 60; })]).nice();
 		//y.domain(d3.extent(data, function(d) { return d.total; }));
 	  z.domain(keys);
 
-		var lastCol = "ORGANES";
 		var coeffRed_histo = 0.99;
 		var coeffRed =1;
 		var coeffTr = 0;
+		var colDict = {
+				1: "#D42E1E",
+				2: "#F8C000",
+				3: "#7CCAE2",
+				4: "#008442",
+				5: "#58BC81",
+				6: "#AA3565",
+		};
+
+		var colCounter = 0;
+		var colIndex = 1;
 
 	  g.append("g")
 	    .selectAll("g")
@@ -206,67 +248,47 @@ function buildHisto(parent, ann, dep){
 	    .selectAll("rect")
 	    .data(function(d) { return d; })
 	    .enter().append("rect")
-	      .attr("x", function(d) {return x(d.data.DEPARTEMENT); })
-	      .attr("y", function(d) {return y(d[1])-1; })
+	      .attr("x", function(d) { return x(d.data.ANNEE)})
+	      .attr("y", function(d) {return y(d[1])+1; })
 	      .attr("height", function(d) {return (y(d[0]) - y(d[1])); })
 				.attr("fill", getColor)
 	      .attr("width", coeffRed_histo*x.bandwidth());
 
 		function getColor(d){
-			if(lastCol == "ORGANES"){
-				lastCol = "MORTEL";
-				return "#D42E1E";
-			}else if(lastCol == "MORTEL"){
-				lastCol="CANCER";
-				return "#F8C000";
-			}else if(lastCol == "CANCER"){
-				lastCol = "TOXIQUE";
-				return "#7CCAE2";
-			}else if(lastCol == "TOXIQUE"){
-				lastCol="GENETIQUE";
-				return "#008442";
-			}else  if(lastCol == "GENETIQUE"){
-				lastCol = "FOETUS";
-				return "#58BC81";
-			}else  if(lastCol == "FOETUS"){
-				lastCol = "ORGANES";
-				return "#AA3565";
+
+			if(colCounter < data.length-1){
+				colCounter++;
+				return colDict[colIndex];
 			}else{
-				return "black";
+				colCounter = 0;
+				colIndex = colIndex + 1;
+				return colDict[colIndex-1];
 			}
 		}
-
-
-
-
-		if(dep == "Campbon"){
-			/*g.append("image")
-				.attr("xlink:href","img/Corps.svg")
-				.attr("width", 420)
-				.attr("height", 400)
-				.attr("x",-120)
-				.attr("y",-20);*/
-		}else{
+		if (ann != "All" && dep != "Campbon"){
 			//The water butt width has to be the same than the
 			//histogram width
 			var widthWatBut =  x.bandwidth();
-			var heightWatBut =  height*1.5;
+			var heightWatBut =  height*1.2;
 
 			g.append("image")
 				.attr("xlink:href","img/Citerne2.svg")
 				.style("width", widthWatBut)
 				.style("height", heightWatBut)
-				.attr("y",-90)
+				.attr("y",-34)
 				.attr("preserveAspectRatio","none");
-				//.attr("transform", "translate(" + width/2 + "," + height/2 + ")");
+		}else if (dep == "Campbon"){
 
+			var widthBottle =  1.01*x.bandwidth();
+			var heightBottle =  height*1.2;
+
+			g.append("image")
+				.attr("xlink:href","img/bouteille.svg")
+				.style("width", widthBottle)
+				.style("height", heightBottle)
+				.attr("y",-32)
+				.attr("preserveAspectRatio","none");
 		}
-
-
-	  //g.append("g")
-	  //    .attr("class", "axis")
-	  //    .attr("transform", "translate(0," + String(height) + ")")
-	  //    .call(d3.axisBottom(x));
 
 		g.append("g")
 				.append("text")

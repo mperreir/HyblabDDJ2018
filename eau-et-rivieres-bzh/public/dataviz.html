@@ -4,6 +4,7 @@
 <head>
   <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
   <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
   <title>PestiBusters</title>
   <!-- Basic viewport setting for mobile friendly page -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,13 +82,13 @@
     <header>
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
-          <div class="navbar-hearder">
+          <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">PestiBusters</a>
+            <a class="navbar-brand" href="index.html"> PestiBusters </a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right" id="ulNav">
@@ -144,20 +145,20 @@
               <button class="timeline-badge primary" id="2016"><p class="normal pTimeline"> 2016 </p></button>
             </li>
           </ul>
-          <section id="section3" class="panel">
+          <section id="section2" class="panel">
             <article id="zone1" class="article1">
             	<!--<script id="#hist1"> </script> -->
                 <svg id="histGauche" width="400" height="350"></svg>
-                <p id="descriptionGauche"></p>
+                <p id="descriptionGauche" class="normal pContent"></p>
             </article>
             <article id="zone2" class="article1">
             	<!--<script id="#hist1"> </script>
                 <img src="img/Citerne.svg"></svg>-->
   		          <svg id="histDroite" width="400" height="350"></svg>
-                <p id="descriptionDroite"></p>
+                <p id="descriptionDroite" class="normal pContent"></p>
             </article>
             <article id="descriptionHisto">
-              <article id="Cotes_Armor">
+              <article id="Cotes_Armor" class="description">
                 <p class="2012">Forte présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils provoquent des brûlures
                   cutanées. D’autres pesticides également présents sont mortels. Enfin, on retrouve aussi un certain nombre de substances
                   cancérigènes et d’autres substances nocives pour les organes.</p>
@@ -172,7 +173,7 @@
                   des brûlures cutanées. D’autres pesticides présents sont nocifs pour les organes et mortels. Enfin, on retrouve aussi un
                   certain nombre de substances cancérigènes.</p>
                 </article>
-                <article id="Finistere">
+                <article id="Finistere" class="description">
                   <p class="2012">Forte présence de pesticides, toxiques en cas d’ingestion et d’inhalation. Ces produits peuvent provoquer aussi des brûlures
                     cutanées. On retrouve aussi des composants pouvant être mortels et d’autres nocifs pour les organes.</p>
                   <p class="2013">Forte présence de pesticides, toxiques en cas d’ingestion et d’inhalation. On retrouve aussi des composants pouvant être
@@ -184,7 +185,7 @@
                   <p class="2016">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation. On retrouve aussi des composants pouvant être
                     nocifs pour les organes et d’autres mortels. Enfin on retrouve aussi des substances cancérigènes.</p>
                 </article>
-                <article id="Ile_et_Vilaine">
+                <article id="Ile_et_Vilaine" class="description">
                   <p class="2012">Forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation. On retrouve également des substances mortelles.</p>
                   <p class="2013">Forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation. Sont également présentes des molécules mortelles
                     et d’autres induisant des anomalies génétiques. On trouve aussi des pesticides qui provoquent des effets néfastes sur
@@ -196,7 +197,7 @@
                   <p class="2016">Très forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation. On trouve également des substances avec
                     des effets néfastes sur les organes et d’autres avec des effets mortelles.</p>
                 </article>
-                <article id="Loire_Atlantique">
+                <article id="Loire_Atlantique" class="description">
                   <p class="2012">Présence importante de produits phytosanitaires, toxiques en cas d’ingestion ou d’inhalation. On trouve des pesticides
                     avec des effets néfastes sur les organes et d’autres étant susceptibles d’être cancérigènes et mortels.</p>
                   <p class="2013">Présence de substances pesticides, toxiques en cas d’ingestion ou d’inhalation. On en trouve avec des effets néfastes sur
@@ -208,7 +209,7 @@
                   <p class="2016">Très forte présence de substances chimiques non naturelles, toxiques en cas d’ingestion ou d’inhalation. On trouve des
                     pesticides provoquant des effets néfastes sur les organes.</p>
                 </article>
-                <article id="Maine_et_Loire">
+                <article id="Maine_et_Loire" class="description">
                   <p class="2012">Présence importante de substances pesticides avec des effets toxiques en cas d’inhalation ou d’ingestion. On trouve également
                     des pesticides pouvant être mortels et avec des effets nocifs sur les organes.</p>
                   <p class="2013">Présence importante de produits avec des effets toxiques en cas d’inhalation ou d’ingestion. On trouve également des pesticides
@@ -220,7 +221,7 @@
                   <p class="2016">Présence importante de produits avec des effets toxiques en cas d’inhalation ou d’ingestion. On trouve également des pesticides
                     pouvant être mortels et avec des effets nocifs sur les organes.</p>
                 </article>
-                <article id="Mayenne">
+                <article id="Mayenne" class="description">
                   <p class="2012">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation, ainsi que de substances dangereuses pour les
                     organes, voire mortelles.</p>
                   <p class="2013">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation, ainsi que de substances dangereuses pour les
@@ -230,7 +231,7 @@
                   <p class="2016">Forte présence de composants toxiques en cas d’ingestion et d’inhalation, ainsi que substances dangereuses pour les organes,
                     et même mortelles.</p>
                 </article>
-                <article id="Morbihan">
+                <article id="Morbihan" class="description">
                   <p class="2012">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils provoquent des brûlures
                     cutanées. D’autres pesticides sont très présents dans les eaux souterraines et sont mortels. Enfin, on retrouve aussi
                     un certain nombre de substances dangereuses pour l’intégrité des organes humains.</p>
@@ -360,6 +361,44 @@
           <img id="buttonSP" src="img/Bouton_Ensavoirplus.png"/>
       	</div>
         <section class="enSavoirPlusP1">
+          <section id="LegendeEnSavPlus" class="panel">
+            <p class="pTitle title"> Dangers des principaux pesticides </p>
+            <article class="articleS6">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#D42E1E;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Mortel </p>
+            </article>
+            <br>
+            <article class="articleS6">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#F8C000;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Cancer </p>
+            </article>
+            <br>
+            <article class="articleS6">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#7CCAE2;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Toxic/Nocif </p>
+            </article>
+            <br>
+            <article class="articleS6">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#008442;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Impact génétique </p>
+            </article>
+            <br>
+            <article class="articleS6">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#58BC81;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Impact foetus </p>
+            </article>
+            <br>
+            <article class="articleS6">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#AA3565;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Risque pour les organes </p>
+            </article>
+          </section>
           <section id="enSavoirPlusHautP1">
             <section id="enSavoirPlusHautGaucheP1">
               <img id="suivant" src="img/suivant.png">
@@ -368,7 +407,8 @@
             <img id="boutonExitP1" src="img/Exit_Page_2.png"/>
           </section>
           <section id="enSavoirPlusBasP1">
-          	<img src="img/rectangle_gris.png">
+          	<!-- <img src="img/rectangle_gris.png"> -->
+            <svg id="histTemps" width="400" height="350"></svg>
       		<article id="cotesdarmor">
       		  <p>Évolution entre 2012-2016 de la présence des pesticides et leurs conséquences sur l’homme dans les eaux souterraines des Côtes-d'Armor.</p>
   		    </article>
@@ -395,7 +435,7 @@
       </div>
 
       <div class="section" data-anchor="page2">
-        <section id="section4" class="panel">
+        <section id="section3" class="panel">
           <p class="title pTitle">
             EXEMPLE NAPPE DE CAMPBON
           </p>
@@ -410,7 +450,7 @@
             de la Région Nazairienne (CARENE).
           </p>
         </section>
-        <section id="section5" class="panel">
+        <section id="section4" class="panel">
           <svg version="1.1" id="citerne" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 78.2 84.1" style="enable-background:new 0 0 78.2 84.1;" xml:space="preserve">
             <polygon class="st100" points="3,35.8 3,71.1 9.5,75.1 74.3,72 74.8,36.7 53.2,36.3 " />
@@ -644,7 +684,7 @@
       </div>
       <div class="section" data-anchor="page3">
         <div id="sante">
-          <section id="section6" class="panel">
+          <section id="section5" class="panel">
             <p class="title pTitle"> NAPPE DE CAMPBON ET LA SANTE</p>
             <p id="anneeCampbon" class="title pTitle"> ANNEE 2012 </p>
             <p id="descriptionBonhomme" class="pContent normal"></p>
@@ -669,12 +709,12 @@
             <p>Forte présence de substances phytosanitaires toxiques par inhalation et d’ingestion. Les pesticides retrouvés provoquent des effets graves sur les organes et peuvent entraîner la mort. Parmi eux :</p>
             <ul>
               <li>
-                <strong>Dichlorométhane (solvant)</strong> 
+                <strong>Dichlorométhane (solvant)</strong>
                 <button class="definitionDichloOff" type="button"> v </button>
                 <button class="definitionDichloOn" type="button"> > </button>
                 <p class="definitionDichlo">Connu pour son effet narcotique, il est l’un des solvants les plus irritant. Aujourd’hui, vendu en décapant de peinture et vernis, il est à l’origine de nombreuses toxicités mortelles au travail.</p>
               </li>
-              
+
             </ul>
           </article>
 
@@ -728,39 +768,39 @@
             </li>
           </ul>
           <svg id="bonhomme" width="350" height="350"></svg>
-          <section id="section8" class="panel">
+          <section id="section6" class="panel">
             <p class="pTitle title"> Dangers des principaux pesticides </p>
-            <article class="articleS8">
+            <article class="articleS6">
               <svg width="30" height="10">
                 <rect width="30" height="10" style="fill:#D42E1E;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
               <p class="normal pContent pSection8"> Mortel </p>
             </article>
             <br>
-            <article class="articleS8">
+            <article class="articleS6">
               <svg width="30" height="10">
                 <rect width="30" height="10" style="fill:#F8C000;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
               <p class="normal pContent pSection8"> Cancer </p>
             </article>
             <br>
-            <article class="articleS8">
+            <article class="articleS6">
               <svg width="30" height="10">
                 <rect width="30" height="10" style="fill:#7CCAE2;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
               <p class="normal pContent pSection8"> Toxic/Nocif </p>
             </article>
             <br>
-            <article class="articleS8">
+            <article class="articleS6">
               <svg width="30" height="10">
                 <rect width="30" height="10" style="fill:#008442;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
               <p class="normal pContent pSection8"> Impact génétique </p>
             </article>
             <br>
-            <article class="articleS8">
+            <article class="articleS6">
               <svg width="30" height="10">
                 <rect width="30" height="10" style="fill:#58BC81;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
               <p class="normal pContent pSection8"> Impact foetus </p>
             </article>
             <br>
-            <article class="articleS8">
+            <article class="articleS6">
               <svg width="30" height="10">
                 <rect width="30" height="10" style="fill:#AA3565;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
               <p class="normal pContent pSection8"> Risque pour les organes </p>
@@ -779,7 +819,7 @@
               <p class="solutionColonne">L’heure est venue de penser au changement.<br><br>Vers un avenir meilleur ? Des solutions alternatives existent. Les chercheurs de l’INRA en partenariat avec Agrosolution, ont démontré qu’utiliser moins de pesticides ne dégradait pas la productivité et la rentabilité d’un agriculteur. Par exemple, les exploitations du réseau Dephy ont permis de montrer qu’il était possible de diminuer, sans impact important sur le revenu de l’exploitation, le recours aux produits phytopharmaceutiques.</p>
               <p class="solutionColonne">Et si on allait plus loin ? Pour éliminer et éviter les effets néfastes des pesticides, une seule solution s’impose : le passage à une agriculture uniquement biologique. L’agriculture biologique constitue un mode de production qui a recours à des pratiques culturales et d’élevage soucieuses du respect des équilibres naturels. Ainsi, elle exclut l’usage des produits chimiques de synthèse, des OGM et limite l’emploi d’intrants.(source: ministère de l’agriculture et de l’alimentation)<br><br>Maintenant vous en savez plus ! Nous espérons vous avoir clairement présenté le phénomène et les enjeux relatifs aux pesticides, on ne vous a rien caché. Parole de PESTIBUSTERS !</p>
             </article>
-          </article>       
+          </article>
         </section>
         <section class="definition">
             <article id="defnappeSouterraine">
@@ -793,7 +833,7 @@
       <div class="section" data-anchor="page4">
         <p id="pCredits1" class="title panel"> Le média et les partenaires </p>
         <a href="http://www.eau-et-rivieres.org/home"> <img src="img/logosDivers/logoMedia.png" alt="logo Eau et Rivieres de Bretagne" id="logoMedia"/> </a>
-        <section id="section9" class="panel">
+        <section id="section7" class="panel">
           <p class="normal pContent pTop"> L’association Eau et Rivières de Bretagne est agréée au titre de la protection de l’environnement, pour assurer « dans l’intérêt
           général la protection, la mise en valeur, la gestion et la restauration de la ressource en eau et des écosystèmes aquatiques,
           dans une perspective de société écologiquement viable », par arrêté préfectoral du 17 décembre 2013. </p>
@@ -802,7 +842,7 @@
           et informatives auprès du grand public. </p>
           <p class="normal pContent pBottom"> L'Association née en 1969, comprend aujourd'hui 1 200 adhérents, une centaine d'associations et 17 salariés. </p>
         </section>
-        <section id="section10" class="panel">
+        <section id="section8" class="panel">
           <p class="normal pContent pTop">
             Groupe BigData Eau et Rivières de Bretagne :
             <br>
@@ -940,3 +980,4 @@
   </div>
 </body>
 </html>
+skyp
