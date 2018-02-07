@@ -180,16 +180,16 @@ body{
     float: left;
     position: absolute;
     left: 52.5%;
-    top: -3%;
-    width: 30.5vw;
+    top: 0%;
+    width: 50%;
 }
 
 #histGauche{
     float: left;
     position: absolute;
     left: 5%;
-    top: -3%;
-    width: 30.5vw;
+    top: 0%;
+    width: 50%;
 }
 
 /* Textes + histogrammes */
@@ -666,9 +666,10 @@ body{
 #bonhomme {
     float: left;
     position: absolute;
-    top: 13vh;
-    left: 40vw;
-    width: 30vw;
+    top: 5vh;
+    left: 43vw;
+    width: 25vw;
+    height: 75vh;
 }
 
 /*Solutions alternatives*/
