@@ -32,7 +32,7 @@ var drawDDChart = function(stats) {
             return start + inc * 4;
         }
     }
-
+	
     var sec = document.getElementById("dataviz-section");
     if (sec !== null) {
         sec.remove();
@@ -58,14 +58,15 @@ var drawDDChart = function(stats) {
                 {
                     x: id,
                     y: 2,
-                    r: scale(parseInt(stats.Developpement_durable.values[1][id]))
+                    r: scale(parseFloat(stats.Developpement_durable.values[1][id]))
                 }
             ],
             backgroundColor: colors[id],
         };
 
-});
-
+	});
+	
+	console.log(stats.Developpement_durable.values[1])
     var ch = new Chart(ctx,
         {
             type: 'bubble',
@@ -84,20 +85,22 @@ var drawDDChart = function(stats) {
                         // Here we get the data linked to the clicked bubble ...
                         var datasetLabel = this.config.data.datasets[element[0]._datasetIndex].label;
 
-                        var d = {'labels': [], 'values': []}
-
+                        var dt = {'labels': [], 'values': []}
+						
+						
                         stats.Interet_ApsectDD.values.map(function(cell) {
 							if(cell[0] === datasetLabel)
 							{
-								d.labels.push(cell[1]);
-								d.values.push(cell[2]);
+								dt.labels.push(cell[1]);
+								dt.values.push(parseFloat(cell[2]).toFixed(1));
 							}
 						});
-
+						
+						console.log(datasetLabel + ';' + dt)
                         $("#canvas-dataviz").fadeOut();
                         $(".plus").html("");
 
-                        drawPieChart(d, datasetLabel);
+                        drawPieChart(dt, datasetLabel);
 		                $(".plus").append($.parseHTML("<svg id='unzoom' viewBox='0 0 50 70' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g transform='translate(10.0, 25.0)'><polyline points='20 0 10 10 20 20'></polyline></g></svg>"))
 
 						}
@@ -114,7 +117,8 @@ var drawDDChart = function(stats) {
                 tooltips: {
                     callbacks: {
                         label: function (t, d) {
-                            return d.datasets[t.datasetIndex].label + ': ' + t.yLabel;
+                            return d.datasets[t.datasetIndex].label + ': ' + parseFloat(stats.Developpement_durable.values[1][t.datasetIndex]).toFixed(1) + '%';
+
                         }
                     }
                 },
