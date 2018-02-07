@@ -707,11 +707,12 @@ object{
 
 
 .peloton .selected .chrono{
-  width: 8%;
+  width: 12%;
   height: 60%;
   margin-top: 10%;
   margin-bottom: auto;
   display: inherit;
+  margin-right:4%;
 }
 
 .peloton .map .selected .info{
@@ -778,9 +779,9 @@ object{
 
 .peloton .map .selected .legend-mapW{
   display: flex;
-  width: 12%;
+  width: 9%;
   margin-top: 25%;
-  height: 22%;
+  height: 28%;
 }
 
 .peloton .map .legend-mapW{
