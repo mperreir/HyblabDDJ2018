@@ -171,6 +171,12 @@ function printBarChart(cities, dataSets, chartId) {
                     ticks: {
                         beginAtZero:true
                     }
+                }],
+                xAxes: [{
+                    ticks: {
+                        autoSkip: false
+
+                    }
                 }]
             },
             legend: {
