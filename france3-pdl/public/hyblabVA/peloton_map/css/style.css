@@ -779,7 +779,7 @@ object{
 .legend-map{
 	
 	width:10%;
-	height:20%
+	height:20%;
 }
 .peloton .map .selected .legend-mapW{
   display: flex;
