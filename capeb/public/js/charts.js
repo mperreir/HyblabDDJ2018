@@ -66,7 +66,6 @@ var drawDDChart = function(stats) {
 
 	});
 	
-	console.log(stats.Developpement_durable.values[1])
     var ch = new Chart(ctx,
         {
             type: 'bubble',
@@ -96,7 +95,6 @@ var drawDDChart = function(stats) {
 							}
 						});
 						
-						console.log(datasetLabel + ';' + dt)
                         $("#canvas-dataviz").fadeOut();
                         $(".plus").html("");
 
