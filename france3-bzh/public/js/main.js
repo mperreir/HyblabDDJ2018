@@ -63,19 +63,16 @@ $('#fullpage').fullpage({
   afterLoad:function(anchorLink, index){
     if(index==1)
     {
-      $('.arrowsRight').css({"display":"block"});
       $('.arrowsUp').css({"display":"none"});
       $('.arrowsDown').css({"display":"block"});
     }
     if(index==2)
     {
-      $('.arrowsRight').css({"display":"none"});
       $('.arrowsUp').css({"display":"block"});
       $('.arrowsDown').css({"display":"block"});
     }
     if(index==3)
     {
-      $('.arrowsRight').css({"display":"none"});
       $('.arrowsUp').css({"display":"block"});
       $('.arrowsDown').css({"display":"none"});
     }

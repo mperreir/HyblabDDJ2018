@@ -43,6 +43,51 @@
   background-size: 100%;
 }
 
+/*
+#container_slide_jour
+{
+  position: absolute;
+  right: 0;
+}
+
+#container_slide_nuit
+{
+  position: absolute;
+  left: 0;
+}
+
+#chart_pie_jour
+{
+  width: 100%;
+  position: absolute;
+  transform: translate(-30%,-2%);
+}
+#chart_pie_nuit
+{
+  position: absolute;
+  width: 100%;
+}
+.boussole
+{
+  position: absolute;
+  width: 40%
+}
+
+.boussoleLeft
+{
+  transform: translateX(100%);
+}
+.heures
+{
+  position: absolute;
+}
+
+
+#heures
+{
+  z-index: 10;
+}*/
+
 footer p
 {
   font-size: small;
@@ -1314,7 +1359,6 @@ svg[hidden]:not(:root) {
 .arrows
 {
   cursor: pointer;
-  z-index: 500;
   opacity: 0.2;
   position: fixed;
   width: 90px;
@@ -1322,12 +1366,13 @@ svg[hidden]:not(:root) {
 }
 
 .arrowsDown {
+  z-index: 500;
   text-align: center;
   bottom:0;
   right: 0;
 }
 .arrowsUp {
-
+  z-index: 500;
   top: 0;
   right:0;
   transform: rotate(180deg);
