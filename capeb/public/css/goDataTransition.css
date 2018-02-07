@@ -241,7 +241,9 @@
     grid-row: 3 / 5;
 }
 
-.modal-body #canvas-dataviz{
+.dataLong{
+  grid-column: 3 /5 ;
+  grid-row: 3 / 4;
 }
 
 .modal-body .ps {
@@ -252,6 +254,11 @@
 .legende-dataviz{
   grid-column: 4;
   grid-row: 3;
+}
+
+.legendeBas{
+  grid-column: 3 / 4;
+  grid-row: 5;
 }
 
 @-webkit-keyframes modalComeIn {
