@@ -1,8 +1,16 @@
 
 
+/* partie de gauche */
+
+.texte {
+    background-color: #ABCC21;
+}
+
+
 
 
 /* partie de droite */
+
 
 #containerAides {
     height: 100%;
@@ -18,45 +26,46 @@
     background: #FFFFFF;
 }
 
-#selectionIntevalle {
-    padding-left: 100px;
+#nom-aide {
+
+    margin-top: 10px;
+    width: 400px;
+    height: 24px;
+    color: #000000;
+    font-family: Lato;
+    font-size: 20px;
+    line-height: 1px;
 }
 
-.intervalle {
-    color: #909192;
-    font-family: "Avenir Next";
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    width: 50px;
-  /*  display: inline;*/
-}
-/*
-#phraseQuotient, #phraseAge, #phraseDistance {
-    display:inline;
-    width:50%;
-}*/
-
-.phrase {
-    font-size: 14px;
-    display:inline;
+#description-aide {
+    height: 72px;
+    width: 343.59px;
+    color: #232222;
+    font-family: Lato;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 18px;
 }
 
-/*
-#intervalleQuotient, #intervalleAge, #intervalleDistance {
-    display:inline-block;
-   width:20%; /*précédemment 50%*/
-/*}*/
+#lien-aide {
+    position: relative;
+    bottom: -20px;
+    left: 270px;
 
-.credits, .home {
-    outline: none;
-    font-size: 14px;
+    height: 19px;
+    width: 93px;
+    color: #4199BE;
+    border: 1px solid #4199BE;
+
+    padding: 2px;
+
+    text-align: center;
+    text-decoration: none;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1px;
 }
-/*
-#intervalleAge {
-    display:inline-block;
-    width:50%;
-}*/
 
 #aide {
     color: #232222;
@@ -70,22 +79,6 @@
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
 }
 
-#criteres {
-    float:right;
-
-    width: 750px;
-    color: #232222;
-    font-family: Lato;
-    font-size: 15px;
-    letter-spacing: 1px;
-    line-height: 18px;
-
-    margin-right: 50px;
-    margin-top: 15px;
-    padding-left: 20px;
-
-    box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
-}
 
 
 .descriptionAide {
@@ -119,26 +112,6 @@
     line-height: 18px;
 }
 
-#lien-aide {
-    position: relative;
-    bottom: -25px;
-    left: 270px;
-
-    height: 19px;
-    width: 93px;
-    color: #4199BE;
-    border: 1px solid #4199BE;
-
-    padding: 2px;
-
-    text-align: center;
-    text-decoration: none;
-    font-family: Lato;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1px;
-}
-
 #containerAides .figure:hover #intro {
     opacity: 1;
 }
@@ -155,15 +128,46 @@
     font-weight: bold;
 }
 
+
+/** boite de critères **/
+
+
+#criteres {
+    float:right;
+
+    width: 750px;
+    color: #232222;
+    font-family: Lato;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 18px;
+
+    margin-right: 50px;
+    margin-top: 15px;
+    padding-left: 20px;
+
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+}
+
+#selectionIntevalle {
+    padding-left: 100px;
+}
+
+.phrase, .intervalle, .unite {
+    float: left;
+}
+
+.questionResultatRange {
+    padding-top: 7px;
+    height: 60px;
+    width: 100%;
+}
+
 /** curseur **/
 
 input {
     float: right;
     margin-right: 10%;
-}
-
-input[type=range] {
-    /*  margin: 10.85px 0;*/
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -240,11 +244,4 @@ input[type=range]:focus::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
     background: #a008a9;
-}
-
-
-/* partie de gauche */
-
-.texte {
-    background-color: #ABCC21;
 }

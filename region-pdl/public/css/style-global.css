@@ -6,13 +6,11 @@ html, body {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    /*overflow-x: hidden;*/
-    /*overflow-y: hidden;*/
 }
 
 /** colonne de gauche **/
 
-/* logo, liens home et cédits */
+/* logo, liens home et crédits */
 .logo-pdl {
     margin-left: 25px;
     width: 180px;
@@ -56,19 +54,18 @@ html, body {
 /* textes de la colonne */
 
 /* partie de gauche */
-
+/*
 .texte {
     height: 100%;
     height: -webkit-calc(100% - 50px);  /* pour Chrome */
-    height: -moz-calc(100% - 50px);     /* pour Firefox */
-    height: calc(100% - 50px);          /* pour support natif */
+  /*  height: -moz-calc(100% - 50px);     /* pour Firefox */
+  /*  height: calc(100% - 50px);          /* pour support natif */
 
-    padding-left: 3%;
-    padding-right: 40px;
+ /*   padding-left: 3%;
+ /*   padding-right: 40px;
 
     padding-bottom: 50px;
     float:left;
-  /*  width:400px; */
     width: 30%;
 }
 
@@ -102,7 +99,6 @@ html, body {
 .explication {
     display: inline;
     top: 30%;
- /*   height: 23.65%;*/
     color: #FFFFFF;
     font-family: Lato;
     font-size: 15px;
@@ -139,6 +135,79 @@ html, body {
     font-size: 14px;
     letter-spacing: 1px;
     line-height: 25px;
+}*/
+
+
+.texte {
+    height: 100%;
+    height: -webkit-calc(100% - 50px);  /* pour Chrome */
+    height: -moz-calc(100% - 50px);     /* pour Firefox */
+    height: calc(100% - 50px);          /* pour support natif */
+
+    padding-left: 3%;
+    padding-right: 40px;
+
+    padding-bottom: 50px;
+    float:left;
+    /*  width:400px; */
+    width: 30%;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-weight: normal;
+    width: 430px;
+    font-size: 25px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+b {
+    font-weight: bold;
+    font-size: 33px;
+}
+
+.explication {
+    display: inline;
+
+    /*   height: 23.65%;*/
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.asterisque {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.temoignage {
+    margin-top: 40px;
+    width: 340px;
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+#signature {
+    font-size: 12px;
 }
 
 /** lien rond sur la droite **/

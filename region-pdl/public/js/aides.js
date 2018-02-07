@@ -29,7 +29,7 @@ function displayValue(event, variable){
     afficheVar = document.getElementById("intervalle" + variable);
 
     if (variable === "Age"){
-        afficheVar.innerHTML =  varMin;
+        afficheVar.innerHTML =  varMin + " ans";
     } else if (variable === "Distance"){
         afficheVar.innerHTML = varMin + " km";
     } else if (variable === "Quotient"){
