@@ -1040,6 +1040,9 @@ ul.listeArtistes
     text-align : center;
     margin-left: -50px;
     margin-top: -30px;
+    line-height: 160%;
+    font-size: 25px;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 object.mapFrance
