@@ -133,7 +133,8 @@
 #criteres {
     float:right;
 
-    width: 750px;
+/*    width: 750px;*/
+    width: 60%;
     color: #232222;
     font-family: Lato;
     font-size: 15px;
