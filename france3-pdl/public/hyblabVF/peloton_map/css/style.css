@@ -727,9 +727,10 @@ object{
 .peloton .info{
   width: 50%;
   height: 13%;
+  
   margin-top: 117%;
   margin-bottom: 9%;
-  margin-left: 13%;
+  margin-left: 30%;
   display:inherit;
 }
 
