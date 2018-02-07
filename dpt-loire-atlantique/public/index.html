@@ -33,7 +33,7 @@
     <title>HYBLAB 2018</title>
 	
   </head>
-  <body onload="marqueeLoad(1); gauge(0);">
+  <body onload="marqueeLoad(1); gauge(0);">  <!--marqueeLoad(1)-->
  
     <div id="container">
 
@@ -50,14 +50,15 @@
 	  
         <section class="sectionBorder section1">		  
             <p class="title1 txt1x1">LES ASSMAT</p>
-			<p class="title1 txt1x2"> VOUS </p>
-			<p class="paragraph txt1x3">Nous avons tous déjà connu une nourrice, une nounou ou encore une babysitter au cours de notre enfance. Jusqu'en 1977, l'emploi d'une nourrice était un mode de garde peu ou pas reconnu légalement. Aujourd'hui, elles sont devenues de réelles professionnelles de la petite enfance appelées "Assistantes Maternelles" (ou AssMat).</p>			
+			<!-- <p class="title1 txt1x2"> VOUS &nbsp;&nbsp;EPATENT !</p> -->
+			<p class="paragraph txt1x3">Nous avons tous déjà connu une nourrice, une nounou ou encore une babysitter au cours de notre enfance. Jusqu'en 1977, l'emploi d'une nourrice était un mode de garde peu ou pas reconnu légalement. Aujourd'hui, elles sont devenues de réelles professionnelles de la petite enfance appelées "<strong>Assistantes Maternelles</strong>" (ou AssMat).</p>			
 			<p class="txt1x4">Mais que savez-vous exactement sur ce métier ?</p>
 			<p class="txt1x5"></p>
 						
-			<MARQUEE id="marquee1" class="title1" loop="0" DIRECTION="up"  SCROLLAMOUNT="6"><p></p></MARQUEE>									
-			<MARQUEE id="marquee2" class="title1" loop="0" DIRECTION="up"  SCROLLAMOUNT="6"><p></p></MARQUEE>	
-			<MARQUEE id="marquee3" class="title1" loop="0" DIRECTION="up"  SCROLLAMOUNT="6"><p></p></MARQUEE>		
+			<MARQUEE id="marquee1" class="title1" loop="0" DIRECTION="up"  SCROLLAMOUNT="5"><p></p></MARQUEE>									
+			<MARQUEE id="marquee2" class="title1" loop="0" DIRECTION="up"  SCROLLAMOUNT="5"><p></p></MARQUEE>	
+			<MARQUEE id="marquee3" class="title1" loop="0" DIRECTION="up"  SCROLLAMOUNT="5"><p></p></MARQUEE>
+			<MARQUEE id="marquee4" class="title1" loop="0" DIRECTION="up"  SCROLLAMOUNT="5"><p></p></MARQUEE>				
 								
 			<img class="img img1x1" src="img/illu_intro.png" alt="img intro"/>
 			<img class="img img1x2" src="img/logo_dpt.png" alt="logo dpt"/>
@@ -80,7 +81,7 @@
 			<span class="bulle2">
 				<p class="txt2x5">LE SAVIEZ-VOUS ?</br></br></p>
 				   <p class="txt2x6"></br></br>Être assistante maternelle, c'est avant tout l'obligation de détenir un agrément délivré par le Conseil Départemental de sa résidence selon des critères bien précis.</br></br>
-					<cite>Source: assmat.loire-atlantique.fr</cite></p>
+					<cite><a class="a2x6" href="assmat.loire-atlantique.fr">Source: assmat.loire-atlantique.fr</a></cite></p>
 			</span>			
 		</section>
 	
@@ -96,7 +97,7 @@
 			<p class="title3 txt3x1">LA LOIRE-ATLANTIQUE</p>
 			<p class="title2 txt3x2">"PRESQUE PARFAITE"</p>		
 			<p class="txt3xquestion">Quel est le<a class="definition3" onclick="definition(3)"> taux de couverture</a> en Loire-Atlantique ?</p>			
-            <p class="txt3x3">Avec un taux de couverture de 78.1%, la Loire-Atlantique est le 3ème meilleur élève français. Les capacités d'accueil sont élevées même si elles ne couvrent pas la totalité des besoins.</p>
+            <p class="txt3x3">Avec un taux de couverture de <strong>78.1%</strong>, la Loire-Atlantique est le <strong>3ème meilleur élève</strong> français. Les capacités d'accueil sont élevées même si elles ne couvrent pas la totalité des besoins.</p>
 			<p class="txt3x4"></p>
 			
 			<button class="txt3xchoix1" onclick="reponseQ1(1)">64,8%</button>
@@ -106,7 +107,7 @@
 			
 			<span class="bulle3">
 				<p class="txt3x5">LE SAVIEZ-VOUS ?</br></br></p>
-				<p class="txt3x6"></br></br>Le taux de couverture correspond au ratio entre le nombre de places offertes et le nombre d'enfants en âge d'être gardés à un instant donné sur le territoire observé.</br></br><cite>Source: data.caf.fr</cite></p>
+				<p class="txt3x6"></br></br>Le taux de couverture correspond au ratio entre le nombre de places offertes et le nombre d'enfants en âge d'être gardés à un instant donné sur le territoire observé.</br></br><cite><a class="a3x6" href="http://data.caf.fr/dataset/taux-de-couverture-global">Source: data.caf.fr</a></cite></p>
 			</span>
 			
 			<input type="image" src="img/arrow_right2.png" class="suivant3" onclick="suivant(31)"/>
@@ -129,7 +130,7 @@
 		<section class="sectionBorder section4">
 		
 			<p class="title3 txt4x1">L'EVOLUTION <p class="title2 txt4x2">DEPUIS 2002</p></p>
-			<p class="txt4x3">Malgré un ralentissement en 2013, l'évolution constante du nombre d'assistantes maternelles et du nombre de places offre beaucoup de possibilités pour faire garder les enfants.</p>
+			<p class="txt4x3">Malgré un ralentissement en 2013, l'<strong>évolution constante</strong> du nombre d'assistantes maternelles et du nombre de places offre beaucoup de possibilités pour faire garder les enfants.</p>
 					
 			<img class="img img4x1" src="img/illu_agrement.png" alt="img agrement"/>
 											
@@ -150,8 +151,9 @@
 				
 		<section class="sectionBorder section5">
 		
-			<p class="title3 txt5x1">LA NAISSANCE <p class="title2 txt5x2">D'UNE VOCATION !</p></p>
-            <p class="paragraph txt5x3">Métier à réel potentiel, l'orientation vers les métiers de la petite enfance se fait de plus en plus jeune. Dans les années 60, les assistantes maternelles commençaient plutôt à 38 ans, dans les années 2000 la moyenne s'établit à 24 ans pour le premier agrément.</p>
+			<p class="title3 txt5x1">LA NAISSANCE</p>
+			<p class="title2 txt5x2">D'UNE VOCATION !</p>
+            <p class="paragraph txt5x3">Métier à réel potentiel, l'orientation vers les métiers de la petite enfance se fait de plus en plus jeune. Dans les années 60, les assistantes maternelles commençaient plutôt à <strong>38 ans</strong>, dans les années 2000 la moyenne s'établit à <strong>24 ans</strong> pour le premier agrément.</p>
 			<p class="txt5x7">1938</br>1947</p>
 			<p class="txt5x8">1948</br>1957</p>
 			<p class="txt5x9">1958</br>1967</p>
@@ -187,8 +189,8 @@
 		<section class="sectionBorder section6">
 		
 			<p class="title3 txt6x1">PLUS BESOIN DE SE PRESSER,</p>
-			<p class="title2 txt6x2">LES ASSMAT SONT A COTE</p>
-			<p class="paragraph txt6x4">Aussi bien dans les villes que dans les campagnes, les assistantes maternelles couvrent l'ensemble du territoire, contrairement aux crèches qui sont concentrées dans les villes. A noter, l'apparition de plus en plus de <a class="definition6" onclick="definition(6)">Maisons d'Assistantes Maternelles</a> (MAM).</p>
+			<p class="title2 txt6x2">LES ASSMAT SONT À CÔTÉ</p>
+			<p class="paragraph txt6x4">Aussi bien dans les villes que dans les campagnes, les assistantes maternelles couvrent l'<strong>ensemble du territoire</strong>, contrairement aux crèches qui sont concentrées dans les villes. A noter, l'apparition de plus en plus de <a class="definition6" onclick="definition(6)">Maisons d'Assistantes Maternelles</a> (MAM).</p>
 			
 			<span class="bulle6">
 				<p class="txt6x5">LE SAVIEZ-VOUS ?</br></br></p>
@@ -238,7 +240,7 @@
 				
 					<p class="title3 txt7x1">UN MODE DE GARDE</p>
 					<p class="title2 txt7x2">TOUT EN SOUPLESSE</p>									
-					<p class="txt7x3">Si les enfants doivent être gardés ponctuellement ou régulièrement, tôt le matin ou tard le soir, pendant les vacances scolaires ou pendant vos nuits de gardes, il est possible de trouver une assistante maternelle qui répond à vos besoins.</p>
+					<p class="txt7x3">Si les enfants doivent être gardés ponctuellement ou régulièrement, tôt le matin ou tard le soir, pendant les vacances scolaires ou pendant vos nuits de gardes, il est possible de trouver une assistante maternelle qui <strong>répond à vos besoins</strong>.</p>
 					
 					<button class="button7 button7x1" onclick="gauge(1);switchBackground(0);"></button>
 					<p class="txt7x4">Avant 7h</p>
@@ -266,14 +268,11 @@
 					<input type="image" src="img/arrow_right2.png" class="suivant7" onclick="suivant(7)"/>
 					<input type="image" src="img/arrow_left2.png" class="precedent7" onclick="precedent(7)"/>
 					
-					<div class="graph7">                
-						<div id="echart_mini_pie" style="height:350px;"></div>                           
-					</div>
-					
-																	
-					<div class="graph9">                
-						<div id="echart_guage" style="height:370px;"></div>                           
-					</div>
+              
+					<div class="graph7" id="echart_mini_pie"></div>                           
+																						            
+					<div class="graph9" id="echart_guage"></div>                           
+
 					
 					<script src="javascript/minipie.js"></script>	
 					<script src="javascript/gauge.js"></script>
@@ -317,9 +316,9 @@
 		  <p class="txt9x2">LES PORTEURS DE PROJET</p>   
 		
 		  <div class="section9x1">		
-			<p class="txt9x3">Yoann LE PRIOL</br>Clément LEDUC</br>Pengyu LI</p>
-			<p class="txt9x5">Anaïs BOILEAU</br>Louis GUERET</br>Sarah BRET</p>
-			<p class="txt9x6">Audrey VALLEE</br>Estelle ROQUES</br>Manon CAMESCASSE</br>Mathis TEXEREAU</br>Victor MOREAULT</p>
+			<p class="txt9x3"><a href="https://www.linkedin.com/in/yoann-le-priol-62380b13a/">Yoann LE PRIOL</a></br>Clément LEDUC</br>Pengyu LI</p>
+			<p class="txt9x5"><a href="https://www.behance.net/a-boileau">Anaïs BOILEAU</a></br><a href="https://www.behance.net/louisguereb4ae">Louis GUERET</a></br><a href="https://www.behance.net/sarahbret94556/">Sarah BRET</a></p>
+			<p class="txt9x6"><a href="https://www.linkedin.com/in/audrey-vallée-510898108/">Audrey VALLEE</a></br><a href="https://www.linkedin.com/in/estelle-roques-16bb21a6/">Estelle ROQUES</a></br><a href="https://www.linkedin.com/in/manon-camescasse-ba059811b/ ">Manon CAMESCASSE</a></br><a href="https://www.linkedin.com/in/mathis-texereau-287104116/">Mathis TEXEREAU</a></br><a href="https://www.linkedin.com/in/victor-morault/ ">Victor MORAULT</a></p>
 			
 			
 			<img class="img9x2" src="img/polytech-nantes.png" alt="logo polytech-nantes"/>
