@@ -277,7 +277,7 @@ font-size: 2.5vmin;
 
 #section05 .article501 {
   height: 45%;
-  padding-top: 1%;
+ padding-top: 7vmin;
   background-color: #FF5653;
   display: flex;
 }
@@ -297,7 +297,7 @@ font-size: 2.5vmin;
 }
 
 #section05 .article501 h2 {
-  height: 30%; 
+  height: 11vmin; 
   width: 100%; 
   color: #FFFFFF; 
   font-family: Montserrat;  
