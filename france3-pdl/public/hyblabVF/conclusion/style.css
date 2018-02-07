@@ -18,7 +18,12 @@ section {
   height: 100%;
 }
 
-
+#elmundo{
+	
+	width:43vmin;
+	
+	
+}
 #section01 .absolu .fleche {
   position: absolute;
   left: 2%;
@@ -27,7 +32,7 @@ section {
   width: 15%;
   color: #16037C; 
   font-family: "Open Sans"; 
-  font-size: 1.5em;  
+  font-size: 2.5vmin;  
   line-height: 110%;  
 }
 
@@ -71,7 +76,7 @@ section {
   height: 80%; 
   color: #16037C; 
   font-family: "Open Sans"; 
-  font-size: 175%;  
+  font-size: 2.5vmin;  
   line-height: 130%;  
   text-align: center;
   margin: 0 auto;
