@@ -225,6 +225,7 @@ jQuery(document).ready(function($){
     }
     newImg.setAttribute('class','legend-map');
     newImg.setAttribute('src','./img/legend-map.PNG');
+	
     place.appendChild(peloton);
     place.appendChild(newImg);
 

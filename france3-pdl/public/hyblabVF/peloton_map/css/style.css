@@ -776,11 +776,17 @@ object{
   transform: rotate(180deg);
 }
 
+.peloton .map .selected .legend-map{
+	
+	width:10%;
+	height:20%
+}
+
 .peloton .map .selected .legend-mapW{
   display: flex;
   width: 12%;
   margin-top: 25%;
-  height: 22%;
+  height: 33%;
 }
 
 .peloton .map .legend-mapW{
