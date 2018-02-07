@@ -358,7 +358,7 @@ Main Components
   display: table;
   color: #16037C;
   font-family: "Open Sans";
-  font-size: 18px;
+  font-size: 2vmin;
   line-height: 24px;
 }
 .cd-horizontal-timeline .events-content h2 {
