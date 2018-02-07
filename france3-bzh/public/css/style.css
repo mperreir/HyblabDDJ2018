@@ -409,6 +409,7 @@ button:focus { outline-style: none; }
 
 .nothome
 {
+  z-index: 30;
   background-color: #241D37;
 }
 
@@ -1366,23 +1367,25 @@ svg[hidden]:not(:root) {
 }
 
 .arrowsDown {
-  z-index: 500;
+  z-index: 31;
   text-align: center;
   bottom:0;
   right: 0;
 }
 .arrowsUp {
-  z-index: 500;
+  z-index: 31;
   top: 0;
   right:0;
   transform: rotate(180deg);
 }
 .arrowsLeft {
+  z-index: 10;
   left: 1%;
   top: 31%;
   transform: rotate(90deg);
 }
 .arrowsRight {
+  z-index: 10;
   right: 1%;
   top: 33%;
   transform: rotate(270deg);
