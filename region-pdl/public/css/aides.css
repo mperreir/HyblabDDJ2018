@@ -81,8 +81,10 @@
 
 .descriptionAide {
     float:right;
-    width: 400px;
-    height: 200px;
+ /*   width: 400px;*/
+  /*  width */
+ /*   height: 200px;*/
+    height: 25%;
 
     margin-right: 50px;
 
@@ -117,7 +119,8 @@
 #montant-aide {
     float: left;
 
-    margin-left: 90px;
+  /*  margin-left: 90px;*/
+    margin-left: 6%;
 
     font-size: 80px;
 
