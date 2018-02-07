@@ -135,15 +135,32 @@
     height: auto;
   }
 
+  >.legendMP{
+    .legendChoise{
+      >.legendTitle{
+        text-align: left;
+      }
+      >.oui{
+        border-left: solid 50px $data-oui;
+      }
+      >.non{
+        border-left: solid 50px $data-non;
+      }
+    }
+  }
+
   >.legendDD{
     width: 100%;
     height: auto;
-    >.legendReason{
+    >.legendTheme{
       min-width: 33.33%;
       position: relative;
       float: left;
       margin-bottom: 20px;
-      >.legendTitle{
+      >.reason{
+        >.legendTitle{
+          text-align: left;
+        }
         >.perso{
           border-left: solid 50px $data-jaune;
         }
@@ -152,6 +169,38 @@
         }
         >.rule{
           border-left: solid 50px $data-metier1;
+        }
+      }
+      >.legendDevD{
+        >.acces{
+          border-left: solid 5px $color-accessibilite;
+        }
+        >.assain{
+          border-left: solid 5px $color-assainissment;
+        }
+        >.autre{
+          border-left: solid 5px $color-autre;
+        }
+        >.dechet{
+          border-left: solid 5px $color-dechets;
+        }
+        >.ecoCons{
+          border-left: solid 5px $color-eco;
+        }
+        >.ecoEner{
+          border-left: solid 5px $color-ecoenergie;
+        }
+        >.enerR{
+          border-left: solid 5px $color-renouvelable;
+        }
+        >.air{
+          border-left: solid 5px $color-air;
+        }
+        >.eau{
+          border-left: solid 5px $color-eau;
+        }
+        >.mat{
+          border-left: solid 5px $color-materiaux;
         }
       }
     }
