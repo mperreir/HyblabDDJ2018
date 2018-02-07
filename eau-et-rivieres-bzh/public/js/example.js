@@ -232,7 +232,7 @@ fetch('data/datas.json')
         function() {
             $('#defnappeSouterraine').show();
             $('#defnappeSouterraine').css('left',$('#nappeSouterraine').offset().left);
-            $('#defnappeSouterraine').css('top',($('#nappeSouterraine').offset().top)+50);
+            $('#defnappeSouterraine').css('top',($('#nappeSouterraine').offset().top)-200);
         }, function() {
             $('#defnappeSouterraine').hide();
         }
@@ -241,7 +241,7 @@ fetch('data/datas.json')
         function() {
             $('#defcocktail').show();
             $('#defcocktail').css('left',$('#cocktail').offset().left);
-            $('#defcocktail').css('top',($('#cocktail').offset().top)+50);
+            $('#defcocktail').css('top',($('#cocktail').offset().top)-150);
         }, function() {
             $('#defcocktail').hide();
         }
