@@ -169,7 +169,7 @@ fetch('data/datas.json')
     //Santé solutions alternatives
     $(function() {
         $('#popupSolution').hide();
-    });
+    })
 
     $('#btnSolution').click(function() {
         $('#sante').css('filter','blur(3px)');
@@ -179,4 +179,90 @@ fetch('data/datas.json')
     $('#exitSolution').click(function() { 
         $('#sante').css('filter','blur(0px)');
         $('#popupSolution').hide();
-    });
+    })
+
+
+    /*definitions*/
+    $('#herbicide').hover(
+        function() {
+            $('#defherbicide').show();
+            $('#defherbicide').css('left',$('#herbicide').offset().left);
+            $('#defherbicide').css('top',($('#herbicide').offset().top)+50);
+        }, function() {
+            $('#defherbicide').hide();
+        }
+    );
+    $('#parasiticide').hover(
+        function() {
+            $('#defparasiticide').show();
+            $('#defparasiticide').css('left',$('#parasiticide').offset().left);
+            $('#defparasiticide').css('top',($('#parasiticide').offset().top)+50);
+        }, function() {
+            $('#defparasiticide').hide();
+        }
+    );
+    $('#molecule').hover(
+        function() {
+            $('#defmolecule').show();
+            $('#defmolecule').css('left',$('#molecule').offset().left);
+            $('#defmolecule').css('top',($('#molecule').offset().top)+50);
+        }, function() {
+            $('#defmolecule').hide();
+        }
+    );
+    $('#insecticide').hover(
+        function() {
+            $('#definsecticide').show();
+            $('#definsecticide').css('left',$('#insecticide').offset().left);
+            $('#definsecticide').css('top',($('#insecticide').offset().top)+50);
+        }, function() {
+            $('#definsecticide').hide();
+        }
+    );
+    $('#fongicide').hover(
+        function() {
+            $('#deffongicide').show();
+            $('#deffongicide').css('left',$('#fongicide').offset().left);
+            $('#deffongicide').css('top',($('#fongicide').offset().top)+50);
+        }, function() {
+            $('#deffongicide').hide();
+        }
+    );
+    $('#nappeSouterraine').hover(
+        function() {
+            $('#defnappeSouterraine').show();
+            $('#defnappeSouterraine').css('left',$('#nappeSouterraine').offset().left);
+            $('#defnappeSouterraine').css('top',($('#nappeSouterraine').offset().top)+50);
+        }, function() {
+            $('#defnappeSouterraine').hide();
+        }
+    );
+    $('#cocktail').hover(
+        function() {
+            $('#defcocktail').show();
+            $('#defcocktail').css('left',$('#cocktail').offset().left);
+            $('#defcocktail').css('top',($('#cocktail').offset().top)+50);
+        }, function() {
+            $('#defcocktail').hide();
+        }
+    );
+    $('#nappePhreatique').hover(
+        function() {
+            $('#defnappePhreatique').show();
+            $('#defnappePhreatique').css('left',$('#nappePhreatique').offset().left);
+            $('#defnappePhreatique').css('top',($('#nappePhreatique').offset().top)+50);
+        }, function() {
+            $('#defnappePhreatique').hide();
+        }
+    );
+    $('#nappeCampbon').hover(
+        function() {
+            $('#defnappeCampbon').show();
+            $('#defnappeCampbon').css('left',$('#nappeCampbon').offset().left);
+            $('#defnappeCampbon').css('top',($('#nappeCampbon').offset().top)+50);
+        }, function() {
+            $('#defnappeCampbon').hide();
+        }
+    );
+
+
