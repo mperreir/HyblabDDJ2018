@@ -1022,7 +1022,7 @@ function initmap() {
         attributionControl: false,
         zoomSnap: 0.5,
         minZoom: 5.5,
-        maxZoom: 10,
+        maxZoom: 11,
         zoomControl:false,
         layers:[pn,accidentRegion,coordAcc,accidentratioRegion]});
 
@@ -1151,7 +1151,7 @@ function addPn ()
     var markers = L.markerClusterGroup({
         removeOutsideVisibleBounds:true,
         spiderfyOnMaxZoom:false,
-        disableClusteringAtZoom: 9,
+        disableClusteringAtZoom: 10,
         iconCreateFunction: function (cluster) {
             var marker = cluster.getAllChildMarkers();
             var n = 0;
