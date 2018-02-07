@@ -6,6 +6,7 @@
       position: relative;
       float: left;
       text-align: left;
+      margin-bottom: 20px;
       >.legendTitle{
         @extend %title-legend;
       }
@@ -42,35 +43,43 @@
     }
     >.legendEffectifs{
       width: 100%;
-      display: grid;
-      grid-template-columns: repeat(5, min-content);
-      grid-template-rows: repeat(2, min-content);
       >.legendTitle{
         @extend %title-legend;
+        text-align: left;
       }
-      >.bubbl{
-        background-color: $black;
-        grid-auto-flow: row;
-        align-self: center;
-      }
-      >.b100{
-        @include circle(50px);
-      }
-      >.b610{
-        @include circle(40px);
-      }
-      >.b35{
-        @include circle(30px);
-      }
-      >.b12{
-        @include circle(20px);
-      }
-      >.b0{
-        @include circle(10px);
-      }
-      >.bublNum{
-        grid-auto-flow: row;
-        grid-row: 2;
+      >.container{
+        display: grid;
+        grid-template-columns: repeat(5, min-content);
+        grid-template-rows: repeat(2, min-content);
+        grid-column-gap: 7px;
+        grid-row-gap: 5px;
+        >.bubbl{
+          background-color: $black;
+          grid-row: 1;
+          grid-column: auto;
+          align-self: center;
+          justify-self: center;
+        }
+        >.b100{
+          @include circle(50px);
+        }
+        >.b610{
+          @include circle(40px);
+        }
+        >.b35{
+          @include circle(30px);
+        }
+        >.b12{
+          @include circle(20px);
+        }
+        >.b0{
+          @include circle(10px);
+        }
+        >.bublNum{
+          @extend %texte-legend;
+          grid-column: auto;
+          grid-row: 2;
+        }
       }
     }
   }
