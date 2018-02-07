@@ -685,8 +685,8 @@ object{
 }
 
 .peloton .map img{
-  height: 430px;
-  width: 60%;
+  height: 53vh;
+  width: auto;
   margin-left: 3%;
   margin-top: 3%;
   display:none;
