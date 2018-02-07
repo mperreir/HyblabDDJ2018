@@ -10,6 +10,11 @@ footer p
 	src: url('../fonts/Gunnar-Regular.ttf');
 }
 
+@font-face {
+	font-family: "Futura";
+	src: url('../fonts/FuturaStd-Medium.otf') format("opentype");
+}
+
 body,div,li,h1,h2,h3,h4,p {
     padding: 0;
     margin: 0;
@@ -110,6 +115,7 @@ ul {
         border-radius: 15px;
     }
 	/* --------------- transport --------------- */
+
 .indicateur3{
 	position: absolute;	
 	width:	100%;
@@ -134,7 +140,7 @@ ul {
 /* Emploi */
 .cat-chart-block {
 	
-	width: 50%;
+	width: 47%;
 
 }
 
@@ -171,6 +177,7 @@ ul {
 #section-synthese p {
 	width: 100%;
 	font-size: 17px;
+	font-family: "Futura";
 }
 
 #img-synthese {
@@ -313,8 +320,8 @@ footer {
 	left: 100px;
 }
 
-#yac {
-	color:#838383;
+.perso-link {
+	color: #838383;
 }
 
 @media (max-width: 880px) {

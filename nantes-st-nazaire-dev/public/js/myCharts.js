@@ -58,7 +58,8 @@ function createChartData(dataArray) {
         dataSet = {
             label: values["indicator"],
             data: values["data"],
-            backgroundColor: ["#34B6B3", "#34B6B3","#34B6B3","#FFCC01","#FFCC01","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 "]
+            backgroundColor: ["#34B6B3", "#34B6B3","#34B6B3","#FFCC01","#FFCC01","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 "],
+            hoverBackgroundColor: ["#265C8E", "#265C8E", "#265C8E", "#FFCC01","#FFCC01","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 ","#FFCC01 "]
         };
         //console.log(dataSet);
         dataSets.push(dataSet);
@@ -72,30 +73,36 @@ function triCroissant(cities, dataSets) {
     for (var ind01 = 0; ind01 < datas.data.length; ind01++) {
         for (var ind02 = ind01; ind02 < datas.data.length; ind02++) {
             if (datas.data[ind01] > datas.data[ind02]) {
-                temp = datas.data[ind01];
-                temp2 = cities[ind01];
-                temp3 = datas.backgroundColor[ind01];
+                var temp = datas.data[ind01];
+                var temp2 = cities[ind01];
+                var temp3 = datas.backgroundColor[ind01];
+                var temp4 = datas.hoverBackgroundColor[ind01];
                 datas.data[ind01] = datas.data[ind02];
                 cities[ind01] = cities[ind02];
                 datas.backgroundColor[ind01] = datas.backgroundColor[ind02];
+                datas.hoverBackgroundColor[ind01] = datas.hoverBackgroundColor[ind02];
                 datas.data[ind02] = temp;
                 cities[ind02] = temp2;
                 datas.backgroundColor[ind02] = temp3;
+                datas.hoverBackgroundColor[ind02] = temp4;
             }
         }
     }
     for (var j = 0; j < datas.data.length; j++) {
         for (var i = 0; i < datas.data.length - 1; i++) {
             if (datas.data[i] == 0) {
-                temp = datas.data[i];
-                temp2 = cities[i];
-                temp3 = datas.backgroundColor[i];
+                var temp = datas.data[i];
+                var temp2 = cities[i];
+                var temp3 = datas.backgroundColor[i];
+                var temp4 = datas.hoverBackgroundColor[i];
                 datas.data[i] = datas.data[i+1];
                 cities[i] = cities[i+1];
                 datas.backgroundColor[i] = datas.backgroundColor[i+1];
+                datas.hoverBackgroundColor[i] = datas.hoverBackgroundColor[i+1];
                 datas.data[i+1] = temp;
                 cities[i+1] = temp2;
                 datas.backgroundColor[i+1] = temp3;
+                datas.hoverBackgroundColor[i+1] = temp4;
             }
         }
     }
@@ -111,30 +118,36 @@ function triDecroissant(cities, dataSets) {
     for (var ind01 = 0; ind01 < datas.data.length; ind01++) {
         for (var ind02 = ind01; ind02 < datas.data.length; ind02++) {
             if (datas.data[ind01] < datas.data[ind02]) {
-                temp = datas.data[ind01];
-                temp2 = cities[ind01];
-                temp3 = datas.backgroundColor[ind01];
+                var temp = datas.data[ind01];
+                var temp2 = cities[ind01];
+                var temp3 = datas.backgroundColor[ind01];
+                var temp4 = datas.hoverBackgroundColor[ind01];
                 datas.data[ind01] = datas.data[ind02];
                 cities[ind01] = cities[ind02];
                 datas.backgroundColor[ind01] = datas.backgroundColor[ind02];
+                datas.hoverBackgroundColor[ind01] = datas.hoverBackgroundColor[ind02];
                 datas.data[ind02] = temp;
                 cities[ind02] = temp2;
                 datas.backgroundColor[ind02] = temp3;
+                datas.hoverBackgroundColor[ind02] = temp4;
             }
         }
     }
     for (var j = 0; j < datas.data.length; j++) {
         for (var i = 0; i < datas.data.length - 1; i++) {
             if (datas.data[i] == 0) {
-                temp = datas.data[i];
-                temp2 = cities[i];
-                temp3 = datas.backgroundColor[i];
+                var temp = datas.data[i];
+                var temp2 = cities[i];
+                var temp3 = datas.backgroundColor[i];
+                var temp4 = datas.hoverBackgroundColor[i];
                 datas.data[i] = datas.data[i+1];
                 cities[i] = cities[i+1];
                 datas.backgroundColor[i] = datas.backgroundColor[i+1];
+                datas.hoverBackgroundColor[i] = datas.hoverBackgroundColor[i+1];
                 datas.data[i+1] = temp;
                 cities[i+1] = temp2;
                 datas.backgroundColor[i+1] = temp3;
+                datas.hoverBackgroundColor[i+1] = temp4;
             }
         }
     }
@@ -226,13 +239,13 @@ function printBarChartDoughnut() {
             type: 'doughnut',
             data: {
                 labels: [
-                  'Pourcentage de jours avec un indice très bon à bon 1 à 4',
-                'Pourcentage de jours avec un indice faible'
+                  '% de jours avec un indice très bon à bon (de 1 à 4)',
+                '% de jours avec un indice faible (>4)'
                 ],
                 datasets: [{
-                    data: [82,18 ],
+                    data: [82,18],
                     backgroundColor: ["#34B6B3","#FFCC01"],
-                hoverBackgroundColor: ["black ", "black"]
+                hoverBackgroundColor: ["#265C8E", "#FFCC01"]
                 }]
             },
         options: {
@@ -245,7 +258,8 @@ function printBarChartDoughnut() {
                 }
             },
             legend: {
-                display: false,
+                display: true,
+                position: 'top',
                 labels: {
                     boxWidth: 2,
             }

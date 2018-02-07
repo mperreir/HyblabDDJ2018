@@ -5,7 +5,7 @@
 
 .pourquoi {
 	color: #265C8E;
-	font-size: 20px;
+	font-size: 32px;
 	margin-left: 4%;
 	margin-bottom: 20px;
 }
@@ -13,39 +13,52 @@
 #nantes-img {
 	width: 48%;
 	margin-left: 4%;
+	position: relative;
+	top: 70px;
 }
 
 #nana-nantes {
-	width: 8%;
+	width: 7%;
 	margin-left: 2%;
 	position: relative;
-	top: 50px;
+	top: 110px;
 }
 
 #bulle {
 	position: absolute;
 	width: 4%;
-	top: 100px;
+	top: 170px;
 	left: 67%;
 }
 
 #presentation-block {
 	position: absolute;
 	width: 24%;
-	top: 8%;
+	top: 23%;
 	left: 70%;
 	color: black;
 	font-size: 16px;
+	font-family: "Futura";
 }
 
 #presentation1, #presentation2 {
 	margin-bottom: 20px;
 }
 
-@media (max-width:1200px) {
+@media (max-width:1389px) {
+	#bulle {
+		left: 66%;
+		top: 29%;
+	}
+	#carte-container {
+		
+	}
+}
+
+@media (max-width: 1200px) {
 	#bulle {
 		left: 64%;
-		top: 20%;
+		top: 33%;
 	}
 	#carte-container {
 		
@@ -65,6 +78,7 @@
 	}
 
 	#nantes-img {
+		width: 6%;
 		width: 48%;
 		margin-left: 0%;
 		margin-top: 3%;
@@ -87,7 +101,7 @@
 	}
 	#bulle {
 		left: 55%;
-		top: 290px;
+		top: 300px;
 	}
 	.pourquoi {
 		margin-left: 4%;
@@ -251,8 +265,8 @@ p.ville-des {
   left: 53%;
 }
 .cd-single-point#pt-nice {
-  top: 71%;
-  left: 71%;
+  top: 75%;
+  right: 21%;
 }
 .cd-single-point#pt-grenoble {
   top: 60%;
@@ -263,7 +277,7 @@ p.ville-des {
   left: 34%;
 }
 .cd-single-point#pt-aix {
-  top: 73%;
+  top: 77%;
   left: 56%;
 }
 .cd-single-point#pt-strasbourg {
