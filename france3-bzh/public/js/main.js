@@ -127,6 +127,20 @@ $('#fullpage').fullpage({
         $("#firstsection").css({'background-image':'url(img/home/background_home.svg)', 'background-color':'#241D37'});
     }).fadeTo('slow', 1);
     }
+    if(slideAnchor==7 && direction=="right"){
+      if (lightrepondu==false){
+        $("#firstsection").fadeTo("slow",0.1,function(){
+          $("#firstsection").css({'background-image':'url(img/Illu1/daynight.svg)', 'background-color':'#241D37'});
+        }).fadeTo('slow', 1);
+      }
+    }
+    if(slideAnchor==8 && direction=='left'){
+      if (lightrepondu==false){
+        $("#firstsection").fadeTo("slow",0.1,function(){
+          $("#firstsection").css({'background-image':'url(img/Illu1/first.svg)', 'background-color':'#241D37'});
+        }).fadeTo('slow', 1);
+      }
+    }
     if(slideAnchor==8 && direction=='right'){
       $("#firstsection").fadeTo("slow",0.1,function(){
         $("#firstsection").css({'background-image':'url(img/4saisons/decorSaison.png)', 'background-color':'#241D37'});
@@ -135,7 +149,7 @@ $('#fullpage').fullpage({
     if(slideAnchor==9 && direction=='left'){
       if (lightrepondu==false){
           $("#firstsection").fadeTo("slow",0.1,function(){
-            $("#firstsection").css({'background-image':'url(img/Illu1/first.svg)', 'background-color':'#241D37'});
+            $("#firstsection").css({'background-image':'url(img/Illu1/daynight.svg)', 'background-color':'#241D37'});
           }).fadeTo('slow', 1);
         }
         else
