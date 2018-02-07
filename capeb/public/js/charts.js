@@ -17,20 +17,8 @@ var colorZoom = [
 ];
 
 var drawDDChart = function(stats) {
-    function scale(number) {
-        var start = 10;
-        var inc = 8;
-        if (number == 0) {
-            return start;
-        } else if (number <= 2) {
-            return start + inc;
-        } else if (number <= 5) {
-            return start + inc * 2;
-        } else if (number <= 10) {
-            return start + inc * 3;
-        } else {
-            return start + inc * 4;
-        }
+    function radiusmatch(value) {
+        return (value*50)
     }
 	
     var sec = document.getElementById("dataviz-section");
@@ -58,7 +46,7 @@ var drawDDChart = function(stats) {
                 {
                     x: id,
                     y: 2,
-                    r: scale(parseFloat(stats.Developpement_durable.values[1][id]))
+                    r: radiusmatch(parseFloat(stats.Developpement_durable.values[1][id]))
                 }
             ],
             backgroundColor: colors[id],
@@ -133,7 +121,6 @@ var drawDDChart = function(stats) {
                         scaleLabel: {
                             display: false,
                         },
-
 
                     }],
                     yAxes: [{
@@ -567,7 +554,6 @@ function drawDistanceDataviz(data) {
         var data = [];
         var point = {};
         point.x = value[2];
-        console.log(point.x);
         point.y = 0.5;
         point.r = scale(value[1]);
         point.metier = value[0];
@@ -579,8 +565,8 @@ function drawDistanceDataviz(data) {
         dataset.backgroundColor = colorMatch[value[0].substr(0, 3)];
         points.datasets.push(dataset);
 
-        if(value[2] > maxX){maxX = value[2];}
-        if(value[2]< minX){minX = value[2];}
+        if(parseFloat(value[2]) > maxX){maxX = parseFloat(value[2]);}
+        if(parseFloat(value[2]) < minX){minX = parseFloat(value[2]);}
     });
 
     // so the bubbles aren't cut on sides
@@ -588,7 +574,7 @@ function drawDistanceDataviz(data) {
     (parseFloat(minX)-10<0) ? minX=0 : minX = parseFloat(minX) - 10;
     maxX = parseInt(maxX);
     minX = parseInt(minX);
-
+    
     var options = {
         tooltips: false,
         scales: {
@@ -602,7 +588,7 @@ function drawDistanceDataviz(data) {
                 },
                 ticks: {
                     min: minX,
-                    // max: maxX
+                    max: maxX
                 }
             }],
             yAxes: [{
