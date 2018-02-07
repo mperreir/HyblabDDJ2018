@@ -179,16 +179,16 @@ body{
 #histDroite {
     float: left;
     position: absolute;
-    left: 45%;
-    top: -10%;
+    left: 52.5%;
+    top: -3%;
     width: 30.5vw;
 }
 
 #histGauche{
     float: left;
     position: absolute;
-    left: 0%;
-    top: -10%;
+    left: 5%;
+    top: -3%;
     width: 30.5vw;
 }
 
