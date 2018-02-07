@@ -52,7 +52,7 @@ var slide6_graphique1 = new Chart(ctx, {
     title: {
       display: true,
       text: "Nature de la référence à Jules Verne, selon le sujet de l'article",
-      position: 'bottom',
+      position: 'top',
     },
 
     legend: {

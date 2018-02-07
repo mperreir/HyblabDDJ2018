@@ -49,9 +49,6 @@
         </div>
 	    </div>
 
-
-
-
 	    <div class="section" id="section2">
         <!--Titre de la section-->
         <div class="titresection2">
@@ -91,6 +88,11 @@
             <canvas id="slide3_graphique1"></canvas>
             <script  src="js/section3/graph1.js"></script>
           </article>
+          <p class="description">La base de données de ce graphique n’est
+            pas exhaustive car elle concerne uniquement les 37 725 données
+            collectées par le Musée Jules Verne entre le 15/07/07 et le 01/05/17 et
+            exploitées par les étudiants.
+          </p>
         </section>
         <!--Mentions "Voir la suite"-->
         <div class="next">
@@ -156,7 +158,7 @@
           </ul>
 
         <!-- Domaine 1 - Divers -->
-        <article id="article_divers">
+        <article id="article_divers" class="visible">
             <!-- texte descriptif + image du domaine choisi-->
             <div class="section4_texte">
               <img src="./img/icon_divers.svg">
@@ -452,26 +454,26 @@
           });
 
           </script>
-          <script  src="./js/section4/slide4_graphique1_divers.js"></script>
-          <script  src="./js/section4/slide4_graphique2_divers.js"></script>
-          <script  src="./js/section4/slide4_graphique1_scene.js"></script>
-          <script  src="./js/section4/slide4_graphique2_scene.js"></script>
-          <script  src="./js/section4/slide4_graphique1_litterature.js"></script>
-          <script  src="./js/section4/slide4_graphique2_litterature.js"></script>
-          <script  src="./js/section4/slide4_graphique1_tourisme.js"></script>
-          <script  src="./js/section4/slide4_graphique2_tourisme.js"></script>
-          <script  src="./js/section4/slide4_graphique1_exposition.js"></script>
-          <script  src="./js/section4/slide4_graphique2_exposition.js"></script>
-          <script  src="./js/section4/slide4_graphique1_audiovisuel.js"></script>
-          <script  src="./js/section4/slide4_graphique2_audiovisuel.js"></script>
-          <script  src="./js/section4/slide4_graphique1_sciences.js"></script>
-          <script  src="./js/section4/slide4_graphique2_sciences.js"></script>
-          <script  src="./js/section4/slide4_graphique1_animation.js"></script>
-          <script  src="./js/section4/slide4_graphique2_animation.js"></script>
-          <script  src="./js/section4/slide4_graphique1_conference.js"></script>
-          <script  src="./js/section4/slide4_graphique2_conference.js"></script>
-          <script  src="./js/section4/slide4_graphique1_politique.js"></script>
-          <script  src="./js/section4/slide4_graphique2_politique.js"></script>
+          <script  src="./js/slide4_graphique1_divers.js"></script>
+          <script  src="./js/slide4_graphique2_divers.js"></script>
+          <script  src="./js/slide4_graphique1_scene.js"></script>
+          <script  src="./js/slide4_graphique2_scene.js"></script>
+          <script  src="./js/slide4_graphique1_litterature.js"></script>
+          <script  src="./js/slide4_graphique2_litterature.js"></script>
+          <script  src="./js/slide4_graphique1_tourisme.js"></script>
+          <script  src="./js/slide4_graphique2_tourisme.js"></script>
+          <script  src="./js/slide4_graphique1_exposition.js"></script>
+          <script  src="./js/slide4_graphique2_exposition.js"></script>
+          <script  src="./js/slide4_graphique1_audiovisuel.js"></script>
+          <script  src="./js/slide4_graphique2_audiovisuel.js"></script>
+          <script  src="./js/slide4_graphique1_sciences.js"></script>
+          <script  src="./js/slide4_graphique2_sciences.js"></script>
+          <script  src="./js/slide4_graphique1_animation.js"></script>
+          <script  src="./js/slide4_graphique2_animation.js"></script>
+          <script  src="./js/slide4_graphique1_conference.js"></script>
+          <script  src="./js/slide4_graphique2_conference.js"></script>
+          <script  src="./js/slide4_graphique1_politique.js"></script>
+          <script  src="./js/slide4_graphique2_politique.js"></script>
         </section>
         <!--Mentions "Voir la suite"-->
         <div class="next">
@@ -522,8 +524,13 @@
         </div>
         <!--Partie contenant les graphiques-->
         <section>
-          <canvas id="slide6_graphique1"></canvas>
-          <script  src="js/section6/graph1.js"></script>
+         <article class="canvas_container">
+            <canvas id="slide6_graphique1"></canvas>
+            <script  src="js/section6/graph1.js"></script>
+          </article>
+          <p class="description">
+            Le nombre de référence est catégorisé à travers dix domaines de compétences, les références à Jules Vernes sont divisés en quatre catégories : la simple mention, l'adaptation d'une oeuvre, l'inspiration pour un produit ou bien l'attribution à Jules Vernes
+          </p>
         </section>
         <!--Mentions "Voir la suite"-->
         <div class="next">
@@ -537,21 +544,22 @@
 
 
 
-	    <div class="section" id="section7">
+      <div class="section" id="section7">
         <!--Titre de la section-->
         <div class="titre">
           <div id="chiffre5"></div>
           <h1>Voyage au centre de l’Univerne</h1>
         </div>
         <!--Partie contenant les graphiques-->
-        <section id="container_slide7_graphique1">
+        <section id="container_slide7_graphique1"><!--Ajout d'un identifiant à la section--->
           <article id="slide7_graphique1">
            <script  src="js/section7/graph1.js"></script>
           </article>
+
         </section>
         <!--Mentions "Voir la suite"-->
         <div class="next">
-          <h6>Voir la suite</h6>
+          <h6>Défiler vers le bas <br/> pour voir la suite</h6>
         </div>
         <!--Formes animées de l'arrière-plan-->
         <span class="background_left"></span>

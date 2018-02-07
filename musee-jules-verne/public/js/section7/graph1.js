@@ -236,7 +236,11 @@ Highcharts.chart('slide7_graphique1', {
         cursor: 'pointer',
         dataLabels: {
             format: '{point.name}',
-
+            filter: {
+                property: 'innerArcLength',
+                operator: '>',
+                value: 10,
+            },
         },
         levels: [{
             level: 1,
