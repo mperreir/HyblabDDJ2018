@@ -23,8 +23,7 @@ app.post('/rangs', function(req, res) {
 	var workbook = xlsx.readFile('./nantes-st-nazaire-dev/rangs-finaux.xlsx');
 	var sheet_name_list = workbook.SheetNames;
     var rangs_json = xlsx.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
-    res.send(rangs_json);
-    res.end();
+    res.json(rangs_json);
 });
 
 app.get('/actifs', function(req, res) {
