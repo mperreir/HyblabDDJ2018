@@ -9,6 +9,7 @@ body {
     height: calc(100%);          /* pour support natif */
     overflow-x: hidden;
     overflow-y: hidden;
+    background-color: #fafafa;
 }
 
 a:link, a:visited {
@@ -74,7 +75,6 @@ h1 {
 #conclusion {
     margin-left: 350px;
     margin-top: -90px;
-    height: 178px;
     width: 674px;
     color: rgba(0,0,0,0.8);
     font-family: Lato;
@@ -84,24 +84,27 @@ h1 {
 }
 
 .logo {
-    width: 250px;
+    width: 200px;
 }
 
 .ecole {
-    float:left;
-    height: 280px;
     /*width: 100%;*/
-
     margin: 20px;
-    padding: 10px;
-    margin-top: -50px;
+    padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
 
-    box-shadow: 0 0 4px 0 rgba(0,0,0,0.16);
+.div_nom {
+    margin-top: 50px;
+}
+
+#Polytech .div_nom {
+    margin-top: inherit;
 }
 
 .nom {
     margin-left: 50px;
-
     color: #000000;
     font-family: "Lato";
     font-size: 16px;
@@ -109,8 +112,15 @@ h1 {
 }
 
 #ecoles {
-  /*  margin-left: 280px;*/
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 100%;
+    /*  margin-left: 280px;*/
+    margin: 40px auto;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-around;
+}
+
+span {
+    text-transform: uppercase;
 }
