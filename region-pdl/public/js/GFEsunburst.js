@@ -322,7 +322,7 @@ app.controller('myCtrl', function ($scope) {
     }
 
     function getDescription(d) {
-        totalM =0 ;
+        totalM = 0;
         total = 0;
         totalM1 = 0;
         total1 = 0;
@@ -343,99 +343,101 @@ app.controller('myCtrl', function ($scope) {
                     total3 += d.children[i].children[j].an3_Effectifs;
                 }
             }
-        }
+            var percent = (100 * total / totalM).toPrecision(3);
+            var percent1, percent2, percent3;
+            if (totalM1 === 0) {
+                percent1 = 0;
+            } else {
+                percent1 = (100 * total1 / totalM1).toPrecision(3);
+            }
+            if (totalM2 === 0) {
+                percent2 = 0;
+            } else {
+                percent2 = (100 * total2 / totalM2).toPrecision(3);
+            }
+            if (totalM3 === 0) {
+                percent3 = 0;
+            } else {
+                percent = (100 * total3 / totalM3).toPrecision(3);
+            }
+            // var percentStr = percent + '%';
 
-        var percent = (100 * total / totalM).toPrecision(3);
+            // d3.select('#exp')
+            //         .text(percentStr + '\n' + '\n \r Effectifs par rapport à la capacité max.\n');
 
-        var percent1,percent2 ,percent3;
-
-        if(totalM1===0){
-            percent1 =0;
-        }else{
-            percent1 = (100 * total1 / totalM1).toPrecision(3);
-        }
-        if(totalM2===0){
-            percent2 =0;
-        }else{
-            percent2 = (100 * total2 / totalM2).toPrecision(3);
-        }
-        if(totalM3===0){
-            percent3 =0;
-        }else{
-            percent = (100 * total3 / totalM3).toPrecision(3);
-        }
-        // var percentStr = percent + '%';
-
-        // d3.select('#exp')
-        //         .text(percentStr + '\n' + '\n \r Effectifs par rapport à la capacité max.\n');
-
-        d3.select('#showExplain')
+            d3.select('#showExplain')
                 .style('visibility', '');
 
-        d3.select('#dessus')
-            .style('visibility', '');
+            d3.select('#dessus')
+                .style('visibility', '');
 
-        d3.select('#exp1')
+            d3.select('#exp1')
                 .text('Effectifs par rapport à la capacité max.\n');
 
 
-        d3.select('#text')
-            .text('Effectifs par rapport à la capacité max.\n');
+            d3.select('#text')
+                .text('Effectifs par rapport à la capacité max.\n');
 
-        // d3.select('#an1')
-        //     .text('Effectifs par rapport à la capacité max.\n');
-        //
-        // d3.select('#exp1')
-        //     .text('Effectifs par rapport à la capacité max.\n');
-        // d3.select('#exp1')
-        //     .text('Effectifs par rapport à la capacité max.\n');
+            // d3.select('#an1')
+            //     .text('Effectifs par rapport à la capacité max.\n');
+            //
+            // d3.select('#exp1')
+            //     .text('Effectifs par rapport à la capacité max.\n');
+            // d3.select('#exp1')
+            //     .text('Effectifs par rapport à la capacité max.\n');
 
-        var option = {
-            value: percent,
-            name:'',//必填
-            backgroundColor:null,
-            color:['#a0cb4d','#c6dac4'],
-            fontSize:24,
-            fontFamily: 'sans-serif',
-            domEle:document.getElementById("exp")//必填
-        },percentPie = new PercentPie(option);
-        percentPie.init();
+            var option = {
+                value: percent,
+                name: '',//必填
+                backgroundColor: null,
+                color: ['#a0cb4d', '#c6dac4'],
+                fontSize: 24,
+                fontFamily: 'sans-serif',
+                domEle: document.getElementById("exp")//必填
+            }, percentPie = new PercentPie(option);
+            percentPie.init();
 
-        var option1 = {
-            value: percent1,
-            name:'Année1',//必填
-            backgroundColor:null,
-            color:['#4bb8e6','#ffffff'],
-            fontSize:14,
-            fontWeight:  100,
-            fontFamily: 'sans-serif',
-            domEle:document.getElementById("expan1")//必填
-        },percentPie1 = new PercentPie(option1);
-        percentPie1.init();
+            var option1 = {
+                value: percent1,
+                name: 'Année1',//必填
+                backgroundColor: null,
+                color: ['#4bb8e6', '#ffffff'],
+                fontSize: 14,
+                fontWeight: 100,
+                fontFamily: 'sans-serif',
+                domEle: document.getElementById("expan1")//必填
+            }, percentPie1 = new PercentPie(option1);
+            percentPie1.init();
 
-        var option2 = {
-            value: percent2,
-            name:'Année2',//必填
-            backgroundColor:null,
-            color:['#4bb8e6','#ffffff'],
-            fontSize:14,
-            fontWeight: 100,
-            fontFamily: 'sans-serif',
-            domEle:document.getElementById("expan2")//必填
-        },percentPie2 = new PercentPie(option2);
-        percentPie2.init();
+            var option2 = {
+                value: percent2,
+                name: 'Année2',//必填
+                backgroundColor: null,
+                color: ['#4bb8e6', '#ffffff'],
+                fontSize: 14,
+                fontWeight: 100,
+                fontFamily: 'sans-serif',
+                domEle: document.getElementById("expan2")//必填
+            }, percentPie2 = new PercentPie(option2);
+            percentPie2.init();
 
-        var option3 = {
-            value: percent3,
-            name:'Année3',//必填
-            backgroundColor:null,
-            color:['#4bb8e6','#ffffff'],
-            fontSize:14,
-            fontWeight: 100,
-            fontFamily: 'sans-serif',
-            domEle:document.getElementById("expan3")//必填
-        },percentPie3 = new PercentPie(option3);
-        percentPie3.init();
+            var option3 = {
+                value: percent3,
+                name: 'Année3',//必填
+                backgroundColor: null,
+                color: ['#4bb8e6', '#ffffff'],
+                fontSize: 14,
+                fontWeight: 100,
+                fontFamily: 'sans-serif',
+                domEle: document.getElementById("expan3")//必填
+            }, percentPie3 = new PercentPie(option3);
+            percentPie3.init();
+        } else{
+            d3.select('#dessus')
+                .style('visibility', 'hidden');
+        }
+
+
     }
 
 
