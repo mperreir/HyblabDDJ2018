@@ -218,9 +218,6 @@
     >.platIso{
       border-left: solid 5px $data-metier6;
     }
-    >.autr{
-      border-left: solid 5px $autre;
-    }
   }
 
 
@@ -239,5 +236,19 @@
     >.epci{
       border-left: solid 50px $blue-color;
     }
+  }
+
+  .iconInfo{
+    width: 36px;
+    height: 36px;
+    fill: $black;
+    float: left;
+    width: 24px;
+    height: auto;
+  }
+  .info-texte{
+    @extend %texte-info;
+    text-align: left;
+    margin-left: 30px;
   }
 }

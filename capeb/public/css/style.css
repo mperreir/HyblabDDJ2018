@@ -98,7 +98,7 @@ a {
 }
 
 /* line 84, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/modules/_extends.scss */
-.info-epci > .info-texte, .partie-data > .content-data .textes-data > .container > .info-texte {
+.info-epci > .info-texte, .partie-data > .content-data .textes-data > .container > .info-texte, .legende-dataviz .info-texte {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8vw;
   font-weight: 500;
@@ -1273,12 +1273,7 @@ input:checked + .slider:before {
   border-left: solid 5px #eb6769;
 }
 
-/* line 221, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-dataviz.scss */
-.legende-dataviz .legendMetiers > .autr {
-  border-left: solid 5px rgba(29, 29, 27, 0.3);
-}
-
-/* line 227, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-dataviz.scss */
+/* line 224, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-dataviz.scss */
 .legende-dataviz .legendEchelle {
   min-width: 33.33%;
   position: relative;
@@ -1286,20 +1281,36 @@ input:checked + .slider:before {
   margin-bottom: 20px;
 }
 
-/* line 232, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-dataviz.scss */
+/* line 229, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-dataviz.scss */
 .legende-dataviz .legendEchelle > .region {
   border-left: solid 50px #ffe000;
 }
 
-/* line 235, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-dataviz.scss */
+/* line 232, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-dataviz.scss */
 .legende-dataviz .legendEchelle > .dept {
   border-left: solid 50px #df261d;
   display: none;
 }
 
-/* line 239, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-dataviz.scss */
+/* line 236, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-dataviz.scss */
 .legende-dataviz .legendEchelle > .epci {
   border-left: solid 50px #68c0ed;
+}
+
+/* line 241, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-dataviz.scss */
+.legende-dataviz .iconInfo {
+  width: 36px;
+  height: 36px;
+  fill: #1d1d1b;
+  float: left;
+  width: 24px;
+  height: auto;
+}
+
+/* line 249, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-dataviz.scss */
+.legende-dataviz .info-texte {
+  text-align: left;
+  margin-left: 30px;
 }
 
 /*# sourceMappingURL=../css/style.map */

@@ -215,6 +215,24 @@
   font-weight: 700;
   line-height: 1.6;
   text-align: justify;
+  margin-bottom: 30px;
+}
+
+.texte-dataviz .iconInfo{
+  width: 36px;
+  height: 36px;
+  fill: rgba( 29, 29, 27, 1 );
+  float: left;
+  width: 24px;
+  height: auto;
+}
+.texte-dataviz .info-texte{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8vw;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: left;
+  margin-left: 30px;
 }
 
 .modal-body {
