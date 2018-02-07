@@ -315,7 +315,6 @@ $(document).ready(function() {
 
     fetch('/nantes-st-nazaire-dev/actifs', {
       method: 'post',
-      body: JSON.stringify(),
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
