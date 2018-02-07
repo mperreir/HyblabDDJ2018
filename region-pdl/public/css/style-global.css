@@ -122,16 +122,22 @@ html, body {
     padding: 0;
 }
 
+.asterisque {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: italic;
+}
+
 .temoignage {
     position: absolute;
-    top: 70%;
+    top: 72%;
     width: 394px;
     color: #FFFFFF;
     font-family: Lato;
     font-size: 14px;
     letter-spacing: 1px;
     line-height: 25px;
-    font-style: italic;
 }
 
 /** lien rond sur la droite **/

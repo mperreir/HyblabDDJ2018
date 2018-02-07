@@ -34,14 +34,3 @@ body{
     background-color: #009BC2;
     z-index: 1;
 }
-
-.temoignage {
-    position: absolute;
-    top: 50%;
-    width: 394px;
-    color: #FFFFFF;
-    font-family: Lato;
-    font-size: 14px;
-    letter-spacing: 1px;
-    line-height: 25px;
-}
