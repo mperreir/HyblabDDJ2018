@@ -124,3 +124,69 @@ h1 {
 span {
     text-transform: uppercase;
 }
+
+/** lien rond sur la droite **/
+
+a.lienRond {
+    position: absolute;
+    right: 20px;
+    border-radius: 25px;
+    height: 10px;
+    width: 10px;
+
+    background-color: #4199BE;
+    border: none;
+
+    display: block;
+    margin: auto;
+}
+
+a.lienRond:hover {
+    border-radius: 25px;
+
+    background-color: #2a5872;
+    border: none;
+
+    display: block;
+    margin: auto;
+}
+
+a.lienActuel {
+    position: absolute;
+    right: 18px;
+    border-radius: 25px;
+    height: 15px;
+    width: 15px;
+
+    background-color: #4199BE;
+    border: none;
+
+    display: block;
+    margin: auto;
+}
+
+a.lienActuel:hover {
+    border-radius: 25px;
+
+    background-color: #2a5872;
+    border: none;
+
+    display: block;
+    margin: auto;
+}
+
+#rond1, #rond11 {
+    top: 45%;
+}
+
+#rond2, #rond22 {
+    top: 49%;
+}
+
+#rond3, #rond33 {
+    top: 53%;
+}
+
+#rond4, #rond44 {
+    top: 57%;
+}
