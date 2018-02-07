@@ -100,7 +100,7 @@ a {
 /* line 84, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/modules/_extends.scss */
 .info-epci > .info-texte, .partie-data > .content-data .textes-data > .container > .info-texte, .legende-dataviz .info-texte {
   font-family: "Montserrat", sans-serif;
-  font-size: 0.8vw;
+  font-size: 1vw;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -493,7 +493,7 @@ input:checked + .slider:before {
   background-color: #34EBC2;
   width: 100%;
   height: 100%;
-  padding: 45px 20px 20px 30px;
+  padding: 35px 20px 20px 30px;
   box-sizing: border-box;
 }
 
@@ -501,7 +501,7 @@ input:checked + .slider:before {
 .info-epci > .description {
   text-align: left;
   width: 100%;
-  margin: 1.3vh 0 15px 0;
+  margin: 0 0 15px 0;
 }
 
 /* line 52, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/composants/_bloc-recto.scss */

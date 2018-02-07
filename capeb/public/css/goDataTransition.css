@@ -240,7 +240,7 @@
 }
 .texte-dataviz .info-texte{
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.8vw;
+  font-size: 1vw;
   font-weight: 500;
   line-height: 1.2;
   text-align: left;
@@ -282,7 +282,7 @@
 }
 
 .legende-dataviz{
-  grid-column: 4;
+  grid-column: 4 / 6;
   grid-row: 3;
 }
 
