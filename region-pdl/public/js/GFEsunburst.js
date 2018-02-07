@@ -137,9 +137,13 @@ app.controller('myCtrl', function ($scope) {
         'second': 'Formations d’aide à l’insertion sociale et professionnell'
     }];
 
+    var GFE = 0;
+    var GFETotalM = 0;
     $scope.clickGetImage = function (params) {
+
         var data = [];
         data.boxes = [];
+        GFE = 0;
         var hierarchyData = {name: 'root', children: []},
                 levels = ['SECTEUR', 'NIV'];
         d3.json('data/Eff_new.json', function (dataset) {
@@ -160,9 +164,32 @@ app.controller('myCtrl', function ($scope) {
                         Total_effectifs: value.Total_effectifs
                     });
                 }
+                for (var i = 0; i < data.length; i++) {
+                    GFETotalM += value.Total_capacité_maxi;
+                    GFE += value.Total_effectifs
+                }
             });
+
             d3.select('#name')
                 .text(params.second);
+
+            d3.select('#exp1')
+                .text('Effectifs par rapport à la capacité max.\n');
+
+            var percentGFE = (100 * GFE / GFETotalM).toPrecision(3);
+            console.log(percentGFE);
+
+            var option = {
+                value: percentGFE,
+                name: '',//必填
+                backgroundColor: null,
+                color: ['#a0cb4d', '#c6dac4'],
+                fontSize: 24,
+                fontFamily: 'sans-serif',
+                domEle: document.getElementById("exp")//必填
+            }, percentPie = new PercentPie(option);
+            percentPie.init();
+
             //Layered data
             angular.forEach(data, function (value, key) {
                 var depthCursor = hierarchyData.children;
@@ -367,15 +394,13 @@ app.controller('myCtrl', function ($scope) {
             // d3.select('#exp')
             //         .text(percentStr + '\n' + '\n \r Effectifs par rapport à la capacité max.\n');
 
+            console.log(percent);
+
             d3.select('#showExplain')
                 .style('visibility', '');
 
             d3.select('#dessus')
                 .style('visibility', '');
-
-            d3.select('#exp1')
-                .text('Effectifs par rapport à la capacité max.\n');
-
 
             d3.select('#text')
                 .text('Effectifs par rapport à la capacité max.\n');
@@ -388,16 +413,18 @@ app.controller('myCtrl', function ($scope) {
             // d3.select('#exp1')
             //     .text('Effectifs par rapport à la capacité max.\n');
 
-            var option = {
+
+            var optionT = {
                 value: percent,
-                name: '',//必填
+                name: 'Total',//必填
                 backgroundColor: null,
-                color: ['#a0cb4d', '#c6dac4'],
-                fontSize: 24,
+                color: ['#4bb8e6', '#ffffff'],
+                fontSize: 14,
+                fontWeight: 100,
                 fontFamily: 'sans-serif',
-                domEle: document.getElementById("exp")//必填
-            }, percentPie = new PercentPie(option);
-            percentPie.init();
+                domEle: document.getElementById("exptotal")//必填
+            }, percentPie1 = new PercentPie(optionT);
+            percentPie1.init();
 
             var option1 = {
                 value: percent1,
