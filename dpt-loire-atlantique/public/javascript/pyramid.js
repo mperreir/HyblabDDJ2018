@@ -1,11 +1,13 @@
 var theme = {
           color: [
-              '#26B99A', '#34495E', '#BDC3C7', '#3498DB',
-              '#9B59B6', '#8abb6f', '#759c6a', '#bfd3b7'
+              '#6cb756', '#347e1d', '#ffcc00', '#43a326', '#96cb86', '#c0e0b6', '#d5eace', '#1d4810',            
           ],
+		  
+		  /* 8-Places 7-Guyanne 6-Haute-Corse 5-Nord 4-Paris 3-Loire At 2-HL 1-Moyenne*/
 
           textStyle: {
-              fontFamily: 'Arial, Verdana, sans-serif'
+			  fontSize: 14,
+			  fontWeight: 'bold'
           }
       };
 
@@ -26,7 +28,7 @@ var theme = {
         },
         calculable: true,
         series: [{
-          name: 'Funnel',
+          name: 'Taux de couverture',
           type: 'funnel',
           width: '40%',
           data: [{

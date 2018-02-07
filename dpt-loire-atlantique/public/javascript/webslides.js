@@ -814,7 +814,7 @@ var WebSlides = function () {
         _ref$changeOnClick = _ref.changeOnClick,
         changeOnClick = _ref$changeOnClick === undefined ? false : _ref$changeOnClick,
         _ref$loop = _ref.loop,
-        loop = _ref$loop === undefined ? true : _ref$loop,
+        loop = false,
         _ref$minWheelDelta = _ref.minWheelDelta,
         minWheelDelta = _ref$minWheelDelta === undefined ? 40 : _ref$minWheelDelta,
         _ref$navigateOnScroll = _ref.navigateOnScroll,

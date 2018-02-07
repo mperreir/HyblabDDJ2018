@@ -5,7 +5,9 @@
 html, body{
 font-family: 'Raleway', sans-serif;
 	}
-	
+
+a { text-decoration: none; color:#004460;}
+
 .title1{
 	color: #004460;
 	font-size:60px;
@@ -43,6 +45,30 @@ font-family: 'Raleway', sans-serif;
 	border-style: solid;
 	border-width: 50px 100px 100px 100px; /*top right bottom left*/
 }
+
+@media (max-width:1024px), (max-height:600px){
+		
+	.title1{
+		font-size:40px;		
+	}
+		
+	.title2{
+		font-size:30px;		
+	}
+	
+	.title3{
+		font-size:22px;	
+	}
+	
+	.paragraph{
+		font-size:14px;
+		line-height:20px;
+	}
+	
+	.sectionBorder{
+		border-width:25px 50px 50px 50px;
+	}
+}
 	
 /* DIAPO1 */
 	
@@ -51,7 +77,6 @@ font-family: 'Raleway', sans-serif;
 	top:15%;
 	left:30%;
 	text-align:center;
-	font-size:60px;
 }
 
 .txt1x2{
@@ -59,15 +84,14 @@ font-family: 'Raleway', sans-serif;
 	top:27%;
 	left:25%;
 	text-align:center;
-	font-size:60px;
 	font-weight: bold;
 }
 
 #marquee1{
 	position: absolute;
 	top:27%;
-	left:40%;
-	text-align:left;
+	left:-6%;
+	text-align:center;
 	font-size:60px;
 	font-weight: bold;
 }
@@ -75,8 +99,8 @@ font-family: 'Raleway', sans-serif;
 #marquee2{
 	position: absolute;
 	top:27%;
-	left:40%;
-	text-align:left;
+	left:-6%;
+	text-align:center;
 	font-size:60px;
 	font-weight: bold;
 }
@@ -84,14 +108,23 @@ font-family: 'Raleway', sans-serif;
 #marquee3{
 	position: absolute;
 	top:27%;
-	left:40%;
-	text-align:left;
+	left:-6%;
+	text-align:center;
+	font-size:60px;
+	font-weight: bold;
+}
+
+#marquee4{
+	position: absolute;
+	top:27%;
+	left:-6%;
+	text-align:center;
 	font-size:60px;
 	font-weight: bold;
 }
 
 .txt1x3{
-	top:45%;
+	top:43%;
 	left:25%;
 	width:37%;
 	font-size:16px;
@@ -112,9 +145,9 @@ font-family: 'Raleway', sans-serif;
 .txt1x5{
 	position: absolute;
 	top:27%;
-	left:40%;
-	text-align:left;
-	font-size:4.0vw;
+	left:25%;
+	text-align:center;
+	font-size:60px;
 	font-weight: bold;
 	color: #004460;
 }
@@ -162,11 +195,15 @@ font-family: 'Raleway', sans-serif;
 	text-align: justify;
 }
 
+.a2x6, .a3x6{
+	color:white;
+}
+
 .bulle2{
 	z-index: 3;
 	position: absolute;
 	top: 70%;
-	left: 65%;
+	left: 75%;
 	background-color: #7c2722;
 	width: 23%;
 	height: 35%;
@@ -218,7 +255,7 @@ font-family: 'Raleway', sans-serif;
 
 .txt3x3{
 	position: absolute;
-	top:35%;
+	top:55%;
 	left:70%;
 	width:25%;
 	font-size:16px;
@@ -252,10 +289,20 @@ font-family: 'Raleway', sans-serif;
 	text-align: justify;
 }
 
+.txt3x6{
+	position: absolute;
+	left:12.5%;
+	font-size:0.8vw;
+	line-height: 20px;
+	margin-right: 30px;
+	text-align: justify;
+}
+
+
 .txt3xquestion{
 	position: absolute;
-	top:30%;
-	left:32.5%;
+	top:35%;
+	left:43%;
 	width:40%;
 	display: block;
 	font-size:18px;
@@ -265,8 +312,8 @@ font-family: 'Raleway', sans-serif;
 
 .txt3xchoix1{
 	position: absolute;
-	top:45%;
-	left:40%;
+	top:51%;
+	left:52%;
 	width:15%;
 	display: block;
     transform: translate(-50%, -50%);
@@ -288,8 +335,8 @@ font-family: 'Raleway', sans-serif;
 
 .txt3xchoix2{
 	position: absolute;
-	top:45%;
-	left:58%;
+	top:51%;
+	left:68%;
 	width:15%;
 	display: block;
     transform: translate(-50%, -50%);
@@ -311,8 +358,8 @@ font-family: 'Raleway', sans-serif;
 
 .txt3xchoix3{
 	position: absolute;
-	top:57%;
-	left:40%;
+	top:62%;
+	left:52%;
 	width:15%;
 	display: block;
     transform: translate(-50%, -50%);
@@ -334,8 +381,8 @@ font-family: 'Raleway', sans-serif;
 
 .txt3xchoix4{
 	position: absolute;
-	top:57%;
-	left:58%;
+	top:62%;
+	left:68%;
 	width:15%;
 	display: block;
     transform: translate(-50%, -50%);
@@ -382,8 +429,8 @@ font-family: 'Raleway', sans-serif;
 .bulle3{
 	z-index: 3;
 	position: absolute;
-	top: 20%;
-	left: 75%;
+	top: 15%;
+	left: 82%;
 	background-color: #7c2722;
 	width: 23%;
 	height: 35%;
@@ -607,7 +654,7 @@ font-family: 'Raleway', sans-serif;
 	position: absolute;
 	top:30%;
 	left:5%;
-	width:35%;
+	width:36%;
 }
 
 .txt6x5{
@@ -706,7 +753,7 @@ font-family: 'Raleway', sans-serif;
 }
 
 .button6x1:hover { 
-	background-color: #cd373e;
+	background-color: #F2ED6F;
     color: white;
 }
 
@@ -715,7 +762,7 @@ font-family: 'Raleway', sans-serif;
 }
 
 .button6x2:hover { 
-	background-color: #1c3647;
+	background-color: #587792;
     color: white;
 }
 
@@ -724,7 +771,7 @@ font-family: 'Raleway', sans-serif;
 }
 
 .button6x3:hover { 
-	background-color: #1e7349;
+	background-color: #BB4430;
     color: white;
 }
 
@@ -1039,10 +1086,11 @@ font-family: 'Raleway', sans-serif;
 }
 
 .txt9x3{
+	z-index:2;
 	position: absolute;
 	top:30%;
 	left:3%;
-	width:30%;
+	width:26%;
 	text-align:center;
 	font-size:18px;
 	font-weight:semi-bold;
@@ -1056,15 +1104,17 @@ font-family: 'Raleway', sans-serif;
 }
 
 .txt9x5{
+	z-index:2;
 	position: absolute;
 	top:30%;
 	left:34%;
-	width:30%;
+	width:25%;
 	text-align:center;
 	font-weight:semi-bold;
 }
-
+	
 .txt9x6{
+	z-index:2;
 	position: absolute;
 	top:30%;
 	left:63%;
@@ -1076,25 +1126,33 @@ font-family: 'Raleway', sans-serif;
 .img1x1{
 	top:30%;
 	left:60%;	
-	height:1000px;
+	/*height:1000px;*/
+	height:165%;
+	width:48.5%;
 }
 
 .img1x2{
 	top:80%;
 	left:5%;
-	height:80px;
+	/*height:80px;*/
+	height:13%;
+	width:10.8%;
 }
 
 .img2x1{
 	top:-95%;
 	left:60%;
-	height:1000px;
+	/*height:1000px;*/
+	height:165%;
+	width:48.5%;
 }
 	
 .img3x1{
 	top:5%;
 	left:-10%;
-	height:600px;
+	/*height:600px;*/
+	height:99%;
+	width:38.5%;
 }
 
 .img3x2{
@@ -1106,19 +1164,25 @@ font-family: 'Raleway', sans-serif;
 .img4x1{
 	top:0%;
 	left:70%;
-	height:600px;
+	/*height:600px; 6.06*/
+	height:99%;
+	width:34.5%;
 }
 	
 .img5x1{
 	top:40%;
 	left:50%;
-	height:250px;
+	/*height:250px;*/
+	height:41.3%;
+	width:15%;
 }
 	
 .img5x2{
 	top:20%;
 	left:-10%;
-	height:600px;
+	/*height:600px;*/
+	height:99%;
+	width:46.3%;
 }
 	
 .img7x1{
@@ -1130,9 +1194,11 @@ font-family: 'Raleway', sans-serif;
 	
 .img8x1{
 	top:0%;
-	left:60%;
-	height:600px;
-	}
+	left:63%;
+	/*height:600px;*/
+	height:99%;
+	width:40%;
+}
 	
 .img9x1{
 	position: absolute;
@@ -1166,7 +1232,9 @@ font-family: 'Raleway', sans-serif;
 	position: absolute;
 	top:40%;
 	left:-5%;
-	height:600px;
+	/*height:600px;*/
+	height:99%;
+	width:40%;
 }
 	
 .img9x6{
@@ -1346,13 +1414,9 @@ font-family: 'Raleway', sans-serif;
 .graph4{
 	z-index: 1;
 	position: absolute;
-	border-style: solid;
-	border-width: 5px 5px 5px 5px; /*top right bottom left*/
-	border-color:transparent;
 	top:40%;
 	left:15%;
 	width:45%;
-	float:right;
 	background-color:transparent;
 	opacity: 1;
 }
@@ -1368,14 +1432,12 @@ font-family: 'Raleway', sans-serif;
 	background-color:transparent;
 	opacity: 1;
 	display:block;
+	height:62%;
 }
 
 .graph8{
 	z-index: 1;
 	position: absolute;
-	border-style: solid;
-	border-width: 5px 5px 5px 5px; /*top right bottom left*/
-	border-color:transparent;
 	top:30%;
 	left:52%;
 	width:70%;
@@ -1386,14 +1448,12 @@ font-family: 'Raleway', sans-serif;
 .graph9{
 	z-index: 1;
 	position: absolute;
-	border-style: solid;
-	border-width: 5px 5px 5px 5px; /*top right bottom left*/
-	border-color:transparent;
 	top:45%;
 	left:10%;
 	width:50%;
 	background-color:transparent;
 	opacity: 1;
+	height:62%;
 }
 	
 #testMap{
