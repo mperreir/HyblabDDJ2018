@@ -139,8 +139,8 @@ app.controller('myCtrl', function ($scope) {
 
     var GFE = 0;
     var GFETotalM = 0;
-    $scope.clickGetImage = function (params) {
 
+    $scope.clickGetImage = function (params) {
         var data = [];
         data.boxes = [];
         GFE = 0;
@@ -220,7 +220,7 @@ app.controller('myCtrl', function ($scope) {
             });
             document.getElementById("main").style.display=""
             d3.select('#showExplain')
-                .style('visibility', 'hidden');
+                .style('visibility', '');
             d3.select('#dessus')
                 .style('visibility', 'hidden');
             createVisualization(hierarchyData);
@@ -393,11 +393,6 @@ app.controller('myCtrl', function ($scope) {
 
             // d3.select('#exp')
             //         .text(percentStr + '\n' + '\n \r Effectifs par rapport à la capacité max.\n');
-
-            console.log(percent);
-
-            d3.select('#showExplain')
-                .style('visibility', '');
 
             d3.select('#dessus')
                 .style('visibility', '');

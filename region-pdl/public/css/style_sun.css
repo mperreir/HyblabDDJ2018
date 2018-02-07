@@ -149,7 +149,7 @@ p{
     /*top:50%; left:50%;*/
     background: #ffffff;
     margin-left: 36%;
-    margin-top: -50px;
+    margin-top: -60px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -161,7 +161,7 @@ p{
     width: 90px;
     text-align: right;
     font-size: 12px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-right: 30px;
 }
 
@@ -241,7 +241,7 @@ p{
     width: 176px;
     /*max-height: 600px;*/
     position: relative;
-    margin-top: 52px;
+    margin-top: 45px;
     margin-left: -30px;
     margin-right: 40px;
 }
@@ -595,9 +595,9 @@ p{
 }*/
 
 #name{
-    margin-left: 430px;
-    margin-top: -30px;
-    width: 320px;
+    margin-left: 350px;
+    margin-top: -40px;
+    width: 400px;
     word-wrap: break-word;
     font-size: 20px;
     font-weight: 300;
@@ -656,7 +656,7 @@ p{
     /*z-index: 1;*/
     height: 150px;
     width: 760px;
-    margin-top: -2px;
+    margin-top: -10px;
     margin-left: 30px;
 
     /*border: dotted;*/
@@ -680,6 +680,7 @@ p{
 #legend-color{
     height: 40px;
     margin-left: 30px;
+    margin-top: -10px;
 }
 
 .color{
