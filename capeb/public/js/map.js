@@ -26,10 +26,20 @@ function initializeDashboard() {
     document.getElementById("switchToRegion").addEventListener("change", function(){
         if(this.checked){
             initializeDashboard();
+            document.getElementById("niveau-zoom").style.opacity = 1;
+            var goToData = document.getElementsByClassName('goToData');
+            for(var i=0; i<goToData.length; i++){
+                goToData[i].style.display = "none";
+            }
         } else{
             var idEpci = document.getElementById("cacheEPCI").innerHTML;
             var path = $(document.getElementById(idEpci));
             onSvgClick(path[0].__data__);
+            document.getElementById("niveau-zoom").style.opacity = 0.2;
+            var goToData = document.getElementsByClassName('goToData');
+            for(var i=0; i<goToData.length; i++){
+                goToData[i].style.display = "block";
+            }
         }
     });
 }
