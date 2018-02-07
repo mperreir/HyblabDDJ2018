@@ -134,7 +134,7 @@ section {
   height: 100%;
   background-image: url("images/graphique.png");
   background-repeat: no-repeat;
-  background-size: 108%;
+  background-size: cover;
 
 }
 
@@ -233,8 +233,8 @@ font-size: 2.5vmin;
 }
 
 #section04 .article402 {
-  height: 48%;
-  width: 30%;
+  height: 82vh;
+  width: 32vw;
   background-color: #FFCE00;
 }
 
