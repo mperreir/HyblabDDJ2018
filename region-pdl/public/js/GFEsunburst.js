@@ -71,71 +71,95 @@ app.controller('myCtrl', function ($scope) {
 
     $scope.aJson = [{
         'first': 'GFE-01',
-        'second': 'Agriculture'
+        'second': 'Agriculture',
+        'third':'img/01_agriculture.svg'
     }, {
         'first': 'GFE-02',
-        'second': 'Pêche - Mer - Aquaculture'
+        'second': 'Pêche - Mer - Aquaculture',
+        'third':'img/02_peche.svg'
     }, {
         'first': 'GFE-03',
-        'second': 'Bâtiment gros œuvre - Génie civil - Extraction'
+        'second': 'Bâtiment gros œuvre - Génie civil - Extraction',
+        'third':'img/03_batiment.svg'
     }, {
         'first': 'GFE-04',
-        'second': 'Bâtiment : équipements et finitions'
+        'second': 'Bâtiment : équipements et finitions',
+        'third':'img/04_construction.svg'
     }, {
         'first': 'GFE-05',
-        'second': 'Structures métalliques - Travail des métaux - Fonderie'
+        'second': 'Structures métalliques - Travail des métaux - Fonderie',
+        'third':'img/05_structures.svg'
     }, {
         'first': 'GFE-06',
-        'second': 'Mécanique - Automatismes'
+        'second': 'Mécanique - Automatismes',
+        'third':'img/06_mecanique.svg'
     }, {
         'first': 'GFE-07',
-        'second': 'Electricité - Electrotechnique - Electronique'
+        'second': 'Electricité - Electrotechnique - Electronique',
+        'third':'img/07_electricite.svg'
     }, {
         'first': 'GFE-08',
-        'second': 'Travail des matériaux - Industries de process - Laboratoire'
+        'second': 'Travail des matériaux - Industries de process - Laboratoire',
+        'third':'img/08_process.svg'
     }, {
         'first': 'GFE-09',
-        'second': 'Production alimentaire - Cuisine'
+        'second': 'Production alimentaire - Cuisine',
+        'third':'img/09_cuisine.svg'
     }, {
         'first': 'GFE-10',
-        'second': 'Textile - Habillement - Cuir'
+        'second': 'Textile - Habillement - Cuir',
+        'third':'img/10_textile.svg'
     }, {
         'first': 'GFE-11',
-        'second': 'Travail du bois'
+        'second': 'Travail du bois',
+        'third':'img/11_travail_bois.svg'
     }, {
         'first': 'GFE-12',
-        'second': 'Techniques graphiques - Impression'
+        'second': 'Techniques graphiques - Impression',
+        'third':'img/12_graphisme.svg'
     }, {
         'first': 'GFE-13',
-        'second': 'Transports - Conduite - Manutention - Magasinage'
+        'second': 'Transports - Conduite - Manutention - Magasinage',
+        'third':'img/13_logistique.svg'
     }, {
         'first': 'GFE-14',
-        'second': 'Tertiaire de bureau - Tertiaire spécialisé'
+        'second': 'Tertiaire de bureau - Tertiaire spécialisé',
+        'third':'img/14_tertiaire.svg'
     }, {
         'first': 'GFE-15',
-        'second': 'Commerce et distribution'
+        'second': 'Commerce et distribution',
+        'third':'img/15_commerce.svg'
     }, {
         'first': 'GFE-16',
-        'second': 'Paramédical - Travail social - Soins personnels'
+        'second': 'Paramédical - Travail social - Soins personnels',
+        'third':'img/16_paramedical.svg'
     }, {
         'first': 'GFE-17',
-        'second': 'Hôtellerie - Restauration - Tourisme - Sports - Animation socioculturelle - Loisirs'
+        'second': 'Hôtellerie - Restauration - Tourisme - Sports - Animation socioculturelle - Loisirs',
+        'third':'img/17_hotellerie.svg'
     }, {
         'first': 'GFE-18',
-        'second': 'Nettoyage - Assainissement - Environnement - Sécurité'
+        'second': 'Nettoyage - Assainissement - Environnement - Sécurité',
+        'third':'img/18_entretien.svg'
     }, {
         'first': 'GFE-19',
-        'second': 'Techniques de la communication - Média'
+        'second': 'Techniques de la communication - Média',
+        'third':'img/19_communication.svg'
     }, {
         'first': 'GFE-20',
-        'second': 'Arts appliqués - Arts du spectacle'
+        'second': 'Arts appliqués - Arts du spectacle',
+        'third':'img/20_arts.svg'
     }, {
         'first': 'GFE-21',
-        'second': 'Formations générales - Généralistes - Développement personnel'
-    }, {
-        'first': 'GFE-22',
-        'second': 'Formations d’aide à l’insertion sociale et professionnell'
-    }];
+        'second': 'Formations générales - Généralistes - Développement personnel',
+        'third':'img/21_general.svg'
+    }
+ //   , {
+//      'first': 'GFE-22',
+//     'second': 'Formations d’aide à l’insertion sociale et professionnell',
+//    'third':'img/fond-home.svg'
+// }
+    ];
 
     var GFE = 0;
     var GFETotalM = 0;

@@ -331,23 +331,23 @@ p{
     float: left;
     position: relative;
     border: 1px solid #4199BE;
-    margin: 5px;
+    margin: 8px;
     transition: all .3s;
 }
 
 .menu ul li a {
+    position: relative;
     word-wrap:break-word;
-    word-break: normal;
+    word-break: break-all;
     width: 100%;
     padding: 15px 20px;
     padding-bottom: 18px;
-    float: left;
+    float: right;
     text-decoration: none;
     color: #000000;
-    font-size: 13px;
+    font-size: 12px;
     background: #ffffff;
     white-space: nowrap;
-    position: relative;
     overflow: hidden;
     -o-transition: color .2s linear,background .2s linear;
     -moz-transition: color .2s linear,background .2s linear;
