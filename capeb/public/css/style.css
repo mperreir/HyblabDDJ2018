@@ -643,7 +643,7 @@ input:checked + .slider:before {
 
 /* line 21, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-data.scss */
 .partie-data > .content-data .textes-data {
-  height: 75%;
+  height: 85%;
   width: 85%;
   transform: translate(0, -50%);
   margin: 35% 0;
