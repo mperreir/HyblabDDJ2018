@@ -836,6 +836,7 @@ ul.listeScene--hidden
     left: 221px;
     top: 199px;
     z-index: 5;
+    cursor: pointer;
 }
 
 .camembertScene--hidden
@@ -851,6 +852,7 @@ ul.listeScene--hidden
     position: absolute;
     left: 903px;
     top: 395px;
+    cursor: pointer;
 }
 
 .legendePodium
