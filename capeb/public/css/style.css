@@ -660,7 +660,18 @@ input:checked + .slider:before {
   margin-bottom: 3vw;
 }
 
-/* line 36, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-data.scss */
+/* line 35, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-data.scss */
+.partie-data > .content-data .textes-data > .container > .texte > #mailto {
+  border-bottom: solid 1px #1d1d1b;
+}
+
+/* line 38, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-data.scss */
+.partie-data > .content-data .textes-data > .container > .texte > #mailto:hover {
+  font-weight: 500;
+  border-bottom: solid 2px #1d1d1b;
+}
+
+/* line 43, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-data.scss */
 .partie-data > .content-data .textes-data > .container > .iconInfo {
   width: 36px;
   height: 36px;
@@ -670,12 +681,12 @@ input:checked + .slider:before {
   height: auto;
 }
 
-/* line 44, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-data.scss */
+/* line 51, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-data.scss */
 .partie-data > .content-data .textes-data > .container > .info-texte {
   margin-left: 30px;
 }
 
-/* line 51, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-data.scss */
+/* line 58, /Users/antoine/Documents/SITE WEB/AGR/PRO-HybLab/HyblabDDJ2018/capeb/public/scss/objets/_partie-data.scss */
 .partie-data > .motif-capeb {
   position: absolute;
   bottom: -30px;

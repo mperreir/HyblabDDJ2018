@@ -32,6 +32,13 @@
         >.texte{
           @extend %texte-labeur;
           margin-bottom: 3vw;
+          >#mailto{
+            border-bottom: solid 1px $black;
+          }
+          >#mailto:hover{
+            font-weight: 500;
+            border-bottom: solid 2px $black;
+          }
         }
         >.iconInfo{
           width: 36px;
