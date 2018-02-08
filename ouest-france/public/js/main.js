@@ -36,7 +36,7 @@ function controleurPlan(){
     var legendeScene6 = document.getElementById("legendeScene6");
     var legendeScene7 = document.getElementById("legendeScene7");
 
-    var couleur = ['#d6f2b3', '#bbdb83', '#8eaf46', '#a9ff88', '#85c275', '#57664d', '#66cc33', '#479116', '#3f5b33'];
+    var couleur = ['#F04D4E', '#A51C2A', '#6566C1', '#8C8FD3', '#FFFFFF', '#A9FF88', '#66CC33'];
 
     /*anneeEvolution.onclick = function(){
         textePlan.textContent = "J’ai pu voir passer sur la Main 01 près de 306 groupes au Hellfest. Une vraie ribambelle d’artistes depuis plus de 13 ans. Cela est dû au nombre grandissant de mes amis les festivaliers. De 22 000 à 152 000 tickets vendus en 13 ans, quelle évolution, c’est incroyable! Venez vite voir cet élargissement considérable du Hellfest !";
@@ -1946,7 +1946,7 @@ function controleurPodium()
     var Podium2016 = document.getElementById("Podium2016");
     var Podium2017 = document.getElementById("Podium2017");
 
-    var couleur = ['#d6f2b3', '#bbdb83', '#8eaf46', '#a9ff88', '#85c275', '#57664d', '#66cc33', '#479116', '#3f5b33'];
+    var couleur = ['#F04D4E', '#A51C2A', '#6566C1', '#8C8FD3', '#FFFFFF', '#A9FF88', '#66CC33'];
 
     var tabPodiums = [PodiumEvolution, Podium2006, Podium2007, Podium2008, Podium2009, Podium2010, Podium2011, Podium2012, Podium2013, Podium2014, Podium2015, Podium2016, Podium2017];
 
@@ -2841,14 +2841,14 @@ function setElementsHidden(tabElements, className, index) {
     tabElements[index].className = className;
 }
 
-function camembert(data, id){
-    var couleur = ['#d6f2b3', '#bbdb83', '#8eaf46', '#a9ff88', '#85c275', '#57664d', '#66cc33', '#479116', '#3f5b33'];
+function camembert(data, id, min){
+    var couleur = ['#F04D4E', '#A51C2A', '#6566C1', '#8C8FD3', '#FFFFFF', '#A9FF88', '#66CC33'];;
     var cam = [];
     var pour = 0;
     var j = 0;
     for (var i = 0; i < data.length; i++)
     {
-        if (data[i] >=5)
+        if (data[i] >=min)
         {
             cam.push({ color : couleur[j], percentage : data[i]});
             j++;
@@ -2893,7 +2893,7 @@ function camembertPodium(annee)
             p.push(nation.Pays)
         }
     });
-    var j = camembert(pourcentage, "#piePodium");
+    var j = camembert(pourcentage, "#piePodium", 5);
     var pays = [];
     var i = 0;
     var k = 0;
@@ -2926,13 +2926,13 @@ function camembertScene(annee, scene, id)
             p.push(nation.Pays)
         }
     });
-    var j = camembert(pourcentage, id);
+    var j = camembert(pourcentage, id,8);
     var pays = [];
     var i = 0;
     var k = 0;
     while(i<j)
     {
-        if (pourcentage[k] >=5)
+        if (pourcentage[k] >=8)
         {
             pays.push(p[k]);
             k++;
