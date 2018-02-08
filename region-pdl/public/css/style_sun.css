@@ -63,9 +63,9 @@ p{
 #main {
     position: absolute;
     z-index: 1;
-    width: 61%;
+    width: 60%;
     background: #ffffff;
-    margin-left: 36%;
+    margin-left: 37%;
     margin-top: -60px;
     height: 100%;
     overflow-x: hidden;
@@ -169,7 +169,7 @@ p{
     position: relative;
     margin-top: 160px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #7a7a7a;
+    color: #4199BE;
     display: inline-block;
     margin-bottom: 0;
     font-weight: normal;
