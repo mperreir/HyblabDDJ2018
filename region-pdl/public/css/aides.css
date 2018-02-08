@@ -1,13 +1,13 @@
 
 
-/* partie de gauche */
+/* colonne de gauche */
 
 .texte {
     background-color: #ABCC21;
 }
 
 
-/* partie de droite */
+/* colonne de droite */
 
 
 #containerAides {
@@ -24,8 +24,28 @@
     background: #FFFFFF;
 }
 
-#nom-aide {
+#aide {
+    color: #232222;
+    font-family: Lato;
+    font-size: 15px;
+    line-height: 18px;
 
+    padding-top: 10px;
+
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+}
+
+.descriptionAide {
+    float:right;
+    height: 35%;
+
+    margin-right: 50px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#nom-aide {
     margin-top: 10px;
     width: 400px;
     height: 24px;
@@ -63,63 +83,12 @@
     font-size: 16px;
     font-weight: 300;
     line-height: 1px;
-}
-
-#aide {
-    color: #232222;
-    font-family: Lato;
-    font-size: 15px;
     letter-spacing: 1px;
-    line-height: 18px;
-
-    padding-top: 10px;
-
-    box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
-}
-
-
-
-.descriptionAide {
-    float:right;
- /*   width: 400px;*/
-  /*  width */
- /*   height: 200px;*/
-    height: 35%;
-
-    margin-right: 50px;
-
-    padding-left: 20px;
-    padding-right: 20px;
-
-}
-
-#nom-aide {
-    width: 400px;
-    height: 24px;
-    color: #000000;
-    font-family: Lato;
-    font-size: 20px;
-    line-height: 1px;
-}
-
-#description-aide {
-    height: 72px;
-    width: 343.59px;
-    color: #232222;
-    font-family: Lato;
-    font-size: 15px;
-    letter-spacing: 1px;
-    line-height: 18px;
-}
-
-#containerAides .figure:hover #intro {
-    opacity: 1;
 }
 
 #montant-aide {
     float: left;
 
-  /*  margin-left: 90px;*/
     margin-left: 4%;
 
     font-size: 80px;
@@ -130,8 +99,7 @@
 }
 
 
-/** boite de critères **/
-
+/** boite de critères à sélectionner **/
 
 #criteres {
     float:right;
@@ -151,11 +119,11 @@
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
 }
 
-#selectionIntevalle {
+#selectionIntervalle {
     padding-left: 100px;
 }
 
-.phrase, .intervalle, .unite {
+.phrase, .intervalle {
     float: left;
 }
 
@@ -165,7 +133,7 @@
     width: 100%;
 }
 
-/** curseur **/
+/** style des curseurs de range **/
 
 input {
     float: right;

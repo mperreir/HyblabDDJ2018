@@ -1,5 +1,5 @@
 
-/* partie de droite */
+/* colonne de droite */
 
 body{
     overflow-x: hidden;
@@ -15,11 +15,6 @@ body{
     background: #FAFAFA;
 }
 
-.credits, .home {
-    outline: none;
-    font-size: 14px;
-}
-
 #map {
     float: right;
     width: 1000px;
@@ -27,7 +22,7 @@ body{
     z-index: -1;
 }
 
-/* partie de gauche */
+/* colonne de gauche */
 
 .texte {
     position: absolute;

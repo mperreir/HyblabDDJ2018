@@ -1,6 +1,6 @@
 /** lien entre les secteurs et les numéros **/
 var GFE = [ 'Agriculture', 'Pêche - Mer - Aquaculture','Bâtiment gros œuvre - Génie civil - Extraction',
-'Bâtiment : équipements et finitions','Structures métalliques - Travail des métaux - Fonderie',
+    'Bâtiment : équipements et finitions','Structures métalliques - Travail des métaux - Fonderie',
     'Mécanique - Automatismes', 'Electricité - Electrotechnique - Electronique',
     'Travail des matériaux - Industries de process - Laboratoire','Production alimentaire - Cuisine',
     'Textile - Habillement - Cuir','Travail du bois', 'Techniques graphiques - Impression',
@@ -26,7 +26,7 @@ var secteurs = { "Agriculture" : ["Amenagement paysager", "Productions animales,
     "Electricité - Electrotechnique - Electronique" : ["Electricité, électronique","Energie, génie climatique" ],
     "Formations d’aide à l’insertion sociale et professionnelle": ["Développement des capacités d'orientation"],
     "Travail des matériaux - Industries de process - Laboratoire" :  ["Matériaux de construction, verre et céramique",
-    "Plasturgie, matériaux composites", "Spécialités pluri-techno, mécanique électricité",
+        "Plasturgie, matériaux composites", "Spécialités pluri-techno, mécanique électricité",
         " Transformations chimiques et apparentées"],
     "Production alimentaire - Cuisine" : ["Agro-alimentaire, alimentation, cuisine"],
     "Textile - Habillement - Cuir" : ["Cuirs et peaux", "Habillement", "Spécialités pluri-technologiques matériaux souples"],
@@ -35,18 +35,18 @@ var secteurs = { "Agriculture" : ["Amenagement paysager", "Productions animales,
     "Transports - Conduite - Manutention - Magasinage" : ["Transport, manutention, magasinage"],
     "Commerce et distribution" : ["Commerce, vente","Spécialités plurivalentes des échanges - gestion" ],
     "Tertiaire de bureau - Tertiaire spécialisé" : ["Comptabilité, gestion", "Droit,sciences politiques",
-    "Finances, banque, assurances", "Informatique, traitement de l'information, réseaux",
+        "Finances, banque, assurances", "Informatique, traitement de l'information, réseaux",
         "Ressources humaines, gestion personnel et emploi", "Secrétariat, bureautique",
         "Spécialités plurivalentes des services"],
     "Arts appliqués - Arts du spectacle" : ["Musique, arts du spectacle"],
     "Paramédical - Travail social - Soins personnels" : ["Coiffure, esthétique", "Santé",
-    "Spécialités plurivalentes sanitaires et sociales", "Travail social"],
+        "Spécialités plurivalentes sanitaires et sociales", "Travail social"],
     "Hôtellerie - Restauration - Tourisme - Sports - Animation socioculturelle - Loisirs": ["Accueil, Hotellerie, tourisme",
-    "Animation culturelle, sportive et de loisirs"],
+        "Animation culturelle, sportive et de loisirs"],
     "Nettoyage - Assainissement - Environnement - Sécurité" : [
         "Nettoyage-assainissement-protection-environnement", "Sécurité des biens-personnes, police, surveillance"    ],
     "Techniques de la communication - Média" : [" Spécialités plurivalentes de la communication",
-    "Techniques de l'image et du son, métiers connexes"],
+        "Techniques de l'image et du son, métiers connexes"],
     "Formations générales - Généralistes - Développement personnel" : [
         "Français, littérature et civilisation française", "Chimie",
         "Langues vivantes, civilisations étrangères", "Mathématiques",
@@ -61,12 +61,8 @@ function recupereNom(numeroSecteur, numeroGFE) {
     var nomGFE = GFE[indiceG];
     var nomSecteur = secteurs[nomGFE][indiceS];
 
-    console.log(nomSecteur);
-
     return nomSecteur;
 }
-
-console.log(recupereNom("Secteur-01", "GFE-01"));
 
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function ($scope) {
@@ -111,33 +107,33 @@ app.controller('myCtrl', function ($scope) {
     var vis = null;
     $scope.initChart = function () {
         vis = d3.select('#chart').append('svg:svg')
-                .attr('width', width)
-                .attr('height', height)
-                .append('svg:g')
-                .attr('id', 'container')
-                .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
+            .attr('width', width)
+            .attr('height', height)
+            .append('svg:g')
+            .attr('id', 'container')
+            .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
         drawLegend();
     };
 
     var partition = d3.layout.partition()
-            .size([2 * Math.PI, radius * radius])
-            .value(function (d) {
-                return d.T_effectifs;
-            });
+        .size([2 * Math.PI, radius * radius])
+        .value(function (d) {
+            return d.T_effectifs;
+        });
 
     var arc = d3.svg.arc()
-            .startAngle(function (d) {
-                return d.x;
-            })
-            .endAngle(function (d) {
-                return d.x + d.dx;
-            })
-            .innerRadius(function (d) {
-                return Math.sqrt(d.y);
-            })
-            .outerRadius(function (d) {
-                return Math.sqrt(d.y + d.dy);
-            });
+        .startAngle(function (d) {
+            return d.x;
+        })
+        .endAngle(function (d) {
+            return d.x + d.dx;
+        })
+        .innerRadius(function (d) {
+            return Math.sqrt(d.y);
+        })
+        .outerRadius(function (d) {
+            return Math.sqrt(d.y + d.dy);
+        });
 
     $scope.aJson = [{
         'first': 'GFE-01',
@@ -224,24 +220,17 @@ app.controller('myCtrl', function ($scope) {
         'second': 'Formations générales - Généralistes - Développement personnel',
         'third':'img/21_general.svg'
     }
- //   , {
-//      'first': 'GFE-22',
-//     'second': 'Formations d’aide à l’insertion sociale et professionnell',
-//    'third':'img/fond-home.svg'
-// }
     ];
 
     var GFE = 0;
     var GFETotalM = 0;
-    var GFEselectionne;
 
     $scope.clickGetImage = function (params) {
-        var GFEselectionne = params.first;
         var data = [];
         data.boxes = [];
         GFE = 0;
         var hierarchyData = {name: 'root', children: []},
-                levels = ['SECTEUR', 'NIV'];
+            levels = ['SECTEUR', 'NIV'];
         d3.json('data/Eff_new.json', function (dataset) {
             // select some important infos
             angular.forEach(dataset, function (value, key) {
@@ -273,7 +262,6 @@ app.controller('myCtrl', function ($scope) {
                 .text('Effectifs par rapport à la capacité max.\n');
 
             var percentGFE = (100 * GFE / GFETotalM).toPrecision(3);
-            console.log(percentGFE);
 
             var option = {
                 value: percentGFE,
@@ -336,28 +324,28 @@ app.controller('myCtrl', function ($scope) {
         // Bounding circle underneath the sunburst, to make it easier to detect
         // when the mouse leaves the parent g.
         vis.append('svg:circle')
-                .attr('r', radius)
-                .style('opacity', 0);
+            .attr('r', radius)
+            .style('opacity', 0);
 
         var nodes = partition.nodes(json)
-                .filter(function (d) {
-                    return (d.dx > 0.00001);
-                });
+            .filter(function (d) {
+                return (d.dx > 0.00001);
+            });
 
         var path = vis.data([json]).selectAll('path')
-                .data(nodes)
-                .enter().append('svg:path')
-                .attr('display', function (d) {
-                    return d.depth < 3 && d.depth > 0 ? null : 'none';
-                })
-                .attr('d', arc)
-                .attr('fill-rule', 'evenodd')
-                .style('fill', function (d) {
-                    return colors[d.name];
-                })
-                .style('opacity', 1)
-                .on('mouseover', mouseover)
-                .on('click', getDescription);
+            .data(nodes)
+            .enter().append('svg:path')
+            .attr('display', function (d) {
+                return d.depth < 3 && d.depth > 0 ? null : 'none';
+            })
+            .attr('d', arc)
+            .attr('fill-rule', 'evenodd')
+            .style('fill', function (d) {
+                return colors[d.name];
+            })
+            .style('opacity', 1)
+            .on('mouseover', mouseover)
+            .on('click', getDescription);
 
         // Add the mouseleave handler to the bounding circle.
         d3.select('#container').on('mouseleave', mouseleave);
@@ -365,22 +353,6 @@ app.controller('myCtrl', function ($scope) {
         // Get total size of the tree = value of root node from partition.
         totalSize = path.node().__data__.value;
 
-        // var show = [];
-        // d3.select('#percentage')
-        //         .text(show);
-        //
-        // // var show1 = [];
-        // // d3.select('#exp1')
-        // //         .text(show1);
-        // // var show2 = [];
-        // // d3.select('#exp2')
-        // //         .text(show2);
-        // // var show3 = [];
-        // // d3.select('#exp3')
-        // //         .text(show3);
-        // var showT = [];
-        // d3.select('exp')
-        //         .text(showT);
     }
 
     // Fade all but the current sequence, and show it in the breadcrumb trail.
@@ -392,46 +364,46 @@ app.controller('myCtrl', function ($scope) {
         }
 
         d3.select('#percentage')
-                .text(percentageString);
+            .text(percentageString);
 
         d3.select('#explanation')
-                .style("visibility", "");
+            .style("visibility", "");
 
         var sequenceArray = getAncestors(d);
         updateBreadcrumbs(sequenceArray, percentageString);
 
         // Fade all the segments.
         d3.selectAll('path')
-                .style('opacity', 0.3);
+            .style('opacity', 0.3);
 
         // Then highlight only those that are an ancestor of the current segment.
         vis.selectAll('path')
-                .filter(function (node) {
-                    return (sequenceArray.indexOf(node) >= 0);
-                })
-                .style('opacity', 1);
+            .filter(function (node) {
+                return (sequenceArray.indexOf(node) >= 0);
+            })
+            .style('opacity', 1);
     }
 
 // Restore everything to full opacity when moving off the visualization.
-    function mouseleave(d) { 
+    function mouseleave(d) {
         // Hide the breadcrumb trail
         d3.select('#trail')
-                .style('visibility', 'hidden');
+            .style('visibility', 'hidden');
 
         // Deactivate all segments during transition.
         d3.selectAll('path').on('mouseover', null);
 
         // Transition each segment to full opacity and then reactivate it.
         d3.selectAll('path')
-                .transition()
-                .duration(1000)
-                .style('opacity', 1)
-                .each('end', function () {
-                    d3.select(this).on('mouseover', mouseover);
-                });
+            .transition()
+            .duration(1000)
+            .style('opacity', 1)
+            .each('end', function () {
+                d3.select(this).on('mouseover', mouseover);
+            });
 
         d3.select('#explanation')
-                .style('visibility', 'hidden');
+            .style('visibility', 'hidden');
     }
 
 // Given a node in a partition layout, return an array of all of its ancestor
@@ -485,28 +457,12 @@ app.controller('myCtrl', function ($scope) {
             } else {
                 percent = (100 * total3 / totalM3).toPrecision(3);
             }
-            // var percentStr = percent + '%';
-
-            // d3.select('#exp')
-            //         .text(percentStr + '\n' + '\n \r Effectifs par rapport à la capacité max.\n');
 
             d3.select('#dessus')
                 .style('visibility', '');
 
-            console.log(d);
-            console.log(GFEselectionne);
-
             d3.select('#text')
                 .text('Effectifs par rapport à la capacité max.\n');
-
-            // d3.select('#an1')
-            //     .text('Effectifs par rapport à la capacité max.\n');
-            //
-            // d3.select('#exp1')
-            //     .text('Effectifs par rapport à la capacité max.\n');
-            // d3.select('#exp1')
-            //     .text('Effectifs par rapport à la capacité max.\n');
-
 
             var optionT = {
                 value: percent,
@@ -559,21 +515,19 @@ app.controller('myCtrl', function ($scope) {
             d3.select('#dessus')
                 .style('visibility', 'hidden');
         }
-
-
     }
 
 
     function initializeBreadcrumbTrail() {
         // Add the svg area.
         var trail = d3.select('#sequence').append('svg:svg')
-                .attr('width', width)
-                .attr('height', 50)
-                .attr('id', 'trail');
+            .attr('width', width)
+            .attr('height', 50)
+            .attr('id', 'trail');
         // Add the label at the end, for the percentage.
         trail.append('svg:text')
-                .attr('id', 'endlabel')
-                .style('fill', '#d8d8dd');
+            .attr('id', 'endlabel')
+            .style('fill', '#d8d8dd');
     }
 
 // Generate a strisng that describes the points of a breadcrumb polygon.
@@ -595,28 +549,28 @@ app.controller('myCtrl', function ($scope) {
 
         // Data join; key function combines name and depth (= position in sequence).
         var g = d3.select('#trail')
-                .selectAll('g')
-                .data(nodeArray, function (d) {
-                    return d.name + d.depth;
-                });
+            .selectAll('g')
+            .data(nodeArray, function (d) {
+                return d.name + d.depth;
+            });
 
         // Add breadcrumb and label for entering nodes.
         var entering = g.enter().append('svg:g');
 
         entering.append('svg:polygon')
-                .attr('points', breadcrumbPoints)
-                .style('fill', function (d) {
-                    return colors[d.name];
-                });
+            .attr('points', breadcrumbPoints)
+            .style('fill', function (d) {
+                return colors[d.name];
+            });
 
         entering.append('svg:text')
-                .attr('x', (b.w + b.t) / 2)
-                .attr('y', b.h / 2)
-                .attr('dy', '0.35em')
-                .attr('text-anchor', 'middle')
-                .text(function (d) {
-                    return d.name;
-                });
+            .attr('x', (b.w + b.t) / 2)
+            .attr('y', b.h / 2)
+            .attr('dy', '0.35em')
+            .attr('text-anchor', 'middle')
+            .text(function (d) {
+                return d.name;
+            });
 
         // Set position for entering and updating nodes.
         g.attr('transform', function (d, i) {
@@ -628,16 +582,15 @@ app.controller('myCtrl', function ($scope) {
 
         // Now move and update the percentage at the end.
         d3.select('#trail').select('#endlabel')
-                .attr('x', (nodeArray.length + 0.5) * (b.w + b.s))
-                .attr('y', b.h / 2)
-                .attr('dy', '0.35em')
-                .attr('text-anchor', 'middle')
-                .text(percentageString);
+            .attr('x', (nodeArray.length + 0.5) * (b.w + b.s))
+            .attr('y', b.h / 2)
+            .attr('dy', '0.35em')
+            .attr('text-anchor', 'middle')
+            .text(percentageString);
 
         // Make the breadcrumb trail visible, if it's hidden.
         d3.select('#trail')
-                .style('visibility', '');
-
+            .style('visibility', '');
     }
 
     function drawLegend() {
@@ -647,33 +600,33 @@ app.controller('myCtrl', function ($scope) {
         };
 
         var legend = d3.select('#legend').append('svg:svg')
-                .attr('width', li.w)
-                .attr('height', d3.keys(colors).length * (li.h + li.s));
+            .attr('width', li.w)
+            .attr('height', d3.keys(colors).length * (li.h + li.s));
 
         var g = legend.selectAll('g')
-                .data(d3.entries(colors))
-                .enter().append('svg:g')
-                .attr('transform', function (d, i) {
-                    return 'translate(0,' + i * (li.h + li.s) + ')';
-                });
+            .data(d3.entries(colors))
+            .enter().append('svg:g')
+            .attr('transform', function (d, i) {
+                return 'translate(0,' + i * (li.h + li.s) + ')';
+            });
 
         g.append('svg:rect')
-                .attr('rx', li.r)
-                .attr('ry', li.r)
-                .attr('width', li.w)
-                .attr('height', li.h)
-                .style('fill', function (d) {
-                    return d.value;
-                });
+            .attr('rx', li.r)
+            .attr('ry', li.r)
+            .attr('width', li.w)
+            .attr('height', li.h)
+            .style('fill', function (d) {
+                return d.value;
+            });
 
         g.append('svg:text')
-                .attr('x', li.w / 2)
-                .attr('y', li.h / 2)
-                .attr('dy', '0.35em')
-                .attr('text-anchor', 'middle')
-                .text(function (d) {
-                    return d.key;
-                });
+            .attr('x', li.w / 2)
+            .attr('y', li.h / 2)
+            .attr('dy', '0.35em')
+            .attr('text-anchor', 'middle')
+            .text(function (d) {
+                return d.key;
+            });
     }
 
     function toggleLegend() {
@@ -695,6 +648,7 @@ app.controller('myCtrl', function ($scope) {
         this.title           = option.title;
         this.fontWeight      = option.fontWeight
     }
+
     PercentPie.prototype.init = function(){
         var _that = this;
         var option = {
@@ -772,6 +726,7 @@ function retourPage2() {
     document.getElementById("detail3").style.display="none";
     document.getElementById("detail2").style.display="";
 }
+
 function nextPage2() {
     document.getElementById("detail3").style.display="";
 }

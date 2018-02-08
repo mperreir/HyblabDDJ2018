@@ -24,11 +24,12 @@ html, body {
     width: 100%;
 }
 
-
 header {
     position: absolute;
     z-index: 2;
 }
+
+/** style des liens home, crédits et du logo **/
 
 a:link, a:visited {
     color: #212121;
@@ -73,8 +74,8 @@ a:hover {
     background-color: #FFFFFF;
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.12);
 }
-/* texte de la page*/
 
+/* texte de la page*/
 
 #titre {
     width: 300px;
@@ -106,6 +107,7 @@ span {
     width: 400px;
 }
 
+/** style du bouton commencer **/
 
 a.stylebouton {
     height: 50px;
@@ -131,6 +133,8 @@ a.stylebouton {
 a.stylebouton:hover {
     background-color: #3c8daf;
 }
+
+/** illustration de fond **/
 
 #fond{
     position: absolute;

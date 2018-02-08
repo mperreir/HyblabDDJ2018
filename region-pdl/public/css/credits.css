@@ -88,7 +88,6 @@ h1 {
 }
 
 .ecole {
-    /*width: 100%;*/
     margin: 20px;
     padding: 50px;
     padding-top: 30px;
@@ -175,6 +174,8 @@ a.lienActuel:hover {
     margin: auto;
 }
 
+
+/** style des ronds de changement de page **/
 
 #rond0 {
     top: 41%;
