@@ -231,7 +231,7 @@ app.controller('myCtrl', function ($scope) {
         GFE = 0;
         var hierarchyData = {name: 'root', children: []},
             levels = ['SECTEUR', 'NIV'];
-        d3.json('data/Eff_new.json', function (dataset) {
+        d3.json('data/effectifs.json', function (dataset) {
             // select some important infos
             angular.forEach(dataset, function (value, key) {
                 if (value.GFE === params.first) {

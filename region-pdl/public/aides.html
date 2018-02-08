@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr"> <!-- Notre page est en français -->
 <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
     <title>Aides financières</title>
+
     <!-- Basic viewport setting for mobile friendly page -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Déclaration de la feuille de style du document-->
+
+    <!-- stylesheets -->
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/aides.css">
     <link rel="stylesheet" href="css/style-global.css">
-    <!-- Those polyfills are required so that old browsers support fetch mecanism -->
+
+    <!-- libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-    <!-- Simple sample script that loads data from a dummy json file -->
-    <script src="js/aides.js" defer></script>
-    <script src="js/jquery.min.js"></script>
-
     <script src="http://d3js.org/d3.v3.min.js"></script>
-<!--    <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js"></script>-->
+    <script src="js/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <!-- associated javascript files -->
+    <script src="js/aides.js" defer></script>
+
 </head>
 <body>
 <div class="texte">
@@ -84,6 +86,7 @@
         </div>
     </div>
 
+    <!------ liens à droite de la page --------->
     <a id="rond0" class="lienRond" href="index.html"></a>
     <a id="rond1" class="lienRond" href="sunburstGFE.html"></a>
     <a id="rond2" class="lienRond" href="map.html"></a>
@@ -94,5 +97,3 @@
 </body>
 </body>
 </html>
-
-<!--<p>  (5 = niveau CAP, 4 = bac, 3 = bac+2, 2 = bac+3/4, 1 = bac+5/ et +) </p> -->
