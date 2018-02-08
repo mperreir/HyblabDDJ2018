@@ -4,6 +4,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   font-family: Quicksand, Helvetica, sans-serif;
   font-size: 1.2vw;
@@ -28,6 +29,7 @@
 /* section "élèves"*/
 
 #section8 h2 {
+  width: 100vw;
   margin-top: 2vh;
   margin-bottom: 2vh;
   font-size: 2vw;
@@ -54,8 +56,8 @@
 
 /* section "encadrants"*/
 #section8 h3 {
+  width: 100vw;
   margin-bottom: 2vh;
-  margin-top: 5vh;
   font-size: 1.2vw;
   text-align: center;
 }
@@ -64,6 +66,7 @@
   font-size: 0.8vw;
   line-height: 1.5em;
   text-align: center;
+  margin-top: 10vh;
 }
 
 .logo_intervenants {
