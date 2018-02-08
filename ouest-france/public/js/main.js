@@ -3011,41 +3011,41 @@ function graphiqueLine()
         datasets : [
             {
                 label: "My First dataset",
-                fillColor : "rgba( 169, 255, 136,0.57)",
-                strokeColor : "rgba(169, 255, 136,1)",
-                pointColor : "rgba( 169, 255, 136,1)",
+                fillColor : "rgba( 240, 77, 78,0)",
+                strokeColor : "rgba(240, 77, 78,1)",
+                pointColor : "rgba( 240, 77, 78,1)",
                 pointStrokeColor : "#fff",
                 pointHighlightFill : "#fff",
-                pointHighlightStroke : "rgba( 169, 255, 136,1)",
+                pointHighlightStroke : "rgba( 240, 77, 78,1)",
                 data : us
             },
             {
                 label: "My Second dataset",
-                fillColor : "rgba(133, 194, 117,0.40)",
-                strokeColor : "rgba(133, 194, 117,1)",
-                pointColor : "rgba(133, 194, 117,1)",
-                pointStrokeColor : "#fff",
-                pointHighlightFill : "#fff",
-                pointHighlightStroke : "rgba(133, 194, 117,1)",
-                data : fr
-            },
-            {
-                label: "My third dataset",
-                fillColor : "rgba(102, 204, 51,0.40)",
-                strokeColor : "rgba(102, 204, 51,1)",
-                pointColor : "rgba(102, 204, 51,1)",
-                pointStrokeColor : "#fff",
-                pointHighlightFill : "#fff",
-                pointHighlightStroke : "rgba(102, 204, 51,1)",
-                data : uk
-            },{
-                label: "My last dataset",
-                fillColor : "rgba(71, 145, 22,0.2)",
+                fillColor : "rgba(71, 145, 22,0)",
                 strokeColor : "rgba(71, 145, 22,1)",
                 pointColor : "rgba(71, 145, 22,1)",
                 pointStrokeColor : "#fff",
                 pointHighlightFill : "#fff",
-                pointHighlightStroke : "rgba(133,194,117,1)",
+                pointHighlightStroke : "rgba(71, 145, 22,1)",
+                data : fr
+            },
+            {
+                label: "My third dataset",
+                fillColor : "rgba(101, 102, 193,0)",
+                strokeColor : "rgba(101, 102, 193,1)",
+                pointColor : "rgba(101, 102, 193,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(101, 102, 193,1)",
+                data : uk
+            },{
+                label: "My last dataset",
+                fillColor : "rgba(169, 255, 136,0)",
+                strokeColor : "rgba(169, 255, 136,1)",
+                pointColor : "rgba(169, 255, 136,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(169, 255, 136,1)",
                 data : al
             }
         ]
