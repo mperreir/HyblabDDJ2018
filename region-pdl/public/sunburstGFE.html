@@ -46,12 +46,11 @@
         <br>
         <span id="signature">Aubin Paquier, Brevet Professionnel Art de la Cuisine</span>
     </p>
-
 </div>
 
 
 <div id="container">
-    <div id="detail" style="display: none">
+    <div id="detail" style="display: none"> /* show the detail of each GFE*/
         <div class="part">
             <div class="one">
                 <div class="title" id="GFE1">Agriculture:</div>
@@ -289,7 +288,7 @@
         </div>
 
     </div>
-    <div id="main" style="display: none;">
+    <div id="main" style="display: none;"> /*show sunburst*/
         <div id="sidebar">
             <input type="checkbox" id="togglelegend"> Legend<br/>
             <div id="legend" style="visibility: hidden;"></div>
@@ -338,8 +337,8 @@
                 <div id="an3"> </div>
             </div>
         </div>
-        <div class="btn" onclick="returnPage()"> Sélectionner un autre domaine d'activité  </div>
-        <div class="btn" onclick="showDetail()" ><a href="#"></a>Détail</div>
+        <div class="btn" id="returnPage" onclick="returnPage()"> Sélectionner un autre domaine d'activité  </div>
+        <div class="btn" id="showDetail" onclick="showDetail()" ><a href="#"></a>Détail</div>
     </div>
     <div class="box">
         <div id="sideMenu" class="menu">

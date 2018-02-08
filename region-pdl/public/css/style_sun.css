@@ -63,9 +63,9 @@ p{
 #main {
     position: absolute;
     z-index: 1;
-    width: 61%;
+    width: 60%;
     background: #ffffff;
-    margin-left: 36%;
+    margin-left: 37%;
     margin-top: -60px;
     height: 100%;
     overflow-x: hidden;
@@ -351,6 +351,7 @@ p{
     word-wrap: break-word;
     font-size: 20px;
     font-weight: 300;
+    position:absolute;
 }
 
 #exptotal{
@@ -401,8 +402,8 @@ p{
     position: absolute;
     height: 150px;
     width: 760px;
-    margin-top: -10px;
-    margin-left: 30px;
+    margin-top: 8px;
+    margin-left: 10px;
 
     border: dotted;
     border-color: #e6e6e6;
@@ -416,14 +417,14 @@ p{
     font-size: 17px;
     font-style: italic;
     padding-top: 10px;
-    padding-left: 15px;
+    padding-left: 18px;
 ;
 }
 
 #legend-color{
     height: 40px;
     margin-left: 30px;
-    margin-top: -10px;
+    margin-top: -5px;
 }
 
 .color{
@@ -553,4 +554,16 @@ p{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+#returnPage{
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 24.5%;
+}
+
+#showDetail{
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 24.5%;
 }

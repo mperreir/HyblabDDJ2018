@@ -105,6 +105,7 @@ app.controller('myCtrl', function ($scope) {
     };
 
     var vis = null;
+    /* Initial the image*/
     $scope.initChart = function () {
         vis = d3.select('#chart').append('svg:svg')
             .attr('width', width)
