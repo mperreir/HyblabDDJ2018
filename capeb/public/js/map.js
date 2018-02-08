@@ -165,7 +165,7 @@ function drawMap(conjonctureEpci) {
             })
             .on("mouseover", function (d) {
                 var conjoncture = conjonctureEpci[d.properties.siren_epci];
-                var color = colorsForRegion[matchColor(conjoncture, 2.87, 3.78, 0.182, 0.244, false)];
+                var color = colorsForRegion[matchColor(conjoncture, 0, 5.38, 5.38/5, (7.19-5.38)/5, false)];
                 d3.select(this).transition()
                     .duration("0")
                     .style("fill", color)

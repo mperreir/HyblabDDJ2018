@@ -16,7 +16,7 @@ function miniStats(regionStats, d) {
         .then(function (json) {
             var dataFrame = document.getElementsByClassName("info-conjoncture")[0];
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = parseFloat(json.values[0][0]).toFixed(1);
-            dataFrame.style.backgroundColor = colorsForRegion[matchColor(json.values[0][0], 2.87, 3.78, 0.182, 0.244, false)];
+            dataFrame.style.backgroundColor = colorsForRegion[matchColor(json.values[0][0], 0, 5.38, 5.38/5, (7.19-5.38)/5, false)];
             $('#card-conjoncture .open').each(function(){
                 $(this).on('click', function() {
 					current_d = 0;
