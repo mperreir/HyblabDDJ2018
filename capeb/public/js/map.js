@@ -24,6 +24,8 @@ function initializeDashboard() {
         var location = document.location.href;
         document.location.href = location.slice(0, location.lastIndexOf("/"));
         document.getElementById("cacheEPCI").innerHTML = "";
+        document.getElementsByClassName("conclusion")[0].style.display = "block";
+        document.getElementsByClassName("accueil")[0].style.display = "none";
     });
     document.getElementById("nom_epci").innerText = "Région";
     document.getElementById("switchToRegion").checked = true;
