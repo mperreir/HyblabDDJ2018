@@ -11,6 +11,13 @@ var colors = [
     'rgba(255,224,0,1)'
 ];
 
+var colors_pie = [
+    'rgba(104,192,237,1)',
+    'rgba(255,224,0,1)',
+    'rgba(223,38,29,1)'
+];
+
+
 var colorZoom = [
     'rgba(223,38,29,0.8)',
     'rgba(104,192,237,0.8)',
@@ -578,8 +585,9 @@ var drawMP = function(stats) {
 				else{
 					label = "Freins"
 				}
-				drawBarChart(dt, label);
 				$(".plus").append($.parseHTML("<svg id='unzoom' viewBox='0 0 50 70' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g transform='translate(10.0, 25.0)'><polyline points='20 0 10 10 20 20'></polyline></g></svg>"))
+
+				drawBarChart(dt, label);
 
                 }
 	}
@@ -604,7 +612,7 @@ function drawPieChart(data, title) {
                 label: "Activte",
                 borderWidth: 0,
                 data: data.values,
-                backgroundColor: colors,
+                backgroundColor: colors_pie,
             }]
         },
         options: {

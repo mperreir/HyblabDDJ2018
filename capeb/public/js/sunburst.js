@@ -15,7 +15,7 @@ var b = {
 var colors2 = {
   "plomberie-chauffage-couverture": "rgba(223,38,29,1)",
   "maçonnerie-carrelage": "rgba(88,83,83,1)",
-  "CA.Logements.neufs" : "rgba(254,235,39,0.3)",
+  "CA.Logements.neufs" : "rgba(117, 107, 0,1)",
   "menuiserie-charpente": "rgba(100,151,182,1)",
   "Peinture": "rgba(104,192,237,1)",
   "Electricité": "rgba(213,188,40,1)",
