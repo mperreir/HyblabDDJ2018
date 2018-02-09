@@ -115,7 +115,7 @@ var drawDDChart = function(stats) {
 							}
 						});
 						
-                        $("#canvas-dataviz").fadeOut();
+                        $("#canvas-dataviz").hide();
                         $(".plus").html("");
 
                         drawPieChart(dt, datasetLabel);
@@ -574,7 +574,7 @@ var drawMP = function(stats) {
 				var value = chartData.datasets[0].data[idx];
 
 
-				$("#canvas-dataviz").fadeOut();
+				$("#canvas-dataviz").hide();
 				$(".plus").html("");
 				var dt = {"labels": stats.FreinsMP.values[0], "values": stats.FreinsMP.values[1]}
 				if(label == "Oui"){
@@ -585,9 +585,10 @@ var drawMP = function(stats) {
 				else{
 					label = "Freins"
 				}
+				drawBarChart(dt, label);
+
 				$(".plus").append($.parseHTML("<svg id='unzoom' viewBox='0 0 50 70' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g transform='translate(10.0, 25.0)'><polyline points='20 0 10 10 20 20'></polyline></g></svg>"))
 
-				drawBarChart(dt, label);
 
                 }
 	}
