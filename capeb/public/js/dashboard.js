@@ -47,7 +47,7 @@ function miniStats(regionStats, d) {
             var dataFrame = document.getElementsByClassName("info-investissement")[0];
             // only 2017 and percentage of yes
             dataFrame.getElementsByClassName("donnee")[0].innerHTML = (json.values[3][1] * 100).toFixed(1);
-            dataFrame.style.backgroundColor = colorsForRegion[matchColor(json.values[3][1], 0, 0.15, 0.03, 0.17, false)];
+            dataFrame.style.backgroundColor = colorsForRegion[matchColor(json.values[3][1], 0, 0.20, 0.20/5, (0.5-0.2)/, false)];
 
             $('#card-investissement .open').each(function(){
                 $(this).on('click', function() {
