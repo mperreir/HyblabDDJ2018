@@ -28,21 +28,21 @@ function initializeDashboard() {
     });
     document.getElementById("nom_epci").innerText = "Région";
     document.getElementById("switchToRegion").checked = true;
-    document.getElementById("switchToRegion").addEventListener("change", function(){
-        if(this.checked){
+    document.getElementById("switchToRegion").addEventListener("change", function () {
+        if (this.checked) {
             initializeDashboard();
             document.getElementById("niveau-zoom").style.opacity = 1;
             var goToData = document.getElementsByClassName('goToData');
-            for(var i=0; i<goToData.length; i++){
+            for (var i = 0; i < goToData.length; i++) {
                 goToData[i].style.display = "none";
             }
-        } else{
+        } else {
             var idEpci = document.getElementById("cacheEPCI").innerHTML;
             var path = $(document.getElementById(idEpci));
             onSvgClick(path[0].__data__);
             document.getElementById("niveau-zoom").style.opacity = 0.2;
             var goToData = document.getElementsByClassName('goToData');
-            for(var i=0; i<goToData.length; i++){
+            for (var i = 0; i < goToData.length; i++) {
                 goToData[i].style.display = "block";
             }
         }
@@ -74,8 +74,7 @@ $(document).ready(function () {
         });
 });
 
-// emulate a click on svg
-function onSvgClick(d){
+function onSvgClick(d) {
     fetch("/capeb/data/regionStats")
         .then(function (value) {
             return value.json();
@@ -90,7 +89,9 @@ function onSvgClick(d){
             document.getElementById("nom_epci").innerText = d.properties.nom_comple;
             createModal();
             miniStats(json, d);
-            document.getElementById("switchToRegion").checked = false;
+            if (document.getElementById("switchToRegion").checked !== false) {
+                document.getElementById("switchToRegion").checked = false;
+            }
         });
 }
 
@@ -139,34 +140,19 @@ function drawMap(conjonctureEpci) {
             .attr("fill", "white")
             .attr("stroke-width", "0.1px")
             .attr("stroke", "rgba( 29, 29, 27, 0.5 )")
-            .attr("id", function(d){return d.properties.siren_epci;
+            .attr("id", function (d) {
+                return d.properties.siren_epci;
             })
             .attr("d", path)
             .on("click", function (d) {
-                fetch("/capeb/data/regionStats")
-                    .then(function (value) {
-                        return value.json();
-                    })
-                    .catch(function (error) {
-                        console.log("error");
-                        console.log(error);
-                        return {};
-                    })
-                    .then(function (json) {
-                        document.getElementById("cacheEPCI").innerHTML = d.properties.siren_epci;
-                        createModal();
-                        miniStats(json, d);
-                        if(document.getElementById("switchToRegion").checked !== false){
-                            document.getElementById("switchToRegion").checked = false;
-                        }
-                        // move to dashboard
-                        document.location.href = document.location + "/slide2";
-                        document.getElementById("nom_epci").innerText = d.properties.nom_comple;
-                    });
+                onSvgClick(d);
+                // move to dashboard
+                document.location.href = document.location + "/slide2";
+                document.getElementById("nom_epci").innerText = d.properties.nom_comple;
             })
             .on("mouseover", function (d) {
                 var conjoncture = conjonctureEpci[d.properties.siren_epci];
-                var color = colorsForRegion[matchColor(conjoncture, 0, 5.38, 5.38/5, (7.19-5.38)/5, false)];
+                var color = colorsForRegion[matchColor(conjoncture, 0, 5.38, 5.38 / 5, (7.19 - 5.38) / 5, false)];
                 d3.select(this).transition()
                     .duration("0")
                     .style("fill", color)
