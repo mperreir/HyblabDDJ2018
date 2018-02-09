@@ -554,6 +554,15 @@ var drawMP = function(stats) {
             legend: {
                 display: false
             },
+             hover: {
+                    mode: 'nearest',
+                    intersect: true,
+                    onHover: function (e) {
+                        var point = this.getElementAtEvent(e);
+                        if (point.length) e.target.style.cursor = 'pointer';
+                        else e.target.style.cursor = 'default';
+                    }
+                },
             tooltips: {
                 callbacks: {
                     label: function (tooltipItem, data) {
