@@ -19,15 +19,17 @@
     grid-column: 3;
     grid-row: 2;
     .textes-data{
-      height: 85%;
       width: 85%;
       transform: translate(0, -50%);
       margin: 35% 0;
       >.title{
         @extend %titre-epci;
+        height: 6.5vw;
+        margin-bottom: 20px;
       }
       >.container{
-        position: absolute;
+        position: relative;
+        height: 85%;
         bottom: 0px;
         >.texte{
           @extend %texte-labeur;
