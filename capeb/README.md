@@ -5,23 +5,24 @@ Média : CAPEB
 Sujet :
 
 Equipe : BAM
-
 Patricipants :
 
-- AGR :
-            - Angélina HERBERT
-            - Adrien MOUTEAU
-            - Manon CUNY
-            - Alexandra PROVOT
-- Polytech :  
-            - Yulin CHAI
-            - Lucas PAGANO
-            - Elmokhtar MOHAMED MOUSSA
-- SciencesCom :
-            - Corentin RIVIERE
-            - Chloé MARTIN
-            - Antoine SIMEHA
-            
+
+ - Polytech :  
+	- Yulin CHAI
+	- Lucas PAGANO
+	- Elmokhtar MOHAMED MOUSSA
+ - AGR :        
+	- Corentin RIVIERE
+	- Chloé MARTIN
+	- Antoine SIMEHA
+ - SciencesCom :
+
+	 - Angélina HERBERT 
+	 - Adrien MOUTEAU 
+	 - Manon CUNY
+	 - Alexandra PROVOT
+
 # Installation
 
 # Informations complémentaires
