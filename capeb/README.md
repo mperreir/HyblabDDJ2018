@@ -9,18 +9,18 @@ Equipe : BAM
 Patricipants :
 
 - AGR :
-            Angélina HERBERT
-            Adrien MOUTEAU
-            Manon CUNY
-            Alexandra PROVOT
+            - Angélina HERBERT
+            - Adrien MOUTEAU
+            - Manon CUNY
+            - Alexandra PROVOT
 - Polytech :  
-            Yulin CHAI
-            Lucas PAGANO
-            Elmokhtar MOHAMED MOUSSA
+            - Yulin CHAI
+            - Lucas PAGANO
+            - Elmokhtar MOHAMED MOUSSA
 - SciencesCom :
-            Corentin RIVIERE
-            Chloé MARTIN
-            Antoine SIMEHA
+            - Corentin RIVIERE
+            - Chloé MARTIN
+            - Antoine SIMEHA
             
 # Installation
 
