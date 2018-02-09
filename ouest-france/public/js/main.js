@@ -2255,7 +2255,7 @@ function controleurPodium()
     }
     Podium2014.onclick = function(){
         document.getElementById("podium").className = "";
-        TextePodium.textContent = "Encore jamais représentée au Hellfest, cette année l'Afrique du sud fait son entrée dans le palmarès des groupes présent au festival.";
+        TextePodium.textContent = "Encore jamais représentée au Hellfest, cette année l'Afrique du sud fait son entrée dans le palmarès des groupes présents au festival.";
         document.getElementById("question").className = "texteGlobal2--hidden";
         document.getElementById("reponse").className = "dateMenu--hidden";
         document.getElementById("saviez").className = "dateMenu--hidden";
