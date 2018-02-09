@@ -171,7 +171,7 @@ function upDateHisto(histo){
 function buildHisto(parent, ann, dep){
 
 	var svg = d3.select(parent),
-	    margin = {top: 120, right: 120, bottom: 0, left: 80},
+	    margin = {top: 50, right: 120, bottom: 0, left: 80},
 	    width = +svg.attr("width") - margin.left - margin.right,
 	    height = +svg.attr("height") - margin.top - margin.bottom-50,
 	    g = svg.append("g").attr("transform", "translate(" + (margin.left) + "," + (margin.top) + ")");
@@ -269,38 +269,37 @@ function buildHisto(parent, ann, dep){
 			//The water butt width has to be the same than the
 			//histogram width
 			var widthWatBut =  x.bandwidth();
-			var heightWatBut =  height*1.2;
+			var coeffHeightWattBut = 0.1;
+			var heightWatBut = (height+2)*(1+coeffHeightWattBut);
 
 			g.append("image")
 				.attr("xlink:href","img/Citerne2.svg")
 				.style("width", widthWatBut)
 				.style("height", heightWatBut)
-				.attr("y",-39)
+				.attr("y",-coeffHeightWattBut*height)
 				.attr("preserveAspectRatio","none");
-
+			console.log(heightWatBut);
 			g.append("g")
 					.append("text")
 					.attr("x",x.bandwidth()/2)
-					.attr("y",250)
+					.attr("y",height+50)
 					.text(getCleanDepName)
 					.attr("font-family", "sans-serif")
 					.attr("font-size", "30px")
 					.style("text-anchor", "middle");
 		}else if (dep == "Campbon"){
 
-			var widthBottle =  1.01*x.bandwidth();
-			var heightBottle =  height*1.2;
+			var widthBottle =  x.bandwidth();
+			var coeffHeightBottle = 0.2;
+			var heightBottle = (height+2)*(1+coeffHeightBottle);
 
 			g.append("image")
 				.attr("xlink:href","img/bouteille.svg")
 				.style("width", widthBottle)
 				.style("height", heightBottle)
-				.attr("y",-41)
+				.attr("y",-coeffHeightBottle*height)
 				.attr("preserveAspectRatio","none");
 		}
-
-
-
 
 		function getCleanDepName(){
 			switch(dep) {
@@ -337,6 +336,24 @@ function buildHisto(parent, ann, dep){
 	      .attr("font-weight", "bold")
 	      .attr("text-anchor", "start")
 
+		var trX = -80;
+		var trY = -35;
+		g.append("g")
+				.append("text")
+				.attr("x",trX)
+				.attr("y",trY)
+				.text("Nombre")
+				.attr("font-family", "sans-serif")
+				.attr("font-size", "15px")
+				.style("text-anchor", "start");
+		g.append("g")
+				.append("text")
+				.attr("x",trX)
+				.attr("y",trY+15)
+				.text("de pesticides")
+				.attr("font-family", "sans-serif")
+				.attr("font-size", "15px")
+				.style("text-anchor", "start");
 
 		function getLab(d){
 
