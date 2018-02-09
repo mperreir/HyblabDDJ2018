@@ -71,7 +71,7 @@
         <div class="arrows arrowsUp" onclick="">
             <svg>
               <g>
-                <circle cx="50" cy="50" r="20" stroke="##241D37" fill="##241D37" />
+                <circle cx="50" cy="50" r="25" stroke="##241D37" fill="##241D37" />
                 <path class="a1" d="M40 40 L50 48 L60 40"></path>
                 <path class="a2" d="M40 52 L50 60 L60 52"></path>
               </g>
@@ -80,7 +80,7 @@
       <div class="arrows arrowsDown" onclick="">
             <svg>
               <g>
-                <circle cx="50" cy="50" r="20" stroke="##241D37" fill="##241D37" />
+                <circle cx="50" cy="50" r="25" stroke="##241D37" fill="##241D37" />
                 <path class="a1" d="M40 40 L50 48 L60 40"></path>
                 <path class="a2" d="M40 52 L50 60 L60 52"></path>
               </g>
@@ -88,18 +88,18 @@
         </div>
       <div id="firstsection" class="section" data-anchor="Questions">
         <div class="arrows arrowsRight" onclick="">
-            <svg>
+            <svg id="first_arrow">
               <g>
-                <circle cx="50" cy="50" r="20" stroke="##241D37" fill="##241D37" />
-                <path class="a1" d="M40 40 L50 48 L60 40"></path>
-                <path class="a2" d="M40 52 L50 60 L60 52"></path>
+                <circle cx="50" cy="50" r="25" stroke="##241D37" fill="##241D37" />
+                <path class="a3" d="M40 40 L50 48 L60 40"></path>
+                <path class="a4" d="M40 52 L50 60 L60 52"></path>
               </g>
           </svg>
         </div>
         <div class="arrows arrowsLeft" onclick="">
             <svg>
               <g>
-                <circle cx="50" cy="50" r="20" stroke="##241D37" fill="##241D37" />
+                <circle cx="50" cy="50" r="25" stroke="##241D37" fill="##241D37" />
                <path class="a1" d="M40 40 L50 48 L60 40"></path>
                 <path class="a2" d="M40 52 L50 60 L60 52"></path>
               </g>
@@ -117,7 +117,7 @@
                 <p>
                   Afin de réaliser ces data visualisations, nous nous sommes intéressés aux accidents survenus sur des passages à niveau pendant 10 ans (de 2006 à 2016).
                 </p>
-                <h3>Démarrer <br/>l'expérience</h3>
+                <h3>Pour démarrer <br/>l'expérience</h3>
                 <div id="infos_nav_souris">
                   <img  src="img/home/SOURIS.png" alt="Scroll avec la molette !" />
                 </div>
@@ -132,9 +132,12 @@
             <div id="slide2_container_text">
               <h1>Rappel des événements</h1>
                 <p id="text_content_slide2">
-                    Les accidents aux passages à niveau sont encore d’actualité et restent conséquents la plupart du temps. Par exemple, l’année 2017 a été marquée par un accident en décembre dans la ville de Millas, où 5 adolescents ont péri suite à la collision entre un train et un bus.                 </p>
+                  Les accidents aux passages à niveau sont
+                  malheureusement souvent d’actualité. L’année 2017 a été marquée par un terrible accident en
+                  décembre au passage à niveau de Millas, où 6 adolescents ont péri suite à la collision entre un
+                  train et un car scolaire.</p>
                 <div id="div_indication_slide_evt">
-                  <button  class="v button" id="indication_slide_evt">Cliquez pour voir les données</button>
+                  <!-- <button  class="v button" id="indication_slide_evt">Cliquez pour voir les données</button> -->
                 </div>
 
               </div>
@@ -148,13 +151,13 @@
         <div class="slide" id="section_saisons">
           <div id="container_slide_typesPns">
             <div id="slide3_container_text">
-              <h1>Les types de passage à niveau existant</h1>
+              <h1>Les types de passage à niveau existants</h1>
                 <p id="text_content_slide3">
                   Un passage à niveau est le croisement au même niveau d’une voie ferrée et d’une voie routière ou piétonne. On dénombre aujourd’hui en France plus de 15000  passages à niveau.<br/>
                   </br>
                   Il en existe 5 types :
                 </p>
-                  <img id="typesPns" src="img/slide_pns/pns.svg" alt="Train" />
+                  <img id="typesPns" src="img/slide_pns/pns2.png" alt="Train" />
             </div>
         </div>
 
@@ -213,10 +216,10 @@
               <div class="r" id="r4">
                 <p> aezaeaeaeazeaze </p>
               </div>
-              <div class="more" id="more2">
+              <!-- <div class="more" id="more2">
                 <img id="more22" src="img/question/tips.svg"/>
                 <p id="more21"> zaeazeaze </p>
-              </div>
+              </div> -->
           </section>
         </div>
           <!-- Slide jour / nuit -->
@@ -231,7 +234,8 @@
                 <button type="button" class="v button" onclick="Light();reponse(this)">Jour</button>
               </div>
               <p id="nuit">29%</p>
-              <p id="jour">71%</p>
+              <p id="jour"><b>71%</b> des accidents aux passages à niveau ont lieu en pleine journée.<br/>Cela s’explique par la densité
+de circulation des voitures et des trains qui est beaucoup plus faible la nuit.</p>
             </section>
 
           </div>
@@ -240,6 +244,9 @@
             <div class="beforeday"></div>
             <div id="slide_container_montres">
               <h1>Doit-on être plus vigilant sur les trajets habituels ?  </h1>
+              <p>
+                Ces graphiques représentent la proportion d’accidents par type de trajet.
+              </p>
                 <div id="container_chart_type_montre">
                   <div id="container_slide_nuit">
                     <canvas id="chart_pie_nuit"></canvas>
@@ -255,7 +262,7 @@
            <!-- Slide SAISONS -->
           <div class="slide" id="slide_saisons">
             <div id="container_slide_saisons">
-              <h1>A quel saison ont lieu les accidents les plus graves ?</h1>
+              <h1>A quelle saison ont lieu les accidents les plus graves ?</h1>
 
               <canvas id="chart_printemps"></canvas>
               <canvas id="chart_ete"></canvas>
@@ -271,7 +278,7 @@
           <div class="slide" id="section_illu_camion">
           <section id="transport">
             <section id="title_question_transport">
-              <h1>Quel type de véhicule provoque le plus d'accidents ?</h1>
+              <h1>Quel type de véhicules est le plus impliqué dans les accidents ?</h1>
 
               <h2 id="infos_accidents"></h2>
             </section>
@@ -299,17 +306,17 @@
           <!-- Accidents en fct de l'age et des véhicules -->
         <div class="slide">
           <div id="chart_lum_container">
-            <h1>Quel âge pour quels types de véhicules ?</h1>
+            <h1>Quel âge ont les occupants des véhicules impliqués ?</h1>
             <p>Placez votre curseur sur les points du graphique pour plus de détails.</p>
             <canvas id="myLineChart"></canvas>
+            <p> Ce graphique représente l’âge des occupants des véhicules impliqués dans les accidents aux passages à niveau.</p>
           </div>
         </div>
 
         <!-- slide 6 AMBULANCE-->
-          <div class="slide" >
+          <div class="slide" id="slide_ambu">
             <div id="slide_ambu_text">
               <img   id="img_ambu" src="img/slide_acc_regions/ambulance.png" alt="ambulance" />
-              <h1>A quel niveau se trouve votre région dans le graphique ?</h1>
               <p>
                 Le nombre d’accidents est généralement proportionnel à la circulation,
                 donc au nombre d’habitants. L’Ile de France étant la région la plus
@@ -317,6 +324,7 @@
                 aux passages à niveau, plus nombreux.
               </p>
             </div>
+            <h1>Votre région fait-elle partie des plus concernées par les accidents aux passages à niveau ?</h1>
             <canvas id="chart_region_acc"></canvas>
           </div>
 
@@ -330,8 +338,8 @@
         <div class="slide">
           <div id="map" style="height:600px; width: 600px"></div>
           <div class="bouttons">
-            <h1>Filtres</h1>
-            <p id="warning"> Certains filtres peuvent mettre du temps à s'afficher </p>
+            <h1>Cartographie des accidents</h1>
+            <p id="warning"> Certains filtres peuvent mettre du temps à s'afficher.<br/> Sélectionnez les filtres que vous souhaitez voir apparaître sur la carte.</p>
             <h2>Informations générales</h2>
             <div class="row">
               <span>Passage à niveau</span>

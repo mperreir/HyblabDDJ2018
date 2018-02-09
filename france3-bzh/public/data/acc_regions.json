@@ -2,7 +2,7 @@
     "labels": ["Corse", "Bretagne","Bourgogne", "Normandie", "Centre", "Pays de la loire", "Nouvelle-Aquitaine", "Occitanie", "Grand-Est", "Auvergne", "Hauts-de-France", "Provence-Alpes-Cotes d'Azur","Ile-de-France"],
     "datasets": [
       {
-        "label": "Nombre d'accidents",
+        "label": "Nombre d’accidents entre 2006 et 2016",
         "fill": false,
         "borderColor": "#2DDCE0",
         "backgroundColor": "#2DDCE0",

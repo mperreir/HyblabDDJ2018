@@ -1,5 +1,5 @@
 {
-  "labels": [ "Courses/Achats", "Ecole","Domicile Travail", "Indéterminé","Promenade", "Utilisaion professionnelle"],
+  "labels": [ "Courses/Achats", "Ecole","Domicile Travail", "Indéterminé","Promenade", "Utilisation professionnelle"],
     "datasets": [
     {
       "label": "Nombre d'accidents",
