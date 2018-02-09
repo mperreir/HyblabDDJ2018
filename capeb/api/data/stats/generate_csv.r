@@ -10,6 +10,24 @@ getAttYear <- function(y, l_atr){
   l_atr = c(l_atr, "X..Date")
   return(subset(data, X..Date == y, select = l_atr))
 }
+d17
+
+conj = matrix(nrow = 0, ncol = 2)
+colnames(conj) = c("EPCI", "Conjoncture.calculée")
+
+epcis
+for(epci in epcis){
+  epci_set = subset(d17, intercommunalite.2017_EPCI==epci)
+  conj = rbind(conj, c(epci, mean(epci_set$Conjoncture.calculée, na.rm = T)))
+}
+
+write.csv(file="ConjonctureEPCI.csv",x=conj,row.names=FALSE,quote = FALSE,fileEncoding ="UTF-8")
+
+mean(conj[,2], na.rm = T)
+
+epci_set[,0]
+conj
+data$Conjoncture.calculée
 
 data$X..Date = as.numeric(substring(data$X..Date, 7, 10))
 annee = unique(data$X..Date)
@@ -94,15 +112,15 @@ for(epci in epcis){
     mp_neuf_log = subset(act_set, CA.Logements.neufs > CA.Batiments.neufs && CA.Logements.neufs > CA.Réhabilitation.entretien, select=sl[6:10])
     mp_entretien = subset(act_set, CA.Réhabilitation.entretien >= CA.Logements.neufs && CA.Réhabilitation.entretien >= CA.Batiments.neufs, select=sl[6:10])
     id_mp = 0
-    for(mp in list(mp_neuf_bat, mp_neuf_log, mp_entretien)){
-      if(nrow(mp) > 0){
+    #for(mp in list(mp_neuf_bat, mp_neuf_log, mp_entretien)){
+      #if(nrow(mp) > 0){
         for(car in evo_car){
-          car_set = subset(mp, Evolution.Carnet.de.commandes == car, select=sl[7:10])
+          car_set = subset(act_set, Evolution.Carnet.de.commandes == car, select=sl[7:10])
           if(nrow(car_set) > 0){
             for(c in contrats){
               eff = car_set[,c]
               
-              chemin = c(act, toString(type_mp[id_mp]), car, c)
+              chemin = c(act, car, c)
               #freq = c(nrow(act_set), nrow(mp), nrow(car_set), mean(eff[eff >= 1], na.rm = TRUE))
               
               row = c(epci, paste(chemin,collapse="&"), mean(eff[eff >= 1], na.rm = TRUE))
@@ -111,15 +129,16 @@ for(epci in epcis){
             }
           }
         }
-      }
-      id_mp = id_mp + 1
+      #}
+      #id_mp = id_mp + 1
       
-    }
+    #}
   }
 }
+sunburst
 eff
 chemin
-#write.csv(file="sunburst.csv",x=sunburst,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
+write.csv(file="sunburst.csv",x=sunburst,row.names=FALSE, quote = FALSE,fileEncoding ="UTF-8")
 
 length(car_set)
 mean(car_set[,c])
