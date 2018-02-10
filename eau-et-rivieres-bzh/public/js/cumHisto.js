@@ -1,19 +1,33 @@
 "use strict";
 
+
+//These global variables indicates the year currently selected by user for the
+//datavis on first and third page respectively
 var annee = "2012";
 var anneeCambon = "2012";
+//These global variables indicates what are the two area currently selected by
+//for the first datavis
 var dep1 = "Finistere";
 var dep2 = "Cotes_Armor";
+//This indicates what is the last area that was changed (left or right one),
+//so we can know what is the next area to change (right or left one)
 var lastChanged = dep1;
+//These indicates what is the right color to ploted
+//For the histograms
+var colCounter = 0;
+var colIndex = 1;
 
+//Build the initial histograms for the four datavis
 buildHisto("#histGauche",annee,dep1);
 buildHisto("#histDroite",annee,dep2);
 buildHisto("#histTemps","All",dep1);
 buildHisto("#bonhomme",anneeCambon,"Campbon");
+//Set text for initial left and right histograms of the first page
 upDateTexteGauche();
 upDateTexteDroite();
 $("#descriptionHisto").hide();
 
+//Set the actions for the timeline buttons of the first page
 $('#2012').on('click', function(event) {
 	annee="2012";
 	upDateHisto('#histGauche');
@@ -65,7 +79,7 @@ $('#2016').on('click', function(event) {
 	$('#2012, #2013, #2014, #2015').css('background-color','white');
 });
 
-//onClick for Cotes_Armor
+//Set the actions for the area buttons for first page
 $('#FR-22').on('click', function(event) {changeOneHisto("Cotes_Armor");});
 $('#FR-29').on('click', function(event) {changeOneHisto("Finistere");});
 $('#FR-35').on('click', function(event) {changeOneHisto("Ile_et_Vilaine");});
@@ -74,6 +88,7 @@ $('#FR-49').on('click', function(event) {changeOneHisto("Maine_et_Loire");});
 $('#FR-53').on('click', function(event) {changeOneHisto("Mayenne");});
 $('#FR-56').on('click', function(event) {changeOneHisto("Morbihan");});
 
+//Set the action for the timeline buttons of the third page
 $('#C2012').on('click', function(event) {
 	anneeCambon="2012";
 	upDateHisto('#bonhomme');
@@ -105,6 +120,7 @@ $('#C2016').on('click', function(event) {
 	$('#C2012, #C2013, #C2014, #C2015').css('background-color','white');
 });
 
+//Set the actions for the button "suivant" of the page "en savoir plus"
 $('#suivant').click(function() {
 	  $("#histTemps").empty();
 
@@ -131,6 +147,8 @@ $('#suivant').click(function() {
 			buildHisto("#histTemps","All","Cotes_Armor");
 		}
 });
+//Update one histogram in the first datavis
+//The one updated is the one with the oldest last update
 function changeOneHisto(newDep){
 	if(newDep != dep1 & newDep != dep2){
 	  if(lastChanged == dep1){
@@ -146,7 +164,8 @@ function changeOneHisto(newDep){
 		}
 	}
 }
-
+//Update the description text for the two histograms
+//of the first datavis
 function upDateTexteGauche(){
 	$("#descriptionGauche").text($("#"+dep1+" ."+annee).text());
 }
@@ -155,6 +174,7 @@ function upDateTexteDroite(){
 	$("#descriptionDroite").text($("#"+dep2+" ."+annee).text());
 }
 
+//Update one of the two histograms of the first datavis
 function upDateHisto(histo){
    if(histo == "#histGauche"){
 		 		$("#histGauche").empty();
@@ -167,7 +187,10 @@ function upDateHisto(histo){
 		 		buildHisto(histo,anneeCambon,"Campbon");
 	 }
 }
-
+//Display one cumulated histograms on a section parent
+// @param parent: the section to display the histo on (string)
+// @param ann: the year to choose to display the data (string)
+// @param dep: the area to choose to display the data (string)
 function buildHisto(parent, ann, dep){
 
 	var svg = d3.select(parent),
@@ -187,6 +210,7 @@ function buildHisto(parent, ann, dep){
 	var z = d3.scaleOrdinal()
 	    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
+	//Compute the total height of each histogramms
 	d3.csv("data/datas.csv",function(d){
 	  var t=0;
 	  var myVals=Object.values(d);
@@ -214,20 +238,17 @@ function buildHisto(parent, ann, dep){
 				}
 			}
 		}
-		//console.log(data);
 
 	  var keys = columns.slice(2);
-		//keys.splice(-1,1);
 
-	  //data.sort(function(a, b) { return b.total - a.total; });
 	  x.domain(data.map(function(d) { return d.ANNEE; }));
 	  y.domain([0, d3.max(data, function(d) { return 60; })]).nice();
-		//y.domain(d3.extent(data, function(d) { return d.total; }));
 	  z.domain(keys);
 
 		var coeffRed_histo = 0.99;
 		var coeffRed =1;
 		var coeffTr = 0;
+		//The colors used for all the histograms
 		var colDict = {
 				1: "#D42E1E",
 				2: "#F8C000",
@@ -237,9 +258,26 @@ function buildHisto(parent, ann, dep){
 				6: "#AA3565",
 		};
 
-		var colCounter = 0;
-		var colIndex = 1;
+		//Reseting the color variables
+		colCounter = 0;
+		colIndex = 1;
 
+		//Return the next color for the histogramms
+		function getColor(d){
+
+			if(colCounter < data.length-1){
+				colCounter++;
+				return colDict[colIndex];
+			}else{
+				colCounter = 0;
+				colIndex = colIndex + 1;
+				return colDict[colIndex-1];
+			}
+		}
+
+		//Plot the cumulated histograms
+		//The rectangle are ploted from left to right and then
+		//from bottom to top
 	  g.append("g")
 	    .selectAll("g")
 	    .data(d3.stack().keys(keys)(data))
@@ -254,23 +292,38 @@ function buildHisto(parent, ann, dep){
 				.attr("fill", getColor)
 	      .attr("width", coeffRed_histo*x.bandwidth());
 
-		function getColor(d){
 
-			if(colCounter < data.length-1){
-				colCounter++;
-				return colDict[colIndex];
-			}else{
-				colCounter = 0;
-				colIndex = colIndex + 1;
-				return colDict[colIndex-1];
-			}
-		}
 		if (ann != "All" && dep != "Campbon"){
+			//Add a water butt mask and the name of the area
 			//The water butt width has to be the same than the
 			//histogram width
 			var widthWatBut =  x.bandwidth();
 			var coeffHeightWattBut = 0.1;
 			var heightWatBut = (height+2)*(1+coeffHeightWattBut);
+
+			//Return the clean area name (without underscore and with accents)
+			function getCleanDepName(){
+				switch(dep) {
+					case "Finistere":
+						return "Finistère";
+					break;
+					case "Maine_et_Loire":
+						return "Maine-et-Loire";
+					break;
+					case "Loire_Atlantique":
+						return "Loire-Atlantique";
+					break;
+					case "Ile_et_Vilaine":
+						return "Ille-et-Vilaine";
+					break;
+					case "Cotes_Armor":
+						return "Côtes-d'Armor";
+					break;
+					default:
+						return dep;
+					break;
+				}
+			}
 
 			g.append("image")
 				.attr("xlink:href","img/Citerne2.svg")
@@ -288,7 +341,7 @@ function buildHisto(parent, ann, dep){
 					.attr("font-size", "30px")
 					.style("text-anchor", "middle");
 		}else if (dep == "Campbon"){
-
+			//Add a bottle mask for the campbon histogram
 			var widthBottle =  x.bandwidth();
 			var coeffHeightBottle = 0.2;
 			var heightBottle = (height+2)*(1+coeffHeightBottle);
@@ -301,30 +354,7 @@ function buildHisto(parent, ann, dep){
 				.attr("preserveAspectRatio","none");
 		}
 
-		function getCleanDepName(){
-			switch(dep) {
-    		case "Finistere":
-        	return "Finistère";
-        break;
-    		case "Maine_et_Loire":
-        	return "Maine-et-Loire";
-        break;
-				case "Loire_Atlantique":
-					return "Loire-Atlantique";
-				break;
-				case "Ile_et_Vilaine":
-					return "Ille-et-Vilaine";
-				break;
-				case "Cotes_Armor":
-					return "Côtes-d'Armor";
-				break;
-    		default:
-					return dep;
-				break;
-			}
-		}
-
-
+		//Add y axis (ticks)
 	  g.append("g")
 	      .attr("class", "axis")
 	      .call(d3.axisLeft(y).ticks(null, "s"))
@@ -336,6 +366,7 @@ function buildHisto(parent, ann, dep){
 	      .attr("font-weight", "bold")
 	      .attr("text-anchor", "start")
 
+		//Add a caption for the y axis
 		var trX = -80;
 		var trY = -35;
 		g.append("g")
@@ -355,49 +386,5 @@ function buildHisto(parent, ann, dep){
 				.attr("font-size", "15px")
 				.style("text-anchor", "start");
 
-		function getLab(d){
-
-			if(lastLab == "ORGANES"){
-				lastLab = "MORTEL";
-			}else if(lastLab == "MORTEL"){
-				lastLab="CANCER";
-			}else if(lastLab == "CANCER"){
-				lastLab = "TOXIQUE";
-			}else if(lastLab == "TOXIQUE"){
-				lastLab="GENETIQUE";
-			}else  if(lastLab == "GENETIQUE"){
-				lastLab = "FOETUS";
-			}else  if(lastLab == "FOETUS"){
-				lastLab = "ORGANES"
-			}else  if(lastLab == "ORGANES"){
-				lastLab = "MORTEL";
-		  }
-			return lastLab;
-		}
-
-		if(dep != dep1){
-			/*
-			var lastLab = "ORGANES";
-		  var legend = g.append("g")
-		      .attr("font-family", "sans-serif")
-		      .attr("font-size", 10)
-		      .attr("text-anchor", "end")
-		    .selectAll("g")
-		    .data(keys.slice().reverse())
-		    .enter().append("g")
-		      .attr("transform", function(d, i) { return "translate(0," + (120-i * 20) + ")"; });
-		  legend.append("rect")
-		      .attr("x", width )
-		      .attr("width", 120)
-		      .attr("height", 19)
-		      .attr("fill", getColor);
-		  legend.append("text")
-		      .attr("x", width +40)
-		      .attr("y", 9.5)
-		      .attr("dy", "0.32em")
-					.style("text-anchor", "middle")
-		      .text(getLab);
-			*/
-		}
 	});
 }
