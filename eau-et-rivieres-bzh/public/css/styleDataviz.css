@@ -3,7 +3,6 @@
 /* ######################################################################### */
 /* --------------- Général --------------- */
 /* ######################################################################### */
-
 body{
     font-family: 'Montserrat', sans-serif;
     z-index: 1;
@@ -25,7 +24,7 @@ body{
     padding-right: 25px;
 }
 
-/* ----- Header ----- */
+/* --------------- Header --------------- */
 .navbar-header {
     padding-left: 5%;
 }
@@ -34,7 +33,7 @@ body{
     padding-right: 5%;
 }
 
-/* Commun à tous les encadrés */
+/* --------------- Commun à tous les encadrés/panneaux --------------- */
 .panel {
     border: 4px solid black;
     background: white;
@@ -44,6 +43,25 @@ body{
 
 .panel:nth-of-type(2){
 	border: 2px solid black;
+}
+
+/* --------------- Définitions --------------- */
+em{
+    font-style: normal;
+    text-decoration: underline;
+    cursor : help;
+}
+
+.definition article{
+    border: solid;
+    border-radius: 10px;
+    background: white;
+    width: 40%;
+    display: none;
+    position: absolute;
+    z-index: 3;
+    padding: 10px;
+    text-align: justify;
 }
 
 
@@ -136,7 +154,8 @@ body{
     filter :blur(0px);
 }
 
-/* Section 1 : Présentation générale dataviz */
+/* --------------- Section 1 : Présentation générale dataviz --------------- */
+
 #section1 {
     top: 10vh;
     left: 5vw;
@@ -159,14 +178,14 @@ body{
     padding-bottom: 0.5vw;
 }
 
-/* Timeline1 : Positionnement et taille */
+/* --------------- Timeline1 --------------- */
 #timeline1 {
     width: 22vw;
     top: 43vh;
     left: 12vw;
 }
 
-/* Section 2 : Histogrammes, textes et légende */
+/* --------------- Section 2 : Histogrammes, textes et légende --------------- */
 #section2 {
     top: 10vh;
     left: 50vw;
@@ -175,7 +194,7 @@ body{
     word-wrap : break-word;
 }
 
-/* Histogrammes */
+/* --------------- Histogramme --------------- */
 #histDroite {
     float: left;
     position: absolute;
@@ -194,7 +213,7 @@ body{
     height: 45%;
 }
 
-/* Textes + histogrammes */
+/* --------------- Descriptions histogrammes --------------- */
 .article1 {
     float: left;
     width: 50%;
@@ -219,7 +238,7 @@ body{
     width: 48%;
 }
 
-/* Légendes */
+/* --------------- Légende Histogrammes Citnerne --------------- */
 #legendeTitle {
     padding-left: 10px;
 }
@@ -244,7 +263,7 @@ body{
     margin-top: 0.2vw;
 }
 
-/* Bouton en Savoir Plus */
+/* --------------- Bouton en Savoir Plus --------------- */
 #buttonSP {
     float: left;
     position: absolute;
@@ -253,7 +272,7 @@ body{
     width: 15vw;
 }
 
-/* Carte Départements */
+/* --------------- Carte Départements --------------- */
 #mapBretagne {
     float: left;
     width: 28vw;
@@ -456,12 +475,29 @@ body{
     margin: 20px;
 }
 
+/* --------------- Légende en Savoir Plus --------------- */
+#LegendeEnSavPlus {
+    position: absolute;
+    float: left;
+    left: 44%;
+    top: 34%;
+}
+
+.articleSP {
+    display: inline-flex;
+    padding-left: 0.6vw;
+}
+
+.articleSP svg {
+    margin-top: 0.3vw;
+}
+
 
 
 /* ######################################################################### */
 /* --------------- Page 2 --------------- */
 /* ######################################################################### */
-/* Section 3 : Présentation Nappe Campbon */
+/* --------------- Section 3 : Présentation Nappe Campbon --------------- */
 #section3 {
     top: 10vh;
     left: 5vw;
@@ -470,7 +506,7 @@ body{
     text-align: justify;
 }
 
-/* Section 4 : Légende Station */
+/* --------------- Section 4 : Légende Station --------------- */
 #section4 {
     top: 75vh;
     left: 5vw;
@@ -526,7 +562,7 @@ body{
     left: 6%;
 }
 
-/* Carte Campbon */
+/* --------------- Carte Campbon --------------- */
 #mapCampbon {
     float: left;
     position: absolute;
@@ -626,7 +662,7 @@ body{
 /* ######################################################################### */
 /* --------------- Page 3 --------------- */
 /* ######################################################################### */
-/* Section 5 : Texte Nappe de Campbon par année*/
+/* --------------- Section 5 : Texte Nappe de Campbon par année --------------- */
 #section5 {
     top: 10vh;
     left: 5vw;
@@ -634,14 +670,14 @@ body{
     text-align: justify;
 }
 
-/* Timeline 2 : positionnement et taille */
+/* --------------- Timeline 2 : positionnement et taille --------------- */
 #timeline2 {
     width: 22vw;
     top: 36vh;
     left: 41vw;
 }
 
-/* Section 6 : Légende */
+/* --------------- Section 6 : Légende Bouteille --------------- */
 #section6 {
     top: 30vh;
     left: 72vw;
@@ -664,7 +700,7 @@ body{
     margin-top: 0.6vw;
 }
 
-/* Bonhomme */
+/* --------------- Bouteille --------------- */
 #bonhomme {
     float: left;
     position: absolute;
@@ -674,7 +710,7 @@ body{
     height: 65vh;
 }
 
-/*Solutions alternatives*/
+/* --------------- Solutions alternatives --------------- */
 #btnSolution{
     float: left;
     position: absolute;
@@ -723,7 +759,7 @@ body{
 /* ######################################################################### */
 /* --------------- Page 4 --------------- */
 /* ######################################################################### */
-/* Petit paragraphe */
+/* --------------- Petit paragraphe --------------- */
 #pCredits1 {
     top: 10vh;
     left: 35vw;
@@ -732,7 +768,7 @@ body{
     text-align: center;
 }
 
-/* Logo Eau et Rivieres */
+/* --------------- Logo : Eau et Rivières --------------- */
 #logoMedia {
     float: left;
     position: absolute;
@@ -742,7 +778,7 @@ body{
     left: 54vw;
 }
 
-/* Section 7 : Présentation Eau et Rivieres */
+/* --------------- Section 7 : Présentation Eau et Rivieres --------------- */
 #section7 {
     width: 35vw;
     top: 20vh;
@@ -750,7 +786,7 @@ body{
     text-align: justify;
 }
 
-/* Section 8 : Remerciements Eau et Rivieres */
+/* --------------- Section 8 : Remerciements Eau et Rivieres --------------- */
 #section8 {
     width: 35vw;
     top: 35vh;
@@ -758,7 +794,7 @@ body{
     text-align: justify;
 }
 
-/* Le tableau de logos des partenaires */
+/* --------------- Le tableau de logos des partenaires --------------- */
 #logos {
     float: left;
     position: absolute;
@@ -766,7 +802,7 @@ body{
     left: 12%;
     top: 62%;
     border-collapse: separate;
-    border-spacing: 10px 20px; /* Nombre de pixels d'espace horizontal (5px), vertical (8px) */
+    border-spacing: 10px 20px; /* Nombre de pixels d'espace horizontal (10px), vertical (20px) */
 }
 
 #logos td {
@@ -808,7 +844,7 @@ body{
 /* ######################################################################### */
 /* --------------- Page 5 --------------- */
 /* ######################################################################### */
-/* Petit paragraphe */
+/* --------------- Petit paragraphe --------------- */
 #pCredits2 {
     top: 15vh;
     left: 35vw;
@@ -817,7 +853,7 @@ body{
     text-align: center;
 }
 
-/* Tableau de logos personnels */
+/* --------------- Tableau des logos personnels --------------- */
 #logosNous {
     float: left;
     position: absolute;
@@ -843,23 +879,4 @@ body{
     margin-top: 3px;
     background-color: white;
     border: 3px solid black;
-}
-
-/* Définitions*/
-em{
-    font-style: normal;
-    text-decoration: underline;
-    cursor : help;
-}
-
-.definition article{
-    border: solid;
-    border-radius: 10px;
-    background: white;
-    width: 40%;
-    display: none;
-    position: absolute;
-    z-index: 3;
-    padding: 10px;
-    text-align: justify;
 }
