@@ -21,7 +21,7 @@ header img{
 }
 
 #section0{
-    background: #262626;
+    background: #2B2B2B;
     width:100%;
     height: 100%;
 }
@@ -30,26 +30,26 @@ header img{
 #section1{
     background: url(../img/Data1Background.png) no-repeat;
     background-size: 100% 100%;
-    background-color: #262626;
+    background-color: #2B2B2B;
 
 }
 
 #section2{
     background: url(../img/Data2Background.png) no-repeat;
     background-size: 100% 100%;
-    background-color: #262626;
+    background-color: #2B2B2B;
 }
 
 
 #section3{
     background: url(../img/Data3Background.png) no-repeat;
     background-size: 100% 100%;
-    background-color: #262626;
+    background-color: #2B2B2B;
 }
 
 
 #section4{
-    background: #262626;
+    background: #2B2B2B;
     width:100%;
     height: 100%;
 }
