@@ -1,0 +1,306 @@
+.legende-dataviz{
+  >.legendRaction{
+    width: 100%;
+    height: auto;
+    >.legendMetiers{
+       min-width: 33.33%;
+      position: relative;
+      float: left;
+      margin-bottom: 20px;
+      >.pcc{
+        border-left: solid 5px $data-metier1;
+      }
+      >.elec{
+        border-left: solid 5px $data-metier2;
+      }
+      >.macCar{
+        border-left: solid 5px $data-metier3;
+      }
+      >.menuChar{
+        border-left: solid 5px $data-metier4;
+      }
+      >.peint{
+        border-left: solid 5px $data-metier5;
+      }
+      >.platIso{
+        border-left: solid 5px $data-metier6;
+      }
+      >.autr{
+        border-left: solid 5px $autre;
+      }
+    }
+    >.legendEffectifs{
+       min-width: 33.33%;
+      position: relative;
+      float: left;
+      margin-bottom: 20px;
+      >.container{
+        display: grid;
+        grid-template-columns: repeat(5, min-content);
+        grid-template-rows: repeat(2, min-content);
+        grid-column-gap: 7px;
+        grid-row-gap: 5px;
+        >.bubbl{
+          background-color: $black;
+          grid-row: 1;
+          grid-column: auto;
+          align-self: center;
+          justify-self: center;
+        }
+        >.b100{
+          @include circle(50px);
+        }
+        >.b610{
+          @include circle(40px);
+        }
+        >.b35{
+          @include circle(30px);
+        }
+        >.b12{
+          @include circle(20px);
+        }
+        >.b0{
+          @include circle(10px);
+        }
+        >.bublNum{
+          @extend %texte-legend;
+          text-align: center;
+          grid-column: auto;
+          grid-row: 2;
+        }
+      }
+    }
+  }
+
+  >.legendContrats{
+    width: 100%;
+    height: auto;
+    >.legendTypeContrat{
+      min-width: 33.33%;
+      position: relative;
+      float: left;
+      margin-bottom: 20px;
+      >.cdi{
+        border-left: solid 50px $data-CDI;
+      }
+      >.cdd{
+        border-left: solid 50px $data-CDD;
+      }
+      >.apprenti{
+        border-left: solid 50px $data-apprentis;
+      }
+      >.interim{
+        border-left: solid 50px $data-interim;
+      }
+    }
+    >.legendCCommand{
+      min-width: 33.33%;
+      position: relative;
+      float: left;
+      margin-bottom: 20px;
+      >.up{
+        border-top: solid .5vw $data-CCHausse;
+      }
+      >.stable{
+        border-top: solid .5vw $data-CCStable;
+      }
+      >.down{
+        border-top: solid .5vw $data-CCBaisse;
+      }
+    }
+    >.legendTravaux{
+      min-width: 33.33%;
+      position: relative;
+      float: left;
+      margin-bottom: 20px;
+      >.neuf{
+        border-top: solid .5vw $data-travauxneuf;
+      }
+      >.marchPub{
+        border-top: solid .5vw $data-travauxMP;
+      }
+      >.reno{
+        border-top: solid .5vw $data-travauxReno;
+      }
+    }
+  }
+
+  >.legendEmbauche{
+    width: 100%;
+    height: auto;
+  }
+
+  >.legendInvest{
+    width: 100%;
+    height: auto;
+  }
+
+  >.legendMP{
+    .legendChoise{
+      margin-bottom: 20px;
+      >.legendTitle{
+        text-align: left;
+      }
+      >.oui{
+        border-left: solid 50px $data-oui;
+      }
+      >.non{
+        border-left: solid 50px $data-non;
+      }
+    }
+  }
+
+  >.legendDD{
+    width: 100%;
+    height: auto;
+    >.legendTheme{
+      min-width: 33.33%;
+      position: relative;
+      float: left;
+      margin-bottom: 20px;
+      >.reason{
+        margin-bottom: 20px;
+        >.legendTitle{
+          text-align: left;
+        }
+        >.perso{
+          border-left: solid 50px $data-jaune;
+        }
+        >.client{
+          border-left: solid 50px $blue-color;
+        }
+        >.rule{
+          border-left: solid 50px $data-metier1;
+        }
+      }
+      >.legendDevD{
+        margin-bottom: 20px;
+        >.acces{
+          border-left: solid 5px $color-accessibilite;
+        }
+        >.assain{
+          border-left: solid 5px $color-assainissment;
+        }
+        >.autre{
+          border-left: solid 5px $color-autre;
+        }
+        >.dechet{
+          border-left: solid 5px $color-dechets;
+        }
+        >.ecoCons{
+          border-left: solid 5px $color-eco;
+        }
+        >.ecoEner{
+          border-left: solid 5px $color-ecoenergie;
+        }
+        >.enerR{
+          border-left: solid 5px $color-renouvelable;
+        }
+        >.air{
+          border-left: solid 5px $color-air;
+        }
+        >.eau{
+          border-left: solid 5px $color-eau;
+        }
+        >.mat{
+          border-left: solid 5px $color-materiaux;
+        }
+      }
+    }
+  }
+
+
+  .legendTitle{
+    @extend %title-legend;
+  }
+
+
+  .vertilist{
+    position: relative;
+    @extend %texte-legend;
+    height: 1.2vw;
+    line-height: 1.2vw;
+    width: 100%;
+    margin: 5px 0;
+    padding-left: 10px;
+  }
+
+
+  .verti{
+    position: relative;
+    @extend %texte-legend;
+    height: .5vw;
+    line-height: .5vw;
+    width: 100%;
+    margin: 15px 0;
+    padding-left: 10px;
+  }
+
+  .ligne{
+    position: relative;
+    float: left;
+    width: 33.33%;
+    margin: 15px 0;
+    height: 2.5vw;
+    @extend %texte-legend;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .legendMetiers{
+    min-width: 33.33%;
+    position: relative;
+    float: left;
+    margin-bottom: 20px;
+    >.pcc{
+      border-left: solid 5px $data-metier1;
+    }
+    >.elec{
+      border-left: solid 5px $data-metier2;
+    }
+    >.macCar{
+      border-left: solid 5px $data-metier3;
+    }
+    >.menuChar{
+      border-left: solid 5px $data-metier4;
+    }
+    >.peint{
+      border-left: solid 5px $data-metier5;
+    }
+    >.platIso{
+      border-left: solid 5px $data-metier6;
+    }
+  }
+
+
+  .legendEchelle{
+    min-width: 33.33%;
+    position: relative;
+    float: left;
+    margin-bottom: 20px;
+    >.region{
+      border-left: solid 50px $data-jaune;
+    }
+    >.dept{
+      border-left: solid 50px $capeb;
+      display: none;
+    }
+    >.epci{
+      border-left: solid 50px $blue-color;
+    }
+  }
+
+  .iconInfo{
+    width: 36px;
+    height: 36px;
+    fill: $black;
+    float: left;
+    width: 24px;
+    height: auto;
+  }
+  .info-texte{
+    @extend %texte-info;
+    text-align: left;
+    margin-left: 30px;
+  }
+}

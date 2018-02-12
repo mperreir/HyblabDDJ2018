@@ -1,0 +1,19 @@
+/*style de la partie dashboard */
+.partie-dashboard{
+  @extend %full-viewport;
+  background-color: $white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 48px 1fr 1fr ;
+  >.nav-bar{
+    grid-column: 1 / 5;
+    grid-row: 1;
+    justify-self: stretch;
+    align-self: stretch;
+  }
+  >.bloc-data{
+    grid-auto-flow: row;
+    justify-self: stretch;
+    align-self: stretch;
+  }
+}

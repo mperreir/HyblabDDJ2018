@@ -1,0 +1,96 @@
+@mixin prefix($declarations, $prefixes: ()) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
+  }
+}
+
+
+%full-viewport{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+%titre-titre{
+  font-family: $main-font;
+  font-size: 3.2vw;
+  font-weight: 600;
+}
+
+%mini-titre{
+  font-family: $main-font;
+  font-size: 1.6vw;
+  font-weight: 800;
+}
+
+%titre-epci{
+  font-family: $epci-font;
+  font-size: 3.2vw;
+  font-weight: 700;
+}
+
+%titre-epci_mini{
+  font-family: $epci-font;
+  font-size: 1.6vw;
+  font-weight: 700;
+}
+
+%texte-labeur{
+  font-family: $main-font;
+  font-size: 1.2vw;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+%title-legend{
+  font-family: $main-font;
+  font-size: 1.2vw;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+%texte-legend{
+  font-family: $main-font;
+  font-size: 0.8vw;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: left;
+}
+
+%data-donnee{
+  font-family: $main-font;
+  font-size: 9.8vw;
+  font-weight: 800;
+}
+
+%data-echelle{
+  font-family: $main-font;
+  font-size: 3vw;
+  font-weight: 500;
+}
+
+%data-liste{
+  font-family: $main-font;
+  font-weight: 800;
+}
+
+%texte-info{
+  font-family: $main-font;
+  font-size: 1vw;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+
+@mixin circle($width) {
+    width: $width;
+    height: $width;
+    border-radius: $width / 2;
+}
