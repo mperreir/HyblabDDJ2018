@@ -1,0 +1,72 @@
+{
+    "labels": ["moins de 18 ans","18-30 ans", "30-45 ans", "45-60 ans", "60-75", "75 ans et plus"],
+    "datasets": [
+      {
+        "label": "Deux roues",
+        "fill": false,
+        "borderColor": "#E37B40",
+        "backgroundColor": "#E37B40AA",
+        "pointColor": "#E37B40",
+        "pointStrokeColor": "#fff",
+        "pointHighlightFill": "#fff",
+        "pointHighlightStroke": "rgba(220,220,220,1)",
+        "data": [30, 66, 36, 19, 4, 2]
+      },
+      {
+        "label": "Autres",
+        "fill": false,
+        "borderColor": "#FFEAB6",
+        "backgroundColor": "#FFEAB6AA",
+        "pointColor": "#FFEAB6",
+        "pointStrokeColor": "#fff",
+        "pointHighlightFill": "#fff",
+        "pointHighlightStroke": "rgba(220,220,220,1)",
+        "data": [0, 4, 2, 1, 0, 1]
+      },
+      {
+        "label": "Piéton",
+        "fill": false,
+        "borderColor": "#F53855",
+        "backgroundColor": "#F53855AA",
+        "pointColor": "#F53855",
+        "pointStrokeColor": "#fff",
+        "pointHighlightFill": "#fff",
+        "pointHighlightStroke": "rgba(220,220,220,1)",
+        "data": [11, 8, 8, 10, 5, 7]
+      },
+      {
+        "label": "Poids Lourd",
+        "fill": false,
+        "borderColor": "#4479FF",
+        "backgroundColor": "#4479FFAA",
+        "pointColor": "#4479FF",
+        "pointStrokeColor": "#fff",
+        "pointHighlightFill": "#fff",
+        "pointHighlightStroke": "rgba(220,220,220,1)",
+        "data": [0, 27, 59, 59, 5, 6]
+      },
+      {
+        "label": "Train",
+        "fill": false,
+        "borderColor": "#46B29D",
+        "backgroundColor": "#46B29DAA",
+        "pointColor": "#46B29D",
+        "pointStrokeColor": "#fff",
+        "pointHighlightFill": "#fff",
+        "pointHighlightStroke": "rgba(220,220,220,1)",
+        "data": [0, 32, 156, 65, 1, 1]
+      },
+      {
+        "label": "Voitures",
+        "fill": false,
+        "borderColor": "#F0CA4D",
+        "backgroundColor": "#F0CA4DAA",
+        "pointColor": "#F0CA4D",
+        "pointStrokeColor": "#fff",
+        "pointHighlightFill": "#fff",
+        "pointHighlightStroke": "rgba(220,220,220,1)",
+        "data": [2, 195, 157, 141, 69, 53]
+      }
+    ]
+
+  }

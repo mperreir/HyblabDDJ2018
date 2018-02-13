@@ -1,0 +1,17 @@
+{
+    "labels": [ "Indemmes", "Blessés légers","Blessés hospitalisés", "Décès"],
+      "datasets": [
+      {
+        "label": "Nombre d'accidents",
+        "fill": false,
+        "borderColor": ["#FFEAB6","#46B29D","#F0CA4D","#F53855"],
+        "backgroundColor": ["#FFEAB6","#46B29D","#F0CA4D","#F53855"],
+        "pointHighlightFill": "#fff",
+        "hoverBorderColor" : "#4479FF",
+        "hoverBackgroundColor" : "#4479FF",
+        "pointHighlightStroke": "rgba(220,220,220,1)",
+        "data": [ 58, 33,58, 14]
+      }
+    ]
+
+  }

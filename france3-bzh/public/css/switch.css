@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/css?family=RobotoDraft);
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+svg[hidden]:not(:root) {
+  display: none;
+}
+
+.material-switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 36px;
+  height: 24px;
+}
+.material-switch.active .bar {
+  background-color: rgba(158, 158, 158, 0.5);
+}
+.material-switch.active .thumb-container {
+  -moz-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+.material-switch.active .thumb::before {
+  background-color: #9E9E9E;
+}
+.material-switch.active .ripple {
+  -moz-animation: switchRipple 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-animation: switchRipple 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  animation: switchRipple 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+}
+.material-switch .bar {
+  background-color: #9E9E9E;
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  width: 34px;
+  height: 14px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  -moz-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  -o-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+}
+.material-switch .thumb-container {
+  width: 16px;
+  z-index: 1;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  -moz-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  -o-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.material-switch .thumb {
+  width: 20px;
+  height: 20px;
+}
+.material-switch .thumb::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #FAFAFA;
+  width: 20px;
+  height: 20px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+  -moz-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  -o-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+}
+.material-switch .ripple {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  -moz-transform: translate(-50%, -50%) scale(0);
+  -ms-transform: translate(-50%, -50%) scale(0);
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  -o-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+  transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+@-moz-keyframes switchRipple {
+  0% {
+    opacity: 0;
+    -moz-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    opacity: 0.67;
+  }
+  75% {
+    opacity: 0.1;
+    -moz-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes switchRipple {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    opacity: 0.67;
+  }
+  75% {
+    opacity: 0.1;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes switchRipple {
+  0% {
+    opacity: 0;
+    -moz-transform: translate(-50%, -50%) scale(0);
+    -ms-transform: translate(-50%, -50%) scale(0);
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    opacity: 0.67;
+  }
+  75% {
+    opacity: 0.1;
+    -moz-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.material-switch.active.red .bar, .material-switch.active.red .ripple {
+  background-color: rgba(219, 68, 55, 0.5);
+}
+.material-switch.active.red .thumb::before {
+  background-color: #db4437;
+}
+
+.material-switch.active.green .bar, .material-switch.active.green .ripple {
+  background-color: rgba(15, 157, 88, 0.5);
+}
+.material-switch.active.green .thumb::before {
+  background-color: #0f9d58;
+}
+
+.material-switch.active.blue .bar, .material-switch.active.blue .ripple {
+  background-color: rgba(66, 133, 244, 0.5);
+}
+.material-switch.active.blue .thumb::before {
+  background-color: #4285f4;
+}
+
+.material-switch.active.yellow .bar, .material-switch.active.yellow .ripple {
+  background-color: rgba(244, 180, 0, 0.5);
+}
+.material-switch.active.yellow .thumb::before {
+  background-color: #f4b400;
+}
+
+.material-switch.active.default .bar, .material-switch.active.default .ripple {
+  background-color: rgba(231, 230, 221, 0.5);
+}
+.material-switch.active.default .thumb::before {
+  background-color: #e7e6dd;
+}
+
+.bouttons {
+  margin-left:60%;
+  position: relative;
+  background-color: #30354C;
+  width: 300px;
+  -moz-box-shadow: 0px 1px 2px #000;
+  -webkit-box-shadow: 0px 1px 2px #000;
+  box-shadow: 0px 1px 2px #000;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 10px;
+}
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.row span {
+  color: #f0f0f0;
+  float: left;
+}
+.row .material-switch {
+  float: right;
+}

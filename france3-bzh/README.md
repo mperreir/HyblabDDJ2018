@@ -1,10 +1,10 @@
 # Descriptif du projet
 
-Média :
+Média : France 3 -BZH
 
-Sujet :
+Sujet : Les accidents aux passages à niveaux
 
-Equipe :
+Equipe : L'Orient Express
 
 Patricipants :
 

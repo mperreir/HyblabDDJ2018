@@ -1,0 +1,13 @@
+orange: #E37B40
+jaune:  #F0CA4D
+vert/bleu: #46B29D
+bleu : #4479FF
+rouge :#F53855
+beige : #FFEAB6
+violet sombre: #241D37
+bleu sombre: #30354C
+bleu claire: #5DC1CE
+bleu marine: #153444
+sorte de noir: #0F2433
+
+violet: #3D224C

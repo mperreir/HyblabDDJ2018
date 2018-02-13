@@ -11,6 +11,7 @@
     "animate.css": "^3.5.2",
     "express": "^4.16.2",
     "node-fetch": "^1.7.3",
+    "popmotion": "^8.1.9",
     "request": "^2.83.0"
   },
   "author": "MPDS",

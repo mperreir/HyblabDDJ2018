@@ -8,28 +8,503 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Déclaration de la feuille de style du document-->
     <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+    integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+    crossorigin=""></script>
+
+    <!-- Markecluster -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css"/>
+    <script type="text/javascript" src="js/leaflet.markercluster.js" defer ></script>
+
 		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+
+
+    <!-- JS annimation fullpage -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+
+    <!-- popmotion import's-->
+    <script type="text/javascript" src="js/popmotion.global.min.js"></script>
+
+    <!-- chartjs -->
+    <script type="text/javascript" src="js/Chart.js"></script>
+
+		<!-- Main script that loads data from json file -->
+		<script src="js/main.js" defer></script>
+
+
   </head>
   <body>
+  <ul id="menu">
+    <li data-menuanchor="Questions" class="active" onclick="MoveToto(this);"><a>Questions</a></li>
+    <li data-menuanchor="Carte" class="" onclick="MoveToto(this);"><a>Carte</a></li>
+    <li data-menuanchor="About" class="" onclick="MoveToto(this);"><a>About</a></li>
+  </ul>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
     <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
     <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
 
     <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
+    <!-- <header>
 			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2018</h1>
-    </header>
+      <h1>TCHOU TCHOU, c'est moi, l'Orient Express !</h1>
+    </header> -->
+
+
+
+    <div id="fullpage">
+      <!-- SECTION 1-->
+        <div class="arrows arrowsUp" onclick="">
+            <svg>
+              <g>
+                <circle cx="50" cy="50" r="25" stroke="##241D37" fill="##241D37" />
+                <path class="a1" d="M40 40 L50 48 L60 40"></path>
+                <path class="a2" d="M40 52 L50 60 L60 52"></path>
+              </g>
+          </svg>
+        </div>
+      <div class="arrows arrowsDown" onclick="">
+            <svg>
+              <g>
+                <circle cx="50" cy="50" r="25" stroke="##241D37" fill="##241D37" />
+                <path class="a1" d="M40 40 L50 48 L60 40"></path>
+                <path class="a2" d="M40 52 L50 60 L60 52"></path>
+              </g>
+          </svg>
+        </div>
+      <div id="firstsection" class="section" data-anchor="Questions">
+        <div class="arrows arrowsRight" onclick="">
+            <svg id="first_arrow">
+              <g>
+                <circle cx="50" cy="50" r="25" stroke="##241D37" fill="##241D37" />
+                <path class="a3" d="M40 40 L50 48 L60 40"></path>
+                <path class="a4" d="M40 52 L50 60 L60 52"></path>
+              </g>
+          </svg>
+        </div>
+        <div class="arrows arrowsLeft" onclick="">
+            <svg>
+              <g>
+                <circle cx="50" cy="50" r="25" stroke="##241D37" fill="##241D37" />
+               <path class="a1" d="M40 40 L50 48 L60 40"></path>
+                <path class="a2" d="M40 52 L50 60 L60 52"></path>
+              </g>
+          </svg>
+        </div>
+
+        <div class="slide" id="section_home">
+          <div id="loading"><img src="img/home/Loader.gif" alt="chargement"></div>
+          <section id="container_infos_nav">
+            <img id="logo" src="img/home/Logo.png" alt="logo site"/>
+            <!-- <p id="logotext">
+            Les accidents aux passages à niveau sont malheureusement souvent d'actualité. L'année 2017 a été marquée par un terrible accident en décembre au passage à niveau de Millas, où 5 adolescents ont péri suite à la collision entre un train et un car scolaire.
+            </p>-->
+              <div >
+                <p>
+                  Afin de réaliser ces data visualisations, nous nous sommes intéressés aux accidents survenus sur des passages à niveau pendant 10 ans (de 2006 à 2016).
+                </p>
+                <h3>Pour démarrer <br/>l'expérience</h3>
+                <div id="infos_nav_souris">
+                  <img  src="img/home/SOURIS.png" alt="Scroll avec la molette !" />
+                </div>
+                <div id="infos_nav_clavier">
+                  <img  src="img/home/TOUCHES.png" alt="Descend avec le clavier !" />
+                </div>
+            </div>
+          </section>
+        </div>
+        <div class="slide" id="section_evenements">
+          <div id="container_slide_evt">
+            <div id="slide2_container_text">
+              <h1>Rappel des événements</h1>
+                <p id="text_content_slide2">
+                  Les accidents aux passages à niveau sont
+                  malheureusement souvent d’actualité. L’année 2017 a été marquée par un terrible accident en
+                  décembre au passage à niveau de Millas, où 6 adolescents ont péri suite à la collision entre un
+                  train et un car scolaire.</p>
+                <div id="div_indication_slide_evt">
+                  <!-- <button  class="v button" id="indication_slide_evt">Cliquez pour voir les données</button> -->
+                </div>
+
+              </div>
+              <div id="donnees_slide2">
+                <img id="train_slide2" src="img/slide2/Train2.svg" alt="Train" />
+              </div>
+          </div>
+        </div>
+
+        <!-- Slide passages a niveau -->
+        <div class="slide" id="section_saisons">
+          <div id="container_slide_typesPns">
+            <div id="slide3_container_text">
+              <h1>Les types de passage à niveau existants</h1>
+                <p id="text_content_slide3">
+                  Un passage à niveau est le croisement au même niveau d’une voie ferrée et d’une voie routière ou piétonne. On dénombre aujourd’hui en France plus de 15000  passages à niveau.<br/>
+                  </br>
+                  Il en existe 5 types :
+                </p>
+                  <img id="typesPns" src="img/slide_pns/pns2.png" alt="Train" />
+            </div>
+        </div>
+
+        <!-- QUIZZ -->
+        <div class="slide" id="section_home">
+          <section class="title_question">
+            <h1>Pensez-vous que le nombre de passages à niveau en France depuis ces 20 dernières années a :</h1>
+              <div id="q1" class="q">
+                <button type="button"  class="v button" onclick="reponse(this);">Baissé</button>
+                <button type="button"  class="f button" onclick="reponse(this);">Augmenté</button>
+                <button type="button"  class="f button" onclick="reponse(this);">Stagné</button>
+              </div>
+
+              <div class="r" id="r1">
+                <p> aezaeaeaeazeaze </p>
+              </div>
+          </section>
+        </div>
+        <div class="slide" id="section_home">
+          <section class="title_question">
+            <h1>Quelle distance parcourt un train lancé à 100km/h pour s'arrêter ?</h1>
+              <div id="q2" class="q">
+                <button type="button"  class="f button" onclick="reponse(this);">100m</button>
+                <button type="button"  class="v button" onclick="reponse(this);">1000m</button>
+                <button type="button"  class="f button" onclick="reponse(this);">1500m</button>
+              </div>
+
+              <div class="r" id="r2">
+                <p> aezaeaeaeazeaze </p>
+              </div>
+          </section>
+        </div>
+        <div class="slide" id="section_home">
+          <section class="title_question">
+            <h1>Combien de véhicules traversent chaque jour un passage à niveau ?</h1>
+              <div id="q3" class="q">
+                <button type="button"  class="f button" onclick="reponse(this);">500 000</button>
+                <button type="button"  class="f button" onclick="reponse(this);">7 000 000</button>
+                <button type="button"  class="v button" onclick="reponse(this);">16 000 000</button>
+              </div>
+
+              <div class="r" id="r3">
+                <p> aezaeaeaeazeaze </p>
+              </div>
+          </section>
+        </div>
+        <div class="slide" id="section_home">
+          <section class="title_question ">
+            <h1>Selon vous, les principaux responsables des accidents aux passages à niveau sont :</h1>
+              <div id="q4" class="q">
+                <button type="button"  class="v button" onclick="reponse(this);">Les automobilistes</button>
+                <button type="button"  class="f button" onclick="reponse(this);">Les trains</button>
+                <button type="button"  class="f button" onclick="reponse(this);">Les passages à niveau</button>
+              </div>
+
+              <div class="r" id="r4">
+                <p> aezaeaeaeazeaze </p>
+              </div>
+              <!-- <div class="more" id="more2">
+                <img id="more22" src="img/question/tips.svg"/>
+                <p id="more21"> zaeazeaze </p>
+              </div> -->
+          </section>
+        </div>
+          <!-- Slide jour / nuit -->
+          <div class="slide" id="section_illu1">
+              <div class="beforeday"></div>
+            <section class="title_question">
+
+              <h1>Pensez-vous que les accidents se font le plus souvent de nuit ou de jour ?</h1>
+
+              <div id="q5" class="q">
+                <button type="button" class="f button" onclick="Light();reponse(this)">Nuit</button>
+                <button type="button" class="v button" onclick="Light();reponse(this)">Jour</button>
+              </div>
+              <p id="nuit">29%</p>
+              <p id="jour"><b>71%</b> des accidents aux passages à niveau ont lieu en pleine journée.<br/>Cela s’explique par la densité
+de circulation des voitures et des trains qui est beaucoup plus faible la nuit.</p>
+            </section>
+
+          </div>
+          <!-- slide 5 MONTRES-->
+          <div class="slide" id="slide_montre">
+            <div class="beforeday"></div>
+            <div id="slide_container_montres">
+              <h1>Doit-on être plus vigilant sur les trajets habituels ?  </h1>
+              <p>
+                Ces graphiques représentent la proportion d’accidents par type de trajet.
+              </p>
+                <div id="container_chart_type_montre">
+                  <div id="container_slide_nuit">
+                    <canvas id="chart_pie_nuit"></canvas>
+                  </div>
+                  <div id="container_slide_jour">
+                    <canvas id="chart_pie_jour"></canvas>
+                  </div>
+                </div>
+                <img id="legende_trajets" src="img/4saisons/legende.png" alt="Train" />
+
+            </div>
+          </div>
+           <!-- Slide SAISONS -->
+          <div class="slide" id="slide_saisons">
+            <div id="container_slide_saisons">
+              <h1>A quelle saison ont lieu les accidents les plus graves ?</h1>
+
+              <canvas id="chart_printemps"></canvas>
+              <canvas id="chart_ete"></canvas>
+              <canvas id="chart_autonne"></canvas>
+              <canvas id="chart_hiver"></canvas>
+
+            </div>
+            <div id="saison_graph">
+              <img id="legende_saisons" src="img/4saisons/legende3.png" alt="Legende saisons" />
+            </div>
+          </div>
+          <!-- slide 4 CAMION-->
+          <div class="slide" id="section_illu_camion">
+          <section id="transport">
+            <section id="title_question_transport">
+              <h1>Quel type de véhicules est le plus impliqué dans les accidents ?</h1>
+
+              <h2 id="infos_accidents"></h2>
+            </section>
+                <div id="graph_vehicule">
+
+                    <div id="left_infos_grav">
+                      <div id="leger"><p>15 blessé léger</p></div>
+                      <div id="hospitalise"><p>15 hospitalisées</p></div>
+                    </div>
+                    <div id="right_infos_grav">
+                      <div id="grave"><p>15 blessé grave</p></div>
+                      <div id="mort"><p>15 morts</p></div>
+                    </div>
+                </div>
+                <img  id="pie_veh" src="img/Vehicules/none.png" alt="voiture" />
+                <div id="vehicule_selection">
+                  <img  class="select_veh" id="voiture" src="img/Vehicules/Voiture.svg" alt="voiture" />
+                  <img  class="select_veh" id="camion" src="img/Vehicules/Camion.svg" alt="camion" />
+                  <img  class="select_veh" id="moto" src="img/Vehicules/Moto.svg" alt="moto" />
+                  <img  class="select_veh" id="pieton" src="img/Vehicules/Personne.svg" alt="pieton" />
+                  <img  class="select_veh" id="img_train_slide3" src="img/Vehicules/Train.svg" alt="train" />
+                </div>
+            </section>
+          </div>
+          <!-- Accidents en fct de l'age et des véhicules -->
+        <div class="slide">
+          <div id="chart_lum_container">
+            <h1>Quel âge ont les occupants des véhicules impliqués ?</h1>
+            <p>Placez votre curseur sur les points du graphique pour plus de détails.</p>
+            <canvas id="myLineChart"></canvas>
+            <p> Ce graphique représente l’âge des occupants des véhicules impliqués dans les accidents aux passages à niveau.</p>
+          </div>
+        </div>
+
+        <!-- slide 6 AMBULANCE-->
+          <div class="slide" id="slide_ambu">
+            <div id="slide_ambu_text">
+              <img   id="img_ambu" src="img/slide_acc_regions/ambulance.png" alt="ambulance" />
+              <p>
+                Le nombre d’accidents est généralement proportionnel à la circulation,
+                donc au nombre d’habitants. L’Ile de France étant la région la plus
+                peuplée, la circulation y est plus dense et les accidents, notamment
+                aux passages à niveau, plus nombreux.
+              </p>
+            </div>
+            <h1>Votre région fait-elle partie des plus concernées par les accidents aux passages à niveau ?</h1>
+            <canvas id="chart_region_acc"></canvas>
+          </div>
+
+
+          </section>
+
+      </div>
+      </div>
+      <!-- Carte -->
+      <div id="secondsection" class="section nothome" data-anchor="Graphiques">
+        <div class="slide">
+          <div id="map" style="height:600px; width: 600px"></div>
+          <div class="bouttons">
+            <h1>Cartographie des accidents</h1>
+            <p id="warning"> Certains filtres peuvent mettre du temps à s'afficher.<br/> Sélectionnez les filtres que vous souhaitez voir apparaître sur la carte.</p>
+            <h2>Informations générales</h2>
+            <div class="row">
+              <span>Passage à niveau</span>
+              <div class="material-switch blue" onclick="AfficherPn(this)">
+              </div>
+            </div>
+            <div class="row">
+              <span>Accidents</span>
+              <div class="material-switch red" onclick="AfficherCoordAcc(this)"></div>
+            </div>
+            <h2>Informations régions</h2>
+            <div class="row">
+              <span>Accidents par régions</span>
+              <div class="material-switch yellow lie" onclick="AfficherAcc(this)"></div>
+            </div>
+            <div class="row">
+              <span>Ratio accidents par Région</span>
+              <div class="material-switch green lie" onclick="AfficherRatioRegion(this)"></div>
+            </div>
+            <img id="LoadingImage" class="spinner" src="img/carte/spin.svg" alt="bouton de chargement" />
+            <div id="ampoule">
+              <img id="carte_astuce" src="img/carte/about.png"/>
+              <span>Cliquer sur un symbole de la carte pour avoir plus d'informations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div id="thirdsection" class="section nothome" data-anchor="About">
+        <div class="slide">
+          <div id="ens_info">
+            <div id="contain_about">
+              <div class="personnages">
+                <div class="personnage polytech">
+                  <img class="image_perso" src="img/team/gerard.png" />
+                  <div class="info">
+                    <p class="perso">Gerard Hardman</p>
+                    <p class="rouge">Guillaume Pelluet</p>
+                  </div>
+                </div>
+                <div class="personnage polytech">
+                  <img class="image_perso" src="img/team/docteur.png" />
+                  <div class="info">
+                    <p class="perso">Docteur Arbuthnot</p>
+                    <p class="rouge">Max David</p>
+                  </div>
+                </div>
+                <div class="personnage polytech">
+                  <img class="image_perso" src="img/team/hector.png"/>
+                  <div class="info">
+                    <p class="perso">Hector MacQueen</p>
+                    <p class="rouge">Clément Ian</p>
+                  </div>
+                </div>
+                <div class="personnage audencia">
+                  <img class="image_perso" src="img/team/mary.png" />
+                  <div class="info">
+                    <p class="perso">Mary Debenham</p>
+                    <p class="bleu">Clémentine Albert</p>
+                  </div>
+                </div>
+                <div class="personnage audencia">
+                  <img class="image_perso" src="img/team/pilar.png" />
+                  <div class="info">
+                    <p class="perso">Pilar Estravados</p>
+                    <p class="bleu">Mathilde Adrien</p>
+                  </div>
+                </div>
+                <div class="personnage audencia">
+                  <img class="image_perso" src="img/team/caro.png" />
+                  <div class="info">
+                    <p class="perso">Caroline Hubbard</p>
+                    <p class="bleu">Agathe de Brunier</p>
+                  </div>
+                </div>
+              </div>
+              <div class="personnages">
+
+                <div class="personnage audencia">
+                  <img class="image_perso" src="img/team/comtesse.png"/>
+                  <div class="info">
+                    <p class="perso">Comtesse Andrenyi</p>
+                    <p class="bleu">Maud Jannin</p>
+                  </div>
+                </div>
+                <div class="personnage agr">
+                  <img class="image_perso" src="img/team/edward.png" />
+                  <div class="info">
+                    <p class="perso">Edward Masterman</p>
+                    <p class="orange">Valentin Blanchard</p>
+                  </div>
+                </div>
+                <div class="personnage agr">
+                  <img class="image_perso" src="img/team/ratchet.png" />
+                  <div class="info">
+                    <p class="perso">Edward Ratchett</p>
+                    <p class="orange">Yann Letort</p>
+                  </div>
+                </div>
+                <div class="personnage agr">
+                  <img class="image_perso" src="img/team/comte.png"/>
+                  <div class="info">
+                    <p class="perso">Comte Andrenyi</p>
+                    <p class="orange">Marc-Antoine Le Donnant</p>
+                  </div>
+                </div>
+                <div class="personnage journaliste">
+                  <img class="image_perso" src="img/team/hercule.png"/>
+                  <div class="info">
+                    <p class="perso">Hercule Poirot</p>
+                    <p class="vert">Thierry Peigné</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div id="informations">
+            <div id="info_sources">
+              <h2>Sources</h2>
+                <a href="https://data.sncf.com/explore/?sort=modified">SNCF</a>
+                <a href="https://www.data.gouv.fr/">Data Gouv</a>
+            </div>
+            <div id="réseau" class="infos">
+              <h2>Réseau sociaux</h2>
+              <a href="https://twitter.com/Lorient_Express">Twitter</a>
+              <a href="#">Facebook</a>
+            </div>
+            <div id="equipe">
+              <p class="vert journalistes">France3 Bretagne</p>
+              <a href="http://web.polytech.univ-nantes.fr/"><p class="rouge polytechs">Polytech</p></a>
+              <a href="http://sciencescom.audencia.com/"><p class="bleu audencias">ScienceCom</p></a>
+              <a href="https://www.agrnantes.fr/"><p class="orange agrs">AGR Nantes</p></a>
+            </div>
+          </div>
+        </div>
+        <div id="ens_ecole">
+              <p class="vert journalistes">Denis Vannier (Ouest Media Lab) et Julien Kostrèche (Ouest media lab)</p>
+              <a href="http://web.polytech.univ-nantes.fr/"><p class="rouge polytechs">Yannick Prié et Mathieu Perreira Da Silva </p></a>
+              <a href="http://sciencescom.audencia.com/"><p class="bleu audencias">Estelle Prusker et Simon Auffret</p></a>
+              <a href="https://www.agrnantes.fr/"><p class="orange agrs">Mathias Heins et Guillaume Bouterige</p></a>
+              <p id="info_dataviz">
+                Pour réaliser ces visualisations de données, nous nous sommes basés sur la base de données du gouvernement relatant le nombre d’accidents aux passages à niveau ayant engendré des dommages corporels.
+              </p>
+        </div>
+        <div id="logos">
+          <img id="logopopo" src ="img/avatar/popo.png" alt="logo polytech"/>
+          <img id="logoaudencia" src ="img/avatar/audencia.png" alt="logo polytech"/>
+          <img id="logoagr" src ="img/avatar/agr.png" alt="logo polytech"/>
+          <img id="logonantes" src ="img/avatar/nantes.png" alt="logo polytech"/>
+          <img id="logopays" src ="img/avatar/pays.png" alt="logo polytech"/>
+          <img id="logomit" src ="img/avatar/mit.png" alt="logo polytech"/>
+          <img id="logohyb" src ="img/avatar/hyb.png" alt="logo polytech"/>
+          <img id="logocc" src ="img/avatar/cc.png" alt="logo polytech"/>
+          <img id="logoouest" src ="img/avatar/ouest.png" alt="logo polytech"/>
+          <img id="logofr3" src ="img/avatar/fr3.png" alt="logo polytech"/>
+        <div>
+      </div>
+        </div>
+    </div>
+
+
 
     <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
+
+		<!--<p>Here is some data from a json file : <span id="data"></span><p> -->
 
     <!-- Notre pied de page -->
     <footer>
