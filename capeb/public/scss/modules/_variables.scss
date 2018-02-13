@@ -1,0 +1,74 @@
+/*couleur principale*/
+$main-color: #34EBC2;
+$main-darker: rgba(23,152,139,1);
+
+$main-contrast: #FBEE3D;
+
+
+$blue-color: rgba(104,192,237,1);
+
+$scale-color10: rgba(240,101,85,1);
+$scale-color20: rgba(244,133,64,1);
+$scale-color30: rgba(248,165,43,1);
+$scale-color40: rgba(251,157,21,1);
+$scale-color50: rgba(255,229,0,1);
+$scale-color60: rgba(225,223,36,1);
+$scale-color70: rgba(195,216,76,1);
+$scale-color80: rgba(165,210,113,1);
+$scale-color90: rgba(135,203,151,1);
+$scale-color100: rgba(105,197,185,1);
+
+$data-jaune: rgba(255,224,0,1);
+$data-jaunepale: rgba(254,235,39,1);
+
+$data-metier1: rgba(223,38,29,1);
+$data-metier2: rgba(213,188,40,1);
+$data-metier3: rgba(88,83,83,1);
+$data-metier4: rgba(100,191,182,1);
+$data-metier5: rgba(104,192,237,1);
+$data-metier6: rgba(235,103,105,1);
+$autre: rgba(29, 29, 27, 0.3);
+
+$data-CDI: rgba(255,224,0,1);
+$data-CDD: rgba(0,141,139,1);
+$data-apprentis: rgba(88,83,83,1);
+$data-interim: rgba(104,192,237,1);
+
+$data-CCBaisse: rgba(235,141,139,1);
+$data-CCStable: rgba(223,38,29,1);
+$data-CCHausse: rgba(178, 31, 24, 1);
+
+$data-travauxneuf: rgba(254,235,39,1);
+$data-travauxMP: rgba(52,48,71,1);
+$data-travauxReno: rgba(0,121,122,1);
+
+
+$color-accessibilite:rgba(18,68,75,100);
+$color-assainissment:rgba(96,192,190,100);
+$color-autre:rgba(227,153,52,100);
+$color-dechets:rgba(42,114,135,100);
+$color-eco:rgba(208,2,27,100);
+$color-ecoenergie:rgba(39,194,172,100);
+$color-renouvelable:rgba(152,17,33,100);
+$color-air:rgba(235,188,42,100);
+$color-eau:rgba(96,177,192,100);
+$color-materiaux:rgba(214,235,55,100);
+
+
+$data-oui:rgba(100,191,182,100);
+$data-non:rgba(88, 83, 83, 100);
+
+$white: #ffffff;
+$black: rgba( 29, 29, 27, 1 );
+$capeb: rgba(223,38,29,1);
+
+
+
+/*typo principale*/
+$main-font: 'Montserrat', sans-serif;
+
+/*typo epci*/
+$epci-font: 'Barlow Condensed', sans-serif;
+
+/*typo data*/
+$data-font: 'Open Sans', sans-serif;

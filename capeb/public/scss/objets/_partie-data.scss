@@ -1,0 +1,65 @@
+/* style de la partie data */
+.partie-data{
+  @extend %full-viewport;
+  background-color: $main-contrast;
+  display: grid;
+  grid-template-columns: 22.5vh 1fr 1fr;
+  grid-template-rows: 22.5% 67.5% 10% ;
+  >.map-pdl{
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    >svg{
+      filter: drop-shadow(5px 5px 10px rgba( 29, 29, 27, 0.3 ));
+    }
+  }
+  >.content-data{
+    color: $black;
+    grid-column: 3;
+    grid-row: 2;
+    .textes-data{
+      width: 85%;
+      transform: translate(0, -50%);
+      margin: 35% 0;
+      >.title{
+        @extend %titre-epci;
+        height: 6.5vw;
+        margin-bottom: 20px;
+      }
+      >.container{
+        position: relative;
+        height: 85%;
+        bottom: 0px;
+        >.texte{
+          @extend %texte-labeur;
+          margin-bottom: 3vw;
+          >#mailto{
+            border-bottom: solid 1px $black;
+          }
+          >#mailto:hover{
+            font-weight: 500;
+            border-bottom: solid 2px $black;
+          }
+        }
+        >.iconInfo{
+          width: 36px;
+          height: 36px;
+          fill: $black;
+          float: left;
+          width: 24px;
+          height: auto;
+        }
+        >.info-texte{
+          @extend %texte-info;
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+  >.motif-capeb{
+    position: absolute;
+    bottom: -30px;
+    right: -8px;
+  }
+}

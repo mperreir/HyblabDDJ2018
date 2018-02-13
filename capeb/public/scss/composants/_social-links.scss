@@ -1,0 +1,16 @@
+/* style du composant social-links*/
+.social-links{
+  width: 100px;
+  height: 35px;
+  >.link{
+    position: relative;
+    float: left;
+  }
+  >.link:last-of-type{
+    float: right;
+  }
+  >.link:last-of-type:hover{
+    left: 0;
+    right: 1px;
+  }
+}

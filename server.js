@@ -34,6 +34,8 @@ app.use(/\/$/,function(req, res, next){
 
 
 // launch main server app
+
+//attention remettre le port a 8080 ...
 var port = 'PORT' in process.env ? process.env.PORT : 8080;
 var server = app.listen(port, function () {
 

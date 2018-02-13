@@ -1,0 +1,27 @@
+/*importation modules*/
+@import "modules/resets";
+@import "modules/variables";
+@import "modules/extends";
+
+/*importation elements*/
+@import "elements/icon";
+@import "elements/decoBGintro";
+@import "elements/visuelcapeb";
+@import "elements/buttonscroll";
+
+/*importation composants*/
+@import "composants/social-links";
+@import "composants/content-intro";
+@import "composants/textes-intro";
+@import "composants/nav-bar";
+@import "composants/bloc-data";
+@import "composants/button-zoom";
+@import "composants/bloc-recto";
+
+/*importation objets*/
+@import "objets/partie-intro";
+@import "objets/partie-data";
+@import "objets/partie-team";
+@import "objets/partie-soutien";
+@import "objets/partie-dashboard";
+@import "objets/partie-dataviz";
