@@ -1,0 +1,135 @@
+/* just a sample css rule to show that everything works */
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	background : #2D4D92;
+	text-align: justify;
+}
+
+#animation{
+	text-align: center;
+}
+
+#texte{
+	font-weight: 400;
+	border:solid;
+	border-width: 4px;
+	background: white;
+	padding-right: 30px;  
+	padding-left: 30px;
+	padding-top: 10px;  
+	padding-bottom: 0px;
+	margin-top: 10px;
+	margin-right: 20%;
+	margin-left: 20%;
+}
+
+#artBtnTxt{
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 7px;
+}
+
+#boutonGauche, #boutonEnSavoirPlus{
+	display: none;
+	margin-right: 1%;
+}
+
+#btnCommencer{
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+	border:solid;
+	border-width: 5px;
+	border-radius: 5px;
+	background: none;
+	width: 20%;
+	margin: auto;
+	margin-top: 30px;
+	padding: 20px 20px 20px 20px;
+	font-weight: 700;
+	font-size: 1.2em;
+	text-decoration: none;
+	color: white;
+}
+
+#bntCommencer:hover {
+	text-decoration: underline;
+}
+
+#btnCommencer:active {
+	border-color: black; 
+	color: black; 
+}
+
+#enSavoirPlus{
+	font-weight: 400;
+	border: solid;
+	border-width: 5px;
+	position: absolute;
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-top: 10%;
+	padding: 20px;
+	background: white;
+	z-index: 2;
+	display: none;
+}
+
+#enSavoirPlusHaut{
+	font-weight: 700;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#boutonExit{
+	height: 33px;
+	width: 33px;
+}
+
+#enSavoirPlusBas{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#enSavoirPlusBas p{
+	width: 45%;
+}
+
+h1{
+	position: relative;
+	margin: inherit;
+	margin-top: 4px;
+	margin-left: 2%;
+}
+
+#displayOn{
+	filter: blur(0px);
+}
+
+em{
+    font-style: normal;
+    text-decoration: underline;
+    cursor : help;
+}
+
+.definition article{
+    border: solid;
+    border-radius: 10px;
+    background: white;
+    width: 40%;
+    display: none;
+    position: absolute;
+    z-index: 3;
+    padding: 10px;
+    text-align: justify;
+}
+
+/* Footer */
+footer{
+  font-size: small;
+  text-align: center;
+}

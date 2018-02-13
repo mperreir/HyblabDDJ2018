@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- Notre page est en français -->
+<head>
+  <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
+  <title>PestiBusters</title>
+  <!-- Basic viewport setting for mobile friendly page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Déclaration des feuilles de style du document -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="fullPage.js-master/jquery.fullPage.css" />
+  <link rel="stylesheet" href="css/styleDataviz.css">
+
+  <script src="js/example.js" defer></script>
+
+  <!-- d3 -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+
+  <!-- Script Histogramme -->
+  <script src="js/cumHisto.js" defer></script>
+
+  <!-- Importation font family -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Librairie Bootstrap en JS pour les animations -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Those polyfills are required so that old browsers support fetch mecanism -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+
+
+  <!-- Librairies nécessaires pour utiliser fullpage (site one page) -->
+  <script src="fullPage.js-master/vendors/jquery.easings.min.js"></script>
+  <script type="text/javascript" src="fullPage.js-master/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="fullPage.js-master/jquery.fullPage.js"></script>
+
+  <!-- Petit morceau de script lié au one page -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $('#fullpage').fullpage({
+          sectionsColor: ['#3362C3', '#3362C3', '#688DD8', '#FFFFFF', '#96edbd'],
+          css3: true,
+          navigation : true,
+
+          //Events
+          afterLoad: function (anchorLink, index) {
+            var loadedSection = $(this);
+            var pattern = /\d+/g; // regex pour conserver uniquement le numéro de la page
+            var currentLI = Number((anchorLink.match(pattern))[0]); // Numéro de la page
+            var numberLI = $('ul#ulNav li').length; // Nombre de <li> dans le <ul>
+
+            for (var indexLi = 1; indexLi <= numberLI; indexLi++) {
+              if (indexLi === currentLI) {
+                $("#li" + indexLi).addClass("active") // <li> actif
+              }
+              else {
+                $("#li" + indexLi).removeClass("active"); // On réinitialise le style du <li>
+              }
+            }
+
+            if (currentLI >= 4) {
+              $("#li4").addClass("active") // <li> Crédits actif
+            }
+          }
+        });
+      });
+  </script>
+</head>
+
+<body>
+  <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
+  <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
+  <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+  <div id="container">
+
+    <!-- Entête, créé avec bootstrap -->
+    <header>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"> PestiBusters </a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right" id="ulNav">
+              <li id="li1">
+                <a href="#page1"> Carte Bretagne </a>
+              </li>
+              <li id="li2">
+                <a href="#page2"> Campbon </a>
+              </li>
+              <li id="li3">
+                <a href="#page3"> Santé à Campbon </a>
+              </li>
+              <li id="li4">
+                <a href="#page4"> Crédits </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Les différentes pages faites avec fullpage.js -->
+    <div id="fullpage">
+
+      <!-- Page 1 -->
+      <div class="section" data-anchor="page1">
+      	<div id="page1DisplayOn">
+
+          <!-- Panneau descriptif de la page -->
+          <section id="section1" class="panel">
+            <p class="title pTitle"> Comparez les nappes souterraines de la Bretagne </p>
+            <p class="pContent pTop normal">
+              Cette data visualisation vous invite à comparer la présence des pesticides dans les nappes souterraines en Bretagne.
+            </p>
+            <p class="pContent pBottom normal">
+              Il existe différents types de réservoirs d’eau naturels : les nappes phréatiques ou les aquifères. Les réserves d’eau souterraine
+              en Bretagne sont principalement des aquifères. A la différence des nappes phréatiques, l’eau stockée dans un aquifère provient
+              d’une infiltration dans les failles du socle rocheux breton. La toxicité des pesticides est répertoriée selon le système
+              international d’étiquetage des substances pesticides (ex : H300, mortel en cas d’ingestion). Ainsi ce système d’étiquetage,
+              non officiel, permet de qualifier les toxicités potentielles de toutes les masses d’eau de Bretagne. L’analyse présentée
+              ici se base sur les étiquettes des vingt substances les plus trouvées (par département).
+            </p>
+          </section>
+
+          <!-- Timeline --> 
+          <ul class="timeline timeline-horizontal" id="timeline1">
+            <li class="timeline-item">
+              <button class="timeline-badge primary" id="2012"><p class="normal pTimeline"> 2012 </p></button>
+            </li>
+            <li class="timeline-item">
+              <button class="timeline-badge primary" id="2013"><p class="normal pTimeline"> 2013 </p></button>
+            </li>
+            <li class="timeline-item">
+              <button class="timeline-badge primary" id="2014"><p class="normal pTimeline"> 2014 </p></button>
+            </li>
+            <li class="timeline-item">
+              <button class="timeline-badge primary" id="2015"><p class="normal pTimeline"> 2015 </p></button>
+            </li>
+            <li class="timeline-item">
+              <button class="timeline-badge primary" id="2016"><p class="normal pTimeline"> 2016 </p></button>
+            </li>
+          </ul>
+
+          <!-- Les histogrammes et leur description -->
+          <section id="section2" class="panel">
+            <article id="zone1" class="article1">
+                <svg id="histGauche" width="400" height="380" viewBox="0 0 400 380" preserveAspectRatio="none"></svg>
+                <p id="descriptionGauche" class="normal pContent"></p>
+            </article>
+            <article id="zone2" class="article1">
+  		          <svg id="histDroite" width="400" height="380" viewBox="0 0 400 380" preserveAspectRatio="none"></svg>
+                <p id="descriptionDroite" class="normal pContent"></p>
+            </article>
+            <article id="descriptionHisto">
+              <article id="Cotes_Armor" class="description">
+                <p class="2012">Forte présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils provoquent des brûlures
+                  cutanées. D’autres pesticides également présents sont mortels. Enfin, on retrouve aussi un certain nombre de substances
+                  cancérigènes et d’autres substances nocives pour les organes.</p>
+                <p class="2013">Forte présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils provoquent des brûlures
+                  cutanées. D’autres pesticides sont également présents en forte quantité et sont mortels. Enfin, on retrouve aussi un certain
+                  nombre de substances nuisibles aux organes humains.</p>
+                <p class="2014">Présence de pesticides, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils provoquent des brûlures
+                  cutanées. On retrouve aussi un certain nombre de substances nocives pour les organes et d’autres qui mortelles.</p>
+                <p class="2015">Présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils peuvent provoquer des brûlures
+                  cutanées et sont nocifs pour les organes. On retrouve aussi un certain nombre de substances mortelles.</p>
+                <p class="2016">Très forte présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils peuvent provoquer
+                  des brûlures cutanées. D’autres pesticides présents sont nocifs pour les organes et mortels. Enfin, on retrouve aussi un
+                  certain nombre de substances cancérigènes.</p>
+                </article>
+                <article id="Finistere" class="description">
+                  <p class="2012">Forte présence de pesticides, toxiques en cas d’ingestion et d’inhalation. Ces produits peuvent provoquer aussi des brûlures
+                    cutanées. On retrouve aussi des composants pouvant être mortels et d’autres nocifs pour les organes.</p>
+                  <p class="2013">Forte présence de pesticides, toxiques en cas d’ingestion et d’inhalation. On retrouve aussi des composants pouvant être
+                    mortels et d’autres nocifs pour les organes. Enfin, on trouve aussi des substances pouvant induire une anomalie génétique.</p>
+                  <p class="2014">Présence de substances nocives pour les organes. D’autres pesticides présents sont toxiques en cas d’inhalation ou d’ingestions.
+                    D’autres sont également mortels.</p>
+                  <p class="2015">Présence de substances nocives pour les organes. D’autres pesticides présents sont toxiques en cas d’inhalation ou d’ingestions.
+                    D’autres sont également mortels</p>
+                  <p class="2016">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation. On retrouve aussi des composants pouvant être
+                    nocifs pour les organes et d’autres mortels. Enfin on retrouve aussi des substances cancérigènes.</p>
+                </article>
+                <article id="Ile_et_Vilaine" class="description">
+                  <p class="2012">Forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation. On retrouve également des substances mortelles.</p>
+                  <p class="2013">Forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation. Sont également présentes des molécules mortelles
+                    et d’autres induisant des anomalies génétiques. On trouve aussi des pesticides qui provoquent des effets néfastes sur
+                    les organes.</p>
+                  <p class="2014">Forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation et néfastes pour les organes. D’autres présentent
+                    des risques mortels.</p>
+                  <p class="2015">Forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation ou qui sont néfastes pour les organes. D’autres
+                    présentent des risques mortels.</p>
+                  <p class="2016">Très forte présence de pesticides toxiques en cas d’ingestion ou d’inhalation. On trouve également des substances avec
+                    des effets néfastes sur les organes et d’autres avec des effets mortelles.</p>
+                </article>
+                <article id="Loire_Atlantique" class="description">
+                  <p class="2012">Présence importante de produits phytosanitaires, toxiques en cas d’ingestion ou d’inhalation. On trouve des pesticides
+                    avec des effets néfastes sur les organes et d’autres étant susceptibles d’être cancérigènes et mortels.</p>
+                  <p class="2013">Présence de substances pesticides, toxiques en cas d’ingestion ou d’inhalation. On en trouve avec des effets néfastes sur
+                    les organes et d’autres étant susceptibles d’être cancérigènes et mortelles.</p>
+                  <p class="2014">Présence de produits phytosanitaires, toxiques en cas d’ingestion ou d’inhalation. On trouve des substances avec des effets
+                    néfastes sur les organes et d’autres étant susceptibles d’être cancérigènes et mortelles.</p>
+                  <p class="2015">Présence de pesticides toxiques en cas d’ingestion ou d’inhalation. On en trouve avec des effets néfastes sur les organes
+                    et d’autres étant susceptibles d’être cancérigènes et mortels.</p>
+                  <p class="2016">Très forte présence de substances chimiques non naturelles, toxiques en cas d’ingestion ou d’inhalation. On trouve des
+                    pesticides provoquant des effets néfastes sur les organes.</p>
+                </article>
+                <article id="Maine_et_Loire" class="description">
+                  <p class="2012">Présence importante de substances pesticides avec des effets toxiques en cas d’inhalation ou d’ingestion. On trouve également
+                    des pesticides pouvant être mortels et avec des effets nocifs sur les organes.</p>
+                  <p class="2013">Présence importante de produits avec des effets toxiques en cas d’inhalation ou d’ingestion. On trouve également des pesticides
+                    pouvant être mortels et avec des effets nocifs sur les organes.</p>
+                  <p class="2014">Présence importante de produits avec des effets nocifs sur les organes et toxiques en cas d’inhalation ou d’ingestion.
+                    On trouve également des pesticides pouvant être mortels.</p>
+                  <p class="2015">Présence importante de produits avec des effets nocifs sur les organes et toxiques en cas d’inhalation ou d’ingestion.
+                    On trouve également des pesticides pouvant être mortels.</p>
+                  <p class="2016">Présence importante de produits avec des effets toxiques en cas d’inhalation ou d’ingestion. On trouve également des pesticides
+                    pouvant être mortels et avec des effets nocifs sur les organes.</p>
+                </article>
+                <article id="Mayenne" class="description">
+                  <p class="2012">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation, ainsi que de substances dangereuses pour les
+                    organes, voire mortelles.</p>
+                  <p class="2013">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation, ainsi que de substances dangereuses pour les
+                    organes, voire mortelles.</p>
+                  <p class="2014">Forte présence de produits dangereux pour les organes et toxiques en cas d’ingestion, ainsi que des risques mortels.</p>
+                  <p class="2015">Forte présence de produits dangereux pour les organes et toxiques en cas d’ingestion, ainsi que des risques mortels.</p>
+                  <p class="2016">Forte présence de composants toxiques en cas d’ingestion et d’inhalation, ainsi que substances dangereuses pour les organes,
+                    et même mortelles.</p>
+                </article>
+                <article id="Morbihan" class="description">
+                  <p class="2012">Forte présence de pesticides toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils provoquent des brûlures
+                    cutanées. D’autres pesticides sont très présents dans les eaux souterraines et sont mortels. Enfin, on retrouve aussi
+                    un certain nombre de substances dangereuses pour l’intégrité des organes humains.</p>
+                  <p class="2013">Présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils provoquent des brûlures
+                    cutanées. D’autres pesticides également présents sont mortels. Enfin, on retrouve aussi un certain nombre de substances
+                    nocives pour les organes.</p>
+                  <p class="2014">Présence de composants, néfastes pour les organes. D’autres pesticides présents sont mortels. Enfin, on retrouve aussi
+                    un certain nombre de substances qui sont toxiques en cas d’ingestion ou d’inhalation.</p>
+                  <p class="2015">Présence de composants, néfastes pour les organes. D’autres pesticides présents sont mortels. Enfin, on retrouve aussi
+                    un certain nombre de substances qui sont toxiques en cas d’ingestion ou d’inhalation.</p>
+                  <p class="2016">Présence de composants, toxiques en cas d’ingestion et d’inhalation. De même, à leur contact, ils provoquent des brûlures
+                    cutanées. D’autres pesticides également présents sont mortels. Enfin, on retrouve aussi un certain nombre de substances
+                    cancérigènes et d’autres substances nocives pour les organes de l’homme.</p>
+                </article>
+            </article>
+
+            <!-- La légende -->
+            <p class="title" id="legendeTitle">  Principaux dangers des pesticides </p>
+            <table id="legende">
+              <tr>
+                <td class="normal cellule">
+                  <svg width="30" height="10">
+                    <rect width="30" height="10" style="fill:#D42E1E;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+                  <p class="pLegende"> Mortel </p>
+                </td>
+                <td class="normal cellule">
+                  <svg width="30" height="10">
+                    <rect width="30" height="10" style="fill:#F8C000;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+                  <p class="pLegende"> Cancer </p>
+                </td>
+                <td class="normal cellule">
+                  <svg width="30" height="10">
+                    <rect width="30" height="10" style="fill:#7CCAE2;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+                  <p class="pLegende"> Toxique/Nocif </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="normal cellule">
+                  <svg width="30" height="10">
+                    <rect width="30" height="10" style="fill:#008442;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+                  <p class="pLegende"> Impact génétique </p>
+                </td>
+                <td class="normal cellule">
+                  <svg width="30" height="10">
+                    <rect width="30" height="10" style="fill:#58BC81;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+                  <p class="pLegende"> Impact fœtus </p>
+                </td>
+                <td class="normal cellule">
+                  <svg width="30" height="10">
+                    <rect width="30" height="10" style="fill:#AA3565;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+                  <p class="pLegende"> Risque pour les organes</p>
+                </td>
+              </tr>
+            </table>
+          </section>
+
+          <!-- Carte de la Bretagne -->
+          <svg id="mapBretagne" xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1" viewBox="0 0 248.7 130.1">
+            <g id="Calque_1">
+              <g>
+                <path id="FR-22" d="M85.4,3.1l0.3,2L91,3.2l0.1,2.9l3.1-0.2l-1.4,2.4l4.7,1.7L97,12.4l5.3,4.5l-0.2,3.4l4.5,2.5l1.2,3.6l0.1-2.1
+                  l2.1,0.4l3.2-4.6l3.4-1.4l-0.6-1.4l2.9,0.8l4.1-3.5l1.3,1.6l-2.1,2.7l3.9-1.5l1.1,4.9l0.9-2.8l0.7,2.2l1.2-2.6l1,1.1l0,0l3.4,3.6
+                  l1.5-1.6l0,0l1,4.2l1.4-2.4l0,0l1.4,0.1l0.3,3.4l-1.7,2.4l1,5.9l-1.7,0.3l0.4,3.2l-4-0.3l-2.2,2.9l-3.2,0.1l-2.2,6.5l-2.1,0.6l0,0
+                  l-2.9,1.4l-2.8-3.9l-4.6,1l-0.5,5l-4.5,2.7l-0.2-6.1l-3.9,0.9l-0.8,1.8l-1.3-3.6l-8.1-1l-1.6-2.7l-3.2-0.2l-1,2.7l-5.5,1.5
+                  l-2.7-1.9l-3.4,1.6l-1.2-2.6l-5,0.1l0,0l1.9-0.3l-1.6-2.1l1.6-5.8l-1.4,0.1l-0.2-3.9l-2.1-0.6l2.3-3.6l-2.3-1.9l2.8-3.7l-4.2-3.6
+                  l-0.7-4l0,0l3.8-1.5L70.6,7l1,0.9l2.1-3l4.4,2.5L85.4,3.1z" />
+                <path id="FR-29" d="M6.9,28.5L8.5,30l-4.3,0.7L6.9,28.5z M53.9,12.1l1.7,3.8l0.7-2.1l3.3,2.4l1-3.7l7.4,1.5l-0.6,2.3l0,0l0.7,4
+                  l4.2,3.6l-2.8,3.7l2.3,1.9l-2.3,3.6l2.1,0.6l0.2,3.9l1.4-0.1l-1.6,5.8l1.6,2.1l-1.9,0.3l0,0L65,48.5l-0.8,1.9l4,7.9l4.5-0.2
+                  l2.7,2.7l2.1-1.8l1,1l-0.3,5.9l-2.1,0l-1.7,2.5l-1.6-1.4l-0.2,5.1l0,0l-8-2.6l-5.3,0.9L55,63.8l-0.8,2.5l-7.1-0.1l-1.9,3.7l-7.3,0
+                  l0.8-3.4l-3-6.8l-3.9-2.7l-9.2-2l0.9-1.6l12.4-2.6l5.3,0.4l0.7-3.3l-1.8-3.1l-7.2-2L30,46.7l0.6-4.9l-3.5-1.9l2.4-0.2l-0.1-3
+                  l1.6-0.6L31,39.6l1.5-1.7l-0.1,1.9l3.5-0.8l0.8,1.2l3.8-1.4l1.9,1.1l1.6-2.1l-4.8-0.1l1.5-1.1l-1.1-1.4L34.2,37l2.4-3.5l-1-0.8
+                  L28,36.3l-3.1-1.1l-3.8,1.6l-0.9-5.2l1.8-8.1l5.9-2.1l2.8-3.8l2.7,0.8l5.5-3.4l2,0.8l0,1.9l4-1.2l0.5-2.2l5.3,0.7l0.2-1.9
+                  L53.9,12.1z" />
+                <path id="FR-35" d="M131.6,17.2l2.7,0.3l1.6,4.5l0,0l-1.5,1.6l-3.4-3.6l0,0l-1.1-2.1L131.6,17.2z M142.7,13.3l-1.2,3.7l1.5,2
+                  l11-1.3l0,0l3.5,9.1l2.8,1.8l2.8-0.5l4.2-4.7l7.6,2.2l0,0l1,11.2l-2.4,4.1l3.6,16.1l-5.8,2.4l-3.4,9.6l0,0l-0.4,2.1l0,0l-9.6-3.6
+                  l0.2,2l-6.2,2.4l-1.5,3.3l-8.4,0.1l-3.9,2.3l-0.8-1.4l-5.2,3.9l0,0l-1.3-5.6l3-1l-2.9-2l3.8-3.9l-0.8-2.2l-2.3,1.3l1.3-4.4l-2.8-4
+                  l-6-0.4l1.1-3l3.9-2.2l-3.6,0.8l-1.3-4.4l0,0l2.1-0.6l2.2-6.5l3.2-0.1l2.2-2.9l4,0.3l-0.4-3.2l1.7-0.3l-1-5.9l1.7-2.4l-0.3-3.4
+                  l-1.4-0.1l0,0l-3.3-7l4-3.2L142.7,13.3z" />
+                <path id="FR-44" d="M132.1,80l5.2-3.9l0.8,1.4l3.9-2.3l8.4-0.1l1.5-3.3l6.2-2.4l-0.2-2l9.6,3.6l0,0l-0.3,2.8l2.4,0.6l2.4,6.3
+                  l5.5,1.9l-1.5,1.6l-5.4-0.6l0.7,3.8l7.9,1.1l1.9,5.7l-2.2,1.7l-13.1,1.9L163,100l2.4-0.1l2.2,3.8l2-0.5l1.3,4.3l-3.5,5l5.5,2.2
+                  l-1.3,2.1l0,0l-5.1-3.4l-1.2,3.1l-3.2,0.1l0.6,4.5l-4.1,1.9l-0.4-6.3l-1.3-0.5l-2.2,1.5l2.3,8.1L155,127l-7.2-1.4l-1-2.7l-6.4-2
+                  l-3.3-4.1l0,0l-3.1-4l-8.1-2.3l3.4-2.2l-0.2-5.8l-5.2,1.8l-3.3-2.7l-2.3,1.2l-4.7-1.9l1.6-2.9l-2.2-2.2l4.2-4.5l0,0l1.4-1.8l4.4,1
+                  l0.8-3.4l5.6,1.6l0.3-1.9l2.5-0.7L132.1,80z" />
+                <path id="FR-49" d="M167.8,69l10.7,3l2-2l8.1,3.4l8.4-0.8l0.7-2.3l5.6,1.7l0,0l0.8,2.8l7.8-0.1l-1.8,2.1l3.3,3l1.8-1.8l9.9,5
+                  l1.7-2.1l1.8,0.4l0,0l-1.4,4.3l1.1,2.4l-2.9,6.2l1.2,1.1l-4.4,6.1l-0.9,7.2l0,0l-2.6,0.2l-1.2,4.5l-2.1-0.9l-0.7,2.2l0,0l-3-0.2
+                  l1.4-2.1l-1.8-0.4l-8.8,1l-3.5,2.3l0.9-1.7l-1.4-0.1l-2.6,1.2l0.5,1.9l-2.3,2.2l-7.8-0.5l-4.3,1.8l0,0l-3.5-2.6l-3.3,0.9l-3.8-1.5
+                  l0,0l1.3-2.1l-5.5-2.2l3.5-5l-1.3-4.3l-2,0.5l-2.2-3.8L163,100l2.6-2.2l13.1-1.9l2.2-1.7l-1.9-5.7l-7.9-1.1l-0.7-3.8l5.4,0.6
+                  l1.5-1.6l-5.5-1.9l-2.4-6.3l-2.4-0.6l0.3-2.8l0,0L167.8,69z" />
+                <path id="FR-53" d="M183.5,26.1l4,4.1l4-3.1l0.7,2.6l5.9-4.1l4.7-0.1l1.8,1.6l1.3-2.4l2.1,0.9l0.9-3.6l1.7,0.1l2.6,2.2l-1.2,1.1
+                  l1.1,3.4l4,0.4l-0.2,4.4l0,0l-4.2,2.6l0.5,8.4l-4.5,2.9l0.9,6.1l-4.6,1l2.7,5.2l-5.6,2.6l1.7,3.6l-3.1,1.6l2.4,1.8l0.2,2.6l0,0
+                  l-5.6-1.7l-0.7,2.3l-8.4,0.8l-8.1-3.4l-2,2l-10.7-3l0,0l3.4-9.6l5.8-2.4L173.5,41l2.4-4.1l-1-11.2l0,0L183.5,26.1z" />
+                <path id="FR-56" d="M84.4,94.9l7.7,4.5l-0.6,1.7l-6.8-1L84.4,94.9z M71.2,45.7l5-0.1l1.2,2.6l3.4-1.6l2.7,1.9l5.5-1.5l1-2.7
+                  l3.2,0.2l1.6,2.7l8.1,1l1.3,3.6l0.8-1.8l3.9-0.9l0.2,6.1l4.5-2.7l0.5-5l4.6-1l2.8,3.9l2.9-1.4l0,0l1.3,4.4l3.6-0.8l-3.9,2.2
+                  l-1.1,3l6,0.4l2.8,4l-1.3,4.4l2.3-1.3l0.8,2.2l-3.8,3.9l2.9,2l-3,1l1.3,5.6l0,0v6l-2.5,0.7l-0.3,1.9l-5.6-1.6l-0.8,3.4l-4.4-1
+                  l-1.4,1.8l0,0l-1.6-0.1l-0.3-2.6l2.5-0.4l-2.8-1.6l-12.7,2.3l-8.7-6.5l0,1.2l-4.1,0.2l1.4,5.9h-1.7l-1.1-8.2l-8.6-6.4l-4,0.7l-3-4
+                  l0,0l0.2-5.1l1.6,1.4l1.7-2.5l2.1,0l0.3-5.9l-1-1l-2.1,1.8L72.6,58l-4.5,0.2l-4-7.9l0.8-1.9L71.2,45.7z" />
+              </g>
+            </g>
+            <g id="Calque_2">
+              <rect x="4.1" y="37.6" class="st0" width="57.8" height="10.2" />
+              <rect x="6.7" y="35.4" class="st1" width="57.8" height="10.2" />
+              <rect x="176.9" y="82.1" class="st2" width="64.7" height="10.2" />
+              <rect x="179.9" y="79.9" class="st3" width="64.7" height="10.2" />
+              <rect x="182.9" y="35.1" class="st4" width="57.8" height="10" />
+              <rect x="185.6" y="33" class="st5" width="57.8" height="10" />
+              <rect x="86.2" y="98.2" class="st6" width="77.2" height="11.7" />
+              <rect x="89" y="95.4" class="st7" width="77.2" height="11.7" />
+              <rect x="65.3" y="68.2" class="st8" width="56" height="10.9" />
+              <rect x="67.7" y="66.1" class="st9" width="56" height="10.9" />
+              <rect x="61.9" y="20.6" class="st10" width="64.6" height="10.1" />
+              <rect x="64.7" y="18.1" class="st11" width="65.1" height="10.1" />
+              <rect x="107.8" y="47.1" class="st12" width="67.5" height="10.5" />
+              <rect x="110" y="44.5" class="st13" width="67.6" height="10.5" />
+              <rect x="181.6" y="82.3" class="st14" width="63" height="7.1" />
+              <text transform="matrix(1 7.100000e-04 -7.100000e-04 1 186 87.3563)" class="st15 st16 st17"> Maine-et-Loire </text>
+              <rect x="196.9" y="35.3" class="st14" width="36.6" height="5.8" />
+              <text transform="matrix(1 7.100000e-04 -7.100000e-04 1 192 40.3758)" class="st15 st16 st17"> Mayenne </text>
+              <rect x="111.5" y="46.9" class="st14" width="64.7" height="7.1" />
+              <text transform="matrix(1 7.100000e-04 -7.100000e-04 1 116 51.9782)" class="st15 st16 st17"> Ille-et-Villaine </text>
+              <rect x="91.1" y="98.7" class="st14" width="73.2" height="7.1" />
+              <text transform="matrix(1 7.100000e-04 -7.100000e-04 1 94 103.7639)" class="st15 st16 st17"> Loire-Atlantique </text>
+              <rect x="75" y="68.7" class="st14" width="41.4" height="6.8" />
+              <text transform="matrix(1 7.100000e-04 -7.100000e-04 1 73 73.7867)" class="st15 st16 st17"> Morbihan </text>
+              <rect x="15.4" y="38" class="st14" width="38.6" height="7.1" />
+              <text transform="matrix(1 7.100000e-04 -7.100000e-04 1 12 43.1091)" class="st15 st16 st17"> Finistère </text>
+              <rect x="66.3" y="21" class="st14" width="61.9" height="7.6" />
+              <text transform="matrix(1 7.100000e-04 -7.100000e-04 1 70 26.0858)" class="st15 st16 st17"> Côtes d'Armor </text>
+            </g>
+          </svg>
+          <img id="buttonSP" src="img/Bouton_Ensavoirplus.png" />
+        </div>
+        
+        <!-- Partie "En savoir plus" -->
+        <section class="enSavoirPlusP1">
+
+          <!-- Défilement et description du graphique" -->
+          <section id="enSavoirPlusHautP1">
+            <section id="enSavoirPlusHautGaucheP1">
+              <img id="suivant" src="img/suivant.png">
+              <img id="dpt" src="img/cotesdarmor.png">
+            </section>
+            <img id="boutonExitP1" src="img/Exit_Page_2.png" />
+          </section>
+          <section id="enSavoirPlusBasP1">
+            <svg id="histTemps" width="400" height="350" viewBox="0 0 400 350" preserveAspectRatio="none"></svg>
+            <article id="cotesdarmor">
+              <p>Évolution entre 2012-2016 de la présence des pesticides et leurs conséquences sur l’homme dans les eaux souterraines
+                des Côtes-d'Armor.</p>
+            </article>
+            <article id="finistere">
+              <p>Évolution entre 2012-2016 de la présence des pesticides et leurs conséquences sur l’homme dans les eaux souterraines
+                du Finistère.</p>
+            </article>
+            <article id="illeetvilaine">
+              <p>Évolution entre 2012-2016 de la présence des pesticides et leurs conséquences sur l’homme dans les eaux souterraines
+                de l'Ille-et-Vilaine.</p>
+            </article>
+            <article id="loireatlantique">
+              <p>Évolution entre 2012-2016 de la présence des pesticides et leurs conséquences sur l’homme dans les eaux souterraines
+                de la Loire-Atlantique.</p>
+            </article>
+            <article id="maineetloire">
+              <p>Évolution entre 2012-2016 de la présence des pesticides et leurs conséquences sur l’homme dans les eaux souterraines
+                du Maine-et-Loire.</p>
+            </article>
+            <article id="mayenne">
+              <p>Évolution entre 2012-2016 de la présence des pesticides et leurs conséquences sur l’homme dans les eaux souterraines
+                de la Mayenne.</p>
+            </article>
+            <article id="morbihan">
+              <p>Évolution entre 2012-2016 de la présence des pesticides et leurs conséquences sur l’homme dans les eaux souterraines
+                du Morbihan.</p>
+            </article>
+          </section>
+
+          <!-- Légende des graphiques -->
+          <section id="LegendeEnSavPlus">
+            <p class="pTitle title"> Dangers des principaux pesticides </p>
+            <article class="articleSP">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#D42E1E;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Mortel </p>
+            </article>
+            <br>
+            <article class="articleSP">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#F8C000;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Cancer </p>
+            </article>
+            <br>
+            <article class="articleSP">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#7CCAE2;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Toxic/Nocif </p>
+            </article>
+            <br>
+            <article class="articleSP">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#008442;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Impact génétique </p>
+            </article>
+            <br>
+            <article class="articleSP">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#58BC81;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Impact foetus </p>
+            </article>
+            <br>
+            <article class="articleSP">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#AA3565;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Risque pour les organes </p>
+            </article>
+          </section>
+        </section>
+      </div>
+
+      <!-- Page 2 -->
+      <div class="section" data-anchor="page2">
+
+        <!-- Panneau description Campbon -->
+        <section id="section3" class="panel">
+          <p class="title pTitle">
+            EXEMPLE NAPPE DE CAMPBON
+          </p>
+          <p class="pContent pTop normal">
+            Vieille de plus de cinquante millions d’années, la <em id="nappePhreatique" class="motdef">nappe phréatique</em> de Campbon est composée d’eaux de surfaces qui se sont
+            infiltrées et conservées dans le sol. Contrairement aux rivières et lacs souterrains, cette nappe s’épure toute seule, filtrée
+            naturellement par une couche de sable et une roche, appelée Pyrite, qui détruit les nitrates présents dans l’eau. Ce processus
+            naturel en fait d’elle une eau d'extrême qualité.
+          </p>
+          <p class="pContent pBottom normal">
+            La <em id="nappeCampbon" class="motdef">nappe de Campbon</em> approvisionne les robinets des habitants de la région nazairienne, exploitée par la Communauté d’Agglomération
+            de la Région Nazairienne (CARENE).
+          </p>
+        </section>
+
+        <!-- Panneau légende citerne -->
+        <section id="section4" class="panel">
+          <svg version="1.1" id="citerne" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 78.2 84.1" style="enable-background:new 0 0 78.2 84.1;" xml:space="preserve">
+            <polygon class="st100" points="3,35.8 3,71.1 9.5,75.1 74.3,72 74.8,36.7 53.2,36.3 " />
+            <path class="st101" d="M74.9,35.5c0,5.7-16.2,10.2-36.1,10.2s-36-4.6-36-10.2s16.1-10.2,36-10.2S74.9,29.8,74.9,35.5z" />
+            <path class="st102" d="M74.9,12.5c0,5.7-16.2,10.2-36.1,10.2s-36-4.6-36-10.2S19,2.3,38.8,2.3S74.9,6.9,74.9,12.5z" />
+            <path class="st103" d="M74.9,71.2c0,5.7-16.2,10.2-36.1,10.2s-36-4.6-36-10.2" />
+            <line class="st102" x1="75" y1="71.3" x2="75" y2="13.5" />
+            <polyline class="st102" points="2.7,71.3 2.7,17.1 2.7,12.7 " />
+          </svg>
+          <p class="pContent normal" id="pCiterne">
+            Station de prélèvement et de contrôle de l'eau de la nappe de Campbon.
+          </p>
+        </section>
+
+        <!-- Carte de Campbon -->
+        <svg id="mapCampbon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 606.2 566.6" style="enable-background:new 0 0 606.2 566.6;" xml:space="preserve">
+          <text transform="matrix(1 0 0 1 182.9126 321.5454)" class="st200 st201 st202"> </text>
+          <path class="st200" d="M381.4,328.4" />
+          <text transform="matrix(1 0 0 1 203.4418 380.397)" class="st200 st201 st202"> </text>
+          <text transform="matrix(1 0 0 1 167.8579 275.0122)" class="st201 st202"> </text>
+          <path class="st203" d="M366.3,281.9" />
+          <g>
+            <path class="st204" d="M445.3,545.8c-0.4,0-2.2-0.6-2.2-12.2c0-17.7-9.3-20.6-14.9-22.4c-1.7-0.5-3.4-1-3.5-1.7
+            c-0.2-0.9,0.8-3.4,7.1-10.6c8.6-9.7,7.5-18.4,5-24c-6.5-14.5-28-23.7-40-23.7c-0.6,0-1.2,0-1.8,0.1c-0.2,0-0.3,0-0.5,0
+            c-1.8,0-3.4-0.7-4.8-2.3c-10-10.5-8.1-50.5-8.1-50.9c0-0.6-0.3-1.1-0.8-1.4c-0.2-0.1-0.4-0.2-0.7-0.2c-0.3,0-0.7,0.1-0.9,0.3
+            c-2.8,2.3-4.3,2.6-5,2.6c-0.4,0-0.7-0.1-1-0.5c-1.6-2-0.9-8.8,0.1-12.9c0.1-0.3,0-0.6-0.1-0.9c-6.5-14.9-7.6-27-3.5-35.9
+            c4.1-8.8,12-11.3,12.1-11.3c0.7-0.2,1.2-0.9,1.1-1.7c-9.6-64.2-16-74.5-27.4-74.5c-1.5,0-3.1,0.2-4.7,0.4c-1.2,0.1-2.4,0.3-3.7,0.3
+            c-6.2,0.4-6.8,7.7-7.4,16.3c-1.2,15.4-2.7,34.6-31.5,34.6c-1.9,0-3.9-0.1-6-0.3c-12-1-19.2-3.1-21.2-6.3c-1.4-2.2-0.3-5.1,0.8-8.1
+            c1.3-3.3,2.6-6.8,0.5-9.9c-2.5-3.7-9.5-5.5-22.7-5.9c-0.7,0-1.4,0-2.1,0c-25.1,0-37.2,12.3-45.1,20.4c-3.9,4-7,7.1-10,7.1
+            c-3,0-6.7-3.3-11.4-10.4c-12.9-19.3-25.8-19.9-37.2-20.4c-8.4-0.4-15.6-0.7-21.7-8.5c-7.3-9.3-5.7-11-2.9-14.2
+            c2.8-3,6.6-7.2,4.5-18c-1.3-6.7-2.2-12.3-1.2-13.6c0.1-0.1,0.4-0.4,1.7-0.4c1.3,0,3.1,0.3,5.4,0.7c3.1,0.5,6.9,1.1,11.7,1.4
+            c0.3,0,0.6,0,0.9,0c0,0,0,0,0,0c5.5,0,8.7-3.5,8.7-9.5c0-5.6-2.7-12.8-7-19c-4.8-6.8-10.6-10.7-15.9-10.7c-2.4,0-4.7,0.8-6.7,2.3
+            c-8.3,6.2-15.9,9.8-20.9,9.8c-4.1,0-4.1-2.3-4.1-3.1c0-7.8-0.8-8.2-10.5-12.3c-2-0.9-4-1.3-6.3-1.3c-1.1,0-2.1,0.1-3,0.2
+            c-0.7,0.1-1.3,0.1-1.8,0.1c-0.9,0-1.1-0.2-1.2-0.3c-0.7-0.8-0.9-3.5-0.5-8.2c0.7-9-1.3-19.5-3.1-28.9c-1.5-8-3-15.5-2.4-20.4
+            c0.4-3.2,2-4.7,3.7-6.4c4.5-4.4,6.9-8.5-1.1-24.6c0-0.1-0.1-0.2-0.1-0.2c-0.3-0.4-7.4-10.4,2.8-27.1c3.5-5.7,3.1-9,2.6-12.5
+            c-0.4-2.6-0.8-5.3,0.4-9.8c0.4-1.6,0.9-1.6,1.1-1.6c1.1,0,3.1,1.4,4.8,2.6c2.1,1.5,4.1,2.9,5.9,2.9c0.9,0,1.7-0.4,2.3-1
+            c1.4-1.5,1.7-4.6,1-10.3c-1.1-9.5-1.3-15.4,0.9-17.9c1.1-1.2,2.9-1.8,5.8-1.8c4.4,0,11,1.4,20.2,3.6c6.8,1.6,11.7,2.4,15.2,2.4
+            c6.8,0,8.8-2.8,11.1-6c1.6-2.3,3.5-4.9,7.7-7.4c2-1.2,3.8-1.7,5.6-1.7c3.4,0,6.5,2.1,10.1,4.5c4.3,2.9,9.2,6.2,15.9,6.2
+            c1.6,0,3.3-0.2,5-0.6c0.9-0.2,2-0.3,3.1-0.3c12.5,0,31.6,13.9,48.4,26.1c7.3,5.3,14.1,10.3,20,13.8c9.4,5.6,10.3,9.3,11,12.6
+            c1.1,4.6,2.6,8,13.8,12.2c21.5,8.1,22.4,9.1,23.7,28.8c0.4,5.3,2.4,8,6,8c0,0,0,0,0,0c2.3,0,4.8-1.1,7.5-2.3
+            c2.5-1.1,5.2-2.2,7.3-2.2c1.4,0,5.2,0,5.2,12.8c0,2.2,0,4.2,0,6.1c-0.1,29.6,1.7,30.2,18.8,36.3c17.7,6.3,12.8,33.6,12.7,33.9
+            c-0.1,0.5,0,0.9,0.4,1.3c0.3,0.3,0.7,0.5,1.1,0.5c0.1,0,0.1,0,0.2,0c2.2-0.2,4.5-0.4,6.6-0.4c24.6,0,39.8,14.9,49.8,24.8
+            c5,4.9,8.3,8.2,11.4,8.2c3.8,0,5.2-4.6,6.1-9.2c1.6-8.4,8.8-9.7,12.9-9.7c10.6,0,24.9,8,28.1,18.6c2.4,7.8-1.7,15.6-11.9,22.4
+            c-13.8,9.2-20.1,17.2-19.3,24.6c1.1,10.2,15.4,15.8,25.8,19.9c1.7,0.7,3.3,1.3,4.7,1.9c0.3,0.1,0.6,0.2,0.9,0.2c0,0,0,0,0,0
+            c2.4,0,2.4-3,2.4-5.9c0-1.7,0-5.8,1-5.8c0.6,0,2.5,0.6,7.4,5.7c5.6,5.8,2.5,9.4-0.4,12.9c-1.6,1.9-3.1,3.6-2.3,5.5
+            c0.8,2.1,3.9,3.1,11.9,4c18.7,2,18.8,2.2,26.1,13.4c2.5,3.9,5.9,9.1,11.1,16.1c9.2,12.3,7.2,21.5,5.5,28.8
+            c-1.9,8.6-3.6,16.1,14.3,22.3l4.1,1.4c14.2,4.9,25.4,8.8,25.6,10.9c0,0.3-0.4,1.4-5.3,4.1c-15.8,8.8-19.2,22.6-21.7,32.7
+            c-1.8,7.2-2.9,11-6.4,11c-0.3,0-0.7,0-1.1-0.1c-1.8-0.3-2.2-1.1-2.9-2.3c-0.9-1.6-2-3.9-6.7-3.9c-4,0-10.3,1.6-19.9,4.9
+            c-17.6,6.1-21.3,19.1-24.3,29.5c-2.5,8.8-4.5,15.8-13.7,16.9c-12.4,1.5-16.2,13.4-19,22.1c-1.5,4.7-2.9,9-4.9,9
+            c-0.6,0-1.7-0.4-3.6-2c-2.2-1.9-4.5-2.9-7-2.9c-4.6,0-8.9,3.4-12.3,6C448.5,544.2,446.4,545.8,445.3,545.8z" />
+            <path d="M167.4,10.5L167.4,10.5c3,0,5.9,2,9.2,4.2c4.5,3,9.6,6.5,16.7,6.5c1.7,0,3.5-0.2,5.3-0.6c0.8-0.2,1.8-0.3,2.7-0.3
+            c12,0,31.7,14.3,47.5,25.8c7.3,5.3,14.2,10.3,20.1,13.8c8.9,5.3,9.6,8.5,10.3,11.6c1.2,5.1,2.9,8.8,14.8,13.2
+            c21,7.9,21.4,8.4,22.7,27.5c0.5,7.8,4.4,9.4,7.5,9.4c2.6,0,5.3-1.2,8.1-2.4c2.4-1,4.9-2.1,6.7-2.1c0.9,0,1.5,0.2,2.2,1.4
+            c0.7,1.3,1.5,4,1.5,9.9c0,2.2,0,4.2,0,6.1c-0.1,27.2-0.1,30.7,19.8,37.8c16.5,5.9,11.8,31.9,11.7,32.2c-0.2,0.9,0.1,1.9,0.7,2.6
+            c0.6,0.6,1.4,1,2.2,1c0.1,0,0.2,0,0.3,0c2.2-0.2,4.4-0.3,6.5-0.3c24,0,38.9,14.6,48.7,24.3c5.3,5.2,8.8,8.6,12.5,8.6
+            c5.6,0,6.9-7.3,7.5-10.4c1.3-7,7-8.4,11.5-8.4c5.1,0,11.1,1.9,16.2,5.2c5.4,3.4,9.1,7.8,10.5,12.4c2.7,9-4.6,16.2-11.3,20.7
+            c-14.3,9.5-20.8,18-19.9,26c1.2,11.1,15.9,16.9,26.7,21.2c1.7,0.7,3.3,1.3,4.6,1.9c0.5,0.2,1,0.3,1.5,0.3c0.8,0,3.3-0.3,3.8-3.9
+            c0.1-1,0.2-2.2,0.2-3.5c0-1.1,0-2.9,0.2-4c0.9,0.5,2.6,1.7,5.7,4.9c4.4,4.6,2.7,7.1-0.5,10.9c-1.7,2-3.7,4.3-2.6,7
+            c1.1,2.8,4.4,4,13.1,4.9c9.6,1,14.1,1.6,17,3.2c2.8,1.5,4.5,4.2,8,9.6c2.5,3.9,5.9,9.2,11.2,16.2c8.8,11.8,6.9,20.2,5.3,27.6
+            c-2.4,10.5-2.6,17.9,15.3,24.1l4.1,1.4c11.6,4,21.7,7.5,24.2,9.5c-0.5,0.5-1.7,1.3-4.2,2.7c-16.3,9.1-20,23.9-22.4,33.7
+            c-1.7,7-2.7,9.9-4.9,9.9c-0.2,0-0.5,0-0.8-0.1c-1.1-0.2-1.2-0.4-1.8-1.5c-0.9-1.8-2.5-4.7-8-4.7c-4.1,0-10.6,1.6-20.4,5
+            c-18.4,6.4-22.2,19.8-25.3,30.5c-2.8,9.8-4.6,14.9-12.4,15.9c-13.3,1.7-17.5,14.6-20.3,23.1c-0.9,2.8-2.4,7.5-3.5,8
+            c0,0-0.8,0-2.6-1.7c-2.4-2.2-5.1-3.3-8-3.3c-5.2,0-9.7,3.5-13.3,6.4c-1.3,1-3.1,2.4-4,2.9c-0.4-0.8-1.1-3.4-1.1-10.5
+            c0-18.8-10.4-22-16-23.8c-0.8-0.3-1.8-0.6-2.4-0.8c0.3-0.9,1.6-3.2,6.7-9c9.2-10.3,7.9-19.6,5.2-25.6c-3-6.7-9.5-13-18.3-17.8
+            c-7.7-4.2-16.4-6.8-23.1-6.8c-0.6,0-1.3,0-1.9,0.1c-0.1,0-0.3,0-0.4,0c-1.4,0-2.6-0.6-3.7-1.8c-7.9-8.3-8.2-38.8-7.7-49.8
+            c0.1-1.2-0.6-2.3-1.6-2.8c-0.4-0.2-0.9-0.3-1.4-0.3c-0.7,0-1.3,0.2-1.9,0.7c-2.3,1.9-3.5,2.2-3.9,2.3c-0.8-1.3-0.6-6.8,0.5-11.5
+            c0.1-0.6,0.1-1.3-0.2-1.9c-6.3-14.4-7.4-26.1-3.5-34.6c3.7-8.2,10.9-10.5,11.2-10.6c1.4-0.4,2.3-1.8,2.1-3.3
+            c-9.7-64.3-16-75.8-28.9-75.8c-1.6,0-3.2,0.2-4.9,0.4c-1.2,0.1-2.4,0.3-3.6,0.3c-2.5,0.1-5.7,1.4-7.3,6.6c-0.9,3-1.2,6.7-1.5,11.1
+            c-0.6,7.4-1.2,15.8-5.2,22.3c-4.5,7.4-12.6,10.9-24.8,10.9c-1.9,0-3.8-0.1-5.9-0.3c-15.1-1.2-19.1-4.1-20.1-5.6
+            c-0.9-1.5-0.3-3.5,1-6.7c1.3-3.4,2.9-7.5,0.4-11.2c-2.8-4.2-10-6.1-23.9-6.5c-0.7,0-1.4,0-2.1,0c-25.8,0-38.1,12.6-46.2,20.9
+            c-3.7,3.7-6.6,6.7-8.9,6.7c-2.4,0-5.8-3.3-10.2-9.8c-13.3-19.9-27.2-20.5-38.4-21.1c-8.3-0.4-14.9-0.7-20.6-7.9
+            c-3.2-4.1-4.9-7.1-5-8.9c0-1,0.5-1.7,2-3.3c2.8-3.1,7.1-7.7,4.9-19.3c-0.7-3.7-1.9-10.4-1.5-12.2c0.1,0,0.3,0,0.5,0
+            c1.2,0,2.9,0.3,5.2,0.6c3.1,0.5,6.9,1.1,11.8,1.4c0.4,0,0.7,0,1,0c4.2,0,6.6-1.8,7.9-3.4c1.6-1.9,2.4-4.5,2.4-7.7
+            c0-5.9-2.8-13.5-7.3-19.9c-5.1-7.2-11.3-11.4-17.1-11.4c-2.7,0-5.3,0.9-7.6,2.6c-7.9,5.9-15.4,9.5-20,9.5c-2.6,0-2.6-1-2.6-1.6
+            c0-8.5-1.1-9.3-11.4-13.7c-2.2-0.9-4.4-1.4-6.9-1.4c-1.2,0-2.2,0.1-3.1,0.2c-0.6,0.1-1.2,0.1-1.6,0.1c-0.1,0-0.1,0-0.1,0
+            c-0.2-0.6-0.4-2.3-0.1-6.9c0.8-9.2-1.3-19.8-3.1-29.3c-1.5-7.8-2.9-15.2-2.4-19.9c0.3-2.7,1.6-3.9,3.3-5.5
+            c4.9-4.7,7.7-9.4-0.8-26.3c-0.1-0.2-0.2-0.3-0.3-0.4c-0.3-0.4-6.8-9.7,2.9-25.4c3.8-6.2,3.3-9.9,2.8-13.5c-0.4-2.5-0.7-5,0.3-9.3
+            c0-0.1,0.1-0.2,0.1-0.3c0.9,0.4,2.4,1.5,3.4,2.2c2.3,1.7,4.5,3.2,6.8,3.2c1.3,0,2.6-0.5,3.5-1.5c1.7-1.9,2.1-5.2,1.4-11.5
+            c-0.8-6.9-1.5-14.5,0.5-16.8c0.3-0.3,1.1-1.3,4.6-1.3c4.3,0,10.8,1.3,19.9,3.5c6.9,1.6,11.9,2.4,15.6,2.4c7.6,0,10-3.4,12.3-6.7
+            c1.6-2.3,3.3-4.7,7.2-7C164.3,11,165.8,10.5,167.4,10.5 M87.6,45.1L87.6,45.1L87.6,45.1 M133.8,226.4L133.8,226.4L133.8,226.4
+              M496.9,297.4L496.9,297.4L496.9,297.4 M167.4,7.5c-1.9,0-4,0.6-6.4,2c-10.4,6.2-7.4,13.3-18,13.3c-3.3,0-8-0.7-14.9-2.3
+            c-9.4-2.2-16-3.6-20.6-3.6c-9.4,0-10,5.7-8.2,21.4c0.9,7.4-0.1,9.7-1.8,9.7c-2.8,0-7.6-5.6-10.7-5.6c-1.1,0-2,0.7-2.5,2.7
+            c-2.7,10.9,3,12.5-2.7,21.9c-10.9,17.8-2.7,28.7-2.7,28.7c12.3,24.6-1.4,19.2-2.7,30.1c-1.4,10.9,6.8,32.8,5.5,49.3
+            c-0.7,8.7,0.5,10.1,3.2,10.1c1.3,0,2.9-0.3,4.8-0.3c1.7,0,3.6,0.2,5.7,1.1c9.6,4.1,9.6,4.1,9.6,10.9c0,2.9,2,4.6,5.6,4.6
+            c4.8,0,12.4-3,21.8-10.1c1.9-1.4,3.8-2,5.8-2c15.1,0,31,36.3,14.2,36.3c-0.3,0-0.6,0-0.8,0c-8.5-0.6-14-2.1-17.2-2.1
+            c-4.4,0-4.4,3-2,15.8c4.1,21.9-16.4,13.7-1.4,32.8c15.1,19.2,37-4.1,58.9,28.7c5.4,8.1,9.2,11.1,12.7,11.1
+            c10.4,0,17.7-27.6,55.1-27.6c0.7,0,1.4,0,2.1,0c52,1.4-11,25.7,42.4,30.1c2.2,0.2,4.2,0.3,6.1,0.3c46.6,0,25.1-50.1,39-50.9
+            c3.1-0.2,5.8-0.7,8.3-0.7c9.8,0,16.1,7.8,25.9,73.2c0,0-27.4,8.2-9.6,49.3c0,0-3.6,15.2,2.3,15.2c1.4,0,3.3-0.8,5.9-2.9
+            c0,0-2.7,54.8,14.4,54.8c0.2,0,0.4,0,0.6,0c0.5,0,1.1-0.1,1.6-0.1c18.5,0,55.2,21.3,33.9,45.2c-21.9,24.6,10.9,2.7,10.9,35.6
+            c0,10.4,1.4,13.7,3.7,13.7c3.9,0,10.5-9.4,17.7-9.4c2,0,4,0.7,6,2.5c1.9,1.7,3.4,2.4,4.6,2.4c7.7,0,5.2-28.8,24.1-31.2
+            c21.9-2.7,6.8-35.6,38.3-46.5c10.3-3.6,16-4.8,19.4-4.8c7,0,3.8,5.3,9.3,6.2c0.5,0.1,0.9,0.1,1.3,0.1c11.5,0,2.7-29.4,28.8-43.9
+            c12.3-6.8,6.8-8.2-24.6-19.2c-31.5-10.9,1.4-23.3-19.2-50.6c-20.5-27.4-12.3-27.4-38.3-30.1c-26-2.7,5.2-7.9-8.2-21.9
+            c-4.3-4.5-6.9-6.1-8.5-6.1c-4.3,0-1.2,11.7-3.4,11.7c-0.1,0-0.2,0-0.4-0.1c-14.7-6.3-52-16.4-10.9-43.8c30.1-20,2.2-43.7-17.1-43.7
+            c-7.1,0-12.9,3.2-14.4,10.9c-1.1,5.7-2.5,7.9-4.6,7.9c-7.8,0-24.3-32.9-61.2-32.9c-2.2,0-4.5,0.1-6.8,0.4c0,0,5.5-28.7-13.7-35.6
+            c-19.2-6.8-17.8-8.2-17.8-41.1c0-11.2-2.9-14.3-6.7-14.3c-4.6,0-10.7,4.5-14.8,4.5c-2.4,0-4.2-1.6-4.5-6.6
+            c-1.4-20.5-2.7-21.9-24.6-30.1c-21.9-8.2-4.1-12.3-24.6-24.6c-19.3-11.6-50.7-40.1-69.1-40.1c-1.2,0-2.3,0.1-3.4,0.4
+            c-1.6,0.4-3.2,0.5-4.6,0.5C181.7,18.3,175.8,7.5,167.4,7.5L167.4,7.5z" />
+          </g>
+          <text transform="matrix(1 0 0 1 188.3872 333.8638)" class="st201 st202"> </text>
+          <rect x="11.9" y="165.1" class="st205" width="251.7" height="37.4" />
+          <rect x="17.4" y="159.6" class="st206" width="251.7" height="37.4" />
+          <rect x="27" y="171.3" class="st207" width="229" height="20.3" />
+          <text transform="matrix(1 0 0 1 46.747 183.6665)" class="st208 st209 st210 title"> Nappe de Campbon </text>
+          <g>
+            <polygon class="st211" points="182.5,68.3 182.5,91.3 186.8,93.9 229,91.9 229.4,68.9 215.3,68.6 	" />
+            <path class="st212" d="M229.5,68.1c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7s10.5-6.7,23.5-6.7
+            C218.9,61.4,229.5,64.4,229.5,68.1z" />
+            <path class="st213" d="M229.5,53.1c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7s10.5-6.7,23.5-6.7
+            C218.9,46.5,229.5,49.4,229.5,53.1z" />
+            <path class="st214" d="M229.5,91.4c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7" />
+          </g>
+          <line class="st213" x1="229.5" y1="91.5" x2="229.5" y2="53.8" />
+          <polyline class="st213" points="182.3,91.5 182.3,56.1 182.3,53.2 " />
+          <g>
+            <polygon class="st211" points="245.1,112.3 245.1,135.3 249.4,137.9 291.7,135.9 292,112.9 277.9,112.6 	" />
+            <path class="st212" d="M292.1,112.1c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7c0-3.7,10.5-6.7,23.5-6.7
+            C281.5,105.4,292.1,108.4,292.1,112.1z" />
+            <path class="st213" d="M292.1,97.1c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7s10.5-6.7,23.5-6.7
+            C281.5,90.4,292.1,93.4,292.1,97.1z" />
+            <path class="st214" d="M292.1,135.4c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7" />
+            <line class="st213" x1="292.2" y1="135.5" x2="292.2" y2="97.7" />
+          </g>
+          <polyline class="st213" points="245,135.5 245,100 245,97.2 " />
+          <g>
+            <polygon class="st211" points="180.3,244.2 180.3,267.2 184.6,269.8 226.8,267.8 227.2,244.7 213.1,244.4 	" />
+            <path class="st212" d="M227.3,243.9c0,3.7-10.6,6.7-23.5,6.7s-23.5-3-23.5-6.7c0-3.7,10.5-6.7,23.5-6.7S227.3,240.2,227.3,243.9z"
+            />
+            <path class="st213" d="M227.3,229c0,3.7-10.6,6.7-23.5,6.7s-23.5-3-23.5-6.7c0-3.7,10.5-6.7,23.5-6.7S227.3,225.3,227.3,229z"
+            />
+            <path class="st214" d="M227.3,267.2c0,3.7-10.6,6.7-23.5,6.7s-23.5-3-23.5-6.7" />
+            <line class="st213" x1="227.3" y1="267.3" x2="227.3" y2="229.6" />
+            <polyline class="st213" points="180.1,267.3 180.1,231.9 180.1,229 	" />
+          </g>
+          <g>
+            <polygon class="st211" points="314.4,193.6 314.4,216.6 318.6,219.2 360.9,217.2 361.2,194.2 347.1,193.9 	" />
+            <path class="st212" d="M361.3,193.4c0,3.7-10.6,6.7-23.5,6.7s-23.5-3-23.5-6.7c0-3.7,10.5-6.7,23.5-6.7S361.3,189.7,361.3,193.4z"
+            />
+            <path class="st213" d="M361.3,178.4c0,3.7-10.6,6.7-23.5,6.7s-23.5-3-23.5-6.7c0-3.7,10.5-6.7,23.5-6.7S361.3,174.7,361.3,178.4z"
+            />
+            <path class="st214" d="M361.3,216.7c0,3.7-10.6,6.7-23.5,6.7s-23.5-3-23.5-6.7" />
+          </g>
+          <line class="st213" x1="361.4" y1="216.8" x2="361.4" y2="179.1" />
+          <polyline class="st213" points="314.2,216.8 314.2,181.4 314.2,178.5 " />
+          <g>
+            <polygon class="st211" points="381.4,228.8 381.4,251.8 385.7,254.4 427.9,252.4 428.3,229.3 414.2,229.1 	" />
+            <path class="st212" d="M428.4,228.5c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7c0-3.7,10.5-6.7,23.5-6.7
+            C417.8,221.9,428.4,224.9,428.4,228.5z" />
+            <path class="st213" d="M428.4,213.6c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7s10.5-6.7,23.5-6.7
+            C417.8,206.9,428.4,209.9,428.4,213.6z" />
+            <path class="st214" d="M428.4,251.9c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7" />
+          </g>
+          <line class="st213" x1="428.4" y1="251.9" x2="428.4" y2="214.2" />
+          <polyline class="st213" points="381.3,251.9 381.3,216.5 381.3,213.7 " />
+          <g>
+            <polygon class="st211" points="425.4,325.5 425.4,348.5 429.6,351.1 471.9,349.1 472.2,326 458.1,325.8 	" />
+            <path class="st212" d="M472.3,325.2c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7s10.5-6.7,23.5-6.7
+            C461.8,318.6,472.3,321.6,472.3,325.2z" />
+            <path class="st213" d="M472.3,310.3c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7s10.5-6.7,23.5-6.7
+            C461.8,303.6,472.3,306.6,472.3,310.3z" />
+            <path class="st214" d="M472.3,348.6c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7" />
+            <line class="st213" x1="472.4" y1="348.6" x2="472.4" y2="310.9" />
+            <polyline class="st213" points="425.2,348.6 425.2,313.2 425.2,310.4 	" />
+          </g>
+          <line class="st213" x1="454.8" y1="416.8" x2="454.8" y2="379.1" />
+          <g>
+            <polygon class="st211" points="407.8,393.6 407.8,416.6 412,419.2 454.3,417.2 454.6,394.2 440.6,393.9 	" />
+            <path class="st212" d="M454.7,393.4c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7c0-3.7,10.5-6.7,23.5-6.7
+            C444.2,386.7,454.7,389.7,454.7,393.4z" />
+            <path class="st213" d="M454.7,378.4c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7s10.5-6.7,23.5-6.7
+            C444.2,371.7,454.7,374.7,454.7,378.4z" />
+            <path class="st214" d="M454.7,416.7c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7" />
+            <polyline class="st213" points="407.6,416.8 407.6,381.4 407.6,378.5 	" />
+          </g>
+          <g>
+            <polygon class="st211" points="448.4,418.9 448.4,441.9 452.7,444.5 495,442.5 495.3,419.5 481.2,419.2 	" />
+            <path class="st212" d="M495.4,418.7c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7c0-3.7,10.5-6.7,23.5-6.7
+            C484.8,412,495.4,415,495.4,418.7z" />
+            <path class="st213" d="M495.4,403.7c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7c0-3.7,10.5-6.7,23.5-6.7
+            C484.8,397,495.4,400,495.4,403.7z" />
+            <path class="st214" d="M495.4,442c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7" />
+          </g>
+          <line class="st213" x1="495.5" y1="442" x2="495.5" y2="404.3" />
+          <polyline class="st213" points="448.3,442 448.3,406.6 448.3,403.8 " />
+          <g>
+            <polygon class="st211" points="494.6,377.1 494.6,400.1 498.9,402.7 541.1,400.7 541.5,377.7 527.4,377.4 	" />
+            <path class="st212" d="M541.5,376.9c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7c0-3.7,10.5-6.7,23.5-6.7
+            C531,370.2,541.5,373.2,541.5,376.9z" />
+            <path class="st213" d="M541.5,361.9c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7s10.5-6.7,23.5-6.7
+            C531,355.2,541.5,358.2,541.5,361.9z" />
+            <path class="st214" d="M541.5,400.2c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7" />
+            <line class="st213" x1="541.6" y1="400.3" x2="541.6" y2="362.6" />
+          </g>
+          <polyline class="st213" points="494.4,400.3 494.4,364.9 494.4,362 " />
+          <g>
+            <polygon class="st211" points="508.9,463.8 508.9,486.9 513.1,489.5 555.4,487.4 555.7,464.4 541.7,464.1 	" />
+            <path class="st212" d="M555.8,462.6c0,3.7-10.6,6.7-23.5,6.7s-23.5-3-23.5-6.7c0-3.7,10.5-6.7,23.5-6.7S555.8,458.9,555.8,462.6z"
+            />
+            <path class="st213" d="M555.8,447.6c0,3.7-10.6,6.7-23.5,6.7s-23.5-3-23.5-6.7s10.5-6.7,23.5-6.7S555.8,444,555.8,447.6z" />
+            <path class="st214" d="M555.8,485.9c0,3.7-10.6,6.7-23.5,6.7s-23.5-3-23.5-6.7" />
+          </g>
+          <line class="st213" x1="555.9" y1="486" x2="555.9" y2="448.3" />
+          <polyline class="st213" points="508.7,486 508.7,450.6 508.7,447.7 " />
+          <g>
+            <polygon class="st211" points="401.2,456.2 401.2,479.3 405.5,481.9 447.7,479.8 448.1,456.8 434,456.5 	" />
+            <path class="st212" d="M448.1,456c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7c0-3.7,10.5-6.7,23.5-6.7
+            C437.6,449.3,448.1,452.3,448.1,456z" />
+            <path class="st213" d="M448.1,441.1c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7s10.5-6.7,23.5-6.7
+            C437.6,434.4,448.1,437.4,448.1,441.1z" />
+            <path class="st214" d="M448.1,479.3c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7" />
+            <polyline class="st213" points="401,479.4 401,444 401,441.1 	" />
+          </g>
+          <g>
+            <polygon class="st211" points="423.2,495.8 423.2,518.8 427.4,521.4 469.7,519.4 470,496.4 455.9,496.1 	" />
+            <path class="st212" d="M470.1,495.6c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7s10.5-6.7,23.5-6.7
+            C459.6,488.9,470.1,491.9,470.1,495.6z" />
+            <path class="st213" d="M470.1,480.6c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7s10.5-6.7,23.5-6.7
+            C459.6,473.9,470.1,476.9,470.1,480.6z" />
+            <path class="st214" d="M470.1,518.9c0,3.7-10.6,6.7-23.5,6.7c-13,0-23.5-3-23.5-6.7" />
+            <polyline class="st213" points="423,519 423,483.6 423,480.7 	" />
+            <line class="st213" x1="470.2" y1="519" x2="470.2" y2="481.3" />
+          </g>
+          <line class="st213" x1="448.2" y1="479.4" x2="448.2" y2="441.7" />
+        </svg>
+
+        <!-- Les définitions apparaissant au survol -->
+        <section class="definition">
+          <article id="defnappeCampbon">
+            <p>La caractéristique importante de cette nappe souterraine, c’est qu’il ne s’agit pas d’une rivière ou d’un lac souterrain, mais d’eaux de surfaces infiltrées dans le sol et conservées dans la roche. Cela en fait une eau d'extrême qualité</p>
+          </article>
+          <article id="defnappePhreatique">
+            <p>Une nappe phréatique est un type de nappe d’eau souterraine. Ce sont les nappes les plus proches de la surface. Elles sont directement alimentées par l’eau de pluie. Ce sont les plus gros réservoirs d’eau potable de notre planète avec 95% d’eau douce disponible stockée dans ces nappes phréatiques !</p>
+          </article>
+        </section>
+      </div>
+
+      <!-- Page 3 -->
+      <div class="section" data-anchor="page3">
+        <div id="sante">
+          <!-- Panel descriptif année par année -->
+          <section id="section5" class="panel">
+            <p class="title pTitle"> NAPPE DE CAMPBON ET LA SANTE</p>
+            <p id="anneeCampbon" class="title pTitle"> ANNEE 2012 </p>
+            <p id="descriptionBonhomme" class="pContent normal"></p>
+            <p class="pContent normal">Selon les années, les industriels et les agriculteurs utilisent des produits phytosanitaires différents ainsi, les substances actives présentes présente dans les <em id="nappeSouterraine" class="motdef">nappes souterraines</em> évoluent. Les <em id="cocktail" class="motdef">cocktails</em> de substances néfastes se transforment et les effets toxiques sont modifiés.</p>
+          </section>
+          <article id="descC2012">
+            <p>ANNEE 2012</p>
+          </article>
+          <article id="descC2013">
+            <p>ANNEE 2013</p>
+          </article>
+          <article id="descC2014">
+            <p>ANNEE 2014</p>
+          </article>
+          <article id="descC2015">
+            <p>ANNEE 2015</p>
+          </article>
+          <article id="descC2016">
+            <p>ANNEE 2016</p>
+          </article>
+          <article id="descriptionBonhomme2012">
+            <p>Forte présence de substances phytosanitaires toxiques par inhalation et d’ingestion. Les pesticides retrouvés provoquent des effets graves sur les organes et peuvent entraîner la mort. Parmi eux :</p>
+            <ul>
+              <li>
+                <strong>Dichlorométhane (solvant)</strong> :
+                Connu pour son effet narcotique, il est l’un des solvants les plus irritant. Aujourd’hui, vendu en décapant de peinture et vernis, il est à l’origine de nombreuses toxicités mortelles au travail.
+              </li>
+              <li>
+                <strong>Xylène</strong> :
+                Largement utilisé dans la préparation des insecticides, il peut irriter le nez et la gorge, affecter le système nerveux, provoquer des douleurs, rougeurs, gonflements et des sécheresses cutanées.
+              </li>
+              <li>
+                <strong>Mésitylène</strong> :
+                Constituant de solvants pétroliers utilisés pour la formation des pesticides, il entraîne une perte de poids, une dépression du système nerveux central et des effets hématologiques, avec des atteintes pulmonaires.
+              </li>
+            </ul>
+          </article>
+          <article id="descriptionBonhomme2013">
+            <p>Forte présence de substances pesticides toxiques par inhalation et ingestion. Diverses substances provoquant des anomalies génétiques avec des effets graves sur les organes et pouvant entraîner la mort. Parmi eux :</p>
+            <ul>
+              <li><strong>Chloroforme</strong> : Fortement présent. Utilisé pour rendre l’eau potable, il est très toxique ! Susceptible de provoquer le cancer, le chloroforme peut aussi avoir des effets graves pour les organes ou nuire à la fertilité ou au fœtus. Cet assainissant peut également irriter la peau et les yeux.</li>
+              <li><strong>Dichlorométhane (solvant)</strong> : Connu pour son effet narcotique, il est l’un des solvants les plus irritant. Aujourd’hui, vendu en décapant de peinture et vernis, il est à l’origine de nombreuses toxicités mortelles au travail.</li>
+              <li><strong>Toluene (solvant)</strong> : Nécessaire à la fabrication des vernis ou autres produits colorants, sa simple inhalation peut entraîner des effets allant de l’irritation de la gorge à la perte de conscience.</li>
+            </ul>
+          </article>
+          <article id="descriptionBonhomme2014">
+            <p>Forte présence de substances pesticides toxiques par inhalation et d’ingestion. Les pesticides retrouvés sont susceptibles de provoquer de graves effets sur les organes, pouvant entraîner la mort. Parmi eux :</p>
+            <ul>
+              <li><strong>Dichlorométhane (solvant)</strong> : Connu pour son effet narcotique, il est l’un des solvants les plus irritant. Aujourd’hui, vendu en décapant de peinture et vernis, il est à l’origine de nombreuses toxicités mortelles au travail.</li>
+              <li><strong>Somme du tétrachloroéthylène et du trichloréthylène (solvant)</strong> : Les composants de ce solvant sont cancérigènes et toxiques pour les poissons de petite taille.</li>
+              <li><strong>Xylène (solvant)</strong> : Largement utilisé dans la préparation des insecticides, il peut irriter le nez et la gorge, affecter le système nerveux, provoquer des douleurs, rougeurs, gonflements et des sécheresses cutanées.</li>
+            </ul>
+          </article>
+          <article id="descriptionBonhomme2015">
+            <p>Forte présence de substances toxiques par inhalation et d’ingestion. Les pesticides retrouvés sont susceptibles de provoquer des effets graves sur les organes pouvant entraîner la mort.</p>
+            <ul>
+              <li><strong>Dichlorométhane (solvant)</strong> : Connu pour son effet narcotique, il est l’un des solvants les plus irritant. Aujourd’hui, vendu en décapant de peinture et vernis, il est à l’origine de nombreuses toxicités mortelles au travail.</li>
+              <li><strong>Somme de trichlorobenzènes (solvant)</strong> : Produit très toxique pour l’environnement aquatique qui affecte notamment les poissons de petite taille. Il est également nocif pour l’homme en cas d’ingestion et peut provoquer des irritations cutanées.</li>
+              <li><strong>Somme du tétrachloroéthylène et du trichloréthylène (solvant)</strong> : Les composants de ce solvant sont cancérigènes et toxiques pour les poissons de petite taille.</li>
+            </ul>
+          </article>
+          <article id="descriptionBonhomme2016">
+            <p>Forte présence de substances toxiques par inhalation et d’ingestion. Les pesticides retrouvés provoquent également des effets graves sur les organes pouvant entraîner la mort.</p>
+            <ul>
+              <li><strong>Xylène (solvant)</strong> : Largement utilisé dans la préparation des insecticides, il peut irriter le nez et la gorge, affecter le système nerveux, provoquer des douleurs, rougeurs, gonflements et des sécheresses cutanées.</li>
+              <li><strong>Bentazone (herbicide)</strong> : Présent dans tous les herbicides, il est très nocif pour les organismes aquatiques. En cas d’ingestion, il peut brûler les yeux et provoquer des allergies cutanées.</li>
+              <li><strong>Isothiocyanate de méthyle (fumigeant)</strong> :  Présent dans de nombreux pesticides et produits pharmaceutiques ce composant organique a des effets à long terme. Au contact de la peau, il peut provoquer des allergies, de graves brûlures et peut s'avérer mortel en cas d’inhalation.</li>
+            </ul>
+          </article>
+
+          <!-- Timeline -->
+          <ul class="timeline timeline-horizontal" id="timeline2">
+            <li class="timeline-item">
+              <button class="timeline-badge primary" id="C2012"><p class="normal pTimeline"> 2012 </p></button>
+            </li>
+            <li class="timeline-item">
+              <button class="timeline-badge primary" id="C2013"><p class="normal pTimeline"> 2013 </p></button>
+            </li>
+            <li class="timeline-item">
+              <button class="timeline-badge primary" id="C2014"><p class="normal pTimeline"> 2014 </p></button>
+            </li>
+            <li class="timeline-item">
+              <button class="timeline-badge primary" id="C2015"><p class="normal pTimeline"> 2015 </p></button>
+            </li>
+            <li class="timeline-item">
+              <button class="timeline-badge primary" id="C2016"><p class="normal pTimeline"> 2016 </p></button>
+            </li>
+          </ul>
+
+          <!-- Histogramme -->
+          <svg id="bonhomme" width="460" height="350" viewBox="0 0 460 350" preserveAspectRatio="none"></svg>
+
+          <!-- Légende -->
+          <section id="section6" class="panel">
+            <p class="pTitle title"> Dangers des principaux pesticides </p>
+            <article class="articleS6">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#D42E1E;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Mortel </p>
+            </article>
+            <br>
+            <article class="articleS6">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#F8C000;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Cancer </p>
+            </article>
+            <br>
+            <article class="articleS6">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#7CCAE2;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Toxic/Nocif </p>
+            </article>
+            <br>
+            <article class="articleS6">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#008442;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Impact génétique </p>
+            </article>
+            <br>
+            <article class="articleS6">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#58BC81;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Impact foetus </p>
+            </article>
+            <br>
+            <article class="articleS6">
+              <svg width="30" height="10">
+                <rect width="30" height="10" style="fill:#AA3565;stroke-width:3;stroke:rgb(0,0,0)" /> </svg>
+              <p class="normal pContent pSection8"> Risque pour les organes </p>
+            </article>
+          </section>
+          <img id="btnSolution" src="img/solutionalternatives.png">
+        </div>
+
+        <!-- Panneau solutions alternatives -->
+        <section id="solutions">
+          <article id="popupSolution">
+            <article id="popupSolutionHaut">
+              <p>Il existe des solution alternatives</p>
+              <img id="exitSolution" src="img/Exit_Page_2.png">
+            </article>
+            <article id="popupSolutionBas">
+              <p class="solutionColonne">Vous l’aurez compris, les pesticides, présents dans l’eau à grande échelle sont la cause de nombreuses maladies, nuisibles à l’homme. Présents en masse dans les cultures agricoles, les pesticides sont d’autant plus terribles qu’ils bouleversent le processus de pollinisation des insectes. Et c’est bien plus grave qu’il n’y paraît ! Les abeilles permettent la reproduction des fleurs en transportant le pollen et assurent ainsi, une large part de l’alimentation humaine. Savez-vous qu’un tiers de ce que nous mangeons dépend de la pollinisation des abeilles ? Pour faire court, si les abeilles sont intoxiquées par les pesticides et bien … plus de tomates, plus de melons, plus de fraises !</p>
+              <p class="solutionColonne">L’heure est venue de penser au changement.<br><br>Vers un avenir meilleur ? Des solutions alternatives existent. Les chercheurs de l’INRA en partenariat avec Agrosolution, ont démontré qu’utiliser moins de pesticides ne dégradait pas la productivité et la rentabilité d’un agriculteur. Par exemple, les exploitations du réseau Dephy ont permis de montrer qu’il était possible de diminuer, sans impact important sur le revenu de l’exploitation, le recours aux produits phytopharmaceutiques.</p>
+              <p class="solutionColonne">Et si on allait plus loin ? Pour éliminer et éviter les effets néfastes des pesticides, une seule solution s’impose : le passage à une agriculture uniquement biologique. L’agriculture biologique constitue un mode de production qui a recours à des pratiques culturales et d’élevage soucieuses du respect des équilibres naturels. Ainsi, elle exclut l’usage des produits chimiques de synthèse, des OGM et limite l’emploi d’intrants.(source: ministère de l’agriculture et de l’alimentation)<br><br>Maintenant vous en savez plus ! Nous espérons vous avoir clairement présenté le phénomène et les enjeux relatifs aux pesticides, on ne vous a rien caché. Parole de PESTIBUSTERS !</p>
+            </article>
+          </article>
+        </section>
+        <section class="definition">
+            <article id="defnappeSouterraine">
+              <p>Une nappe d’eau souterraine est une grande quantité d’eau contenue dans une roche sous la terre, plus exactement dans les interstices, les fissures et autres espaces libres, qu’on appelle “aquifère”. Il existe différents types de nappes selon leurs tailles (pouvant s’étaler sur plusieurs régions), leurs profondeurs (proche de la surface ou très profondes) ou l’alimentation en eau. Leur eau s’écoule généralement dans des cours ou par des puits et des forages.</p>
+            </article>
+            <article id="defcocktail">
+              <p>La force des polluants se trouvent dans leur complémentarité. Le mélange des différentes molécules et leurs adjuvants constituent des cocktails mortels ! Des perturbateurs endocriniens qui empoisonnent notre cerveau. Ils sont en ce sens responsables de nombreux troubles neurologiques ainsi que de graves difficultés d’apprentissage.</p>
+            </article>
+          </section>
+      </div>
+
+      <!-- Page 4 -->
+      <div class="section" data-anchor="page4">
+        <p id="pCredits1" class="title panel"> Le média et les partenaires </p>
+        <a href="http://www.eau-et-rivieres.org/home"> <img src="img/logosDivers/logoMedia.png" alt="logo Eau et Rivieres de Bretagne" id="logoMedia"/> </a>
+        
+        <!-- Panneau description association -->
+        <section id="section7" class="panel">
+          <p class="normal pContent pTop"> L’association Eau et Rivières de Bretagne est agréée au titre de la protection de l’environnement, pour assurer « dans l’intérêt
+          général la protection, la mise en valeur, la gestion et la restauration de la ressource en eau et des écosystèmes aquatiques,
+          dans une perspective de société écologiquement viable », par arrêté préfectoral du 17 décembre 2013. </p>
+          <p class="normal pContent"> Elle fait oeuvre d’éducation populaire en élevant la conscience écologique, la connaissance des règles qui régissent les
+          équilibres naturels et le respect du patrimoine naturel, et en contribuant à développer les activités éducatives, récréatives
+          et informatives auprès du grand public. </p>
+          <p class="normal pContent pBottom"> L'Association née en 1969, comprend aujourd'hui 1 200 adhérents, une centaine d'associations et 17 salariés. </p>
+        </section>
+
+        <!-- Panneau remerciement association -->
+        <section id="section8" class="panel">
+          <p class="normal pContent pTop">
+            Groupe BigData Eau et Rivières de Bretagne :
+            <br>
+            Réalisation bases de données et datavisualiseur </p>
+          <p class="normal pContent"> Jacques Nève, Etienne Dervieux, Benoit Garcia, Zaina Toibibou, Amina Rafik, Marie-Josée Hélias, Béatrice Dupont, Dominique
+          Le Goux </p>
+          <p class="normal pContent">
+            Eaux souterraines : Banque ADES
+            <br>
+            Eaux de surface : Banque OSUR
+          </p>
+        </section>
+
+        <!-- Tableau de logos des partenaires -->
+        <table id="logos">
+          <tr>
+            <td> <a href="http://www.hyblab.fr/"> <img src="img/logosDivers/logo_hyblab.png" alt="logo Hyblab" id="logoHyblab" class="logo" /> </a> </td>
+            <td> <a href="http://web.polytech.univ-nantes.fr/"><img src="img/logosDivers/polytech.png" alt="logo Polytech'Nantes" id="logoPolytech" class="logo"/> </a></td>
+            <td> <a href="https://www.agrnantes.fr/"><img src="img/logosDivers/agr.png" alt="logo AGR L'école de l'image" id="logoAGR" class="logo"/> </a> </td>
+            <td> <a href="http://sciencescom.audencia.com/"><img src="img/logosDivers/audencia.png" alt="logo Audencia SciencesCom" id="logoAudencia" class="logo"/> </a> </td>
+            <td> <a href="http://www.paysdelaloire.fr/"><img src="img/logosDivers/regionPaysLoire.png" alt="logo Region Pays de la Loire" id="logoRegion" class="logo"/> </a> </td>
+          </tr>
+          <tr>
+            <td> <a href="https://www.nantesmetropole.fr/"><img src="img/logosDivers/nantesMetropole.png" alt="logo Nantes Métropoles" id="logoNantes" class="logo"/> </a> </td>
+            <td> <a href="http://www.ouestmedialab.fr/"><img src="img/logosDivers/ouestMediaLab.png" alt="logo Ouest Media Lab" id="logoOuestMediaLab" class="logo"/> </a> </td>
+            <td> <a href="http://www.univ-nantes.fr/"><img src="img/logosDivers/un.png" alt="logo Université de Nantes" id="logoUN" class="logo"/> </a> </td>
+            <td> <a href="https://opensource.org/licenses/MIT"><img src="img/logosDivers/openSource.png" alt="logo Open Source" id="logoOpenSource" class="logo"/> </a> </td>
+            <td> <a href="https://creativecommons.org/licenses/by/3.0/fr/"><img src="img/logosDivers/cc.png" alt="logo CC" id="logoCC" class="logo"/> </a> </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Page 5 -->
+      <div class="section" data-anchor="page5">
+        <p id="pCredits2" class="title panel"> Etudiants participant au projet </p>
+        <table id="logosNous">
+          <tr>
+            <td>
+              <img src="img/etudiants/Alexis.png" alt="Alexis" class="imageNous">
+              <p class="name title"> Alexis <br> SciencesCom </p>
+            </td>
+            <td>
+              <img src="img/etudiants/Angela.png" alt="Angela" class="imageNous">
+              <p class="name title"> Angela <br> SciencesCom </p>
+            </td>
+            <td>
+              <a href="https://www.linkedin.com/in/axel-journe-555a0a140/">
+                <img src="img/etudiants/Axel.png" alt="Axel" class="imageNous">
+              </a>
+              <p class="name title"> Axel <br> Polytech </p>
+            </td>
+            <td>
+              <a href="https://www.behance.net/clothildecbfd1">
+                <img src="img/etudiants/Clothilde.png" alt="Clothilde" class="imageNous">
+              </a>
+              <p class="name title"> Clothilde <br> AGR </p>
+            </td>
+            <td>
+              <a href="http://florefvr.tumblr.com/">
+                <img src="img/etudiants/Flore.png" alt="Flore" class="imageNous">
+              </a>
+              <p class="name title"> Flore <br> AGR </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/etudiants/Lara.png" alt="Lara" class="imageNous">
+              <p class="name title"> Lara <br> SciencesCom </p>
+            </td>
+            <td>
+              <a href="http://cargocollective.com/matthieunourisson">
+                <img src="img/etudiants/Matthieu.png" alt="Matthieu" class="imageNous">
+              </a>
+              <p class="name title"> Matthieu <br> AGR </p>
+            </td>
+            <td>
+              <a href="https://www.linkedin.com/in/neil-rittner-65aa60137/">
+                <img src="img/etudiants/Niel.png" alt="Neil" class="imageNous">
+              </a>
+              <p class="name title"> Neil <br> Polytech </p>
+            </td>
+            <td>
+              <img src="img/etudiants/Nolwenn.png" alt="Nolwenn" class="imageNous">
+              <p class="name title"> Nolwenn <br> SciencesCom </p>
+            </td>
+            <td>
+              <img src="img/etudiants/Tristan.png" alt="Tristan" class="imageNous">
+              <p class="name title"> Tristan <br> Polytech </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
