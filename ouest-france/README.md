@@ -2,9 +2,9 @@
 
 Média :
 
-Sujet :
+Sujet : Ouest France
 
-Equipe :
+Equipe : Nono, Didi, Eva
 
 Patricipants :
 

@@ -1,15 +1,1253 @@
 /* just a sample css rule to show that everything works */
 footer p
 {
-  font-size: small;
-  text-align: center;
+    font-size: small;
+    text-align: center;
 }
 
 header{
-  text-align: center;
+    text-align: center;
 }
 
 header img{
-  max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+#fullpage
+{
+    width: 1366px;
+    margin: 0 auto;
+}
+
+#section0{
+    background: #2B2B2B;
+    width:100%;
+    height: 100%;
+}
+
+
+#section1{
+    background: url(../img/Data1Background.png) no-repeat;
+    background-size: 100% 100%;
+    background-color: #2B2B2B;
+
+}
+
+#section2{
+    background: url(../img/Data2Background.png) no-repeat;
+    background-size: 100% 100%;
+    background-color: #2B2B2B;
+}
+
+
+#section3{
+    background: url(../img/Data3Background.png) no-repeat;
+    background-size: 100% 100%;
+    background-color: #2B2B2B;
+}
+
+
+#section4{
+    background: #2B2B2B;
+    width:100%;
+    height: 100%;
+}
+
+
+
+.col.s1
+{
+    float: left;
+    width: 70px;
+    height: 400px;
+    position : relative;
+    margin-left: 70px;
+    margin-top: 100px;
+}
+
+.col.s11
+{
+    float: right;
+    width: 1210px;
+    height: 615px;
+    position : relative;
+}
+
+.carte
+{
+    height:65%;
+    width:65%;
+    z-index: 1;
+    position: absolute;
+    left:0px;
+    top: 100px;
+}
+
+.carte2012
+{
+    height: 80%;
+    width: 80%;
+    z-index: 1;
+    position: absolute;
+    left: 0px;
+    top: 55px;
+}
+
+.podium--hidden
+{
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.divCarte--hidden {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
+
+.jackGif
+{
+    position: absolute;
+    left : 260px;
+    width: 500px;
+    height: 548px;
+    text-align: center;
+}
+
+.jackGif--hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.logo
+{
+    position: absolute;
+    z-index: 1;
+    margin-left: 300px;
+    width: 40%;
+    height: 40%
+}
+
+.logo--hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.pin--2006-1
+{
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+/*.pin--2006-1:hover
+{
+	position: absolute;
+    top: 150px;
+    left: 300px;
+    width: 15%;
+    height: 15%;
+    z-index: 3;
+}*/
+
+.pin--2006-2
+{
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2007-1
+{
+    position: absolute;
+    top: 360px;
+    left: 490px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2007-2
+{
+    position: absolute;
+    top: 200px;
+    left: 280px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2007-3
+{
+    position: absolute;
+    top: 200px;
+    left: 180px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2008-1
+{
+    position: absolute;
+    top: 360px;
+    left: 490px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2008-2
+{
+    position: absolute;
+    top: 200px;
+    left: 285px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2008-3
+{
+    position: absolute;
+    top: 200px;
+    left: 190px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+
+.pin--2009-1
+{
+    position: absolute;
+    top: 210px;
+    left: 200px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2009-2
+{
+    position: absolute;
+    top: 210px;
+    left: 290px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2009-3
+{
+    position: absolute;
+    top: 120px;
+    left: 455px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2009-4
+{
+    position: absolute;
+    top: 370px;
+    left: 485px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2012-1
+{
+    position: absolute;
+    top: 55px;
+    left: 318px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2012-2
+{
+    position: absolute;
+    top: 160px;
+    left: 140px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2012-3
+{
+    position: absolute;
+    top: 155px;
+    left: 218px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2012-4
+{
+    position: absolute;
+    top: 140px;
+    left: 704px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2012-5
+{
+    position: absolute;
+    top: 50px;
+    left: 413px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2012-6
+{
+    position: absolute;
+    top: 95px;
+    left: 468px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.pin--2012-7
+{
+    position: absolute;
+    top: 420px;
+    left: 263px;
+    width: 11%;
+    height: 11%;
+    z-index: 3;
+}
+
+.plan-obtuse {
+    position: absolute;
+    top: 379px;
+    left: 702px;
+    padding: 15px 30px;
+    margin: 0;
+    color: #000;
+    background: #404040;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#404040), to(#404040));
+    background: -moz-linear-gradient(#404040, #404040);
+    background: -o-linear-gradient(#404040, #404040);
+    background: linear-gradient(#404040, #404040);
+    -webkit-border-top-left-radius: 25px 50px;
+    -webkit-border-top-right-radius: 25px 50px;
+    -webkit-border-bottom-right-radius: 25px 50px;
+    -webkit-border-bottom-left-radius: 25px 50px;
+    -moz-border-radius: 25px / 50px;
+    border-radius: 25px / 50px;
+    z-index: 2;
+    width: 400px;
+}
+
+.podium-obtuse {
+    position:absolute;
+    top: 12px;
+    left:300px;
+    padding:15px 30px;
+    margin:0;
+    color:#000;
+    background:#404040; /* default background for browsers without gradient support */
+    /* css3 */
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#404040), to(#404040));
+    background:-moz-linear-gradient(#404040, #404040);
+    background:-o-linear-gradient(#404040, #404040);
+    background:linear-gradient(#404040, #404040);
+    /* Using longhand to avoid inconsistencies between Safari 4 and Chrome 4 */
+    -webkit-border-top-left-radius:25px 50px;
+    -webkit-border-top-right-radius:25px 50px;
+    -webkit-border-bottom-right-radius:25px 50px;
+    -webkit-border-bottom-left-radius:25px 50px;
+    -moz-border-radius:25px / 50px;
+    border-radius:25px / 50px;
+    z-index: 2;
+    width: 450px;
+}
+
+.accueil-obtuse {
+    position:absolute;
+    top: 250px;
+    left:250px;
+    padding:15px 30px;
+    margin:0;
+    color:#000;
+    background:#404040; /* default background for browsers without gradient support */
+    /* css3 */
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#404040), to(#404040));
+    background:-moz-linear-gradient(#404040, #404040);
+    background:-o-linear-gradient(#404040, #404040);
+    background:linear-gradient(#404040, #404040);
+    /* Using longhand to avoid inconsistencies between Safari 4 and Chrome 4 */
+    -webkit-border-top-left-radius:25px 50px;
+    -webkit-border-top-right-radius:25px 50px;
+    -webkit-border-bottom-right-radius:25px 50px;
+    -webkit-border-bottom-left-radius:25px 50px;
+    -moz-border-radius:25px / 50px;
+    border-radius:25px / 50px;
+    z-index: 2;
+    width: 600px;
+}
+
+.accueil-obtuse--hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.jackPlan
+{
+    position: absolute;
+    top: 19px;
+    left: 3px;
+    z-index: 2;
+    width: 110%;
+    height: 110%;
+}
+
+.podium
+{
+    position: absolute;
+    top: 230px;
+    left:150px;
+    z-index: 1;
+    width : 60%;
+    height :60%;
+}
+
+.americain.premier.drapeau
+{
+    top: 163px;
+    left:380px;
+    position: absolute;
+    z-index: 2;
+    width : 30%;
+    height :30%;
+}
+
+.americain.deuxieme.drapeau
+{
+    top: 112px;
+    left:150px;
+    position: absolute;
+    z-index: 2;
+    width : 30%;
+    height :30%;
+}
+
+.americain.troisieme.drapeau
+{
+    top: 167px;
+    left:600px;
+    position: absolute;
+    z-index: 2;
+    width : 30%;
+    height :30%;
+}
+
+.francais.premier.drapeau
+{
+    top: 1px;
+    left:350px;
+    position: absolute;
+    z-index: 2;
+    width : 30%;
+    height :30%;
+}
+
+.francais.deuxieme.drapeau
+{
+    top: 244px;
+    left: 200px;
+    position: absolute;
+    z-index: 2;
+    width : 30%;
+    height :30%;
+}
+
+.francais.troisieme.drapeau
+{
+    top: 166px;
+    left:550px;
+    position: absolute;
+    z-index: 2;
+    width : 30%;
+    height :30%;
+}
+
+.allemand.premier.drapeau
+{
+    top: 24px;
+    left:420px;
+    position: absolute;
+    z-index: 2;
+    width : 30%;
+    height :30%;
+}
+
+.allemand.deuxieme.drapeau
+{
+    top: 134px;
+    left:180px;
+    position: absolute;
+    z-index: 2;
+    width : 30%;
+    height :30%;
+}
+
+.allemand.troisieme.drapeau
+{
+    top: 308px;
+    left:570px;
+    position: absolute;
+    z-index: 2;
+    width : 30%;
+    height :30%;
+}
+
+.anglais.premier.drapeau
+{
+    top: 9px;
+    left:380px;
+    position: absolute;
+    z-index: 2;
+    width : 30%;
+    height :30%;
+}
+
+.anglais.deuxieme.drapeau
+{
+    top: 250px;
+    left:230px;
+    position: absolute;
+    z-index: 2;
+    width : 30%;
+    height :30%;
+}
+
+.anglais.troisieme.drapeau
+{
+    top: 292px;
+    left:545px;
+    position: absolute;
+    z-index: 2;
+    width : 30%;
+    height :30%;
+}
+
+.suede.troisieme.drapeau
+{
+    top: 306px;
+    left:550px;
+    position: absolute;
+    z-index: 2;
+    width : 25%;
+    height :25%;
+}
+
+.drapeau--hidden
+{
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.map
+{
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    width : 80%;
+    height :80%;
+}
+.point {
+    width: 18px;
+    height: 18px;
+    border-radius: 10000px;
+    background: #A9FF88;
+    border: 2px solid #A9FF88;
+    margin: 4px 0 14px 8px;
+    position: relative;
+}
+
+.pointEvolution {
+    width: 18px;
+    height: 18px;
+    border-radius: 10000px;
+    background: #A9FF88;
+    border: 2px solid #A9FF88;
+    margin: 4px 0 14px 8px;
+    position: relative;
+}
+
+.pointEvolution--hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.pointEvolution:hover {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 7px;
+}
+
+.pointEvolution.active {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 7px;
+}
+
+.point:hover {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 7px;
+}
+
+.point.active {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 7px;
+}
+
+.point:after {
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    content: " ";
+    display: block;
+    width: 4px;
+    height: 24px;
+    background: #A9FF88;
+}
+
+.point:hover:after {
+    left: 6px;
+}
+
+.point:last-child:after {
+    display: none;
+}
+
+p.dateMenu
+{
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    margin-left: 25px;
+}
+
+p.dateMenu--hidden
+{
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+h1.titres
+{
+    position: absolute;
+    color: #A9FF88;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    top: 50px;
+    left: 800px;
+    width: 400px;
+    height: 50px;
+}
+
+h1.TitreAccueil
+{
+    color: #A9FF88;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+}
+
+h2.TitreAccueil
+{
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+}
+
+h3.TitreAccueil
+{
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    text-align: justify;
+}
+
+img.barrePodium
+{
+    position: absolute;
+    transform: rotate(90deg);
+    top: -130px;
+    left: 990px;
+    width: 30px;
+    height: 500px;
+}
+
+img.barrePlan
+{
+    position: absolute;
+    transform: rotate(90deg);
+    top: -150px;
+    left: 990px;
+    width: 30px;
+    height: 500px;
+}
+
+.jackAccueil
+{
+    position: absolute;
+    left: 854px;
+    top: 5px;
+    width: 277px;
+    height: 730px;
+    transform: scaleX(-1);
+}
+
+.jackAccueil--hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.jackPodium
+{
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    width: 277px;
+    height: 730px;
+}
+
+.fenetrePopup
+{
+    background-color: black;
+    opacity: 0.8;
+    width: 577px;
+    height: 439px;
+    top: 127px;
+    left: 100px;
+    position: absolute;
+    border: 2px solid #A9FF88;
+    z-index: 4;
+}
+
+.fenetrePopup--hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.croix
+{
+    color: #767676;
+    position: absolute;
+    left: 545px;
+    top: 4px;
+    font-size: 26px;
+}
+
+p.titreScene
+{
+    position: absolute;
+    top: 0px;
+    color: #A9FF88;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    left: 150px;
+}
+p.sousTitreScene
+{
+    position: absolute;
+    top: 55px;
+    color: #A9FF88;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    left: 21px;
+}
+
+ul.listeScene
+{
+    position: absolute;
+    top: 87px;
+    color: white;
+    list-style: none;
+}
+
+ul.listeScene--hidden
+{
+    position: absolute;
+    top: 80px;
+    color: white;
+    opacity: 0;
+}
+
+.camembertScene
+{
+    position: absolute;
+    left: 221px;
+    top: 199px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.camembertScene--hidden
+{
+    position: absolute;
+    left: 262px;
+    top: 206px;
+    opacity: 0;
+}
+
+.camembertPodium
+{
+    position: absolute;
+    left: 903px;
+    top: 395px;
+    cursor: pointer;
+}
+
+.legendePodium
+{
+    position: absolute;
+    top: 132px;
+    left: 894px;
+    color: white;
+    font-size: 20px;
+}
+
+.pointLegendePodium
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 10000px;
+    position: relative;
+    top: -17px;
+    left: -25px;
+}
+
+.legendeScene
+{
+    position: absolute;
+    top: 53px;
+    left: 359px;
+    color: white;
+}
+
+.legendeScene--hidden
+{
+    position: absolute;
+    top: 132px;
+    left: 894px;
+    color: white;
+    opacity: 0;
+}
+
+.pointLegendeScene
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 10000px;
+    background: #A9FF88;
+    position: relative;
+    top: -16px;
+    left: -24px;
+}
+
+.legendeGraph
+{
+    position: absolute;
+    top: 412px;
+    left: 872px;
+    color: white;
+    text-decoration: none;
+}
+
+.legendeGraph--hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.pointLegendeGraph
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 10000px;
+    background: #A9FF88;
+    position: relative;
+    top: -16px;
+    left: -24px;
+}
+
+.pointLegendeGraph--hidden
+{
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+
+
+/**************** FRANCE ****************/
+
+
+.jackFrance
+{
+    position: absolute;
+    top: 153px;
+    left: 83px;
+    z-index: 0;
+    width: 75%;
+    height: 75%;
+}
+
+p.texteGlobal1{
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    text-align: justify;
+}
+
+p.texteGlobal1--hidden{
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+p.texteGlobal2{
+    color: #a9ff88;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: justify;
+}
+
+p.texteGlobal2--hidden{
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+
+.fenetrePopupFrance
+{
+    background-color: black;
+    opacity: 0.8;
+    top: 127px;
+    left: 100px;
+    position: absolute;
+    border: 2px solid #A9FF88;
+    z-index: 3;
+}
+
+.fenetrePopupFrance--hidden {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+
+
+.france-obtuse {
+    position: absolute;
+    top: 185px;
+    right: 85px;
+    padding: 15px 15px 15px 15px;
+    margin: 0;
+    color: #000;
+    background: #404040;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#404040), to(#404040));
+    background: -moz-linear-gradient(#404040, #404040);
+    background: -o-linear-gradient(#404040, #404040);
+    background: linear-gradient(#404040, #404040);
+    -webkit-border-top-left-radius: 25px 50px;
+    -webkit-border-top-right-radius: 25px 50px;
+    -webkit-border-bottom-right-radius: 25px 50px;
+    -webkit-border-bottom-left-radius: 25px 50px;
+    -moz-border-radius: 25px / 50px;
+    border-radius: 25px / 50px;
+    z-index: 1;
+    width: 250px;
+}
+
+
+p.titreVille
+{
+    position: relative;
+    color: #A9FF88;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    margin-top: -40px;
+    text-align: center;
+}
+
+
+ul.listeArtistes
+{
+    list-style-type: none;
+    position: relative;
+    color: white;
+    text-align : center;
+    margin-left: -50px;
+    margin-top: -30px;
+    line-height: 160%;
+    font-size: 25px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+object.mapFrance
+{
+    width:600px;
+    height:600px;
+    position: absolute;
+    left: 80px;
+    top: 30px;
+
+}
+
+
+.croixFrance
+{
+    color: #767676;
+    position: relative;
+    top: 4px;
+    font-size: 26px;
+    margin-left : 550px;
+    padding-right:10px;
+    z-index: 4;
+}
+
+/********************************************************************************************************************/
+.graph
+{
+    width: 500px;
+    height: 500px;
+    top: 317px;
+    position: absolute;
+    left: 299px;
+}
+
+.graph--hidden
+{
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.credit1
+{
+    height: 30%;
+    width: 30%;
+    position: absolute;
+    top: 94px;
+    left: -187px;
+}
+
+.credit2
+{
+    height: 37%;
+    width: 37%;
+    top: 48px;
+    left: 101px;
+    position: absolute;
+}
+
+.credit3 {
+    height: 30%;
+    width: 30%;
+    top: 99px;
+    left: 450px;
+    position: absolute;
+}
+
+.polytech
+{
+    position: absolute;
+    top: 264px;
+    left: -127px;    
+}
+
+.audencia
+{
+    position: absolute;
+    top: 264px;
+    left: 217px;
+}
+
+.agr
+{
+    position: absolute;
+    top: 264px;
+    left: 537px;
+}
+
+.ecole
+{
+    color: #A9FF88;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+}
+
+.nom
+{
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.remerciement
+{
+    position: absolute;
+    top: 176px;
+    left: 800px;
+    width: 350px;
+}
+
+#bandeau 
+{
+    padding: 8px;
+    position: absolute;
+    top: 471px;
+    left: -156px;
+    background-color: #ffffff;
+    width: 1366px;
+}
+
+#bandeau li
+{
+      list-style-type: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 12px;
+}
+
+
+    #bandeau img{
+      height: 46px;
+    }
+
+    #bandeau #hyblab{
+      margin: 46px 0;
+      height: 50px;
+      float: left;
+    }
+
+    #bandeau #cc, #bandeau #opensource
+    {
+      height:16px;
+    }
+
+    #bandeau .stacked{
+      display:block;
+    }
+
+    #bandeau ul{
+      text-align: center;
+      padding: 0 0;
+    }
+
+    #bandeau .institutionnel
+    {
+      height: 42px;
+    }
+
+img.barreRemerciement
+{
+    position: absolute;
+    transform: rotate(90deg);
+    top: -177px;
+    left: -32px;
+    width: 190px;
+    height: 321px;
+}
+
+h1.titresRemerciement
+{
+    position: absolute;
+    color: #A9FF88;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    top: -63px;
+    left: -19px;
+    width: 400px;
+    height: 50px;
+}
+
+.linkedin
+{
+    width: 8%;
+    height: 8%;
+    top: 3px;
+    position: relative;
+}
+
+strong {
+    font-weight: 700 !important;
 }

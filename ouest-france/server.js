@@ -10,6 +10,7 @@ var app = express();
 // Minimum routing: serve static content from the html directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 // You can then add whatever routing code you need
 
 // This module is exported and served by the main server.js located
