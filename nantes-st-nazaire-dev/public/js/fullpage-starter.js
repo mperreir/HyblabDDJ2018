@@ -65,57 +65,109 @@ $(document).ready(function() {
         }, 100);
     });
 
+
+    function setInd(that) {
+               $(".buttonInd2").find("i").addClass("faa-tada");
+               $(".buttonInd3").find("i").addClass("faa-tada");
+               that.find("i").removeClass("faa-tada");
+               $("div.indButton button").css({
+                   "background-color": "#ffc107",
+                   "border-color": "#ffc107"
+               });
+               that.css({
+                   "background-color": "red",
+                   "border-color": "red"
+               });
+               $(".indicateur2").hide();
+               $(".indicateur3").hide();
+               $(".indicateur1").show();
+               $(".textBull2").hide();
+               $(".textBull3").hide();
+               $(".textBull1").show();
+               $(".indTitle2").hide();
+               $(".indTitle3").hide();
+               $(".indTitle1").show();
+           }
+
+    //indicateurs angles 
+       $(".indicateur1").hide();
+       $(".indicateur2").hide();
+       $(".indicateur3").hide();
+       $(".textBull1").hide();
+       $(".textBull2").hide();
+       $(".textBull3").hide();
+       $(".indTitle1").hide();
+       $(".indTitle2").hide();
+       $(".indTitle3").hide();
+
+       setInd($(".buttonInd1"));
+
+       $(".buttonInd1").find("i").removeClass("faa-tada");
+       $("div.indButton button").css({
+           "background-color": "#ffc107",
+           "border-color": "#ffc107"
+       });
+       
+       $(".buttonInd1").css({
+           "background-color": "red",
+           "border-color": "red"
+       });
+
+       
+       $(".buttonInd1").click(function() {
+            setInd($(this));
+       });
+
+       $(".buttonInd2").click(function() {
+           $(".buttonInd1").find("i").addClass("faa-tada");
+           $(".buttonInd3").find("i").addClass("faa-tada");
+           $(this).find("i").removeClass("faa-tada");
+           $("div.indButton button").css({
+               "background-color": "#ffc107",
+               "border-color": "#ffc107"
+           });
+           $(this).css({
+               "background-color": "red",
+               "border-color": "red"
+           });
+           $(".indicateur1").hide();
+           $(".indicateur3").hide();
+           $(".indicateur2").show();
+           $(".textBull1").hide();
+           $(".textBull3").hide();
+           $(".textBull2").show();
+           $(".indTitle1").hide();
+           $(".indTitle3").hide();
+           $(".indTitle2").show();
+       });
+
+       $(".buttonInd3").click(function() {
+           $(".buttonInd2").find("i").addClass("faa-tada");
+           $(".buttonInd1").find("i").addClass("faa-tada");
+           $(this).find("i").removeClass("faa-tada");
+           $("div.indButton button").css({
+               "background-color": "#ffc107",
+               "border-color": "#ffc107"
+           });
+           $(this).css({
+               "background-color": "red",
+               "border-color": "red"
+           });
+           $(".indicateur1").hide();
+           $(".indicateur2").hide();
+           $(".indicateur3").show();
+           $(".textBull1").hide();
+           $(".textBull2").hide();
+           $(".textBull3").show();
+           $(".indTitle2").hide();
+           $(".indTitle1").hide();
+           $(".indTitle3").show();
+       });
+
  //$.fn.fullpage.moveSectionDown(); $.fn.fullpage.moveSectionDown();
 });
 
- //indicateurs angles 
-    $(".indicateur1").hide();
-    $(".indicateur2").hide();
-    $(".indicateur3").hide();
-    $(".textBull1").hide();
-    $(".textBull2").hide();
-    $(".textBull3").hide();
-    $(".indTitle1").hide();
-    $(".indTitle2").hide();
-    $(".indTitle3").hide();
 
-
-    
-    $(".buttonInd1").click(function() {
-        $(".indicateur2").hide();
-        $(".indicateur3").hide();
-        $(".indicateur1").show();
-        $(".textBull2").hide();
-        $(".textBull3").hide();
-        $(".textBull1").show();
-        $(".indTitle2").hide();
-        $(".indTitle3").hide();
-        $(".indTitle1").show();
-    });
-
-    $(".buttonInd2").click(function() {
-        $(".indicateur1").hide();
-        $(".indicateur3").hide();
-        $(".indicateur2").show();
-        $(".textBull1").hide();
-        $(".textBull3").hide();
-        $(".textBull2").show();
-        $(".indTitle1").hide();
-        $(".indTitle3").hide();
-        $(".indTitle2").show();
-    });
-
-    $(".buttonInd3").click(function() {
-        $(".indicateur1").hide();
-        $(".indicateur2").hide();
-        $(".indicateur3").show();
-        $(".textBull1").hide();
-        $(".textBull2").hide();
-        $(".textBull3").show();
-        $(".indTitle2").hide();
-        $(".indTitle1").hide();
-        $(".indTitle3").show();
-    });
 
 function setDescriptions(id) {
     $("section.categorie-des").css("opacity","0");
@@ -133,7 +185,6 @@ function setDescriptions(id) {
         opacity: 1,
         left: "-=60"
     });
-    
 }
 
 function activateDescription(id) {
@@ -174,5 +225,4 @@ function activateDescription(id) {
     $("section.cat" + exId).velocity({
         left: "+=120"
     });
-    $(".buttonInd1").trigger('click');
 }

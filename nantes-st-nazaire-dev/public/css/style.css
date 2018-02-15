@@ -198,6 +198,11 @@ ul {
 	bottom: 380px;
 }
 
+#synth-des {
+	position: absolute;
+	bottom: 80px;
+}
+
 @media (max-width: 840px) {
 	
 	#synth-chart-block {

@@ -9,7 +9,7 @@ var app = express()
 //app.use(basicAuth('ddj2017', 'iloveddj'));
 
 // declare the list of sub apps
-var app_names = ['simple-example', 'ouest-france', 'region-pdl', 'france3-bzh', 
+var app_names = ['ouest-france', 'region-pdl', 'france3-bzh', 
 'eau-et-rivieres-bzh', 'nantes-st-nazaire-dev', 'france3-pdl', 'dpt-loire-atlantique',
 'musee-jules-verne', 'capeb'];
 
