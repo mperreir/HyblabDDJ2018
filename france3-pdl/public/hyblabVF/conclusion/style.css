@@ -1,0 +1,401 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+  overflow:hidden;
+
+}
+body {
+  height: 100%;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#elmundo{
+	
+	width:43vmin;
+	
+	
+}
+#section01 .absolu .fleche {
+  position: absolute;
+  left: 2%;
+  top: 7%;
+  height: 5%;
+  width: 15%;
+  color: #16037C; 
+  font-family: "Open Sans"; 
+  font-size: 2.5vmin;  
+  line-height: 110%;  
+}
+
+#section01 .absolu .lemonde {
+  position: absolute;
+  left: 35%;
+  top: 2%;
+  height: 30%;
+  width: 30%;
+}
+
+
+#section01 .article102 a {
+  position: absolute;
+  left: 48%;
+  top: 93%;
+  height: 5%;
+  width: 4.5%;
+}
+
+#section01 .article102 a img {
+  height: 100%;
+}
+
+#section01 .article101 {
+  width: 100%;
+  height: 67%;
+}
+
+
+
+#section01 .article102 {
+  background-color: #FFCE00;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 33%;
+}
+
+#section01 .article102 p {
+  width: 59.18%;
+  height: 80%; 
+  color: #16037C; 
+  font-family: "Open Sans"; 
+  font-size: 2.5vmin;  
+  line-height: 130%;  
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 7%;
+  padding-top: 2%;
+}
+
+#section01 .article101 p {
+  width: 100%;
+}
+
+#section01 .article101 .section01gif {
+  margin-top: 11%;
+  margin-left: 0%;
+  height: 60%;
+  width: 100%;
+}
+
+
+
+
+#section02 { 
+  display: flex;
+}
+
+#section02 .article201 h2 {
+  width: 75%;
+  color: #FF5653; 
+  font-family: Montserrat;  
+  font-size: 3em;  
+  font-weight: bold;  
+  line-height: 110%;  
+  text-align: center;
+  margin : 0 auto;
+  margin-top: 8%;
+}
+
+#section02 .article201 .borne {
+  height: 52%;
+  margin-top: 20%;
+}
+
+#section02 .article201 .borne img {
+  height: 100%;
+  padding-left: 10%;
+}
+
+#section02 .article201 {
+  width: 33%;
+  height: 100%;
+}
+
+#section02 .article202 {
+  width: 67%;
+  height: 100%;
+  background-image: url("images/graphique.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+/*#section02 .article202 .graphique {
+  background-image: url("images/graphique.png");
+  background-repeat: no-repeat;
+  height:100%;
+  width: 100%;
+  background-size: 100%;
+}*/
+
+#section02 .article202 .elem {
+  width: 45%;  
+  color: #16037C; 
+  font-family: "Open Sans"; 
+  font-size: 2.5vmin;  
+  line-height: 3.3vmin;  
+  text-align: center;
+  position: absolute;
+  left: 46.5%;
+  top: 7%;
+}
+
+
+
+#section03 .article301 {
+  height: 15%;
+  background-color: #16037C;
+}
+
+#section03 .article301 h2 {
+  height: 80%;
+  color: #FFFFFF; 
+  font-family: Montserrat;  
+  font-size: 3em;  
+  font-weight: bold;  
+  line-height: 130%;  
+  text-align: center;
+  padding-top: 2%;
+}
+
+#section03 .article302 {
+  height: 55%;
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
+#section03 .article302 .diffusion {
+  height: 50vh;
+  width: auto;
+  margin-left: 10%;
+}
+
+#section03 .article303 {
+  height: 20%;
+  background-color: #16037C;
+}
+
+#section03 .article303 p {
+  width: 36%; 
+  color: #FFFFFF; 
+  font-family: "Open Sans"; 
+font-size: 2.5vmin;
+  line-height: 110%;  
+  text-align: center;
+  padding-top: 2.5%;
+  margin-left: 32%;
+}
+
+
+
+#section04 {
+  height: auto;
+  background-image: url("images/decor4.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 12%;
+}
+
+#section04 .article401 {
+  height: 52%;
+  width: 20%;
+}
+
+#section04 .article401 p {
+  height: 57%;
+  width: 100%;
+   padding-top: 64%;
+  margin-bottom:4%;
+  margin-left: 15%;
+}
+
+#section04 .article401 img {
+  height: 65%;
+}
+
+#section04 .article402 {
+  height: 82vh;
+  width: 32vw;
+  background-color: #FFCE00;
+}
+
+#section04 .article402 h2 {
+  width: 82%;  
+  color: #FF5653; 
+  font-family: Montserrat;  
+  font-size: 5.5vmin;;  
+  font-weight: bold;  
+  line-height: 110%;
+  margin : 0 auto;
+  padding-top: 6%;
+  margin-bottom: 6%;
+}
+
+#section04 .article402 p {
+  width: 82%;
+  color: #16037C;
+  font-family: "Open Sans";
+    font-size: 2.2vmin;
+	line-height: 3.5vmin;
+  margin: 0 auto;
+}
+
+#section04 .article403 .maillots {
+  position: absolute;
+  left: 32%;
+  height: 85%;
+  top: 8%;
+  width: 58%;
+}
+
+
+
+#section05 {
+  height: 135%;
+}
+
+#section05 .article501 {
+  height: 45%;
+  padding-top: 10vmin;
+  background-color: #FF5653;
+  display: flex;
+}
+
+#section05 .article501 .logos {
+  width: 25%;
+  height: 100%;
+}
+
+#section05 .article501 p {
+  text-align: center;
+  height: 20%;
+}
+
+#section05 .article501 img {
+  height: 100%;
+}
+
+#section05 .article501 h2 {
+  height: 11vmin; 
+  width: 100%; 
+  color: #FFFFFF; 
+  font-family: Montserrat;  
+    font-size: 4.5vmin;
+	font-weight: bold;  
+  line-height: 110%;  
+  text-align: center;
+  margin-top: 10%;
+}
+
+#section05 .article501 h3 {
+  width: 100%;
+  height: 9%;  
+  color: #FFFFFF; 
+  font-family: "Open Sans"; 
+  font-size: 3vmin;  
+  line-height: 140%;  
+  text-align: center;
+  font-weight: normal;
+}
+
+
+#separation {
+  height: 2.5vmin;
+}
+
+#section05 .article502 {
+  height: 35%;
+  background-color: #FF5653;
+  background-image: url("images/decor5.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 17%;
+}
+
+#section05 .article502 p {
+  width: 80%;  
+  color: #FFFFFF; 
+  font-family: "Open Sans"; 
+  font-size: 2vmin;  
+  line-height: 115%;  
+  text-align: center;
+  margin-left: 10%;
+}
+
+#section05 .article503 {
+  height: 10%;
+  background-color: #16037C;
+}
+
+#section05 .article503 p {
+  height: 100%;
+}
+
+#section05 .article503 img {
+  width: 62%;
+  height: 15%;
+  position: absolute;
+  top: 76%;
+}
+
+
+#section05 footer {
+  height: 10%;
+}
+
+#section05 footer nav {
+  height: 100%;
+}
+
+#section05 #marge {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+#section05 footer p {
+  text-align: center;
+  height: 100%;
+  width: 11.11%;
+}
+
+#section05 footer img {
+  margin-top: 15%;
+  height: 30%;
+  width: 60%;
+}
+
+
+#section05 footer .logospecial{
+  height: 49%;
+  width: 45%;
+}
+
+#section05 footer .logospecial2{
+  height: 60%;
+  width: 80%;
+}
+
+#section05 footer .logospecial3{
+  height: 47%;
+  width: 80%;
+}
