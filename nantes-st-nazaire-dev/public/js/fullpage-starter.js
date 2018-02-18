@@ -192,7 +192,6 @@ function setDescriptions(id) {
 
 function activateDescription(id) {
   var exId = $("div.active-des").attr("id");
-  console.log("ex active" + exId)
 
   $("section.cat" + exId).velocity({
     left: "-=60",
@@ -212,7 +211,6 @@ function activateDescription(id) {
 
     $("section.cat" + exId).css("z-index","1");
     $("div.cat" + exId).removeClass("active-des");
-    console.log("cach div.cat" + exId)
     //Affichage de la nouvelle div active
     $("section.cat" + id).velocity({
       opacity: 1,
@@ -228,5 +226,4 @@ function activateDescription(id) {
     $("section.cat" + exId).velocity({
       left: "+=120"
     });
-    setInd($(".buttonInd1"));
   }
