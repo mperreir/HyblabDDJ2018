@@ -1,14 +1,14 @@
 $(document).ready(function() {
-    $('#fullpage').fullpage({
-        'verticalCentered': false,
-        'sectionsColor': ['white', 'white', 'white', 'white', 'white', 'white', 'white', 'white'],
-        'navigation': true,
-        'navigationPosition': 'right',
-        'navigationTooltips': ['Introduction', 'Les villes concurrentes', 'Nantes-St-Nazaire', 'Synthèse', 'Remerciements'],
-        menu: false,
-        anchors:[],
-        navigationColor: 'blue',
-        scrollBar: false,
+  $('#fullpage').fullpage({
+    'verticalCentered': false,
+    'sectionsColor': ['white', 'white', 'white', 'white', 'white', 'white', 'white', 'white'],
+    'navigation': true,
+    'navigationPosition': 'right',
+    'navigationTooltips': ['Introduction', 'Les villes concurrentes', 'Nantes-St-Nazaire', 'Synthèse', 'Remerciements'],
+    menu: false,
+    anchors:[],
+    navigationColor: 'blue',
+    scrollBar: false,
         //scrolling
         'css3': true,
         scrollingSpeed: 900,
@@ -17,7 +17,7 @@ $(document).ready(function() {
         //Accessibility
         keyboardScrolling: true,
         recordHistory: true
-    });
+      });
 
     //Chevrons des titres du menu
     $(".chevron").css("visibility","hidden");
@@ -27,142 +27,145 @@ $(document).ready(function() {
     setDescriptions(7); 
 
     $(".categorie").click(function() {
-        var id = $(this).attr("id");
-        
-        if( $(this).hasClass("active-des") != true) {
-            console.log("lololo " + id)
+      var id = $(this).attr("id");
+
+      if( $(this).hasClass("active-des") != true) {
+        console.log("lololo " + id)
             activateDescription(id); //Rend visible la decription de la catégorie qui est survolée
-        }
-    });
+          }
+        });
 
     $(".categorie").css("position", "relative");
     $(".categorie").hover(
-    function() {
+      function() {
         var id = $(this).attr("id");
         $("div.cat" + id).velocity({
-            width: "+=20",
-            height: "+=6",
-            marginBottom: "-=6",
-            top: "-=3"
-            
+          width: "+=20",
+          height: "+=6",
+          marginBottom: "-=6",
+          top: "-=3"
+
         }, 100);
         $("div.cat" + id +" h2").velocity({
-            fontSize: "+=3",
-            marginTop: "+=3"
+          fontSize: "+=3",
+          marginTop: "+=3"
         }, 100);
-    },
-    function() {
+      },
+      function() {
         var id = $(this).attr("id");
         $("div.cat" + id).velocity({
-            width: "-=20",
-            height: "-=6",
-            marginBottom: "+=6",
-            top: "+=3"
+          width: "-=20",
+          height: "-=6",
+          marginBottom: "+=6",
+          top: "+=3"
         }, 100);
         $("div.cat" + id +" h2").velocity({
-            fontSize: "-=3",
-            marginTop: "-=3"
+          fontSize: "-=3",
+          marginTop: "-=3"
         }, 100);
-    });
+      });
 
 
     function setInd(that) {
-               $(".buttonInd2").find("i").addClass("faa-tada");
-               $(".buttonInd3").find("i").addClass("faa-tada");
-               that.find("i").removeClass("faa-tada");
-               $("div.indButton button").css({
-                   "background-color": "#ffc107",
-                   "border-color": "#ffc107"
-               });
-               that.css({
-                   "background-color": "red",
-                   "border-color": "red"
-               });
-               $(".indicateur2").hide();
-               $(".indicateur3").hide();
-               $(".indicateur1").show();
-               $(".textBull2").hide();
-               $(".textBull3").hide();
-               $(".textBull1").show();
-               $(".indTitle2").hide();
-               $(".indTitle3").hide();
-               $(".indTitle1").show();
-           }
+      var parentSection = that.closest("section");
+      parentSection.find(".buttonInd2 i").addClass("faa-tada");
+      parentSection.find(".buttonInd3 i").addClass("faa-tada");
+      that.find("i").removeClass("faa-tada");
+      parentSection.find("button").css({
+       "background-color": "#ffc107",
+       "border-color": "#ffc107"
+      });
+      that.css({
+       "background-color": "#26A65B",
+       "border-color": "#26A65B"
+      });
+      parentSection.find(".indicateur2").hide();
+      parentSection.find(".indicateur3").hide();
+      parentSection.find(".indicateur1").show();
+      parentSection.find(".textBull2").hide();
+      parentSection.find(".textBull3").hide();
+      parentSection.find(".textBull1").show();
+      parentSection.find(".indTitle2").hide();
+      parentSection.find(".indTitle3").hide();
+      parentSection.find(".indTitle1").show();
+    }
 
     //indicateurs angles 
-       $(".indicateur1").hide();
-       $(".indicateur2").hide();
-       $(".indicateur3").hide();
-       $(".textBull1").hide();
-       $(".textBull2").hide();
-       $(".textBull3").hide();
-       $(".indTitle1").hide();
-       $(".indTitle2").hide();
-       $(".indTitle3").hide();
+    $(".indicateur1").hide();
+    $(".indicateur2").hide();
+    $(".indicateur3").hide();
+    $(".textBull1").hide();
+    $(".textBull2").hide();
+    $(".textBull3").hide();
+    $(".indTitle1").hide();
+    $(".indTitle2").hide();
+    $(".indTitle3").hide();
 
-       setInd($(".buttonInd1"));
+    setInd($(".buttonInd1"));
 
-       $(".buttonInd1").find("i").removeClass("faa-tada");
-       $("div.indButton button").css({
-           "background-color": "#ffc107",
-           "border-color": "#ffc107"
-       });
-       
-       $(".buttonInd1").css({
-           "background-color": "red",
-           "border-color": "red"
-       });
+    $(".buttonInd1").find("i").removeClass("faa-tada");
+    $("div.indButton button").css({
+     "background-color": "#ffc107",
+     "border-color": "#ffc107"
+   });
 
-       
-       $(".buttonInd1").click(function() {
-            setInd($(this));
-       });
+    $(".buttonInd1").css({
+     "background-color": "#26A65B",
+     "border-color": "#26A65B"
+   });
 
-       $(".buttonInd2").click(function() {
-           $(".buttonInd1").find("i").addClass("faa-tada");
-           $(".buttonInd3").find("i").addClass("faa-tada");
-           $(this).find("i").removeClass("faa-tada");
-           $("div.indButton button").css({
-               "background-color": "#ffc107",
-               "border-color": "#ffc107"
-           });
-           $(this).css({
-               "background-color": "red",
-               "border-color": "red"
-           });
-           $(".indicateur1").hide();
-           $(".indicateur3").hide();
-           $(".indicateur2").show();
-           $(".textBull1").hide();
-           $(".textBull3").hide();
-           $(".textBull2").show();
-           $(".indTitle1").hide();
-           $(".indTitle3").hide();
-           $(".indTitle2").show();
-       });
 
-       $(".buttonInd3").click(function() {
-           $(".buttonInd2").find("i").addClass("faa-tada");
-           $(".buttonInd1").find("i").addClass("faa-tada");
-           $(this).find("i").removeClass("faa-tada");
-           $("div.indButton button").css({
-               "background-color": "#ffc107",
-               "border-color": "#ffc107"
-           });
-           $(this).css({
-               "background-color": "red",
-               "border-color": "red"
-           });
-           $(".indicateur1").hide();
-           $(".indicateur2").hide();
-           $(".indicateur3").show();
-           $(".textBull1").hide();
-           $(".textBull2").hide();
-           $(".textBull3").show();
-           $(".indTitle2").hide();
-           $(".indTitle1").hide();
-           $(".indTitle3").show();
-       });
+    $(".buttonInd1").click(function() {
+      setInd($(this));
+    });
+
+    $(".buttonInd2").click(function() {
+      var parentSection = $(this).closest("section");
+      parentSection.find(".buttonInd3 i").addClass("faa-tada");
+      parentSection.find(".buttonInd1 i").addClass("faa-tada");
+      $(this).find("i").removeClass("faa-tada");
+      parentSection.find("button").css({
+       "background-color": "#ffc107",
+       "border-color": "#ffc107"
+     });
+      $(this).css({
+       "background-color": "#26A65B",
+       "border-color": "#26A65B"
+     });
+      parentSection.find(".indicateur1").hide();
+      parentSection.find(".indicateur3").hide();
+      parentSection.find(".indicateur2").show();
+      parentSection.find(".textBull1").hide();
+      parentSection.find(".textBull3").hide();
+      parentSection.find(".textBull2").show();
+      parentSection.find(".indTitle1").hide();
+      parentSection.find(".indTitle3").hide();
+      parentSection.find(".indTitle2").show();
+    });
+
+    $(".buttonInd3").click(function() {
+      var parentSection = $(this).closest("section");
+     parentSection.find("i").addClass("faa-tada");
+     parentSection.find("i").addClass("faa-tada");
+     $(this).find("i").removeClass("faa-tada");
+     parentSection.find("button").css({
+       "background-color": "#ffc107",
+       "border-color": "#ffc107"
+     });
+     $(this).css({
+       "background-color": "#26A65B",
+       "border-color": "#26A65B"
+     });
+     parentSection.find(".indicateur1").hide();
+     parentSection.find(".indicateur2").hide();
+     parentSection.find(".indicateur3").show();
+     parentSection.find(".textBull1").hide();
+     parentSection.find(".textBull2").hide();
+    parentSection.find(".textBull3").show();
+     parentSection.find(".indTitle2").hide();
+     parentSection.find(".indTitle1").hide();
+     parentSection.find(".indTitle3").show();
+   });
 
  //$.fn.fullpage.moveSectionDown(); $.fn.fullpage.moveSectionDown();
 });
@@ -170,38 +173,38 @@ $(document).ready(function() {
 
 
 function setDescriptions(id) {
-    $("section.categorie-des").css("opacity","0");
-    $("section.categorie-des").css("z-index","0");
-    $("section.categorie-des").velocity({
-        left: "+=10"
-    });
-    
-    $("div.cat" + id).addClass("active-des");
-    $("div.cat" + id + ' h2').css("color","#FFCC01");
-    $("section.cat" + id).addClass("active-des");
-    $("section.cat" + id).css("z-index","2");
-    
-    $("section.cat" + id).velocity({
-        opacity: 1,
-        left: "-=60"
-    });
+  $("section.categorie-des").css("opacity","0");
+  $("section.categorie-des").css("z-index","0");
+  $("section.categorie-des").velocity({
+    left: "+=10"
+  });
+
+  $("div.cat" + id).addClass("active-des");
+  $("div.cat" + id + ' h2').css("color","#FFCC01");
+  $("section.cat" + id).addClass("active-des");
+  $("section.cat" + id).css("z-index","2");
+
+  $("section.cat" + id).velocity({
+    opacity: 1,
+    left: "-=60"
+  });
 }
 
 function activateDescription(id) {
-    var exId = $("div.active-des").attr("id");
-    console.log("ex active" + exId)
+  var exId = $("div.active-des").attr("id");
+  console.log("ex active" + exId)
 
-    $("section.cat" + exId).velocity({
-        left: "-=60",
-        opacity: 0
-      }, 300, function() {
-        
-    });
-    $("section.cat" + exId).velocity({
-        
-      }, 300, function() {
-        
-    });
+  $("section.cat" + exId).velocity({
+    left: "-=60",
+    opacity: 0
+  }, 300, function() {
+
+  });
+  $("section.cat" + exId).velocity({
+
+  }, 300, function() {
+
+  });
 
     //Après avoir caché la div active
     $("section.cat" + exId).removeClass("active-des");
@@ -212,8 +215,8 @@ function activateDescription(id) {
     console.log("cach div.cat" + exId)
     //Affichage de la nouvelle div active
     $("section.cat" + id).velocity({
-        opacity: 1,
-        left: "-=60"
+      opacity: 1,
+      left: "-=60"
     });
     $("div.cat" + id).addClass("active-des");
     $("section.cat" + id).addClass("active-des");
@@ -223,6 +226,7 @@ function activateDescription(id) {
     $(".menu .cat" + id + ' .chevron').css("visibility","visible");
 
     $("section.cat" + exId).velocity({
-        left: "+=120"
+      left: "+=120"
     });
-}
+    setInd($(".buttonInd1"));
+  }

@@ -141,6 +141,17 @@ div.categorie .chevron {
 	z-index: 2;
 }
 
+.buttonInd1 {
+	background-color: red;
+}
+
+.indButton button:active {
+	outline: 0;
+}
+.indButton button:focus {
+	outline:0;
+}
+
 .bl-main .commentaire{
 	position: absolute;
 	top:69%;
