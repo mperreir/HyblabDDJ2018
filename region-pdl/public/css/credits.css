@@ -1,0 +1,198 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    height: -webkit-calc(100%);  /* pour Chrome */
+    height: -moz-calc(100%);     /* pour Firefox */
+    height: calc(100%);          /* pour support natif */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #fafafa;
+}
+
+a:link, a:visited {
+    color: #212121;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #757575;
+    text-decoration: none;
+}
+
+header {
+    height: 60px;
+}
+
+#home, #credits {
+    position: absolute;
+    top: 25px;
+
+    height: 19px;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 19px;
+    text-align: center;
+
+    width: 80px;
+
+}
+
+#home {
+    left: 300px;
+}
+
+#credits {
+    left: 400px;
+    text-transform: uppercase;
+}
+
+#logo-pdl {
+    margin-left: 50px;
+
+    height: 55px;
+    width: 180px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.16);
+}
+
+h1 {
+    height: 20.94%;
+    width: 100%;
+    color: rgba(0,0,0,0.8);
+    font-family: Lato;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 54px;
+    text-align: center;
+}
+
+#conclusion {
+    margin-left: 350px;
+    margin-top: -90px;
+    width: 674px;
+    color: rgba(0,0,0,0.8);
+    font-family: Lato;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.logo {
+    width: 200px;
+}
+
+.ecole {
+    margin: 20px;
+    padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.div_nom {
+    margin-top: 50px;
+}
+
+#Polytech .div_nom {
+    margin-top: inherit;
+}
+
+.nom {
+    margin-left: 50px;
+    color: #000000;
+    font-family: "Lato";
+    font-size: 16px;
+    line-height: 18px;
+}
+
+#ecoles {
+    /*  margin-left: 280px;*/
+    margin: 40px auto;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-around;
+}
+
+span {
+    text-transform: uppercase;
+}
+
+/** lien rond sur la droite **/
+
+a.lienRond {
+    position: absolute;
+    right: 20px;
+    border-radius: 25px;
+    height: 10px;
+    width: 10px;
+
+    background-color: #4199BE;
+    border: none;
+
+    display: block;
+    margin: auto;
+}
+
+a.lienRond:hover {
+    border-radius: 25px;
+
+    background-color: #2a5872;
+    border: none;
+
+    display: block;
+    margin: auto;
+}
+
+a.lienActuel {
+    position: absolute;
+    right: 18px;
+    border-radius: 25px;
+    height: 15px;
+    width: 15px;
+
+    background-color: #4199BE;
+    border: none;
+
+    display: block;
+    margin: auto;
+}
+
+a.lienActuel:hover {
+    border-radius: 25px;
+
+    background-color: #2a5872;
+    border: none;
+
+    display: block;
+    margin: auto;
+}
+
+
+/** style des ronds de changement de page **/
+
+#rond0 {
+    top: 41%;
+}
+
+#rond1 {
+    top: 45%;
+}
+
+#rond2 {
+    top: 49%;
+}
+
+#rond3 {
+    top: 53%;
+}
+
+#rond4 {
+    top: 57%;
+}

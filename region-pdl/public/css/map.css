@@ -1,0 +1,31 @@
+
+/* colonne de droite */
+
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#containerMap {
+    height: 100%;
+    height: -webkit-calc(100%);  /* pour Chrome */
+    height: -moz-calc(100%);     /* pour Firefox */
+    height: calc(100%);           /* pour support natif */
+    padding-left: 100px;
+    background: #FAFAFA;
+}
+
+#map {
+    float: right;
+    width: 1000px;
+    height: 500px;
+    z-index: -1;
+}
+
+/* colonne de gauche */
+
+.texte {
+    position: absolute;
+    background-color: #009BC2;
+    z-index: 1;
+}

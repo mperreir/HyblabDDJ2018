@@ -1,0 +1,196 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/** colonne de gauche **/
+
+/* logo, liens home et crédits */
+.logo-pdl {
+    margin-left: 25px;
+    width: 180px;
+    background-color: #FFFFFF;
+}
+
+.credits, .home {
+    outline: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    text-decoration: none;
+    font-family: Lato;
+}
+
+.credits {
+    position: absolute;
+    margin-top: 10px;
+    top: 5px;
+    left: 360px;
+    width: 100px;
+}
+
+.home {
+    position: absolute;
+
+    margin-top: 10px;
+    top: 5px;
+    left: 280px;
+
+    width:70px;
+}
+
+.credits:hover, .credits:focus, .home:hover, .home:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* textes de la colonne */
+
+/* partie de gauche */
+
+.texte {
+    height: 100%;
+    height: -webkit-calc(100% - 50px);  /* pour Chrome */
+    height: -moz-calc(100% - 50px);     /* pour Firefox */
+    height: calc(100% - 50px);          /* pour support natif */
+
+    padding-left: 3%;
+    padding-right: 40px;
+
+    padding-bottom: 50px;
+    float:left;
+    /*  width:400px; */
+    width: 30%;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-weight: bold;
+    letter-spacing: 2px;
+    width: 430px;
+    font-size: 25px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+b {
+    font-weight: bold;
+    font-size: 33px;
+}
+
+.explication {
+    display: inline;
+
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.asterisque {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.temoignage {
+    margin-top: 40px;
+    width: 340px;
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+#signature {
+    font-size: 12px;
+}
+
+/** style des liens ronds sur la droite **/
+
+a.lienRond {
+    position: absolute;
+    right: 20px;
+    border-radius: 25px;
+    height: 10px;
+    width: 10px;
+
+    background-color: #4199BE;
+    border: none;
+
+    display: block;
+    margin: auto;
+}
+
+a.lienRond:hover {
+     border-radius: 25px;
+
+     background-color: #2a5872;
+     border: none;
+
+     display: block;
+     margin: auto;
+ }
+
+a.lienActuel {
+    position: absolute;
+    right: 18px;
+    border-radius: 25px;
+    height: 15px;
+    width: 15px;
+
+    background-color: #4199BE;
+    border: none;
+
+    display: block;
+    margin: auto;
+}
+
+a.lienActuel:hover {
+    border-radius: 25px;
+
+    background-color: #2a5872;
+    border: none;
+
+    display: block;
+    margin: auto;
+}
+
+#rond0 {
+    top: 41%;
+}
+
+#rond1 {
+    top: 45%;
+}
+
+#rond2{
+    top: 49%;
+}
+
+#rond3 {
+    top: 53%;
+}
+
+#rond4 {
+    top: 57%;
+}

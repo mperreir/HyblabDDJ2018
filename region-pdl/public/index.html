@@ -1,40 +1,33 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
-  <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-		<!-- Basic viewport setting for mobile friendly page -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
-  </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2018</h1>
-    </header>
+    <!-- stylesheets -->
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+<header>
+    <a href="index.html"><img id="logo-pdl" src="img/logo-pdl.png"/></a>
+    <a id="home" href="index.html">HOME</a>
+    <a id="credits" href="credits.html">Crédits</a>
+</header>
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
+<img id="fond" src="img/fond-home.svg"/>
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
+<div id="textes">
+    <p id="titre"><span>L’apprentissage :</span>
+        <br>
+        une valeur sûre pour votre avenir</p>
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2018</p>
-    </footer>
-    </div>
-  </body>
+    <p id="introduction">La région Pays de la Loire propose de nombreux dispositifs d’aides pour accompagner les futurs apprentis : logement, hébergement, recherche d’employeur…
+        <br><br>
+        Quelques soient vos ambitions et vos questionnements, la Région vous soutient !</p>
+
+    <a class="stylebouton" href="sunburstGFE.html">COMMENCER</a>
+</div>
+
+</body>
 </html>
