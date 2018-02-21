@@ -1,0 +1,524 @@
+/*============= RESET CSS ====*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: Quicksand, Helvetica, sans-serif;
+}
+
+/*=========== ARRIERE PLAN ============*/
+
+#section1, #section2, #section3, #section4, #section5, #section6, #section7 {
+/*permet aux formes animées de l'arrière-plan de se positionner correctement*/
+	position: relative;
+	z-index: -1000;
+}
+
+#section1, #section2 {
+	background-color: white;
+}
+
+#section3 {
+	background: url("../img/background_slide3.png") center center/cover no-repeat #323fde;
+}
+
+#section4 {
+	background: url("../img/background_slide4.png") center center/cover no-repeat #ffa200;
+}
+
+#section5 {
+	background: url("../img/background_slide5.png") center center/cover no-repeat #323fde;
+}
+
+#section6 {
+	background: url("../img/background_slide6.png") center center/cover no-repeat #ffa200;
+}
+
+#section7 {
+	background: url("../img/background_slide7.png") center center/cover no-repeat #323fde;
+}
+
+/*** Formes animées de l'arrière-plan ***/
+
+/*** A - Forme de gauche ***/
+
+span.background_left, span.background_bottom  {
+	display: none;
+	z-index: -100;
+	position: absolute;
+}
+
+span.background_left {
+	animation: fade_left ease 1s;
+	top: 0;
+	left: 0;
+	border-top: 100vh solid #697cf0;
+	border-left: 0 solid transparent;
+	border-right: 25vw solid transparent;
+	width: 10vw;
+}
+
+/* Apparait lorsque la section obtient la classe "visited" */
+div.visited span.background_left {display: block;}
+
+/*Version jaune des slides 4 & 6*/
+#section4 span.background_left, #section6 span.background_left { border-top: 100vh solid #ffcc11;}
+
+/* définition de l'Animation FADE_LEFT*/
+@keyframes fade_left {
+    0% {
+      opacity: 0;
+      transform:translate(-25vw) ;
+    }
+
+    100%  {
+      opacity: 1;
+      transform:translate(0)
+    }
+ }
+
+/*** B- Forme du bas ***/
+
+span.background_bottom {
+  animation: fade_bottom ease 1s;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 33vh solid #2c9dff;
+  border-left: 75vw solid transparent;
+}
+
+/* Apparait lorsque la section obtient la classe "visited" */
+div.visited span.background_bottom {display: block;}
+
+/*Version jaune des slides 4 & 6*/
+#section4 span.background_bottom, #section6 span.background_bottom { border-bottom: 33vh solid #ffa200; }
+
+/* définition de l'Animation FADE_BOTTOM*/
+@keyframes fade_bottom {
+        0% {
+          opacity: 0;
+            transform:translate(0,33vh)
+        }
+
+        100%  {
+          transform:translate(0,0vw);
+          opacity: 1;
+        }
+ }
+
+
+
+/*========== TITRE DES SECTIONS - GENERAL ======*/
+
+div.titre
+{
+  color: white;
+  height: 20vh;
+  width: 100%;
+  display: none;
+  animation: fade ease 2s;
+  animation-delay: 800ms;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  margin-bottom: 0vh;
+}
+
+div.visited .titre {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-end;
+}
+
+.titre h1 {
+	font-size: 4vw;
+	margin-bottom: 2.5vh;
+}
+
+/* ANIMATION "FADE" */
+@keyframes fade {
+        0% {
+          opacity: 0;
+        }
+
+        100%  {
+          opacity: 1;
+        }
+}
+
+/* chiffre animé */
+#chiffre1, #chiffre2, #chiffre3, #chiffre4, #chiffre5 {
+	width: 22vmin;
+	height: 22vmin;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-end;
+	justify-content: flex-end;
+	margin-left: 5vh;
+}
+
+/*========== BANDEAU BLANC - GENERAL ======*/
+
+section {
+	width: 100vw;
+	height: 60vh;
+	background-color: white;
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	animation-delay: 1800ms;
+	opacity: 0;
+	box-shadow: 0 0 8vh rgba(0, 0, 0, .3);
+	padding-bottom: 5vh;
+	padding-top: 5vh;
+}
+
+.visited section {
+	animation: fade ease-out 2s;
+	animation-delay: 00ms;
+	opacity: 1;
+}
+
+/*======== Bouton "voir la suite" div.next ======*/
+.next {
+	color: white;
+	height: 6vh;
+	width:100%;
+	font-size: 2vw;
+	display: none;
+	animation: fade ease 2s;
+	animation-delay: 1800ms;
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+
+/* Apparait lorsque la section obtient la classe "visited" */
+div.visited .next{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*========== CAS PARTICULIER - SECTION 1 ======*/
+
+/* réglage de l'apparition du bouton "voir la suite" */
+#section1 .next {
+animation-delay: 7.5s;
+color: #0972ff;
+position: absolute;
+bottom: 2vh;
+}
+
+#accueil{
+	position: relative;
+	width: 99%;
+	top : 0;
+	margin: auto;
+	margin-bottom: -100px;
+}
+
+/*========== CAS PARTICULIER - SECTION 2 ======*/
+
+/*paragraphe d'introduction situé sous le titre */
+.intro {
+	display: flex;
+	animation: fade ease 2s;
+	opacity: 0;
+	position: relative;
+	animation-fill-mode: forwards;
+	width: 100%;
+	margin-top: 1vh;
+}
+
+.intro p{
+	color: #787878;
+	font-size: 1.3vw;
+	line-height: 3.5vh;
+}
+
+/* réglage de l'apparition du bouton "voir la suite" */
+#section2 .next {
+	animation-delay: 2000ms;
+	margin-top: 10vh;
+	color: rgba(0,0,0,0.76);
+}
+
+#jules_verne{
+	background-color: white;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top : 0;
+	left: 50%;
+	margin-top: 0px;
+}
+
+#accueil {
+	height: 100vh;
+	width: 100vw;
+}
+
+div.titresection2
+{
+	color: #ffcc11;
+	height: 40vh;
+	width: 40%;
+	display: none;
+	animation: fade ease 2s;
+	animation-delay: 800ms;
+	opacity: 0;
+	animation-fill-mode: forwards;
+	margin-bottom: 0vh;
+	margin-left: 15vh;
+	padding-top: 15vh;
+}
+
+.titresection2 h1 {
+	color: #404040;
+	font-family: 'Josefin Slab', serif;
+	font-weight: 400;
+	font-size: 6vw;
+	display: block;
+	line-height: 12vh;
+	margin-left: -4vh;
+}
+
+div.visited .titresection2 {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+#pointer {
+	z-index: 2000;
+	position: relative;
+	top: 100px;
+	left: 150px;
+	width: 5px;
+	height: 5px;
+	background-color: red;
+}
+
+/*========== CAS PARTICULIER - SECTION 3 ======*/
+/* Réglage commun à la section 3 et la section 6 */
+.canvas_container {
+	position: relative;
+	height: 50vh;
+	width: 60vw;
+	align-self: center;
+}
+
+/* réglage du graphique de la section 3, qui n'est pas complètement responsive  */
+#section3 .canvas_container
+{
+	display: flex;
+	align-items: center;
+}
+
+.description {
+	font-size: 1vw;
+	max-width: 20vw;
+	margin-bottom: 10vh;
+}
+
+
+/*========== CAS PARTICULIER - SECTION 4 ======*/
+
+/* LISTE DES DOMAINES - on peut le voir comme un petit menu, sur le gauche.  */
+#section4 ul {
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 5vw;
+	height: 60vh;
+	width: 10vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#section4 li {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	cursor: pointer;
+	padding: none;
+	transition: all ease 300ms;
+	border-left: 6px solid white;
+}
+
+#section4 h6 {
+ 	font-size: 1vw;
+}
+
+#section4 ul img {
+	height: 1.8vw;
+	width: 1.8vw;
+	margin: 0.25vw;
+	margin-left: 1vw;
+	padding: 0.2vw;
+}
+
+/* INTERACTIVITE DU MENU */
+#section4 li:hover {
+	border-left: 2px solid #ffcc11;
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px 3px rgba(0,0,0,0.1);
+}
+
+/*éléments de la liste des domaines <li> inactifs, non sélectionnés */
+.section4_switch {
+	color: black;
+}
+
+  /*éléments de la liste des domaines <li> actifs, sélectionnés */
+#section4 .section4_active-tab {
+    color: #2c9dff;
+    border-left: 6px solid #2c9dff;
+    box-shadow: 0 0 rgba(0,0,0,0.1);
+}
+
+#section4 .section4_active-tab:hover {
+    color: #2c9dff;
+    border-left: 6px solid #3fbefc;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px 3px rgba(0,0,0,0.1);
+}
+
+/* Contenu qui change lorsqu'on sélectionne un domaine.
+la balise <article> contient à la fois le texte de présentation <div class="section4_texte">,
+et les 2 graphiques <div class="section4_graph_line"> et <div class="section4_graph_doughnut"> */
+
+#section4 article {
+	width: 80vw;
+	height: 70vh;
+	display: none;
+	flex-flow: row nowrap;
+	opacity: 0;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/* affichage animé d'un article lorsque son domaine est sélectionné */
+#section4 article.visible {
+	display: flex;
+	animation: fade ease 0.5s;
+	animation-delay: 00ms;
+	opacity: 1;
+}
+
+/*Texte de présentation + illustration du domaine*/
+.section4_texte {
+	width: 30vw;
+	max-height: 70vh;
+	opacity: 0;
+	display: flex;
+	flex-flow: column;
+}
+
+/* Apparition animée*/
+.visible .section4_texte {
+	animation: fade ease 0.5s;
+	animation-fill-mode: forwards;
+}
+
+/*l'image qui illustre le domaine*/
+.section4_texte img {
+	height: 20vh;
+	width: 20vw;
+	object-fit: contain;
+	margin: auto;
+	margin-bottom: 4vh;
+}
+/*le titre du domaine*/
+.section4_texte h2 {
+	font-size: 3vw;
+	margin: auto;
+	margin-bottom: 4vh;
+}
+
+/*le texte de présentation du domaine*/
+.section4_texte p {
+	font-size: 1vw;
+	text-align: left;
+}
+
+/* Graphique 1 // le graphique linéaire */
+div.section4_graph_line {
+	width: 40vw;
+	height: 55vh;
+	opacity: 0;
+}
+
+/* Apparition animée*/
+.visible div.section4_graph_line {
+	animation: fade ease 0.5s;
+	animation-delay: 200ms;
+	animation-fill-mode: forwards;
+}
+
+/*========== CAS PARTICULIER - SECTION 5 ======*/
+
+/* gestion de la carte */
+  #mapid {
+    position: relative;
+    height: 60vh;
+    width: 90vw;
+  }
+
+  .graph{
+  	min-width: 50vw;
+    min-height : 40vh;
+  	position: relative;
+  }
+
+  /* légende de la carte */
+  .info {
+      padding: 6px 8px;
+      font: 14px/16px Quicksand, Arial, Helvetica, sans-serif;
+      background: white;
+      background: rgba(255,255,255,0.8);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 5px;
+  }
+    .info h4 {
+        margin: 0 0 5px;
+        color: #777;
+    }
+  /* légende de la carte */
+
+    .legend {
+        line-height: 18px;
+        color: #555;
+    }
+      .legend i {
+          width: 18px;
+          height: 18px;
+          float: left;
+          margin-right: 8px;
+          opacity: 0.7;
+      }
+
+/*========== CAS PARTICULIER - SECTION 6 ======*/
+
+/*========== CAS PARTICULIER - SECTION 7 ======*/
+
+
+#slide7_graphique1 {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 70vh;
+width: 70vmin;
+}
+
+
+
+
+.youpi {
+  background-color: pink;
+  border: 40px solid pink;
+}

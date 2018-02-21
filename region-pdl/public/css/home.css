@@ -1,0 +1,143 @@
+/** reset css **/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html, body {
+    width: 100%;
+}
+
+header {
+    position: absolute;
+    z-index: 2;
+}
+
+/** style des liens home, crédits et du logo **/
+
+a:link, a:visited {
+    color: #212121;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #757575;
+    text-decoration: none;
+
+    width: 80px;
+}
+
+#home, #credits {
+    position: absolute;
+    top: 30px;
+
+    width: 80px;
+    font-family: Lato;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 19px;
+    text-align: center;
+}
+
+#home {
+    left: 300px;
+}
+
+#credits {
+    left: 400px;
+    text-transform: uppercase;
+}
+
+#logo-pdl {
+    margin-left: 50px;
+    padding: 10px;
+    height: 55px;
+    width: 180px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.12);
+}
+
+/* texte de la page*/
+
+#titre {
+    width: 300px;
+    color: rgba(0,0,0,0.8);
+    font-family: Lato;
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+span {
+    font-weight: 900;
+    font-size: 33px;
+}
+
+#introduction {
+    width: 400px;
+    color: rgba(0,0,0,0.8);
+    font-family: Lato;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+#textes {
+    padding-top: 150px;
+    margin-left: 11%;
+    width: 400px;
+}
+
+/** style du bouton commencer **/
+
+a.stylebouton {
+    height: 50px;
+    width: 300px;
+
+    background-color: #4199BE;
+    border: none;
+    padding-top: 10px;
+    border-radius: 50px;
+
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    line-height: 36px;
+    text-align: center;
+
+    display: block;
+    margin : 70px auto;
+}
+
+a.stylebouton:hover {
+    background-color: #3c8daf;
+}
+
+/** illustration de fond **/
+
+#fond{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}

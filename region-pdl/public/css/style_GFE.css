@@ -1,0 +1,113 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    background: #fff;
+}
+
+body{
+    font-family: "Space Mono", Arial, serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #828282;
+    background: #fff;
+}
+
+#container {
+    height: 100%;                        /* para falta de suporte */
+    height: -webkit-calc(100% - 100px);  /* para Chrome */
+    height: -moz-calc(100% - 100px);     /* para Firefox */
+    height: calc(100% - 100px);          /* para suporte nativo */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #FFFFFF;
+}
+
+
+/* colonne de droite */
+
+
+h2 {
+    color: #FFFFFF;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: Lato;
+}
+
+.box {
+    overflow: hidden;
+    margin: 20px 30px;
+    background: #fff;
+    padding-bottom: 20px;
+    line-height: 1.3;
+}
+
+.box a{
+    font-size: smaller;
+}
+
+.main .box .sub-category > div {
+    padding: 12px 0 0 2.1%;
+    font-size: 18px;
+}
+
+.box .item {
+    width: 31.23%;
+    border-radius: 1px;
+    background: #fff;
+    padding: 10px;
+    min-width: 210px;
+    margin: 10px 0 0 2.1%;
+    float: left;
+    overflow: hidden;
+    transition: all .3s;
+    border: 1px solid #4199BE;
+}
+
+.box .item:hover {
+    transform: translateY(-5px);
+}
+.box .item .no-logo {
+    font-size: 14px;
+    color: #000000;
+    font-family: ".SF NS Display";
+    line-height: 17px;
+}
+.box .item .logo {
+    height: 40px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+    color: #3273dc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 .1rem;
+}
+.box .item .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.main .box .item .desc {
+    color: gray;
+    font-size: 12px;
+    padding-top: 10px;
+    height: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+#btn{
+    position:relative;
+    text-align: center;
+    width: 100%;
+    color: #4199BE;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
+}

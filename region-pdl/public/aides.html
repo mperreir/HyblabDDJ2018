@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Notre page est en français -->
+<head>
+    <meta charset="utf-8">
+    <title>Aides financières</title>
+
+    <!-- Basic viewport setting for mobile friendly page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- stylesheets -->
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/aides.css">
+    <link rel="stylesheet" href="css/style-global.css">
+
+    <!-- libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <!-- associated javascript files -->
+    <script src="js/aides.js" defer></script>
+
+</head>
+<body>
+<div class="texte">
+    <a href="index.html"><img class="logo-pdl" src="img/logo-pdl.png"/></a>
+    <a class="home" href="index.html"> HOME </a>
+    <a class="credits" href="credits.html"> Crédits </a>
+
+
+    <h1><b>Vous vous formez,</b>
+        <br>
+        nous vous soutenons</h1>
+
+    <p class="explication"> Logement, matériel, démarches, la Région soutient votre apprentissage
+        et met tout en oeuvre pour vous permettre d’entreprendre sereinement votre formation.
+        <strong>100% des apprentis bénéficient d’un minimum d’aide de 79€*.</strong>
+
+    <p class="temoignage"><i>« J’ai voulu devenir apprentie parce que cela représentait une situation financière plus avantageuse pour moi. »</i>
+        <br>
+        <span id="signature">Marine Paillot, Chargée d’affaires chez Enedis</span>
+    </p>
+
+</div>
+
+<div id="containerAides">
+
+    <p id="figure" class="figure"></p>
+
+    <h2 id="montant-aide"> 0 € </h2>
+
+    <div id="aide" class="descriptionAide">
+        <h1 id="nom-aide"> Survolez une barre avec votre souris </h1>
+        <p id="description-aide"> et vous aurez une description de l'aide correspondante !</p>
+
+        <a id="lien-aide" href="" target="_blank">En savoir plus</a>
+    </div>
+
+    <div id="criteres">
+        <div class="questionResultatRange">
+            <p id="selectionIntervalle" >
+            <p id ="phraseAge" class="phrase"> Quel est votre age ?</p>
+            <p id ="intervalleAge" class="intervalle"> </p>
+            <input title="borneInferieureAge" id="minAge" type="range" value="18" max="50" min="16" step="1" onchange="actualize(event, 'Age')">
+        </div>
+
+        <div class="questionResultatRange">
+            <p id ="phraseQuotient" class="phrase">Quel est votre quotient familial ?</p>
+            <p id ="intervalleQuotient" class="intervalle"> </p>
+            <input title="borneInferieureQuotient" id="minQuotient" type="range" value="0" max="1000" min="0" step="10" onchange="actualize(event, 'Quotient')">
+        </div>
+
+        <div class="questionResultatRange">
+            <p id ="phraseDistance" class="phrase">Moyenne des distances domicile-CFA, domicile-entreprise :</p>
+            <p id ="intervalleDistance" class="intervalle"> </p>
+            <input title="borneInferieureDistance" id="minDistance" type="range" value="1" max="150" min="1" step="1" onchange="actualize(event, 'Distance')">
+        </div>
+
+        <div class="questionResultatRange">
+            <p id ="phraseNiveau" class="phrase">Quel niveau d'étude vous intéresse ? </p>
+            <p id ="intervalleNiveau" class="intervalle"> </p>
+            <input title="borneInferieureNiveau" id="minNiveau" type="range" value="1" max="6" min="1" step="1" onchange="actualize(event, 'Niveau')">
+            </p>
+        </div>
+    </div>
+
+    <!------ liens à droite de la page --------->
+    <a id="rond0" class="lienRond" href="index.html"></a>
+    <a id="rond1" class="lienRond" href="sunburstGFE.html"></a>
+    <a id="rond2" class="lienRond" href="map.html"></a>
+    <a id="rond3" class="lienActuel" href="aides.html"></a>
+    <a id="rond4" class="lienRond" href="credits.html"></a>
+
+</div>
+</body>
+</body>
+</html>

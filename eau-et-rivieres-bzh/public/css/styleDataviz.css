@@ -1,0 +1,882 @@
+/* Règles CSS en plus de celles de bootstrap ou fullpage.js*/
+
+/* ######################################################################### */
+/* --------------- Général --------------- */
+/* ######################################################################### */
+body{
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 1.2vw;
+}
+
+.normal {
+    font-weight: 400;
+    font-size: 0.9vw;
+}
+
+.pTitle {
+    padding-top : 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* --------------- Header --------------- */
+.navbar-header {
+    padding-left: 5%;
+}
+
+#ulNav {
+    padding-right: 5%;
+}
+
+/* --------------- Commun à tous les encadrés/panneaux --------------- */
+.panel {
+    border: 4px solid black;
+    background: white;
+    position: absolute;
+    float: left;
+}
+
+.panel:nth-of-type(2){
+	border: 2px solid black;
+}
+
+/* --------------- Définitions --------------- */
+em{
+    font-style: normal;
+    text-decoration: underline;
+    cursor : help;
+}
+
+.definition article{
+    border: solid;
+    border-radius: 10px;
+    background: white;
+    width: 40%;
+    display: none;
+    position: absolute;
+    z-index: 3;
+    padding: 10px;
+    text-align: justify;
+}
+
+
+
+/* ######################################################################### */
+/* --------------- Les Timelines --------------- */
+/* ######################################################################### */
+.timeline {
+    float: left;
+    position: absolute;
+}
+
+.timeline:before {
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    background-color: black;
+}
+
+.timeline .timeline-item {
+  position: relative;
+}
+
+.timeline .timeline-item .timeline-badge {
+    width: 2.08vw;
+    height: 2.08vw;
+    line-height: 50px;
+    position: absolute;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.timeline .timeline-item .timeline-badge.primary {
+    background-color: white;
+}
+
+.timeline .timeline-item .timeline-badge.primary:hover {
+    background-color: #c7c8ca;
+}
+
+.timeline .timeline-item .timeline-badge.primary:focus {
+    background-color: #414042;
+    outline:0;
+}
+
+.timeline-horizontal {
+    list-style: none;
+    position: relative;
+    padding: 20px 0px 20px 0px;
+    display: inline-block;
+}
+
+.timeline-horizontal:before {
+    height: 3px;
+    top: auto;
+    bottom: 13px;
+    left: 5%;
+    width: 101%;
+    margin-bottom: 7%;
+}
+
+.timeline-horizontal .timeline-item {
+    display: table-cell;
+    height: 3.64vw;
+    width: 20%;
+    min-width: 4.16vw;
+    float: left;
+    left: 10.5%;
+    margin: 0 auto;
+}
+
+.timeline-horizontal .timeline-item .timeline-badge {
+    top: auto;
+    bottom: 0px;
+}
+
+.pTimeline {
+    padding-top: 100%;
+    margin-left: -8px;
+    color: white;
+}
+
+
+
+/* ######################################################################### */
+/* --------------- Page 1 --------------- */
+/* ######################################################################### */
+#page1DisplayOn{
+    filter :blur(0px);
+}
+
+/* --------------- Section 1 : Présentation générale dataviz --------------- */
+
+#section1 {
+    top: 10vh;
+    left: 5vw;
+    width: 40vw;
+    word-wrap : break-word;
+    text-align: justify;
+}
+
+.pContent {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.pTop {
+    padding-top: 0.5vw;
+}
+
+.pBottom {
+    padding-top: 0.2vw;
+    padding-bottom: 0.5vw;
+}
+
+/* --------------- Timeline1 --------------- */
+#timeline1 {
+    width: 22vw;
+    top: 43vh;
+    left: 12vw;
+}
+
+/* --------------- Section 2 : Histogrammes, textes et légende --------------- */
+#section2 {
+    top: 10vh;
+    left: 50vw;
+    width: 46vw;
+    height: 80vh;
+    word-wrap : break-word;
+}
+
+/* --------------- Histogramme --------------- */
+#histDroite {
+    float: left;
+    position: absolute;
+    left: 52.5%;
+    top: 2%;
+    width: 50%;
+    height: 45%;
+}
+
+#histGauche{
+    float: left;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    width: 50%;
+    height: 45%;
+}
+
+/* --------------- Descriptions histogrammes --------------- */
+.article1 {
+    float: left;
+    width: 50%;
+    height: 80%;
+}
+
+#descriptionGauche {
+    padding: 5px;
+    text-align: justify;
+    position: absolute;
+    top: 55%;
+    left: 1%;
+    width: 48%;
+}
+
+#descriptionDroite {
+    padding: 5px;
+    text-align: justify;
+    position: absolute;
+    top: 55%;
+    left: 51%;
+    width: 48%;
+}
+
+/* --------------- Légende Histogrammes Citnerne --------------- */
+#legendeTitle {
+    padding-left: 10px;
+}
+
+#legende {
+    padding: 5px;
+    width: 100%;
+}
+
+.cellule{
+    text-align: left;
+    padding-left: 10px;
+    width: 33%;
+    display: inline-flex;
+}
+
+.pLegende {
+    padding-left: 0.7vw;
+}
+
+.cellule svg {
+    margin-top: 0.2vw;
+}
+
+/* --------------- Bouton en Savoir Plus --------------- */
+#buttonSP {
+    float: left;
+    position: absolute;
+    left: 81vw;
+    top: 92vh;
+    width: 15vw;
+}
+
+/* --------------- Carte Départements --------------- */
+#mapBretagne {
+    float: left;
+    width: 28vw;
+    position: absolute;
+    top: 59vh;
+    left: 9vw;
+}
+
+#mapBretagne path {
+    fill: white;
+    stroke: black;
+    stroke-width: 1 px;
+    transition: fill 0.3s;
+}
+
+#mapBretagne path:hover{
+    fill: #c7c8ca;
+}
+
+.st0 {
+    fill: #806703;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st1 {
+    fill: #F8C000;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st2 {
+    fill: #212653;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st3 {
+    fill: #6262E8;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st4 {
+    fill: #7C3703;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st5 {
+    fill: #EF6316;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st6 {
+    fill: #671D3A;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st7 {
+    fill: #AA3565;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st8 {
+    fill: #0C5F4C;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st9 {
+    fill: #1EAE8D;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st10 {
+    fill: #721C05;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st11 {
+    fill: #D42E1E;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st12 {
+    fill: #416C77;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st13 {
+    fill: #7CCAE2;
+    stroke: #1D1D1B;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st14 {
+    fill: none;
+}
+
+.st15 {
+    fill: #1D1D1B;
+}
+
+.st16 {
+    font-weight: 700;;
+}
+
+.st17 {
+    font-size: 0.45vw;
+}
+
+.enSavoirPlusP1{
+    font-weight: 400;
+    border: solid;
+    border-width: 5px;
+    position: absolute;
+    top: 20vh;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 0px;
+    padding: 20px;
+    background: white;
+    z-index: 2;
+    display: none;
+}
+
+
+#enSavoirPlusHautP1{
+    font-weight: 700;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#boutonExitP1{
+    margin-top: 7px;
+    height: 36px;
+    width: 36px;
+}
+
+#LegendeEnSavPlus{
+    left: 50%;
+    top: 40%;
+    margin: 0;
+
+
+}
+
+#enSavoirPlusBasP1{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#histTemps{
+
+    left: 40%;
+    width: 100%;
+}
+
+#enSavoirPlusBasP1 article{
+    text-align: justify;
+    margin: 20px;
+}
+
+/* --------------- Légende en Savoir Plus --------------- */
+#LegendeEnSavPlus {
+    position: absolute;
+    float: left;
+    left: 44%;
+    top: 34%;
+}
+
+.articleSP {
+    display: inline-flex;
+    padding-left: 0.6vw;
+}
+
+.articleSP svg {
+    margin-top: 0.3vw;
+}
+
+
+
+/* ######################################################################### */
+/* --------------- Page 2 --------------- */
+/* ######################################################################### */
+/* --------------- Section 3 : Présentation Nappe Campbon --------------- */
+#section3 {
+    top: 10vh;
+    left: 5vw;
+    width: 25vw;
+    word-wrap : break-word;
+    text-align: justify;
+}
+
+/* --------------- Section 4 : Légende Station --------------- */
+#section4 {
+    top: 75vh;
+    left: 5vw;
+    width: 20vw;
+    height: 10vw;
+}
+
+#pCiterne {
+    float: left;
+    position: absolute;
+    left: 25%;
+    top: 28%;
+    width: 15.5vw;
+    text-align: justify;
+}
+
+.st100 {
+    fill: #A0DAE8;
+}
+
+.st101 {
+    fill: #7CCAE2;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st102 {
+    fill: none;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st103 {
+    fill: #A0DAE8;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+#citerne {
+    width: 22%;
+    float: left;
+    position: relative;
+    top: 24%;
+    left: 6%;
+}
+
+/* --------------- Carte Campbon --------------- */
+#mapCampbon {
+    float: left;
+    position: absolute;
+    top: 10vh;
+    left: 40vw;
+    width: 45vw;
+}
+
+.st200 {
+    fill: #7CCAE2;
+}
+
+.st201 {
+    font-family: 'MyriadPro-Regular';
+}
+
+.st202 {
+    font-size: 16.4237px;
+}
+
+.st203 {
+    fill: none;
+    stroke: #1D1D1B;
+    stroke-width: 3.5332;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st204 {
+    fill: #FFFFFF;
+}
+
+.st205 {
+    fill: #0C5F4C;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+.st206 {
+    fill: #1EAE8D;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+.st207 {
+    fill: none;
+}
+
+.st208 {
+    fill: #1D1D1B;
+}
+
+.st209 {
+    font-weight: 700;
+}
+
+.st210 {
+    font-size: 17px;
+}
+
+.st211 {
+    fill: #A0DAE8;
+}
+
+.st212 {
+    fill: #7CCAE2;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st213 {
+    fill: none;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st214 {
+    fill: #A0DAE8;
+    stroke: #1D1D1B;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+
+
+/* ######################################################################### */
+/* --------------- Page 3 --------------- */
+/* ######################################################################### */
+/* --------------- Section 5 : Texte Nappe de Campbon par année --------------- */
+#section5 {
+    top: 10vh;
+    left: 5vw;
+    width: 31vw;
+    text-align: justify;
+}
+
+/* --------------- Timeline 2 : positionnement et taille --------------- */
+#timeline2 {
+    width: 22vw;
+    top: 36vh;
+    left: 41vw;
+}
+
+/* --------------- Section 6 : Légende Bouteille --------------- */
+#section6 {
+    top: 30vh;
+    left: 72vw;
+    width: 23vw;
+    text-align: left;
+}
+
+.pSection6 {
+    padding-top: 0.37vw;
+    padding-bottom: 0.37vw;
+    padding-left: 1vw;
+}
+
+.articleS6 {
+    display: inline-flex;
+    padding-left: 0.6vw;
+}
+
+.articleS6 svg {
+    margin-top: 0.6vw;
+}
+
+/* --------------- Bouteille --------------- */
+#bonhomme {
+    float: left;
+    position: absolute;
+    top: 20vh;
+    left: 43vw;
+    width: 25vw;
+    height: 65vh;
+}
+
+/* --------------- Solutions alternatives --------------- */
+#btnSolution{
+    float: left;
+    position: absolute;
+    left: 80vw;
+    top: 90vh;
+    width: 15vw;
+}
+
+#popupSolution{
+    font-weight: 400;
+    border: solid;
+    border-width: 5px;
+    position: absolute;
+    top: 15vh;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 0px;
+    padding: 20px;
+    background: white;
+    z-index: 2;
+    display: none;
+}
+
+#popupSolutionHaut{
+    font-weight: 700;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 1vw;
+}
+
+#popupSolutionBas{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+.solutionColonne{
+    width: 25vw;
+    padding: 1vw;
+}
+
+
+
+/* ######################################################################### */
+/* --------------- Page 4 --------------- */
+/* ######################################################################### */
+/* --------------- Petit paragraphe --------------- */
+#pCredits1 {
+    top: 10vh;
+    left: 35vw;
+    width: 30vw;
+    padding: 10px;
+    text-align: center;
+}
+
+/* --------------- Logo : Eau et Rivières --------------- */
+#logoMedia {
+    float: left;
+    position: absolute;
+    width: 20vw;
+    height: auto;
+    top: 20vh;
+    left: 54vw;
+}
+
+/* --------------- Section 7 : Présentation Eau et Rivieres --------------- */
+#section7 {
+    width: 35vw;
+    top: 20vh;
+    left: 8vw;
+    text-align: justify;
+}
+
+/* --------------- Section 8 : Remerciements Eau et Rivieres --------------- */
+#section8 {
+    width: 35vw;
+    top: 35vh;
+    left: 54vw;
+    text-align: justify;
+}
+
+/* --------------- Le tableau de logos des partenaires --------------- */
+#logos {
+    float: left;
+    position: absolute;
+    width: 75%;
+    left: 12%;
+    top: 62%;
+    border-collapse: separate;
+    border-spacing: 10px 20px; /* Nombre de pixels d'espace horizontal (10px), vertical (20px) */
+}
+
+#logos td {
+    width: 12%;
+    height: auto;
+    text-align: center;
+    background-color: white;
+}
+
+.logo {
+    max-width: 90%;
+    height: auto;
+}
+
+#logoPolytech {
+    width: 80%
+}
+
+#logoAudencia {
+    width: 80%;
+}
+
+#logoNantes {
+    width: 70%;
+}
+
+#logoUN {
+    width: 62%;
+}
+
+#logoOpenSource {
+    width: 35%;
+}
+
+#logoCC {
+    width: 35%;
+}
+
+/* ######################################################################### */
+/* --------------- Page 5 --------------- */
+/* ######################################################################### */
+/* --------------- Petit paragraphe --------------- */
+#pCredits2 {
+    top: 15vh;
+    left: 35vw;
+    width: 30vw;
+    padding: 10px;
+    text-align: center;
+}
+
+/* --------------- Tableau des logos personnels --------------- */
+#logosNous {
+    float: left;
+    position: absolute;
+    top: 32vh;
+    width: 90vw;
+    left: 5vw;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 10px 30px;
+}
+
+#logosNous td {
+    width: 12vw;
+    height: auto;
+}
+
+.imageNous {
+    max-width: 90%;
+    height: auto;
+}
+
+.name {
+    margin-top: 3px;
+    background-color: white;
+    border: 3px solid black;
+}

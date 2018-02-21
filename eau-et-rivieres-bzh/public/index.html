@@ -3,14 +3,18 @@
   <head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
-    <title>Hyblab 2016</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <title>PestiBusters</title>
 		<!-- Basic viewport setting for mobile friendly page -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleIndex.css">
+    <!-- Importation font family -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
 		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 		<!-- Simple sample script that loads data from a dummy json file -->
 		<script src="js/example.js" defer></script>
   </head>
@@ -19,22 +23,56 @@
     <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
     <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
     <div id="container">
+      <!-- Le contenu du site -->
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2018</h1>
-    </header>
+      <section id="enSavoirPlus">
+        <article id="enSavoirPlusHaut">
+          <h1>En savoir plus</h1>
+          <img id="boutonExit" src="img/Bouton_Exit.png"/>
+            </article>
+              <article id="enSavoirPlusBas">
+                <p><strong>Le terme phytosanitaire</strong> désigne un produit destiné à protéger les cultures des insectes et les champignons microscopiques responsables de la pourriture. Cette <em id="molecule" class="motdef">molécule</em> commercialisée n’appartient pas une, ni deux, mais à quatre familles : les <em id="herbicide" class="motdef">herbicides</em>, les <em id="insecticide" class="motdef">insecticides</em>, les <em id="fongicide" class="motdef">fongicides</em> et les <em id="parasiticide" class="motdef">parasiticides</em>. Omniprésent dans la chaîne alimentaire, on la trouve dans tout ce qui provient des productions agricoles telles que les pommes, les pêches et les fraises, mais aussi des légumes comme les tomates et les courgettes. En somme, <strong>le pesticide est à lui seul un problème de santé publique</strong>.</p>
+                <p><strong>A court terme, on parle de toxicité aiguë</strong>, les risques sont visibles et peuvent engendrer des troubles, comme des comas ou même la mort. Ce sont des intoxications en milieu professionnel comme un agriculteur qui, en oubliant de mettre son masque s’expose directement aux pesticides. La contamination est directe et immédiate. <strong>A moyen terme, la toxicité chronique</strong> peut entraîner une baisse des défenses immunitaires, une atteinte à la fertilité de l’homme et des maladies comme le cancer et Parkinson. <strong>A long et très long terme, la toxicité génétique</strong> est mutagènes. Les risques sont cachés à l’intérieur du patrimoine génétique de l’homme qui se voit alors altéré. Les effets peuvent être tératogènes (malformations et mutations génétiques).</p>
+              </article>
+            </section>
+            <section class="definition">
+          <article id="defmolecule">
+            <p>Structure de base de la matière, une molécule est un assemblage chimique électriquement neutre d’au moins 2 atomes. Cet ensemble d’atomes est susceptible de se transformer en une ou plusieurs molécules, un processus appelé “réaction chimique”.</p>
+          </article>
+          <article id="defherbicide">
+            <p>Substances actives de combattre les plantes non désirées là où elles apparaissent ou en préparation du terrain pour une culture. Les herbicides détruisent les plantes en empêchant leur photosynthèse ou leur division cellulaire.</p>
+          </article>
+          <article id="definsecticide">
+            <p>Substances actives permettant de tuer les insectes, larves et œufs, ainsi les arthropodes (araignées, acariens et tiques). Les insecticides interfèrent leurs systèmes nerveux ou les empêchent de muer.</p>
+          </article>
+          <article id="deffongicide">
+            <p>Appelé aussi phytosanitaire, les fongicides détruisent ou limitent le développement des champignons naissant sur les plantes et pouvant détruire les récoltes. Ces fongicides peuvent contaminer les fruits cultivés par sa substance hautement cancérigène. Il existe plusieurs sortes de fongicides : ceux qui s’attaque aux champignons en surface (produits préventifs) et ceux qui stoppent leur développement sur la plante (produits curatifs).</p>
+          </article>
+          <article id="defparasiticide">
+            <p>Également utilisé sous le nom d’antiparasitaire, il détruit les parasites et prévient les maladies dans les cultures. Ils incluent les herbicides et antiseptiques. Cependant, il existe des parasiticides naturels comme le hêtre et la staphisaigre (plante toxique)</p>
+          </article>
+        </section>
+          <div id="displayOn">
+     	  <section id="animation">
+    		  <object type="image/svg+xml" data="pesticide.svg" width="1000" height="320">
+    		  </object>
+        </section>
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
+        <section id="texte">
+          <p id="intro1"><strong>Substance chimique non naturelle</strong>, j’ai été <strong>créée et développée par l’homme lors de la révolution chimique</strong> du début du XXe siècle. De mon étymologie caedere et pestis, le latin me “tue” et me considère comme un “fléau”. Les anglais quant à eux, me surnomment le “ravageur”. Pour certains je suis un produit phytosanitaire, utilisé en agriculture pour lutter contre les organismes vivants “nuisibles”, mais pour la plupart, je suis connu sous un autre nom : <strong>pesticide</strong>.</p>
+          <p id="intro2"><strong>Les scientifiques</strong> me considèrent comme un <strong>problème de santé publique</strong>. <br/>Mes effets sur l’humain, apparaissent à différentes échelles de toxicité : <strong>aiguë, chronique et génétique</strong>. Je contamine par inhalation, contact et ingestion. Entre mort subite ou prématurée, baisse des défenses immunitaires, atteinte à la fertilité et malformations ou effets tératogènes, je suis un vrai danger pour l’homme. <strong>Je suis partout</strong> : dans vos cheveux, dans vos urines, dans votre alimentation et surtout dans ce qu’il y a plus vital : <strong>l’eau</strong>. <br/>Allons voir comment je m’y cache.</p>
+          <article id="artBtnTxt">
+            <img id="boutonGauche" src="img/Bouton_gauche.png"/>
+            <img id="boutonDroite" src="img/Bouton_droite.png"/>  
+            <img id="boutonEnSavoirPlus" src="img/Bouton_Ensavoirplus.png"/> 
+          </article>
+        </section>
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
-
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2018</p>
-    </footer>
+        <section id="commencer">
+          <button id="btnCommencer" type="button" OnClick="window.location.href='dataviz.html'"> COMMENCER </button>
+          <!-- <a href="dataviz.html" class="lien">COMMENCER</a> -->
+        </section>
+      </div>
     </div>
   </body>
 </html>

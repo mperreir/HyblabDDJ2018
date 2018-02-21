@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Effectifs d'apprenti</title>
+
+    <!-- stylesheets -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style-global.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style_sun.css"/>
+
+    <!-- associated javascript files -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/GFEsunburst.js"></script>
+    <script src="js/echarts.js"></script>
+
+</head>
+
+<body ng-controller="myCtrl">
+<div class="texte">
+
+    <a href="index.html"><img class="logo-pdl" src="img/logo-pdl.png"/></a>
+    <a class="home" href="index.html"> HOME </a>
+    <a class="credits" href="credits.html"> Crédits </a>
+
+    <h1><b>Votre voie :</b>
+        <br>
+        de nombreuses opportunités</h1>
+
+    <p class="explication"> L'apprentissage
+        regroupe un large panel de formations, allant
+        du CAP au BAC+5, et ce dans tous les secteurs d'activités.
+        Près de <strong>22 domaines de formation</strong> sont representés.</p>
+
+    <p class="temoignage"><i>« Je suis dans
+        ma 4e année d'apprentissage. Aujourd'hui
+        épanoui dans ma vie professionnelle, j'affirme que
+        l'apprentissage est une voie dans laquelle on
+        peut réussir. »</i>
+        <br>
+        <span id="signature">Aubin Paquier, Brevet Professionnel Art de la Cuisine</span>
+    </p>
+</div>
+
+
+<div id="container">
+    <div id="detail" style="display: none"> /* show the detail of each GFE*/
+        <div class="part">
+            <div class="one">
+                <div class="title" id="GFE1">Agriculture:</div>
+                <div class="secteurName" id="GFE1-Sect">
+                    <p>
+                        Secteur1   Aménagement paysager<br>
+                        Secteur2   Productions animales, élevages spéc., aquacultures<br>
+                        Secteur3   Productions végétales, cultures spéc, protection<br>
+                        Secteur4   Spéc. plurivalentes de l'agronomie - agriculture<br>
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Pêche - Mer - Aquaculture:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Forêts, espaces naturels, faune sauvage, pêche<br>
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Bâtiment gros œuvre - Génie civil - Extraction:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Batiment: construction et couverture<br>
+                        Secteur2   Mines et carrières, génie civil, topographie<br>
+                        Secteur3   Spéc. pluri-techno. génie civil-construction-bois
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Bâtiment : équipements et finitions:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Batiment: finitions
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Structures métalliques - Travail des métaux - Fonderie:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Métallurgie<br>
+                        Secteur2   Structures métalliques
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Mécanique - Automatismes:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Mécanique aéronautique et spatiale<br>
+                        Secteur2   Mécanique générale et de précision, usinage<br>
+                        Secteur3   Moteurs et mécanique auto<br>
+                        Secteur4   Spécialités pluritechnologiques ds transformations<br>
+                        Secteur5   Technologies de commandes, transformations indust.<br>
+                        Secteur6   Technologies industrielles fondamentales<br>
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Electricité - Electrotechnique - Electronique:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Electricité, électronique<br>
+                        Secteur2   Energie, génie climatique
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Formations d’aide à l’insertion sociale et professionnelle:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Développement des capacités d'orientation
+                    </p>
+                </div>
+            </div>
+            <div class="bottom" onclick="returnAll()"> Close </div>
+            <div class="bottom" onclick="nextPage()">Page prochaine</div>
+
+        </div>
+    </div>
+    <div id="detail2" style="display: none">
+        <div class="part">
+            <div class="one">
+                <div class="title">Travail des matériaux - Industries de process - Laboratoire:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Matériaux de construction, verre et céramique<br>
+                        Secteur2   Plasturgie, matériaux composites<br>
+                        Secteur3   Spécialités pluri-techno, mécanique électricité<br>
+                        Secteur4   Transformations chimiques et apparentées<br>
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Production alimentaire - Cuisine:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Agro-alimentaire, alimentation, cuisine<br>
+                </div>
+            </div>
+
+            <div class="one">
+                <div class="title">Textile - Habillement - Cuir:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Cuirs et peaux<br>
+                        Secteur2   Habillement<br>
+                        Secteur3   Spécialités pluri-technologiques matériaux souples<br>
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Travail du bois</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Travail du bois et de l'ameublement
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Techniques graphiques - Impression:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Techniques de l'imprimerie et de l'édition
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Transports - Conduite - Manutention - Magasinage:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Transport, manutention, magasinage
+                    </p>
+                </div>
+            </div>
+
+            <div class="one">
+                <div class="title">Commerce et distribution:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Commerce, vente<br>
+                        Secteur2   Spécialités plurivalentes des échanges - gestion
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Tertiaire de bureau - Tertiaire spécialisé:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Comptabilité, gestion<br>
+                        Secteur2   Droit,sciences politiques<br>
+                        Secteur3   Finances, banque, assurances<br>
+                        Secteur4   Informatique, traitement de l'information, réseaux<br>
+                        Secteur5   Ressources humaines, gestion personnel et emploi<br>
+                        Secteur6   Secrétariat, bureautique<br>
+                        Secteur7   Spécialités plurivalentes des services
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Arts appliqués - Arts du spectacle:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Musique, arts du spectacle
+                    </p>
+                </div>
+            </div>
+            <div class="bottom" onclick="returnAll()"> Close </div>
+            <div class="bottom" onclick="nextPage2()"> Page prochaine</div>
+            <div class="bottom" onclick="retourPage()"> Page précédente </div>
+        </div>
+    </div>
+    <div id="detail3" style="display: none">
+        <div class="part">
+            <div class="one">
+                <div class="title">Paramédical - Travail social - Soins personnels:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Coiffure, esthétique<br>
+                        Secteur2   Santé<br>
+                        Secteur3   Spécialités plurivalentes sanitaires et sociales<br>
+                        Secteur4   Travail social<br>
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Hôtellerie - Restauration - Tourisme - Sports - Animation socioculturelle - Loisirs:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Accueil, Hotellerie, tourisme<br>
+                        Secteur2   Animation culturelle, sportive et de loisirs<br>
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Nettoyage - Assainissement - Environnement - Sécurité:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Nettoyage-assainissement-protection-environnement<br>
+                        Secteur2   Sécurité des biens-personnes, police, surveillance<br>
+                    </p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="title">Techniques de la communication - Média:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Spécialités plurivalentes de la communication<br>
+                        Secteur2   Techniques de l'image et du son, métiers connexes
+                    </p>
+                </div>
+            </div>
+
+            <div class="one">
+                <div class="title">Formations générales - Généralistes - Développement personnel:</div>
+                <div class="secteurName">
+                    <p>
+                        Secteur1   Français, littérature et civilisation française<br>
+                        Secteur2   Chimie<br>
+                        Secteur3   Langues vivantes, civilisations étrangères<br>
+                        Secteur4   Mathématiques<br>
+                        Secteur5   Physique<br>
+                        Secteur6   Physique - chimie<br>
+                        Secteur7   Sciences de la vie<br>
+                        Secteur8   Sciences sociales<br>
+                        Secteur9   Spécialités pluriscientifiques
+                    </p>
+                </div>
+            </div>
+
+            <div class="bottom" onclick="returnAll()"> Close </div>
+            <div class="bottom" onclick="retourPage2()">Page précédente</div>
+        </div>
+
+    </div>
+    <div id="main" style="display: none;"> /*show sunburst*/
+        <div id="sidebar">
+            <input type="checkbox" id="togglelegend"> Legend<br/>
+            <div id="legend" style="visibility: hidden;"></div>
+        </div>
+        <div id="sequence"></div>
+        <div id="name"></div>
+        <div id="showExplain" style="visibility: hidden;">
+            <div id="exp">
+            </div>
+            <div id="exp1"></div>
+        </div>
+        <div id="chart-container">
+            <div id="chart"></div>
+            <div id="explanation" style="visibility: hidden;">
+                <span id="percentage"></span><br/>
+                d'apprentissages dans cette partie
+            </div>
+        </div>
+        <div id="legend-color">
+            <div id="niveau">
+                <svg style="width: 20px; height:20px; background: #95599F"></svg>
+                <div class="color">Niveaux d’études</div>
+            </div>
+            <div id="secteur">
+                <svg style="width: 20px; height:20px; background: #33AFCE"></svg>
+                <div class="color">Secteurs d’activités</div>
+            </div>
+        </div>
+        <div id="dessus" style="visibility: hidden;">
+            <div id="text"></div>
+            <div id="nomSecteur"></div>
+            <div id="total_occu">
+                <div id="total"></div>
+                <div id="exptotal"></div>
+            </div>
+            <div id="annee1">
+                <div id="expan1"></div>
+                <div id="an1"> </div>
+            </div>
+            <div id="annee2">
+                <div id="expan2"></div>
+                <div id="an2"> </div>
+            </div>
+            <div id="annee3">
+                <div id="expan3"></div>
+                <div id="an3"> </div>
+            </div>
+        </div>
+        <div class="btn" id="returnPage" onclick="returnPage()"> Sélectionner un autre domaine d'activité  </div>
+        <div class="btn" id="showDetail" onclick="showDetail()" ><a href="#"></a>Détail</div>
+    </div>
+    <div class="box">
+        <div id="sideMenu" class="menu">
+            <div id="btn" class="btn-default">
+                <i class="iconfont icon-tool"></i>Quel domaine d'activité vous intéresse-t-il ?
+            </div>
+            <ul id="demo-list">
+                <li ng-repeat="a in aJson">
+                    <iframe src={{a.third}} width="30" height="30" frameborder="0" scrolling = "no"
+                            style="position: relative; float: left; margin-left: 7px; margin-top: 10px"></iframe>
+                    <a href="#" ng-click="clickGetImage(a)" style="position: relative; display: block; float: right; width: 190px; height: 100%;
+                     text-wrap: normal">
+                        {{a.second}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    d3.select(self.frameElement).style("height", "700px");
+</script>
+
+<!------ liens à droite de la page --------->
+<a id="rond0" class="lienRond" href="index.html"></a>
+<a id="rond1" class="lienActuel" href="sunburstGFE.html"></a>
+<a id="rond2" class="lienRond" href="map.html"></a>
+<a id="rond3" class="lienRond" href="aides.html"></a>
+<a id="rond4" class="lienRond" href="credits.html"></a>
+
+</body>
+</html>

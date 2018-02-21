@@ -1,0 +1,218 @@
+
+
+/* colonne de gauche */
+
+.texte {
+    background-color: #ABCC21;
+}
+
+
+/* colonne de droite */
+
+
+#containerAides {
+    height: 100%;
+    height: -webkit-calc(100% - 55px);  /* pour Chrome */
+    height: -moz-calc(100% - 55px);     /* pour Firefox */
+    height: calc(100% - 55px);           /* pour support natif */
+
+    padding-left: 100px;
+
+    padding-top: 5px;
+    padding-bottom: 50px;
+
+    background: #FFFFFF;
+}
+
+#aide {
+    color: #232222;
+    font-family: Lato;
+    font-size: 15px;
+    line-height: 18px;
+
+    padding-top: 10px;
+
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+}
+
+.descriptionAide {
+    float:right;
+    height: 35%;
+
+    margin-right: 50px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#nom-aide {
+    margin-top: 10px;
+    width: 400px;
+    height: 24px;
+    color: #000000;
+    font-family: Lato;
+    font-size: 20px;
+    line-height: 1px;
+}
+
+#description-aide {
+    height: 72px;
+    width: 343.59px;
+    color: #232222;
+    font-family: Lato;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 18px;
+}
+
+#lien-aide {
+    position: relative;
+    bottom: -20px;
+    left: 270px;
+
+    height: 19px;
+    width: 93px;
+    color: #4199BE;
+    border: 1px solid #4199BE;
+
+    padding: 2px;
+
+    text-align: center;
+    text-decoration: none;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1px;
+    letter-spacing: 1px;
+}
+
+#montant-aide {
+    float: left;
+
+    margin-left: 4%;
+
+    font-size: 80px;
+
+    color: #009BC2;
+    font-family: Lato;
+    font-weight: bold;
+}
+
+
+/** boite de critères à sélectionner **/
+
+#criteres {
+    float:right;
+
+/*    width: 750px;*/
+    width: 60%;
+    color: #232222;
+    font-family: Lato;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 18px;
+
+    margin-right: 50px;
+    margin-top: 15px;
+    padding-left: 20px;
+
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+}
+
+#selectionIntervalle {
+    padding-left: 100px;
+}
+
+.phrase, .intervalle {
+    float: left;
+}
+
+.questionResultatRange {
+    padding-top: 11px;
+    height: 60px;
+    width: 100%;
+}
+
+/** style des curseurs de range **/
+
+input {
+    float: right;
+    margin-right: 7%;
+    margin-top: 2%
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3.3px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #930000, 0px 0px 0px #ac0000;
+    background: #a008a9;
+    border-radius: 3.4px;
+    border: 1.8px solid rgba(255, 255, 255, 0.44);
+}
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0.1px 0.1px 15px rgba(0, 0, 0, 0.69), 0px 0px 0.1px rgba(13, 13, 13, 0.69);
+    border: 3.6px solid #b3ed00;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -12.65px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #a008a9;
+}
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 3.3px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #930000, 0px 0px 0px #ac0000;
+    background: #a008a9;
+    border-radius: 3.4px;
+    border: 1.8px solid rgba(255, 255, 255, 0.44);
+}
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0.1px 0.1px 15px rgba(0, 0, 0, 0.69), 0px 0px 0.1px rgba(13, 13, 13, 0.69);
+    border: 3.6px solid #b3ed00;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    background: #ffffff;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 3.3px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #a008a9;
+    border: 1.8px solid rgba(255, 255, 255, 0.44);
+    border-radius: 6.8px;
+    box-shadow: 0px 0px 0px #930000, 0px 0px 0px #ac0000;
+}
+input[type=range]::-ms-fill-upper {
+    background: #a008a9;
+    border: 1.8px solid rgba(255, 255, 255, 0.44);
+    border-radius: 6.8px;
+    box-shadow: 0px 0px 0px #930000, 0px 0px 0px #ac0000;
+}
+input[type=range]::-ms-thumb {
+    box-shadow: 0.1px 0.1px 15px rgba(0, 0, 0, 0.69), 0px 0px 0.1px rgba(13, 13, 13, 0.69);
+    border: 3.6px solid #b3ed00;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    background: #ffffff;
+    cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #a008a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #a008a9;
+}
