@@ -1,40 +1,441 @@
 <!DOCTYPE html>
 <html lang="fr"> <!-- Notre page est en français -->
-  <head>
+<head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-		<!-- Basic viewport setting for mobile friendly page -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyblab Métropole</title>
+    <!-- Basic viewport setting for mobile friendly page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyblab Métropole</title>
+    <meta name="description" content="Hyblab 2018 Métropole" />
+    <meta name="keywords" content="hyblab" />
+    <meta name="author" content="polytech" />
     <!-- Déclaration de la feuille de style du document-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/intro.css">
+    <link rel="icon" type="image/png" href="img/common/go2.png" />
+		<!-- Those polyfills are required so that old browsers support fetch mecanism 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
-  </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+		Simple sample script that loads data from a dummy json file -->
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2018</h1>
-    </header>
+        <script src="js/jquery3.2.1.js"></script>
+        <!-- Two js for charts -->
+        <script src="js/modernizr.custom.js"></script>
+        <script src="js/Chart.bundle.js"></script>
+        <script src="js/velocity.js"></script>
+        <script src="js/jqfloat.min.js"></script>
+        <script src="js/main.js"></script>
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
+    </head>
+    <body>
+        <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
+        <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
+        <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+        <div id="container">
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2018</p>
-    </footer>
-    </div>
-  </body>
+            <!-- l'entête de la page: titre, barre de recherche -->
+
+            <!-- Le contenu du site -->
+            <div id="loading-screen"><img id="loading" src="img/chargement.gif" alt="je déménage"></div>
+            <div id="loading-screen2"><img id="loading2" src="img/apresc.png" alt="je déménage"></div>
+            <div id="fullpage">
+                <div class="section" id="section-pourquoi">
+                    <h2 class="pourquoi">Pourquoi s'installer dans<br> la métropole <b>Nantes St Nazaire?</b></h2>
+                    <div id="presentation-block">
+                    <p id="presentation1">Je m’appelle <span class="blue-text">Emmanuelle</span>, j’ai 38 ans et il y a un an, j’ai choisi <span class="blue-text">d’installer une filiale de mon entreprise dans la métropole de Nantes/Saint-Nazaire.</span></p>
+                    <p id="presentation2"><span class="blue-text">Je vivais à Paris</span>, vous cernez l’ambiance : <span class="blue-text">métro, boulot, dodo</span>.<br>Quotidien stimulant mais difficile pour envisager une vie de famille.</p>
+                    </div>
+                    <img id="nantes-img" src="img/intro/photo-nantes.png" alt="gr">
+                    <img id="nana-nantes" src="img/intro/NANAVALISE.png" alt="nana">
+                    <img id="bulle" src="img/intro/bulle.png" alt="text">
+                    
+                    <img class="flecheBas" src="img/main/FLECHEBAS.png" alt="nextPage">
+                </div>
+
+                <div class="section" id="section-carte">
+                    <div class="section-container">
+                        <p id="plus">Plusieurs opportunités se présentaient à moi<br> pour m'installer dans l'une des métropoles du paysage français.</p>
+                        <p id="chacune">Chacune disposant de ses avantages propres.<br>Il me fallait donc <span class="blue-text">trouver la meilleure combinaison</span><br> pour allier <span class="blue-text">environnement de travail stimulant</span> et <span class="blue-text">cadre de vie idéal.</span></p>
+                        <img id="bulle2" src="img/intro/bulle2.png" alt="text"><br>
+                        <img id="paris-img" src="img/intro/photo-paris.png" alt="photo">
+                        <img id="nanavalise" src="img/intro/emmanuelle.png" alt="nana">
+
+                        <div id="carte-container">
+                            <img id="carte-france" src="img/intro/FRANCE.png" alt="text">
+                            <span id="pt-lille" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville lille">Lille</span>
+                            </span>
+                            <span id="pt-rennes" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville rennes">Rennes</span>
+                            </span>
+                            <span id="pt-nantes" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville nantes">Nantes</span>
+                            </span>
+                            <span id="pt-bordeaux" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville bordeaux">Bordeaux</span>
+                            </span>
+                            <span id="pt-lyon" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville lyon">Lyon</span>
+                            </span>
+                            <span id="pt-nice" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville nice">Nice</span>
+                            </span>
+                            <span id="pt-aix" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville aix">Aix-Marseille</span>
+                            </span>
+                            <span id="pt-grenoble" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville grenoble">Grenoble</span>
+                            </span>
+                            <span id="pt-strasbourg" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville strasbourg">Strasbourg</span>
+                            </span>
+                            <span id="pt-toulouse" class="cd-single-point">
+                                <img class="img-marque" src="img/intro/marque.png" alt="nextPage">
+                                <span class="nom-ville toulouse">Toulouse</span>
+                            </span>
+                            <img id="ombre-carte" src="img/intro/ombre-carte.png" alt="photo">
+                        </div>
+                        <p id="survolez-ville">Survolez les villes !</p>
+                        <p id="des-nantes" class="ville-des"><label class="city">NANTES</label>Je me suis laissée séduire par plusieurs aspects de la métropole de Nantes St-Nazaire. Nous allons les découvrir ensemble!</p>
+                        <p id="des-bordeaux" class="ville-des"><label class="city">BORDEAUX</label>Avec la nouvelle ligne de train grande vitesse et des infrastructures modernes grandissantes, la capitale de la Nouvelle Aquitaine est en nette croissance.</p>
+                        <p id="des-nice" class="ville-des"><label class="city">NICE</label>Avec 300 jours de soleil par an, les activités sportives extérieures sont au coeur de la métropole Niçoise.</p>
+                        <p id="des-toulouse" class="ville-des"><label class="city">TOULOUSE</label>Entre mer et montagnes : Toulouse, capitale culturelle du Sud-ouest, dispose d’un emplacement géographique attrayant.</p>
+                        <p id="des-lille" class="ville-des"><label class="city">LILLE</label> Un territoire très dynamique placé au coeur de l’Europe.</p>
+                        <p id="des-aix" class="ville-des"><label class="city">AIX-MARSEILLE</label>Plus vaste métropole de France, l’un des grands points forts de Aix-Marseille réside dans son réseau de transports en commun, permettant de se déplacer en toute facilité.</p>
+                        <p id="des-grenoble" class="ville-des"><label class="city">GRENOBLE</label>Dotée d’un très fort tissu associatif ainsi que d’écoles de renommée, Grenoble fait partie des métropoles en expansion.</p>
+                        <p id="des-rennes" class="ville-des"><label class="city">RENNES</label>Rennes sait se démarquer avec un chômage inférieur à la moyenne nationale.</p>
+                        <p id="des-lyon" class="ville-des"><label class="city">LYON</label>Placé au coeur de la mégalopole européenne, la ville des lumières fait rêver les actifs pour son cadre de vie agréable et dynamique.</p>
+                        <p id="des-strasbourg" class="ville-des"><label class="city">STRASBOURG</label>Une ville d’échange aux loyers attractifs.</p>
+                        <p id="des-" class="ville-des"><label class="city"></label></p>
+                        <img class="flecheBas" src="img/main/FLECHEBAS.png" alt="nextPage">
+                    </div>
+                </div>
+
+                <div class="section" id="numerique">
+                    <div class="row conteneur">
+                        <div class=" mainScreen">
+                          <div id="bl-main" class="bl-main">
+                                <section id="7" class=" categorie-des cat7">
+                                   <img src="img/common/go2.png" class="femme2">
+                                     <img src="img/common/bull.png" class="bull">
+                                      <p class="textBullbis"> Mon choix s’est donc porté sur la métropole de Nantes/Saint-Nazaire. J’avais des critères de sélection bien particuliers, je vous laisse les découvrir en survolant les différentes catégories sur votre droite.</p>
+                                    </section>
+                                 <section class=" categorie-des cat0">
+
+                                        <div class="cat-chart-block ">
+                                            <canvas class= "indicateur1" id="loyer"></canvas>
+                                            <canvas class="indicateur2" id="qualiteair"></canvas>  
+                                        </div>
+
+                                        <h1 class = "indTitle indTitle1 text-center"> Loyer mensuel au m² (en €)</h1>
+                                        <h1 class = "indTitle indTitle2 text-center"> Pourcentage de jours avec un bon indice de qualité de l'air sur l'année  </h1>
+                                       
+
+                                        <p class="textBull textBull1">Les loyers nantais sont stables depuis plusieurs années, à un niveau relativement moins élevé que dans les autres territoires métropolitains. Cette stabilité s'explique par l'encadrement des baux en cours par l’IRL (l’indice de référence des loyers) qui est stable depuis plusieurs années, l'encadrement des hausses de loyers entre deux locataires et une construction de logements neufs permettant de limiter la tension sur le marché.</p>
+                                        <p class="textBull textBull2"> L’estuaire de la Loire bénéficie de la proximité de la façade maritime qui permet de diminuer l’impact des différentes sources de pollutions. Cela le différencie fortement des espaces à l’intérieur des terres où l’air circule moins et où l’on observe des épisodes plus longs de fortes pollutions.</p>
+
+                                        <img src="img/common/tete.png" class="femme img-responsive">
+                                        <img id="mainDown3" src="img/cadreDeVie/cadredevie.png" class="mainIllustration img-responsive">
+                                        <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                     
+                                     <div class="indButton">
+                                            <button type="button" class=" buttonInd1 btn btn-circle btn-lg"><i class="fa fa-hand-o-up  faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd2 btn btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                    
+                                    </div>
+                                      
+                                    </section>
+
+
+                                    <section class=" categorie-des cat1">
+
+                                        <div class="cat-chart-block ">
+                                            <canvas class= "indicateur1" id="diplomes"></canvas>
+                                            <canvas class="indicateur2" id="baccalaureat"></canvas>  
+                                        </div>
+
+                                        <h1 class = "indTitle indTitle1 text-center"> Evolution annuelle moyenne de la part des diplômés de l’enseignement supérieur dans la population (en %)</h1>
+                                        <h1 class = "indTitle indTitle2 text-center"> Taux de réussite au bac (en %)</h1>
+                                       
+
+                                        <p class="textBull textBull1"> Le nombre de diplômés dans la métropole est en perpétuelle augmentation. Cela s’explique par l’attractivité du territoire, qui attire de plus en plus de personnes qualifiées. NSNM est sur une pente dynamique et positive, la part des diplômés est plus importante que celle des sans diplômes. </p>
+                                        <p class="textBull textBull2">Le taux de réussite au Baccalauréat est de plus en plus satisfaisant, cela démontre que la métropole s’inscrit dans une dynamique de développement et d’accompagnement des jeunes</p>
+
+                                        <img src="img/common/tete.png" class="femme img-responsive">
+                                        <img id="mainDown"  src="img/enseignement/enseignement.png" class="mainIllustration img-responsive">
+                                        <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                     
+                                     <div class="indButton">
+                                            <button type="button" class=" buttonInd1 btn btn-circle btn-lg"><i class="fa fa-hand-o-up  faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd2 btn btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                    
+                                    </div>
+                                      
+                                    </section>
+
+
+                                    <section class=" categorie-des cat2">
+
+                                        <div class="cat-chart-block ">
+                                            <canvas class= "indicateur1" id="chomage"></canvas>
+                                            <canvas class="indicateur2" id="cadres"></canvas> 
+                                            <canvas class="indicateur3" id="nbEtabl"></canvas>  
+                                        </div>
+
+                                        <h1 class = "indTitle indTitle1 text-center"> Taux de chomâge (en %)</h1>
+                                        <h1 class = "indTitle indTitle2 text-center"> Evolution annuelle moyenne de la part des cadres dans la pop (en %).</h1>
+                                        <h1 class = "indTitle indTitle3 text-center"> Evolution annuelle du nombre d'établissements des services aux personnes (en %) </h1>
+                                       
+
+                                        <p class="textBull textBull1">La zone d’emploi de la métropole Nantes-Saint Nazaire conserve un taux de chômage bien inférieur à la moyenne des grandes métropoles françaises. </p>
+                                        <p class="textBull textBull2">De part son écosystème moderne et la multitude de formations qui forment le tissu économique nantais, la métropole est de plus en plus attrayantes et voit donc son nombre de cadres augmenter de manière notoire. </p>
+                                        <p  class="textBull textBull3" >Vivier de start-up et d’idées innovantes, la métropole s’inscrit dans une dynamique de création d’établissements très positive.</p>
+                                        <img src="img/common/tete.png" class="femme img-responsive">
+                                        <img id="mainDown2" src="img/emploi/emploi.png" class="mainIllustration img-responsive">
+                                        <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                     
+                                     <div class="indButton">
+                                            <button type="button" class=" buttonInd1 btn btn-circle btn-lg"><i class="fa fa-hand-o-up  faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd2 btn btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd3 btn btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                    
+                                    </div>
+                                      
+                                    </section>
+
+
+                                     <section class=" categorie-des cat3">
+
+                                        <div class="cat-chart-block ">
+                                            <canvas class= "indicateur1" id="congres"></canvas>
+                                            <canvas class="indicateur2" id="icc"></canvas>  
+                                        </div>
+
+                                        <h1 class = "indTitle indTitle1 text-center"> Nombre de congrés internationaux en 2016</h1>
+                                        <h1 class = "indTitle indTitle2 text-center"> Evolution annuelle moyenne du nombre d'emplois dans les ICC 2011-2016 (en %)</h1>
+                                       
+
+                                        <p class="textBull textBull1">Nantes devient une destination reconnue en matière de tourisme d’affaire et accueille davantage de congrès internationaux depuis 2016.</p>
+                                        <p class="textBull textBull2">L’attractivité nantaise est aujourd’hui portée par le bouillonnement de son tissu économique, notamment par l’essor des Industrie culturelles et créatives  qui pénètrent les secteurs les plus traditionnels en leur insufflant une capacité d’innovation et de différenciation qui permet de s'affirmer sur la scène nationale (R&D, graphisme, art…). </p>
+
+                                        <img src="img/common/tete.png" class="femme img-responsive">
+                                        <img src="img/culture/culture.png" class="mainIllustration img-responsive">
+                                        <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                     
+                                     <div class="indButton">
+                                            <button type="button" class=" buttonInd1 btn btn-circle btn-lg"><i class="fa fa-hand-o-up  faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd2 btn btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                    
+                                    </div>
+                                      
+                                    </section>
+
+
+                                     <section class=" categorie-des cat4">
+
+                                        <div class="cat-chart-block ">
+                                            <canvas class= "indicateur1" id="emploisaeronautique"></canvas>
+                                            <canvas class="indicateur2" id="emploisnavale"></canvas>  
+                                        </div>
+
+                                        <h1 class = "indTitle indTitle1 text-center"> Nombre d'emplois dans l'aéronautique</h1>
+                                        <h1 class = "indTitle indTitle2 text-center"> Nombre d'emplois dans l'industrie navale </h1>
+                                       
+
+                                        <p class="textBull textBull1">L’aéronautique occupe une place de choix dans le tissu industriel de la métropole Nantes-Saint-Nazaire. Jouissant de la plus belle évolution nationale en matière de création d’emploi, Airbus et ses sous-traitants employaient 7374 personnes en 2016. </p>
+                                        <p class="textBull textBull2">Véritable fleuron de l’industrie navale en France, les Chantiers de l’Atlantique ont vu poindre certains des plus beaux paquebots du monde à l’image du Harmony of The Seas ou le Queen Mary 2. 
+                                        Aujourd’hui Nantes-Saint-Nazaire est la métropole la plus compétitive dans le secteur naval en France et employait 3820 personnes en 2016</p>
+
+                                        <img src="img/common/tete.png" class="femme img-responsive">
+                                        <img id="mainUp" src="img/industrie/industrie.png" class="mainIllustration img-responsive">
+                                        <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                     
+                                     <div class="indButton">
+                                            <button type="button" class=" buttonInd1 btn btn-circle btn-lg"><i class="fa fa-hand-o-up  faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd2 btn btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                    
+                                    </div>
+                                      
+                                    </section>
+
+
+
+                                    <section class=" categorie-des cat5">
+
+                                        <div class="cat-chart-block ">
+                                            <canvas class= "indicateur1" id="emploisnumerique"></canvas>
+                                            <canvas class="indicateur2" id="emploisrecherche"></canvas>  
+                                        </div>
+
+                                        <h1 class = "indTitle indTitle1 text-center"> Part des emplois dans le numérique en 2016 (en %)</h1>
+                                        <h1 class = "indTitle indTitle2 text-center">  Evolution annuelle de la part des emplois “conception-recherche” entre  2009 et 2014 (en %) </h1>
+
+                                        <p class="textBull textBull1">De même, le numérique concerne tous les secteurs d'activité avec des entreprises traditionnelles qui s'engagent dans des démarches de transition numérique. L'agglomération nantaise compte parmi les plus fortes croissances de l’emploi dans le secteur numérique. La dynamique de la French Tech permet de pousser l'entrepreneuriat numérique en réunissant l'écosystème local des start-ups</p>
+                                        <p class="textBull textBull2">Le nombre d'emploi dans la conception-recherche, qui permet d'appréhender l'importance du capital humain lié à l'innovation, a fortement progressé entre 2009 et 2014 dans l'agglomération nantaise qui se place par ailleurs en 4ème position en termes de poids dans l'emploi total après Lyon, Toulouse et Grenoble. </p>
+
+                                        <img src="img/common/tete.png" class="femme img-responsive">
+                                        <img src="img/numerique/numerique.png" class="mainIllustration img-responsive">
+                                        <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                     
+                                     <div class="indButton">
+                                            <button type="button" class=" buttonInd1 btn btn-circle btn-lg"><i class="fa fa-hand-o-up  faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd2 btn btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                    
+                                    </div>
+                                      
+                                    </section>
+
+
+                                    <section class=" categorie-des cat6">
+
+                                        <div class="cat-chart-block cat61">
+                                            <canvas class= "indicateur1" id="evolVoyageurs"></canvas>
+                                            <canvas class="indicateur2" id="kmTsprt"></canvas>  
+                                            <canvas class="indicateur3" id="tpsParis"></canvas>  
+                                        </div>
+
+                                        <h1 class = "indTitle indTitle1 text-center"> Evolution moyenne de nombre de passagers</h1>
+                                        <h1 class = "indTitle indTitle2 text-center"> Nombre de kilomètres parcouru en transport en commun par habitant </h1>
+                                        <h1 class = "indTitle indTitle3 text-center"> Temps de connexion à Paris (en minute)</h1> 
+
+                                        <p class="textBull textBull1"> Les transports en commun à NSNM sont un outil massivement utilisé par les habitants. En effet, la dynamique territoriale nantaise donne la priorité aux cyclistes et aux common en communs.</p>
+                                        <p class="textBull textBull2">Ce chiffre appuie l’énergie de la métropole se sentant de plus en plus impliquée dans une
+                                        dynamique écologique.</p>
+                                        <p class="textBull textBull3"> La métropole NSN devient de plus en plus attractive car sa liaison avec Paris n'est que d'une heure 56. Cela permet aux entreprises de relier la capitale rapidement.</p>      
+
+
+                                        <img src="img/common/tete.png" class="femme img-responsive">
+                                        <img src="img/transports/transport.png" class="mainIllustration img-responsive">
+                                        <img src="img/common/commentaire.png" class="commentaire img-responsive">
+                                     
+                                     <div class="indButton">
+                                            <button type="button" class=" buttonInd1 btn btn-circle btn-lg"><i class="fa fa-hand-o-up  faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd2 btn btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                                            <button type="button" class="buttonInd3 btn btn-circle btn-lg"><i class="fa fa-hand-o-up faa-tada animated"></i></button>
+                                    </div>
+                                      
+                                    </section>
+                    </div>
+
+                                </div>
+
+                                <div class=" menu">
+                                  <a href="https://www.nantes-saintnazaire.fr/" target="_blank"><img class="nsndev" src="img/menu/nsn2.png"></a>
+                                  <p class="minititle"> Pourquoi s’installer dans la métropole Nantes St Nazaire ?</p>
+                                  <div class="categorie-names col-md-4">
+                                <div class="categorie cat7" id="7">
+                                  <img class="chevron" src="img/menu/chevron.png">
+                                 <h2>Intro</h2>
+                                </div>
+                                <div class="categorie cat0" id="0">
+                                  <img class="chevron" src="img/menu/chevron.png">
+                                 <h2>Cadre de vie</h2>
+                                </div>
+                                <div class="categorie cat1" id="1">
+                                  <img class="chevron" src="img/menu/chevron.png">
+                                  <h2>Enseignement</h2>
+                                </div>
+                                <div class="categorie cat2" id="2">
+                                  <img class="chevron" src="img/menu/chevron.png">
+                                  <h2>Emploi</h2>
+                                </div>
+                                <div class="categorie cat3" id="3">
+                                  <img class="chevron" src="img/menu/chevron.png">
+                                  <h2>Culture</h2>
+                                </div>
+                                <div class="categorie cat4" id="4">
+                                  <img class="chevron" src="img/menu/chevron.png">
+                                  <h2>Industrie de pointe</h2>
+                                </div>
+                                <div class="categorie cat5" id="5">
+                                  <img class="chevron" src="img/menu/chevron.png">
+                                  <h2>Développement numérique</h2>
+                                </div>
+                                <div class="categorie cat6" id="6">
+                                  <img class="chevron" src="img/menu/chevron.png">
+                                  <h2>Transports</h2>
+
+                                </div>
+                              </div>
+
+                              <div class="social">
+                                <a title="Partager sur Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/" target="_blank" id="lien-fb"><span id="social-fb"><img class="i1" src="img/menu/fb.png"><img class="i2" src="img/menu/fb2.png"></span></a>
+                                <a title="Partager sur Twitter" href="https://twitter.com/home?status=http%3A//hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/" target="_blank" id="lien-twitter"><span id="social-twitter"><img class="i1" src="img/menu/twitter.png"><img class="i2" src="img/menu/twitter2.png"></span></a>
+                                <a title="Partager sur LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//hyblab.polytech.univ-nantes.fr/nantes-st-nazaire-dev/&title=Hyblab%20M%C3%A9tropole%20Nantes-St-Nazaire&summary=D%C3%A9couvrez%20l'histoire%20d'Emmanuelle,%20une%20jeune%20entrepreneuse%20qui%20a%20d%C3%A9cider%20de%20quitter%20Paris%20pour%20faire%20sa%20vie%20%C3%A0%20Nantes.&source=" target="_blank" id="lien-in"><span id="social-in"><img class="i1" src="img/menu/in.png"><img class="i2" src="img/menu/in2.png"></span></a>
+                                
+                                     
+                              </div>
+                                </div>
+                              </div>
+                    <img class="flecheBas" src="img/main/FLECHEBAS.png" alt="nextPage">
+                </div>
+
+                <div class="section" id="section-synthese">
+                    <h2 class="synthese-title">Nantes St Nazaire, la métropole idéale pour les entrepreneurs ... </h2>
+                    <p>Nantes Saint-Nazaire Métropole est une métropole dynamique sous différents aspects et remplie de nombreux critères que ce soit pour développer son activité ou plus simplement s'y installer.</p>
+                    <img id="img-synthese" src="img/intro/emmanuelle.png" alt="img-synthese">
+                    <div id="synth-chart-block">
+                        <canvas id="synthese-chart"></canvas>
+                    </div>  
+                    <p id="synth-des">Les rangs indiqués sont les classements moyens des villes vues sous les sept angles présentés plus haut.</p>
+                    <img class="flecheBas" src="img/main/FLECHEBAS.png" alt="nextPage">
+                </div>
+
+                <div class="section" id="lastPage">
+                    <div class="students">
+                        <div  class="text-center group side-group"> 
+                            <img src="img/maquette/CREDITS/Group.png">
+                            <h1>AGR</h1>
+                            <a  class="perso-link" href="https://www.behance.net/lauraboidron" target="_blank"><p> Laura BOIDRON</p></a>
+                            <a  class="perso-link" href="https://www.behance.net/nicogerard" target="_blank"><p> Nicolas GERARD</p></a>
+                            <a  class="perso-link" href="https://www.behance.net/olwengendrot" target="_blank"><p> Olwen GENDROT</p></a>
+                        </div>
+
+                        <div class="text-center group group-mid">
+                            <img src="img/maquette/CREDITS/Group2.png">
+                            <h1>SCIENCESCOM'</h1>
+                            <p> Louis FAYOLLE</p>
+                            <p> Solenn PAGE</p>
+                            <p> Romain MORICE</p>
+                            <p> Clara DURAND</p>
+                        </div>
+
+                        <div class="text-center group side-group"> 
+                            <img class="polytechguys" src="img/maquette/CREDITS/Group3.png">
+                            <h1 >POLYTECH</h1>
+                            <a  class="perso-link" href="http://dyacouba.raidghost.com" target="_blank"><p> Yacouba DIABY</p></a>
+                            <a  class="perso-link" href="http://mabotech.alwaysdata.net" target="_blank"><p> Amadou KANE</p></a>
+                            <p> Matthieu FAVREL</p>
+                        </div>
+                        <p class="datasource">Les données de notre équipe nous ont été fournies par l’AURAN.
+                            Ces données ont été récoltées sur la période de 2009 à 2016.</p>
+                        <img id="logos" src="img/maquette/CREDITS/Group4.png">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notre pied de page -->
+            <footer>
+                <p>Copyright Hyblab team 2018</p>
+            </footer>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/fullpage-starter.js"></script>
+    <script src="js/myCharts.js"></script>
 </html>

@@ -12,8 +12,13 @@
     "express": "^4.16.2",
     "node-fetch": "^1.7.3",
     "popmotion": "^8.1.9",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "ejs": "^2.5.7",
+    "xlsx": "^0.11.18"
   },
   "author": "MPDS",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
 }
