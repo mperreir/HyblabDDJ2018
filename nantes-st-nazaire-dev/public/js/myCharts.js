@@ -333,7 +333,7 @@ function getSynthData(cities, dataJson) {
 
 $(document).ready(function() {
 
-    fetch('/nantes-st-nazaire-dev/actifs', {
+    fetch('actifs', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
@@ -427,7 +427,7 @@ $(document).ready(function() {
 });
 
     function update() {
-      fetch('/nantes-st-nazaire-dev/rangs', {
+      fetch('rangs', {
         method: 'post',
         headers: {
           'Accept': 'application/json',

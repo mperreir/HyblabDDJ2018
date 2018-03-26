@@ -51,7 +51,7 @@ function initializeDashboard() {
 
 $(document).ready(function () {
 
-    fetch("/capeb/data/conjoncture_map")
+    fetch("data/conjoncture_map")
         .then(function (value) {
             return value.json();
         })
@@ -75,7 +75,7 @@ $(document).ready(function () {
 });
 
 function onSvgClick(d) {
-    fetch("/capeb/data/regionStats")
+    fetch("data/regionStats")
         .then(function (value) {
             return value.json();
         })

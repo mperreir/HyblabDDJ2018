@@ -4,7 +4,7 @@ var current_legend;
 function miniStats(regionStats, d) {
 
     //1 : conjoncture / number / multibubble
-    fetch("/capeb/data/" + d.properties.siren_epci + "/conjoncture")
+    fetch("data/" + d.properties.siren_epci + "/conjoncture")
         .then(function (value) {
             return value.json();
         })
@@ -34,7 +34,7 @@ function miniStats(regionStats, d) {
         });
 
     //2 : Investissement /  / chart over time compared with region
-    fetch("/capeb/data/" + d.properties.siren_epci + "/investissement")
+    fetch("data/" + d.properties.siren_epci + "/investissement")
         .then(function (value) {
             return value.json();
         })
@@ -67,7 +67,7 @@ function miniStats(regionStats, d) {
 
 
     //3 & 8 & 7 & 4 pour eviter re faire un fetch
-    fetch("/capeb/data/" + d.properties.siren_epci + "/stats")
+    fetch("data/" + d.properties.siren_epci + "/stats")
         .then(function (value) {
             return value.json();
         })
@@ -186,7 +186,7 @@ function miniStats(regionStats, d) {
 
         });
     //5 : distance / moyenne / bubble chart
-    fetch("/capeb/data/" + d.properties.siren_epci + "/distance")
+    fetch("data/" + d.properties.siren_epci + "/distance")
         .then(function (value) {
             return value.json();
         })

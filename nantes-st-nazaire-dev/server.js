@@ -12,7 +12,7 @@ var app = express();
 app.use('/',express.static(path.join(__dirname, 'public')));
 
 app.post('/actifs', function(req, res) {
-	var workbook = xlsx.readFile('./nantes-st-nazaire-dev/actifs.xlsx');
+	var workbook = xlsx.readFile(path.join(__dirname,'actifs.xlsx'));
 	var sheet_name_list = workbook.SheetNames;
         var actifs_json = xlsx.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
         var actifs = xlsx.utils.sheet_to_html(workbook.Sheets[sheet_name_list[0]]);
@@ -20,14 +20,14 @@ app.post('/actifs', function(req, res) {
 });
 
 app.post('/rangs', function(req, res) {
-	var workbook = xlsx.readFile('./nantes-st-nazaire-dev/rangs-finaux.xlsx');
+	var workbook = xlsx.readFile(path.join(__dirname,'rangs-finaux.xlsx'));
 	var sheet_name_list = workbook.SheetNames;
     var rangs_json = xlsx.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
     res.json(rangs_json);
 });
 
 app.get('/actifs', function(req, res) {
-	var workbook = xlsx.readFile('./nantes-st-nazaire-dev/actifs.xlsx');
+	var workbook = xlsx.readFile(path.join(__dirname,'actifs.xlsx'));
 	var sheet_name_list = workbook.SheetNames;
         var actifs_json = xlsx.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
         var actifs = xlsx.utils.sheet_to_html(workbook.Sheets[sheet_name_list[0]]);
@@ -36,7 +36,7 @@ app.get('/actifs', function(req, res) {
 });
 
 app.get('/rangs', function(req, res) {
-	var workbook = xlsx.readFile('./nantes-st-nazaire-dev/rangs-finaux.xlsx');
+	var workbook = xlsx.readFile(path.join(__dirname,'rangs-finaux.xlsx'));
 	var sheet_name_list = workbook.SheetNames;
     var rangs_json = xlsx.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
     res.send(rangs_json);
